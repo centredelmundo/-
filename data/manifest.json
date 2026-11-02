@@ -1,0 +1,14 @@
+{
+  "config": "config.json",
+  "regions": "regions.json",
+  "polities": ["polities.json"],
+  "rulers": ["rulers.json"],
+  "events": [
+    "events/1500-1599.json",
+    "events/1600-1699.json",
+    "events/1700-1799.json",
+    "events/1800-1899.json",
+    "events/1900-2000.json"
+  ],
+  "zones": "map/zones.json"
+}

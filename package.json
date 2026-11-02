@@ -1,0 +1,16 @@
+{
+  "name": "yokogushi-sekaishi",
+  "version": "0.1.0",
+  "private": true,
+  "description": "世界史を同時代の横のつながりで覚える学習アプリ",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/",
+    "validate": "node tools/validate.mjs",
+    "build:map": "node tools/build-map.mjs",
+    "serve": "python3 -m http.server 8000"
+  },
+  "devDependencies": {
+    "mapshaper": "0.6.102"
+  }
+}

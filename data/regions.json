@@ -1,0 +1,30 @@
+{
+  "regions": [
+    { "id": "cn", "name": "中国" },
+    { "id": "kr", "name": "朝鮮" },
+    { "id": "jp", "name": "日本", "reference": true },
+    { "id": "ia", "name": "内陸アジア" },
+    { "id": "sea", "name": "東南アジア" },
+    { "id": "sa", "name": "南アジア" },
+    { "id": "wa", "name": "西アジア・北アフリカ" },
+    { "id": "af", "name": "アフリカ" },
+    { "id": "ee", "name": "東欧・ロシア" },
+    { "id": "ce", "name": "中央ヨーロッパ" },
+    { "id": "we", "name": "西ヨーロッパ" },
+    { "id": "am", "name": "南北アメリカ" },
+    { "id": "intl", "name": "国際", "from": 1900, "hideEmpty": true }
+  ],
+  "groups": [
+    { "id": "cn", "name": "中国", "regions": ["cn"] },
+    { "id": "kr", "name": "朝鮮", "regions": ["kr"] },
+    { "id": "jp", "name": "日本", "regions": ["jp"], "optional": true },
+    { "id": "ia", "name": "内陸アジア", "regions": ["ia"] },
+    { "id": "sea", "name": "東南アジア", "regions": ["sea"] },
+    { "id": "sa", "name": "南アジア", "regions": ["sa"] },
+    { "id": "wa", "name": "西アジア", "regions": ["wa"] },
+    { "id": "af", "name": "アフリカ", "regions": ["af"] },
+    { "id": "eu", "name": "ヨーロッパ", "regions": ["ee", "ce", "we"] },
+    { "id": "am", "name": "南北アメリカ", "regions": ["am"] },
+    { "id": "intl", "name": "国際", "regions": ["intl"], "optional": true }
+  ]
+}

@@ -1,0 +1,214 @@
+// 画面どうしで共通の部品：地域カード、詳細シート、印、王朝の帯
+import { $, $$, esc, fmtSpan, fmtYear, yearText } from '../core/util.js';
+
+export const LOGO = '<svg viewBox="0 0 40 40" aria-hidden="true"><line x1="2" y1="20" x2="38" y2="20" style="stroke:var(--shu)" stroke-width="3.2" stroke-linecap="round"/><rect x="7" y="10.5" width="11" height="19" rx="2.6" fill="none" stroke="currentColor" stroke-width="2.8"/><rect x="22" y="10.5" width="11" height="19" rx="2.6" fill="none" stroke="currentColor" stroke-width="2.8"/></svg>';
+export const ICON = {
+  timeline: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 7h18M3 12h18M3 17h18"/><path d="M15 4v16" style="stroke:var(--shu)"/></svg>',
+  map: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 6.5l6-2.5 6 2.5 6-2.5v13.5l-6 2.5-6-2.5-6 2.5z"/><path d="M9 4v13.5M15 6.5V20"/></svg>',
+  quiz: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.6a2.5 2.5 0 1 1 3.4 2.3c-.6.3-1 .8-1 1.5v.5"/><path d="M12 17h.01"/></svg>',
+  review: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 4.5v4.5h-4.5"/></svg>',
+  data: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2.5 2.5L16 9"/><path d="M5 4h14v16H5z"/></svg>',
+  settings: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>',
+  search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>',
+  close: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>',
+  star: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg>'
+};
+
+/** 確認の印 */
+export function badges(x, { culture = true } = {}) {
+  let s = '';
+  if (x.verified) s += '<span class="badge b-ok" title="用語集で年号を確認済み">✓ 用語集</span>';
+  if (x.uncertain) s += `<span class="badge b-warn" title="${esc(x.memo || '年代に自信がない・説が分かれる')}">要確認</span>`;
+  if (culture && x.culture) s += '<span class="badge b-cul">文化</span>';
+  return s;
+}
+
+/** 地域の並び（設定を反映） */
+export function visibleRegions(app, y) {
+  const { regions } = app.db;
+  const order = app.settings.order?.length ? app.settings.order : regions.map(r => r.id);
+  const sorted = [...regions].sort((a, b) => {
+    const ia = order.indexOf(a.id), ib = order.indexOf(b.id);
+    return (ia < 0 ? 999 : ia) - (ib < 0 ? 999 : ib);
+  });
+  return sorted.filter(r => !app.settings.hidden.includes(r.id) && (r.from == null || y >= r.from) && (r.to == null || y <= r.to));
+}
+
+/** 地域カード（ヨコ年表の中心） */
+export function renderCards(app, y, w) {
+  const db = app.db, s = app.settings;
+  return visibleRegions(app, y).map(reg => {
+    const all = db.politiesIn(reg.id, y);
+    const isMajor = x => (x.child || x.polity).importance >= 2 || x.polity.importance >= 2 || x.rulers.some(r => r.importance >= 2);
+    const pols = all.filter(isMajor), others = all.filter(x => !isMajor(x));
+    const evs = db.events.filter(e => e.regions.includes(reg.id) && e.year <= y + w && (e.end ?? e.year) >= y - w
+      && e.importance >= (s.minImportance || 1) && (s.culture || !e.culture));
+    if (!all.length && !evs.length && reg.hideEmpty) return '';
+    let dyn = pols.map(({ polity, child, rulers }) => {
+      const main = child ? `<span class="term">${esc(child.name)}</span><small>${esc(db.nameAt(polity, y))}</small>` : `<span class="term">${esc(db.nameAt(polity, y))}</span>`;
+      const ru = rulers.filter(r => r.importance >= 2).map(r => `<span class="ru"> ・ <span class="term">${esc(r.name)}</span>（${fmtSpan(r.from, r.to)}）${badges(r)}</span>`).join('');
+      return `<div class="dyn" data-polity="${esc(polity.id)}">${main}${badges(child || polity)}${ru}</div>`;
+    }).join('');
+    if (others.length) dyn += `<div class="dyn-minor">ほか：${others.map(({ polity, child }) => `<span data-polity="${esc(polity.id)}">${esc(child?.name || db.nameAt(polity, y))}</span>`).join('・')}</div>`;
+    const list = evs.length ? `<ul class="evs">${evs.map(e => evRow(e, y, w)).join('')}</ul>` : '';
+    const empty = !all.length && !evs.length ? '<div class="empty">この期間のデータなし</div>' : '';
+    return `<article class="rc" data-region="${reg.id}"><h3><span>${esc(reg.name)}${reg.reference ? '（参考）' : ''}</span><em>${evs.length ? evs.length + '件' : ''}</em></h3>${dyn}${list}${empty}</article>`;
+  }).join('');
+}
+
+function evRow(e, y, w) {
+  const end = e.end ?? e.year, now = e.year === y || (e.year <= y && y <= end);
+  const d = e.year > y ? e.year - y : end < y ? y - end : 0;
+  const op = now ? 1 : Math.max(0.55, 1 - d / ((w || 1) * 2.4));
+  return `<li class="ev${now ? ' now' : ''}" data-ev="${esc(e.id)}" style="opacity:${op.toFixed(2)}" tabindex="0"><span class="y">${fmtYear(e.year)}</span><span class="t"><span class="term">${esc(e.title)}</span>${e.end ? `<span class="to">（〜${fmtYear(e.end)}）</span>` : ''}${badges(e)}</span></li>`;
+}
+
+/** 答えたあとに出す「同じころの世界」 */
+export function yokoPanel(app, y, w = 5, focusRegions = []) {
+  const db = app.db;
+  const groups = db.groups.filter(g => !g.optional || g.regions.some(r => focusRegions.includes(r)));
+  const rows = groups.map(g => {
+    const evs = db.events.filter(e => e.regions.some(r => g.regions.includes(r)) && e.year <= y + w && (e.end ?? e.year) >= y - w && e.importance >= 2)
+      .sort((a, b) => b.importance - a.importance || Math.abs(a.year - y) - Math.abs(b.year - y)).slice(0, 2);
+    const pols = g.regions.flatMap(r => db.politiesIn(r, y)).slice(0, 2)
+      .map(({ polity, child, rulers }) => esc((child?.name || db.nameAt(polity, y)) + (rulers.filter(r => r.importance >= 2)[0] ? `（${rulers.filter(r => r.importance >= 2)[0].name}）` : '')));
+    if (!evs.length && !pols.length) return '';
+    const items = [...evs.map(e => `${fmtYear(e.year)} ${esc(e.title)}`), ...pols].slice(0, 3);
+    return `<li><b>${esc(g.name)}</b><span>${items.join('、')}</span></li>`;
+  }).join('');
+  return `<div class="yoko"><h4>同じころの世界（${yearText(y)}・前後${w}年）</h4><ul>${rows}</ul></div>`;
+}
+
+// ---- 詳細シート（下から出る画面）
+let sheetBack = null;
+export function openSheet(html, onMount) {
+  closeSheet();
+  sheetBack = document.createElement('div');
+  sheetBack.className = 'sheet-back';
+  sheetBack.innerHTML = `<div class="sheet" role="dialog" aria-modal="true"><button class="iconbtn close" type="button" aria-label="閉じる">${ICON.close}</button>${html}</div>`;
+  document.body.appendChild(sheetBack);
+  const sheet = $('.sheet', sheetBack);
+  sheetBack.addEventListener('click', e => { if (e.target === sheetBack || e.target.closest('.close')) closeSheet(); });
+  document.addEventListener('keydown', escClose);
+  sheet.querySelector('button, a, input')?.focus();
+  onMount?.(sheet);
+  return sheet;
+}
+const escClose = e => { if (e.key === 'Escape') closeSheet(); };
+export function closeSheet() {
+  if (sheetBack) { sheetBack.remove(); sheetBack = null; }
+  document.removeEventListener('keydown', escClose);
+}
+
+/** 出来事の詳細 */
+export function openEvent(app, e) {
+  const db = app.db;
+  const regs = e.regions.map(r => db.regionById(r)?.name || r).join('・');
+  const when = e.end ? `${yearText(e.year)}〜${yearText(e.end)}` : `${yearText(e.year)}${e.month ? `${e.month}月` : ''}`;
+  const html = `
+    <div class="muted small">${esc(regs)} ・ ${'★'.repeat(e.importance)}</div>
+    <h2>${esc(e.title)}${badges(e)}</h2>
+    <dl class="kv">
+      <dt>年</dt><dd class="yr">${esc(when)}</dd>
+      ${e.desc ? `<dt>説明</dt><dd>${esc(e.desc)}</dd>` : ''}
+      ${e.answers.length ? `<dt>別の言い方</dt><dd>${e.answers.map(esc).join('、')}</dd>` : ''}
+      ${e.memo ? `<dt>メモ</dt><dd>${esc(e.memo)}</dd>` : ''}
+      <dt>確認</dt><dd>${e.verified ? '用語集で確認済み' : '用語集では未確認'}${e.uncertain ? '・年代に要確認の印あり' : ''}</dd>
+    </dl>
+    ${yokoPanel(app, e.year, 5, e.regions)}
+    <div class="q-actions">
+      <button class="btn primary" type="button" data-act="go">${yearText(e.year)}へ移動</button>
+      <button class="btn" type="button" data-act="quiz">この出来事で練習</button>
+      <button class="btn" type="button" data-act="star">${ICON.star.replace('<svg', '<svg width="16" height="16"')}苦手に追加</button>
+      <a class="btn" href="#data/${encodeURIComponent(e.key)}">データ確認で開く</a>
+    </div>`;
+  openSheet(html, sheet => {
+    sheet.addEventListener('click', ev => {
+      const act = ev.target.closest('[data-act]')?.dataset.act;
+      if (act === 'go') { closeSheet(); app.setYear(e.year); if (!location.hash.startsWith('#timeline') && !location.hash.startsWith('#map')) location.hash = '#timeline'; }
+      if (act === 'quiz') { closeSheet(); app.startQuizForEvent(e); }
+      if (act === 'star') { app.starEvent(e); }
+    });
+  });
+}
+
+/** 王朝・国家の詳細 */
+export function openPolity(app, p, y) {
+  const db = app.db;
+  const child = p.children.find(c => db.isActive(c, y));
+  const ids = [p.id, ...p.children.map(c => c.id)];
+  const rulers = db.rulers.filter(r => ids.includes(r.polity) && r.from <= y && y <= r.to);
+  const periods = p.periods.map(([a, b]) => `${fmtYear(a)}〜${fmtYear(b)}年`).join('、');
+  const notes = (p.territory || []).filter(t => t.note && Math.abs(t.year - y) <= 30).map(t => `<li><span class="yr">${fmtYear(t.year)}</span> ${esc(t.note)}${t.uncertain ? '<span class="badge b-warn">要確認</span>' : ''}</li>`).join('');
+  const html = `
+    <div class="muted small">${esc(db.regionById(p.region)?.name || '')}</div>
+    <h2>${esc(db.nameAt(p, y))}${child ? ` <small class="muted">${esc(child.name)}</small>` : ''}${badges(p)}</h2>
+    <dl class="kv">
+      <dt>期間</dt><dd class="yr">${esc(periods)}</dd>
+      ${rulers.length ? `<dt>${yearText(y)}</dt><dd>${rulers.map(r => `${esc(r.name)}（${fmtSpan(r.from, r.to)}）`).join('、')}</dd>` : ''}
+      ${p.desc ? `<dt>説明</dt><dd>${esc(p.desc)}</dd>` : ''}
+      ${p.memo ? `<dt>メモ</dt><dd>${esc(p.memo)}</dd>` : ''}
+    </dl>
+    ${notes ? `<div class="yoko"><h4>領土の変化（${yearText(y)}の前後30年）</h4><ul class="plainlist">${notes}</ul></div>` : ''}
+    <div class="q-actions"><a class="btn" href="#data/${encodeURIComponent(p.key)}">データ確認で開く</a></div>`;
+  openSheet(html);
+}
+
+/** 出来事の多い年（スライダーの上の棒グラフ） */
+export function densitySvg(app) {
+  const [a, b] = app.db.range, n = b - a + 1;
+  const cnt = new Array(n).fill(0);
+  for (const e of app.db.events) if (e.year >= a && e.year <= b) cnt[e.year - a] += e.importance >= 3 ? 1.5 : 1;
+  const mx = Math.max(1, ...cnt);
+  return `<svg class="density" viewBox="0 0 ${n} 20" preserveAspectRatio="none" aria-hidden="true">${cnt.map((c, i) => c ? `<rect x="${i}" y="${20 - c / mx * 19}" width="1" height="${c / mx * 19}" style="fill:var(--ai)" opacity=".4"/>` : '').join('')}<rect class="cur" x="0" y="0" width="${Math.max(1, n / 250)}" height="20" style="fill:var(--shu)"/></svg>`;
+}
+
+/** 王朝の帯 */
+export function ganttSvg(app, y) {
+  const db = app.db, rows = db.config.ganttRows || [];
+  const [a, b] = db.range;
+  const W = 1180, x0 = 112, x1 = W - 6, rowH = 21, gap = 5, top = 4;
+  const X = v => x0 + (Math.min(Math.max(v, a), b) - a) / (b - a) * (x1 - x0);
+  let s = '';
+  rows.forEach((row, i) => {
+    const ty = top + i * (rowH + gap);
+    s += `<text x="0" y="${ty + rowH / 2}" dominant-baseline="central" font-size="12" style="fill:var(--ink-2)">${esc(row.label)}</text>`;
+    let j = 0;
+    for (const item of row.polities) {
+      const [id, from, to] = Array.isArray(item) ? item : [item];
+      const p = db.polityById.get(id);
+      if (!p) continue;
+      const periods = from != null ? [[from, to ?? from]] : p.periods;
+      for (const [s0, s1] of periods) {
+        if (s1 < a || s0 > b) continue;
+        const xa = X(s0), xb = X(s1), w = Math.max(xb - xa - 1, 1);
+        const fill = p.color && !p.ganttNeutral ? p.color : (j % 2 ? 'var(--land)' : 'var(--minor)');
+        const txt = p.color && !p.ganttNeutral ? '#1b1f27' : 'var(--ink)';
+        s += `<g class="bar" data-y="${Math.max(s0, a)}"><title>${esc(p.name)}（${fmtYear(s0)}〜${fmtYear(s1)}）</title><rect x="${xa + 0.5}" y="${ty}" width="${w}" height="${rowH}" rx="3" style="fill:${fill}"/>`;
+        if (w > p.name.length * 11.5 + 8) s += `<text x="${xa + 6}" y="${ty + rowH / 2}" dominant-baseline="central" font-size="11.5" style="fill:${txt}">${esc(p.name)}</text>`;
+        s += '</g>';
+      }
+      j++;
+    }
+  });
+  const h = top + rows.length * (rowH + gap) + 20;
+  const step = (b - a) > 600 ? 100 : 50;
+  for (let v = Math.ceil(a / step) * step; v <= b; v += step) {
+    s += `<line x1="${X(v)}" x2="${X(v)}" y1="${top}" y2="${h - 18}" style="stroke:var(--line)" ${v % 100 ? 'stroke-dasharray="2 3"' : ''}/>`;
+    s += `<text x="${X(v)}" y="${h - 6}" text-anchor="middle" font-size="11" style="fill:var(--ink-3)">${fmtYear(v)}</text>`;
+  }
+  s += `<g class="cursor"><line x1="${X(y)}" x2="${X(y)}" y1="0" y2="${h - 16}" style="stroke:var(--shu)" stroke-width="2"/><rect x="${X(y) - 21}" y="${h - 18}" width="42" height="16" rx="8" style="fill:var(--shu)"/><text x="${X(y)}" y="${h - 10}" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="#fff">${fmtYear(y)}</text></g>`;
+  return `<svg class="gantt" viewBox="0 0 ${W} ${h}" role="img" aria-label="王朝・政体の移り変わり">${s}</svg>`;
+}
+
+/** 赤シート：隠れた語をタップでめくる */
+export function wireSheet(container) {
+  container.addEventListener('click', e => {
+    if (!container.classList.contains('sheet-on')) return;
+    const t = e.target.closest('.term');
+    if (t) { t.classList.toggle('open'); e.stopPropagation(); }
+  }, true);
+}
+
+export const plural = (n, unit) => `${n}${unit}`;
+export { $$ };
