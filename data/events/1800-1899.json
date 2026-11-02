@@ -2372,7 +2372,7 @@
     "title": "マフディー派の抵抗",
     "answers": ["マフディーの反乱", "マフディー派"],
     "keywords": ["ムハンマド=アフマド"],
-    "regions": ["af"],
+    "regions": ["wa", "af"],
     "importance": 2,
     "desc": "スーダンでイギリス・エジプトに抵抗した",
     "verified": false,

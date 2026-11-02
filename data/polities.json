@@ -1081,7 +1081,6 @@
     "end": 2000,
     "color": "#CF6F60",
     "territory": [
-      { "year": 1975, "add": ["annam", "cochinchina"], "note": "南北統一（翌年に国名を改める）" },
       { "year": 1976, "add": ["tonkin", "annam-n", "annam", "cochinchina"] },
       { "year": 1979, "contested": ["cambodia"], "note": "カンボジアに侵攻（〜1989年）" },
       { "year": 1989, "remove": ["cambodia"] }
@@ -1778,15 +1777,38 @@
     "name": "マフディー国家",
     "aliases": ["マフディー派"],
     "region": "wa",
-    "start": 1885,
+    "start": 1881,
     "end": 1898,
     "minor": true,
+    "names": [
+      [1881, "マフディー派"],
+      [1885, "マフディー国家"]
+    ],
     "territory": [
       { "year": 1881, "contested": ["sudan"], "note": "ムハンマド=アフマドが反乱" },
       { "year": 1885, "add": ["sudan", "kordofan"], "note": "ハルツームを占領（ゴードン戦死）" }
     ],
     "desc": "マフディー（救世主）を名のるムハンマド=アフマドの運動。",
     "importance": 1,
+    "verified": false,
+    "uncertain": false,
+    "memo": ""
+  },
+  {
+    "id": "ankara",
+    "name": "アンカラ政府",
+    "aliases": ["トルコ大国民議会"],
+    "region": "wa",
+    "start": 1920,
+    "end": 1923,
+    "color": "#6BB38B",
+    "minor": true,
+    "territory": [
+      { "year": 1920, "add": ["anatolia-w", "anatolia-e", "kars"], "contested": ["thrace-e"], "note": "トルコ大国民議会がアンカラで成立" },
+      { "year": 1922, "add": ["thrace-e"], "note": "ギリシア軍を退け、スルタン制を廃止" }
+    ],
+    "desc": "ムスタファ=ケマルがアンカラで開いた大国民議会の政府。ギリシア軍を退けてスルタン制を廃止し、1923年にトルコ共和国を建てた。",
+    "importance": 2,
     "verified": false,
     "uncertain": false,
     "memo": ""
@@ -1800,8 +1822,7 @@
     "end": 2000,
     "color": "#6BB38B",
     "territory": [
-      { "year": 1920, "add": ["anatolia-w", "anatolia-e", "kars"], "contested": ["thrace-e"], "note": "アンカラ政府（トルコ大国民議会）" },
-      { "year": 1922, "add": ["thrace-e"] },
+      { "year": 1923, "add": ["anatolia-w", "anatolia-e", "kars", "thrace-e"], "note": "ローザンヌ条約で国境が決まる" },
       { "year": 1939, "add": ["hatay"], "note": "ハタイを編入" },
       { "year": 1974, "contested": ["cyprus"], "note": "キプロス北部に派兵" }
     ],
@@ -3326,8 +3347,7 @@
       { "year": 1918, "add": ["bohemia", "slovakia"], "note": "独立" },
       { "year": 1919, "add": ["transcarpathia"] },
       { "year": 1939, "remove": ["bohemia", "slovakia", "transcarpathia"], "note": "ドイツが解体" },
-      { "year": 1945, "add": ["bohemia", "slovakia"] },
-      { "year": 1993, "remove": ["bohemia", "slovakia"] }
+      { "year": 1945, "add": ["bohemia", "slovakia"] }
     ],
     "importance": 2,
     "verified": false,

@@ -1,5 +1,5 @@
 // クイズの画面
-import { $, $$, esc, fmtYear, fmtSpan, yearText, shuffle } from '../core/util.js';
+import { $, $$, esc, fmtYear, fmtSpan, yearText, hasYear, hideYear, shuffle } from '../core/util.js';
 import { MODES, makeSession, eventPool, quizGroups } from '../core/quizgen.js';
 import { gradeCross, gradeRuler, gradeTerm, gradeYear, CLS_TEXT } from '../core/grade.js';
 import { recordWithUndo, changeJudgement, star, isStarred, addCandidate } from '../core/progress.js';
@@ -151,7 +151,7 @@ function body(q) {
         q.polities.map((p, i) => `<div class="q-field"><label for="qa${i}">${esc(db.nameAt(p, q.y))}</label><input type="text" id="qa${i}" autocomplete="off"><div class="res" id="qr${i}" aria-live="polite"></div></div>`).join('');
     case 'year': {
       const e = q.event;
-      return `<p class="q-text">「<b>${esc(e.title)}</b>」${e.end ? 'が始まったの' : ''}は何年？</p>${e.desc ? `<p class="q-hint">${esc(e.desc)}</p>` : ''}
+      return `<p class="q-text">「<b>${esc(hideYear(e.title, e.year))}</b>」${e.end ? 'が始まったの' : ''}は何年？</p>${e.desc ? `<p class="q-hint">${esc(hideYear(e.desc, e.year))}</p>` : ''}
         <div class="q-field"><label for="qa0">年（紀元前は「前221」のように）</label><input type="text" id="qa0" inputmode="numeric" autocomplete="off"><div class="res" id="qr0" aria-live="polite"></div></div>`;
     }
     case 'term': {
@@ -164,7 +164,7 @@ function body(q) {
     case 'choice': {
       const a = q.anchor;
       const what = q.spec.kind === 'ruler' ? '君主（人物）' : '出来事';
-      return `<p class="q-text">「<b>${esc(a.title)}</b>」（${yearText(a.year)}）と同じころ、<b>${esc(q.group.name)}</b>の${what}はどれ？</p><div class="choices" id="qzChoices">${q.options.map((o, i) => `<button type="button" data-i="${i}">${esc(o.title || o.name)}</button>`).join('')}</div><div class="res" id="qr0"></div>`;
+      return `<p class="q-text">「<b>${esc(a.title)}</b>」${hasYear(a.title, a.year) ? '' : `（${yearText(a.year)}）`}と同じころ、<b>${esc(q.group.name)}</b>の${what}はどれ？</p><div class="choices" id="qzChoices">${q.options.map((o, i) => `<button type="button" data-i="${i}">${esc(o.title || o.name)}</button>`).join('')}</div><div class="res" id="qr0"></div>`;
     }
   }
   return '';
@@ -256,7 +256,7 @@ function grade(skip = false) {
     $$('#qzChoices button', el).forEach((b, i) => {
       const o = q.options[i];
       b.classList.toggle('right', i === ansIdx); b.classList.toggle('wrong', i === S.choice && i !== ansIdx);
-      b.innerHTML = `${esc(o.title || o.name)} <span class="small muted">（${o.title ? spanText({ spans: [[o.year, o.end ?? o.year]] }) : fmtSpan(o.from, o.to)}）</span>`;
+      b.innerHTML = o.title && hasYear(o.title, o.year) ? esc(o.title) : `${esc(o.title || o.name)} <span class="small muted">（${o.title ? spanText({ spans: [[o.year, o.end ?? o.year]] }) : fmtSpan(o.from, o.to)}）</span>`;
     });
     setRes(0, ok ? 'ok' : 'ng', `<div><span class="v">${ok ? '○ 正解' : '×'}</span>「${esc(q.answer.title || q.answer.name)}」</div>`);
   }
@@ -270,7 +270,7 @@ const spanText = it => it.spans.map(([a, b]) => (a === b ? `${fmtYear(a)}年` : 
 
 function examples(db, regions, y, w) {
   const evs = db.events.filter(e => e.regions.some(r => regions.includes(r)) && e.year <= y + w && (e.end ?? e.year) >= y - w)
-    .sort((a, b) => b.importance - a.importance || Math.abs(a.year - y) - Math.abs(b.year - y)).slice(0, 4).map(e => `${e.title}（${fmtYear(e.year)}）`);
+    .sort((a, b) => b.importance - a.importance || Math.abs(a.year - y) - Math.abs(b.year - y)).slice(0, 4).map(e => (hasYear(e.title, e.year) ? e.title : `${e.title}（${fmtYear(e.year)}）`));
   const pols = regions.flatMap(r => db.politiesIn(r, y)).map(({ polity, child }) => child?.name || db.nameAt(polity, y));
   return [...evs, ...new Set(pols)].slice(0, 6).map(esc);
 }
@@ -331,7 +331,7 @@ function titleOf(q) {
   switch (q.mode) {
     case 'cross': return `${q.y}年ごろの${q.groups.map(g => g.name).join('・')}`;
     case 'ruler': return `${q.y}年の${q.polities.map(p => p.name).join('・')}の君主`;
-    case 'year': return `${q.event.title}（${fmtYear(q.event.year)}年）`;
+    case 'year': return hasYear(q.event.title, q.event.year) ? q.event.title : `${q.event.title}（${fmtYear(q.event.year)}年）`;
     case 'term': return `${fmtYear(q.event.year)}年：${q.event.title}`;
     case 'order': return `並べ替え：${q.events.map(e => e.title).join('／')}`;
     case 'choice': return `${q.anchor.title}と同じころの${q.group.name}：${q.answer.title || q.answer.name}`;

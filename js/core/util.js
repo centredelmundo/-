@@ -18,6 +18,12 @@ export function fmtSpan(a, b) {
 /** 「1648年」「前221年」 */
 export const yearText = y => `${fmtYear(y)}年`;
 
+/** 名前に年が入っているか（「パリ条約（1763年）」） */
+export const hasYear = (title, y) => String(title ?? '').includes(yearText(y));
+
+/** 名前に入っている年を伏せる（年代当ての問題文用）：「パリ条約（〇〇〇〇年）」 */
+export const hideYear = (title, y) => String(title ?? '').split(yearText(y)).join('〇'.repeat(String(Math.abs(y)).length) + '年');
+
 /** 世紀（1601〜1700年 = 17世紀。紀元前は負） */
 export const centuryOf = y => (y > 0 ? Math.floor((y - 1) / 100) + 1 : -(Math.floor((-y - 1) / 100) + 1));
 export const centuryText = c => (c > 0 ? `${c}世紀` : `前${-c}世紀`);

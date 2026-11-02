@@ -1,0 +1,17 @@
+# データ（data/）を GitHub 上で編集したときに、書き間違いがないかを自動で点検する
+name: データの点検とテスト
+on:
+  push:
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: データの点検
+        run: node tools/validate.mjs
+      - name: テスト
+        run: node --test "tests/*.test.mjs"

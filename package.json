@@ -5,7 +5,7 @@
   "description": "世界史を同時代の横のつながりで覚える学習アプリ",
   "type": "module",
   "scripts": {
-    "test": "node --test tests/",
+    "test": "node --test \"tests/*.test.mjs\"",
     "validate": "node tools/validate.mjs",
     "build:map": "node tools/build-map.mjs",
     "serve": "python3 -m http.server 8000"
