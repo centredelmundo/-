@@ -44,6 +44,7 @@ export const app = {
   },
   setWindow(w) { app.window = w; app.settings.window = w; saveSoon(); VIEWS[app.current]?.update?.(); },
   startQuizForEvent(e) { quiz.startWith(app, questionsForEvent(app.db, e), { title: e.title }); },
+  startQuizForIchimon(it) { const q = build(app.db, { mode: 'ichimon', id: it.id }); if (q) quiz.startWith(app, [q], { title: '一問一答' }); },
   starEvent(e) {
     const q = build(app.db, { mode: 'year', id: e.id });
     if (q) { star(q); toast(`「${e.title}」を苦手に追加しました（復習に出ます）`); }

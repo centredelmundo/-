@@ -80,7 +80,7 @@ export function validate(dir = DATA) {
 
   // ---- フラグ（すべての項目に共通）
   const flags = x => {
-    for (const k of ['verified', 'uncertain']) {
+    for (const k of ['uncertain']) {
       if (!(k in x)) W(x, `${k} がありません（false とみなします）`);
       else if (typeof x[k] !== 'boolean') E(x, `${k} は true か false にします（"" で囲まない）`);
     }
@@ -96,7 +96,6 @@ export function validate(dir = DATA) {
       if (typeof x.imageVerified !== 'boolean') E(x, 'image があるときは imageVerified（画像の確認済み）を true か false で書きます');
     }
     if (x.importance != null && ![1, 2, 3].includes(x.importance)) W(x, 'importance は 1・2・3 のどれかにします');
-    if (x.verified === true && x.uncertain === true) W(x, '確認済みなのに「要確認」の印が残っています');
   };
   const strings = (x, k) => {
     if (x[k] != null && !asArray(x[k]).every(s => typeof s === 'string' && s.trim())) E(x, `${k} は文字列の一覧にします`);
@@ -178,7 +177,7 @@ export function validate(dir = DATA) {
   const stats = {
     events: db.events.length, culture: db.events.filter(e => e.culture).length,
     polities: db.polities.length, rulers: db.rulers.length,
-    verified: all.filter(x => x.verified).length, uncertain: all.filter(x => x.uncertain).length, total: all.length,
+    uncertain: all.filter(x => x.uncertain).length, total: all.length,
     descs: all.filter(x => x.desc).length, descVerified: all.filter(x => x.descVerified).length,
     images: all.filter(x => x.image).length, imageVerified: all.filter(x => x.image && x.imageVerified).length
   };
@@ -192,7 +191,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.ar
   console.log(`データの点検：${path.relative(process.cwd(), dir) || '.'}`);
   if (stats) {
     console.log(`  出来事 ${stats.events}件（うち文化 ${stats.culture}件）・王朝/国家 ${stats.polities}件・人物 ${stats.rulers}件`);
-    console.log(`  用語集で確認済み ${stats.verified}/${stats.total}件・要確認の印 ${stats.uncertain}件`);
+    console.log(`  全${stats.total}件・要確認の印 ${stats.uncertain}件`);
     console.log(`  概要 ${stats.descs}件（確認済み ${stats.descVerified}件）・作品の写真の指定 ${stats.images}件（確認済み ${stats.imageVerified}件）`);
   }
   for (const m of errors) console.log(`  ✗ ${m}`);

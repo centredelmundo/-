@@ -8,11 +8,13 @@
     "end": 534,
     "color": "#C9A66B",
     "territory": [
+      { "year": 386, "add": ["mongolia-in"], "contested": ["cn-sx"], "note": "鮮卑の拓跋珪が建国" },
+      { "year": 398, "add": ["cn-sx", "cn-n"], "note": "平城を都とする" },
+      { "year": 439, "add": ["cn-sd", "cn-hn", "cn-sn", "cn-gs"], "note": "太武帝が華北を統一" },
       { "year": 500, "add": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs"], "contested": ["cn-jn", "mongolia-in"], "note": "孝文帝の改革ののち（494年に洛陽へ遷都）" }
     ],
     "desc": "鮮卑の拓跋氏が建て、華北を統一した王朝。孝文帝が均田制を行い、洛陽に都を移して漢化政策を進めた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -29,7 +31,6 @@
     ],
     "desc": "北魏が東西に分かれてできた東の国。550年に北斉にかわった。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -46,7 +47,6 @@
     ],
     "desc": "東魏にかわって華北の東部を支配した王朝。577年に北周に滅ぼされた。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -64,7 +64,6 @@
     ],
     "desc": "北魏が分かれてできた西の国。長安を都とし、府兵制を始めた。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -82,7 +81,6 @@
     ],
     "desc": "西魏にかわった王朝。577年に北斉を滅ぼして華北を統一したが、外戚の楊堅（隋の文帝）に位を奪われた。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -102,12 +100,12 @@
       [557, "陳"]
     ],
     "territory": [
+      { "year": 420, "add": ["cn-jn", "cn-zj", "cn-jx", "cn-hg", "cn-fj", "cn-gd", "cn-gx", "cn-hi", "cn-sc", "tonkin"], "note": "劉裕が東晋に代わり宋を建てる" },
       { "year": 500, "add": ["cn-jn", "cn-zj", "cn-jx", "cn-hg", "cn-fj", "cn-gd", "cn-gx", "cn-hi", "cn-sc", "tonkin"], "contested": ["cn-gz", "cn-yn"], "note": "斉・梁の時代" },
       { "year": 553, "remove": ["cn-sc"], "note": "四川を西魏に奪われる" }
     ],
     "desc": "建康（南京）を都とした漢民族の4王朝（宋・斉・梁・陳）。江南の開発が進み、貴族中心の六朝文化が栄えた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -126,7 +124,6 @@
     ],
     "desc": "楊堅（文帝）が建て、589年に陳を滅ぼして中国を再統一した王朝。科挙を始め、煬帝が大運河を完成させたが、高句麗遠征の失敗などで滅んだ。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -159,7 +156,6 @@
     ],
     "desc": "李淵（高祖）が建てた王朝。太宗の時代に律令体制が整い、長安は国際都市として栄えた。安史の乱のあと衰え、907年に滅んだ。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -188,7 +184,6 @@
     ],
     "desc": "唐の滅亡後、華北で後梁・後唐・後晋・後漢・後周の5つの王朝が短期間に交代した時代。節度使出身の武人が政権をにぎった。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -211,7 +206,6 @@
     ],
     "desc": "十国の一つ。江南を支配して文化が栄えた（937年に呉から南唐へ）。975年に宋に滅ぼされた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -228,7 +222,6 @@
     ],
     "desc": "十国の一つ。杭州を都に浙江を支配し、978年に宋に降った。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -245,7 +238,6 @@
     ],
     "desc": "十国の一つ。福建を支配した。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -262,7 +254,6 @@
     ],
     "desc": "十国の一つ。広州を都に広東・広西を支配した。971年に宋に滅ぼされた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -279,7 +270,6 @@
     ],
     "desc": "十国の一つ。湖南を支配した。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -304,7 +294,6 @@
     ],
     "desc": "十国の前蜀・後蜀。四川を支配した。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -321,7 +310,6 @@
     ],
     "desc": "十国の一つ。山西を支配し、遼と結んで宋に抵抗した。979年に宋に滅ぼされた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -346,7 +334,6 @@
     ],
     "desc": "契丹（キタイ）人の耶律阿保機が建てた国。渤海を滅ぼし、燕雲十六州を得た。遊牧民と農耕民を別々に治める二重統治体制をとり、契丹文字を作った。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -375,7 +362,6 @@
     ],
     "desc": "趙匡胤（太祖）が建てた王朝。文治主義をとり、科挙に殿試を加えた。1127年に金に華北を奪われて南宋となり、1279年に元に滅ぼされた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -393,7 +379,6 @@
     ],
     "desc": "タングート人の李元昊が建てた国。西夏文字を作り、東西交易路をおさえて宋と争った。チンギス=ハンに滅ぼされた。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -415,7 +400,6 @@
     ],
     "desc": "女真（ジュシェン）人の完顔阿骨打が建てた国。遼を滅ぼし、靖康の変で北宋を倒して華北を支配した。猛安・謀克という軍事・行政制度をしいた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -436,7 +420,6 @@
     ],
     "desc": "フビライ=ハンが国号を元とした王朝。大都（北京）を都とし、1279年に南宋を滅ぼした。モンゴル人を第一とする身分制度で中国を治め、紅巾の乱で北に退いた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -449,12 +432,14 @@
     "end": 668,
     "color": "#8FB3D9",
     "territory": [
+      { "year": -37, "add": ["manchuria"], "note": "朱蒙が建国したと伝わる" },
+      { "year": 313, "add": ["korea-n", "manchuria-s"], "note": "楽浪郡を滅ぼす" },
+      { "year": 475, "add": ["korea-c"], "note": "長寿王が百済の都の漢城を攻め落とす" },
       { "year": 500, "add": ["korea-n", "manchuria-s", "korea-c"], "contested": ["manchuria"], "note": "広開土王・長寿王ののち最大の領域" },
       { "year": 551, "remove": ["korea-c"], "note": "漢江流域を百済・新羅に奪われる" }
     ],
     "desc": "中国東北地方から朝鮮半島北部を支配した国。隋・唐の遠征を退けたが、668年に唐と新羅に滅ぼされた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -467,14 +452,15 @@
     "end": 660,
     "color": "#D9B38F",
     "territory": [
+      { "year": -18, "add": ["korea-c"], "note": "漢城（今のソウル）を都に建国したと伝わる" },
+      { "year": 369, "add": ["korea-sw"], "note": "近肖古王が馬韓の地を統一" },
       { "year": 500, "add": ["korea-sw"] },
       { "year": 551, "contested": ["korea-c"], "note": "漢江下流を取り戻す（553年に新羅が奪う）" }
     ],
     "desc": "朝鮮半島南西部の国。倭（日本）と結び、仏教などを伝えた。660年に唐と新羅に滅ぼされ、663年の白村江の戦いで復興もたたれた。",
     "importance": 3,
-    "verified": false,
-    "uncertain": false,
-    "memo": "",
+    "uncertain": true,
+    "memo": "建国は伝承では前18年。4世紀半ば（345年ごろ）に馬韓の地を統一して国家となった（世界史の窓）",
     "descVerified": false
   },
   {
@@ -485,6 +471,7 @@
     "end": 935,
     "color": "#9CC79A",
     "territory": [
+      { "year": -57, "add": ["korea-s"], "note": "慶州（金城）を都に建国したと伝わる" },
       { "year": 500, "add": ["korea-s"] },
       { "year": 553, "add": ["korea-c"], "note": "漢江流域を得る" },
       { "year": 660, "add": ["korea-sw"], "note": "百済を滅ぼす" },
@@ -492,7 +479,6 @@
     ],
     "desc": "朝鮮半島南東部の国。唐と結んで百済・高句麗を滅ぼし、676年に半島を統一した。骨品制がしかれ、慶州の仏国寺など仏教文化が栄えた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -509,7 +495,6 @@
     ],
     "desc": "新羅の末期に甄萱が建てた国（後三国の一つ）。936年に高麗に滅ぼされた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -527,7 +512,6 @@
     ],
     "desc": "弓裔が建てた国（後三国の一つ）。918年に部下の王建が高麗を建てた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -544,7 +528,6 @@
     ],
     "desc": "高句麗の遺民と靺鞨人が中国東北地方に建てた国。唐の制度を取り入れて「海東の盛国」とよばれ、日本とも通交した。契丹に滅ぼされた。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -565,7 +548,6 @@
     ],
     "desc": "王建が建てた王朝。開城を都とし、936年に半島を再統一した。高麗青磁や金属活字、大蔵経の版木で知られる。13世紀にモンゴルに服属した。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -574,14 +556,16 @@
     "id": "yamato",
     "name": "ヤマト政権",
     "parent": "japan",
-    "start": 500,
+    "start": 250,
     "end": 592,
     "desc": "大王（のちの天皇）を中心とした豪族の連合政権。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "territory": [
+      { "year": 250, "add": ["japan"], "note": "近畿地方を中心にヤマト政権が広がる（古墳時代）" }
+    ]
   },
   {
     "id": "asuka",
@@ -592,7 +576,6 @@
     "end": 710,
     "desc": "飛鳥に都が置かれた時代。聖徳太子の政治や大化の改新が行われた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -606,7 +589,6 @@
     "end": 794,
     "desc": "平城京に都が置かれた時代。律令国家が整い、天平文化が栄えた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -620,7 +602,6 @@
     "end": 1185,
     "desc": "平安京に都が置かれた時代。摂関政治・院政が行われ、国風文化が栄えた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -633,7 +614,6 @@
     "end": 1333,
     "desc": "源頼朝が開いた最初の武家政権。元寇（文永・弘安の役）を退けた。",
     "importance": 2,
-    "verified": false,
     "uncertain": true,
     "memo": "成立の年は1180年代のどれをとるかで諸説ある",
     "descVerified": false
@@ -646,7 +626,6 @@
     "end": 1336,
     "desc": "後醍醐天皇が鎌倉幕府を倒して始めた天皇中心の政治。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -659,11 +638,11 @@
     "end": 555,
     "color": "#A7B8C4",
     "territory": [
+      { "year": 402, "add": ["mongolia"], "note": "社崙が可汗を名のる" },
       { "year": 500, "add": ["mongolia"], "contested": ["dzungaria"] }
     ],
     "desc": "モンゴル高原の遊牧国家。北魏と争ったが、6世紀半ばに突厥に滅ぼされた。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -690,7 +669,6 @@
     ],
     "desc": "トルコ系遊牧民の国家。柔然を倒してモンゴル高原から中央アジアまで支配し、突厥文字を残した。東西に分かれたのち東突厥は唐に服属し、復興したがウイグルに滅ぼされた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -707,7 +685,6 @@
     ],
     "desc": "突厥が東西に分かれてできた西の国。中央アジアのオアシス都市を支配したが、唐に滅ぼされた。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -720,11 +697,11 @@
     "end": 567,
     "color": "#B5AA86",
     "territory": [
+      { "year": 450, "add": ["afg-balkh", "tajik", "transoxiana"], "note": "バクトリアに進出" },
       { "year": 500, "add": ["transoxiana", "afg-balkh", "afg-kabul", "tajik"], "contested": ["afg-herat", "nwfp", "punjab", "fergana"], "note": "最大の領域" }
     ],
     "desc": "中央アジアの遊牧民の国。ササン朝やグプタ朝をおびやかしたが、ササン朝と突厥にはさみ撃ちされて滅んだ。",
     "importance": 2,
-    "verified": false,
     "uncertain": true,
     "memo": "滅亡は563〜567年ごろ",
     "descVerified": false
@@ -737,11 +714,11 @@
     "end": 663,
     "minor": true,
     "territory": [
+      { "year": 329, "add": ["qinghai"], "note": "青海の遊牧国家" },
       { "year": 500, "add": ["qinghai"] }
     ],
     "desc": "青海地方の遊牧国家。663年に吐蕃に滅ぼされた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -759,7 +736,6 @@
     ],
     "desc": "トルコ系の遊牧国家。突厥を倒してモンゴル高原を支配し、安史の乱では唐を助けた。マニ教を信仰し、キルギスに滅ぼされた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -776,7 +752,6 @@
     ],
     "desc": "エニセイ川上流のトルコ系の遊牧民の国。840年にウイグルを滅ぼした。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "モンゴル高原を支配した期間ははっきりしない",
     "descVerified": false
@@ -786,17 +761,16 @@
     "name": "西ウイグル王国",
     "aliases": ["天山ウイグル王国"],
     "region": "ia",
-    "start": 856,
+    "start": 866,
     "end": 1335,
     "minor": true,
     "territory": [
-      { "year": 856, "contested": ["tarim"], "note": "天山方面に移ったウイグルの国" }
+      { "year": 866, "contested": ["tarim"], "note": "天山方面に移ったウイグルの国" }
     ],
     "desc": "ウイグルの崩壊後、天山山脈の東部（トゥルファン）に移った人々の国。タリム盆地のトルコ化を進めた。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
-    "memo": "成立年は850年代・866年など諸説ある",
+    "memo": "866年に成立（世界史の窓）。13世紀にはモンゴルに服属した",
     "descVerified": false
   },
   {
@@ -815,7 +789,6 @@
     ],
     "desc": "ソンツェン=ガンポがチベットを統一して建てた国。唐と争って一時長安を占領した。チベット文字が作られ、仏教が広まった。",
     "importance": 3,
-    "verified": false,
     "uncertain": true,
     "memo": "統一の年は629年ごろ・633年など諸説ある",
     "descVerified": false
@@ -833,7 +806,6 @@
     ],
     "desc": "トルコ人で最初にイスラームを受け入れた王朝。999年にサーマーン朝を滅ぼし、中央アジアのトルコ化・イスラーム化を進めた。",
     "importance": 2,
-    "verified": false,
     "uncertain": true,
     "memo": "成立は840年ごろ・940年ごろなど諸説ある",
     "descVerified": false
@@ -851,7 +823,6 @@
     ],
     "desc": "ブハラを都とした中央アジアのイラン系イスラーム王朝。トルコ人奴隷（マムルーク）を各地に送り出した。カラハン朝に滅ぼされた。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -870,7 +841,6 @@
     ],
     "desc": "遼の滅亡後、耶律大石が中央アジアに建てた国。カラハン朝やホラズムを従えたが、ナイマンのクチュルクに奪われ、モンゴルに滅ぼされた。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -893,7 +863,6 @@
     ],
     "desc": "アム川下流のホラズム地方から起こったトルコ系のイスラーム王朝。セルジューク朝にかわって中央アジア・イランを支配したが、チンギス=ハンに滅ぼされた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -922,7 +891,6 @@
     ],
     "desc": "チンギス=ハンが1206年のクリルタイで即位して建てた国。子や孫の代にユーラシアの大部分を征服し、駅伝制（ジャムチ）で結んだ。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -940,7 +908,6 @@
     ],
     "desc": "チンギス=ハンの子チャガタイの子孫が中央アジアに建てた国。14世紀に東西に分裂し、西部からティムールが台頭した。",
     "importance": 3,
-    "verified": false,
     "uncertain": true,
     "memo": "ハン国として自立したのは1260年代。西部は1370年にティムールが実権をにぎった",
     "descVerified": false
@@ -958,7 +925,6 @@
     ],
     "desc": "チャガタイ=ハン国の東部が分かれてできた遊牧国家。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "終わりの年は諸説ある",
     "descVerified": false
@@ -977,7 +943,6 @@
     ],
     "desc": "フラグが西アジアに建てたモンゴル人の国。アッバース朝を滅ぼし、ガザン=ハンの時代にイスラームを国教とした。宰相ラシード=アッディーンが『集史』を著した。",
     "importance": 3,
-    "verified": false,
     "uncertain": true,
     "memo": "1335年以降は分裂状態で、終わりの年は諸説ある",
     "descVerified": false
@@ -1000,7 +965,6 @@
     ],
     "desc": "バトゥが南ロシアに建てたモンゴル人の国。都サライから、ロシア諸侯に貢納させて支配した（「タタールのくびき」）。15世紀に分裂した。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1017,7 +981,6 @@
     ],
     "desc": "キプチャク=ハン国から分かれた国。1552年にイヴァン4世に征服された。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1034,7 +997,6 @@
     ],
     "desc": "キプチャク=ハン国から分かれた国。1556年にロシアに征服された。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1047,11 +1009,11 @@
     "end": 550,
     "color": "#B9A47A",
     "territory": [
+      { "year": 100, "add": ["cochinchina", "cambodia"], "note": "メコン川下流域の港市国家（外港オケオ）" },
       { "year": 500, "add": ["cochinchina", "cambodia"] }
     ],
     "desc": "メコン川下流に栄えた国。港市オケオはインド・中国・ローマを結ぶ交易で栄えた。真臘に併合された。",
     "importance": 2,
-    "verified": false,
     "uncertain": true,
     "memo": "滅亡の時期は6世紀半ば〜7世紀前半と諸説ある",
     "descVerified": false
@@ -1068,7 +1030,6 @@
     ],
     "desc": "クメール人の国。扶南を併合し、8世紀に南北に分かれた。のちのアンコール朝のもとになった。",
     "importance": 2,
-    "verified": false,
     "uncertain": true,
     "memo": "扶南を併合した時期は6世紀半ば〜7世紀前半",
     "descVerified": false
@@ -1090,7 +1051,6 @@
     ],
     "desc": "ジャヤヴァルマン2世が建てたクメール人の王朝。アンコール=ワットやアンコール=トムを築き、インドシナ半島の大部分を支配した。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1103,7 +1063,6 @@
     "end": 1225,
     "desc": "ベトナム最初の長期王朝。都を昇竜（ハノイ）に置き、国号を大越とした。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1116,7 +1075,6 @@
     "end": 1400,
     "desc": "李朝にかわった王朝。元の侵攻を3度退け、チュノムが作られた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1129,7 +1087,6 @@
     "end": 1407,
     "desc": "陳朝を奪った胡季犛の王朝。明に滅ぼされた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1147,7 +1104,6 @@
     ],
     "desc": "スマトラ島のパレンバンを中心とした港市国家。マラッカ海峡の交易をおさえ、大乗仏教が栄えた（唐の義浄が滞在した）。",
     "importance": 3,
-    "verified": false,
     "uncertain": true,
     "memo": "成立・滅亡の年は諸説ある",
     "descVerified": false
@@ -1164,7 +1120,6 @@
     ],
     "desc": "ジャワ島中部の大乗仏教の王朝。ボロブドゥールを築いた。",
     "importance": 2,
-    "verified": false,
     "uncertain": true,
     "memo": "8世紀半ば〜9世紀前半",
     "descVerified": false
@@ -1183,7 +1138,6 @@
     ],
     "desc": "ジャワ島のヒンドゥー教の王朝。プランバナン寺院群を築いた。",
     "importance": 2,
-    "verified": false,
     "uncertain": true,
     "memo": "成立・滅亡の年は諸説ある",
     "descVerified": false
@@ -1200,7 +1154,6 @@
     ],
     "desc": "ジャワ島東部のヒンドゥー教の王朝。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "成立の年は諸説ある",
     "descVerified": false
@@ -1217,7 +1170,6 @@
     ],
     "desc": "ジャワ島東部の王朝。元の遠征軍が来た混乱の中で滅んだ。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1237,7 +1189,6 @@
     ],
     "desc": "ジャワ島東部に興ったヒンドゥー教の王国。元軍を退けて成立し、14世紀に東南アジアの島々に勢力を広げた。",
     "importance": 3,
-    "verified": false,
     "uncertain": true,
     "memo": "滅亡の年は1478年・1527年ごろなど諸説ある",
     "descVerified": false
@@ -1255,7 +1206,6 @@
     ],
     "desc": "ビルマ人の最初の統一王朝。上座部仏教を受け入れ、多くの仏塔を建てた。元の侵攻を受けて衰えた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1273,7 +1223,6 @@
     ],
     "desc": "モン人がビルマ南部に建てた王国。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1290,7 +1239,6 @@
     ],
     "desc": "ビルマ北部の王国。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1307,7 +1255,6 @@
     ],
     "desc": "タイ人の最初の王朝。ラーマカムヘーン王の時代にタイ文字が作られ、上座部仏教が広まった。アユタヤ朝に併合された。",
     "importance": 3,
-    "verified": false,
     "uncertain": true,
     "memo": "建国は1220年代〜1240年代と諸説ある",
     "descVerified": false
@@ -1324,7 +1271,6 @@
     ],
     "desc": "タイ北部のチェンマイを都とした王国。16世紀からビルマの支配を受けた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1337,11 +1283,13 @@
     "end": 550,
     "color": "#D6A15F",
     "territory": [
+      { "year": 320, "add": ["bihar"], "note": "チャンドラグプタ1世が建国" },
+      { "year": 335, "add": ["hindustan", "bengal-w"], "note": "サムドラグプタが北インドを統一" },
+      { "year": 395, "add": ["malwa"], "contested": ["gujarat"], "note": "チャンドラグプタ2世が西インドを征服" },
       { "year": 500, "add": ["bihar", "hindustan", "bengal-w", "malwa"], "contested": ["punjab-e", "gujarat"], "note": "エフタルの侵入で衰えつつある" }
     ],
     "desc": "チャンドラグプタ1世が建てた北インドの王朝。チャンドラグプタ2世の時代に最盛期をむかえ、ヒンドゥー教とグプタ様式の文化が栄えた。",
     "importance": 3,
-    "verified": false,
     "uncertain": true,
     "memo": "滅亡は6世紀半ば",
     "descVerified": false
@@ -1359,7 +1307,6 @@
     ],
     "desc": "ハルシャ=ヴァルダナが北インドに建てた王朝。唐の玄奘が訪れ、ナーランダー僧院が栄えた。王の死後すぐに分裂した。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1377,7 +1324,6 @@
     ],
     "desc": "デカン高原西部の王朝。ハルシャ=ヴァルダナの南進を退けた。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1390,11 +1336,11 @@
     "end": 897,
     "minor": true,
     "territory": [
+      { "year": 275, "add": ["tamil"], "note": "カーンチープラムを都とする" },
       { "year": 500, "add": ["tamil"], "contested": ["andhra"] }
     ],
     "desc": "南インド東部の王朝。マハーバリプラムの石造寺院で知られる。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1411,9 +1357,8 @@
     ],
     "desc": "ベンガル地方の王朝。仏教を保護し、ナーランダー僧院などを支えた。",
     "importance": 2,
-    "verified": false,
     "uncertain": true,
-    "memo": "滅亡の年は12世紀後半と諸説ある",
+    "memo": "滅亡は1161年ごろ（セーナ朝に交代）とも、1203年（ゴール朝による）ともされる（世界史の窓は1203年）",
     "descVerified": false
   },
   {
@@ -1429,7 +1374,6 @@
     ],
     "desc": "ラージプート系の王朝。カナウジを都として北インドを支配し、イスラーム勢力の侵入を防いだ。",
     "importance": 2,
-    "verified": false,
     "uncertain": true,
     "memo": "成立・滅亡の年は諸説ある",
     "descVerified": false
@@ -1446,7 +1390,6 @@
     ],
     "desc": "デカン高原の王朝。エローラのカイラーサナータ寺院を造った。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1466,7 +1409,6 @@
     ],
     "desc": "南インドのタミル人の王朝。10〜11世紀に最盛期をむかえてスリランカを征服し、東南アジアのシュリーヴィジャヤにも遠征した。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1483,7 +1425,6 @@
     ],
     "desc": "南インドの王朝。チョーラ朝ののちタミル地方を支配した。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "",
     "descVerified": false
@@ -1504,7 +1445,6 @@
     ],
     "desc": "アフガニスタンのガズナを都としたトルコ系のイスラーム王朝。マフムードが北インドにくり返し侵入した。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1524,7 +1464,6 @@
     ],
     "desc": "アフガニスタンのイラン系イスラーム王朝。ガズナ朝を倒し、北インドに進出した。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1542,7 +1481,6 @@
     ],
     "desc": "ゴール朝の将軍アイバクがデリーで建てた、インド最初のイスラーム王朝。デリー=スルタン朝の最初の王朝。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1563,7 +1501,6 @@
     ],
     "desc": "デリー=スルタン朝の第2の王朝。アラー=ウッディーン=ハルジーがモンゴルの侵入を防ぎ、南インドまで遠征した。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1586,7 +1523,6 @@
     ],
     "desc": "デリー=スルタン朝の第3の王朝。ムハンマド=ビン=トゥグルクの時代に最大となったが、各地の自立で衰え、ティムールのデリー攻略で崩れた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1604,7 +1540,6 @@
     ],
     "desc": "デリー=スルタン朝の第4の王朝。デリー周辺だけを支配した。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1622,7 +1557,6 @@
     ],
     "desc": "デカン高原のイスラーム王朝。ヴィジャヤナガル王国と争い、15世紀末から分裂した。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1639,7 +1573,6 @@
     ],
     "desc": "ベンガル地方のイスラーム王朝。この時代にベンガル東部でイスラーム教徒が増えた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1656,7 +1589,6 @@
     ],
     "desc": "インド西部の港町を支配したイスラーム王朝。インド洋交易で栄えた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1674,12 +1606,12 @@
       [1412, "コーッテ王国"]
     ],
     "territory": [
+      { "year": -377, "add": ["ceylon"], "note": "アヌラーダプラを都とする" },
       { "year": 500, "add": ["ceylon"] },
       { "year": 1070, "add": ["ceylon"], "note": "チョーラ朝を追い出す（ポロンナルワ時代）" }
     ],
     "desc": "スリランカのシンハラ人の王国。上座部仏教の中心地となった。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "都と王家は何度も変わった",
     "descVerified": false
@@ -1693,6 +1625,8 @@
     "end": 651,
     "color": "#B98EA6",
     "territory": [
+      { "year": 224, "add": ["iran-nw", "iran-n", "iran-w", "iran-c", "iran-s", "khorasan", "sistan", "iraq-c", "iraq-s", "iraq-n"], "note": "アルダシール1世がパルティアを倒す" },
+      { "year": 241, "add": ["turkmen", "afg-herat", "afg-balkh", "afg-kabul", "afg-kandahar"], "note": "シャープール1世がクシャーナ朝を破り、東方に広がる" },
       { "year": 500, "add": ["iran-nw", "iran-n", "iran-w", "iran-c", "iran-s", "khorasan", "sistan", "turkmen", "iraq-c", "iraq-s", "iraq-n", "azerbaijan"], "contested": ["armenia", "georgia-e", "afg-herat"], "note": "カワード1世の時代" },
       { "year": 570, "add": ["yemen-n", "yemen-s"], "note": "アクスム王国の勢力を追い出しイエメンを支配" },
       { "year": 614, "add": ["syria", "palestine", "lebanon", "jordan"], "note": "ホスロー2世がビザンツ領に侵攻（イェルサレム占領）" },
@@ -1703,7 +1637,6 @@
     ],
     "desc": "アルダシール1世が建てたイランの王朝。ゾロアスター教を国教とし、ホスロー1世の時代に最盛期をむかえた。ニハーヴァンドの戦いでアラブ軍に敗れ滅んだ。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1716,11 +1649,12 @@
     "end": 525,
     "minor": true,
     "territory": [
+      { "year": -110, "add": ["yemen-s"], "note": "ザファールを都とする" },
+      { "year": 275, "add": ["yemen-n"], "note": "サバ王国を併合" },
       { "year": 500, "add": ["yemen-n", "yemen-s"] }
     ],
     "desc": "南アラビアの王国。6世紀にアクスム王国に征服された。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1738,7 +1672,6 @@
     ],
     "desc": "ムハンマドがメディナに移住（ヒジュラ）して作ったイスラーム教徒の共同体（ウンマ）。630年にメッカを征服した。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1762,7 +1695,6 @@
     ],
     "desc": "ムハンマドの死後、共同体の合議で選ばれた4人のカリフ（アブー=バクル・ウマル・ウスマーン・アリー）の時代。ジハードでシリア・エジプト・イランを征服した。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1788,7 +1720,6 @@
     ],
     "desc": "ムアーウィヤが開いたイスラーム王朝。ダマスクスを都とし、西は北アフリカ・イベリア半島、東は中央アジア・インダス川まで領土を広げた。アラブ人を優遇した。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1810,7 +1741,6 @@
     ],
     "desc": "ウマイヤ朝を倒して成立したイスラーム王朝。バグダードを都とし、ムスリムの平等を実現した（イスラーム帝国）。10世紀以降は実権を失い、1258年にモンゴルに滅ぼされた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1819,17 +1749,16 @@
     "id": "saffarid",
     "name": "サッファール朝",
     "region": "wa",
-    "start": 861,
+    "start": 867,
     "end": 1003,
     "minor": true,
     "territory": [
-      { "year": 861, "add": ["sistan"] },
+      { "year": 867, "add": ["sistan"] },
       { "year": 873, "add": ["khorasan"], "contested": ["iran-s"], "note": "ターヒル朝を滅ぼす" },
       { "year": 900, "remove": ["khorasan"], "note": "サーマーン朝に敗れる" }
     ],
     "desc": "イラン東部のスィースターンから起こった王朝。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1846,7 +1775,6 @@
     ],
     "desc": "アッバース朝のトルコ人の総督が、エジプトで自立して建てた王朝。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1865,7 +1793,6 @@
     ],
     "desc": "アッバース朝の宗主権のもとで北アフリカ（チュニジア）を治めた王朝。シチリア島を征服した。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1882,7 +1809,6 @@
     ],
     "desc": "モロッコに成立した最初のイスラーム王朝。フェスを建設した。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1905,7 +1831,6 @@
     ],
     "desc": "イスマーイール派（シーア派）のカリフを名のった王朝。チュニジアで建国し、969年にエジプトを征服してカイロを建設した。アズハル学院を創設した。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1922,7 +1847,6 @@
     ],
     "desc": "北アフリカ（チュニジア）のベルベル人の王朝。11世紀にファーティマ朝から離れた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1939,7 +1863,6 @@
     ],
     "desc": "エジプトの王朝。ファーティマ朝に滅ぼされた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1958,7 +1881,6 @@
     ],
     "desc": "イラン系のシーア派の軍事政権。946年にバグダードに入って大アミールとしてアッバース朝カリフから実権を奪い、イクター制を始めた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1984,7 +1906,6 @@
     ],
     "desc": "トルコ系のスンナ派の王朝。トゥグリル=ベクがバグダードに入ってカリフからスルタンの称号を受けた。マンジケルトの戦いでビザンツ帝国を破り、十字軍のきっかけとなった。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2002,7 +1923,6 @@
     ],
     "desc": "セルジューク朝の武将が建てた王朝。十字軍と戦い、エデッサ伯国を滅ぼした。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "シリアの分家の滅亡は1180年代",
     "descVerified": false
@@ -2021,7 +1941,6 @@
     ],
     "desc": "セルジューク朝の一族がアナトリアに建てた国。コンヤを都とし、アナトリアのトルコ化・イスラーム化を進めた。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2041,7 +1960,6 @@
     ],
     "desc": "サラーフ=アッディーン（サラディン）が建てた王朝。ファーティマ朝を廃してスンナ派を復活させ、1187年にイェルサレムを奪回した。",
     "importance": 3,
-    "verified": false,
     "uncertain": true,
     "memo": "エジプトの本家は1250年、シリアの分家は1260年に滅んだ",
     "descVerified": false
@@ -2061,7 +1979,6 @@
     ],
     "desc": "第1回十字軍がイェルサレムを占領して建てた国。1187年にイェルサレムを失い、1291年にアッコンが落ちて滅んだ。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2079,7 +1996,6 @@
     ],
     "desc": "第1回十字軍が建てた十字軍国家の一つ。1268年にマムルーク朝に滅ぼされた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2101,7 +2017,6 @@
     ],
     "desc": "ベルベル人が建てたイスラーム王朝。マラケシュを都とし、ガーナ王国を攻め、イベリア半島に渡ってキリスト教国と戦った。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2126,7 +2041,6 @@
     ],
     "desc": "ベルベル人の宗教運動から生まれたイスラーム王朝。ムラービト朝を倒して北アフリカとイベリア半島南部を支配したが、ラス=ナバス=デ=トロサの戦いに敗れて衰えた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2143,7 +2057,6 @@
     ],
     "desc": "チュニジアの王朝。ムワッヒド朝から自立した。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2161,7 +2074,6 @@
     ],
     "desc": "アルジェリア西部のトレムセンを都とした王朝。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2170,13 +2082,12 @@
     "id": "marinid",
     "name": "マリーン朝",
     "parent": "morocco",
-    "start": 1244,
+    "start": 1248,
     "end": 1465,
     "desc": "ムワッヒド朝を倒してモロッコを支配した、ベルベル人の王朝。",
     "importance": 2,
-    "verified": false,
-    "uncertain": false,
-    "memo": "",
+    "uncertain": true,
+    "memo": "建国の年には諸説あり、一般にフェスを都とした1248年とされる（世界史の窓）",
     "descVerified": false
   },
   {
@@ -2193,7 +2104,6 @@
     ],
     "desc": "イル=ハン国の分裂後、イラクを支配したモンゴル系の王朝。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2213,7 +2123,6 @@
     ],
     "desc": "トルコ系遊牧民の王朝。イラン北西部からイラクを支配し、白羊朝に滅ぼされた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2230,7 +2139,6 @@
     ],
     "desc": "アナトリア中部のトルコ系の侯国（ベイリク）。オスマン帝国と争い、15世紀後半に併合された。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "オスマン帝国への併合は1468年・1487年など諸説ある",
     "descVerified": false
@@ -2247,7 +2155,6 @@
     ],
     "desc": "イスマーイール派の一派がアラビア東部に建てた国。930年にメッカを襲いカーバの黒石を奪った。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2264,7 +2171,6 @@
     ],
     "desc": "イエメンの王朝。紅海・インド洋交易で栄えた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2283,7 +2189,6 @@
     ],
     "desc": "カフカスのキリスト教王国。12世紀末のタマル女王の時代に最盛期をむかえた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2296,11 +2201,13 @@
     "end": 534,
     "color": "#A9A9C9",
     "territory": [
+      { "year": 429, "add": ["algeria"], "note": "ガイセリック王が北アフリカに渡る" },
+      { "year": 439, "add": ["tunisia"], "note": "カルタゴを占領" },
+      { "year": 455, "add": ["sardinia", "corsica", "baleares"], "note": "西地中海の島々を支配し、ローマを略奪" },
       { "year": 500, "add": ["tunisia", "sardinia", "corsica", "baleares"], "contested": ["tripolitania", "algeria"] }
     ],
     "desc": "ゲルマン人のヴァンダル人が北アフリカに建てた国。455年にローマを略奪した。ビザンツ帝国に滅ぼされた。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2313,13 +2220,14 @@
     "end": 940,
     "color": "#B48E6B",
     "territory": [
+      { "year": 100, "add": ["eritrea"], "note": "紅海の交易で栄える" },
+      { "year": 350, "add": ["ethiopia"], "contested": ["sudan"], "note": "エザナ王がクシュ（メロエ）を攻め、キリスト教を受け入れる" },
       { "year": 500, "add": ["eritrea", "ethiopia"] },
       { "year": 525, "add": ["yemen-n", "yemen-s"], "note": "ヒムヤル王国を征服" },
       { "year": 570, "remove": ["yemen-n", "yemen-s"], "note": "ササン朝にイエメンを奪われる" }
     ],
     "desc": "エチオピア北部の王国。紅海交易で栄え、4世紀にキリスト教を受け入れた。6世紀にはイエメンも支配した。",
     "importance": 2,
-    "verified": false,
     "uncertain": true,
     "memo": "滅亡の時期ははっきりしない",
     "descVerified": false
@@ -2336,7 +2244,6 @@
     ],
     "desc": "エチオピアの王朝。ラリベラの岩窟教会群を造った。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "成立の年は900年代〜1137年と諸説ある",
     "descVerified": false
@@ -2354,7 +2261,6 @@
     ],
     "desc": "ナイル川中流（ヌビア）のキリスト教王国。エジプトのイスラーム政権と長く共存した。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "成立・滅亡の時期ははっきりしない",
     "descVerified": false
@@ -2367,11 +2273,11 @@
     "end": 1240,
     "color": "#D2B26A",
     "territory": [
-      { "year": 500, "add": ["mauritania"], "contested": ["mali", "senegambia"] }
+      { "year": 300, "add": ["mauritania"], "note": "サハラ交易で栄える" },
+      { "year": 500, "add": ["mauritania"], "contested": ["mali", "senegambia", "gambia"] }
     ],
     "desc": "サハラ交易で金と岩塩を取り引きして栄えた西アフリカの王国。ムラービト朝の攻撃を受けて衰えた。",
     "importance": 3,
-    "verified": false,
     "uncertain": true,
     "memo": "成立は4〜8世紀ごろとされ、1076年にムラービト朝の攻撃を受けて衰えた",
     "descVerified": false
@@ -2384,14 +2290,13 @@
     "end": 1645,
     "color": "#C9A04E",
     "territory": [
-      { "year": 1240, "add": ["mali", "senegambia", "guinea"], "contested": ["mauritania"], "note": "スンジャタがガーナ王国を滅ぼす" },
+      { "year": 1240, "add": ["mali", "senegambia", "gambia", "guinea", "guinea-bissau"], "contested": ["mauritania"], "note": "スンジャタがガーナ王国を滅ぼす" },
       { "year": 1325, "add": ["niger"], "note": "ガオを支配" },
       { "year": 1468, "remove": ["mali", "niger"], "note": "ソンガイ王国にトンブクトゥ・ガオを奪われる" },
       { "year": 1433, "contested": ["mali"], "note": "トゥアレグ人にトンブクトゥを奪われる" }
     ],
     "desc": "スンジャタが建てた西アフリカのイスラーム王国。金の交易で栄え、マンサ=ムーサのメッカ巡礼で知られる。トンブクトゥが学問の中心となった。",
     "importance": 3,
-    "verified": false,
     "uncertain": true,
     "memo": "滅亡の年は諸説ある",
     "descVerified": false
@@ -2409,7 +2314,6 @@
     ],
     "desc": "チャド湖周辺の王国。11世紀にイスラームを受け入れ、サハラ交易で栄えた。のちにボルヌーへ移った（カネム=ボルヌー王国）。",
     "importance": 2,
-    "verified": false,
     "uncertain": true,
     "memo": "成立は8〜9世紀ごろ",
     "descVerified": false
@@ -2426,7 +2330,6 @@
     ],
     "desc": "東アフリカのスワヒリ都市の一つ。インド洋交易と金の取引で栄えた。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "建国の年は伝承による",
     "descVerified": false
@@ -2444,7 +2347,6 @@
     ],
     "desc": "ジンバブエ高原の王国。巨大な石造建築（大ジンバブエ遺跡）を残し、金の交易で栄えた。",
     "importance": 2,
-    "verified": false,
     "uncertain": true,
     "memo": "11〜15世紀ごろ",
     "descVerified": false
@@ -2460,7 +2362,8 @@
     ],
     "color": "#B07AA1",
     "territory": [
-      { "year": 500, "add": ["thrace-e", "anatolia-w", "anatolia-c", "anatolia-e", "pontus", "hatay", "syria", "lebanon", "palestine", "jordan", "egypt", "cyprus", "crete", "aegean", "ionian", "greece-s", "thessaly", "epirus", "macedonia-gr", "thrace-w", "macedonia", "rumelia-e", "bulgaria", "dobruja", "albania", "cyrenaica"], "contested": ["serbia", "armenia", "georgia-w"], "note": "アナスタシウス1世の時代" },
+      { "year": 395, "add": ["thrace-e", "anatolia-w", "anatolia-c", "anatolia-e", "pontus", "hatay", "syria", "lebanon", "palestine", "jordan", "egypt", "cyprus", "crete", "aegean", "ionian", "greece-s", "greece-w", "greece-c", "peloponnese", "thessaly", "epirus", "macedonia-gr", "thrace-w", "macedonia", "rumelia-e", "bulgaria", "dobruja", "albania", "cyrenaica", "serbia", "kosovo", "montenegro"], "note": "テオドシウス帝の死後、ローマ帝国が東西に分かれる" },
+      { "year": 500, "add": ["thrace-e", "anatolia-w", "anatolia-c", "anatolia-e", "pontus", "hatay", "syria", "lebanon", "palestine", "jordan", "egypt", "cyprus", "crete", "aegean", "ionian", "greece-s", "greece-w", "greece-c", "peloponnese", "thessaly", "epirus", "macedonia-gr", "thrace-w", "macedonia", "rumelia-e", "bulgaria", "dobruja", "albania", "cyrenaica"], "contested": ["serbia", "armenia", "georgia-w"], "note": "アナスタシウス1世の時代" },
       { "year": 533, "add": ["tunisia", "sardinia", "corsica", "baleares"], "contested": ["tripolitania", "algeria"], "note": "ヴァンダル王国を滅ぼす" },
       { "year": 535, "add": ["sicily"], "note": "ユスティニアヌス帝のイタリア遠征（〜554年）" },
       { "year": 553, "add": ["naples", "papal", "emilia", "tuscany", "lombardy", "venetia", "liguria", "piedmont", "dalmatia"], "note": "東ゴート王国を滅ぼす" },
@@ -2485,11 +2388,10 @@
       { "year": 1185, "remove": ["bulgaria", "rumelia-e", "dobruja", "ionian"], "note": "第2次ブルガリア帝国の成立" },
       { "year": 1190, "remove": ["serbia", "albania"] },
       { "year": 1191, "remove": ["cyprus"] },
-      { "year": 1261, "add": ["thrace-e", "thrace-w", "macedonia-gr", "anatolia-w"], "contested": ["greece-s"], "note": "ミカエル8世がコンスタンティノープルを奪回" }
+      { "year": 1261, "add": ["thrace-e", "thrace-w", "macedonia-gr", "anatolia-w"], "contested": ["greece-s", "greece-w", "greece-c", "peloponnese"], "note": "ミカエル8世がコンスタンティノープルを奪回" }
     ],
     "desc": "ローマ帝国の東半分を受けつぎ、コンスタンティノープルを都とした国。ユスティニアヌス帝が地中海を再統一し、ギリシア正教とギリシア語の文化を育てた。1453年にオスマン帝国に滅ぼされた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2502,11 +2404,10 @@
     "end": 1261,
     "color": "#9D8FB8",
     "territory": [
-      { "year": 1204, "add": ["thrace-e", "thrace-w"], "contested": ["greece-s", "macedonia-gr"], "note": "第4回十字軍がコンスタンティノープルを占領" }
+      { "year": 1204, "add": ["thrace-e", "thrace-w"], "contested": ["greece-s", "greece-w", "greece-c", "peloponnese", "macedonia-gr"], "note": "第4回十字軍がコンスタンティノープルを占領" }
     ],
     "desc": "第4回十字軍がコンスタンティノープルを占領して建てた国。1261年にニケーア帝国に滅ぼされた。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2524,7 +2425,6 @@
     ],
     "desc": "ビザンツ帝国の亡命政権の一つ。1261年にコンスタンティノープルを奪回し、ビザンツ帝国を復活させた。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2541,7 +2441,6 @@
     ],
     "desc": "ビザンツ帝国の亡命政権の一つ。黒海南岸を支配し、1461年にオスマン帝国に滅ぼされた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2560,7 +2459,6 @@
     ],
     "desc": "ビザンツ帝国の亡命政権の一つ。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "終わりの年は諸説ある",
     "descVerified": false
@@ -2577,7 +2475,6 @@
     ],
     "desc": "リュジニャン家がキプロス島に建てた十字軍の王国。1489年にヴェネツィア領となった。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2608,7 +2505,6 @@
     ],
     "desc": "トルコ系のブルガール人とスラヴ人が建てた国。ギリシア正教を受け入れ、キリル文字が広まった。1018年にビザンツ帝国に征服されたが、1185年に再興し、1396年にオスマン帝国に滅ぼされた。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2617,7 +2513,7 @@
     "id": "serbia-m",
     "name": "セルビア王国",
     "region": "ee",
-    "start": 1166,
+    "start": 1168,
     "end": 1459,
     "color": "#C49A9A",
     "names": [
@@ -2628,7 +2524,7 @@
       [1402, "セルビア専制公国"]
     ],
     "territory": [
-      { "year": 1166, "contested": ["serbia"], "note": "ステファン=ネマニャが自立" },
+      { "year": 1168, "contested": ["serbia"], "note": "ステファン=ネマニャが自立" },
       { "year": 1217, "add": ["serbia", "kosovo"], "contested": ["montenegro"], "note": "王国となる" },
       { "year": 1282, "add": ["macedonia"] },
       { "year": 1346, "add": ["albania", "epirus", "thessaly"], "contested": ["macedonia-gr"], "note": "ステファン=ドゥシャンが皇帝となる" },
@@ -2636,7 +2532,6 @@
     ],
     "desc": "ネマニッチ家のもとで自立したセルビア人の国。14世紀のステファン=ドゥシャンの時代にバルカン半島西部を支配したが、コソヴォの戦いのあとオスマン帝国に従い、1459年に併合された。",
     "importance": 2,
-    "verified": false,
     "uncertain": true,
     "memo": "国名は時期により変わる",
     "descVerified": false
@@ -2653,7 +2548,6 @@
     ],
     "desc": "バルカン半島西部の国。1463年にオスマン帝国に征服された。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "王国となったのは1377年",
     "descVerified": false
@@ -2670,7 +2564,6 @@
     ],
     "desc": "ドナウ川下流北岸のルーマニア人の公国。15世紀からオスマン帝国に服属した。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2687,7 +2580,6 @@
     ],
     "desc": "ルーマニア人の公国。16世紀からオスマン帝国に服属した。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2708,7 +2600,6 @@
     ],
     "desc": "ノルマン系のルーシが建て、オレグがキエフを都とした国。ウラディミル1世がギリシア正教を受け入れ、ヤロスラフ賢公の時代に栄えた。12世紀から分裂し、モンゴル軍に滅ぼされた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2726,7 +2617,6 @@
     ],
     "desc": "北ロシアの商業都市国家。ハンザ同盟の商館が置かれた。1478年にモスクワ大公国に併合された。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2744,7 +2634,6 @@
     ],
     "desc": "ロシア北東部の公国。13世紀以降はキプチャク=ハン国に服属し、のちモスクワ大公国が大公の地位を受けついだ。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "終わりの年は、モスクワ公が大公位を得た1328〜31年ごろ",
     "descVerified": false
@@ -2761,7 +2650,6 @@
     ],
     "desc": "西ロシア（現在のウクライナ西部）の公国。のちにポーランドとリトアニアに分けられた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2778,7 +2666,6 @@
     ],
     "desc": "南ロシアの草原の遊牧国家。支配層がユダヤ教を受け入れたことで知られる。キエフ公国に滅ぼされた。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "成立・滅亡の時期は諸説ある",
     "descVerified": false
@@ -2795,7 +2682,6 @@
     ],
     "desc": "ヴォルガ川中流の国。922年にイスラームを受け入れた。モンゴル軍に滅ぼされた。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "成立の時期は諸説ある",
     "descVerified": false
@@ -2808,7 +2694,6 @@
     "end": 1370,
     "desc": "ポーランド最初の王朝。カジミェシュ3世（大王）の時代に国を立て直した。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2829,7 +2714,6 @@
     ],
     "desc": "十字軍の騎士修道会であるドイツ騎士団がバルト海南岸に建てた国。東方植民を進めたが、タンネンベルクの戦いでポーランド・リトアニアに敗れた。1525年にプロイセン公国となった。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2847,7 +2731,6 @@
     ],
     "desc": "ドイツ騎士団の支部が支配したバルト海東岸の地。1561年に解体した。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2865,7 +2748,6 @@
     ],
     "desc": "ノルマン人の王国。ハーラル美髪王が統一した。13世紀にアイスランド・グリーンランドを従え、1380年にデンマークと同君連合となった。",
     "importance": 2,
-    "verified": false,
     "uncertain": true,
     "memo": "統一の年は870年代〜900年ごろとされる",
     "descVerified": false
@@ -2882,7 +2764,6 @@
     ],
     "desc": "アジア系の遊牧民がパンノニア平原に建てた国。ビザンツ帝国をおびやかしたが、カール大帝に滅ぼされた。",
     "importance": 2,
-    "verified": false,
     "uncertain": true,
     "memo": "滅亡の時期は796年〜9世紀初め",
     "descVerified": false
@@ -2899,7 +2780,6 @@
     ],
     "desc": "西スラヴ人の国。キュリロスとメトディオスがスラヴ語で布教した。マジャール人に滅ぼされた。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "滅亡の年は諸説ある",
     "descVerified": false
@@ -2926,7 +2806,6 @@
     ],
     "desc": "マジャール人がパンノニア平原に建てた国。1000年にイシュトヴァーン1世がカトリックを受け入れて王国となった。15世紀後半のマーチャーシュ王の時代に強大となった。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2943,7 +2822,6 @@
     ],
     "desc": "クロアティア人の王国。1102年からハンガリー王が王位を兼ねた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2967,7 +2845,6 @@
     ],
     "desc": "チェコ人の国。神聖ローマ帝国の選帝侯の一つとなり、14世紀にはカール4世のもとでプラハが栄えた。15世紀にフス戦争が起きた。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2985,7 +2862,6 @@
     ],
     "desc": "ゲルマン人の東ゴート人の王テオドリックがイタリアに建てた国。ローマの制度を残して治めたが、ビザンツ帝国に滅ぼされた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3004,7 +2880,6 @@
     ],
     "desc": "ゲルマン人のランゴバルド人が北イタリアに建てた国。ラヴェンナを奪って教皇をおびやかしたが、カール大帝に滅ぼされた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3022,7 +2897,6 @@
     ],
     "desc": "中部フランク王国から分かれた北イタリアの王国。962年にオットー1世が王位を得て神聖ローマ帝国に組み込まれた。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "ロタール1世の死後、イタリアの王位は諸家が争った",
     "descVerified": false
@@ -3041,7 +2915,6 @@
     ],
     "desc": "南イタリアとシチリアに進出したノルマン人の国々。1130年に両シチリア王国となった。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3066,7 +2939,6 @@
     ],
     "desc": "ノルマン人のルッジェーロ2世が南イタリアとシチリアに建てた王国。ギリシア・イスラーム・ラテンの文化がまじり合った。のちシュタウフェン家、アンジュー家が王位を得た。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3087,7 +2959,6 @@
     ],
     "desc": "シチリアの晩鐘ののち、南イタリアの半島部に残った王国。1442年にアラゴン王が王位を得た。",
     "importance": 2,
-    "verified": false,
     "uncertain": true,
     "memo": "1501〜04年にフランスとスペインが争い、スペイン領となった",
     "descVerified": false
@@ -3100,6 +2971,8 @@
     "end": 843,
     "color": "#7FA0C9",
     "territory": [
+      { "year": 481, "add": ["artois", "belgium", "liege"], "note": "クローヴィスが即位" },
+      { "year": 486, "add": ["france", "champagne", "normandy"], "note": "ソワソンの戦いでローマ人の勢力を倒す" },
       { "year": 500, "add": ["france", "champagne", "normandy", "artois", "belgium", "liege", "luxembourg", "lorraine", "moselle", "alsace", "anjou", "palatinate"], "contested": ["brittany", "westphalia"], "note": "クローヴィスの時代" },
       { "year": 507, "add": ["poitou", "guyenne", "auvergne"], "contested": ["languedoc"], "note": "ヴイエの戦いで西ゴート人を破りアキテーヌを得る" },
       { "year": 531, "add": ["thuringia", "hesse"], "note": "テューリンゲンを征服" },
@@ -3115,7 +2988,6 @@
     ],
     "desc": "クローヴィスが建てたゲルマン人の国。カトリックに改宗してローマ教会と結び、カール大帝の時代に西ヨーロッパの大部分を統一した。843年のヴェルダン条約で3つに分かれた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3128,7 +3000,6 @@
     "end": 751,
     "desc": "クローヴィスが開いたフランク王国の最初の王朝。のちに宮宰のカロリング家に実権を奪われた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3141,7 +3012,6 @@
     "end": 843,
     "desc": "ピピン（小ピピン）が開いたフランク王国の王朝。カール大帝のもとで最盛期をむかえた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3155,11 +3025,12 @@
     "end": 534,
     "minor": true,
     "territory": [
+      { "year": 443, "add": ["savoy", "dauphine"], "note": "サヴォイアに定住" },
+      { "year": 470, "add": ["burgundy", "franche-comte"], "note": "ローヌ川流域に広がる" },
       { "year": 500, "add": ["burgundy", "franche-comte", "savoy", "dauphine"], "contested": ["swiss", "auvergne"] }
     ],
     "desc": "ゲルマン人のブルグント人がローヌ川流域に建てた国。534年にフランク王国に併合された。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3172,6 +3043,8 @@
     "end": 711,
     "color": "#C9A27E",
     "territory": [
+      { "year": 418, "add": ["guyenne", "languedoc"], "note": "アキテーヌに建国（都トゥールーズ）" },
+      { "year": 475, "add": ["spain", "castile-old", "aragon", "catalonia", "valencia", "murcia", "andalusia", "granada", "poitou", "auvergne"], "note": "エウリック王のときイベリア半島の大部分を支配" },
       { "year": 500, "add": ["spain", "castile-old", "aragon", "catalonia", "valencia", "murcia", "andalusia", "granada", "poitou", "guyenne", "languedoc", "auvergne"], "contested": ["portugal", "navarre"], "note": "トゥールーズを都とする" },
       { "year": 507, "remove": ["poitou", "guyenne", "auvergne"], "note": "ヴイエの戦いでフランク王国に敗れる" },
       { "year": 585, "add": ["asturias", "portugal"], "note": "スエヴィ王国を併合" },
@@ -3179,7 +3052,6 @@
     ],
     "desc": "ゲルマン人の西ゴート人が南フランスとイベリア半島に建てた国。507年にフランク王国に敗れて半島に移り、711年にウマイヤ朝に滅ぼされた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3192,11 +3064,11 @@
     "end": 585,
     "minor": true,
     "territory": [
+      { "year": 411, "add": ["asturias"], "contested": ["portugal"], "note": "イベリア半島北西部に定住" },
       { "year": 500, "add": ["asturias"], "contested": ["portugal"] }
     ],
     "desc": "ゲルマン人のスエヴィ人がイベリア半島北西部に建てた国。西ゴート王国に併合された。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3213,7 +3085,6 @@
     ],
     "desc": "ヴェルダン条約でできた3つの国の一つ。のちのフランスのもとになった。987年にカロリング家が絶え、カペー朝にかわった。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3236,7 +3107,6 @@
     ],
     "desc": "ヴェルダン条約でできた3つの国の一つ。のちのドイツのもとになった。オットー1世が皇帝となって神聖ローマ帝国となった。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3254,7 +3124,6 @@
     ],
     "desc": "ヴェルダン条約でロタール1世が得た国。北海からイタリアまで細長く広がったが、870年のメルセン条約で東西のフランクに分けられた。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3273,7 +3142,6 @@
     ],
     "desc": "フランク王国の分裂後、ローヌ川流域に生まれた王国。1032年に神聖ローマ帝国に組み込まれた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3297,7 +3165,6 @@
     ],
     "desc": "イスラーム勢力に抵抗するキリスト教徒が半島北部に建てた国。レコンキスタ（国土回復運動）の出発点となり、のちレオン王国となってカスティリャと合わさった。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3318,7 +3185,6 @@
     ],
     "desc": "イベリア半島中央部のキリスト教国。レコンキスタの中心となり、1085年にトレドを奪回した。1479年にアラゴンと合わさってスペイン王国となった。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3341,7 +3207,6 @@
     ],
     "desc": "イベリア半島北東部のキリスト教国。カタルーニャと合わさり、地中海に進出してシチリア・サルデーニャ・ナポリを得た。1479年にカスティリャと合わさった。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3358,7 +3223,6 @@
     ],
     "desc": "ピレネー山脈西部のバスク人の王国。1512年にカスティリャに併合された。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3378,7 +3242,6 @@
     ],
     "desc": "ウマイヤ家のアブド=アッラフマーン1世がイベリア半島に建てた王朝。都コルドバは西方イスラーム世界の文化の中心となり、10世紀にはカリフを名のった。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3396,7 +3259,6 @@
     ],
     "desc": "後ウマイヤ朝の滅亡後、イベリア半島に分立したイスラーム教徒の小国。ムラービト朝に併合された。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3413,7 +3275,6 @@
     ],
     "desc": "イベリア半島最後のイスラーム王朝。グラナダにアルハンブラ宮殿を築いた。1492年にスペインに滅ぼされ、レコンキスタが完了した。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3427,7 +3288,6 @@
     "end": 1383,
     "desc": "ポルトガル最初の王朝。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3445,12 +3305,12 @@
       [829, "イングランド（ウェセックス王国）"]
     ],
     "territory": [
+      { "year": 450, "contested": ["england"], "note": "ブリテン島に渡る" },
       { "year": 500, "contested": ["england"] },
       { "year": 600, "add": ["england"] }
     ],
     "desc": "ゲルマン人のアングロ=サクソン人がブリテン島に建てた国々。9世紀にウェセックスのもとでまとまり、アルフレッド大王がデーン人と戦った。",
     "importance": 2,
-    "verified": false,
     "uncertain": true,
     "memo": "七王国は5〜9世紀ごろ。829年にエグバートがほぼ統一したとされる",
     "descVerified": false
@@ -3466,7 +3326,6 @@
     ],
     "desc": "アングロ=サクソン人の王家。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3479,7 +3338,6 @@
     "end": 1042,
     "desc": "デンマーク王クヌートがイングランド王となって始まった王朝。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3492,7 +3350,6 @@
     "end": 1154,
     "desc": "ノルマンディー公ウィリアムがイングランドを征服して開いた王朝。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3505,7 +3362,6 @@
     "end": 1399,
     "desc": "アンジュー伯がヘンリ2世として開いた王朝。フランスの西半分も領有した（アンジュー帝国）。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3518,7 +3374,6 @@
     "end": 1461,
     "desc": "バラ戦争でヨーク家と争った王家。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3531,7 +3386,6 @@
     "end": 1485,
     "desc": "バラ戦争でランカスター家と争った王家。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3549,7 +3403,6 @@
     ],
     "desc": "ブリトン人の諸侯が治めたウェールズ。1283年にイングランドに征服された。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3558,15 +3411,15 @@
     "id": "ireland-k",
     "name": "アイルランドの諸王国",
     "region": "we",
-    "start": 500,
+    "start": -800,
     "end": 1541,
     "minor": true,
     "territory": [
+      { "year": -800, "add": ["ireland", "ulster"], "note": "ケルト系の部族の国々" },
       { "year": 500, "add": ["ireland"] }
     ],
     "desc": "ケルト系の小王国が分立したアイルランド。12世紀からイングランドの進出を受けた。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3583,7 +3436,6 @@
     ],
     "desc": "ノルマン人の首長ロロがフランス王から与えられた公国。1066年に公ウィリアムがイングランドを征服した。",
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3596,7 +3448,6 @@
     "end": 1328,
     "desc": "ユーグ=カペーが開いたフランスの王朝。フィリップ2世・ルイ9世・フィリップ4世のもとで王権を強めた。",
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3616,7 +3467,6 @@
     ],
     "desc": "フランス王家の分家が治めた公国。フランドルやネーデルラントを手に入れて栄えたが、1477年に公シャルルが戦死して分割された。",
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3629,11 +3479,11 @@
     "end": 550,
     "minor": true,
     "territory": [
+      { "year": -100, "add": ["mexico"], "note": "メキシコ高原に大都市が築かれる" },
       { "year": 500, "add": ["mexico"] }
     ],
     "desc": "メキシコ高原の都市文明。太陽のピラミッドなど巨大な神殿を築いた。",
     "importance": 2,
-    "verified": false,
     "uncertain": true,
     "memo": "衰退の時期は6〜7世紀",
     "descVerified": false
@@ -3647,11 +3497,11 @@
     "end": 1697,
     "color": "#7FA88A",
     "territory": [
-      { "year": 500, "add": ["yucatan", "guatemala", "belize"], "contested": ["central-am"], "note": "古典期" }
+      { "year": -800, "add": ["yucatan", "guatemala", "belize"], "note": "ユカタン半島などに都市国家が生まれる" },
+      { "year": 500, "add": ["yucatan", "guatemala", "belize"], "contested": ["central-am", "costa-rica", "nicaragua", "salvador"], "note": "古典期" }
     ],
     "desc": "ユカタン半島からグアテマラにかけて栄えた都市国家の文明。ピラミッド状の神殿、二十進法、精密な暦、マヤ文字を持っていた。",
     "importance": 3,
-    "verified": false,
     "uncertain": true,
     "memo": "古典期（3〜9世紀）・後古典期（10〜16世紀）。最後の都市タヤサルの陥落は1697年",
     "descVerified": false
@@ -3668,7 +3518,6 @@
     ],
     "desc": "メキシコ高原の文明。トゥーラを都とした。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "成立・衰退の時期は諸説ある",
     "descVerified": false
@@ -3685,7 +3534,6 @@
     ],
     "desc": "ペルー北部の海岸に栄えた王国。インカ帝国に征服された。",
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "成立の時期は諸説ある",
     "descVerified": false

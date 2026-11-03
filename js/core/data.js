@@ -1,5 +1,6 @@
 // データ（data/ のJSON）の読み込みと検索。
 import { load } from './store.js';
+import { prepare as prepareIchimon } from './ichimon.js';
 
 /** JSONの書き間違いの場所（行・文字）を探す。ブラウザによってはエラーに位置が出ないため自前で調べる */
 export function locateJsonError(text) {
@@ -83,7 +84,7 @@ async function fetchJson(base, file) {
 
 const asArray = v => (Array.isArray(v) ? v : v == null ? [] : [v]);
 /** データ確認の画面で、このブラウザに保存して上書きできる項目 */
-export const OVERRIDE_KEYS = ['verified', 'uncertain', 'memo', 'year', 'end', 'start', 'from', 'to', 'desc', 'descVerified', 'image', 'imageVerified'];
+export const OVERRIDE_KEYS = ['uncertain', 'memo', 'year', 'end', 'start', 'from', 'to', 'desc', 'descVerified', 'image', 'imageVerified'];
 
 /** データ全体 */
 export class DB {
@@ -117,8 +118,12 @@ export class DB {
     this.events = tagFile(events, 'event');
     this.applyOverrides();
     this.index();
+    this.setIchimon(load('ichimon', null));
     return this;
   }
+
+  /** 一問一答（利用者が読み込んだデータ）。なければ null */
+  setIchimon(raw) { this.ichimon = prepareIchimon(raw); }
 
   /** データ確認画面で付けた印や修正を重ねる */
   applyOverrides() {
@@ -145,7 +150,6 @@ export class DB {
         else if (seen.has(`${x.kind}:${x.id}`)) warn(x, `id「${x.id}」が重複しています`);
         seen.set(`${x.kind}:${x.id}`, x);
         x.key = `${x.kind}:${x.id}`;
-        x.verified = x.verified === true;
         x.uncertain = x.uncertain === true;
         x.descVerified = x.descVerified === true;
         if (x.image != null) x.imageVerified = x.imageVerified === true;

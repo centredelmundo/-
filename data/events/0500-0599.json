@@ -7,7 +7,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "フランク王国が西ゴート人を破り、ガリア南西部を得た",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -20,7 +19,6 @@
     "regions": ["ee"],
     "importance": 3,
     "desc": "ビザンツ皇帝となり、地中海世界の再統一をめざした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -35,7 +33,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "ベネディクトゥスがイタリアに修道院を建て、「祈り、働け」を戒律とした",
-    "verified": false,
     "uncertain": true,
     "memo": "創設は529年ごろ",
     "image": "ja:モンテ・カッシーノ修道院",
@@ -53,7 +50,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "法学者トリボニアヌスらにローマ法を集大成させた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:ローマ法大全",
@@ -70,7 +66,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "梁の昭明太子が編んだ詩文集",
-    "verified": false,
     "uncertain": true,
     "memo": "成立は530年ごろ",
     "image": "ja:文選",
@@ -85,7 +80,6 @@
     "regions": ["wa"],
     "importance": 2,
     "desc": "ササン朝の最盛期を築いた王が即位した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -97,7 +91,6 @@
     "regions": ["ee"],
     "importance": 1,
     "desc": "コンスタンティノープルの民衆の反乱。鎮圧後に大聖堂が再建された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -111,7 +104,6 @@
     "regions": ["wa", "ee"],
     "importance": 2,
     "desc": "ビザンツ帝国の将軍ベリサリウスが北アフリカを征服した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -125,7 +117,6 @@
     "regions": ["cn"],
     "importance": 2,
     "desc": "北魏が東魏と西魏に分かれた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -140,7 +131,6 @@
     "tags": ["文化"],
     "importance": 3,
     "desc": "ビザンツ様式を代表する大聖堂が完成した。オスマン帝国の時代にモスク（アヤソフィア）となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:アヤソフィア",
@@ -157,7 +147,6 @@
     "importance": 1,
     "desc": "百済の聖明王が日本に仏像と経典を伝えた",
     "acceptYears": [552],
-    "verified": false,
     "uncertain": true,
     "memo": "552年とする説もある",
     "descVerified": false
@@ -170,7 +159,6 @@
     "regions": ["sa"],
     "importance": 2,
     "desc": "エフタルの侵入などで衰え、北インドは分裂した",
-    "verified": false,
     "uncertain": true,
     "memo": "滅亡は6世紀半ば",
     "descVerified": false
@@ -184,7 +172,6 @@
     "regions": ["ia"],
     "importance": 3,
     "desc": "トルコ系の突厥が柔然を破って独立した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -199,7 +186,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "中国の養蚕の技術が伝わり、絹織物業が始まった",
-    "verified": false,
     "uncertain": true,
     "memo": "552年ごろ",
     "image": "ja:養蚕",
@@ -215,9 +201,8 @@
     "importance": 3,
     "desc": "ビザンツ帝国がイタリアを再征服した",
     "acceptYears": [554],
-    "verified": false,
     "uncertain": true,
-    "memo": "554年とする資料もある",
+    "memo": "554年・555年とする資料もある（世界史の窓は東ゴート王国を493〜555年とする）",
     "descVerified": false
   },
   {
@@ -229,7 +214,6 @@
     "regions": ["kr"],
     "importance": 1,
     "desc": "朝鮮半島南部の小国群が新羅に併合された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -242,7 +226,6 @@
     "regions": ["ia", "wa"],
     "importance": 2,
     "desc": "ササン朝と突厥にはさみ撃ちされて滅んだ",
-    "verified": false,
     "uncertain": true,
     "memo": "563〜567年ごろ",
     "descVerified": false
@@ -256,7 +239,6 @@
     "regions": ["ce"],
     "importance": 3,
     "desc": "北イタリアに王国が建てられた（ゲルマン人の大移動の最後とされる）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -269,7 +251,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "イスラーム教の創始者がメッカで生まれた",
-    "verified": false,
     "uncertain": true,
     "memo": "570年ごろ",
     "descVerified": false
@@ -282,7 +263,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "北周の外戚の楊堅が帝位をゆずられて即位した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -296,7 +276,6 @@
     "regions": ["ia"],
     "importance": 2,
     "desc": "突厥が東西に分かれた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -310,7 +289,6 @@
     "importance": 1,
     "desc": "西ゴート王レカレドがアリウス派からカトリックに改めた",
     "acceptYears": [589],
-    "verified": false,
     "uncertain": true,
     "memo": "589年のトレド公会議で国としても改宗",
     "descVerified": false
@@ -324,7 +302,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "南朝の陳が滅ぼされ、約300年ぶりに中国が統一された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -338,7 +315,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "ゲルマン人への布教を進め、ローマ教会の権威を高めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -352,7 +328,6 @@
     "importance": 1,
     "desc": "教皇が修道士アウグスティヌスをブリテン島に派遣した",
     "acceptYears": [597],
-    "verified": false,
     "uncertain": true,
     "memo": "到着は597年",
     "descVerified": false
@@ -367,7 +342,6 @@
     "importance": 3,
     "desc": "隋の文帝が学科試験で官吏を選ぶ制度を始め、九品中正を廃止した",
     "acceptYears": [587],
-    "verified": false,
     "uncertain": true,
     "memo": "587年・598年など諸説ある",
     "descVerified": false

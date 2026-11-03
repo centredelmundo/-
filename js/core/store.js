@@ -36,7 +36,8 @@ export const DEFAULT_SETTINGS = {
   sheet: false,          // 赤シート
   collapsed: [],         // ヨコ年表で出来事を閉じている地域ID
   mapView: 'auto',
-  quiz: { from: null, to: null, count: 10, modes: ['cross', 'ruler', 'year', 'term', 'order', 'choice'], minImportance: 1, verifiedOnly: false, cultureOnly: false, groups: [] }
+  ichTimeline: true,     // 一問一答（読み込んだデータ）の年号のある問題を年表に出す
+  quiz: { from: null, to: null, count: 10, modes: ['cross', 'ruler', 'year', 'term', 'order', 'choice'], minImportance: 1, cultureOnly: false, groups: [], ichChapters: [] }
 };
 
 export function loadSettings() {

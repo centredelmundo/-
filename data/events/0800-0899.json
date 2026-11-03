@@ -8,7 +8,6 @@
     "regions": ["we", "ce"],
     "importance": 3,
     "desc": "教皇レオ3世がカール大帝に西ローマ皇帝の冠を授けた。ゲルマン人とローマ教会が結びついた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -21,7 +20,6 @@
     "regions": ["sea"],
     "importance": 2,
     "desc": "ジャヤヴァルマン2世が即位し、クメール人の王朝が始まった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -36,7 +34,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "シャイレンドラ朝がジャワ島中部に造った大乗仏教の石造遺跡",
-    "verified": false,
     "uncertain": true,
     "memo": "完成は9世紀前半（820年ごろ）とされる",
     "image": "ja:ボロブドゥール",
@@ -52,7 +49,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "ウェセックス王エグバートがアングロ=サクソン七王国をほぼ統一した",
-    "verified": false,
     "uncertain": true,
     "memo": "「統一」の意味と年は諸説ある",
     "descVerified": false
@@ -67,7 +63,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "バグダードの研究機関。ギリシア語文献のアラビア語への翻訳が進んだ",
-    "verified": false,
     "uncertain": true,
     "memo": "設立の年は諸説ある",
     "image": "ja:知恵の館",
@@ -84,7 +79,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "インド数字を使った計算法や代数学を著した数学者",
-    "verified": false,
     "uncertain": true,
     "memo": "830年ごろ",
     "image": "ja:フワーリズミー",
@@ -99,7 +93,6 @@
     "regions": ["ia"],
     "importance": 2,
     "desc": "キルギスに敗れ、ウイグルの人々は西方に移った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -112,7 +105,6 @@
     "regions": ["ia"],
     "importance": 1,
     "desc": "王が殺され、チベットの統一国家が崩れた",
-    "verified": false,
     "uncertain": true,
     "memo": "842年ごろ",
     "descVerified": false
@@ -125,7 +117,6 @@
     "regions": ["we", "ce"],
     "importance": 3,
     "desc": "フランク王国が東・西・中部の3つに分けられた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -138,7 +129,6 @@
     "regions": ["cn"],
     "importance": 1,
     "desc": "唐の武宗が仏教を弾圧した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -153,7 +143,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "古マタラム王国が造ったヒンドゥー教の寺院群",
-    "verified": false,
     "uncertain": true,
     "memo": "856年ごろの完成とされる",
     "image": "ja:プランバナン寺院群",
@@ -168,7 +157,6 @@
     "regions": ["ee"],
     "importance": 2,
     "desc": "ノルマン人のリューリクがノヴゴロドに国を建てたとされる",
-    "verified": false,
     "uncertain": true,
     "memo": "伝承による年",
     "descVerified": false
@@ -183,7 +171,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "ビザンツ帝国の兄弟が大モラヴィア王国でスラヴ語による布教を行い、文字を考案した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:キュリロスとメトディオス",
@@ -198,7 +185,6 @@
     "regions": ["ce", "we"],
     "importance": 3,
     "desc": "中部フランクの北部が東西のフランクに分けられ、のちのドイツ・フランス・イタリアのもとができた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -211,7 +197,6 @@
     "regions": ["ia"],
     "importance": 2,
     "desc": "中央アジアにイラン系のイスラーム王朝が成立した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -225,7 +210,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "塩の密売人の王仙芝と黄巣が起こした反乱。唐の支配は事実上崩れた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -240,7 +224,6 @@
     "importance": 2,
     "desc": "アルフレッド大王がデーン人と和を結び、デーン人の住む地域（デーンロー）が定まった",
     "acceptYears": [886],
-    "verified": false,
     "uncertain": true,
     "memo": "886年の協定とあわせて",
     "descVerified": false
@@ -254,7 +237,6 @@
     "regions": ["ee"],
     "importance": 2,
     "desc": "ノヴゴロドのオレグがキエフを占領して都とした",
-    "verified": false,
     "uncertain": true,
     "memo": "伝承による年",
     "descVerified": false
@@ -267,7 +249,6 @@
     "regions": ["jp"],
     "importance": 1,
     "desc": "菅原道真の意見で遣唐使が停止された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -281,7 +262,6 @@
     "importance": 2,
     "desc": "マジャール人がドナウ川中流のパンノニア平原に移り住んだ",
     "acceptYears": [895],
-    "verified": false,
     "uncertain": true,
     "memo": "895年とする資料もある",
     "descVerified": false
@@ -294,7 +274,6 @@
     "regions": ["wa"],
     "importance": 1,
     "desc": "イスマーイール派の一派がアラビア東部で勢力を持った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false

@@ -7,7 +7,6 @@
     "regions": ["jp"],
     "importance": 1,
     "desc": "豪族に役人としての心得を示した",
-    "verified": false,
     "uncertain": true,
     "memo": "制定の年は604年とされる",
     "descVerified": false
@@ -21,7 +20,6 @@
     "regions": ["sa"],
     "importance": 3,
     "desc": "ハルシャ=ヴァルダナが即位し、北インドを統一した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -36,7 +34,6 @@
     "importance": 2,
     "desc": "聖徳太子が隋に使者を送り、対等の立場をとろうとした",
     "acceptYears": [600],
-    "verified": false,
     "uncertain": true,
     "memo": "最初の遣隋使は600年",
     "descVerified": false
@@ -51,7 +48,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "聖徳太子が建てたとされる寺。世界最古の木造建築群が残る",
-    "verified": false,
     "uncertain": true,
     "memo": "670年に焼失して再建されたとされる",
     "image": "ja:法隆寺",
@@ -67,7 +63,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "メッカの商人ムハンマドが神アッラーの啓示を受け、布教を始めた",
-    "verified": false,
     "uncertain": true,
     "memo": "610年ごろ",
     "descVerified": false
@@ -81,7 +76,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "華北と江南を結ぶ運河が完成し、南北の物流が盛んになった",
-    "verified": false,
     "uncertain": true,
     "memo": "完成の年は610年とされる",
     "descVerified": false
@@ -95,7 +89,6 @@
     "regions": ["cn", "kr"],
     "importance": 2,
     "desc": "煬帝が3度にわたって遠征したが失敗し、各地で反乱が起きた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -109,7 +102,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "李淵（高祖）が長安で即位し、隋が滅んだ",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -123,7 +115,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "ムハンマドがメッカからメディナに移住した。この年がイスラーム暦の元年となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -137,7 +128,6 @@
     "regions": ["cn"],
     "importance": 2,
     "desc": "律令に基づく土地と税の制度が整えられた",
-    "verified": false,
     "uncertain": true,
     "memo": "624年の制定とされる",
     "descVerified": false
@@ -151,7 +141,6 @@
     "regions": ["cn"],
     "importance": 2,
     "desc": "李世民が玄武門の変ののち即位し、律令体制を整えた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -167,7 +156,6 @@
     "importance": 2,
     "desc": "仏典を求めてインドへ向かい、ナーランダー僧院で学んで645年に帰国した",
     "acceptYears": [627],
-    "verified": false,
     "uncertain": true,
     "memo": "出発の年は627年・629年の説がある",
     "image": "ja:玄奘",
@@ -183,7 +171,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "メッカを征服し、カーバ神殿をイスラームの聖殿とした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -196,7 +183,6 @@
     "regions": ["cn", "ia"],
     "importance": 2,
     "desc": "唐が東突厥を破り、服属させた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -210,7 +196,6 @@
     "regions": ["jp", "cn"],
     "importance": 1,
     "desc": "最初の遣唐使が送られた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -224,7 +209,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "ムハンマドが亡くなり、アブー=バクルが最初のカリフに選ばれた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -238,7 +222,6 @@
     "importance": 2,
     "desc": "ソンツェン=ガンポがチベットを統一した",
     "acceptYears": [629],
-    "verified": false,
     "uncertain": true,
     "memo": "629年ごろとする説もある",
     "descVerified": false
@@ -251,7 +234,6 @@
     "regions": ["wa", "ee"],
     "importance": 2,
     "desc": "アラブ軍がビザンツ軍を破り、シリアを征服した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -265,7 +247,6 @@
     "regions": ["cn", "ia"],
     "importance": 1,
     "desc": "唐の皇女がチベットの王に嫁いだ",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -278,7 +259,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "アラブ軍がササン朝の軍を破った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -292,7 +272,6 @@
     "importance": 2,
     "desc": "ビザンツ帝国からエジプトを奪った",
     "acceptYears": [641],
-    "verified": false,
     "uncertain": true,
     "memo": "641〜642年",
     "descVerified": false
@@ -306,7 +285,6 @@
     "regions": ["jp"],
     "importance": 2,
     "desc": "中大兄皇子らが蘇我氏を倒し、天皇中心の国づくりを始めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -319,7 +297,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "最後の王が殺され、イランはイスラーム勢力の支配下に入った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -335,7 +312,6 @@
     "importance": 2,
     "desc": "第3代カリフのウスマーンのもとで、啓示が一冊にまとめられた",
     "acceptYears": [650],
-    "verified": false,
     "uncertain": true,
     "memo": "650年ごろ",
     "image": "ja:クルアーン",
@@ -350,7 +326,6 @@
     "regions": ["kr"],
     "importance": 3,
     "desc": "唐と新羅の連合軍に滅ぼされた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -363,7 +338,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "アリーが暗殺され、ムアーウィヤがダマスクスを都に王朝を開いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -377,7 +351,6 @@
     "regions": ["kr", "jp"],
     "importance": 2,
     "desc": "百済の復興を助けた倭（日本）の軍が、唐・新羅の軍に敗れた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -390,7 +363,6 @@
     "regions": ["kr"],
     "importance": 3,
     "desc": "唐と新羅に滅ぼされた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -406,7 +378,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "海路でインドに渡り、帰りにシュリーヴィジャヤに滞在して仏教の様子を記録した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:義浄",
@@ -422,7 +393,6 @@
     "regions": ["kr"],
     "importance": 3,
     "desc": "唐の勢力を追い出し、朝鮮半島を統一した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -435,7 +405,6 @@
     "regions": ["wa"],
     "importance": 2,
     "desc": "アリーの子フサインがウマイヤ朝の軍に殺された。シーア派ができる大きなきっかけとなった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -449,7 +418,6 @@
     "regions": ["ee"],
     "importance": 2,
     "desc": "ブルガール人がドナウ川下流に建てた国をビザンツ帝国に認めさせた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -463,7 +431,6 @@
     "regions": ["ia"],
     "importance": 1,
     "desc": "東突厥が唐から独立を回復した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -477,7 +444,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "則天武后が皇帝となり、国号を周とした（705年に唐に戻る）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -493,7 +459,6 @@
     "importance": 2,
     "desc": "イェルサレムに建てられたイスラームの記念建築",
     "acceptYears": [692],
-    "verified": false,
     "uncertain": true,
     "memo": "692年とする資料もある",
     "image": "ja:岩のドーム",
@@ -508,7 +473,6 @@
     "regions": ["kr"],
     "importance": 2,
     "desc": "高句麗の遺民らが中国東北地方に国を建てた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -521,7 +485,6 @@
     "regions": ["wa"],
     "importance": 1,
     "desc": "ウマイヤ朝が北アフリカのビザンツ領を奪った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false

@@ -1,0 +1,1710 @@
+[
+  {
+    "id": "athens",
+    "name": "アテネ",
+    "region": "ee",
+    "start": -800,
+    "end": -146,
+    "color": "#7FA8D8",
+    "territory": [
+      { "year": -800, "add": ["greece-s"], "note": "アッティカ地方のポリス" },
+      { "year": -477, "vassal": ["aegean"], "note": "デロス同盟の盟主となる" },
+      { "year": -404, "remove": ["aegean"], "note": "ペロポネソス戦争に敗れる" }
+    ],
+    "desc": "アッティカ地方のポリス。前5世紀にペリクレスのもとで民主政が完成し、デロス同盟の盟主として栄えたが、ペロポネソス戦争でスパルタに敗れた。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "sparta",
+    "name": "スパルタ",
+    "region": "ee",
+    "start": -800,
+    "end": -146,
+    "color": "#D88A7A",
+    "territory": [
+      { "year": -800, "add": ["peloponnese"], "note": "ラコニア地方のポリス（地図ではペロポネソス半島全体をスパルタとしている）" },
+      { "year": -404, "vassal": ["aegean"], "note": "ペロポネソス戦争に勝ち、ギリシアの覇権をにぎる" },
+      { "year": -371, "remove": ["aegean"], "note": "レウクトラの戦いでテーベに敗れる" }
+    ],
+    "desc": "ペロポネソス半島南部のポリス。少数の市民がヘイロータイ（隷属農民）とペリオイコイを支配し、リュクルゴスの制とよばれるきびしい軍国主義の体制をとった。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "thebes",
+    "name": "テーベ",
+    "region": "ee",
+    "start": -800,
+    "end": -335,
+    "color": "#B8A0D0",
+    "territory": [
+      { "year": -800, "add": ["greece-c"], "note": "ボイオティア地方の中心のポリス" },
+      { "year": -371, "vassal": ["thessaly"], "note": "レウクトラの戦いでスパルタを破り、覇権をにぎる" },
+      { "year": -362, "remove": ["thessaly"], "note": "マンティネイアの戦いでエパミノンダスが戦死" }
+    ],
+    "desc": "ボイオティア地方のポリス。エパミノンダスの指導でスパルタを破り、前4世紀前半に一時ギリシアの覇権をにぎった。前335年にアレクサンドロスに破壊された。",
+    "importance": 2,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "greek-poleis",
+    "name": "ギリシアの諸ポリス",
+    "region": "ee",
+    "start": -800,
+    "end": -146,
+    "minor": true,
+    "territory": [
+      { "year": -800, "add": ["greece-w", "thessaly", "epirus", "aegean", "crete", "ionian"], "note": "コリントス・アルゴスなどのポリス（地図ではまとめて表示）" }
+    ],
+    "desc": "アテネ・スパルタ・テーベ以外の、ギリシア本土やエーゲ海の島々の多くのポリス。地図ではまとめて表示している。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "greek-west",
+    "name": "南イタリア・シチリアのギリシア人植民市",
+    "aliases": ["マグナ=グラエキア"],
+    "region": "ce",
+    "start": -750,
+    "end": -212,
+    "minor": true,
+    "territory": [
+      { "year": -750, "contested": ["naples", "sicily"], "note": "ネアポリス・タラス・シラクサなどを建設" },
+      { "year": -272, "remove": ["naples"], "note": "ローマがタレントゥムを征服" }
+    ],
+    "desc": "ギリシア人が南イタリアとシチリアに建てた植民市（マグナ=グラエキア）。シラクサが最も栄えたが、前212年にローマに攻め落とされた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "massalia",
+    "name": "マッサリア",
+    "region": "we",
+    "start": -600,
+    "end": -49,
+    "minor": true,
+    "territory": [
+      { "year": -600, "contested": ["provence"], "note": "フォカイア人の植民市（今のマルセイユ）" }
+    ],
+    "desc": "小アジアのフォカイア人が建てた植民市で、今のマルセイユ。前49年にカエサルに攻め落とされた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "bosporus",
+    "name": "ボスポロス王国",
+    "region": "ee",
+    "start": -438,
+    "end": 370,
+    "minor": true,
+    "territory": [
+      { "year": -438, "add": ["crimea"], "note": "黒海北岸のギリシア人の王国" }
+    ],
+    "desc": "黒海北岸のクリミア半島東部にあったギリシア人の王国。小麦の輸出で栄え、のちローマの保護国となった。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "macedonia-k",
+    "name": "マケドニア王国",
+    "region": "ee",
+    "start": -800,
+    "end": -168,
+    "color": "#E0B060",
+    "names": [
+      [-800, "マケドニア王国"],
+      [-306, "マケドニア王国（アンティゴノス朝）"]
+    ],
+    "territory": [
+      { "year": -800, "add": ["macedonia-gr"], "note": "ギリシア北方の王国（都はアイガイ、のちペラ）" },
+      { "year": -356, "add": ["thrace-w", "macedonia", "thessaly"], "note": "フィリッポス2世が勢力を広げる" },
+      { "year": -338, "vassal": ["greece-s", "peloponnese", "greece-c", "greece-w", "epirus", "aegean", "ionian"], "note": "カイロネイアの戦いでアテネ・テーベを破り、コリントス同盟を結成" },
+      { "year": -334, "add": ["anatolia-w", "anatolia-c", "hatay"], "note": "アレクサンドロスの東方遠征（グラニコス川の戦い・イッソスの戦い）" },
+      { "year": -332, "add": ["syria", "lebanon", "palestine", "jordan", "egypt"], "note": "ティルスを攻め落とし、エジプトを征服" },
+      { "year": -331, "add": ["iraq-n", "iraq-c", "iraq-s"], "note": "アルベラ（ガウガメラ）の戦いでダレイオス3世を破る" },
+      { "year": -330, "add": ["iran-nw", "iran-n", "iran-w", "iran-c", "iran-s", "khorasan", "sistan", "armenia", "anatolia-e", "pontus"], "note": "アケメネス朝が滅ぶ" },
+      { "year": -329, "add": ["afg-herat", "afg-kandahar", "afg-balkh", "afg-kabul", "transoxiana", "tajik", "turkmen"], "note": "中央アジアに進む" },
+      { "year": -326, "add": ["nwfp", "punjab", "sindh"], "note": "インダス川流域に達する" },
+      { "year": -323, "contested": ["anatolia-w", "anatolia-c", "anatolia-e", "pontus", "hatay", "syria", "lebanon", "palestine", "jordan", "iraq-n", "iraq-c", "iraq-s", "iran-nw", "iran-n", "iran-w", "iran-c", "iran-s", "khorasan", "sistan", "afg-herat", "afg-kandahar", "afg-balkh", "afg-kabul", "transoxiana", "tajik", "turkmen", "armenia"], "remove": ["egypt", "nwfp", "punjab", "sindh"], "note": "アレクサンドロスの死後、部将たち（ディアドコイ）が争う" },
+      { "year": -301, "remove": ["anatolia-e", "pontus", "hatay", "syria", "lebanon", "palestine", "jordan", "iraq-n", "iraq-c", "iraq-s", "iran-nw", "iran-n", "iran-w", "iran-c", "iran-s", "khorasan", "sistan", "afg-herat", "afg-kandahar", "afg-balkh", "afg-kabul", "transoxiana", "tajik", "turkmen", "armenia"], "note": "イプソスの戦い。帝国の分裂が決まる" },
+      { "year": -281, "remove": ["anatolia-w", "anatolia-c"], "note": "小アジアはセレウコス朝へ" }
+    ],
+    "desc": "ギリシア北方の王国。フィリッポス2世がギリシアを支配下に置き、その子アレクサンドロスが東方遠征でアケメネス朝を滅ぼして大帝国を築いた。前168年にローマに敗れた。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "assyria",
+    "name": "アッシリア",
+    "region": "wa",
+    "start": -800,
+    "end": -609,
+    "color": "#B89070",
+    "territory": [
+      { "year": -800, "add": ["iraq-n", "iraq-c"], "note": "ニネヴェ・アッシュルを中心とする" },
+      { "year": -745, "add": ["iraq-s", "syria"], "note": "ティグラト=ピレセル3世が勢力を広げる" },
+      { "year": -732, "vassal": ["lebanon"], "note": "ダマスクスを攻め落とし、フェニキアを従える" },
+      { "year": -722, "vassal": ["palestine"], "note": "イスラエル王国を滅ぼす" },
+      { "year": -671, "add": ["egypt"], "note": "エジプトを征服し、オリエントを統一" },
+      { "year": -655, "remove": ["egypt"], "note": "エジプトが離れる" },
+      { "year": -626, "remove": ["iraq-c", "iraq-s"], "note": "新バビロニアが自立" }
+    ],
+    "desc": "ティグリス川上流から起こった王国。鉄製の武器と騎兵・戦車で前7世紀前半にオリエントを初めて統一したが、圧政に反発され、前612年に都ニネヴェが陥落した。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "babylon-n",
+    "name": "新バビロニア",
+    "aliases": ["カルデア"],
+    "region": "wa",
+    "start": -626,
+    "end": -539,
+    "color": "#D8B070",
+    "territory": [
+      { "year": -626, "add": ["iraq-c", "iraq-s"], "note": "ナボポラッサルが自立" },
+      { "year": -605, "add": ["syria", "lebanon", "jordan"], "vassal": ["palestine"], "note": "カルケミシュの戦いでエジプトを破る" },
+      { "year": -586, "add": ["palestine"], "note": "ユダ王国を滅ぼす（バビロン捕囚）" }
+    ],
+    "desc": "カルデア人が建てた王国。ネブカドネザル2世のときに栄え、ユダ王国を滅ぼして住民をバビロンに連れ去った。前539年にアケメネス朝に滅ぼされた。",
+    "importance": 2,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "media",
+    "name": "メディア",
+    "region": "wa",
+    "start": -678,
+    "end": -550,
+    "color": "#B0C890",
+    "territory": [
+      { "year": -678, "add": ["iran-w", "iran-nw"], "note": "エクバタナを都とする" },
+      { "year": -612, "add": ["iraq-n", "armenia", "kars", "anatolia-e"], "note": "新バビロニアと結んでアッシリアを滅ぼす" }
+    ],
+    "desc": "イラン高原北西部のイラン人の王国。新バビロニアと結んでアッシリアを滅ぼしたが、前550年にペルシア人のキュロス2世に倒された。",
+    "importance": 2,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "lydia",
+    "name": "リディア",
+    "region": "wa",
+    "start": -680,
+    "end": -546,
+    "color": "#E0C080",
+    "territory": [
+      { "year": -680, "add": ["anatolia-w"], "note": "サルデスを都とする" },
+      { "year": -585, "add": ["anatolia-c"], "note": "ハリュス川でメディアと境を定める" }
+    ],
+    "desc": "小アジア西部の王国。最古の金属貨幣を作ったとされる。前546年にアケメネス朝に滅ぼされた。",
+    "importance": 2,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "egypt-anc",
+    "name": "エジプト",
+    "region": "wa",
+    "periods": [
+      [-800, -744],
+      [-664, -525],
+      [-404, -343]
+    ],
+    "color": "#D9A05B",
+    "names": [
+      [-800, "エジプト（第3中間期）"],
+      [-664, "エジプト（第26王朝）"],
+      [-404, "エジプト（第28〜30王朝）"]
+    ],
+    "territory": [
+      { "year": -800, "add": ["egypt"], "note": "リビア系の王朝が分立" },
+      { "year": -664, "add": ["egypt"], "note": "プサメティコス1世がアッシリアから自立（サイス朝）" },
+      { "year": -404, "add": ["egypt"], "note": "ペルシアから独立" }
+    ],
+    "desc": "末期の古代エジプト。リビア人やクシュ人の王朝、アッシリアやペルシアの支配が続き、前332年にアレクサンドロスに征服された。",
+    "importance": 2,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "kush",
+    "name": "クシュ王国",
+    "aliases": ["メロエ王国"],
+    "region": "af",
+    "start": -800,
+    "end": 350,
+    "color": "#A08060",
+    "names": [
+      [-800, "クシュ王国"],
+      [-300, "クシュ王国（メロエ）"]
+    ],
+    "territory": [
+      { "year": -800, "add": ["sudan"], "note": "ナパタを都とする" },
+      { "year": -744, "add": ["egypt"], "note": "エジプトを征服（第25王朝）" },
+      { "year": -656, "remove": ["egypt"], "note": "アッシリアに敗れ、エジプトから退く" }
+    ],
+    "desc": "ナイル川上流のヌビアの黒人の王国。前8世紀にエジプトを支配し、のちメロエに都を移して製鉄や交易で栄えた。4世紀にアクスム王国に滅ぼされた。",
+    "importance": 2,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "israel-k",
+    "name": "ヘブライ人の王国",
+    "aliases": ["イスラエル王国", "ユダ王国"],
+    "region": "wa",
+    "start": -800,
+    "end": -586,
+    "color": "#A0B0D0",
+    "names": [
+      [-800, "イスラエル王国・ユダ王国"],
+      [-722, "ユダ王国"]
+    ],
+    "territory": [
+      { "year": -800, "add": ["palestine"], "note": "ソロモン王の死後、北のイスラエル王国と南のユダ王国に分かれている" }
+    ],
+    "desc": "ヘブライ人の王国。ダヴィデ・ソロモン王の時代に栄えたのち南北に分かれ、北のイスラエル王国は前722年にアッシリアに、南のユダ王国は前586年に新バビロニアに滅ぼされた。",
+    "importance": 2,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "phoenicia",
+    "name": "フェニキア人の都市国家",
+    "region": "wa",
+    "start": -800,
+    "end": -332,
+    "minor": true,
+    "territory": [
+      { "year": -800, "add": ["lebanon"], "note": "ティルス・シドンなど" }
+    ],
+    "desc": "地中海東岸のフェニキア人の都市国家。海上交易で栄え、アルファベットのもとになる文字を作った。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "aramaeans",
+    "name": "アラム人の国々",
+    "region": "wa",
+    "start": -800,
+    "end": -732,
+    "minor": true,
+    "territory": [
+      { "year": -800, "add": ["syria"], "note": "ダマスクスを中心とする" }
+    ],
+    "desc": "シリアのアラム人の国々。ダマスクスを中心に内陸の交易で活躍し、アラム語はオリエントの共通語となった。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "urartu",
+    "name": "ウラルトゥ",
+    "region": "wa",
+    "start": -800,
+    "end": -590,
+    "minor": true,
+    "territory": [
+      { "year": -800, "add": ["armenia", "kars"], "note": "ヴァン湖のまわり" }
+    ],
+    "desc": "アルメニア高原のヴァン湖を中心とした王国。アッシリアと争い、前6世紀初めに滅んだ。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "phrygia",
+    "name": "フリュギア",
+    "region": "wa",
+    "start": -800,
+    "end": -695,
+    "minor": true,
+    "territory": [
+      { "year": -800, "add": ["anatolia-c"], "note": "ゴルディオンを都とする" }
+    ],
+    "desc": "小アジア中部の王国。ミダス王の伝説で知られ、キンメリア人の侵入で衰えた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "saba",
+    "name": "サバ王国",
+    "aliases": ["シバ"],
+    "region": "wa",
+    "start": -800,
+    "end": 275,
+    "minor": true,
+    "territory": [
+      { "year": -800, "add": ["yemen-n", "yemen-s"], "note": "マーリブを都とする" }
+    ],
+    "desc": "アラビア半島南西部の王国。乳香など香料の交易で栄えた。3世紀にヒムヤル王国に併合された。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "achaemenid",
+    "name": "アケメネス朝",
+    "aliases": ["ペルシア帝国"],
+    "region": "wa",
+    "start": -550,
+    "end": -330,
+    "color": "#C8A0D8",
+    "territory": [
+      { "year": -550, "add": ["iran-nw", "iran-n", "iran-w", "iran-c", "iran-s", "khorasan", "sistan", "armenia"], "note": "キュロス2世がメディアを倒す" },
+      { "year": -546, "add": ["anatolia-w", "anatolia-c", "anatolia-e", "pontus", "hatay"], "note": "リディアを征服" },
+      { "year": -539, "add": ["iraq-n", "iraq-c", "iraq-s", "syria", "lebanon", "palestine", "jordan"], "note": "新バビロニアを征服" },
+      { "year": -530, "add": ["afg-herat", "afg-kandahar", "afg-balkh", "afg-kabul", "transoxiana", "tajik", "turkmen", "khwarazm"], "note": "中央アジアに広がる" },
+      { "year": -525, "add": ["egypt", "cyprus"], "vassal": ["cyrenaica"], "note": "カンビュセス2世がエジプトを征服" },
+      { "year": -518, "add": ["nwfp", "punjab", "sindh"], "note": "ダレイオス1世がインダス川流域に進む" },
+      { "year": -513, "add": ["thrace-e", "rumelia-e", "thrace-w"], "note": "トラキアを支配（スキタイ遠征）" },
+      { "year": -492, "vassal": ["macedonia-gr"], "note": "マケドニアが服属" },
+      { "year": -479, "remove": ["thrace-w", "rumelia-e", "macedonia-gr"], "note": "プラタイアの戦いののち、ヨーロッパから後退" },
+      { "year": -404, "remove": ["egypt"], "note": "エジプトが独立" },
+      { "year": -343, "add": ["egypt"], "note": "エジプトを再び征服" }
+    ],
+    "desc": "キュロス2世が建てたペルシア人の王朝。ダレイオス1世のとき、エジプトからインダス川に及ぶ大帝国となった。各州にサトラップを置き、「王の道」を整えた。前330年にアレクサンドロスに滅ぼされた。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "seleucid",
+    "name": "セレウコス朝",
+    "aliases": ["セレウコス朝シリア"],
+    "region": "wa",
+    "start": -312,
+    "end": -63,
+    "color": "#7FB8A8",
+    "territory": [
+      { "year": -312, "add": ["iraq-c", "iraq-s"], "note": "セレウコス1世がバビロンを取りもどす" },
+      { "year": -305, "add": ["iraq-n", "iran-nw", "iran-n", "iran-w", "iran-c", "iran-s", "khorasan", "sistan", "afg-herat", "afg-balkh", "transoxiana", "tajik", "turkmen"], "note": "東方の諸州を支配（インドはマウリヤ朝にゆずる）" },
+      { "year": -301, "add": ["syria", "hatay", "anatolia-e", "armenia"], "note": "イプソスの戦いののちシリアを得る" },
+      { "year": -281, "add": ["anatolia-c", "anatolia-w"], "note": "コルペディオンの戦いで小アジアを得る" },
+      { "year": -255, "remove": ["afg-balkh", "tajik", "transoxiana"], "note": "バクトリアが自立" },
+      { "year": -247, "remove": ["khorasan", "iran-n"], "note": "パルティアが自立" },
+      { "year": -200, "add": ["palestine", "lebanon", "jordan"], "note": "パニオンの戦いでシリア南部を得る" },
+      { "year": -190, "remove": ["armenia"], "note": "アルメニアが自立" },
+      { "year": -188, "remove": ["anatolia-w", "anatolia-c"], "note": "アパメイアの和約で小アジアを失う" },
+      { "year": -141, "remove": ["iraq-c", "iraq-s", "iran-w", "iran-c", "iran-s", "iran-nw"], "note": "パルティアにメソポタミアを奪われる" }
+    ],
+    "desc": "アレクサンドロスの部将セレウコスが建てた王朝。シリアからイランに及ぶヘレニズム世界最大の国だったが、バクトリアやパルティアが離れて小さくなり、前63年にローマに滅ぼされた。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "ptolemaic",
+    "name": "プトレマイオス朝",
+    "aliases": ["プトレマイオス朝エジプト"],
+    "region": "wa",
+    "start": -323,
+    "end": -30,
+    "color": "#D9B36B",
+    "territory": [
+      { "year": -323, "add": ["egypt", "cyrenaica"], "note": "部将プトレマイオスがエジプトを治める" },
+      { "year": -301, "add": ["palestine", "lebanon", "jordan", "cyprus"], "note": "シリア南部とキプロスを支配" },
+      { "year": -200, "remove": ["palestine", "lebanon", "jordan"], "note": "パニオンの戦いでセレウコス朝に敗れる" },
+      { "year": -96, "remove": ["cyrenaica"], "note": "キレナイカがローマへ" },
+      { "year": -58, "remove": ["cyprus"], "note": "キプロスがローマへ" }
+    ],
+    "desc": "アレクサンドロスの部将プトレマイオスがエジプトに建てた王朝。都アレクサンドリアのムセイオンは学術の中心となった。前30年、クレオパトラの死で滅んだ。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "pergamon",
+    "name": "ペルガモン王国",
+    "region": "wa",
+    "start": -282,
+    "end": -133,
+    "minor": true,
+    "territory": [
+      { "year": -263, "add": ["anatolia-w"], "note": "セレウコス朝から自立" },
+      { "year": -188, "contested": ["anatolia-c"], "note": "アパメイアの和約で領土を広げる" }
+    ],
+    "desc": "小アジア西部のヘレニズム王国。大図書館をもつ学術の都として栄え、前133年に王が国をローマにゆずった。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "pontus-k",
+    "name": "ポントス王国",
+    "region": "wa",
+    "start": -281,
+    "end": -63,
+    "minor": true,
+    "territory": [
+      { "year": -281, "add": ["pontus"], "note": "黒海南岸の王国" },
+      { "year": -110, "add": ["crimea"], "contested": ["anatolia-c"], "note": "ミトリダテス6世が黒海のまわりに広がる" }
+    ],
+    "desc": "黒海南岸の王国。ミトリダテス6世がローマと3度戦った（ミトリダテス戦争）が、前63年にポンペイウスに敗れて滅んだ。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "armenia-k",
+    "name": "アルメニア王国",
+    "region": "wa",
+    "start": -190,
+    "end": 428,
+    "minor": true,
+    "territory": [
+      { "year": -190, "add": ["armenia", "kars"], "note": "セレウコス朝から自立" },
+      { "year": -83, "add": ["syria", "hatay"], "note": "ティグラネス2世が勢力を広げる" },
+      { "year": -69, "remove": ["syria", "hatay"], "note": "ローマに敗れる" }
+    ],
+    "desc": "アルメニア高原の王国。4世紀初めに世界で最初にキリスト教を国教とした。ローマとパルティア・ササン朝の間で争われた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "nabataea",
+    "name": "ナバテア王国",
+    "region": "wa",
+    "start": -168,
+    "end": 106,
+    "minor": true,
+    "territory": [
+      { "year": -168, "add": ["jordan"], "note": "ペトラを都とする" }
+    ],
+    "desc": "ペトラを都としたアラブ人の交易国家。106年にローマに併合された。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "hasmonean",
+    "name": "ハスモン朝",
+    "region": "wa",
+    "start": -142,
+    "end": -37,
+    "minor": true,
+    "territory": [
+      { "year": -142, "add": ["palestine"], "note": "マカバイ戦争ののち自立" }
+    ],
+    "desc": "セレウコス朝に対するマカバイ戦争ののち成立したユダヤ人の王朝。前63年にポンペイウスに服属した。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "parthia",
+    "name": "パルティア",
+    "aliases": ["アルサケス朝", "安息"],
+    "region": "wa",
+    "start": -247,
+    "end": 224,
+    "color": "#A8B8D8",
+    "territory": [
+      { "year": -247, "add": ["khorasan", "iran-n"], "note": "アルサケスがセレウコス朝から自立" },
+      { "year": -148, "add": ["iran-w", "iran-nw", "iran-c"], "note": "ミトリダテス1世がメディアを征服" },
+      { "year": -141, "add": ["iraq-c", "iraq-s", "iran-s", "sistan"], "note": "メソポタミアを得る（都クテシフォン）" },
+      { "year": -129, "add": ["iraq-n", "afg-herat", "afg-kandahar", "turkmen"], "note": "東方にも広がる" }
+    ],
+    "desc": "イラン北東部に起こったイラン系の王朝（アルサケス朝）。メソポタミアに進出してローマと争い、東西交易で栄えた。中国では安息とよばれた。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "carthage",
+    "name": "カルタゴ",
+    "region": "wa",
+    "start": -800,
+    "end": -146,
+    "color": "#9070A8",
+    "territory": [
+      { "year": -800, "add": ["tunisia"], "note": "フェニキア人のティルスが建てた植民市" },
+      { "year": -600, "contested": ["sicily", "sardinia", "baleares"], "note": "西地中海の交易の拠点を広げる" },
+      { "year": -500, "add": ["tripolitania", "sardinia"], "note": "北アフリカの沿岸とサルデーニャを支配" },
+      { "year": -241, "remove": ["sicily"], "note": "第1回ポエニ戦争に敗れる" },
+      { "year": -238, "remove": ["sardinia"], "note": "サルデーニャを失う" },
+      { "year": -237, "add": ["andalusia", "murcia", "granada", "valencia"], "note": "バルカ家がイベリア半島南部を支配" },
+      { "year": -206, "remove": ["andalusia", "murcia", "granada", "valencia", "baleares"], "note": "第2回ポエニ戦争でイベリア半島を失う" }
+    ],
+    "desc": "フェニキア人が北アフリカに建てた都市国家。西地中海の交易を支配したが、3回のポエニ戦争でローマに敗れ、前146年に滅ぼされた。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "numidia",
+    "name": "ヌミディア",
+    "region": "wa",
+    "start": -202,
+    "end": -46,
+    "minor": true,
+    "territory": [
+      { "year": -202, "add": ["algeria"], "note": "マシニッサが統一" }
+    ],
+    "desc": "北アフリカのベルベル人の王国。第2回ポエニ戦争でローマに味方した。前46年にローマの属州となった。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "mauretania-k",
+    "name": "マウレタニア",
+    "region": "wa",
+    "start": -300,
+    "end": 40,
+    "minor": true,
+    "territory": [
+      { "year": -300, "add": ["morocco"], "note": "ベルベル人の王国" }
+    ],
+    "desc": "今のモロッコにあったベルベル人の王国。40年にローマに併合された。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "rome",
+    "name": "ローマ",
+    "aliases": ["ローマ帝国", "ローマ共和国", "西ローマ帝国"],
+    "region": "ce",
+    "start": -753,
+    "end": 476,
+    "color": "#C85A5A",
+    "names": [
+      [-753, "ローマ（王政）"],
+      [-509, "ローマ（共和政）"],
+      [-27, "ローマ帝国"],
+      [395, "西ローマ帝国"]
+    ],
+    "territory": [
+      { "year": -753, "add": ["papal"], "note": "ラテン人の都市国家（伝説では前753年にロムルスが建国）" },
+      { "year": -290, "add": ["naples"], "note": "サムニウム戦争に勝つ" },
+      { "year": -272, "add": ["tuscany"], "note": "タレントゥムを征服し、イタリア半島を統一" },
+      { "year": -241, "add": ["sicily"], "note": "第1回ポエニ戦争に勝ち、最初の属州シチリアを得る" },
+      { "year": -238, "add": ["sardinia", "corsica"], "note": "サルデーニャ・コルシカを得る" },
+      { "year": -197, "add": ["andalusia", "murcia", "granada", "valencia", "catalonia"], "note": "イベリア半島に属州を置く" },
+      { "year": -191, "add": ["lombardy", "emilia", "piedmont", "venetia", "liguria"], "note": "ポー川流域（ガリア=キサルピナ）を平定" },
+      { "year": -168, "add": ["albania", "montenegro"], "vassal": ["macedonia-gr", "macedonia", "thessaly", "epirus"], "note": "ピュドナの戦いでマケドニアを破る" },
+      { "year": -146, "add": ["macedonia-gr", "macedonia", "thessaly", "epirus", "greece-s", "peloponnese", "greece-c", "greece-w", "tunisia"], "note": "カルタゴとコリントスを滅ぼす" },
+      { "year": -133, "add": ["anatolia-w"], "note": "ペルガモン王国を受けつぐ（属州アシア）" },
+      { "year": -121, "add": ["provence", "languedoc", "roussillon", "nice", "avignon", "dauphine"], "note": "南ガリアを属州とする" },
+      { "year": -74, "add": ["cyrenaica"], "note": "キレナイカを属州とする" },
+      { "year": -67, "add": ["crete", "aegean"], "note": "クレタを征服" },
+      { "year": -64, "add": ["syria", "hatay", "lebanon", "pontus"], "vassal": ["palestine", "jordan", "anatolia-c", "anatolia-e", "armenia"], "note": "ポンペイウスがセレウコス朝を滅ぼし、東方を再編する" },
+      { "year": -51, "add": ["normandy", "brittany", "anjou", "poitou", "guyenne", "burgundy", "champagne", "auvergne", "france", "artois", "lorraine", "alsace", "franche-comte", "savoy", "moselle", "belgium", "liege", "luxembourg", "swiss"], "note": "カエサルがガリアを征服" },
+      { "year": -46, "add": ["algeria"], "note": "ヌミディアを属州とする" },
+      { "year": -30, "add": ["egypt"], "note": "プトレマイオス朝を滅ぼし、地中海世界を統一" },
+      { "year": -25, "add": ["anatolia-c"], "note": "ガラティアを属州とする" },
+      { "year": -19, "add": ["asturias", "castile-old", "navarre", "aragon", "spain", "portugal", "baleares", "gibraltar"], "note": "イベリア半島を平定" },
+      { "year": -15, "add": ["bavaria", "austria", "trentino"], "note": "ラエティア・ノリクムを征服" },
+      { "year": 9, "add": ["slovenia", "croatia", "slavonia", "hungary-w", "bosnia", "dalmatia", "serbia", "kosovo"], "note": "パンノニア・イリュリクムを平定" },
+      { "year": 6, "add": ["palestine"], "note": "ユダヤを属州とする" },
+      { "year": 17, "add": ["anatolia-e"], "note": "カッパドキアを属州とする" },
+      { "year": 40, "add": ["morocco"], "note": "マウレタニアを属州とする" },
+      { "year": 43, "add": ["england"], "note": "ブリタニアの征服を始める" },
+      { "year": 46, "add": ["rumelia-e", "bulgaria", "thrace-e", "dobruja"], "note": "トラキアを属州とする" },
+      { "year": 77, "add": ["wales"], "note": "ウェールズを征服" },
+      { "year": 106, "add": ["transylvania", "banat", "jordan"], "contested": ["wallachia"], "note": "ダキアとナバテアを属州とする（トラヤヌス帝）" },
+      { "year": 116, "add": ["armenia", "iraq-n", "iraq-c", "iraq-s"], "note": "トラヤヌス帝のとき領土が最大となる" },
+      { "year": 117, "remove": ["armenia", "iraq-n", "iraq-c", "iraq-s"], "note": "ハドリアヌス帝がメソポタミアを放棄" },
+      { "year": 271, "remove": ["transylvania", "banat", "wallachia"], "note": "ダキアを放棄" },
+      { "year": 410, "remove": ["england", "wales"], "note": "ブリタニアから撤退" }
+    ],
+    "desc": "イタリア半島の都市国家から発展し、共和政のもとで地中海世界を統一した国。前27年に帝政が始まり、395年に東西に分かれたのち、西ローマ帝国は476年に滅んだ。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "odoacer",
+    "name": "オドアケルの王国",
+    "region": "ce",
+    "start": 476,
+    "end": 493,
+    "minor": true,
+    "territory": [
+      { "year": 476, "add": ["papal", "naples", "tuscany", "emilia", "lombardy", "venetia", "piedmont", "liguria", "sicily"], "note": "西ローマ皇帝を退位させる" }
+    ],
+    "desc": "西ローマ帝国を滅ぼしたゲルマン人の傭兵隊長オドアケルがイタリアを支配した国。493年に東ゴート人のテオドリックに倒された。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "soissons",
+    "name": "ソワソン管区",
+    "region": "we",
+    "start": 461,
+    "end": 486,
+    "minor": true,
+    "territory": [
+      { "year": 461, "add": ["france", "champagne", "normandy"], "note": "ローマ人の将軍が北ガリアを治める" }
+    ],
+    "desc": "西ローマ帝国の滅亡後も北ガリアに残ったローマ人の勢力。486年にフランク王クローヴィスに滅ぼされた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "etruscans",
+    "name": "エトルリア人",
+    "region": "ce",
+    "start": -800,
+    "end": -264,
+    "minor": true,
+    "territory": [
+      { "year": -800, "add": ["tuscany"], "note": "都市国家を作る" },
+      { "year": -600, "contested": ["emilia", "lombardy"], "note": "ポー川流域に進出" }
+    ],
+    "desc": "イタリア中部の民族。都市国家を作り、ローマの建築や宗教に影響を与えたが、前3世紀までにローマに征服された。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "celts",
+    "name": "ケルト人",
+    "aliases": ["ガリア人"],
+    "region": "we",
+    "start": -800,
+    "end": -51,
+    "minor": true,
+    "territory": [
+      { "year": -800, "add": ["normandy", "brittany", "anjou", "poitou", "guyenne", "languedoc", "provence", "dauphine", "burgundy", "champagne", "auvergne", "france", "artois", "lorraine", "alsace", "franche-comte", "savoy", "nice", "roussillon", "avignon", "moselle", "belgium", "liege", "luxembourg", "swiss"], "note": "ガリア（今のフランスなど）に広がる" },
+      { "year": -400, "contested": ["lombardy", "emilia", "piedmont"], "note": "ポー川流域に進出し、前390年ごろローマを占領" }
+    ],
+    "desc": "ヨーロッパの中部・西部に広がった民族。ガリア（今のフランスなど）の人々はカエサルに征服された。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "iberians",
+    "name": "イベリア人・ケルティベリア人",
+    "region": "we",
+    "start": -800,
+    "end": -19,
+    "minor": true,
+    "territory": [
+      { "year": -800, "add": ["asturias", "castile-old", "navarre", "aragon", "catalonia", "valencia", "baleares", "murcia", "andalusia", "granada", "spain", "gibraltar", "portugal"], "note": "イベリア半島の諸部族" }
+    ],
+    "desc": "イベリア半島の先住の人々。カルタゴやローマに征服され、前19年にローマが半島を平定した。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "britons",
+    "name": "ブリトン人",
+    "region": "we",
+    "start": -800,
+    "end": 499,
+    "minor": true,
+    "territory": [
+      { "year": -800, "add": ["england", "wales", "scotland"], "note": "ケルト系の諸部族" }
+    ],
+    "desc": "ブリテン島のケルト系の人々。南部は1世紀にローマに征服されたが、5世紀初めにローマが撤退したのちアングロ=サクソン人の侵入を受けた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "germans",
+    "name": "ゲルマン人",
+    "region": "ce",
+    "start": -800,
+    "end": 499,
+    "minor": true,
+    "territory": [
+      { "year": -800, "add": ["denmark", "schleswig", "lower-saxony", "mecklenburg", "pomerania", "brandenburg", "scania", "sweden", "norway"], "note": "北ヨーロッパの諸部族" },
+      { "year": -100, "add": ["westphalia", "hesse", "thuringia", "saxony", "bohemia", "silesia", "poland-gp"], "note": "ライン川・ドナウ川の北に広がる" },
+      { "year": 260, "add": ["swabia", "palatinate"], "note": "アラマン人などがローマの国境をこえる" }
+    ],
+    "desc": "北ヨーロッパから広がった民族。ローマ帝国と国境で接し、4世紀後半からの大移動でローマ帝国の領内に多くの国を建てた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "goths",
+    "name": "ゴート人",
+    "region": "ee",
+    "start": 230,
+    "end": 376,
+    "minor": true,
+    "territory": [
+      { "year": 230, "add": ["ukraine-rb", "podolia", "moldavia", "bessarabia", "ukraine-lb"], "note": "黒海北岸に広がる" },
+      { "year": 271, "contested": ["transylvania", "wallachia"], "note": "ローマが放棄したダキアに入る" }
+    ],
+    "desc": "ゲルマン人の一派。3世紀に黒海北岸に広がり、ローマ帝国に侵入した。375年ごろフン人に圧迫され、西ゴート人はローマ帝国の領内に移った。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "scythians",
+    "name": "スキタイ",
+    "region": "ee",
+    "start": -700,
+    "end": -200,
+    "minor": true,
+    "territory": [
+      { "year": -700, "add": ["pontic", "zaporozhia", "ukraine-lb", "don", "crimea"], "note": "黒海北岸の騎馬遊牧民" }
+    ],
+    "desc": "黒海北岸の草原の騎馬遊牧民。動物文様の金工品で知られ、のちの遊牧民に影響を与えた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "sarmatians",
+    "name": "サルマタイ",
+    "region": "ee",
+    "start": -200,
+    "end": 370,
+    "minor": true,
+    "territory": [
+      { "year": -200, "add": ["pontic", "zaporozhia", "ukraine-lb", "don", "kuban"], "note": "スキタイに代わって黒海北岸を支配" }
+    ],
+    "desc": "スキタイに代わって黒海北岸の草原を支配したイラン系の騎馬遊牧民。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "thracians",
+    "name": "トラキア人",
+    "region": "ee",
+    "start": -480,
+    "end": 46,
+    "minor": true,
+    "territory": [
+      { "year": -480, "add": ["rumelia-e", "bulgaria"], "note": "オドリュサイ王国" }
+    ],
+    "desc": "バルカン半島東部の民族。前5世紀にオドリュサイ王国を作り、46年にローマの属州となった。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "illyrians",
+    "name": "イリュリア人",
+    "region": "ee",
+    "start": -400,
+    "end": -168,
+    "minor": true,
+    "territory": [
+      { "year": -400, "add": ["albania", "montenegro", "dalmatia"], "note": "アドリア海東岸の王国" }
+    ],
+    "desc": "バルカン半島西部の民族。前168年にローマに征服された。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "dacia",
+    "name": "ダキア",
+    "region": "ee",
+    "start": -82,
+    "end": 106,
+    "minor": true,
+    "territory": [
+      { "year": -82, "add": ["transylvania", "wallachia", "banat", "moldavia"], "note": "ブレビスタ王が統一" }
+    ],
+    "desc": "ドナウ川下流の北のダキア人の王国。106年にトラヤヌス帝に征服された。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "huns",
+    "name": "フン人",
+    "region": "ee",
+    "start": 370,
+    "end": 469,
+    "color": "#A09080",
+    "territory": [
+      { "year": 370, "add": ["don", "pontic", "zaporozhia", "kuban", "crimea"], "note": "黒海北岸に進出し、東ゴート人を従える" },
+      { "year": 400, "add": ["hungary-c", "hungary-w", "ukraine-lb", "ukraine-rb", "podolia", "moldavia", "wallachia"], "note": "パンノニアを中心とする" },
+      { "year": 434, "add": ["transylvania", "slovakia", "bessarabia"], "note": "アッティラの時代に最大となる" },
+      { "year": 454, "remove": ["hungary-c", "hungary-w", "transylvania", "slovakia", "wallachia", "moldavia"], "note": "アッティラの死後、帝国が崩れる" }
+    ],
+    "desc": "中央アジアから移動してきた騎馬遊牧民。375年ごろ黒海北岸のゴート人を圧迫してゲルマン人の大移動を引き起こし、5世紀にアッティラのもとで大帝国を築いた。",
+    "importance": 2,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "magadha",
+    "name": "マガダ国",
+    "region": "sa",
+    "start": -600,
+    "end": -317,
+    "color": "#D8B060",
+    "names": [
+      [-600, "マガダ国"],
+      [-345, "マガダ国（ナンダ朝）"]
+    ],
+    "territory": [
+      { "year": -600, "add": ["bihar"], "note": "ガンジス川中流域の十六大国の一つ" },
+      { "year": -490, "add": ["hindustan"], "note": "コーサラ国を併合" },
+      { "year": -345, "add": ["bengal-w", "orissa"], "contested": ["malwa"], "note": "ナンダ朝のもとでガンジス川流域を統一" }
+    ],
+    "desc": "ガンジス川中流域の王国。前6〜5世紀の十六大国の中で最も強くなり、ナンダ朝のときにガンジス川流域を統一した。",
+    "importance": 2,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "kosala",
+    "name": "コーサラ国",
+    "region": "sa",
+    "start": -600,
+    "end": -490,
+    "minor": true,
+    "territory": [
+      { "year": -600, "add": ["hindustan"], "note": "十六大国の一つ" }
+    ],
+    "desc": "ガンジス川中流域の十六大国の一つ。ガウタマ=シッダールタ（ブッダ）が活動した国の一つで、マガダ国に併合された。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "maurya",
+    "name": "マウリヤ朝",
+    "region": "sa",
+    "start": -317,
+    "end": -180,
+    "color": "#E0A050",
+    "territory": [
+      { "year": -317, "add": ["bihar", "hindustan", "bengal-w", "orissa", "punjab-e", "punjab", "sindh"], "note": "チャンドラグプタがナンダ朝を倒し、インダス川流域も支配" },
+      { "year": -305, "add": ["nwfp", "afg-kabul", "afg-kandahar", "baluchistan"], "note": "セレウコス朝からアフガニスタン東部を得る" },
+      { "year": -290, "add": ["rajputana", "gujarat", "malwa", "maharashtra", "gondwana", "telangana", "karnataka"], "note": "デカン高原に広がる" },
+      { "year": -261, "add": ["andhra"], "note": "アショーカ王がカリンガを征服" },
+      { "year": -200, "remove": ["nwfp", "afg-kabul", "afg-kandahar", "baluchistan", "punjab", "sindh"], "note": "北西部を失う" }
+    ],
+    "desc": "チャンドラグプタが建てた、インド最初の統一王朝。アショーカ王はカリンガ征服ののち仏教に帰依し、ダルマ（法）による政治を行った。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "shunga",
+    "name": "シュンガ朝",
+    "region": "sa",
+    "start": -180,
+    "end": -73,
+    "minor": true,
+    "territory": [
+      { "year": -180, "add": ["bihar", "hindustan"], "contested": ["malwa"], "note": "マウリヤ朝を倒す" }
+    ],
+    "desc": "マウリヤ朝の将軍が建てた、ガンジス川流域の王朝。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "satavahana",
+    "name": "サータヴァーハナ朝",
+    "aliases": ["アーンドラ朝"],
+    "region": "sa",
+    "start": -230,
+    "end": 220,
+    "color": "#B0C0A0",
+    "territory": [
+      { "year": -230, "add": ["maharashtra", "telangana", "andhra"], "note": "デカン高原の王朝" }
+    ],
+    "desc": "デカン高原を中心とした王朝。ローマとの季節風（ヒッパロスの風）を利用した交易で栄えた。",
+    "importance": 2,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "tamil-k",
+    "name": "タミル人の諸王国",
+    "region": "sa",
+    "start": -300,
+    "end": 300,
+    "minor": true,
+    "territory": [
+      { "year": -300, "add": ["tamil", "kerala"], "note": "チョーラ・パーンディヤ・チェーラ" }
+    ],
+    "desc": "インド南端のチョーラ・パーンディヤ・チェーラの王国。ローマとの海上交易で栄え、タミル語の文学（サンガム文学）が生まれた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "indo-greek",
+    "name": "インド=グリーク朝",
+    "region": "sa",
+    "start": -180,
+    "end": -10,
+    "minor": true,
+    "territory": [
+      { "year": -180, "add": ["afg-kabul", "nwfp", "punjab"], "note": "バクトリアのギリシア人がインドに進出" }
+    ],
+    "desc": "バクトリアのギリシア人がインド北西部に建てた王国。メナンドロス王（ミリンダ王）は仏教に関心をもった。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "kushan",
+    "name": "クシャーナ朝",
+    "region": "sa",
+    "start": 30,
+    "end": 375,
+    "color": "#C89060",
+    "territory": [
+      { "year": 30, "add": ["afg-balkh", "tajik"], "note": "クジュラ=カドフィセスが大月氏の諸侯を統一" },
+      { "year": 60, "add": ["afg-kabul", "nwfp", "punjab", "kashmir"], "note": "ガンダーラに進出" },
+      { "year": 127, "add": ["punjab-e", "hindustan", "sindh", "transoxiana"], "note": "カニシカ王のとき最大となる（都プルシャプラ）" },
+      { "year": 241, "remove": ["afg-balkh", "tajik", "afg-kabul", "transoxiana"], "note": "ササン朝に西部を奪われる" }
+    ],
+    "desc": "イラン系の人々がバクトリアからインド北西部に建てた王朝。カニシカ王のときに栄え、ガンダーラ美術が生まれ、大乗仏教が広まった。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "western-satraps",
+    "name": "西クシャトラパ",
+    "region": "sa",
+    "start": 35,
+    "end": 395,
+    "minor": true,
+    "territory": [
+      { "year": 35, "add": ["gujarat"], "contested": ["malwa"], "note": "サカ人の王朝" }
+    ],
+    "desc": "インド西部のサカ人の王朝。4世紀末にグプタ朝に滅ぼされた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "vakataka",
+    "name": "ヴァーカータカ朝",
+    "region": "sa",
+    "start": 250,
+    "end": 500,
+    "minor": true,
+    "territory": [
+      { "year": 250, "add": ["maharashtra", "gondwana"], "note": "デカン高原の王朝" }
+    ],
+    "desc": "デカン高原の王朝。グプタ朝と婚姻関係を結び、アジャンター石窟の造営にかかわった。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "bactria",
+    "name": "バクトリア",
+    "aliases": ["グレコ=バクトリア"],
+    "region": "ia",
+    "start": -255,
+    "end": -130,
+    "color": "#C0A070",
+    "territory": [
+      { "year": -255, "add": ["afg-balkh", "tajik", "transoxiana"], "note": "ディオドトスがセレウコス朝から自立" },
+      { "year": -145, "remove": ["transoxiana"], "note": "遊牧民が侵入" }
+    ],
+    "desc": "セレウコス朝から自立したギリシア人の王国。ヘレニズム文化を中央アジア・インドに伝えた。前2世紀後半に大月氏などに滅ぼされた。",
+    "importance": 2,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "yuezhi",
+    "name": "月氏",
+    "aliases": ["大月氏"],
+    "region": "ia",
+    "start": -400,
+    "end": 30,
+    "color": "#B0A090",
+    "names": [
+      [-400, "月氏"],
+      [-176, "大月氏"]
+    ],
+    "territory": [
+      { "year": -400, "add": ["cn-gs"], "note": "河西回廊の遊牧民" },
+      { "year": -176, "remove": ["cn-gs"], "note": "匈奴に敗れて西に移る" },
+      { "year": -165, "contested": ["kyrgyz"], "note": "イリ地方に移る" },
+      { "year": -130, "add": ["afg-balkh", "tajik", "transoxiana"], "remove": ["kyrgyz"], "note": "バクトリアを征服（大月氏）" }
+    ],
+    "desc": "河西回廊にいた遊牧民。匈奴に敗れて西に移り、大月氏としてバクトリアを支配した。漢の武帝は張騫を送って同盟を求めた。",
+    "importance": 2,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "xiongnu",
+    "name": "匈奴",
+    "region": "ia",
+    "start": -209,
+    "end": 91,
+    "color": "#8E8EC0",
+    "territory": [
+      { "year": -209, "add": ["mongolia", "mongolia-in", "transbaikal", "tuva"], "note": "冒頓単于が遊牧民を統一" },
+      { "year": -177, "vassal": ["tarim", "dzungaria"], "note": "月氏を西に追い、西域を支配" },
+      { "year": -60, "remove": ["tarim"], "note": "漢が西域都護を置く" },
+      { "year": 48, "remove": ["mongolia-in"], "note": "南北に分かれ、南匈奴は漢に服属" }
+    ],
+    "desc": "モンゴル高原の騎馬遊牧民。冒頓単于のもとで強大となり、漢の高祖を破った。武帝の攻撃で衰え、1世紀に南北に分かれた。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "xianbei",
+    "name": "鮮卑",
+    "region": "ia",
+    "start": 93,
+    "end": 234,
+    "minor": true,
+    "territory": [
+      { "year": 93, "add": ["mongolia", "transbaikal"], "note": "北匈奴の地に広がる" },
+      { "year": 156, "add": ["mongolia-in", "manchuria"], "note": "檀石槐が統一" }
+    ],
+    "desc": "モンゴル高原東部の遊牧民。2世紀に強大となり、4世紀以降は華北に北魏などの国を建てた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "wusun",
+    "name": "烏孫",
+    "region": "ia",
+    "start": -160,
+    "end": 400,
+    "minor": true,
+    "territory": [
+      { "year": -160, "add": ["kyrgyz"], "note": "イリ地方の遊牧国家" }
+    ],
+    "desc": "イリ地方の遊牧民の国。漢と結んで匈奴に対抗した。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "dayuan",
+    "name": "大宛",
+    "aliases": ["フェルガナ"],
+    "region": "ia",
+    "start": -300,
+    "end": 200,
+    "minor": true,
+    "territory": [
+      { "year": -300, "add": ["fergana"], "note": "フェルガナ盆地の国" }
+    ],
+    "desc": "フェルガナ盆地のオアシス国家。汗血馬で知られ、漢の武帝が李広利を送って攻めた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "xiyu",
+    "name": "西域のオアシス国家",
+    "region": "ia",
+    "start": -200,
+    "end": 500,
+    "minor": true,
+    "territory": [
+      { "year": -200, "add": ["tarim"], "note": "楼蘭・亀茲などのオアシス都市" }
+    ],
+    "desc": "タリム盆地の楼蘭・亀茲・于闐などのオアシス都市国家。匈奴と漢が支配を争った。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "zhou",
+    "name": "周",
+    "aliases": ["西周", "東周"],
+    "region": "cn",
+    "start": -800,
+    "end": -256,
+    "color": "#C8A878",
+    "names": [
+      [-800, "周（西周）"],
+      [-770, "周（東周）"]
+    ],
+    "territory": [
+      { "year": -800, "add": ["cn-sn", "cn-hn"], "note": "鎬京を都とし、封建制で諸侯を治める" },
+      { "year": -770, "remove": ["cn-sn"], "note": "犬戎に攻められ、都を洛邑に移す（東周）" }
+    ],
+    "desc": "殷を倒して前11世紀に成立した王朝。封建制で諸侯を治めた。前770年に都を東の洛邑に移してからは王の力が衰え、春秋・戦国時代となった。前256年に秦に滅ぼされた。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "qin",
+    "name": "秦",
+    "region": "cn",
+    "start": -800,
+    "end": -206,
+    "color": "#8C9EC8",
+    "names": [
+      [-800, "秦"],
+      [-221, "秦（統一）"]
+    ],
+    "territory": [
+      { "year": -800, "add": ["cn-gs"], "note": "西方の諸侯" },
+      { "year": -770, "add": ["cn-sn"], "note": "周の東遷ののち渭水流域を得る" },
+      { "year": -316, "add": ["cn-sc"], "note": "巴・蜀を征服" },
+      { "year": -278, "contested": ["cn-hg"], "note": "楚の都の郢を攻め落とす" },
+      { "year": -230, "add": ["cn-hn"], "note": "韓を滅ぼす（前225年に魏も滅ぼす）" },
+      { "year": -228, "add": ["cn-sx"], "note": "趙を滅ぼす" },
+      { "year": -223, "add": ["cn-jn", "cn-zj", "cn-jx", "cn-hg"], "note": "楚を滅ぼす" },
+      { "year": -222, "add": ["cn-n", "manchuria-s"], "note": "燕を滅ぼす" },
+      { "year": -221, "add": ["cn-sd"], "note": "斉を滅ぼし、中国を統一（始皇帝）" },
+      { "year": -215, "contested": ["mongolia-in"], "note": "蒙恬が匈奴を討ち、長城を築く" },
+      { "year": -214, "add": ["cn-gd", "cn-gx", "cn-fj"], "note": "南方に南海郡などを置く" }
+    ],
+    "desc": "戦国の七雄の一つ。商鞅の改革で強くなり、前221年に秦王政（始皇帝）が中国を統一した。郡県制や度量衡・文字の統一を行ったが、陳勝・呉広の乱などで前206年に滅んだ。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "jin-cq",
+    "name": "晋",
+    "region": "cn",
+    "start": -800,
+    "end": -403,
+    "color": "#A8C090",
+    "territory": [
+      { "year": -800, "add": ["cn-sx"], "note": "山西の大国" }
+    ],
+    "desc": "春秋時代の有力な諸侯。文公が覇者となった。前403年に家臣の韓・魏・趙に分かれた。",
+    "importance": 2,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "qi",
+    "name": "斉",
+    "region": "cn",
+    "start": -800,
+    "end": -221,
+    "color": "#D0A0A0",
+    "territory": [
+      { "year": -800, "add": ["cn-sd"], "note": "山東の大国" }
+    ],
+    "desc": "山東の大国。春秋時代に桓公が最初の覇者となり、戦国の七雄の一つとして都の臨淄は大都市として栄えた。前221年に秦に滅ぼされた。",
+    "importance": 2,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "chu",
+    "name": "楚",
+    "region": "cn",
+    "start": -800,
+    "end": -223,
+    "color": "#98C8A0",
+    "territory": [
+      { "year": -800, "add": ["cn-hg"], "note": "長江中流域の大国" },
+      { "year": -334, "add": ["cn-jn", "cn-zj", "cn-jx"], "note": "越を破り、長江下流域を得る" }
+    ],
+    "desc": "長江中流域の大国。春秋時代に荘王が覇者となり、戦国の七雄の一つとなった。前223年に秦に滅ぼされた。",
+    "importance": 2,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "yan-ws",
+    "name": "燕",
+    "region": "cn",
+    "start": -800,
+    "end": -222,
+    "color": "#C0B0D8",
+    "minor": true,
+    "territory": [
+      { "year": -800, "add": ["cn-n"], "note": "河北の北部の諸侯" },
+      { "year": -300, "add": ["manchuria-s"], "note": "遼東に進出" }
+    ],
+    "desc": "河北の北部の諸侯で、戦国の七雄の一つ。都は薊（今の北京）。前222年に秦に滅ぼされた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "wu-cq",
+    "name": "呉",
+    "region": "cn",
+    "start": -585,
+    "end": -473,
+    "minor": true,
+    "territory": [
+      { "year": -585, "add": ["cn-jn"], "note": "長江下流域の国" }
+    ],
+    "desc": "長江下流域の国。春秋時代の末に越と争い、前473年に越に滅ぼされた（「臥薪嘗胆」の故事）。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "yue-cq",
+    "name": "越",
+    "region": "cn",
+    "start": -500,
+    "end": -334,
+    "minor": true,
+    "territory": [
+      { "year": -500, "add": ["cn-zj"], "note": "今の浙江の国" },
+      { "year": -473, "add": ["cn-jn"], "note": "呉を滅ぼす" }
+    ],
+    "desc": "今の浙江の国。勾践が呉を滅ぼして覇者に数えられた。前4世紀に楚に敗れた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "zhao",
+    "name": "趙",
+    "region": "cn",
+    "start": -403,
+    "end": -228,
+    "color": "#B8C8E0",
+    "minor": true,
+    "territory": [
+      { "year": -403, "add": ["cn-sx"], "note": "晋が分かれて成立（地図では山西を趙とする）" }
+    ],
+    "desc": "晋から分かれた戦国の七雄の一つ。都は邯鄲。武霊王が遊牧民の騎馬の戦術を取り入れた（胡服騎射）。前228年に秦に滅ぼされた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "wei-ws",
+    "name": "魏",
+    "region": "cn",
+    "start": -403,
+    "end": -225,
+    "color": "#E0C890",
+    "minor": true,
+    "territory": [
+      { "year": -403, "add": ["cn-hn"], "note": "晋が分かれて成立（地図では河南を魏とする）" }
+    ],
+    "desc": "晋から分かれた戦国の七雄の一つ。前4世紀前半に最も強かった。前225年に秦に滅ぼされた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "han-ws",
+    "name": "韓",
+    "region": "cn",
+    "start": -403,
+    "end": -230,
+    "minor": true,
+    "desc": "晋から分かれた戦国の七雄の一つで、七雄の中で最も小さかった（地図では河南を魏としている）。前230年に秦に最初に滅ぼされた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "lu",
+    "name": "魯",
+    "region": "cn",
+    "start": -800,
+    "end": -256,
+    "minor": true,
+    "desc": "周公旦の子孫が治めた山東の小国。孔子が生まれた国で、歴史書『春秋』は魯の記録をもとにしている。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "song-cq",
+    "name": "宋",
+    "region": "cn",
+    "start": -800,
+    "end": -286,
+    "minor": true,
+    "desc": "殷の子孫が治めた河南の国。襄公が覇者の一人に数えられる。前286年に斉に滅ぼされた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "han-dyn",
+    "name": "漢",
+    "aliases": ["前漢", "後漢"],
+    "region": "cn",
+    "periods": [
+      [-202, 8],
+      [25, 220]
+    ],
+    "color": "#E8A86A",
+    "names": [
+      [-202, "前漢"],
+      [25, "後漢"]
+    ],
+    "territory": [
+      { "year": -202, "add": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs", "cn-jn", "cn-zj", "cn-jx", "cn-hg", "cn-sc", "manchuria-s"], "note": "劉邦（高祖）が項羽を破り、長安を都とする" },
+      { "year": -111, "add": ["cn-gd", "cn-gx", "cn-hi", "tonkin", "annam-n"], "note": "武帝が南越を滅ぼす" },
+      { "year": -110, "add": ["cn-fj"], "note": "閩越を滅ぼす" },
+      { "year": -109, "add": ["cn-yn", "cn-gz"], "note": "西南の諸民族を服属させる" },
+      { "year": -108, "add": ["korea-n"], "note": "衛氏朝鮮を滅ぼし、楽浪郡など4郡を置く" },
+      { "year": -60, "vassal": ["tarim"], "note": "西域都護を置く" }
+    ],
+    "desc": "劉邦が建てた王朝。前漢は武帝のとき最盛期を迎えた。新の時代をはさみ、25年に劉秀（光武帝）が後漢を再興して洛陽を都とした。儒学が官学となり、紙が改良された。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "xin",
+    "name": "新",
+    "region": "cn",
+    "start": 8,
+    "end": 23,
+    "color": "#C0C0A0",
+    "territory": [
+      { "year": 8, "add": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs", "cn-jn", "cn-zj", "cn-jx", "cn-hg", "cn-sc", "manchuria-s", "cn-gd", "cn-gx", "cn-fj", "cn-yn", "cn-gz", "korea-n", "tonkin"], "note": "王莽が前漢の帝位を奪う" }
+    ],
+    "desc": "王莽が前漢の帝位を奪って建てた王朝。周の制度にならった復古的な政治が混乱を招き、赤眉の乱の中で滅んだ。",
+    "importance": 2,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "nanyue",
+    "name": "南越",
+    "region": "cn",
+    "start": -204,
+    "end": -111,
+    "minor": true,
+    "territory": [
+      { "year": -204, "add": ["cn-gd", "cn-gx", "tonkin"], "note": "趙佗が建国" }
+    ],
+    "desc": "秦の将軍だった趙佗が今の広東・広西・ベトナム北部に建てた国。前111年に漢の武帝に滅ぼされた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "minyue",
+    "name": "閩越",
+    "region": "cn",
+    "start": -334,
+    "end": -110,
+    "minor": true,
+    "territory": [
+      { "year": -334, "add": ["cn-fj"], "note": "越の子孫の国" }
+    ],
+    "desc": "今の福建にあった越の人々の国。前110年に漢に滅ぼされた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "dian",
+    "name": "滇",
+    "region": "cn",
+    "start": -300,
+    "end": -109,
+    "minor": true,
+    "territory": [
+      { "year": -300, "add": ["cn-yn"], "note": "雲南の国" }
+    ],
+    "desc": "今の雲南の滇池のまわりにあった国。前109年に漢に服属した。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "wei-3k",
+    "name": "魏",
+    "aliases": ["曹魏"],
+    "region": "cn",
+    "start": 220,
+    "end": 265,
+    "color": "#7FA8C8",
+    "territory": [
+      { "year": 220, "add": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs", "manchuria-s", "korea-n"], "note": "曹丕が後漢の献帝から帝位をゆずられる（都は洛陽）" },
+      { "year": 263, "add": ["cn-sc", "cn-yn", "cn-gz"], "note": "蜀を滅ぼす" }
+    ],
+    "desc": "曹操の子の曹丕が後漢の帝位をゆずられて建てた王朝。九品中正を始め、屯田制を行った。263年に蜀を滅ぼしたが、265年に司馬炎に帝位を奪われた。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "shu-3k",
+    "name": "蜀",
+    "aliases": ["蜀漢"],
+    "region": "cn",
+    "start": 221,
+    "end": 263,
+    "color": "#90C890",
+    "territory": [
+      { "year": 221, "add": ["cn-sc", "cn-yn", "cn-gz"], "note": "劉備が成都で即位" }
+    ],
+    "desc": "劉備が成都を都に建てた王朝で、蜀漢ともいう。諸葛亮が補佐した。263年に魏に滅ぼされた。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "wu-3k",
+    "name": "呉",
+    "aliases": ["孫呉"],
+    "region": "cn",
+    "start": 222,
+    "end": 280,
+    "color": "#D89090",
+    "territory": [
+      { "year": 222, "add": ["cn-jn", "cn-zj", "cn-jx", "cn-hg", "cn-fj", "cn-gd", "cn-gx", "tonkin"], "note": "孫権が建業を都とする" }
+    ],
+    "desc": "孫権が建業（今の南京）を都に建てた王朝。江南の開発が進んだ。280年に晋に滅ぼされた。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "jin-dyn",
+    "name": "晋",
+    "aliases": ["西晋", "東晋"],
+    "region": "cn",
+    "start": 265,
+    "end": 420,
+    "color": "#A0A8D0",
+    "names": [
+      [265, "晋（西晋）"],
+      [317, "東晋"]
+    ],
+    "territory": [
+      { "year": 265, "add": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs", "manchuria-s", "korea-n", "cn-sc", "cn-yn", "cn-gz"], "note": "司馬炎（武帝）が魏の帝位をゆずられる" },
+      { "year": 280, "add": ["cn-jn", "cn-zj", "cn-jx", "cn-hg", "cn-fj", "cn-gd", "cn-gx", "tonkin"], "note": "呉を滅ぼして中国を統一" },
+      { "year": 304, "remove": ["cn-sc"], "note": "四川で成漢が自立" },
+      { "year": 316, "remove": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs", "manchuria-s", "korea-n"], "note": "匈奴に洛陽・長安を奪われ、西晋が滅ぶ（永嘉の乱）" },
+      { "year": 347, "add": ["cn-sc"], "note": "桓温が成漢を滅ぼす" }
+    ],
+    "desc": "司馬炎が建てた王朝。280年に中国を統一したが八王の乱で乱れ、316年に匈奴に滅ぼされた（西晋）。翌年、一族の司馬睿が建康で即位し、江南に東晋を建てた。",
+    "importance": 3,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "wuhu",
+    "name": "五胡十六国",
+    "region": "cn",
+    "start": 304,
+    "end": 439,
+    "minor": true,
+    "territory": [
+      { "year": 304, "contested": ["cn-sx", "cn-sc"], "note": "匈奴の劉淵が自立する" },
+      { "year": 316, "add": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs", "manchuria-s"], "note": "華北に五胡（匈奴・羯・鮮卑・氐・羌）の国々が興亡する" }
+    ],
+    "desc": "4世紀初めから5世紀前半まで、華北に匈奴・羯・鮮卑・氐・羌の五胡などが建てた国々。地図ではまとめて表示している。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "former-qin",
+    "name": "前秦",
+    "region": "cn",
+    "start": 351,
+    "end": 394,
+    "color": "#C8B090",
+    "territory": [
+      { "year": 351, "add": ["cn-sn", "cn-gs"], "note": "氐人の苻健が長安で建国" },
+      { "year": 370, "add": ["cn-hn", "cn-sx", "cn-n", "cn-sd", "manchuria-s"], "note": "苻堅が前燕を滅ぼし、華北を統一" },
+      { "year": 385, "remove": ["cn-hn", "cn-sx", "cn-n", "cn-sd", "manchuria-s"], "note": "淝水の戦いの敗北ののち、華北が再び分裂する" }
+    ],
+    "desc": "氐人の王朝。苻堅が華北を統一したが、383年の淝水の戦いで東晋に大敗し、崩れた。",
+    "importance": 2,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "gojoseon",
+    "name": "古朝鮮",
+    "region": "kr",
+    "start": -800,
+    "end": -194,
+    "minor": true,
+    "territory": [
+      { "year": -800, "contested": ["korea-n"], "note": "朝鮮半島北部の国" }
+    ],
+    "desc": "朝鮮半島北部にあったとされる国。檀君や箕子の建国の伝説がある。",
+    "importance": 1,
+    "uncertain": true,
+    "memo": "伝説の部分が多く、範囲や時期ははっきりしない",
+    "descVerified": false
+  },
+  {
+    "id": "wiman",
+    "name": "衛氏朝鮮",
+    "region": "kr",
+    "start": -194,
+    "end": -108,
+    "minor": true,
+    "territory": [
+      { "year": -194, "add": ["korea-n"], "contested": ["manchuria-s"], "note": "衛満が建国" }
+    ],
+    "desc": "燕から亡命した衛満が建てた、朝鮮半島北部の国。前108年に漢の武帝に滅ぼされ、楽浪郡などが置かれた。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "wa",
+    "name": "倭の国々",
+    "region": "jp",
+    "start": -100,
+    "end": 249,
+    "minor": true,
+    "territory": [
+      { "year": -100, "contested": ["japan"], "note": "小国が分立し、楽浪郡に使いを送る" },
+      { "year": 57, "contested": ["japan"], "note": "奴国の王が後漢の光武帝から印綬を受ける" },
+      { "year": 239, "contested": ["japan"], "note": "邪馬台国の卑弥呼が魏に使いを送る" }
+    ],
+    "desc": "弥生時代の日本列島の小国。『漢書』地理志は百余国に分かれていたと記し、57年には奴国、239年には邪馬台国の卑弥呼が中国に使いを送った。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "olmec",
+    "name": "オルメカ文明",
+    "region": "am",
+    "start": -800,
+    "end": -400,
+    "minor": true,
+    "territory": [
+      { "year": -800, "contested": ["mexico"], "note": "メキシコ湾岸の文明" }
+    ],
+    "desc": "メキシコ湾岸に栄えた、メソアメリカで最も古い文明。巨石人頭像で知られる。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "chavin",
+    "name": "チャビン文化",
+    "region": "am",
+    "start": -800,
+    "end": -200,
+    "minor": true,
+    "territory": [
+      { "year": -800, "contested": ["peru"], "note": "アンデス山中の神殿を中心とする文化" }
+    ],
+    "desc": "アンデス山中のチャビン=デ=ワンタルの神殿を中心に広がった文化。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  }
+]

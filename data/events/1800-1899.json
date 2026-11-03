@@ -8,7 +8,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "イギリスがアイルランドを併合し、連合王国となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -22,7 +21,6 @@
     "regions": ["we"],
     "importance": 1,
     "desc": "ナポレオンがローマ教皇と和解した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -35,7 +33,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "イギリスとフランスの講和（翌年に破れる）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -49,7 +46,6 @@
     "regions": ["sea"],
     "importance": 2,
     "desc": "阮福暎が西山朝を倒し、ベトナムを統一した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -63,7 +59,6 @@
     "regions": ["am"],
     "importance": 3,
     "desc": "アメリカがフランスからミシシッピ川以西の土地を買った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -76,7 +71,6 @@
     "regions": ["am"],
     "importance": 3,
     "desc": "最初の黒人共和国",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -89,7 +83,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "私有財産の不可侵・法の前の平等などを定めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -103,7 +96,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "国民投票を経て皇帝となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -117,7 +109,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "オスマン帝国のエジプト総督となり、近代化を進めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -132,7 +123,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "イギリス艦隊がフランス・スペイン連合艦隊を破った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -146,7 +136,6 @@
     "regions": ["ce"],
     "importance": 3,
     "desc": "ナポレオンがロシア・オーストリア軍を破った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -160,7 +149,6 @@
     "regions": ["ce"],
     "importance": 3,
     "desc": "ナポレオンを保護者とするライン同盟が結成された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -173,7 +161,6 @@
     "regions": ["we", "ce"],
     "importance": 3,
     "desc": "ヨーロッパ大陸とイギリスの通商を禁じた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -185,7 +172,6 @@
     "regions": ["ce", "ee"],
     "importance": 3,
     "desc": "プロイセンが領土の半分を失い、ワルシャワ大公国が作られた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -199,7 +185,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "農民解放などの改革を進めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -215,7 +200,6 @@
     "importance": 2,
     "desc": "占領下のベルリンで行った連続講演",
     "acceptYears": [1808],
-    "verified": false,
     "uncertain": true,
     "memo": "講演は1807〜08年",
     "image": "ja:ヨハン・ゴットリープ・フィヒテ",
@@ -232,7 +216,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "ハドソン川で航行に成功した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "en:North River Steamboat",
@@ -249,7 +232,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "ドイツ観念論を大成した哲学者の主著の一つ",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:精神現象学",
@@ -265,7 +247,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "ナポレオンの兄の即位に民衆がゲリラ戦で抵抗した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -280,7 +261,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "第1部が刊行された（第2部は死後の1833年）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:ファウスト (ゲーテ)",
@@ -296,7 +276,6 @@
     "regions": ["am"],
     "importance": 2,
     "desc": "メキシコの独立運動が始まった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -310,7 +289,6 @@
     "regions": ["ee", "we"],
     "importance": 3,
     "desc": "モスクワまで進んだが、退却中に大敗した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -324,7 +302,6 @@
     "regions": ["am"],
     "importance": 2,
     "desc": "アメリカの工業が自立するきっかけになった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -339,7 +316,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "ドイツの民話を集めた（第1巻）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:グリム童話",
@@ -354,7 +330,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "諸国の連合軍がナポレオンを破った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -367,7 +342,6 @@
     "regions": ["sa", "we"],
     "importance": 2,
     "desc": "茶の取引と中国貿易を除いて独占が廃止された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -382,7 +356,6 @@
     "regions": ["ce"],
     "importance": 3,
     "desc": "正統主義をかかげ、ナポレオン後のヨーロッパの秩序を決めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -397,7 +370,6 @@
     "importance": 2,
     "desc": "オランダから得たことがウィーン会議で確定した",
     "acceptYears": [1815],
-    "verified": false,
     "uncertain": true,
     "memo": "1814年の英蘭条約で決まり、1815年のウィーン議定書で確定",
     "descVerified": false
@@ -410,7 +382,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "ナポレオンが最終的に敗れ、セントヘレナ島に流された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -424,7 +395,6 @@
     "regions": ["ce", "ee"],
     "importance": 2,
     "desc": "ロシア皇帝が提唱した君主間の同盟",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -437,7 +407,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "35の君主国と4つの自由市からなる",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -449,7 +418,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "地主を保護するため輸入穀物に高い関税を課した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -463,7 +431,6 @@
     "regions": ["am"],
     "importance": 3,
     "desc": "独立を宣言した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -478,7 +445,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "古典派経済学を体系化した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:デヴィッド・リカード",
@@ -492,7 +458,6 @@
     "keywords": ["オイギンス", "サン=マルティン"],
     "regions": ["am"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -507,7 +472,6 @@
     "regions": ["sa"],
     "importance": 2,
     "desc": "第3次マラーター戦争に勝ったイギリスがインドの大部分を支配した",
-    "verified": false,
     "uncertain": true,
     "memo": "戦争は1817〜18年",
     "descVerified": false
@@ -521,7 +485,6 @@
     "regions": ["sea"],
     "importance": 3,
     "desc": "イギリスのラッフルズが建設した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -534,7 +497,6 @@
     "keywords": ["ボリバル"],
     "regions": ["am"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -548,7 +510,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "学生組合（ブルシェンシャフト）の運動を弾圧した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -561,7 +522,6 @@
     "regions": ["am"],
     "importance": 2,
     "desc": "北緯36度30分以北に奴隷州をつくらないと定めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -574,7 +534,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "イタリアの秘密結社が立憲革命を起こしたが、オーストリア軍に鎮圧された",
-    "verified": false,
     "uncertain": true,
     "memo": "1820〜21年",
     "descVerified": false
@@ -585,7 +544,6 @@
     "title": "メキシコの独立",
     "regions": ["am"],
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -599,7 +557,6 @@
     "keywords": ["サン=マルティン"],
     "regions": ["am"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -614,7 +571,6 @@
     "regions": ["ee", "wa"],
     "importance": 3,
     "desc": "ロマン主義の詩人バイロンも参加した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -628,7 +584,6 @@
     "regions": ["am"],
     "importance": 3,
     "desc": "ポルトガルの王子が皇帝となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -643,7 +598,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "ロゼッタ=ストーンを手がかりにエジプトの文字を解読した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:ロゼッタ・ストーン",
@@ -658,7 +612,6 @@
     "regions": ["am"],
     "importance": 3,
     "desc": "アメリカ大陸とヨーロッパの相互不干渉を唱えた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -672,7 +625,6 @@
     "regions": ["sea", "we"],
     "importance": 2,
     "desc": "マレー半島はイギリス、スマトラはオランダの勢力圏と定めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -686,7 +638,6 @@
     "regions": ["sea"],
     "importance": 2,
     "desc": "イギリスがアッサム・アラカンなどを得た",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -701,7 +652,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "ウィーンで初演された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:交響曲第9番 (ベートーヴェン)",
@@ -716,7 +666,6 @@
     "regions": ["ee"],
     "importance": 3,
     "desc": "青年将校の反乱。ニコライ1世が鎮圧した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -731,7 +680,6 @@
     "tags": ["文化"],
     "importance": 3,
     "desc": "スティーヴンソンの蒸気機関車が石炭を運んだ",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "en:Locomotion No. 1",
@@ -746,7 +694,6 @@
     "keywords": ["マフムト2世"],
     "regions": ["wa"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -761,7 +708,6 @@
     "regions": ["sea"],
     "importance": 2,
     "desc": "イギリスがペナン・マラッカ・シンガポールをまとめた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -773,7 +719,6 @@
     "regions": ["wa", "ee"],
     "importance": 2,
     "desc": "ロシアがカージャール朝からアルメニアを得て、治外法権を認めさせた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -784,7 +729,6 @@
     "title": "審査法の廃止",
     "regions": ["we"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -800,7 +744,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "ヒンドゥー教の改革運動",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:ラーム・モーハン・ローイ",
@@ -815,7 +758,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "カトリック教徒が公職につけるようになった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -827,7 +769,6 @@
     "regions": ["ee", "wa"],
     "importance": 2,
     "desc": "ロシア=トルコ戦争の講和。ギリシアの独立へ道を開いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -841,7 +782,6 @@
     "regions": ["sa"],
     "importance": 1,
     "desc": "イギリスがヒンドゥー教徒の寡婦殉死を禁じた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -856,7 +796,6 @@
     "tags": ["文化"],
     "importance": 3,
     "desc": "七月革命を描いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:民衆を導く自由の女神",
@@ -870,7 +809,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "オランダから独立した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -884,7 +822,6 @@
     "regions": ["ee", "wa"],
     "importance": 2,
     "desc": "ロンドン会議で独立が承認された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -897,7 +834,6 @@
     "regions": ["wa", "we"],
     "importance": 3,
     "desc": "シャルル10世が出兵した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -910,7 +846,6 @@
     "regions": ["sea"],
     "importance": 2,
     "desc": "オランダがジャワでコーヒーなどの作物を強制的に栽培させた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -923,7 +858,6 @@
     "regions": ["am"],
     "importance": 2,
     "desc": "先住民をミシシッピ川以西に移した（涙の旅路）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -937,7 +871,6 @@
     "regions": ["ee"],
     "importance": 2,
     "desc": "ロシアの支配に反乱した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -951,7 +884,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "パリの民衆がシャルル10世を追放し、ルイ=フィリップが即位した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -966,7 +898,6 @@
     "regions": ["wa"],
     "importance": 2,
     "desc": "エジプトがシリアを得た",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -980,7 +911,6 @@
     "regions": ["we"],
     "tags": ["文化"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:電磁誘導",
@@ -996,7 +926,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "産業資本家に選挙権が広がった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1010,7 +939,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "イギリス帝国で奴隷制が廃止された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1024,7 +952,6 @@
     "importance": 2,
     "desc": "イギリス東インド会社の商業活動が停止された",
     "acceptYears": [1834],
-    "verified": false,
     "uncertain": true,
     "memo": "決定は1833年、実施は1834年",
     "descVerified": false
@@ -1037,7 +964,6 @@
     "regions": ["ce"],
     "importance": 3,
     "desc": "プロイセンを中心に発足した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1051,7 +977,6 @@
     "regions": ["am"],
     "tags": ["文化"],
     "importance": 2,
-    "verified": false,
     "uncertain": true,
     "memo": "発明は1837年、実用化は1844年",
     "image": "ja:サミュエル・モールス",
@@ -1068,7 +993,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "労働者が普通選挙などを求めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1082,7 +1006,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "オスマン帝国が西欧化の改革を始めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1096,7 +1019,6 @@
     "regions": ["cn"],
     "importance": 2,
     "desc": "広州でアヘンを没収・廃棄した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1108,7 +1030,6 @@
     "title": "アヘン戦争",
     "regions": ["cn", "we"],
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -1123,7 +1044,6 @@
     "regions": ["wa", "we"],
     "importance": 2,
     "desc": "ムハンマド=アリーにシリアを返させ、エジプトの世襲を認めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1136,7 +1056,6 @@
     "regions": ["we"],
     "importance": 1,
     "desc": "イギリスがマオリと結び、ニュージーランドを植民地とした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1151,7 +1070,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "保護関税によるドイツの工業化を説いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:フリードリッヒ・リスト",
@@ -1165,7 +1083,6 @@
     "regions": ["cn", "we"],
     "importance": 3,
     "desc": "香港島の割譲、上海など5港の開港、公行の廃止を定めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1181,7 +1098,6 @@
     "importance": 1,
     "desc": "林則徐の資料をもとに世界の地理・歴史を紹介した",
     "acceptYears": [1843],
-    "verified": false,
     "uncertain": true,
     "memo": "50巻本の成立は1842年、刊行は1843年とする資料もある",
     "image": "ja:海国図志",
@@ -1195,7 +1111,6 @@
     "regions": ["cn", "we"],
     "importance": 1,
     "desc": "領事裁判権・最恵国待遇などを認めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1208,7 +1123,6 @@
     "regions": ["cn", "am", "we"],
     "importance": 2,
     "desc": "アメリカ・フランスと結んだ",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1220,7 +1134,6 @@
     "regions": ["am"],
     "importance": 2,
     "desc": "アメリカがテキサスを併合した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1234,7 +1147,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "多くの人がアメリカへ移住した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1247,7 +1159,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "自由貿易へ転換した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1260,7 +1171,6 @@
     "regions": ["am"],
     "importance": 3,
     "desc": "アメリカがカリフォルニアなどを得た",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1272,7 +1182,6 @@
     "regions": ["af"],
     "importance": 2,
     "desc": "アメリカの解放奴隷が建てた国",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1284,7 +1193,6 @@
     "regions": ["ce"],
     "importance": 3,
     "desc": "ドイツ統一と憲法制定をめざした（1849年に解散）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1298,7 +1206,6 @@
     "regions": ["we", "ce"],
     "tags": ["文化"],
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:共産党宣言",
@@ -1315,7 +1222,6 @@
     "importance": 2,
     "desc": "カリフォルニアで金が発見された",
     "acceptYears": [1849],
-    "verified": false,
     "uncertain": true,
     "memo": "発見は1848年、人々が殺到したのは1849年",
     "descVerified": false
@@ -1329,7 +1235,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "オーストリアからの独立をめざしたが、ロシア軍に鎮圧された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1343,7 +1248,6 @@
     "regions": ["wa"],
     "importance": 2,
     "desc": "カージャール朝で起きたバーブ教徒の反乱",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1356,7 +1260,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "ルイ=フィリップが退位し、第二共和政が成立した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1370,7 +1273,6 @@
     "regions": ["ce"],
     "importance": 3,
     "desc": "ウィーン・ベルリンで革命が起き、メッテルニヒが失脚した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1384,7 +1286,6 @@
     "regions": ["sa"],
     "importance": 2,
     "desc": "第2次シク戦争に勝ったイギリスがパンジャーブを併合した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1395,7 +1296,6 @@
     "title": "航海法の廃止",
     "regions": ["we"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -1411,7 +1311,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "「滅満興漢」をかかげた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1426,7 +1325,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "鉄とガラスの水晶宮が建てられた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:水晶宮",
@@ -1441,7 +1339,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "大統領ルイ=ナポレオンが議会を解散し、独裁権をにぎった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1455,7 +1352,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "ルイ=ナポレオンが皇帝ナポレオン3世となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1470,7 +1366,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "奴隷制の非人道性を描き、北部の世論を動かした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:アンクル・トムの小屋",
@@ -1484,7 +1379,6 @@
     "keywords": ["ペリー+浦賀"],
     "regions": ["jp", "am"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -1499,7 +1393,6 @@
     "regions": ["ee", "wa", "we"],
     "importance": 3,
     "desc": "ロシアとオスマン帝国・イギリス・フランスなどの戦争",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1513,7 +1406,6 @@
     "regions": ["cn"],
     "importance": 1,
     "desc": "曽国藩が郷里で組織した義勇軍。太平天国と戦った",
-    "verified": false,
     "uncertain": true,
     "memo": "組織の開始を1852年末・1853年・1854年とする資料がある",
     "descVerified": false
@@ -1524,7 +1416,6 @@
     "title": "日米和親条約",
     "regions": ["jp"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -1537,7 +1428,6 @@
     "regions": ["am"],
     "importance": 2,
     "desc": "奴隷州とするかを住民が決めることにした。共和党の結成へ",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1551,7 +1441,6 @@
     "regions": ["ee", "we"],
     "importance": 2,
     "desc": "クリミア戦争の講和。黒海が中立化された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1565,7 +1454,6 @@
     "regions": ["cn", "we"],
     "importance": 3,
     "desc": "イギリスとフランスが清と戦った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1580,7 +1468,6 @@
     "regions": ["sa"],
     "importance": 3,
     "desc": "東インド会社のインド人傭兵の反乱から全土に広がった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1595,7 +1482,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "農民の生活を描いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:落穂拾い (ミレー)",
@@ -1610,7 +1496,6 @@
     "regions": ["cn", "ee"],
     "importance": 3,
     "desc": "ロシアがアムール川以北を得た",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1622,7 +1507,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "アロー戦争の講和条約（1860年に批准）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1636,7 +1520,6 @@
     "regions": ["sa"],
     "importance": 3,
     "desc": "イギリスがインドを直接統治することにした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1647,7 +1530,6 @@
     "title": "日米修好通商条約",
     "regions": ["jp"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -1661,7 +1543,6 @@
     "regions": ["sea", "we"],
     "importance": 2,
     "desc": "フランス・スペインがダナンを攻撃した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1674,7 +1555,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "サルデーニャ王国がフランスと結んでオーストリアと戦い、ロンバルディアを得た",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1689,7 +1569,6 @@
     "tags": ["文化"],
     "importance": 3,
     "desc": "生物の進化論を唱えた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:種の起源",
@@ -1705,7 +1584,6 @@
     "regions": ["we"],
     "tags": ["文化"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:自由論",
@@ -1720,7 +1598,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "天津の開港、九竜半島南部の割譲などを定めた。ロシアは沿海州を得た",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1734,7 +1611,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "占領地をサルデーニャ王に献上した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1746,7 +1622,6 @@
     "keywords": ["ヴィットーリオ=エマヌエーレ2世"],
     "regions": ["ce"],
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -1759,7 +1634,6 @@
     "keywords": ["アレクサンドル2世"],
     "regions": ["ee"],
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -1773,7 +1647,6 @@
     "keywords": ["リンカン"],
     "regions": ["am"],
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -1787,7 +1660,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "清が初めて設けた外交の官庁",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1800,7 +1672,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "西洋の技術を取り入れた近代化（中体西用）",
-    "verified": false,
     "uncertain": true,
     "memo": "1860年代〜90年代の運動",
     "descVerified": false
@@ -1814,7 +1685,6 @@
     "regions": ["am", "we"],
     "importance": 2,
     "desc": "ナポレオン3世がメキシコに干渉したが失敗した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1827,7 +1697,6 @@
     "regions": ["ce"],
     "importance": 3,
     "desc": "プロイセン首相となったビスマルクが軍備拡張を進めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1840,7 +1709,6 @@
     "regions": ["sea"],
     "importance": 2,
     "desc": "フランスがコーチシナ東部を得た",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1854,7 +1722,6 @@
     "regions": ["cn"],
     "importance": 1,
     "desc": "李鴻章が組織した義勇軍",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1868,7 +1735,6 @@
     "regions": ["we"],
     "tags": ["文化"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:レ・ミゼラブル",
@@ -1883,7 +1749,6 @@
     "keywords": ["リンカン"],
     "regions": ["am"],
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -1897,7 +1762,6 @@
     "regions": ["am"],
     "importance": 1,
     "desc": "リンカンの演説",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1909,7 +1773,6 @@
     "keywords": ["フランス+カンボジア"],
     "regions": ["sea"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -1921,7 +1784,6 @@
     "title": "ポーランドの一月蜂起",
     "regions": ["ee"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -1936,7 +1798,6 @@
     "regions": ["kr"],
     "importance": 2,
     "desc": "高宗の父が実権をにぎり、鎖国・攘夷を進めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1950,7 +1811,6 @@
     "regions": ["we", "ce"],
     "importance": 2,
     "desc": "ロンドンで結成された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1962,7 +1822,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "プロイセン・オーストリアがシュレスヴィヒ・ホルシュタインをめぐってデンマークと戦った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1975,7 +1834,6 @@
     "keywords": ["デュナン"],
     "regions": ["we"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -1991,7 +1849,6 @@
     "regions": ["ia", "cn"],
     "importance": 1,
     "desc": "新疆のムスリムが清に反乱した",
-    "verified": false,
     "uncertain": true,
     "memo": "反乱の始まりを1862年・1864年とする資料がある",
     "descVerified": false
@@ -2006,7 +1863,6 @@
     "tags": ["文化"],
     "importance": 1,
     "acceptYears": [1866],
-    "verified": false,
     "uncertain": true,
     "memo": "発表は1865年、論文の刊行は1866年",
     "image": "ja:グレゴール・ヨハン・メンデル",
@@ -2021,7 +1877,6 @@
     "answers": ["普墺戦争"],
     "regions": ["ce"],
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2036,7 +1891,6 @@
     "regions": ["ee"],
     "tags": ["文化"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:罪と罰",
@@ -2054,7 +1908,6 @@
     "tags": ["文化"],
     "importance": 1,
     "acceptYears": [1867],
-    "verified": false,
     "uncertain": true,
     "memo": "発明は1866年、特許は1867年",
     "image": "ja:ダイナマイト",
@@ -2070,7 +1923,6 @@
     "regions": ["ce"],
     "importance": 3,
     "desc": "ハンガリーとの妥協（アウスグライヒ）で成立した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2082,7 +1934,6 @@
     "answers": ["北ドイツ連邦"],
     "regions": ["ce"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2095,7 +1946,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "都市労働者に選挙権が広がった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2108,7 +1958,6 @@
     "regions": ["am"],
     "importance": 2,
     "desc": "イギリスの最初の自治領",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2121,7 +1970,6 @@
     "regions": ["am", "ee"],
     "importance": 2,
     "desc": "アメリカがロシアから買った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2135,7 +1983,6 @@
     "tags": ["文化"],
     "importance": 3,
     "desc": "第1巻が刊行された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:資本論",
@@ -2148,7 +1995,6 @@
     "title": "明治維新",
     "regions": ["jp"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2162,7 +2008,6 @@
     "keywords": ["ロシア+ブハラ"],
     "regions": ["ia", "ee"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2177,7 +2022,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "フランス人レセップスが建設した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2189,7 +2033,6 @@
     "answers": ["大陸横断鉄道"],
     "regions": ["am"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2205,7 +2048,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "ナポレオンのロシア遠征を背景にした小説",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:戦争と平和",
@@ -2221,7 +2063,6 @@
     "regions": ["ce", "we"],
     "importance": 3,
     "desc": "ナポレオン3世が捕虜となり、第二帝政が倒れた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2234,7 +2075,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "ローマを首都とした（1871年遷都）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2247,7 +2087,6 @@
     "regions": ["ce"],
     "importance": 3,
     "desc": "ヴェルサイユ宮殿で皇帝の即位式が行われた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2259,7 +2098,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "労働者などによる自治政府。政府軍に鎮圧された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2273,7 +2111,6 @@
     "regions": ["ia", "cn", "ee"],
     "importance": 2,
     "desc": "ロシアが新疆のイリ地方を占領した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2286,7 +2123,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "ビスマルクがカトリック勢力（中央党）をおさえようとした",
-    "verified": false,
     "uncertain": true,
     "memo": "1871〜80年ごろ",
     "descVerified": false
@@ -2298,7 +2134,6 @@
     "regions": ["ce", "ee"],
     "importance": 2,
     "desc": "ドイツ・オーストリア・ロシアの皇帝の同盟",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2311,7 +2146,6 @@
     "keywords": ["ロシア+ヒヴァ"],
     "regions": ["ia", "ee"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2326,7 +2160,6 @@
     "regions": ["we"],
     "tags": ["文化"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:印象・日の出",
@@ -2341,7 +2174,6 @@
     "answers": ["台湾出兵"],
     "regions": ["cn", "jp"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2356,7 +2188,6 @@
     "regions": ["ee"],
     "importance": 2,
     "desc": "「人民の中へ」をかかげた知識人が農村に入った",
-    "verified": false,
     "uncertain": true,
     "memo": "運動は1870年代。最も盛んだったのが1874年",
     "descVerified": false
@@ -2370,7 +2201,6 @@
     "regions": ["wa", "we"],
     "importance": 3,
     "desc": "イギリスがエジプトから買い取った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2381,7 +2211,6 @@
     "title": "樺太・千島交換条約",
     "regions": ["ee", "jp"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2393,7 +2222,6 @@
     "title": "江華島事件",
     "regions": ["kr", "jp"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2406,7 +2234,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "フランスの共和政が確立した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2420,7 +2247,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "アジアで最初の憲法",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2434,7 +2260,6 @@
     "regions": ["am"],
     "tags": ["文化"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:アレクサンダー・グラハム・ベル",
@@ -2450,7 +2275,6 @@
     "regions": ["kr", "jp"],
     "importance": 2,
     "desc": "朝鮮を開国させた不平等条約",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2463,7 +2287,6 @@
     "keywords": ["ロシア+コーカンド"],
     "regions": ["ia", "ee"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2478,7 +2301,6 @@
     "regions": ["sa"],
     "importance": 3,
     "desc": "ヴィクトリア女王がインド皇帝を兼ねた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2491,7 +2313,6 @@
     "answers": ["露土戦争"],
     "regions": ["ee", "wa"],
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2505,7 +2326,6 @@
     "regions": ["ee", "wa"],
     "importance": 3,
     "desc": "ロシアの勢力が大きくなる内容だった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2519,7 +2339,6 @@
     "regions": ["ce", "ee", "wa"],
     "importance": 3,
     "desc": "ルーマニア・セルビア・モンテネグロの独立、ブルガリアの自治などを決めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2533,7 +2352,6 @@
     "regions": ["wa"],
     "importance": 2,
     "desc": "ロシア=トルコ戦争を理由に憲法を停止した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2545,7 +2363,6 @@
     "keywords": ["ビスマルク"],
     "regions": ["ce"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2557,7 +2374,6 @@
     "title": "独墺同盟",
     "regions": ["ce"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2572,7 +2388,6 @@
     "regions": ["am"],
     "tags": ["文化"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:白熱電球",
@@ -2589,7 +2404,6 @@
     "regions": ["cn", "jp"],
     "importance": 1,
     "desc": "日本が琉球を沖縄県とした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2604,7 +2418,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "女性の自立を描いた戯曲",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:人形の家",
@@ -2618,7 +2431,6 @@
     "keywords": ["ナロードニキ"],
     "regions": ["ee"],
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2632,7 +2444,6 @@
     "regions": ["wa"],
     "importance": 2,
     "desc": "「エジプト人のためのエジプト」をかかげた",
-    "verified": false,
     "uncertain": true,
     "memo": "1881〜82年",
     "descVerified": false
@@ -2644,7 +2455,6 @@
     "regions": ["ia", "cn", "ee"],
     "importance": 2,
     "desc": "イリ地方の大部分が清に返された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2656,7 +2466,6 @@
     "answers": ["チュニジア保護国化"],
     "regions": ["wa", "we"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2672,7 +2481,6 @@
     "regions": ["wa", "af"],
     "importance": 2,
     "desc": "スーダンでイギリス・エジプトに抵抗した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2684,7 +2492,6 @@
     "keywords": ["ドイツ+オーストリア+イタリア"],
     "regions": ["ce"],
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2697,7 +2504,6 @@
     "regions": ["wa", "we"],
     "importance": 2,
     "desc": "ウラービー運動を鎮圧して占領した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2711,7 +2517,6 @@
     "regions": ["ce"],
     "tags": ["文化"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:結核菌",
@@ -2726,7 +2531,6 @@
     "answers": ["壬午事変"],
     "regions": ["kr"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2741,7 +2545,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "疾病保険法を制定した（災害保険・養老保険が続いた）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2755,7 +2558,6 @@
     "importance": 2,
     "desc": "ベトナムがフランスの保護国となった",
     "acceptYears": [1884],
-    "verified": false,
     "uncertain": true,
     "memo": "1883年と1884年の2つの条約。1884年を挙げる資料もある",
     "descVerified": false
@@ -2768,7 +2570,6 @@
     "keywords": ["金玉均"],
     "regions": ["kr"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2781,7 +2582,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "農業労働者・鉱山労働者に選挙権が広がった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2793,7 +2593,6 @@
     "title": "清仏戦争",
     "regions": ["cn", "sea", "we"],
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2809,7 +2608,6 @@
     "regions": ["af", "ce"],
     "importance": 3,
     "desc": "アフリカ分割の原則を定めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2822,7 +2620,6 @@
     "regions": ["ia", "cn"],
     "importance": 2,
     "desc": "イリ条約ののち、新疆を省とした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2836,7 +2633,6 @@
     "regions": ["af"],
     "importance": 2,
     "desc": "ベルギー国王の私有地とされた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2849,7 +2645,6 @@
     "regions": ["cn", "sea", "we"],
     "importance": 2,
     "desc": "清がベトナムの宗主権を放棄した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2861,7 +2656,6 @@
     "answers": ["インド国民会議"],
     "regions": ["sa"],
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2876,7 +2670,6 @@
     "regions": ["ce"],
     "tags": ["文化"],
     "importance": 1,
-    "verified": false,
     "uncertain": true,
     "memo": "1885〜86年",
     "image": "ja:ベンツ・パテント・モトールヴァーゲン",
@@ -2893,7 +2686,6 @@
     "regions": ["we"],
     "tags": ["文化"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:ルイ・パスツール",
@@ -2910,7 +2702,6 @@
     "regions": ["sea"],
     "importance": 2,
     "desc": "第3次ビルマ戦争（1885年）の結果",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2922,7 +2713,6 @@
     "keywords": ["トランスヴァール+金"],
     "regions": ["af"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2935,7 +2725,6 @@
     "answers": ["フランス領インドシナ連邦", "仏領インドシナ"],
     "regions": ["sea"],
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2948,7 +2737,6 @@
     "regions": ["ce", "ee"],
     "importance": 2,
     "desc": "ドイツとロシアの秘密条約",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2962,7 +2750,6 @@
     "regions": ["we"],
     "importance": 1,
     "desc": "元陸相を中心にクーデタの動きが起きた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2973,7 +2760,6 @@
     "title": "ブラジルの奴隷制廃止",
     "regions": ["am"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -2986,7 +2772,6 @@
     "regions": ["we", "ce"],
     "importance": 2,
     "desc": "パリで結成された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2997,7 +2782,6 @@
     "title": "大日本帝国憲法",
     "regions": ["jp"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -3011,7 +2795,6 @@
     "regions": ["am"],
     "importance": 2,
     "desc": "帝政が倒れた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3025,7 +2808,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "皇帝ヴィルヘルム2世の「世界政策」が始まった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3037,7 +2819,6 @@
     "answers": ["フロンティア消滅"],
     "regions": ["am"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -3052,7 +2833,6 @@
     "regions": ["af"],
     "importance": 2,
     "desc": "鉱山業で富を得たローズが、帝国主義政策を進めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3064,7 +2844,6 @@
     "answers": ["シベリア鉄道"],
     "regions": ["ee", "cn"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -3077,7 +2856,6 @@
     "regions": ["ee", "we"],
     "importance": 2,
     "acceptYears": [1894],
-    "verified": false,
     "uncertain": true,
     "memo": "1891年に政治協定、1894年に軍事同盟が完成",
     "descVerified": false,
@@ -3091,7 +2869,6 @@
     "regions": ["wa"],
     "importance": 2,
     "desc": "イギリス人へのタバコの利権に反対した",
-    "verified": false,
     "uncertain": true,
     "memo": "1891〜92年",
     "descVerified": false
@@ -3104,7 +2881,6 @@
     "regions": ["sea"],
     "importance": 2,
     "desc": "ラオスがフランス領インドシナ連邦に加わった（1899年）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3116,7 +2892,6 @@
     "regions": ["sea"],
     "importance": 1,
     "desc": "国政の選挙で、世界で初めて女性参政権が認められた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3129,7 +2904,6 @@
     "keywords": ["東学"],
     "regions": ["kr"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -3142,7 +2916,6 @@
     "title": "日清戦争",
     "regions": ["cn", "jp", "kr"],
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -3155,7 +2928,6 @@
     "keywords": ["ゾラ"],
     "regions": ["we"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -3168,7 +2940,6 @@
     "regions": ["cn", "jp"],
     "importance": 3,
     "desc": "清が朝鮮の独立を認め、遼東半島・台湾などを日本に割譲した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3180,7 +2951,6 @@
     "regions": ["cn", "jp", "ee", "ce", "we"],
     "importance": 3,
     "desc": "ロシア・ドイツ・フランスが遼東半島の返還を求めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3194,7 +2964,6 @@
     "regions": ["ce"],
     "tags": ["文化"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:ヴィルヘルム・レントゲン",
@@ -3210,7 +2979,6 @@
     "keywords": ["閔妃"],
     "regions": ["kr", "jp"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -3224,7 +2992,6 @@
     "importance": 1,
     "desc": "イギリスがマレー半島の4州を組織した",
     "acceptYears": [1896],
-    "verified": false,
     "uncertain": true,
     "memo": "1895年に協定、1896年に発足",
     "descVerified": false
@@ -3239,7 +3006,6 @@
     "tags": ["文化"],
     "importance": 1,
     "acceptYears": [1896],
-    "verified": false,
     "uncertain": true,
     "memo": "実験の成功は1895年、特許は1896年",
     "image": "ja:グリエルモ・マルコーニ",
@@ -3255,7 +3021,6 @@
     "regions": ["af"],
     "importance": 2,
     "desc": "エチオピアがイタリア軍を破った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3270,7 +3035,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "アテネで開かれた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:アテネオリンピック (1896年)",
@@ -3285,7 +3049,6 @@
     "regions": ["sea"],
     "importance": 2,
     "desc": "スペインからの独立運動",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3297,7 +3060,6 @@
     "answers": ["大韓帝国"],
     "regions": ["kr"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -3312,7 +3074,6 @@
     "regions": ["wa"],
     "importance": 1,
     "desc": "パレスチナにユダヤ人国家をつくる運動が組織された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3326,7 +3087,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "立憲君主制をめざしたが、西太后らの政変で失敗した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3340,7 +3100,6 @@
     "regions": ["cn", "ce", "ee", "we"],
     "importance": 3,
     "desc": "ドイツが膠州湾、ロシアが旅順・大連、イギリスが威海衛・九竜半島を租借した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3353,7 +3112,6 @@
     "regions": ["am", "sea"],
     "importance": 3,
     "desc": "アメリカがフィリピン・グアム・プエルトリコを得て、キューバを保護国とした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3364,7 +3122,6 @@
     "title": "ハワイ併合",
     "regions": ["am"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -3377,7 +3134,6 @@
     "regions": ["af", "we"],
     "importance": 3,
     "desc": "アフリカ縦断政策のイギリスと横断政策のフランスが衝突した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -3391,7 +3147,6 @@
     "regions": ["we"],
     "tags": ["文化"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:マリ・キュリー",
@@ -3409,7 +3164,6 @@
     "importance": 3,
     "desc": "中国の門戸開放・機会均等を唱えた",
     "acceptYears": [1900],
-    "verified": false,
     "uncertain": true,
     "memo": "1899年に門戸開放・機会均等、1900年に領土保全を提唱",
     "descVerified": false
@@ -3422,7 +3176,6 @@
     "answers": ["ブール戦争", "南ア戦争"],
     "regions": ["af", "we"],
     "importance": 3,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -3436,10 +3189,34 @@
     "keywords": ["アギナルド"],
     "regions": ["sea", "am"],
     "importance": 2,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
     "desc": "独立をめざすフィリピンの人々とアメリカの戦争。アメリカが鎮圧して植民地とした。"
+  },
+  {
+    "id": "e1823b",
+    "year": 1823,
+    "title": "中央アメリカ連邦の成立",
+    "answers": ["中米連邦"],
+    "regions": ["am"],
+    "importance": 1,
+    "desc": "メキシコから離れたグアテマラ・ホンジュラス・エルサルバドル・ニカラグア・コスタリカが連邦を作った。1838〜41年に解体した。",
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "e1830i",
+    "year": 1830,
+    "title": "大コロンビアの解体",
+    "keywords": ["ベネズエラ+エクアドル"],
+    "regions": ["am"],
+    "importance": 1,
+    "desc": "ボリバルの死の前後に、ベネズエラとエクアドルが分離し、残った地域はヌエバ=グラナダ共和国（のちのコロンビア）となった。",
+    "acceptYears": [1831],
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
   }
 ]

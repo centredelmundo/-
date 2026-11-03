@@ -1,10 +1,16 @@
 {
   "title": "ヨコ串世界史",
-  "range": [500, 2000],
+  "range": [-800, 2000],
   "defaultYear": 1648,
-  "windows": [3, 5, 10, 25, 50],
+  "windows": [3, 5, 10, 25, 50, 100],
   "defaultWindow": 5,
   "anchors": [
+    [-753, "ローマ建国", 1],
+    [-500, "ペルシア戦争"],
+    [-334, "アレクサンドロスの東方遠征"],
+    [-221, "秦の統一"],
+    [-27, "ローマ帝政"],
+    [375, "ゲルマン人の大移動"],
     [622, "ヒジュラ"],
     [800, "カールの戴冠"],
     [1096, "十字軍"],
@@ -31,6 +37,12 @@
     {
       "label": "中国",
       "polities": [
+        ["zhou", -800, -256],
+        ["qin", -256, -206],
+        "han-dyn",
+        "xin",
+        "wei-3k",
+        ["jin-dyn", 265, 386],
         "northern-wei",
         "sui",
         "tang",
@@ -43,20 +55,67 @@
         "prc"
       ]
     },
-    { "label": "日本（参考）", "polities": ["yamato", "asuka", "nara", "heian", "kamakura", "kenmu", "muromachi", "azuchi-momoyama", "edo", "imperial-japan", "postwar-japan"] },
+    { "label": "日本（参考）", "polities": ["wa", "yamato", "asuka", "nara", "heian", "kamakura", "kenmu", "muromachi", "azuchi-momoyama", "edo", "imperial-japan", "postwar-japan"] },
     {
       "label": "朝鮮",
       "polities": [
+        "wiman",
         "goguryeo",
         ["silla", 668, 935],
         "goryeo",
         "korea"
       ]
     },
+    { "label": "ローマ", "polities": ["rome"] },
+    {
+      "label": "ギリシア",
+      "polities": [
+        ["athens", -800, -338],
+        ["macedonia-k", -338, -168]
+      ]
+    },
     { "label": "ビザンツ", "polities": ["byzantine"] },
     { "label": "スペイン", "polities": ["visigoth", "cordoba", "castile", "spain"] },
-    { "label": "南アジア", "polities": ["gupta", "vardhana", "pratihara", "slave-dyn", "khalji", "tughlaq", "sayyid", "lodi", "mughal", "sur", "british-raj", "india"] },
-    { "label": "イラン", "polities": ["sasanian", "rashidun", "umayyad", "abbasid", "ilkhanate", "timurid", "safavid", "afsharid", "qajar", "pahlavi", "iran-ir"] },
+    {
+      "label": "南アジア",
+      "polities": [
+        "magadha",
+        "maurya",
+        ["kushan", 30, 320],
+        "gupta",
+        "vardhana",
+        "pratihara",
+        "slave-dyn",
+        "khalji",
+        "tughlaq",
+        "sayyid",
+        "lodi",
+        "mughal",
+        "sur",
+        "british-raj",
+        "india"
+      ]
+    },
+    {
+      "label": "イラン",
+      "polities": [
+        "media",
+        "achaemenid",
+        ["seleucid", -312, -247],
+        "parthia",
+        "sasanian",
+        "rashidun",
+        "umayyad",
+        "abbasid",
+        "ilkhanate",
+        "timurid",
+        "safavid",
+        "afsharid",
+        "qajar",
+        "pahlavi",
+        "iran-ir"
+      ]
+    },
     { "label": "オスマン・トルコ", "polities": ["ottoman", "turkey"] },
     { "label": "ロシア", "polities": ["kievan-rus", "rurik", "time-of-troubles", "romanov", "ussr", "russia-fed"] },
     { "label": "ドイツ", "polities": ["franks", "east-francia", "hre", "rhine-confed", "german-confed", "germany", "frg"] },

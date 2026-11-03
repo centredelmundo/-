@@ -1,7 +1,8 @@
 // クイズの画面
 // 解答中の状態はブラウザに保存するので、別の画面に移ったりアプリを閉じたりしても続きから再開できる。
-import { $, $$, esc, fmtYear, fmtSpan, yearText, hasYear, hideYear, hideAnswers, shuffle, toast } from '../core/util.js';
-import { MODES, CULTURE_MODES, build, makeSession, eventPool, quizGroups } from '../core/quizgen.js';
+import { $, $$, esc, fmtYear, fmtSpan, yearText, hasYear, hideYear, hideAnswers, shuffle, toast, centuryOf, centuryText } from '../core/util.js';
+import { MODES, CULTURE_MODES, build, makeSession, eventPool, quizGroups, ichimonPool } from '../core/quizgen.js';
+import { parts as ichParts, gradeBlank, NUM, clock } from '../core/ichimon.js';
 import { gradeCross, gradeRuler, gradeTerm, gradeYear, CLS_TEXT } from '../core/grade.js';
 import { recordWithUndo, changeJudgement, star, isStarred, addCandidate, getUndo, setUndo } from '../core/progress.js';
 import { load, save, remove } from '../core/store.js';
@@ -14,7 +15,8 @@ const MODE_HELP = {
   year: '出来事は何年？（数字で答える）',
   term: '年と説明から出来事の名前を答える',
   order: '地域のちがう4つの出来事を古い順に',
-  choice: '同じころの出来事・人物を4択で'
+  choice: '同じころの出来事・人物を4択で',
+  ichimon: '読み込んだ一問一答の【　】を答える'
 };
 const SKEY = 'quizSession'; // 解答中のクイズ
 
@@ -82,13 +84,20 @@ function setup() {
   for (let c = Math.floor(a / 100) * 100; c < b; c += 100) cents.push([Math.max(a, c), Math.min(b, c + 99)]);
   const groups = db.groups.length ? db.groups : [];
   const chosen = new Set(q.groups || []);
+  const ich = db.ichimon, ichCh = new Set((q.ichChapters || []).map(Number));
   el.innerHTML = `
   <div class="page narrow quiz-setup">
     <h1 class="page-title">クイズ <small>データから自動で出題</small></h1>
     <div class="panel stack">
       <div class="field"><span class="label">形式</span>
-        <div class="mode-grid">${Object.entries(MODES).map(([k, n]) => `<label><input type="checkbox" name="mode" value="${k}" ${q.modes.includes(k) ? 'checked' : ''}><span>${n}<small>${MODE_HELP[k]}</small></span></label>`).join('')}</div>
+        <div class="mode-grid">${Object.entries(MODES).map(([k, n]) => {
+          const off = k === 'ichimon' && !ich;
+          return `<label${off ? ' class="off"' : ''}><input type="checkbox" name="mode" value="${k}" ${q.modes.includes(k) && !off ? 'checked' : ''}${off ? ' disabled' : ''}><span>${n}<small>${off ? 'データを読み込むと使えます（設定画面）' : MODE_HELP[k]}</small></span></label>`;
+        }).join('')}</div>
       </div>
+      ${ich ? `<div class="field" id="qzIchBox"><span class="label">一問一答の章（選ばなければすべて）</span>
+        <div class="chips" id="qzIch">${ich.chapters.map(c => `<button type="button" class="chip${ichCh.has(c.n) ? ' on' : ''}" data-ch="${c.n}" title="${esc(c.title)}">第${c.n}章</button>`).join('')}</div>
+        <p class="small muted">一問一答は「年代の範囲」と、地域をえらんだときは地域でもしぼります（全範囲なら、範囲より前の古代オリエントなども出ます）。</p></div>` : ''}
       <div class="field"><span class="label">年代の範囲</span>
         <div class="chips" id="qzCents"><button type="button" class="chip" data-from="${a}" data-to="${b}">全範囲</button>${cents.map(([x, y]) => `<button type="button" class="chip" data-from="${x}" data-to="${y}">${Math.floor((x + 1) / 100) + 1}世紀</button>`).join('')}</div>
         <div class="row"><input type="number" id="qzFrom" min="${a}" max="${b}" value="${q.from ?? a}" style="width:7em" aria-label="開始年"> 〜 <input type="number" id="qzTo" min="${a}" max="${b}" value="${q.to ?? b}" style="width:7em" aria-label="終了年"> 年</div>
@@ -102,7 +111,6 @@ function setup() {
       </div>
       <label class="check"><input type="checkbox" id="qzCulture" ${app.settings.culture ? 'checked' : ''}>文化史（著作・発明・美術など）も出す</label>
       <label class="check"><input type="checkbox" id="qzCultureOnly" ${q.cultureOnly ? 'checked' : ''}>文化史だけで出題する（作品・建築の写真つき。形式は年代当て・出来事当て・並べ替え・同時代えらび）</label>
-      <label class="check"><input type="checkbox" id="qzVerified" ${q.verifiedOnly ? 'checked' : ''}>用語集で確認済みのデータだけ出す</label>
       <p class="small muted" id="qzPool"></p>
       <div class="q-actions"><button class="btn primary" type="button" id="qzStart">はじめる</button></div>
     </div>
@@ -115,36 +123,40 @@ function setup() {
       groups: $$('#qzGroups .chip.on', el).map(x => x.dataset.g),
       minImportance: Number($('#qzImp .on', el)?.dataset.v || 1),
       count: Number($('#qzCount .on', el)?.dataset.v || 10),
+      ichChapters: $$('#qzIch .chip.on', el).map(x => Number(x.dataset.ch)),
       culture: cultureOnly || $('#qzCulture', el).checked,
-      cultureOnly,
-      verifiedOnly: $('#qzVerified', el).checked
+      cultureOnly
     };
   };
   const refresh = () => {
     const o = read();
     const n = eventPool(db, o).length;
     const usable = o.cultureOnly ? (o.modes.filter(m => CULTURE_MODES.includes(m)).length ? o.modes.filter(m => CULTURE_MODES.includes(m)) : CULTURE_MODES) : o.modes;
-    $('#qzPool', el).textContent = `出題の元になる出来事：${n}件${o.cultureOnly ? `（文化史・形式：${usable.map(m => MODES[m]).join('・')}）` : ''}${o.verifiedOnly && !n ? '（確認済みのデータがまだありません。データ確認の画面で「確認した」を付けると出題されます）' : ''}`;
-    $('#qzStart', el).disabled = !n || !o.modes.length;
+    const useIch = !o.cultureOnly && o.modes.includes('ichimon') && !!db.ichimon;
+    const ni = useIch ? ichimonPool(db, o).length : 0;
+    const box = $('#qzIchBox', el); if (box) box.hidden = !useIch;
+    const others = usable.filter(m => m !== 'ichimon');
+    $('#qzPool', el).textContent = `${others.length || !useIch ? `出題の元になる出来事：${n}件` : ''}${useIch ? `${others.length ? '・' : ''}一問一答：${ni}問` : ''}${o.cultureOnly ? `（文化史・形式：${usable.map(m => MODES[m]).join('・')}）` : ''}`;
+    $('#qzStart', el).disabled = !o.modes.length || (!(others.length && n) && !(useIch && ni));
   };
   const root = el.firstElementChild;
   root.addEventListener('change', refresh);
   root.addEventListener('click', e => {
     const c = e.target.closest('#qzCents .chip');
     if (c) { $('#qzFrom', el).value = c.dataset.from; $('#qzTo', el).value = c.dataset.to; refresh(); }
-    const g = e.target.closest('#qzGroups .chip');
+    const g = e.target.closest('#qzGroups .chip, #qzIch .chip');
     if (g) { g.classList.toggle('on'); refresh(); }
     const sg = e.target.closest('#qzImp button, #qzCount button');
     if (sg) { $$('button', sg.parentElement).forEach(x => x.classList.toggle('on', x === sg)); refresh(); }
   });
   $('#qzStart', el).addEventListener('click', () => {
     const o = read();
-    app.settings.quiz = { ...app.settings.quiz, ...o, culture: undefined };
+    app.settings.quiz = { ...app.settings.quiz, ...o, culture: undefined, verifiedOnly: undefined };
     if (!o.cultureOnly) app.settings.culture = o.culture;
     app.saveSettings();
     const qs = makeSession(db, { ...o, window: 5 });
     if (!qs.length) { $('#qzPool', el).textContent = '条件に合う問題を作れませんでした。範囲や地域を広げてください。'; return; }
-    begin(qs, { title: o.cultureOnly ? '文化史クイズ' : 'クイズ', again: o });
+    begin(qs, { title: o.cultureOnly ? '文化史クイズ' : o.modes.length === 1 && o.modes[0] === 'ichimon' ? '一問一答' : 'クイズ', again: o });
   });
   refresh();
 }
@@ -164,7 +176,7 @@ function show(restore = false) {
     <div class="row" style="justify-content:space-between"><span class="small muted">${esc(S.opts.title || 'クイズ')} ・ ${S.i + 1} / ${n}</span><button class="btn small ghost" type="button" id="qzQuit">やめる</button></div>
     <div class="progressbar"><i style="width:${S.i / n * 100}%"></i></div>
     <div class="q-card" id="qzCard">
-      <div class="q-meta"><span>${esc(q.title)}</span><span>${q.y != null ? `${Math.floor((q.y - 1) / 100) + 1}世紀` : ''}</span></div>
+      <div class="q-meta"><span>${esc(q.title)}</span><span>${q.mode === 'ichimon' ? `第${q.item.ch}章` : q.y != null ? centuryText(centuryOf(q.y)) : ''}</span></div>
       ${body(q)}
       <div class="q-actions" id="qzActs"><button class="btn primary" type="button" id="qzGrade">採点する</button><button class="btn" type="button" id="qzSkip">わからない</button></div>
       <div id="qzAfter"></div>
@@ -229,6 +241,12 @@ function body(q) {
     }
     case 'order':
       return `<p class="q-text">次の4つを<b>古い順</b>にタップしてください。</p><div class="order-list" id="qzOrder">${q.events.map((e, i) => `<button type="button" data-i="${i}"><span class="n"></span><span>${esc(e.title)}<br><span class="meta">${esc(e.regions.map(r => db.regionById(r)?.name || r).join('・'))}</span></span></button>`).join('')}</div><button class="btn small" type="button" id="qzOrderReset">やり直す</button><div class="res" id="qr0"></div>`;
+    case 'ichimon': {
+      const it = q.item;
+      const sentence = ichParts(it.text).map(p => (p.s != null ? esc(p.s) : `<span class="blank" data-b="${p.i}">（${NUM[p.i] || p.i + 1}）</span>`)).join('');
+      return `<p class="q-src">${esc(it.sec)}</p><p class="q-text ich-text">${sentence}</p>` +
+        it.answers.map((a, i) => `<div class="q-field"><label for="qa${i}">${NUM[i] || i + 1}</label><input type="text" id="qa${i}" autocomplete="off" enterkeyhint="${i + 1 < it.answers.length ? 'next' : 'done'}"><div class="res" id="qr${i}" aria-live="polite"></div></div>`).join('');
+    }
     case 'choice': {
       const a = q.anchor;
       const what = q.spec.kind === 'ruler' ? '君主（人物）' : a.culture && q.answer?.culture ? '文化' : '出来事';
@@ -321,6 +339,17 @@ function grade(skip = false, replay = false) {
     const right = q.events.map((e, i) => ({ e, i })).sort((a, b) => a.e.year - b.e.year || (a.e.month || 0) - (b.e.month || 0)).map(x => x.i);
     ok = !skip && S.order.length === 4 && S.order.every((v, k) => q.events[v].year === q.events[right[k]].year);
     setRes(0, ok ? 'ok' : 'ng', `<div><span class="v">${ok ? '○ 正解' : '×'}</span>古い順：</div>${right.map((i, k) => `<div>${k + 1}. <span class="yr">${fmtYear(q.events[i].year)}</span> ${tt(q.events[i])}</div>`).join('')}`);
+  } else if (q.mode === 'ichimon') {
+    const it = q.item;
+    const verdicts = it.answers.map((a, i) => {
+      const m = gradeBlank(val(i), a, strict);
+      const b = $(`.blank[data-b="${i}"]`, el);
+      if (b) { b.textContent = a; b.classList.add(m ? 'ok' : 'ng'); }
+      if (m) setRes(i, 'ok', `<div><span class="v">${m.how === 'fuzzy' ? '○ ほぼ正解' : '○ 正解'}</span>${esc(a)}${m.how === 'fuzzy' ? `<br>表記を確認：正しくは「${esc(a)}」` : ''}</div>`);
+      else setRes(i, 'ng', `<div><span class="v">${val(i).trim() ? '×' : '未回答'}</span>正解は「<b>${esc(a)}</b>」</div>`);
+      return !!m;
+    });
+    ok = verdicts.every(Boolean);
   } else if (q.mode === 'choice') {
     const ansIdx = q.options.indexOf(q.answer);
     ok = !skip && S.choice === ansIdx;
@@ -374,7 +403,12 @@ function after(q, ok) {
   $$('#qzChoices button', el).forEach((b, i) => { const o = q.options?.[i]; if (o?.key) { b.classList.add('tt'); b.dataset.term = o.key; } });
   $$('#qzOrder button', el).forEach((b, i) => { const e = q.events?.[i]; if (e?.key) { b.classList.add('tt'); b.dataset.term = e.key; } });
   fillImages(true);
-  $('#qzAfter', el).innerHTML = `<p class="tt-hint">点線の下線がある用語をタップすると、1〜2文の概要が見られます。</p>${yokoPanel(app, q.y, 5, q.regions || [])}`;
+  const [ra, rb] = app.db.range;
+  const inRange = q.y != null && q.y >= ra && q.y <= rb;
+  const src = q.mode === 'ichimon' ? `<p class="small muted">${esc(q.item.audio)}${q.item.audio ? ` ・ ${clock(q.item.t)}ごろ` : ''}${q.item.yq ? '' : ' ・ 年代は前後の問題からの推定'}</p>` : '';
+  $('#qzAfter', el).innerHTML = q.mode === 'ichimon'
+    ? `${src}${inRange ? yokoPanel(app, q.y, 5, q.regions || []) : ''}`
+    : `<p class="tt-hint">点線の下線がある用語をタップすると、1〜2文の概要が見られます。</p>${yokoPanel(app, q.y, 5, q.regions || [])}`;
   $('#qzNext', el).addEventListener('click', next);
   $('#qzFlip', el).addEventListener('click', () => flip(q));
   $('#qzStar', el).addEventListener('click', e => { star(q); e.currentTarget.lastChild.textContent = '苦手に登録済み'; });
@@ -431,6 +465,7 @@ function titleOf(q) {
     case 'term': return `${fmtYear(q.event.year)}年：${q.event.title}`;
     case 'order': return `並べ替え：${q.events.map(e => e.title).join('／')}`;
     case 'choice': return `${q.anchor.title}と同じころの${q.group.name}：${itemName(q.answer)}`;
+    case 'ichimon': return `一問一答：${q.item.answers.join('・')}`;
   }
   return q.key;
 }

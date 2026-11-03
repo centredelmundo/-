@@ -8,7 +8,6 @@
     "regions": ["we", "sa"],
     "importance": 3,
     "desc": "エリザベス1世が特許状を与え、アジア貿易の独占権を認めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -21,7 +20,6 @@
     "regions": ["jp"],
     "importance": 2,
     "desc": "徳川家康が石田三成らを破った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -37,7 +35,6 @@
     "importance": 2,
     "desc": "四大悲劇の一つ",
     "acceptYears": [1601],
-    "verified": false,
     "uncertain": true,
     "memo": "1600〜01年ごろの作",
     "image": "ja:ハムレット",
@@ -54,7 +51,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "イエズス会士が万暦帝に認められ、北京に住んで布教した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:マテオ・リッチ",
@@ -70,7 +66,6 @@
     "regions": ["we", "sea"],
     "importance": 3,
     "desc": "世界初の株式会社ともいわれる",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -85,7 +80,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "マテオ=リッチが作った漢文の世界地図",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:坤輿万国全図",
@@ -101,7 +95,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "スコットランド王ジェームズ6世がイングランド王を兼ねた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -115,7 +108,6 @@
     "regions": ["jp"],
     "importance": 2,
     "desc": "徳川家康が征夷大将軍となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -128,7 +120,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "アンリ4世のとき設立された",
-    "verified": false,
     "uncertain": true,
     "memo": "1664年にコルベールが再建。どちらを問われるか確認",
     "descVerified": false
@@ -143,7 +134,6 @@
     "tags": ["文化"],
     "importance": 3,
     "desc": "騎士道物語を風刺した小説（前編）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "en:Don Quixote",
@@ -158,7 +148,6 @@
     "regions": ["am"],
     "importance": 3,
     "desc": "イギリス最初の恒久的な植民地",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -173,7 +162,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "マテオ=リッチと徐光啓がエウクレイデスの幾何学を漢訳した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:幾何原本",
@@ -189,7 +177,6 @@
     "regions": ["am"],
     "importance": 2,
     "desc": "フランスのシャンプランがカナダに建設した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -203,7 +190,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "オランダが事実上の独立を達成した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -217,7 +203,6 @@
     "tags": ["文化"],
     "importance": 3,
     "desc": "惑星が楕円軌道を描くことなどを示した（第1・第2法則）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:ケプラーの法則",
@@ -235,7 +220,6 @@
     "importance": 2,
     "desc": "自作の望遠鏡で木星の衛星などを発見し、地動説を支持した",
     "acceptYears": [1610],
-    "verified": false,
     "uncertain": true,
     "memo": "観測は1609〜10年",
     "image": "en:Sidereus Nuncius",
@@ -251,7 +235,6 @@
     "regions": ["jp"],
     "importance": 1,
     "desc": "島津氏が琉球王国を支配下に置いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -265,7 +248,6 @@
     "regions": ["ee"],
     "importance": 3,
     "desc": "動乱時代を経て、全国会議でミハイル=ロマノフが選ばれた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -279,7 +261,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "ヌルハチが女真の諸部を統一して建てた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -294,7 +275,6 @@
     "regions": ["ce"],
     "importance": 3,
     "desc": "ベーメン（ボヘミア）の新教徒の反乱から始まり、ヨーロッパ各国が介入した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -307,7 +287,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "ブランデンブルク選帝侯がプロイセン公国を相続した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -320,7 +299,6 @@
     "regions": ["sea"],
     "importance": 3,
     "desc": "オランダ東インド会社がジャワ島に築いたアジア貿易の拠点",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -333,7 +311,6 @@
     "regions": ["cn"],
     "importance": 1,
     "desc": "後金が明の大軍を破った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -347,7 +324,6 @@
     "regions": ["am"],
     "importance": 1,
     "desc": "北アメリカで最初の植民地議会",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -361,7 +337,6 @@
     "regions": ["am"],
     "importance": 3,
     "desc": "メイフラワー号で渡った清教徒（ピルグリム=ファーザーズ）が建設した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -374,7 +349,6 @@
     "regions": ["ce"],
     "importance": 1,
     "desc": "ベーメンの新教徒が皇帝軍に敗れた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -389,7 +363,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "観察と実験による帰納法を説いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "en:Novum Organum",
@@ -404,7 +377,6 @@
     "regions": ["wa"],
     "importance": 2,
     "desc": "アッバース1世がイギリスの協力でポルトガルから奪った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -417,7 +389,6 @@
     "regions": ["sea"],
     "importance": 3,
     "desc": "オランダがモルッカ諸島でイギリス商館員らを殺害した。イギリスはインド経営に力を注ぐようになった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -431,7 +402,6 @@
     "regions": ["cn", "sea"],
     "importance": 2,
     "desc": "台湾南部にゼーランディア城を築いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -446,7 +416,6 @@
     "tags": ["文化"],
     "importance": 3,
     "desc": "国際法の基礎を築き、「国際法の父」と呼ばれる",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:フーゴー・グローティウス",
@@ -462,7 +431,6 @@
     "importance": 2,
     "desc": "オランダがマンハッタン島に建設した",
     "acceptYears": [1625],
-    "verified": false,
     "uncertain": true,
     "memo": "1625年とする資料もある",
     "descVerified": false
@@ -475,7 +443,6 @@
     "regions": ["kr"],
     "importance": 1,
     "desc": "後金が朝鮮に侵攻した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -487,7 +454,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "議会がチャールズ1世に提出し、議会の同意のない課税や不当な逮捕に反対した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -502,7 +468,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "血液が体内を循環することを示した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:ウィリアム・ハーヴェイ",
@@ -518,7 +483,6 @@
     "regions": ["ce", "ee"],
     "importance": 2,
     "desc": "グスタフ=アドルフが新教側で参戦した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -533,7 +497,6 @@
     "importance": 3,
     "desc": "陝西の飢饉を背景に起きた農民反乱",
     "acceptYears": [1630],
-    "verified": false,
     "uncertain": true,
     "memo": "開始年を1630年や1631年とする資料がある",
     "descVerified": false
@@ -547,7 +510,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "スウェーデン王グスタフ=アドルフが戦死した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -562,7 +524,6 @@
     "tags": ["文化"],
     "importance": 3,
     "desc": "シャー=ジャハーンが亡き妃のためにアグラに建てた廟",
-    "verified": false,
     "uncertain": true,
     "memo": "着工・完成の年は資料により差がある",
     "image": "ja:タージ・マハル",
@@ -579,7 +540,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "地動説の主張を撤回させられた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:ガリレオ裁判",
@@ -595,7 +555,6 @@
     "regions": ["ce", "we"],
     "importance": 2,
     "desc": "カトリック国ながら新教側で参戦した（宰相リシュリュー）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -610,7 +569,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "フランス語の統一と純化をめざした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:アカデミー・フランセーズ",
@@ -625,7 +583,6 @@
     "regions": ["ia"],
     "importance": 1,
     "desc": "ホンタイジが内モンゴルを支配下に置いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -639,7 +596,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "ホンタイジが国号を改め、皇帝を称した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -653,7 +609,6 @@
     "regions": ["kr"],
     "importance": 2,
     "desc": "清の侵攻を受け、朝鮮が清に服属した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -668,7 +623,6 @@
     "tags": ["文化"],
     "importance": 3,
     "desc": "「われ思う、ゆえにわれあり」。演繹法を説いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:方法序説",
@@ -685,7 +639,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "農業や手工業の技術を図入りで解説した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:天工開物",
@@ -701,7 +654,6 @@
     "regions": ["jp"],
     "importance": 1,
     "desc": "キリシタンを中心とする農民の反乱",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -714,7 +666,6 @@
     "regions": ["jp"],
     "importance": 2,
     "desc": "いわゆる「鎖国」体制が完成した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -727,7 +678,6 @@
     "regions": ["wa"],
     "importance": 1,
     "desc": "オスマン帝国とサファヴィー朝の国境を定めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -742,7 +692,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "農業の技術と政策を集大成した",
-    "verified": false,
     "uncertain": true,
     "memo": "徐光啓の死後に完成・刊行（1639年）",
     "image": "ja:農政全書",
@@ -758,7 +707,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "スペインとの同君連合を解消した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -770,7 +718,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "チャールズ1世が招集した議会が国王と激しく対立した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -783,7 +730,6 @@
     "regions": ["sea"],
     "importance": 2,
     "desc": "ポルトガルから奪った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -796,7 +742,6 @@
     "keywords": ["オランダ+出島"],
     "regions": ["jp"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -813,7 +758,6 @@
     "importance": 3,
     "desc": "王党派と議会派の内戦が始まった",
     "acceptYears": [1640],
-    "verified": false,
     "uncertain": true,
     "memo": "1640〜60年とする教科書もある（内戦の開始は1642年）",
     "descVerified": false
@@ -827,7 +771,6 @@
     "regions": ["we"],
     "importance": 1,
     "desc": "オランダの航海者がタスマニア島・ニュージーランドに到達した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -842,7 +785,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "アムステルダムの市民隊を描いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:夜警 (絵画)",
@@ -858,7 +800,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "李自成の軍が北京を占領し、崇禎帝が自殺した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -872,7 +813,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "呉三桂の先導で山海関を越え、中国支配を始めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -886,7 +826,6 @@
     "importance": 2,
     "desc": "漢人の男性に満洲人の髪形を強制した",
     "acceptYears": [1644],
-    "verified": false,
     "uncertain": true,
     "memo": "1644年に出して撤回し、1645年に再び発令",
     "descVerified": false
@@ -900,7 +839,6 @@
     "regions": ["wa"],
     "importance": 1,
     "desc": "オスマン帝国がヴェネツィアからクレタ島を奪った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -913,7 +851,6 @@
     "regions": ["ce", "we"],
     "importance": 3,
     "desc": "三十年戦争の講和。スイス・オランダの独立が承認され、神聖ローマ帝国の領邦がほぼ完全な主権を得た",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -927,7 +864,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "宰相マザランの政治に反発した貴族・高等法院の反乱",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -940,7 +876,6 @@
     "regions": ["ee"],
     "importance": 1,
     "desc": "ウクライナ=コサックがポーランドに対して蜂起した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -954,7 +889,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "イギリスが共和政に移った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -967,7 +901,6 @@
     "regions": ["ee"],
     "importance": 1,
     "desc": "ロシアで農民の移動を禁じ、農奴制を確立した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -980,7 +913,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "イギリスの港に入る船を制限し、オランダの中継貿易に打撃を与えた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -995,7 +927,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "自然状態を「万人の万人に対する闘争」とし、絶対王政を擁護した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:リヴァイアサン (ホッブズ)",
@@ -1011,7 +942,6 @@
     "regions": ["af"],
     "importance": 3,
     "desc": "オランダ東インド会社が補給基地として建設した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1025,7 +955,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "航海法をきっかけに始まった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1039,7 +968,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "議会を解散し、軍事独裁を始めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1052,7 +980,6 @@
     "regions": ["ee"],
     "importance": 1,
     "desc": "ウクライナ=コサックがロシアの保護下に入った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1067,7 +994,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "スペイン宮廷の王女と侍女たちを描いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:ラス・メニーナス",
@@ -1082,7 +1008,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "フランスとスペインの講和。フランスがルシヨンなどを得た",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1095,7 +1020,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "議会がチャールズ2世を迎え、王政が復活した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1110,7 +1034,6 @@
     "importance": 3,
     "desc": "反清活動の拠点とするため、オランダ勢力を台湾から追い出した",
     "acceptYears": [1662],
-    "verified": false,
     "uncertain": true,
     "memo": "1661年に上陸、1662年にオランダが降伏",
     "descVerified": false
@@ -1123,7 +1046,6 @@
     "regions": ["cn"],
     "importance": 1,
     "desc": "鄭氏の勢力を断つため、沿岸の住民を内陸へ移した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1137,7 +1059,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "宰相マザランの死後、自ら統治を始めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1151,7 +1072,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "気体の体積と圧力が反比例することを示した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:ロバート・ボイル",
@@ -1167,7 +1087,6 @@
     "regions": ["am"],
     "importance": 2,
     "desc": "イギリスがニューアムステルダムを奪った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1180,7 +1099,6 @@
     "regions": ["we"],
     "importance": 1,
     "desc": "財務総監コルベールが重商主義政策の一つとして再建した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1194,7 +1112,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "ルイ14世の侵略戦争の一つ",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1207,7 +1124,6 @@
     "regions": ["ee"],
     "importance": 1,
     "desc": "ロシアとポーランドがウクライナをドニエプル川で分けた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1222,7 +1138,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "旧約聖書に題材をとった叙事詩",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "en:Paradise Lost",
@@ -1239,7 +1154,6 @@
     "importance": 2,
     "desc": "ドン=コサックの指導者による農民反乱",
     "acceptYears": [1667],
-    "verified": false,
     "uncertain": true,
     "memo": "1667年から数える資料もある",
     "descVerified": false
@@ -1254,7 +1168,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "「人間は考える葦である」。死後に刊行された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:パンセ",
@@ -1271,7 +1184,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "ルイ14世がオランダに侵攻した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1285,7 +1197,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "雲南などの漢人藩王が起こした反乱。康熙帝が鎮圧した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1297,7 +1208,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "公職を国教徒に限った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1311,7 +1221,6 @@
     "regions": ["sa"],
     "importance": 2,
     "desc": "シヴァージーがデカン地方で即位した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1325,7 +1234,6 @@
     "regions": ["sa"],
     "importance": 3,
     "desc": "アウラングゼーブが非ムスリムへの人頭税を復活させた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1337,7 +1245,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "不当な逮捕・投獄を禁じた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1351,7 +1258,6 @@
     "regions": ["am"],
     "importance": 1,
     "desc": "クエーカー教徒のペンが建設した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1365,7 +1271,6 @@
     "regions": ["am"],
     "importance": 2,
     "desc": "ラ=サールがミシシッピ川流域をフランス領と宣言した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1380,7 +1285,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "バロック様式の壮大な宮殿",
-    "verified": false,
     "uncertain": true,
     "memo": "建設は1661年から。宮廷を移したのは1682年",
     "image": "ja:ヴェルサイユ宮殿",
@@ -1395,7 +1299,6 @@
     "regions": ["wa", "ce"],
     "importance": 3,
     "desc": "オスマン帝国軍がウィーンを包囲して失敗した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1409,7 +1312,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "鄭氏政権が降伏し、台湾が清の領土となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1423,7 +1325,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "ユグノーの多くが国外へ亡命し、産業が打撃を受けた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1438,7 +1339,6 @@
     "tags": ["文化"],
     "importance": 3,
     "desc": "万有引力の法則を示した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:自然哲学の数学的諸原理",
@@ -1454,7 +1354,6 @@
     "regions": ["sa"],
     "importance": 1,
     "desc": "ビジャープル王国（1686年）・ゴールコンダ王国を併合し、最大領土となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1467,7 +1366,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "ジェームズ2世が亡命し、ウィリアム3世とメアリ2世が即位した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1481,7 +1379,6 @@
     "regions": ["we", "ce"],
     "importance": 2,
     "desc": "ルイ14世の侵略戦争の一つ",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1494,7 +1391,6 @@
     "regions": ["cn", "ee"],
     "importance": 3,
     "desc": "清とロシアが国境（アルグン川・外興安嶺）を定めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1507,7 +1403,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "議会の権利を確認した法",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1520,7 +1415,6 @@
     "regions": ["sa"],
     "importance": 2,
     "desc": "イギリス東インド会社がベンガルに拠点を置いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1536,7 +1430,6 @@
     "importance": 3,
     "desc": "抵抗権（革命権）を説き、名誉革命を正当化した",
     "acceptYears": [1689],
-    "verified": false,
     "uncertain": true,
     "memo": "刊行は1689年末（表記は1690年）",
     "image": "ja:統治二論",
@@ -1551,7 +1444,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "国債を引き受け、財政革命を支えた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1565,7 +1457,6 @@
     "regions": ["ia", "cn"],
     "importance": 2,
     "desc": "康熙帝が親征してジュンガルのガルダンを破った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1579,7 +1470,6 @@
     "regions": ["ee"],
     "importance": 1,
     "desc": "皇帝自ら身分を隠して西ヨーロッパを視察した",
-    "verified": false,
     "uncertain": true,
     "memo": "1697〜98年",
     "descVerified": false
@@ -1591,7 +1481,6 @@
     "regions": ["we"],
     "importance": 1,
     "desc": "ファルツ継承戦争の講和",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1604,7 +1493,6 @@
     "regions": ["wa", "ce"],
     "importance": 3,
     "desc": "オスマン帝国がハンガリーなどをオーストリアに割譲した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false

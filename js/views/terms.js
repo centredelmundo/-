@@ -41,7 +41,7 @@ export function openTerm(app, key) {
     ${x.image ? '<figure class="qimg" data-fill-img></figure>' : ''}
     <p class="term-desc">${x.desc ? esc(x.desc) : '<span class="muted">（概要はまだありません）</span>'}</p>
     <dl class="kv small">
-      <dt>年号</dt><dd>${x.verified ? '✓ 用語集で確認済み' : '用語集では未確認'}${x.uncertain ? '・<span class="badge b-warn">要確認</span>' : ''}</dd>
+      ${x.uncertain ? '<dt>年号</dt><dd><span class="badge b-warn">要確認</span> 説が分かれる・数え方がちがう年があります（メモ参照）</dd>' : ''}
       <dt>概要</dt><dd>${x.descVerified ? '✓ 確認済み' : '未確認'}</dd>
       ${x.memo ? `<dt>メモ</dt><dd>${esc(x.memo)}</dd>` : ''}
     </dl>

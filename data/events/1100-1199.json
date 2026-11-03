@@ -9,7 +9,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "北宋の皇帝が描いた院体画の名品",
-    "verified": false,
     "uncertain": true,
     "memo": "1107年の作とされる",
     "image": "ja:桃鳩図",
@@ -26,9 +25,8 @@
     "tags": ["文化"],
     "importance": 3,
     "desc": "スールヤヴァルマン2世が造らせたヒンドゥー教の寺院（のちに仏教寺院）",
-    "verified": false,
     "uncertain": true,
-    "memo": "造営は1113年ごろから30年以上かけて行われた",
+    "memo": "造営は1113年ごろ（世界史の窓の年表では1125年ごろ）から30年以上かけて行われた",
     "image": "ja:アンコール・ワット",
     "imageVerified": false,
     "descVerified": false
@@ -41,7 +39,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "女真の完顔阿骨打が皇帝となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -54,7 +51,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "教皇と皇帝が妥協し、叙任権闘争が終わった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -67,7 +63,6 @@
     "regions": ["cn"],
     "importance": 2,
     "desc": "宋と結んだ金に滅ぼされた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -82,7 +77,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "金が都の開封を落とし、上皇の徽宗と皇帝の欽宗を連れ去った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -95,7 +89,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "高宗が江南で即位し、のちに臨安（杭州）を都とした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -108,7 +101,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "ノルマン人が南イタリアとシチリアに王国を建てた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -123,7 +115,6 @@
     "importance": 2,
     "desc": "遼の一族の耶律大石が中央アジアに国を建てた",
     "acceptYears": [1124],
-    "verified": false,
     "uncertain": true,
     "memo": "1124年・1132年など諸説ある",
     "descVerified": false
@@ -137,7 +128,6 @@
     "importance": 2,
     "desc": "南宋と金が和議を結び、淮河を境とした。南宋は金に臣下の礼をとった",
     "acceptYears": [1141],
-    "verified": false,
     "uncertain": true,
     "memo": "1141年とする資料もある",
     "descVerified": false
@@ -149,7 +139,6 @@
     "regions": ["we"],
     "importance": 1,
     "desc": "カスティリャ・レオンから独立した王国が認められた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -162,7 +151,6 @@
     "regions": ["wa", "we", "ce"],
     "importance": 2,
     "desc": "ダマスクス攻撃に失敗した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -176,7 +164,6 @@
     "regions": ["wa"],
     "importance": 2,
     "desc": "ムワッヒド朝がムラービト朝を滅ぼした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -190,7 +177,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "アンジュー伯がヘンリ2世として即位し、フランスの西半分も領有した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -205,7 +191,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "パリに建てられたゴシック様式の大聖堂",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:ノートルダム大聖堂 (パリ)",
@@ -221,7 +206,6 @@
     "importance": 3,
     "desc": "サラーフ=アッディーンがエジプトで実権をにぎり、1171年にファーティマ朝を廃した",
     "acceptYears": [1171],
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -235,7 +219,6 @@
     "regions": ["ce"],
     "importance": 1,
     "desc": "北イタリアの都市同盟が皇帝の軍を破った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -249,9 +232,8 @@
     "importance": 1,
     "desc": "源頼朝が武家政権を開いた",
     "acceptYears": [1192],
-    "verified": false,
     "uncertain": true,
-    "memo": "1192年とする説もある",
+    "memo": "1192年とする説、1180年とする説（世界史の窓の年表）もある",
     "descVerified": false
   },
   {
@@ -262,7 +244,6 @@
     "regions": ["ee"],
     "importance": 1,
     "desc": "ブルガリアがビザンツ帝国から独立を回復した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -276,7 +257,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "ヒッティーンの戦いで十字軍を破り、イェルサレムを奪回した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -290,7 +270,6 @@
     "regions": ["wa", "we", "ce"],
     "importance": 3,
     "desc": "イギリス・フランス・ドイツの君主が参加したが、イェルサレムは奪回できなかった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -305,7 +284,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "朱熹が宋学を大成し、四書を重んじた",
-    "verified": false,
     "uncertain": true,
     "memo": "刊行は1190年ごろ",
     "image": "ja:朱熹",
@@ -320,7 +298,6 @@
     "regions": ["sa"],
     "importance": 2,
     "desc": "ゴール朝のムハンマドがラージプートの諸侯を破り、北インドへの進出を決定づけた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -333,7 +310,6 @@
     "regions": ["wa"],
     "importance": 2,
     "desc": "ホラズム=シャー朝に滅ぼされた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -346,7 +322,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "教皇権の絶頂期を築いた教皇が即位した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -361,7 +336,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "デリーに建てられた石の塔。インド=イスラーム建築の代表",
-    "verified": false,
     "uncertain": true,
     "memo": "建設開始は1199年ごろ",
     "image": "ja:クトゥブ・ミナール",

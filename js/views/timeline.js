@@ -1,7 +1,7 @@
 // ヨコ年表：年を選ぶと、同じ年の各地域の王朝・出来事が並ぶ
 import { $, $$, esc, fmtYear, debounce, clamp } from '../core/util.js';
 import { base } from '../core/normalize.js';
-import { renderCards, densitySvg, ganttSvg, openEvent, openPolity, wireSheet, ICON } from './common.js';
+import { renderCards, densitySvg, ganttSvg, openEvent, openPolity, openIchimon, wireSheet, holdRepeat, ICON } from './common.js';
 import { ZoneMap } from './mapcore.js';
 
 let state = null;
@@ -67,12 +67,14 @@ export function render(app, el) {
   cards.addEventListener('click', e => {
     const fold = e.target.closest('[data-fold]');
     if (fold) { toggleFold(app, fold.dataset.fold, fold.closest('.rc')); return; }
+    const ich = e.target.closest('[data-ich]');
+    if (ich) { const it = db.ichimon?.byId.get(ich.dataset.ich); if (it) openIchimon(app, it); return; }
     const row = e.target.closest('[data-ev]');
     if (row) { const ev = db.events.find(x => x.id === row.dataset.ev); if (ev) openEvent(app, ev); return; }
     const dyn = e.target.closest('[data-polity]');
     if (dyn) { const p = db.polityById.get(dyn.dataset.polity); if (p) openPolity(app, p, app.year); }
   });
-  cards.addEventListener('keydown', e => { if (e.key === 'Enter') e.target.closest('[data-ev]')?.click(); });
+  cards.addEventListener('keydown', e => { if (e.key === 'Enter') e.target.closest('[data-ev], [data-ich]')?.click(); });
   $$('[data-fold-all]', el).forEach(btn => btn.addEventListener('click', () => {
     const ids = btn.dataset.foldAll === 'close' ? db.regions.map(r => r.id) : [];
     app.settings.collapsed = ids; app.saveSettings();
@@ -80,7 +82,8 @@ export function render(app, el) {
   }));
 
   // 年の操作
-  $$('[data-step]', el).forEach(btn => btn.addEventListener('click', () => app.setYear(app.year + Number(btn.dataset.step))));
+  // 押し続けると一定の速さで年が進む
+  $$('[data-step]', el).forEach(btn => holdRepeat(btn, n => app.setYear(app.year + n * Number(btn.dataset.step))));
   const range = $('#tlRange', el);
   range.addEventListener('input', () => app.setYear(Number(range.value), { fromSlider: true }));
   const yIn = $('#tlYear', el);

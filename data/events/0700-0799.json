@@ -6,7 +6,6 @@
     "regions": ["jp"],
     "importance": 1,
     "desc": "唐の律令にならった法典が完成した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -20,7 +19,6 @@
     "regions": ["jp"],
     "importance": 1,
     "desc": "唐の長安にならった都に移った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -34,7 +32,6 @@
     "regions": ["we", "wa"],
     "importance": 3,
     "desc": "ウマイヤ朝の軍がジブラルタル海峡を渡り、西ゴート王国を滅ぼした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -48,7 +45,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "玄宗が即位し、「開元の治」とよばれる安定した政治を行った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -63,7 +59,6 @@
     "importance": 2,
     "desc": "キリスト教徒がイベリア半島北部に王国を建てた（レコンキスタの始まり）",
     "acceptYears": [722],
-    "verified": false,
     "uncertain": true,
     "memo": "722年のコバドンガの戦いとする資料もある",
     "descVerified": false
@@ -76,7 +71,6 @@
     "regions": ["ee"],
     "importance": 3,
     "desc": "ビザンツ皇帝レオン3世が聖像崇拝を禁止し、ローマ教会と対立した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -90,7 +84,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "宮宰カール=マルテルがイスラーム軍を撃退した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -103,7 +96,6 @@
     "regions": ["ia"],
     "importance": 2,
     "desc": "ウイグルが突厥を滅ぼしてモンゴル高原を支配した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -117,7 +109,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "ウマイヤ朝が倒れ、アッバース家がカリフとなった。アラブ人以外のムスリムの差別がなくなった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -130,7 +121,6 @@
     "regions": ["cn", "ia"],
     "importance": 3,
     "desc": "唐軍がアッバース朝軍に敗れた。製紙法が西方に伝わるきっかけとなったとされる",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -143,7 +133,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "宮宰ピピンが教皇の支持を得て王位につき、王朝を開いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -158,7 +147,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "聖武天皇の発願で造られた大仏が完成した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:東大寺盧舎那仏像",
@@ -174,7 +162,6 @@
     "importance": 1,
     "desc": "唐の僧が苦難の末に来日し、戒律を伝えた",
     "acceptYears": [754],
-    "verified": false,
     "uncertain": true,
     "memo": "753年末に到着、翌年に奈良へ",
     "descVerified": false
@@ -188,7 +175,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "節度使の安禄山らが起こした反乱。唐が衰えるきっかけとなった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -202,7 +188,6 @@
     "regions": ["ce"],
     "importance": 3,
     "desc": "ピピンがランゴバルド人から奪ったラヴェンナ地方を教皇に寄進した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -215,7 +200,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "ウマイヤ家の生き残りがイベリア半島に王朝を建てた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -230,7 +214,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "安史の乱で荒れた長安を詠んだ詩。「国破れて山河在り」で始まる",
-    "verified": false,
     "uncertain": true,
     "memo": "757年の作とされる",
     "image": "ja:杜甫",
@@ -246,7 +229,6 @@
     "importance": 2,
     "desc": "アッバース朝のマンスールが新しい都の建設を始めた（766年完成）",
     "acceptYears": [766],
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -259,7 +241,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "ピピンの子カールがフランク王となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -272,7 +253,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "カール大帝がランゴバルド王国を征服した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -285,7 +265,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "租調庸制にかわり、土地や財産に応じて夏・秋の2回課税する制度が始まった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -298,7 +277,6 @@
     "regions": ["wa"],
     "importance": 2,
     "desc": "アッバース朝の最盛期のカリフが即位した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -311,7 +289,6 @@
     "regions": ["ee"],
     "importance": 1,
     "desc": "聖像崇拝が一時認められた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -323,7 +300,6 @@
     "regions": ["wa"],
     "importance": 1,
     "desc": "モロッコに最初のイスラーム王朝が成立した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -337,7 +313,6 @@
     "regions": ["we"],
     "importance": 1,
     "desc": "ノルマン人（ヴァイキング）による襲撃が本格化した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -351,7 +326,6 @@
     "regions": ["jp"],
     "importance": 1,
     "desc": "桓武天皇が都を平安京に移した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -364,7 +338,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "カール大帝がアヴァールを滅ぼした",
-    "verified": false,
     "uncertain": true,
     "memo": "遠征は791〜796年ごろ",
     "descVerified": false

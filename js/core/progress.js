@@ -22,6 +22,7 @@ export function summary(q) {
     case 'term': return `${q.event.year}年：${q.event.title}`;
     case 'order': return `並べ替え：${q.events.map(e => e.title).join('／')}`;
     case 'choice': return `「${q.anchor.title}」と同じころの${q.group.name}`;
+    case 'ichimon': return `一問一答：${q.item.answers.join('・')}`;
     default: return q.key;
   }
 }

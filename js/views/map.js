@@ -1,7 +1,7 @@
 // 勢力図の画面
 import { $, $$, esc, fmtYear, fmtSpan, yearText } from '../core/util.js';
 import { ZoneMap } from './mapcore.js';
-import { badges } from './common.js';
+import { badges, holdRepeat } from './common.js';
 
 let state = null;
 
@@ -35,7 +35,8 @@ export function render(app, el) {
     onRender: () => drawLegend()
   });
   $('#mpRange', el).addEventListener('input', e => app.setYear(Number(e.target.value), { fromSlider: true }));
-  $$('[data-step]', el).forEach(btn => btn.addEventListener('click', () => app.setYear(app.year + Number(btn.dataset.step))));
+  // 押し続けると一定の速さで年が進む
+  $$('[data-step]', el).forEach(btn => holdRepeat(btn, n => app.setYear(app.year + n * Number(btn.dataset.step))));
   $$('#mpViews .chip', el).forEach(c => c.addEventListener('click', () => {
     state.map.setView(c.dataset.v); drawLegend();
     app.settings.mapView = c.dataset.v; app.saveSettings();

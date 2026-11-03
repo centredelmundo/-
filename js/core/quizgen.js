@@ -1,6 +1,7 @@
 // クイズの問題づくり。データから自動で作る。
 // どの問題も spec（作り方の記録）から同じ問題を作り直せるので、復習に使える。
 import { pick, pickWeighted, shuffle } from './util.js';
+import { pool as ichimonPoolOf } from './ichimon.js';
 
 export const MODES = {
   cross: 'ヨコ記述',
@@ -8,7 +9,8 @@ export const MODES = {
   year: '年代当て',
   term: '出来事当て',
   order: '並べ替え',
-  choice: '同時代えらび'
+  choice: '同時代えらび',
+  ichimon: '一問一答'
 };
 
 /** 出題の対象にする出来事 */
@@ -20,7 +22,6 @@ export function eventPool(db, opt) {
     && e.importance >= (opt.minImportance || 1)
     && (opt.culture !== false || !e.culture)
     && (!opt.cultureOnly || e.culture)
-    && (!opt.verifiedOnly || e.verified)
     && e.regions.some(r => regs.has(r)));
 }
 
@@ -28,6 +29,11 @@ export function quizGroups(db, opt) {
   const all = db.groups.length ? db.groups : db.regions.map(r => ({ id: r.id, name: r.name, regions: [r.id] }));
   const chosen = opt.groups?.length ? all.filter(g => opt.groups.includes(g.id)) : all.filter(g => !g.optional);
   return chosen.length ? chosen : all;
+}
+/** 一問一答の出題の対象（地域は、えらんだときだけしぼる） */
+export function ichimonPool(db, opt) {
+  const regionsOf = ids => quizGroups(db, { groups: ids }).flatMap(g => g.regions);
+  return ichimonPoolOf(db.ichimon, { from: opt.from, to: opt.to, chapters: opt.ichChapters, groups: opt.groups }, db.range, regionsOf);
 }
 const groupOf = (groups, regionId) => groups.find(g => g.regions.includes(regionId));
 const inWindow = (e, y, w) => e.year <= y + w && (e.end ?? e.year) >= y - w;
@@ -61,6 +67,11 @@ export function build(db, spec) {
       const opts = spec.opts.map(find);
       if (opts.some(x => !x)) return null;
       return { ...base(spec), key: `choice:${a.id}:${spec.g}:${spec.ans}`, anchor: a, group: g, options: opts, answer: find(spec.ans), y: a.year, regions: [...a.regions, ...g.regions] };
+    }
+    case 'ichimon': {
+      const it = db.ichimon?.byId.get(spec.id);
+      if (!it) return null;
+      return { ...base(spec), key: `ichimon:${it.id}`, item: it, y: it.y, regions: it.regions };
     }
     default: return null;
   }
@@ -163,8 +174,13 @@ function makeChoice(db, opt, rand) {
   return null;
 }
 
+function makeIchimon(db, opt, rand) {
+  const p = ichimonPool(db, opt);
+  return p.length ? { mode: 'ichimon', id: pick(p, rand).id } : null;
+}
+
 export const CULTURE_MODES = ['year', 'term', 'order', 'choice'];
-const MAKERS = { cross: makeCross, ruler: makeRuler, year: makeYear, term: makeTerm, order: makeOrder, choice: makeChoice };
+const MAKERS = { cross: makeCross, ruler: makeRuler, year: makeYear, term: makeTerm, order: makeOrder, choice: makeChoice, ichimon: makeIchimon };
 
 /** 問題のセットを作る */
 export function makeSession(db, opt, rand = Math.random) {

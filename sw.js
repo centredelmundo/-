@@ -3,7 +3,7 @@
 //   （データの JSON を書きかえて公開すれば、次に開いたときに反映される）
 // ・フォント・作品の写真（Wikimedia）：一度取ったら保存したものを使う。
 // ・写真の作者・ライセンス（Wikipedia の API）：保存したものをすぐ使い、裏で新しくする。
-const CACHE = 'yokogushi-v2';
+const CACHE = 'yokogushi-v3';
 const SHELL = ['./', 'index.html', 'css/app.css', 'js/main.js', 'manifest.webmanifest', 'icons/icon.svg', 'icons/icon-192.png'];
 const WAIT_MS = 4000; // これより遅いときは保存してある方を先に使う
 

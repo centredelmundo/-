@@ -1,6 +1,7 @@
 // 画面どうしで共通の部品：地域カード、詳細シート、印、王朝の帯
 import { $, $$, esc, fmtSpan, fmtYear, yearText } from '../core/util.js';
 import { tt, fillImage, ywLink } from './terms.js';
+import { timelineItems, linkEvents, parts as ichParts, clock } from '../core/ichimon.js';
 
 export const LOGO = '<svg viewBox="0 0 40 40" aria-hidden="true"><line x1="2" y1="20" x2="38" y2="20" style="stroke:var(--shu)" stroke-width="3.2" stroke-linecap="round"/><rect x="7" y="10.5" width="11" height="19" rx="2.6" fill="none" stroke="currentColor" stroke-width="2.8"/><rect x="22" y="10.5" width="11" height="19" rx="2.6" fill="none" stroke="currentColor" stroke-width="2.8"/></svg>';
 export const ICON = {
@@ -18,7 +19,6 @@ export const ICON = {
 /** 確認の印 */
 export function badges(x, { culture = true } = {}) {
   let s = '';
-  if (x.verified) s += '<span class="badge b-ok" title="用語集で年号を確認済み">✓ 用語集</span>';
   if (x.uncertain) s += `<span class="badge b-warn" title="${esc(x.memo || '年代に自信がない・説が分かれる')}">要確認</span>`;
   if (culture && x.culture) s += '<span class="badge b-cul">文化</span>';
   return s;
@@ -35,6 +35,14 @@ export function visibleRegions(app, y) {
   return sorted.filter(r => !app.settings.hidden.includes(r.id) && (r.from == null || y >= r.from) && (r.to == null || y <= r.to));
 }
 
+/** 一問一答と出来事の結びつき（データを読み込み直すまで使い回す） */
+let ichLinks = { data: null, links: null };
+export function ichimonLinks(db) {
+  if (!db.ichimon) return null;
+  if (ichLinks.data !== db.ichimon) ichLinks = { data: db.ichimon, links: linkEvents(db.ichimon, db.events) };
+  return ichLinks.links;
+}
+
 /** 地域カード（ヨコ年表の中心） */
 export function renderCards(app, y, w) {
   const db = app.db, s = app.settings;
@@ -44,6 +52,12 @@ export function renderCards(app, y, w) {
     const pols = all.filter(isMajor), others = all.filter(x => !isMajor(x));
     const evs = db.events.filter(e => e.regions.includes(reg.id) && e.year <= y + w && (e.end ?? e.year) >= y - w
       && e.importance >= (s.minImportance || 1) && (s.culture || !e.culture));
+    const links = s.ichTimeline !== false ? ichimonLinks(db) : null;
+    if (links && (s.minImportance || 1) <= 1) {
+      // 出来事と同じ問題は、その出来事の行に印を付けるだけにする
+      for (const it of timelineItems(db.ichimon, reg.id, y - w, y + w)) if (!links.merged.has(it.id)) evs.push({ ich: it, year: it.y });
+      evs.sort((a, b) => a.year - b.year);
+    }
     if (!all.length && !evs.length && reg.hideEmpty) return '';
     let dyn = pols.map(({ polity, child, rulers }) => {
       const main = child ? `<span class="term">${esc(child.name)}</span><small>${esc(db.nameAt(polity, y))}</small>` : `<span class="term">${esc(db.nameAt(polity, y))}</span>`;
@@ -51,7 +65,7 @@ export function renderCards(app, y, w) {
       return `<div class="dyn" data-polity="${esc(polity.id)}">${main}${badges(child || polity)}${ru}</div>`;
     }).join('');
     if (others.length) dyn += `<div class="dyn-minor">ほか：${others.map(({ polity, child }) => `<span data-polity="${esc(polity.id)}">${esc(child?.name || db.nameAt(polity, y))}</span>`).join('・')}</div>`;
-    const list = evs.length ? `<ul class="evs">${evs.map(e => evRow(e, y, w)).join('')}</ul>` : '';
+    const list = evs.length ? `<ul class="evs">${evs.map(e => evRow(e, y, w, links)).join('')}</ul>` : '';
     const empty = !all.length && !evs.length ? '<div class="empty">この期間のデータなし</div>' : '';
     const closed = (s.collapsed || []).includes(reg.id);
     const head = `<h3><button type="button" class="rc-toggle" data-fold="${reg.id}" aria-expanded="${!closed}" title="タップで出来事を${closed ? '開く' : '閉じる'}"><span>${esc(reg.name)}${reg.reference ? '（参考）' : ''}</span><em>${evs.length ? '出来事 ' + evs.length + '件' : '出来事なし'}<i class="chev" aria-hidden="true"></i></em></button></h3>`;
@@ -59,11 +73,50 @@ export function renderCards(app, y, w) {
   }).join('');
 }
 
-function evRow(e, y, w) {
+function evRow(e, y, w, links) {
+  if (e.ich) return ichRow(e.ich, y, w);
+  const ich = links?.byEvent.has(e.key) ? '<span class="badge b-ich" title="読み込んだ一問一答に、この出来事の問題があります">一問一答</span>' : '';
   const end = e.end ?? e.year, now = e.year === y || (e.year <= y && y <= end);
   const d = e.year > y ? e.year - y : end < y ? y - end : 0;
   const op = now ? 1 : Math.max(0.55, 1 - d / ((w || 1) * 2.4));
-  return `<li class="ev${now ? ' now' : ''}" data-ev="${esc(e.id)}" style="opacity:${op.toFixed(2)}" tabindex="0"><span class="y">${fmtYear(e.year)}</span><span class="t"><span class="term">${esc(e.title)}</span>${e.end ? `<span class="to">（〜${fmtYear(e.end)}）</span>` : ''}${badges(e)}</span></li>`;
+  return `<li class="ev${now ? ' now' : ''}" data-ev="${esc(e.id)}" style="opacity:${op.toFixed(2)}" tabindex="0"><span class="y">${fmtYear(e.year)}</span><span class="t"><span class="term">${esc(e.title)}</span>${e.end ? `<span class="to">（〜${fmtYear(e.end)}）</span>` : ''}${badges(e)}${ich}</span></li>`;
+}
+
+/** 一問一答の問題を、年表の出来事の行として出す */
+function ichRow(it, y, w) {
+  const d = Math.abs(it.y - y), now = d === 0;
+  const op = now ? 1 : Math.max(0.55, 1 - d / ((w || 1) * 2.4));
+  return `<li class="ev ich${now ? ' now' : ''}" data-ich="${esc(it.id)}" style="opacity:${op.toFixed(2)}" tabindex="0"><span class="y">${fmtYear(it.y)}${it.yq < 3 ? '<small title="ごろ（文中の世紀から）">頃</small>' : ''}</span><span class="t"><span class="term">${esc(it.title)}</span><span class="badge b-ich" title="読み込んだ一問一答の問題">一問一答</span></span></li>`;
+}
+
+/** 一問一答の問題の詳細（答えを太字で入れた文） */
+export function openIchimon(app, it) {
+  const db = app.db;
+  const regs = it.regions.map(r => db.regionById(r)?.name || r).join('・');
+  const [a, b] = db.range;
+  const inRange = it.y != null && it.y >= a && it.y <= b;
+  const sentence = ichParts(it.text).map(p => (p.s != null ? esc(p.s) : `<b class="ich-ans">${esc(p.a)}</b>`)).join('');
+  const html = `
+    <div class="muted small">${esc(regs)} ・ 一問一答</div>
+    <h2>${esc(it.title)}</h2>
+    <p class="ich-full">${sentence}</p>
+    <dl class="kv">
+      <dt>年</dt><dd class="yr">${it.y != null ? `${yearText(it.y)}${it.yq === 3 ? '' : it.yq === 2 ? 'ごろ（文中の世紀から）' : 'ごろ（前後の問題からの推定）'}` : '—'}</dd>
+      <dt>出典</dt><dd>${db.ichimon?.chapters.find(c => c.n === it.ch) ? `第${it.ch}章 ${esc(db.ichimon.chapters.find(c => c.n === it.ch).title)}・` : ''}${esc(it.sec)}${it.audio ? `<br><span class="small muted">音声 ${esc(it.audio)} ・ ${clock(it.t)}ごろ</span>` : ''}</dd>
+    </dl>
+    ${inRange ? yokoPanel(app, it.y, 5, it.regions) : ''}
+    <div class="q-actions">
+      ${inRange ? `<button class="btn primary" type="button" data-act="go">${yearText(it.y)}へ移動</button>` : ''}
+      <button class="btn" type="button" data-act="quiz">この問題を解く</button>
+      <a class="btn" href="${ywLink(it.answers[0].replace(/（[^（）]+）$/, '').replace(/^[『「]|[』」]$/g, ''))}" target="_blank" rel="noopener">世界史の窓で調べる</a>
+    </div>`;
+  openSheet(html, sheet => {
+    sheet.addEventListener('click', ev => {
+      const act = ev.target.closest('[data-act]')?.dataset.act;
+      if (act === 'go') { closeSheet(); app.setYear(it.y); if (!location.hash.startsWith('#timeline') && !location.hash.startsWith('#map')) location.hash = '#timeline'; }
+      if (act === 'quiz') { closeSheet(); app.startQuizForIchimon(it); }
+    });
+  });
 }
 
 /** 答えたあとに出す「同じころの世界」 */
@@ -108,6 +161,7 @@ export function openEvent(app, e) {
   const db = app.db;
   const regs = e.regions.map(r => db.regionById(r)?.name || r).join('・');
   const when = e.end ? `${yearText(e.year)}〜${yearText(e.end)}` : `${yearText(e.year)}${e.month ? `${e.month}月` : ''}`;
+  const ichs = ichimonLinks(db)?.byEvent.get(e.key) || [];
   const html = `
     <div class="muted small">${esc(regs)} ・ ${'★'.repeat(e.importance)}</div>
     <h2>${esc(e.title)}${badges(e)}</h2>
@@ -117,7 +171,7 @@ export function openEvent(app, e) {
       ${e.desc ? `<dt>概要</dt><dd>${esc(e.desc)}<span class="small muted">（${e.descVerified ? '確認済み' : '概要は未確認'}）</span></dd>` : ''}
       ${e.answers.length ? `<dt>別の言い方</dt><dd>${e.answers.map(esc).join('、')}</dd>` : ''}
       ${e.memo ? `<dt>メモ</dt><dd>${esc(e.memo)}</dd>` : ''}
-      <dt>確認</dt><dd>${e.verified ? '用語集で確認済み' : '用語集では未確認'}${e.uncertain ? '・年代に要確認の印あり' : ''}</dd>
+      ${ichs.length ? `<dt>一問一答</dt><dd>${ichs.map(it => `<p class="ich-full small">${ichParts(it.text).map(p => (p.s != null ? esc(p.s) : `<b class="ich-ans">${esc(p.a)}</b>`)).join('')} <button class="btn small" type="button" data-ich-q="${esc(it.id)}">解く</button></p>`).join('')}</dd>` : ''}
     </dl>
     ${yokoPanel(app, e.year, 5, e.regions)}
     <div class="q-actions">
@@ -134,6 +188,8 @@ export function openEvent(app, e) {
       const act = ev.target.closest('[data-act]')?.dataset.act;
       if (act === 'go') { closeSheet(); app.setYear(e.year); if (!location.hash.startsWith('#timeline') && !location.hash.startsWith('#map')) location.hash = '#timeline'; }
       if (act === 'quiz') { closeSheet(); app.startQuizForEvent(e); }
+      const iq = ev.target.closest('[data-ich-q]');
+      if (iq) { const it = db.ichimon?.byId.get(iq.dataset.ichQ); if (it) { closeSheet(); app.startQuizForIchimon(it); } }
       if (act === 'star') { app.starEvent(e); }
     });
   });
@@ -206,6 +262,38 @@ export function ganttSvg(app, y) {
   }
   s += `<g class="cursor"><line x1="${X(y)}" x2="${X(y)}" y1="0" y2="${h - 16}" style="stroke:var(--shu)" stroke-width="2"/><rect x="${X(y) - 21}" y="${h - 18}" width="42" height="16" rx="8" style="fill:var(--shu)"/><text x="${X(y)}" y="${h - 10}" text-anchor="middle" dominant-baseline="central" font-size="11" font-weight="700" fill="#fff">${fmtYear(y)}</text></g>`;
   return `<svg class="gantt" viewBox="0 0 ${W} ${h}" role="img" aria-label="王朝・政体の移り変わり">${s}</svg>`;
+}
+
+/**
+ * 年の −10・−1・+1・+10 ボタン：押した瞬間に1回、押し続けると一定の速さ（1秒に rate 回）でくり返す。
+ * 回数は押してからの時間で決めるので、描画が重い年でも速さは変わらない。
+ * キーボード（Enter・Space）で押したときは1回だけ。
+ */
+export function holdRepeat(btn, step, { delay = 400, rate = 10 } = {}) {
+  let t0 = 0, done = 0, raf = 0, pid = null;
+  const stop = () => {
+    if (raf) cancelAnimationFrame(raf);
+    raf = 0; btn.classList.remove('holding');
+    if (pid != null) { try { btn.releasePointerCapture(pid); } catch { /* もう離れている */ } pid = null; }
+  };
+  const tick = now => {
+    const n = now - t0 < delay ? 0 : Math.floor((now - t0 - delay) * rate / 1000) + 1;
+    if (n > done) { step(n - done); done = n; }
+    raf = requestAnimationFrame(tick);
+  };
+  btn.addEventListener('pointerdown', e => {
+    if (e.button !== 0) return;
+    e.preventDefault(); // 長押しで文字の選択やメニューが出ないように
+    stop();
+    pid = e.pointerId;
+    try { btn.setPointerCapture(pid); } catch { /* 古いブラウザ */ }
+    step(1); done = 0; t0 = performance.now(); btn.classList.add('holding');
+    raf = requestAnimationFrame(tick);
+  });
+  for (const ev of ['pointerup', 'pointercancel', 'lostpointercapture']) btn.addEventListener(ev, stop);
+  btn.addEventListener('click', e => { if (e.detail === 0) step(1); });
+  btn.addEventListener('contextmenu', e => e.preventDefault());
+  btn.classList.add('hold-btn');
 }
 
 /** 赤シート：隠れた語をタップでめくる */

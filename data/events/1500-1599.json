@@ -8,7 +8,6 @@
     "regions": ["am"],
     "importance": 2,
     "desc": "ポルトガルの航海者がインドへ向かう途中に漂着し、領有を宣言した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -22,7 +21,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "イスマーイール1世がタブリーズで即位し、シーア派（十二イマーム派）を国教とした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -38,7 +36,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "ルネサンスを代表する肖像画",
-    "verified": false,
     "uncertain": true,
     "memo": "制作年は1503〜06年ごろ（その後も手を加えた）",
     "image": "ja:モナ・リザ",
@@ -55,7 +52,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "フィレンツェ共和国のために制作された大理石の彫刻",
-    "verified": false,
     "uncertain": false,
     "memo": "1501〜04年に制作",
     "image": "ja:ダビデ像 (ミケランジェロ)",
@@ -72,7 +68,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "アメリゴ=ヴェスプッチが新大陸であることを示したことにちなむ",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "en:Waldseemüller map",
@@ -90,7 +85,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "教皇ユリウス2世の依頼でシスティナ礼拝堂の天井に描いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:システィーナ礼拝堂天井画",
@@ -105,7 +99,6 @@
     "regions": ["sa", "we"],
     "importance": 2,
     "desc": "ポルトガルがマムルーク朝・グジャラートの連合艦隊を破り、インド洋の海上交易をにぎった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -121,7 +114,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "ヴァチカン宮殿の壁画。古代の哲学者たちを描いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:アテナイの学堂",
@@ -137,7 +129,6 @@
     "regions": ["sa"],
     "importance": 2,
     "desc": "アルブケルケが占領し、アジア貿易の拠点とした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -151,7 +142,6 @@
     "regions": ["sea"],
     "importance": 3,
     "desc": "東南アジア交易の中心だったイスラーム港市国家を占領した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -167,7 +157,6 @@
     "importance": 3,
     "desc": "教会や聖職者の腐敗を風刺した人文主義の作品",
     "acceptYears": [1509],
-    "verified": false,
     "uncertain": true,
     "memo": "執筆は1509年、出版は1511年",
     "image": "ja:痴愚神礼讃",
@@ -183,7 +172,6 @@
     "regions": ["am"],
     "importance": 2,
     "desc": "パナマ地峡を横断して「南の海」を望んだ",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -199,7 +187,6 @@
     "importance": 3,
     "desc": "政治を宗教・道徳から切り離して論じた",
     "acceptYears": [1532],
-    "verified": false,
     "uncertain": true,
     "memo": "執筆は1513年、出版は1532年",
     "image": "ja:君主論",
@@ -214,7 +201,6 @@
     "regions": ["wa"],
     "importance": 2,
     "desc": "オスマン帝国のセリム1世が鉄砲を使ってサファヴィー朝を破った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -229,7 +215,6 @@
     "tags": ["文化"],
     "importance": 3,
     "desc": "理想の社会を描き、囲い込みを批判した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:ユートピア (トマス・モア)",
@@ -245,7 +230,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "ハプスブルク家のカルロス1世がスペイン王となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -258,7 +242,6 @@
     "regions": ["wa"],
     "importance": 1,
     "desc": "オスマン帝国がマムルーク朝を破り、シリアを得た",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -272,7 +255,6 @@
     "regions": ["wa", "af"],
     "importance": 3,
     "desc": "オスマン帝国のセリム1世がカイロを占領し、メッカ・メディナの保護者となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -286,7 +268,6 @@
     "regions": ["ce"],
     "importance": 3,
     "desc": "ルターが贖宥状の販売を批判し、宗教改革が始まった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -300,7 +281,6 @@
     "regions": ["ce", "we"],
     "importance": 2,
     "desc": "スペイン王カルロス1世が神聖ローマ皇帝に選ばれた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -314,7 +294,6 @@
     "regions": ["we", "am", "sea"],
     "importance": 3,
     "desc": "スペインの援助で出航し、部下が初めて世界一周を達成した。本人はフィリピンで戦死",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -328,7 +307,6 @@
     "regions": ["am"],
     "importance": 3,
     "desc": "コルテスが首都テノチティトランを征服した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -342,7 +320,6 @@
     "regions": ["ce"],
     "importance": 3,
     "desc": "皇帝カール5世がルターに説の撤回を求め、拒否したルターを帝国追放とした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -357,7 +334,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "ザクセン選帝侯に保護されたヴァルトブルク城で翻訳した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:ルター聖書",
@@ -373,7 +349,6 @@
     "regions": ["wa"],
     "importance": 1,
     "desc": "スレイマン1世が聖ヨハネ騎士団を追い出した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -387,7 +362,6 @@
     "regions": ["ee"],
     "importance": 2,
     "desc": "グスタフ=ヴァーサがデンマークの支配から独立した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -402,7 +376,6 @@
     "regions": ["ce"],
     "importance": 3,
     "desc": "ミュンツァーらが指導した。ルターは諸侯による鎮圧を支持した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -416,7 +389,6 @@
     "regions": ["ce"],
     "importance": 1,
     "desc": "ドイツ騎士団長がルター派に改宗して公国とした（ポーランドの宗主権下）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -430,7 +402,6 @@
     "regions": ["sa"],
     "importance": 3,
     "desc": "バーブルがロディー朝を破り、ムガル帝国を建てた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -443,7 +414,6 @@
     "regions": ["ce", "wa"],
     "importance": 3,
     "desc": "オスマン帝国のスレイマン1世がハンガリー王を戦死させた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -457,7 +427,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "カール5世の軍がローマを略奪し、イタリア=ルネサンスが衰える一因となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -470,7 +439,6 @@
     "regions": ["ce", "wa"],
     "importance": 3,
     "desc": "スレイマン1世がウィーンを包囲したが、攻略できなかった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -484,7 +452,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "ルター派の容認を取り消した決定に、ルター派の諸侯が抗議した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -496,7 +463,6 @@
     "regions": ["sea", "we"],
     "importance": 1,
     "desc": "スペインとポルトガルがアジアでの勢力範囲の境界を定めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -509,7 +475,6 @@
     "importance": 2,
     "desc": "新教派の諸侯・都市が皇帝に対抗して結成した",
     "acceptYears": [1531],
-    "verified": false,
     "uncertain": true,
     "memo": "1530年末に結成を決め、1531年に正式に成立",
     "descVerified": false
@@ -524,7 +489,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "巨人の親子を主人公に社会を風刺した",
-    "verified": false,
     "uncertain": true,
     "memo": "第1作の刊行年。全5巻は1564年まで",
     "image": "ja:ガルガンチュワとパンタグリュエル",
@@ -540,7 +504,6 @@
     "regions": ["am"],
     "importance": 3,
     "desc": "ピサロが皇帝アタワルパを処刑し、首都クスコを占領した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -554,7 +517,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "ヘンリ8世が国王をイギリス国内の教会の首長とし、ローマ教皇から離れた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -570,7 +532,6 @@
     "importance": 2,
     "desc": "イグナティウス=ロヨラ、フランシスコ=ザビエルらが結成した",
     "acceptYears": [1540],
-    "verified": false,
     "uncertain": true,
     "memo": "1534年に結成、1540年に教皇が認可",
     "image": "ja:イエズス会",
@@ -586,7 +547,6 @@
     "regions": ["wa"],
     "importance": 2,
     "desc": "イラクをサファヴィー朝から奪った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -600,7 +560,6 @@
     "regions": ["am"],
     "importance": 1,
     "desc": "フランスの探検家がセントローレンス川を探検した",
-    "verified": false,
     "uncertain": true,
     "memo": "探検は1534〜42年",
     "descVerified": false
@@ -615,7 +574,6 @@
     "tags": ["文化"],
     "importance": 3,
     "desc": "予定説を説いた。のちジュネーヴで宗教改革を進めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:キリスト教綱要",
@@ -631,7 +589,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "ヘンリ8世が修道院の土地・財産を没収した",
-    "verified": false,
     "uncertain": true,
     "memo": "1536〜39年に段階的に実施",
     "descVerified": false
@@ -644,7 +601,6 @@
     "regions": ["wa", "we"],
     "importance": 2,
     "desc": "オスマン帝国の海軍がスペイン・ヴェネツィアなどの連合艦隊を破った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -658,7 +614,6 @@
     "regions": ["sa"],
     "importance": 1,
     "desc": "アフガン系の武将がムガル皇帝フマーユーンを破って追い出した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -672,7 +627,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "厳格な規律で市民生活を指導した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -686,7 +640,6 @@
     "regions": ["ce", "wa"],
     "importance": 2,
     "desc": "ハンガリーの中部を直轄領とした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -699,7 +652,6 @@
     "regions": ["am"],
     "importance": 1,
     "desc": "エンコミエンダ制の制限を定めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -714,7 +666,6 @@
     "tags": ["文化"],
     "importance": 3,
     "desc": "地動説を説いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:天球の回転について",
@@ -731,7 +682,6 @@
     "importance": 2,
     "desc": "ポルトガル人が種子島に漂着した",
     "acceptYears": [1542],
-    "verified": false,
     "uncertain": true,
     "memo": "1542年とする説もある",
     "descVerified": false
@@ -745,7 +695,6 @@
     "tags": ["文化"],
     "importance": 3,
     "desc": "教皇の至上権とカトリックの教義を確認し、対抗宗教改革を進めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:トリエント公会議",
@@ -761,7 +710,6 @@
     "regions": ["am"],
     "importance": 2,
     "desc": "アンデス山中の銀山。大量の銀がヨーロッパ・アジアへ流れた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -774,7 +722,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "皇帝カール5世が新教派の同盟を破った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -788,7 +735,6 @@
     "regions": ["ee"],
     "importance": 2,
     "desc": "モスクワ大公が正式にツァーリ（皇帝）の称号を用いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -802,7 +748,6 @@
     "regions": ["jp"],
     "importance": 2,
     "desc": "イエズス会士が鹿児島に来て、キリスト教を伝えた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -815,7 +760,6 @@
     "regions": ["cn", "ia"],
     "importance": 2,
     "desc": "モンゴルのアルタン=ハーンが北京を包囲した（北虜）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -829,7 +773,6 @@
     "regions": ["ee"],
     "importance": 3,
     "desc": "ロシアのイヴァン4世がヴォルガ川中流のハン国を併合した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -844,9 +787,8 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "先住民への残虐な支配を告発した",
-    "verified": false,
-    "uncertain": false,
-    "memo": "",
+    "uncertain": true,
+    "memo": "1542年にカルロス1世に提出し、1552年に刊行した",
     "image": "ja:インディアスの破壊についての簡潔な報告",
     "imageVerified": false,
     "descVerified": false
@@ -861,7 +803,6 @@
     "regions": ["cn"],
     "importance": 2,
     "desc": "密貿易者の集団が中国沿岸を荒らした（南倭）",
-    "verified": false,
     "uncertain": true,
     "memo": "16世紀半ばが最盛期。年は目安",
     "descVerified": false
@@ -874,7 +815,6 @@
     "regions": ["ce"],
     "importance": 3,
     "desc": "諸侯にカトリックかルター派かの選択を認めた（個人の信仰の自由やカルヴァン派は認めず）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -888,7 +828,6 @@
     "regions": ["ee"],
     "importance": 2,
     "desc": "ロシアがヴォルガ川下流を支配し、カスピ海に達した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -902,7 +841,6 @@
     "regions": ["ce", "we"],
     "importance": 2,
     "desc": "スペインを子フェリペ2世に、オーストリアを弟フェルディナントに分けた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -916,7 +854,6 @@
     "regions": ["sa"],
     "importance": 2,
     "desc": "第2次パーニーパットの戦いに勝ち、ムガル帝国の支配を固めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -930,7 +867,6 @@
     "regions": ["cn", "we"],
     "importance": 2,
     "desc": "明から居住を許され、日本・中国との貿易の拠点とした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -945,7 +881,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "建築家ミマール=シナンがイスタンブルに建てた",
-    "verified": false,
     "uncertain": true,
     "memo": "着工1550年、完成1557年",
     "image": "ja:スレイマニエ・モスク",
@@ -961,7 +896,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "テューダー朝の女王。イギリス国教会を確立し、海外発展を進めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -975,7 +909,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "エリザベス1世がイギリス国教会の体制を確立した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -988,7 +921,6 @@
     "regions": ["we", "ce"],
     "importance": 2,
     "desc": "フランスとスペインの講和で、イタリア戦争が終わった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1001,7 +933,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "フランスの新教徒（ユグノー）と旧教徒の内戦",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1015,7 +946,6 @@
     "regions": ["sa"],
     "importance": 2,
     "desc": "アクバルが非ムスリムへの人頭税をやめ、ヒンドゥー教徒と融和した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1028,7 +958,6 @@
     "regions": ["sa"],
     "importance": 1,
     "desc": "ヴィジャヤナガル王国がデカンのムスリム諸国の連合軍に大敗した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1042,7 +971,6 @@
     "regions": ["cn"],
     "importance": 2,
     "desc": "明が民間の海外貿易を認めた",
-    "verified": false,
     "uncertain": true,
     "memo": "1567年ごろ",
     "descVerified": false
@@ -1057,7 +985,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "スペインの支配に対してネーデルラントが反乱した",
-    "verified": false,
     "uncertain": true,
     "memo": "終わりを1609年（休戦）・1648年（独立承認）とする見方がある",
     "descVerified": false
@@ -1070,7 +997,6 @@
     "regions": ["ee"],
     "importance": 1,
     "desc": "ポーランドとリトアニアが一つの国（共和国）となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1083,7 +1009,6 @@
     "regions": ["sea"],
     "importance": 1,
     "desc": "タウングー朝のバインナウンがアユタヤを攻め落とした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1097,7 +1022,6 @@
     "importance": 1,
     "desc": "オスマン帝国が通商・居住などの特権を正式に認めた",
     "acceptYears": [1535],
-    "verified": false,
     "uncertain": true,
     "memo": "1535年に与えたとする説もある",
     "descVerified": false
@@ -1110,7 +1034,6 @@
     "regions": ["we", "wa"],
     "importance": 3,
     "desc": "スペイン・ヴェネツィアなどの連合艦隊がオスマン帝国の海軍を破った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1124,7 +1047,6 @@
     "regions": ["sea"],
     "importance": 3,
     "desc": "レガスピが建設。メキシコのアカプルコとガレオン船で結ばれた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1138,7 +1060,6 @@
     "regions": ["cn", "ia"],
     "importance": 2,
     "desc": "明が交易を認め、北の国境が安定した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1151,7 +1072,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "パリで多くのユグノーが殺された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1165,9 +1085,8 @@
     "regions": ["cn"],
     "importance": 2,
     "desc": "万暦帝の初めに政治をとり、財政を立て直した",
-    "verified": false,
     "uncertain": true,
-    "memo": "改革は1572〜82年",
+    "memo": "改革は1572〜82年（世界史の窓の年表には1567年の項もある）",
     "descVerified": false
   },
   {
@@ -1180,7 +1099,6 @@
     "importance": 1,
     "desc": "ポルトガルがアンゴラに建設した奴隷貿易の拠点",
     "acceptYears": [1575],
-    "verified": false,
     "uncertain": true,
     "memo": "1575年に上陸、1576年に建設",
     "descVerified": false
@@ -1195,7 +1113,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "主権の概念を論じ、王権を理論づけた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:ジャン・ボダン",
@@ -1209,7 +1126,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "ネーデルラント北部7州が結成した（南部10州は離脱）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1223,7 +1139,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "フェリペ2世がポルトガル王を兼ね、「太陽の沈まぬ国」となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1238,7 +1153,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "人間を観察し、懐疑的な思索を記した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:エセー",
@@ -1254,7 +1168,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "ユトレヒト同盟の諸州がスペイン王の統治権を否認した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1267,7 +1180,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "税と労役を銀でまとめて納めさせた",
-    "verified": false,
     "uncertain": true,
     "memo": "16世紀後半に各地で広がり、1581年ごろ全国に",
     "descVerified": false
@@ -1281,7 +1193,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "教皇グレゴリウス13世が定めた暦",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:グレゴリオ暦",
@@ -1298,7 +1209,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "アクバルが諸宗教を融合した新しい教えを唱えた",
-    "verified": false,
     "uncertain": true,
     "memo": "1582年ごろ",
     "image": "en:Din-i Ilahi",
@@ -1315,7 +1225,6 @@
     "importance": 2,
     "desc": "コサックの首領がシビル=ハン国の都を占領した",
     "acceptYears": [1581],
-    "verified": false,
     "uncertain": true,
     "memo": "遠征の開始を1581年とする資料もある",
     "descVerified": false
@@ -1329,7 +1238,6 @@
     "regions": ["am"],
     "importance": 1,
     "desc": "エリザベス1世にちなんで名づけたが、植民は失敗した",
-    "verified": false,
     "uncertain": true,
     "memo": "1584〜87年",
     "descVerified": false
@@ -1343,7 +1251,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "イギリスがスペインの無敵艦隊を破った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1357,7 +1264,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "ユグノーの指導者だったアンリ4世が即位した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1370,7 +1276,6 @@
     "keywords": ["秀吉+統一"],
     "regions": ["jp"],
     "importance": 1,
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
@@ -1385,7 +1290,6 @@
     "regions": ["af"],
     "importance": 2,
     "desc": "鉄砲を持つモロッコ軍に敗れた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1400,7 +1304,6 @@
     "regions": ["kr", "jp", "cn"],
     "importance": 3,
     "desc": "日本軍が朝鮮に侵攻し、李舜臣の水軍や明の援軍が抵抗した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1416,7 +1319,6 @@
     "importance": 2,
     "desc": "薬物の知識を集大成した",
     "acceptYears": [1578],
-    "verified": false,
     "uncertain": true,
     "memo": "完成は1578年、刊行は1596年",
     "image": "ja:本草綱目",
@@ -1433,7 +1335,6 @@
     "importance": 2,
     "desc": "アッバース1世が新しい都とし、「世界の半分」と呼ばれるほど栄えた",
     "acceptYears": [1598],
-    "verified": false,
     "uncertain": true,
     "memo": "1597年とも1598年とも",
     "descVerified": false
@@ -1447,7 +1348,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "ユグノーに信仰の自由を認め、ユグノー戦争が終わった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1461,7 +1361,6 @@
     "regions": ["ee"],
     "importance": 2,
     "desc": "モスクワのフョードル1世が死去し、ロシアは混乱の時代に入った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false

@@ -22,8 +22,11 @@ test('同梱データにエラーがない', () => {
 
 const { db } = openDB();
 
+// 一問一答は利用者が読み込むデータなので、同梱データのテストからは外す（tests/ichimon.test.mjs で確かめる）
+const BUILTIN_MODES = Object.keys(MODES).filter(m => m !== 'ichimon');
+
 test('クイズ：全形式で作れて、復習用の spec から同じ問題を作り直せる', () => {
-  for (const mode of Object.keys(MODES)) {
+  for (const mode of BUILTIN_MODES) {
     const qs = makeSession(db, { count: 12, modes: [mode], from: 1500, to: 2000 }, rng(7));
     assert.ok(qs.length >= 8, `${mode}: ${qs.length}問しかできない`);
     for (const q of qs) assert.equal(build(db, JSON.parse(JSON.stringify(q.spec)))?.key, q.key);
@@ -39,10 +42,28 @@ test('勢力図：どの時代にも塗られる地域がある', () => {
 });
 
 test('クイズ：500〜1500年の範囲でも全形式で作れる', () => {
-  for (const mode of Object.keys(MODES)) {
+  for (const mode of BUILTIN_MODES) {
     const qs = makeSession(db, { count: 12, modes: [mode], from: 500, to: 1499 }, rng(5));
     assert.ok(qs.length >= 8, `${mode}: ${qs.length}問しかできない`);
     for (const q of qs) assert.equal(build(db, JSON.parse(JSON.stringify(q.spec)))?.key, q.key);
+  }
+});
+
+test('クイズ：紀元前（前800〜前1年）と1〜499年でも全形式で作れる', () => {
+  for (const [from, to] of [[-800, -1], [1, 499]]) {
+    for (const mode of BUILTIN_MODES) {
+      const qs = makeSession(db, { count: 12, modes: [mode], from, to }, rng(11));
+      assert.ok(qs.length >= 6, `${from}〜${to}年 ${mode}: ${qs.length}問しかできない`);
+      for (const q of qs) assert.equal(build(db, JSON.parse(JSON.stringify(q.spec)))?.key, q.key);
+    }
+  }
+});
+
+test('勢力図：紀元前から499年まで、塗られる地域があり、終わった国は残らない', () => {
+  for (const y of [-750, -500, -323, -221, -27, 117, 395, 476]) {
+    const own = db.ownersAt(y);
+    assert.ok(own.size > 40, `${y}年: ${own.size}ゾーン`);
+    for (const { p } of own.values()) assert.ok(db.isActive(db.polityById.get(p), y), `${y}年に終わった国 ${p} が残っている`);
   }
 });
 

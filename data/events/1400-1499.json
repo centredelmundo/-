@@ -7,7 +7,6 @@
     "regions": ["ia", "wa"],
     "importance": 2,
     "desc": "ティムールがオスマン帝国を破り、バヤジット1世を捕らえた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -21,7 +20,6 @@
     "regions": ["cn"],
     "importance": 2,
     "desc": "燕王が靖難の役で建文帝を倒し、帝位についた",
-    "verified": false,
     "uncertain": true,
     "memo": "靖難の役は1399〜1402年",
     "descVerified": false
@@ -35,7 +33,6 @@
     "regions": ["cn", "jp"],
     "importance": 1,
     "desc": "足利義満が明と勘合を使った朝貢貿易を始めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -49,7 +46,6 @@
     "regions": ["cn", "sea", "sa", "wa", "af"],
     "importance": 3,
     "desc": "永楽帝の命で7回にわたる大航海を行い、東アフリカ沿岸まで到達した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -62,7 +58,6 @@
     "regions": ["cn", "sea"],
     "importance": 1,
     "desc": "明がベトナムの胡朝を滅ぼして支配した（〜1427年）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -77,7 +72,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "永楽帝の命で作られた大規模な百科事典",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:永楽大典",
@@ -93,7 +87,6 @@
     "regions": ["ee", "ce"],
     "importance": 2,
     "desc": "ポーランド・リトアニア連合軍がドイツ騎士団を破った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -107,7 +100,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "教会大分裂を終わらせ、フスを異端として処刑した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -121,7 +113,6 @@
     "regions": ["we", "af"],
     "importance": 2,
     "desc": "航海王子エンリケらがアフリカ北岸のセウタを攻略した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -136,7 +127,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "フスの処刑後、ベーメン（ボヘミア）でフス派が起こした戦争",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -149,7 +139,6 @@
     "regions": ["cn"],
     "importance": 1,
     "desc": "永楽帝が都を南京から北京に移した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -162,7 +151,6 @@
     "regions": ["sea"],
     "importance": 2,
     "desc": "黎利が明軍を追い出し、ベトナムに王朝を建てた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -175,7 +163,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "神の声を聞いたという農民の娘がイギリス軍の包囲を破り、シャルル7世を戴冠させた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -188,7 +175,6 @@
     "regions": ["jp"],
     "importance": 1,
     "desc": "尚巴志が沖縄島の三山を統一した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -201,7 +187,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "銀行家のメディチ家がフィレンツェの政治の実権をにぎった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -216,7 +201,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "ブルネレスキが設計した巨大なドーム",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:サンタ・マリア・デル・フィオーレ大聖堂",
@@ -231,7 +215,6 @@
     "regions": ["am"],
     "importance": 2,
     "desc": "パチャクテクが即位し、帝国の領域を大きく広げた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -247,7 +230,6 @@
     "importance": 2,
     "desc": "朝鮮の文字（ハングル）が作られた（1446年に公布）",
     "acceptYears": [1446],
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:訓民正音",
@@ -262,7 +244,6 @@
     "regions": ["cn", "ia"],
     "importance": 3,
     "desc": "オイラトのエセンが明の正統帝を捕らえた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -278,7 +259,6 @@
     "importance": 3,
     "desc": "金属活字を使った印刷術を実用化し、宗教改革やルネサンスを広める力となった",
     "acceptYears": [1445],
-    "verified": false,
     "uncertain": true,
     "memo": "1440年代〜1450年ごろ",
     "image": "ja:グーテンベルク聖書",
@@ -294,7 +274,6 @@
     "regions": ["ee", "wa"],
     "importance": 3,
     "desc": "オスマン帝国がコンスタンティノープルを征服し、イスタンブルを都とした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -306,7 +285,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "フランスがカレーを除く大陸の領土を取り戻した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -320,7 +298,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "王位をめぐるイギリスの内乱。諸侯の力が弱まった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -332,7 +309,6 @@
     "regions": ["jp"],
     "importance": 1,
     "desc": "将軍のあとつぎ争いなどから起きた内乱。戦国時代のきっかけとなった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -345,7 +321,6 @@
     "regions": ["af"],
     "importance": 1,
     "desc": "ソンガイ王国がマリ王国からトンブクトゥを奪った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -358,7 +333,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "両国の王位継承者が結婚し、のちに両国が合わさった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -371,7 +345,6 @@
     "regions": ["sea"],
     "importance": 1,
     "desc": "ベトナムがチャンパーの都ヴィジャヤを落とした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -385,7 +358,6 @@
     "regions": ["we"],
     "importance": 1,
     "desc": "ブルゴーニュ公シャルルが戦死し、公国がフランスとハプスブルク家に分けられた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -398,7 +370,6 @@
     "regions": ["ee"],
     "importance": 1,
     "desc": "モスクワ大公国が北ロシアの商業国家を併合した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -411,7 +382,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "カスティリャとアラゴンが合わさった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -425,7 +395,6 @@
     "regions": ["ee"],
     "importance": 3,
     "desc": "イヴァン3世がキプチャク=ハン国の支配から脱した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -438,7 +407,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "バラ戦争に勝ったヘンリ7世が王朝を開いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -453,7 +421,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "フィレンツェのルネサンスを代表する絵画",
-    "verified": false,
     "uncertain": true,
     "memo": "1485年ごろの作",
     "image": "ja:ヴィーナスの誕生",
@@ -469,7 +436,6 @@
     "regions": ["af", "we"],
     "importance": 2,
     "desc": "ポルトガルの航海者がアフリカ南端に達した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -483,7 +449,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "スペインがナスル朝を滅ぼし、レコンキスタが完了した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -496,7 +461,6 @@
     "regions": ["am", "we"],
     "importance": 3,
     "desc": "スペイン女王の援助を受けたコロンブスがカリブ海のサンサルバドル島に到達した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -509,7 +473,6 @@
     "regions": ["we", "am"],
     "importance": 2,
     "desc": "スペインとポルトガルが海外領土の分け方を決めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -522,7 +485,6 @@
     "regions": ["ce", "we"],
     "importance": 2,
     "desc": "フランス王シャルル8世がナポリ王国の継承を主張してイタリアに侵入した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -538,7 +500,6 @@
     "tags": ["文化"],
     "importance": 3,
     "desc": "ミラノの修道院の食堂に描かれた壁画",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:最後の晩餐 (レオナルド)",
@@ -553,7 +514,6 @@
     "regions": ["am", "we"],
     "importance": 1,
     "desc": "イギリス王の援助を受けたカボットが北アメリカ東岸に達した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -567,7 +527,6 @@
     "regions": ["sa", "we"],
     "importance": 3,
     "desc": "ポルトガルの航海者がアフリカ南端を回ってインドに達した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false

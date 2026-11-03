@@ -8,7 +8,6 @@
     "to": 549,
     "importance": 2,
     "desc": "梁を建てた皇帝。仏教を厚く保護したが、侯景の乱の中で亡くなった。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -22,7 +21,6 @@
     "to": 604,
     "importance": 3,
     "desc": "隋を建て、陳を滅ぼして中国を統一した。均田制・租調庸制・府兵制を整え、学科試験による官吏登用を始めた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -36,7 +34,6 @@
     "to": 618,
     "importance": 3,
     "desc": "大運河を完成させたが、3度の高句麗遠征に失敗し、反乱の中で殺された。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -50,7 +47,6 @@
     "to": 626,
     "importance": 2,
     "desc": "隋末の混乱の中で挙兵し、唐を建てた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -64,7 +60,6 @@
     "to": 649,
     "importance": 3,
     "desc": "唐の第2代皇帝。律令体制を整え、東突厥を破った。その治世は「貞観の治」とよばれる。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -78,7 +73,6 @@
     "to": 683,
     "importance": 2,
     "desc": "百済・高句麗を滅ぼし、唐の領域を最大にした。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -93,7 +87,6 @@
     "title": "皇帝",
     "importance": 3,
     "desc": "中国史上ただ一人の女性皇帝。科挙出身の官僚を登用した。",
-    "verified": false,
     "uncertain": true,
     "memo": "国号を周に改めて皇帝となった（690〜705年）",
     "descVerified": false
@@ -107,7 +100,6 @@
     "to": 756,
     "importance": 3,
     "desc": "「開元の治」とよばれる政治を行ったが、晩年に楊貴妃を寵愛し、安史の乱を招いた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -120,7 +112,6 @@
     "to": 805,
     "importance": 2,
     "desc": "宰相楊炎の献策で両税法を採用した（780年）。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -134,7 +125,6 @@
     "to": 912,
     "importance": 2,
     "desc": "黄巣の乱で台頭した節度使。唐を滅ぼして後梁を建てた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -148,7 +138,6 @@
     "to": 976,
     "importance": 3,
     "desc": "宋を建てた皇帝。節度使の力を弱めて文治主義をとった。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -162,7 +151,6 @@
     "to": 997,
     "importance": 2,
     "desc": "北漢を滅ぼして中国統一を完成させた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -175,7 +163,6 @@
     "to": 1022,
     "importance": 2,
     "desc": "遼と澶淵の盟を結んだ（1004年）。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -188,7 +175,6 @@
     "to": 1085,
     "importance": 3,
     "desc": "王安石を登用し、富国強兵をめざす新法を行わせた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -201,7 +187,6 @@
     "to": 1125,
     "importance": 3,
     "desc": "書画にすぐれた皇帝（院体画）。金の攻撃を受けて退位し、靖康の変で金に連れ去られた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -215,7 +200,6 @@
     "to": 1162,
     "importance": 2,
     "desc": "南宋を建て、臨安を都とした。秦檜を用いて金と和議を結んだ。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -229,7 +213,6 @@
     "to": 926,
     "importance": 3,
     "desc": "契丹の諸部族を統一して遼（契丹）を建て、渤海を滅ぼした。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -242,7 +225,6 @@
     "to": 1031,
     "importance": 1,
     "desc": "宋と澶淵の盟を結んだ遼の皇帝。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -256,7 +238,6 @@
     "to": 1048,
     "importance": 3,
     "desc": "タングートを率いて西夏を建て、西夏文字を作らせた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -270,7 +251,6 @@
     "to": 1123,
     "importance": 3,
     "desc": "女真を統一して金を建て、宋と結んで遼を攻めた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -285,7 +265,6 @@
     "title": "大ハン",
     "importance": 3,
     "desc": "モンゴル高原を統一し、1206年のクリルタイで即位した。ホラズム=シャー朝や西夏を征服した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -300,7 +279,6 @@
     "title": "大ハン",
     "importance": 3,
     "desc": "金を滅ぼし、都カラコルムを建設した。バトゥにヨーロッパ遠征を行わせた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -315,7 +293,6 @@
     "title": "大ハン",
     "importance": 2,
     "desc": "弟のフラグに西アジア遠征を、フビライに南宋遠征を行わせた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -330,7 +307,6 @@
     "title": "大ハン",
     "importance": 3,
     "desc": "大ハンとなり、1271年に国号を元とした。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -345,7 +321,6 @@
     "title": "皇帝",
     "importance": 3,
     "desc": "元の初代皇帝。大都を都とし、南宋を滅ぼした。日本・ベトナム・ジャワに遠征軍を送った。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -359,7 +334,6 @@
     "to": 1398,
     "importance": 3,
     "desc": "紅巾の乱から身を起こして明を建てた。里甲制・六諭・衛所制を整え、皇帝独裁体制を固めた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -372,7 +346,6 @@
     "to": 1402,
     "importance": 1,
     "desc": "諸王の力を削ろうとして、叔父の燕王（永楽帝）との靖難の役に敗れた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -386,7 +359,6 @@
     "to": 1424,
     "importance": 3,
     "desc": "靖難の役で帝位を奪った。北京に都を移し、鄭和に南海遠征を行わせ、モンゴルに親征した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -400,7 +372,6 @@
     "to": 1449,
     "importance": 2,
     "desc": "土木の変でオイラトのエセンに捕らえられた。",
-    "verified": false,
     "uncertain": true,
     "memo": "1457年に天順帝として復位した",
     "descVerified": false
@@ -414,7 +385,6 @@
     "to": 1454,
     "importance": 3,
     "desc": "オイラトの指導者。土木の変で明の正統帝を捕らえた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -428,7 +398,6 @@
     "to": 661,
     "importance": 2,
     "desc": "唐と結んで百済を滅ぼした新羅の王。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -441,7 +410,6 @@
     "to": 681,
     "importance": 2,
     "desc": "高句麗を滅ぼし、唐の勢力を追い出して半島統一を完成させた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -455,7 +423,6 @@
     "to": 719,
     "importance": 2,
     "desc": "高句麗の遺民を率いて渤海を建国した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -469,7 +436,6 @@
     "to": 943,
     "importance": 3,
     "desc": "高麗を建て、936年に半島を再統一した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -483,7 +449,6 @@
     "to": 1398,
     "importance": 3,
     "desc": "倭寇を撃退して名をあげ、高麗を倒して朝鮮王朝を建てた。都を漢城（ソウル）とした。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -496,7 +461,6 @@
     "to": 1450,
     "importance": 3,
     "desc": "訓民正音（ハングル）を制定し、金属活字による出版を進めた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -511,7 +475,6 @@
     "title": "摂政",
     "importance": 1,
     "desc": "推古天皇を助け、冠位十二階や十七条の憲法を定め、遣隋使を送った。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -525,7 +488,6 @@
     "title": "天皇",
     "importance": 1,
     "desc": "東大寺の大仏を造らせた。天平文化の時代。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -539,7 +501,6 @@
     "title": "征夷大将軍",
     "importance": 2,
     "desc": "鎌倉幕府を開いた武家の棟梁。",
-    "verified": false,
     "uncertain": true,
     "memo": "幕府の成立年は1180年代のどれをとるかで諸説ある",
     "descVerified": false
@@ -553,7 +514,6 @@
     "title": "執権",
     "importance": 1,
     "desc": "元寇（文永の役・弘安の役）を退けた鎌倉幕府の執権。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -567,7 +527,6 @@
     "title": "将軍",
     "importance": 2,
     "desc": "南北朝を合一し、明と勘合貿易を始めた室町幕府の将軍。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -580,7 +539,6 @@
     "to": 649,
     "importance": 3,
     "desc": "チベットを統一して吐蕃を建て、唐の文成公主を妃に迎えた。",
-    "verified": false,
     "uncertain": true,
     "memo": "即位は629年ごろ",
     "descVerified": false
@@ -594,7 +552,6 @@
     "to": 1255,
     "importance": 3,
     "desc": "チンギス=ハンの孫。ヨーロッパ遠征を行い（ワールシュタットの戦い）、キプチャク=ハン国を建てた。",
-    "verified": false,
     "uncertain": true,
     "memo": "ジョチ家の当主としては1227年から",
     "descVerified": false
@@ -608,7 +565,6 @@
     "to": 1265,
     "importance": 3,
     "desc": "モンケの弟。バグダードを落としてアッバース朝を滅ぼし、イル=ハン国を建てた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -622,7 +578,6 @@
     "to": 1304,
     "importance": 3,
     "desc": "イスラームに改宗して国教とし、ラシード=アッディーンを宰相に用いて改革を行った。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -635,7 +590,6 @@
     "to": 1405,
     "importance": 3,
     "desc": "西チャガタイ=ハン国から自立し、サマルカンドを都に大帝国を建てた。アンカラの戦いでオスマン帝国を破った。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -648,7 +602,6 @@
     "to": 1447,
     "importance": 2,
     "desc": "ティムールの子。都をヘラートに移し、学芸を保護した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -661,7 +614,6 @@
     "to": 1449,
     "importance": 2,
     "desc": "サマルカンドに天文台を建てた君主。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -674,7 +626,6 @@
     "to": 850,
     "importance": 2,
     "desc": "アンコール朝を開いた王。",
-    "verified": false,
     "uncertain": true,
     "memo": "在位年は諸説ある",
     "descVerified": false
@@ -687,7 +638,6 @@
     "to": 1150,
     "importance": 3,
     "desc": "アンコール朝の最盛期の王。アンコール=ワットを造営した。",
-    "verified": false,
     "uncertain": true,
     "memo": "在位年は諸説ある",
     "descVerified": false
@@ -700,7 +650,6 @@
     "to": 1218,
     "importance": 3,
     "desc": "大乗仏教を保護し、アンコール=トムを造営した。",
-    "verified": false,
     "uncertain": true,
     "memo": "在位年は諸説ある",
     "descVerified": false
@@ -714,7 +663,6 @@
     "to": 1028,
     "importance": 2,
     "desc": "李朝を開き、都を昇竜（ハノイ）に置いた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -728,7 +676,6 @@
     "to": 1433,
     "importance": 2,
     "desc": "明軍を追い出して黎朝を建てた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -741,7 +688,6 @@
     "to": 1497,
     "importance": 1,
     "desc": "チャンパーの都を落とし、黎朝の最盛期を築いた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -754,7 +700,6 @@
     "to": 1298,
     "importance": 3,
     "desc": "スコータイ朝の王。タイ文字を作り、上座部仏教を保護した。",
-    "verified": false,
     "uncertain": true,
     "memo": "在位年は諸説ある",
     "descVerified": false
@@ -767,7 +712,6 @@
     "to": 1077,
     "importance": 2,
     "desc": "パガン朝を開き、上座部仏教を広めた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -780,7 +724,6 @@
     "to": 1389,
     "importance": 2,
     "desc": "宰相ガジャ=マダとともにマジャパヒト王国の最盛期を築いた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -794,7 +737,6 @@
     "to": 647,
     "importance": 3,
     "desc": "北インドを統一し、仏教を保護した。唐の玄奘を厚くもてなした。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -807,7 +749,6 @@
     "to": 1014,
     "importance": 1,
     "desc": "チョーラ朝の勢力を広げ、スリランカに遠征した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -821,7 +762,6 @@
     "to": 1030,
     "importance": 3,
     "desc": "北インドにくり返し侵入し、寺院などの財宝を奪った。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -835,7 +775,6 @@
     "to": 1206,
     "importance": 2,
     "desc": "タラーインの戦いでラージプートの諸侯を破り、北インドを征服した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -850,7 +789,6 @@
     "title": "スルタン",
     "importance": 3,
     "desc": "ゴール朝の奴隷出身の将軍。デリーで即位して奴隷王朝を開き、クトゥブ=ミナールの建設を始めた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -864,7 +802,6 @@
     "title": "スルタン",
     "importance": 1,
     "desc": "モンゴルの侵入をしのぎ、デリー=スルタン朝の基礎を固めた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -878,7 +815,6 @@
     "title": "スルタン",
     "importance": 2,
     "desc": "モンゴルの侵入を退け、南インドまで遠征した。物価統制などの改革を行った。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -892,7 +828,6 @@
     "title": "スルタン",
     "importance": 2,
     "desc": "遷都や銅貨の発行など急な政策で国を混乱させた。イブン=バットゥータが仕えた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -905,7 +840,6 @@
     "to": 579,
     "importance": 3,
     "desc": "突厥と結んでエフタルを滅ぼし、ビザンツ帝国と争った。ササン朝の最盛期の王。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -918,7 +852,6 @@
     "to": 628,
     "importance": 2,
     "desc": "ビザンツ帝国に侵攻してエジプトまで奪ったが、反撃されて退いた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -932,7 +865,6 @@
     "title": "預言者",
     "importance": 3,
     "desc": "イスラーム教の創始者。メッカで神の啓示を受け、622年にメディナへ移住（ヒジュラ）し、630年にメッカを征服した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -946,7 +878,6 @@
     "title": "カリフ",
     "importance": 3,
     "desc": "最初のカリフ。アラビア半島を統一した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -961,7 +892,6 @@
     "title": "カリフ",
     "importance": 3,
     "desc": "第2代カリフ。シリア・エジプト・イラクを征服した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -975,7 +905,6 @@
     "title": "カリフ",
     "importance": 2,
     "desc": "第3代カリフ。『コーラン（クルアーン）』を現在の形にまとめさせた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -989,7 +918,6 @@
     "title": "カリフ",
     "importance": 3,
     "desc": "第4代カリフ。ムハンマドのいとこで娘婿。シーア派は彼と子孫を正しい指導者とする。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1003,7 +931,6 @@
     "title": "カリフ",
     "importance": 3,
     "desc": "ウマイヤ朝を開き、カリフの位を世襲とした。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1017,7 +944,6 @@
     "title": "カリフ",
     "importance": 2,
     "desc": "岩のドームを建て、アラビア語を公用語とし、独自の貨幣を作った。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1032,7 +958,6 @@
     "title": "カリフ",
     "importance": 2,
     "desc": "ウマイヤ朝を倒し、アッバース朝の初代カリフとなった。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1046,7 +971,6 @@
     "title": "カリフ",
     "importance": 3,
     "desc": "新しい都バグダードを建設した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1060,7 +984,6 @@
     "title": "カリフ",
     "importance": 3,
     "desc": "アッバース朝の最盛期のカリフ。『千夜一夜物語』にも登場する。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1074,7 +997,6 @@
     "title": "カリフ",
     "importance": 2,
     "desc": "「知恵の館」でギリシア語文献のアラビア語訳を進めた。",
-    "verified": false,
     "uncertain": true,
     "memo": "「知恵の館」の整備の時期は諸説ある",
     "descVerified": false
@@ -1088,7 +1010,6 @@
     "title": "スルタン",
     "importance": 3,
     "desc": "セルジューク朝を開き、1055年にバグダードに入ってカリフからスルタンの称号を受けた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1102,7 +1023,6 @@
     "title": "スルタン",
     "importance": 2,
     "desc": "マンジケルトの戦いでビザンツ皇帝を捕らえた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1116,7 +1036,6 @@
     "title": "スルタン",
     "importance": 2,
     "desc": "宰相ニザーム=アルムルクのもとでセルジューク朝の最盛期を築いた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1131,7 +1050,6 @@
     "title": "スルタン",
     "importance": 3,
     "desc": "アイユーブ朝を開き、1187年にイェルサレムを奪回した。第3回十字軍と戦った。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1145,7 +1063,6 @@
     "title": "スルタン",
     "importance": 3,
     "desc": "アイン=ジャールートの戦いでモンゴル軍を破り、アッバース家のカリフをカイロに迎えた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1158,7 +1075,6 @@
     "to": 1326,
     "importance": 2,
     "desc": "オスマン帝国を開いた。",
-    "verified": false,
     "uncertain": true,
     "memo": "即位の年は1299年ごろ",
     "descVerified": false
@@ -1172,7 +1088,6 @@
     "title": "スルタン",
     "importance": 2,
     "desc": "アドリアノープルを都とし、イェニチェリを整えたとされる。コソヴォの戦いの中で殺された。",
-    "verified": false,
     "uncertain": true,
     "memo": "イェニチェリの創設の時期は諸説ある",
     "descVerified": false
@@ -1186,7 +1101,6 @@
     "title": "スルタン",
     "importance": 3,
     "desc": "ニコポリスの戦いでヨーロッパの連合軍を破ったが、アンカラの戦いでティムールに敗れて捕らえられた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1200,7 +1114,6 @@
     "title": "スルタン",
     "importance": 3,
     "desc": "1453年にコンスタンティノープルを征服し、イスタンブルを都とした。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1215,7 +1128,6 @@
     "title": "皇帝",
     "importance": 3,
     "desc": "地中海の再統一をめざしてヴァンダル王国・東ゴート王国を滅ぼした。『ローマ法大全』を編纂させ、ハギア=ソフィア聖堂を再建した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1230,7 +1142,6 @@
     "title": "皇帝",
     "importance": 2,
     "desc": "ササン朝との戦いに勝ったが、アラブ軍にシリア・エジプトを奪われた。テマ制（軍管区制）を始めたとされる。",
-    "verified": false,
     "uncertain": true,
     "memo": "テマ制の始まりの時期は諸説ある",
     "descVerified": false
@@ -1244,7 +1155,6 @@
     "title": "皇帝",
     "importance": 2,
     "desc": "聖像禁止令（726年）を出し、ローマ教会との対立を深めた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1258,7 +1168,6 @@
     "title": "皇帝",
     "importance": 2,
     "desc": "第1次ブルガリア帝国を滅ぼした。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1273,7 +1182,6 @@
     "title": "皇帝",
     "importance": 2,
     "desc": "セルジューク朝に対抗するためローマ教皇に援軍を求め、十字軍のきっかけを作った。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1287,7 +1195,6 @@
     "title": "皇帝",
     "importance": 1,
     "desc": "コンスタンティノープルを奪回し、ビザンツ帝国を復活させた。",
-    "verified": false,
     "uncertain": true,
     "memo": "ニケーア帝国の皇帝としては1259年から",
     "descVerified": false
@@ -1301,7 +1208,6 @@
     "title": "皇帝",
     "importance": 1,
     "desc": "ビザンツ帝国最後の皇帝。コンスタンティノープル陥落の中で亡くなった。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1315,7 +1221,6 @@
     "title": "国王",
     "importance": 3,
     "desc": "フランク人を統一してメロヴィング朝を開き、カトリック（アタナシウス派）に改宗した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1329,7 +1234,6 @@
     "title": "宮宰",
     "importance": 3,
     "desc": "トゥール・ポワティエ間の戦いでイスラーム軍を撃退した宮宰。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1344,7 +1248,6 @@
     "title": "国王",
     "importance": 3,
     "desc": "カロリング朝を開き、ラヴェンナ地方を教皇に寄進した（ピピンの寄進）。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1359,7 +1262,6 @@
     "title": "国王・皇帝",
     "importance": 3,
     "desc": "西ヨーロッパの大部分を統一し、800年に教皇レオ3世から西ローマ皇帝の冠を受けた。カロリング=ルネサンスを起こした。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1374,7 +1276,6 @@
     "title": "皇帝",
     "importance": 1,
     "desc": "カール大帝の子。死後に王国が3つに分かれた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1388,7 +1289,6 @@
     "title": "皇帝",
     "importance": 1,
     "desc": "ヴェルダン条約で中部フランク王国とイタリアを得た。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1403,7 +1303,6 @@
     "title": "国王",
     "importance": 1,
     "desc": "ヴェルダン条約で西フランク王国を得た。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1417,7 +1316,6 @@
     "title": "国王",
     "importance": 1,
     "desc": "ザクセン朝を開いた東フランク王。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1432,7 +1330,6 @@
     "title": "国王",
     "importance": 3,
     "desc": "レヒフェルトの戦いでマジャール人を破った。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1447,7 +1344,6 @@
     "title": "皇帝",
     "importance": 3,
     "desc": "教皇から帝冠を受け、神聖ローマ帝国の始まりとなった。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1461,7 +1357,6 @@
     "title": "国王・皇帝",
     "importance": 3,
     "desc": "叙任権闘争で教皇グレゴリウス7世と争い、カノッサの屈辱（1077年）を受けた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1476,7 +1371,6 @@
     "title": "皇帝",
     "importance": 2,
     "desc": "イタリア政策を進めたが、ロンバルディア同盟に敗れた。第3回十字軍の途中で亡くなった。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1490,7 +1384,6 @@
     "title": "皇帝",
     "importance": 2,
     "desc": "シチリアで育ち、第5回十字軍で外交によりイェルサレムを回復した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1504,7 +1397,6 @@
     "title": "ドイツ王",
     "importance": 2,
     "desc": "大空位時代を終わらせたハプスブルク家の最初の国王。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1518,7 +1410,6 @@
     "title": "皇帝",
     "importance": 3,
     "desc": "金印勅書（1356年）で7人の選帝侯による皇帝選出を定めた。プラハ大学を創設した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1532,7 +1423,6 @@
     "title": "皇帝",
     "importance": 2,
     "desc": "コンスタンツ公会議を開き、教会大分裂を終わらせた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1546,7 +1436,6 @@
     "title": "教皇",
     "importance": 2,
     "desc": "カール大帝に西ローマ皇帝の冠を授けた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1560,7 +1449,6 @@
     "title": "教皇",
     "importance": 3,
     "desc": "教会改革を進め、聖職叙任権をめぐってハインリヒ4世を破門した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1574,7 +1462,6 @@
     "title": "教皇",
     "importance": 3,
     "desc": "クレルモン宗教会議（1095年）で十字軍を呼びかけた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1588,7 +1475,6 @@
     "title": "教皇",
     "importance": 3,
     "desc": "「教皇は太陽、皇帝は月」と述べたとされる、教皇権の絶頂期の教皇。第4回十字軍を呼びかけた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1602,7 +1488,6 @@
     "title": "教皇",
     "importance": 2,
     "desc": "フランス王フィリップ4世と争い、アナーニ事件で捕らえられた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1616,7 +1501,6 @@
     "title": "国王",
     "importance": 3,
     "desc": "カペー朝を開いた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1631,7 +1515,6 @@
     "title": "国王",
     "importance": 3,
     "desc": "イングランド王ジョンからノルマンディーなどを奪い、王権を強めた。第3回十字軍に参加した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1646,7 +1529,6 @@
     "title": "国王",
     "importance": 3,
     "desc": "第6回・第7回十字軍を行い、ルブルックをモンゴルに送った。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1661,7 +1543,6 @@
     "title": "国王",
     "importance": 3,
     "desc": "三部会を開いて教皇ボニファティウス8世と争い、教皇庁をアヴィニョンに移させた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1675,7 +1556,6 @@
     "title": "国王",
     "importance": 2,
     "desc": "ヴァロワ朝を開いた。イングランドとの百年戦争が始まった。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1689,7 +1569,6 @@
     "title": "国王",
     "importance": 3,
     "desc": "ジャンヌ=ダルクの活躍で即位し、百年戦争に勝った。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1703,7 +1582,6 @@
     "title": "国王",
     "importance": 1,
     "desc": "ブルゴーニュ公国の本領を併合し、王権を強めた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1717,7 +1595,6 @@
     "title": "国王",
     "importance": 1,
     "desc": "ナポリに侵入してイタリア戦争を始めた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1731,7 +1608,6 @@
     "title": "ウェセックス王",
     "importance": 2,
     "desc": "七王国をほぼ統一したウェセックスの王。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1746,7 +1622,6 @@
     "title": "ウェセックス王",
     "importance": 3,
     "desc": "デーン人の侵入を防ぎ、アングロ=サクソン人の王国を守った。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1761,7 +1636,6 @@
     "title": "国王",
     "importance": 3,
     "desc": "デンマーク王としてイングランドを征服し、デンマーク・ノルウェーも治めた（北海帝国）。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1775,7 +1649,6 @@
     "title": "国王",
     "importance": 1,
     "desc": "ウェセックス朝の最後の王。死後に王位争いが起き、ノルマン=コンクェストを招いた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1790,7 +1663,6 @@
     "title": "国王",
     "importance": 3,
     "desc": "ノルマンディー公。ヘースティングズの戦いに勝ってイングランドを征服し、ノルマン朝を開いた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1804,7 +1676,6 @@
     "title": "国王",
     "importance": 3,
     "desc": "プランタジネット朝を開き、フランスの西半分も領有した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1819,7 +1690,6 @@
     "title": "国王",
     "importance": 2,
     "desc": "第3回十字軍でサラディンと戦った。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1834,7 +1704,6 @@
     "title": "国王",
     "importance": 3,
     "desc": "フランスにある領地の多くを失い、1215年に大憲章（マグナ=カルタ）を認めさせられた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1848,7 +1717,6 @@
     "title": "国王",
     "importance": 2,
     "desc": "大憲章を無視して貴族と対立し、シモン=ド=モンフォールの反乱を受けた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1862,7 +1730,6 @@
     "title": "国王",
     "importance": 2,
     "desc": "模範議会（1295年）を開き、ウェールズを征服した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1876,7 +1743,6 @@
     "title": "国王",
     "importance": 3,
     "desc": "フランスの王位を主張して百年戦争を始めた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1890,7 +1756,6 @@
     "title": "国王",
     "importance": 1,
     "desc": "ワット=タイラーの乱を鎮めたが、のちに廃位された。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1904,7 +1769,6 @@
     "title": "国王",
     "importance": 2,
     "desc": "アザンクールの戦いに勝ち、トロワ条約でフランスの王位継承権を得た。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1918,7 +1782,6 @@
     "title": "国王",
     "importance": 1,
     "desc": "百年戦争に敗れ、バラ戦争の中で王位を失った。",
-    "verified": false,
     "uncertain": true,
     "memo": "1470〜71年に一時復位した",
     "descVerified": false
@@ -1932,7 +1795,6 @@
     "title": "国王",
     "importance": 1,
     "desc": "バラ戦争でヨーク朝を開いた。",
-    "verified": false,
     "uncertain": true,
     "memo": "1470〜71年に一時王位を失った",
     "descVerified": false
@@ -1946,7 +1808,6 @@
     "title": "国王",
     "importance": 1,
     "desc": "ヨーク朝最後の王。ボズワースの戦いでヘンリ7世に敗れた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1961,7 +1822,6 @@
     "title": "国王",
     "importance": 1,
     "desc": "バノックバーンの戦いでイングランド軍を破り、スコットランドの独立を守った。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1975,7 +1835,6 @@
     "title": "アミール",
     "importance": 2,
     "desc": "ウマイヤ家の生き残りで、イベリア半島に後ウマイヤ朝を建てた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -1989,7 +1848,6 @@
     "title": "カリフ",
     "importance": 2,
     "desc": "カリフを名のり（929年）、後ウマイヤ朝の最盛期を築いた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2003,7 +1861,6 @@
     "title": "国王",
     "importance": 1,
     "desc": "1085年にトレドを奪回したカスティリャ王。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2017,7 +1874,6 @@
     "title": "国王",
     "importance": 1,
     "desc": "アフリカ西岸の探検を進め、トルデシリャス条約を結んだ。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2031,7 +1887,6 @@
     "title": "国王",
     "importance": 2,
     "desc": "南イタリアとシチリアを合わせて両シチリア王国を建てた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2045,7 +1900,6 @@
     "title": "フィレンツェの指導者",
     "importance": 2,
     "desc": "メディチ家の当主。ボッティチェリらルネサンスの芸術家を保護した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2059,7 +1913,6 @@
     "title": "フィレンツェの指導者",
     "importance": 1,
     "desc": "銀行家として富を築き、フィレンツェの政治の実権をにぎった。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2074,7 +1927,6 @@
     "title": "公",
     "importance": 1,
     "desc": "領土を広げようとして、ナンシーの戦いで戦死した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2088,7 +1940,6 @@
     "title": "公",
     "importance": 1,
     "desc": "ノヴゴロドから南下してキエフを都とした。",
-    "verified": false,
     "uncertain": true,
     "memo": "年代は伝承による",
     "descVerified": false
@@ -2102,7 +1953,6 @@
     "title": "大公",
     "importance": 3,
     "desc": "ギリシア正教を国教とし、ビザンツ皇帝の妹と結婚した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2117,7 +1967,6 @@
     "title": "大公",
     "importance": 2,
     "desc": "法典を整え、キエフ公国の最盛期を築いた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2131,7 +1980,6 @@
     "title": "モスクワ大公",
     "importance": 1,
     "desc": "キプチャク=ハン国に取り入って大公の位を得、モスクワ発展の基礎を作った。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2146,7 +1994,6 @@
     "title": "モスクワ大公",
     "importance": 1,
     "desc": "クリコヴォの戦い（1380年）でキプチャク=ハン国の軍を破った。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2160,7 +2007,6 @@
     "title": "公",
     "importance": 2,
     "desc": "ピャスト朝の公。966年にキリスト教を受け入れた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2175,7 +2021,6 @@
     "title": "国王",
     "importance": 2,
     "desc": "国内を整え、クラクフ大学を創設した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2190,7 +2035,6 @@
     "title": "国王",
     "importance": 3,
     "desc": "リトアニア大公。ポーランド女王と結婚して両国の同君連合を作り、タンネンベルクの戦いでドイツ騎士団を破った。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2204,7 +2048,6 @@
     "title": "大公・国王",
     "importance": 1,
     "desc": "リトアニアを統一した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2218,7 +2061,6 @@
     "title": "国王",
     "importance": 2,
     "desc": "カトリックを受け入れ、ハンガリー王国を建てた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2233,7 +2075,6 @@
     "title": "国王",
     "importance": 2,
     "desc": "中央集権を進めてウィーンを占領し、ルネサンス文化を保護した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2247,7 +2088,6 @@
     "title": "国王・皇帝",
     "importance": 2,
     "desc": "セルビアの最盛期の王。皇帝を名のり、法典を定めた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2261,7 +2101,6 @@
     "title": "皇帝",
     "importance": 2,
     "desc": "第1次ブルガリア帝国の最盛期の君主。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2276,7 +2115,6 @@
     "title": "女王（摂政）",
     "importance": 3,
     "desc": "デンマーク・ノルウェー・スウェーデンを合わせ、カルマル同盟を作った。",
-    "verified": false,
     "uncertain": true,
     "memo": "正式な王位にはついていない",
     "descVerified": false
@@ -2291,7 +2129,6 @@
     "title": "国王",
     "importance": 1,
     "desc": "ノルウェーを統一した王。",
-    "verified": false,
     "uncertain": true,
     "memo": "年代は伝承による",
     "descVerified": false
@@ -2306,7 +2143,6 @@
     "title": "王",
     "importance": 1,
     "desc": "マリ王国を建てた。",
-    "verified": false,
     "uncertain": true,
     "memo": "年代は伝承による",
     "descVerified": false
@@ -2321,7 +2157,6 @@
     "title": "王",
     "importance": 3,
     "desc": "メッカ巡礼で大量の金を使い、マリ王国の富を世界に知らせた。",
-    "verified": false,
     "uncertain": true,
     "memo": "在位は1312〜37年ごろ",
     "descVerified": false
@@ -2335,7 +2170,6 @@
     "title": "王",
     "importance": 1,
     "desc": "ソンガイ王国を強大にし、トンブクトゥを占領した。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -2350,7 +2184,6 @@
     "title": "王",
     "importance": 2,
     "desc": "インカ帝国の領土を大きく広げ、都クスコを整えた。",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false

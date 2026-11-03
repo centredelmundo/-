@@ -8,7 +8,6 @@
     "importance": 2,
     "desc": "イシュトヴァーン1世がカトリックを受け入れて王となった",
     "acceptYears": [1001],
-    "verified": false,
     "uncertain": true,
     "memo": "1000年または1001年",
     "descVerified": false
@@ -21,7 +20,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "宋が遼に毎年絹と銀を贈ることで和平を結んだ",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -36,7 +34,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "紫式部が著した長編物語",
-    "verified": false,
     "uncertain": true,
     "memo": "1008年ごろには一部が読まれていた",
     "image": "ja:源氏物語",
@@ -51,7 +48,6 @@
     "regions": ["sea"],
     "importance": 2,
     "desc": "李公蘊がベトナムで王朝を開き、昇竜（ハノイ）を都とした",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -66,7 +62,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "詩人フィルドゥシーがイランの王や英雄を詠んだ民族叙事詩",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:シャー・ナーメ",
@@ -82,7 +77,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "デンマークの王子クヌートがイングランド王となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -95,7 +89,6 @@
     "regions": ["ee"],
     "importance": 1,
     "desc": "ビザンツ帝国に征服された",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -111,7 +104,6 @@
     "importance": 2,
     "desc": "イスラーム医学を集大成した書物。ヨーロッパでも医学の教科書として使われた",
     "acceptYears": [1025],
-    "verified": false,
     "uncertain": true,
     "memo": "完成は1020年代",
     "image": "ja:イブン・スィーナー",
@@ -126,7 +118,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "トルコ系の王朝がイラン東部で成立した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -139,7 +130,6 @@
     "regions": ["cn"],
     "importance": 2,
     "desc": "タングート人の李元昊が皇帝を名のった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -152,7 +142,6 @@
     "regions": ["wa", "sa"],
     "importance": 1,
     "desc": "セルジューク朝がガズナ朝を破った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -165,7 +154,6 @@
     "regions": ["sea"],
     "importance": 2,
     "desc": "ビルマ人の最初の統一王朝が成立した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -179,7 +167,6 @@
     "regions": ["ee", "ce"],
     "importance": 3,
     "desc": "ローマ教皇とコンスタンティノープル総主教が互いに破門し、ローマ=カトリック教会とギリシア正教会が分かれた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -193,7 +180,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "トゥグリル=ベクがブワイフ朝を追い出し、カリフからスルタンの称号を受けた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -206,7 +192,6 @@
     "regions": ["wa"],
     "importance": 2,
     "desc": "ベルベル人のイスラーム王朝が北アフリカで成立した",
-    "verified": false,
     "uncertain": true,
     "memo": "成立は1056年ごろ",
     "descVerified": false
@@ -221,7 +206,6 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "ロマネスク様式の代表的な聖堂",
-    "verified": false,
     "uncertain": true,
     "memo": "着工は1063年",
     "image": "ja:ピサ大聖堂",
@@ -237,7 +221,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "ノルマンディー公ウィリアムがイングランドを征服し、ノルマン朝を開いた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -252,7 +235,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "セルジューク朝の宰相がバグダードなどにつくったスンナ派の学院",
-    "verified": false,
     "uncertain": true,
     "memo": "バグダードの学院の開校は1067年とされる",
     "image": "ja:ニザーミーヤ学院",
@@ -268,7 +250,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "神宗のもとで王安石が富国強兵の改革を始めた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -281,7 +262,6 @@
     "regions": ["wa", "ee"],
     "importance": 3,
     "desc": "セルジューク朝がビザンツ帝国を破り、アナトリアにトルコ人が進出した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -294,7 +274,6 @@
     "regions": ["af"],
     "importance": 2,
     "desc": "ガーナ王国の都が攻められ、西アフリカのイスラーム化が進んだ",
-    "verified": false,
     "uncertain": true,
     "memo": "1076年ごろ",
     "descVerified": false
@@ -307,7 +286,6 @@
     "regions": ["ce"],
     "importance": 3,
     "desc": "破門された皇帝ハインリヒ4世が教皇に許しを求めた（叙任権闘争）",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -319,7 +297,6 @@
     "regions": ["wa"],
     "importance": 1,
     "desc": "セルジューク朝の一族がアナトリアに国を建てた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -334,7 +311,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "司馬光が編んだ編年体の歴史書",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:資治通鑑",
@@ -349,7 +325,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "カスティリャ王がイスラーム勢力からトレドを奪回した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -362,7 +337,6 @@
     "regions": ["jp"],
     "importance": 1,
     "desc": "白河上皇が上皇として政治を行った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -375,7 +349,6 @@
     "regions": ["we"],
     "importance": 1,
     "desc": "ウィリアム1世が作らせた土地台帳",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -389,7 +362,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "法学で知られるヨーロッパ最古の大学",
-    "verified": false,
     "uncertain": true,
     "memo": "創立の年は1088年とされる",
     "image": "ja:ボローニャ大学",
@@ -404,7 +376,6 @@
     "regions": ["ce", "we"],
     "importance": 3,
     "desc": "教皇ウルバヌス2世が聖地イェルサレムの回復を呼びかけた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -419,7 +390,6 @@
     "regions": ["wa", "we", "ce"],
     "importance": 3,
     "desc": "1099年にイェルサレムを占領し、イェルサレム王国を建てた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false

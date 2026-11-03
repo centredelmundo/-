@@ -8,7 +8,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "節度使の朱全忠が唐を滅ぼして後梁を建て、五代十国の時代が始まった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -21,7 +20,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "北アフリカでイスマーイール派の王朝が建国され、カリフを名のった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -36,7 +34,6 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "フランスに建てられた修道院。教会改革運動の中心となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "image": "ja:クリュニー修道院",
@@ -51,7 +48,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "ノルマン人の首長ロロがフランス王から北フランスの地を与えられた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -65,7 +61,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "耶律阿保機が契丹の諸部族を統一し、皇帝となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -78,7 +73,6 @@
     "regions": ["kr"],
     "importance": 3,
     "desc": "王建が開城を都に国を建てた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -91,7 +85,6 @@
     "regions": ["kr"],
     "importance": 2,
     "desc": "遼に滅ぼされた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -104,7 +97,6 @@
     "regions": ["we"],
     "importance": 2,
     "desc": "アブド=アッラフマーン3世がカリフを名のり、3人のカリフが並び立った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -116,7 +108,6 @@
     "regions": ["wa"],
     "importance": 2,
     "desc": "イラン系のシーア派の王朝が成立した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -129,7 +120,6 @@
     "regions": ["kr"],
     "importance": 1,
     "desc": "新羅が高麗に降った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -143,7 +133,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "後晋の石敬瑭が遼の援助で皇帝となり、北京周辺の16州を遼にゆずった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -156,7 +145,6 @@
     "regions": ["kr"],
     "importance": 2,
     "desc": "高麗が後百済を滅ぼし、半島を再統一した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -169,7 +157,6 @@
     "regions": ["ia"],
     "importance": 2,
     "desc": "トルコ人の王朝が中央アジアに成立し、のちにイスラームを受け入れた",
-    "verified": false,
     "uncertain": true,
     "memo": "成立の年は840年ごろ・940年ごろなど諸説ある",
     "descVerified": false
@@ -184,7 +171,6 @@
     "importance": 3,
     "desc": "ブワイフ朝がバグダードに入り、大アミールとして実権をにぎった。軍人に土地の徴税権を与えるイクター制を始めた",
     "acceptYears": [945],
-    "verified": false,
     "uncertain": true,
     "memo": "945年とする資料もある",
     "descVerified": false
@@ -197,7 +183,6 @@
     "regions": ["ce"],
     "importance": 2,
     "desc": "東フランク王オットー1世がマジャール人を破った",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -211,7 +196,6 @@
     "regions": ["cn"],
     "importance": 3,
     "desc": "後周の武将の趙匡胤が帝位について国を建てた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -225,7 +209,6 @@
     "regions": ["ce"],
     "importance": 3,
     "desc": "オットー1世が教皇から帝冠を受けた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -238,7 +221,6 @@
     "regions": ["ee"],
     "importance": 2,
     "desc": "ポーランドの公ミェシュコ1世がカトリックを受け入れた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -252,7 +234,6 @@
     "regions": ["wa"],
     "importance": 3,
     "desc": "エジプトを征服し、新しい都カイロを建設した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -268,7 +249,6 @@
     "importance": 2,
     "desc": "カイロに建てられたモスク兼学院。のちにスンナ派の最高学府となった",
     "acceptYears": [972],
-    "verified": false,
     "uncertain": true,
     "memo": "972年の完成とする資料もある",
     "image": "ja:アズハル・モスク",
@@ -284,7 +264,6 @@
     "regions": ["cn"],
     "importance": 2,
     "desc": "科挙の最終試験を皇帝自らが行うようになった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -297,7 +276,6 @@
     "regions": ["sa"],
     "importance": 1,
     "desc": "アフガニスタンにトルコ系のイスラーム王朝が成立した",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -310,7 +288,6 @@
     "regions": ["cn"],
     "importance": 2,
     "desc": "北漢を滅ぼし、中国統一を完成させた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -323,7 +300,6 @@
     "regions": ["we"],
     "importance": 3,
     "desc": "西フランクのカロリング家が絶え、ユーグ=カペーが王となった",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -337,7 +313,6 @@
     "importance": 3,
     "desc": "ウラディミル1世がギリシア正教を国教とした",
     "acceptYears": [989],
-    "verified": false,
     "uncertain": true,
     "memo": "989年とする資料もある",
     "descVerified": false
@@ -350,7 +325,6 @@
     "regions": ["ia"],
     "importance": 2,
     "desc": "カラハン朝に滅ぼされた",
-    "verified": false,
     "uncertain": false,
     "memo": "",
     "descVerified": false

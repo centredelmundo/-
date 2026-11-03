@@ -1,4 +1,4 @@
-// データ確認：用語集などで年号・概要・画像を確かめて「確認した」を付ける。修正もここで。
+// データ確認：年号（要確認の印）・概要・画像を確かめ、概要と画像には「確認した」を付ける。修正もここで。
 import { $, $$, esc, fmtYear, fmtSpan, download, toast, today, formatJson, debounce } from '../core/util.js';
 import { base } from '../core/normalize.js';
 import { load, save } from '../core/store.js';
@@ -7,9 +7,10 @@ import { badges } from './common.js';
 import { fillImage, ywLink } from './terms.js';
 
 const KIND = { event: '出来事', polity: '王朝・国家', ruler: '人物' };
-// 何を確かめるか：年号（用語集）・概要（1〜2文の説明）・画像（文化史の作品・建築の写真）
+// 何を確かめるか：年号（要確認の印と修正）・概要（1〜2文の説明）・画像（文化史の作品・建築の写真）
+// 年号の「用語集で確認」の印は、世界史の窓との照合を終えたので廃止した（年号は要確認の印だけ）
 const TARGET = {
-  year: { label: '年号', flag: 'verified', done: '用語集で確認済み', btn: '確認した' },
+  year: { label: '年号', flag: null, done: '要確認の印', btn: null },
   desc: { label: '概要', flag: 'descVerified', done: '概要を確認済み', btn: '概要を確認した' },
   image: { label: '画像', flag: 'imageVerified', done: '画像を確認済み', btn: '画像を確認した' }
 };
@@ -17,7 +18,7 @@ let S = null;
 let observer = null;
 
 export function render(app, el, param) {
-  S = { app, el, filter: 'todo', kind: 'all', target: 'year', q: '', open: null, limit: 120 };
+  S = { app, el, filter: 'unc', kind: 'all', target: 'year', q: '', open: null, limit: 120 };
   if (param) { S.filter = 'all'; S.open = decodeURIComponent(param); }
   el.innerHTML = `
   <div class="page narrow">
@@ -41,7 +42,12 @@ export function render(app, el, param) {
     <div class="panel stack" id="dcExport"></div>
   </div>`;
   const root = el.firstElementChild;
-  $$('#dcTarget button', root).forEach(c => c.addEventListener('click', () => { S.target = c.dataset.t; if (S.target !== 'year' && S.filter === 'unc') S.filter = 'todo'; S.limit = 120; draw(); }));
+  $$('#dcTarget button', root).forEach(c => c.addEventListener('click', () => {
+    S.target = c.dataset.t;
+    if (S.target !== 'year' && S.filter === 'unc') S.filter = 'todo';
+    if (S.target === 'year' && (S.filter === 'todo' || S.filter === 'done')) S.filter = 'unc';
+    S.limit = 120; draw();
+  }));
   $$('#dcFilter .chip', root).forEach(c => c.addEventListener('click', () => { S.filter = c.dataset.f; S.limit = 120; draw(); }));
   $$('#dcKind button', root).forEach(c => c.addEventListener('click', () => { S.kind = c.dataset.k; S.limit = 120; draw(); }));
   $('#dcSearch', root).addEventListener('input', debounce(e => { S.q = e.target.value; S.limit = 120; draw(); }, 150));
@@ -63,22 +69,23 @@ const inTarget = x => (S.target === 'image' ? !!x.image : S.target === 'desc' ? 
 function draw() {
   const { app, el } = S, db = app.db, T = TARGET[S.target];
   const all = records().filter(inTarget);
-  const doneN = all.filter(x => x[T.flag]).length;
+  const doneN = all.filter(x => (T.flag ? x[T.flag] : x.uncertain)).length;
   $('#dcDoneLabel', el).textContent = T.done;
   $('#dcDone', el).textContent = doneN; $('#dcAll', el).textContent = all.length;
   $('#dcBar', el).style.width = (all.length ? doneN / all.length * 100 : 0) + '%';
+  $('#dcBar', el).parentElement.style.display = T.flag ? '' : 'none';
   $('#dcHelp', el).innerHTML = S.target === 'year'
-    ? 'AIが入れた年代はすべて「未確認」から始まります。<span class="badge b-warn">要確認</span>は、AIが年に自信がない・説が分かれると判断したもの（理由はメモ）。用語集で確かめたら「確認した」を押してください。チェックはこのブラウザに保存され、下の「書き出す」でJSONファイルに反映できます。'
+    ? '年代は世界史の窓と照らし合わせてあります。<span class="badge b-warn">要確認</span>は、説が分かれる・数え方がちがう年があるもの（理由と世界史の窓の年はメモ）。年を直すときは「修正」を押してください。修正はこのブラウザに保存され、下の「書き出す」でJSONファイルに反映できます。'
     : S.target === 'desc'
       ? '概要（クイズの解答後に用語をタップすると出る1〜2文の説明）を確かめます。AIが自分の言葉で書いたもので、まだ確認されていません。「世界史の窓で調べる」で照らし合わせ、正しければ「概要を確認した」を、直すときは「修正」を押してください。'
       : '文化史の作品・建築の写真を確かめます。写真と作者・ライセンスは、表示するときに Wikimedia から取得しています。正しい作品・建築の写真なら「画像を確認した」を、ちがう場合は「修正」で記事名（例：ja:落穂拾い (ミレー)）かファイル名（例：File:○○.jpg）を変えてください。';
   $$('#dcTarget button', el).forEach(c => c.classList.toggle('on', c.dataset.t === S.target));
-  $$('#dcFilter .chip', el).forEach(c => { c.classList.toggle('on', c.dataset.f === S.filter); c.hidden = c.dataset.f === 'unc' && S.target !== 'year'; });
+  $$('#dcFilter .chip', el).forEach(c => { c.classList.toggle('on', c.dataset.f === S.filter); c.hidden = S.target === 'year' ? (c.dataset.f === 'todo' || c.dataset.f === 'done') : c.dataset.f === 'unc'; });
   $$('#dcKind button', el).forEach(c => c.classList.toggle('on', c.dataset.k === S.kind));
   const q = base(S.q);
   const f = T.flag;
   let list = all.filter(x => (S.kind === 'all' || x.kind === S.kind)
-    && (S.filter === 'all' || (S.filter === 'todo' && !x[f]) || (S.filter === 'unc' && x.uncertain && !x[f]) || (S.filter === 'done' && x[f]) || (S.filter === 'changed' && x._changed))
+    && (S.filter === 'all' || (S.filter === 'todo' && f && !x[f]) || (S.filter === 'unc' && x.uncertain) || (S.filter === 'done' && f && x[f]) || (S.filter === 'changed' && x._changed))
     && (!q || base(db.recordTitle(x)).includes(q) || String(db.recordYear(x)).includes(q) || (S.target === 'desc' && base(x.desc || '').includes(q))));
   if (S.open) list = list.sort((a, b) => (b.key === S.open) - (a.key === S.open));
   const limit = S.target === 'image' ? Math.min(S.limit, 40) : S.limit;
@@ -111,7 +118,7 @@ function row(x) {
   const yearTxt = b != null && b !== a ? fmtSpan(a, b) : fmtYear(a);
   const regs = x.kind === 'event' ? x.regions.map(r => db.regionById(r)?.name || r).join('・') : db.regionById(x.region)?.name || '';
   const editing = S.open === x.key && S.editing;
-  const on = x[T.flag];
+  const on = T.flag ? x[T.flag] : false;
   let extra = '';
   if (S.target === 'desc') extra = `<div class="dc-desc">${x.desc ? esc(x.desc) : '<span class="muted">（概要なし）</span>'}</div><a class="small" href="${ywLink(db.recordTitle(x))}" target="_blank" rel="noopener">世界史の窓で調べる</a>`;
   if (S.target === 'image') extra = `<figure class="qimg dc-img" data-dc-img data-key="${esc(x.key)}"><div class="img-msg">画像を読み込み中…</div></figure><div class="meta">画像の指定：${esc(x.image || '')}</div>`;
@@ -119,7 +126,7 @@ function row(x) {
   return `<li data-key="${esc(x.key)}"${S.open === x.key ? ' style="background:var(--ai-soft)"' : ''}>
     <span class="y">${yearTxt}</span>
     <span><span>${esc(db.recordTitle(x))}</span>${badges(x)}${x._changed ? '<span class="badge b-gray">変更あり</span>' : ''}<br><span class="meta">${KIND[x.kind]} ・ ${esc(regs)} ・ ${esc(x._file)}</span>${extra}</span>
-    <span class="acts"><button class="btn small${on ? ' done' : ''}" type="button" data-act="verify">${on ? '✓ 確認済み' : T.btn}</button><button class="btn small" type="button" data-act="edit">修正</button></span>
+    <span class="acts">${T.flag ? `<button class="btn small${on ? ' done' : ''}" type="button" data-act="verify">${on ? '✓ 確認済み' : T.btn}</button>` : ''}<button class="btn small" type="button" data-act="edit">修正</button></span>
     ${editing ? editForm(x) : ''}
   </li>`;
 }
@@ -129,7 +136,7 @@ function editForm(x) {
   return `<div class="edit-form">
     ${yearFields.map(([k, label]) => `<div class="field"><label for="ef-${k}">${label}</label><input type="text" inputmode="numeric" id="ef-${k}" value="${x[k] ?? ''}"></div>`).join('')}
     <label class="check"><input type="checkbox" id="ef-unc" ${x.uncertain ? 'checked' : ''}>要確認の印</label>
-    <div class="field wide"><label for="ef-memo">メモ（別の説、用語集のページなど）</label><input type="text" id="ef-memo" value="${esc(x.memo || '')}"></div>
+    <div class="field wide"><label for="ef-memo">メモ（別の説、世界史の窓の年など）</label><input type="text" id="ef-memo" value="${esc(x.memo || '')}"></div>
     <div class="field wide"><label for="ef-desc">概要（1〜2文）</label><textarea id="ef-desc" rows="3">${esc(x.desc || '')}</textarea></div>
     ${x.kind === 'event' ? `<div class="field wide"><label for="ef-image">画像の指定（文化史のみ・空欄で画像なし）</label><input type="text" id="ef-image" value="${esc(x.image || '')}" placeholder="ja:記事名 または File:ファイル名.jpg"></div>` : ''}
     <div class="q-actions wide"><button class="btn primary small" type="button" data-act="save">保存</button><button class="btn small" type="button" data-act="cancel">やめる</button>${x._changed ? '<button class="btn small danger" type="button" data-act="revert">このブラウザでの変更を取り消す</button>' : ''}</div>
@@ -143,7 +150,7 @@ function onListClick(e) {
   if (!x) return;
   const ov = load('verify', {});
   const act = btn.dataset.act;
-  if (act === 'verify') {
+  if (act === 'verify' && TARGET[S.target].flag) {
     const f = TARGET[S.target].flag;
     const o = { ...(ov[key] || {}) };
     o[f] = !x[f]; o.at = today();
