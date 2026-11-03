@@ -8,7 +8,7 @@
     "end": 1644,
     "color": "#E8C46B",
     "territory": [
-      { "year": 1500, "add": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs", "cn-jn", "cn-jx", "cn-hg", "cn-fj", "cn-gd", "cn-gx", "cn-hi", "cn-sc", "cn-gz", "cn-yn", "manchuria-s"] }
+      { "year": 1500, "add": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs", "cn-jn", "cn-zj", "cn-jx", "cn-hg", "cn-fj", "cn-gd", "cn-gx", "cn-hi", "cn-sc", "cn-gz", "cn-yn", "manchuria-s"] }
     ],
     "desc": "朱元璋（洪武帝）が南京で建てた漢人の王朝。永楽帝が北京に遷都した。北虜南倭に苦しみ、李自成の乱で滅亡した。",
     "importance": 3,
@@ -45,7 +45,7 @@
     "territory": [
       { "year": 1636, "add": ["manchuria", "manchuria-s"], "vassal": ["mongolia-in"], "note": "国号を清と改める（内モンゴルのチャハル部は1635年に服属）" },
       { "year": 1644, "add": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs"], "note": "李自成を破り北京に入る" },
-      { "year": 1645, "add": ["cn-jn", "cn-jx"], "contested": ["cn-hg", "cn-sc"], "note": "南京を占領" },
+      { "year": 1645, "add": ["cn-jn", "cn-zj", "cn-jx"], "contested": ["cn-hg", "cn-sc"], "note": "南京を占領" },
       { "year": 1646, "add": ["cn-fj"], "note": "福州を占領" },
       { "year": 1650, "add": ["cn-gd", "cn-gx", "cn-hi", "cn-hg"], "note": "広州・桂林を占領" },
       { "year": 1659, "add": ["cn-sc", "cn-gz", "cn-yn"], "note": "呉三桂らが雲南を平定" },
@@ -78,7 +78,7 @@
     "end": 1662,
     "color": "#F2D9A2",
     "territory": [
-      { "year": 1644, "contested": ["cn-jn", "cn-jx", "cn-fj", "cn-hg", "cn-gd", "cn-gx", "cn-hi", "cn-gz", "cn-yn", "cn-sc"], "note": "明の皇族が南京などで政権を立てる" }
+      { "year": 1644, "contested": ["cn-jn", "cn-zj", "cn-jx", "cn-fj", "cn-hg", "cn-gd", "cn-gx", "cn-hi", "cn-gz", "cn-yn", "cn-sc"], "note": "明の皇族が南京などで政権を立てる" }
     ],
     "desc": "明の滅亡後、華南で清に抵抗した明の皇族の政権。最後の永暦帝は1662年に処刑された。",
     "importance": 1,
@@ -112,7 +112,7 @@
     "color": "#C9A0DC",
     "territory": [
       { "year": 1851, "contested": ["cn-gx"], "note": "広西で挙兵" },
-      { "year": 1853, "contested": ["cn-jn", "cn-hg", "cn-jx"], "note": "南京を占領して首都（天京）とする" }
+      { "year": 1853, "contested": ["cn-jn", "cn-zj", "cn-hg", "cn-jx"], "note": "南京を占領して首都（天京）とする" }
     ],
     "desc": "洪秀全が拝上帝会をもとに建てた国。「滅満興漢」をかかげ、天朝田畝制度を発表した。南京（天京）が陥落して滅亡。",
     "importance": 3,
@@ -131,9 +131,9 @@
       [1949, "中華民国（台湾）"]
     ],
     "territory": [
-      { "year": 1912, "add": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs", "cn-jn", "cn-jx", "cn-hg", "cn-fj", "cn-gd", "cn-gx", "cn-hi", "cn-sc", "cn-gz", "cn-yn", "manchuria", "manchuria-s", "mongolia-in", "qinghai", "dzungaria", "tarim"], "note": "清の滅亡" },
+      { "year": 1912, "add": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs", "cn-jn", "cn-zj", "cn-jx", "cn-hg", "cn-fj", "cn-gd", "cn-gx", "cn-hi", "cn-sc", "cn-gz", "cn-yn", "manchuria", "manchuria-s", "mongolia-in", "qinghai", "dzungaria", "tarim"], "note": "清の滅亡" },
       { "year": 1945, "add": ["taiwan"], "note": "日本の降伏で台湾を回復" },
-      { "year": 1949, "remove": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs", "cn-jn", "cn-jx", "cn-hg", "cn-fj", "cn-gd", "cn-gx", "cn-hi", "cn-sc", "cn-gz", "cn-yn", "manchuria", "manchuria-s", "mongolia-in", "qinghai", "dzungaria", "tarim"], "note": "国共内戦に敗れ、台湾へ移る" }
+      { "year": 1949, "remove": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs", "cn-jn", "cn-zj", "cn-jx", "cn-hg", "cn-fj", "cn-gd", "cn-gx", "cn-hi", "cn-sc", "cn-gz", "cn-yn", "manchuria", "manchuria-s", "mongolia-in", "qinghai", "dzungaria", "tarim"], "note": "国共内戦に敗れ、台湾へ移る" }
     ],
     "desc": "辛亥革命で成立。孫文が臨時大総統、のち袁世凱が大総統となった。1928年に国民党の南京国民政府が全国をほぼ統一。1949年に台湾へ移った。",
     "importance": 3,
@@ -191,7 +191,7 @@
     "end": 2000,
     "color": "#E07A62",
     "territory": [
-      { "year": 1949, "add": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs", "cn-jn", "cn-jx", "cn-hg", "cn-fj", "cn-gd", "cn-gx", "cn-sc", "cn-gz", "cn-yn", "manchuria", "manchuria-s", "mongolia-in", "qinghai", "dzungaria", "tarim"], "note": "建国" },
+      { "year": 1949, "add": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs", "cn-jn", "cn-zj", "cn-jx", "cn-hg", "cn-fj", "cn-gd", "cn-gx", "cn-sc", "cn-gz", "cn-yn", "manchuria", "manchuria-s", "mongolia-in", "qinghai", "dzungaria", "tarim"], "note": "建国" },
       { "year": 1950, "add": ["cn-hi"], "contested": ["tibet"], "note": "海南島を占領し、チベットに進軍" },
       { "year": 1951, "add": ["tibet"], "note": "チベットを併合" }
     ],
@@ -214,7 +214,7 @@
       [1897, "大韓帝国"]
     ],
     "territory": [
-      { "year": 1500, "add": ["korea-n", "korea-s"] }
+      { "year": 1500, "add": ["korea-n", "korea-s", "korea-c", "korea-sw"] }
     ],
     "desc": "李成桂が建てた王朝。両班が支配層。16世紀末に豊臣秀吉の侵攻（壬辰・丁酉倭乱）、17世紀に後金・清の侵攻を受け、清の属国となった。",
     "importance": 3,
@@ -254,9 +254,9 @@
     "end": 2000,
     "color": "#6FB6C9",
     "territory": [
-      { "year": 1948, "add": ["korea-s"], "note": "建国" },
-      { "year": 1950, "contested": ["korea-s"], "note": "朝鮮戦争（〜1953年）" },
-      { "year": 1953, "add": ["korea-s"], "note": "休戦協定" }
+      { "year": 1948, "add": ["korea-s", "korea-c", "korea-sw"], "note": "建国" },
+      { "year": 1950, "contested": ["korea-s", "korea-c", "korea-sw"], "note": "朝鮮戦争（〜1953年）" },
+      { "year": 1953, "add": ["korea-s", "korea-c", "korea-sw"], "note": "休戦協定" }
     ],
     "desc": "朝鮮半島の南部に成立。李承晩が初代大統領。",
     "importance": 3,
@@ -297,14 +297,14 @@
       { "year": 1869, "add": ["ezo"], "note": "蝦夷地を北海道と改称" },
       { "year": 1879, "add": ["ryukyu"], "note": "琉球処分（沖縄県を設置）" },
       { "year": 1895, "colony": ["taiwan"], "note": "下関条約" },
-      { "year": 1905, "vassal": ["korea-n", "korea-s"], "contested": ["sakhalin"], "note": "ポーツマス条約で樺太南部を得る。第2次日韓協約で韓国を保護国化" },
-      { "year": 1910, "colony": ["korea-n", "korea-s"], "note": "韓国併合" },
-      { "year": 1937, "contested": ["cn-n", "cn-sd", "cn-sx", "cn-jn"], "note": "日中戦争。北京・上海・南京を占領" },
+      { "year": 1905, "vassal": ["korea-n", "korea-s", "korea-c", "korea-sw"], "contested": ["sakhalin"], "note": "ポーツマス条約で樺太南部を得る。第2次日韓協約で韓国を保護国化" },
+      { "year": 1910, "colony": ["korea-n", "korea-s", "korea-c", "korea-sw"], "note": "韓国併合" },
+      { "year": 1937, "contested": ["cn-n", "cn-sd", "cn-sx", "cn-jn", "cn-zj"], "note": "日中戦争。北京・上海・南京を占領" },
       { "year": 1938, "contested": ["cn-hn", "cn-hg", "cn-gd"], "note": "武漢・広州を占領" },
       { "year": 1940, "contested": ["tonkin"], "note": "北部仏印進駐" },
       { "year": 1941, "contested": ["annam-n", "annam", "cochinchina", "cambodia", "laos"], "note": "南部仏印進駐" },
       { "year": 1942, "contested": ["malaya", "singapore", "malacca", "penang", "sabah", "sarawak", "brunei", "luzon", "visayas", "mindanao", "burma-l", "burma-u", "arakan", "tenasserim", "shan", "java-w", "java-c", "java-e", "sumatra", "aceh", "kalimantan", "sulawesi", "moluccas", "lesser-sunda", "papua-w", "timor-e"], "note": "東南アジアを占領" },
-      { "year": 1945, "remove": ["taiwan", "korea-n", "korea-s", "sakhalin", "ryukyu", "cn-n", "cn-sd", "cn-sx", "cn-jn", "cn-hn", "cn-hg", "cn-gd", "tonkin", "annam-n", "annam", "cochinchina", "cambodia", "laos", "malaya", "singapore", "malacca", "penang", "sabah", "sarawak", "brunei", "luzon", "visayas", "mindanao", "burma-l", "burma-u", "arakan", "tenasserim", "shan", "java-w", "java-c", "java-e", "sumatra", "aceh", "kalimantan", "sulawesi", "moluccas", "lesser-sunda", "papua-w", "timor-e"], "note": "敗戦" },
+      { "year": 1945, "remove": ["taiwan", "korea-n", "korea-s", "korea-c", "korea-sw", "sakhalin", "ryukyu", "cn-n", "cn-sd", "cn-sx", "cn-jn", "cn-zj", "cn-hn", "cn-hg", "cn-gd", "tonkin", "annam-n", "annam", "cochinchina", "cambodia", "laos", "malaya", "singapore", "malacca", "penang", "sabah", "sarawak", "brunei", "luzon", "visayas", "mindanao", "burma-l", "burma-u", "arakan", "tenasserim", "shan", "java-w", "java-c", "java-e", "sumatra", "aceh", "kalimantan", "sulawesi", "moluccas", "lesser-sunda", "papua-w", "timor-e"], "note": "敗戦" },
       { "year": 1972, "add": ["ryukyu"], "note": "沖縄返還" }
     ],
     "desc": "参考として表示。",
@@ -1438,7 +1438,7 @@
     "end": 1922,
     "color": "#5FA873",
     "territory": [
-      { "year": 1500, "add": ["anatolia-w", "anatolia-e", "thrace-e", "bulgaria", "rumelia-e", "macedonia", "macedonia-gr", "thessaly", "epirus", "greece-s", "thrace-w", "serbia", "kosovo", "bosnia", "albania", "aegean"], "vassal": ["wallachia", "moldavia", "bessarabia", "crimea", "montenegro", "pontic"], "contested": ["don"] },
+      { "year": 1500, "add": ["anatolia-w", "anatolia-c", "anatolia-e", "pontus", "thrace-e", "bulgaria", "rumelia-e", "macedonia", "macedonia-gr", "thessaly", "epirus", "greece-s", "thrace-w", "serbia", "kosovo", "bosnia", "albania", "aegean"], "vassal": ["wallachia", "moldavia", "bessarabia", "crimea", "montenegro", "pontic"], "contested": ["don"] },
       { "year": 1516, "add": ["syria", "lebanon", "palestine", "jordan"], "note": "マムルーク朝を破る" },
       { "year": 1517, "add": ["egypt"], "vassal": ["hejaz"], "note": "マムルーク朝を滅ぼし、メッカ・メディナの保護者となる" },
       { "year": 1520, "vassal": ["algeria"], "note": "アルジェの海賊（バルバロッサ）が服属", "uncertain": true },
@@ -1804,7 +1804,7 @@
     "color": "#6BB38B",
     "minor": true,
     "territory": [
-      { "year": 1920, "add": ["anatolia-w", "anatolia-e", "kars"], "contested": ["thrace-e"], "note": "トルコ大国民議会がアンカラで成立" },
+      { "year": 1920, "add": ["anatolia-w", "anatolia-c", "anatolia-e", "pontus", "kars"], "contested": ["thrace-e"], "note": "トルコ大国民議会がアンカラで成立" },
       { "year": 1922, "add": ["thrace-e"], "note": "ギリシア軍を退け、スルタン制を廃止" }
     ],
     "desc": "ムスタファ=ケマルがアンカラで開いた大国民議会の政府。ギリシア軍を退けてスルタン制を廃止し、1923年にトルコ共和国を建てた。",
@@ -1822,7 +1822,7 @@
     "end": 2000,
     "color": "#6BB38B",
     "territory": [
-      { "year": 1923, "add": ["anatolia-w", "anatolia-e", "kars", "thrace-e"], "note": "ローザンヌ条約で国境が決まる" },
+      { "year": 1923, "add": ["anatolia-w", "anatolia-c", "anatolia-e", "pontus", "kars", "thrace-e"], "note": "ローザンヌ条約で国境が決まる" },
       { "year": 1939, "add": ["hatay"], "note": "ハタイを編入" },
       { "year": 1974, "contested": ["cyprus"], "note": "キプロス北部に派兵" }
     ],
@@ -2388,7 +2388,7 @@
       [1707, "イギリス"]
     ],
     "territory": [
-      { "year": 1500, "add": ["england"] },
+      { "year": 1500, "add": ["england", "wales"] },
       { "year": 1541, "contested": ["ireland"], "note": "ヘンリ8世がアイルランド王を称する" },
       { "year": 1603, "add": ["ireland", "ulster"], "vassal": ["scotland"], "note": "ジェームズ1世のもとで同君連合" },
       { "year": 1607, "contested": ["virginia"], "note": "ジェームズタウン" },
@@ -2602,7 +2602,7 @@
     "end": 2000,
     "color": "#7F9BDB",
     "territory": [
-      { "year": 1500, "add": ["france"] },
+      { "year": 1500, "add": ["france", "normandy", "brittany", "anjou", "poitou", "guyenne", "languedoc", "provence", "dauphine", "burgundy", "champagne", "auvergne"] },
       { "year": 1559, "add": ["moselle"], "note": "メス・トゥール・ヴェルダンを確保（カトー=カンブレジ条約）" },
       { "year": 1604, "contested": ["acadia"], "note": "アカディアに植民", "uncertain": true },
       { "year": 1608, "contested": ["laurentia"], "note": "ケベックを建設（ヌーヴェル=フランス）" },
@@ -2795,7 +2795,7 @@
     "end": 2000,
     "color": "#D88FD0",
     "territory": [
-      { "year": 1500, "add": ["spain", "canaries", "sicily", "sardinia", "roussillon", "gibraltar"], "contested": ["santo-domingo", "haiti"], "note": "カトリック両王のもとで統一" },
+      { "year": 1500, "add": ["spain", "asturias", "castile-old", "navarre", "aragon", "catalonia", "valencia", "baleares", "murcia", "andalusia", "granada", "canaries", "sicily", "sardinia", "roussillon", "gibraltar"], "contested": ["santo-domingo", "haiti"], "note": "カトリック両王のもとで統一" },
       { "year": 1509, "colony": ["jamaica"] },
       { "year": 1504, "add": ["naples"], "note": "ナポリ王国を得る" },
       { "year": 1511, "colony": ["cuba", "puerto-rico"], "note": "キューバ・プエルトリコ" },
@@ -2828,16 +2828,16 @@
       { "year": 1769, "contested": ["california"], "note": "サンディエゴを建設" },
       { "year": 1783, "colony": ["florida"] },
       { "year": 1800, "remove": ["louisiana", "arkansas-la"] },
-      { "year": 1808, "contested": ["spain"], "note": "ナポレオンの侵攻" },
+      { "year": 1808, "contested": ["spain", "asturias", "castile-old", "navarre", "aragon", "catalonia", "valencia", "baleares", "murcia", "andalusia", "granada"], "note": "ナポレオンの侵攻" },
       { "year": 1810, "contested": ["mexico", "colombia", "venezuela", "la-plata", "chile"], "note": "ラテンアメリカの独立運動" },
-      { "year": 1813, "add": ["spain"] },
+      { "year": 1813, "add": ["spain", "asturias", "castile-old", "navarre", "aragon", "catalonia", "valencia", "baleares", "murcia", "andalusia", "granada"] },
       { "year": 1819, "remove": ["florida"], "note": "アダムズ=オニス条約" },
       { "year": 1821, "remove": ["mexico", "mexico-n", "yucatan", "guatemala", "central-am", "texas", "california", "southwest", "peru", "colombia", "venezuela", "ecuador"], "note": "ラテンアメリカの独立" },
       { "year": 1825, "remove": ["bolivia", "chile", "la-plata", "paraguay"] },
       { "year": 1884, "contested": ["w-sahara"], "note": "西サハラ" },
       { "year": 1898, "remove": ["cuba", "puerto-rico", "luzon", "visayas", "mindanao"], "note": "米西戦争" },
-      { "year": 1936, "contested": ["spain"], "note": "スペイン内戦（〜1939年）" },
-      { "year": 1939, "add": ["spain"] },
+      { "year": 1936, "contested": ["spain", "asturias", "castile-old", "navarre", "aragon", "catalonia", "valencia", "baleares", "murcia", "andalusia", "granada"], "note": "スペイン内戦（〜1939年）" },
+      { "year": 1939, "add": ["spain", "asturias", "castile-old", "navarre", "aragon", "catalonia", "valencia", "baleares", "murcia", "andalusia", "granada"] },
       { "year": 1976, "remove": ["w-sahara"] }
     ],
     "desc": "16世紀には「太陽の沈まぬ国」と呼ばれたが、17世紀から衰えた。",
@@ -3269,11 +3269,11 @@
       { "year": 1919, "remove": ["alsace", "moselle", "poland-gp", "pomerelia", "namibia", "togo", "cameroon", "tanganyika", "rwanda-burundi", "new-guinea-e"], "note": "ヴェルサイユ条約" },
       { "year": 1938, "add": ["austria", "bohemia"], "note": "オーストリアを併合、ズデーテン地方を併合（翌年ベーメン・メーレンを保護領に）" },
       { "year": 1939, "add": ["poland-gp", "pomerelia"], "vassal": ["slovakia"], "contested": ["poland-mz", "poland-lu", "galicia-w"], "note": "ポーランドに侵攻" },
-      { "year": 1940, "contested": ["netherlands", "belgium", "liege", "luxembourg", "denmark", "norway", "france", "alsace", "moselle"], "note": "西部戦線" },
+      { "year": 1940, "contested": ["netherlands", "belgium", "liege", "luxembourg", "denmark", "norway", "france", "normandy", "brittany", "anjou", "poitou", "guyenne", "languedoc", "provence", "dauphine", "burgundy", "champagne", "auvergne", "alsace", "moselle"], "note": "西部戦線" },
       { "year": 1941, "contested": ["serbia", "greece-s", "macedonia-gr", "belarus", "ukraine-rb", "ukraine-lb", "lithuania", "latgale", "livonia", "courland", "estonia"], "note": "バルカン・独ソ戦" },
       { "year": 1942, "contested": ["smolensk", "chernozem", "sloboda", "zaporozhia", "pontic", "crimea", "kuban"] },
       { "year": 1943, "remove": ["smolensk", "chernozem", "sloboda", "kuban"] },
-      { "year": 1944, "remove": ["belarus", "ukraine-rb", "ukraine-lb", "zaporozhia", "pontic", "crimea", "france", "alsace", "moselle", "belgium", "liege", "greece-s", "macedonia-gr", "serbia", "lithuania", "latgale", "livonia", "courland", "estonia", "poland-lu", "galicia-w"] }
+      { "year": 1944, "remove": ["belarus", "ukraine-rb", "ukraine-lb", "zaporozhia", "pontic", "crimea", "france", "normandy", "brittany", "anjou", "poitou", "guyenne", "languedoc", "provence", "dauphine", "burgundy", "champagne", "auvergne", "alsace", "moselle", "belgium", "liege", "greece-s", "macedonia-gr", "serbia", "lithuania", "latgale", "livonia", "courland", "estonia", "poland-lu", "galicia-w"] }
     ],
     "desc": "プロイセン王ヴィルヘルム1世が皇帝となって成立。第一次世界大戦後に共和国となり、1933年にヒトラーのナチ党が政権をにぎった。",
     "importance": 3,
@@ -4059,9 +4059,9 @@
       { "year": 1864, "add": ["ionian"], "note": "イオニア諸島をイギリスから得る" },
       { "year": 1881, "add": ["thessaly"] },
       { "year": 1913, "add": ["epirus", "macedonia-gr", "crete", "aegean"], "note": "バルカン戦争" },
-      { "year": 1919, "contested": ["anatolia-w"], "note": "小アジアに出兵（ギリシア=トルコ戦争）" },
+      { "year": 1919, "contested": ["anatolia-w", "anatolia-c"], "note": "小アジアに出兵（ギリシア=トルコ戦争）" },
       { "year": 1920, "add": ["thrace-w"], "note": "ヌイイ条約" },
-      { "year": 1922, "remove": ["anatolia-w"], "note": "トルコに敗れる" },
+      { "year": 1922, "remove": ["anatolia-w", "anatolia-c"], "note": "トルコに敗れる" },
       { "year": 1941, "contested": ["greece-s", "macedonia-gr", "thessaly"], "note": "ドイツが占領" },
       { "year": 1944, "add": ["greece-s", "macedonia-gr", "thessaly"] },
       { "year": 1947, "add": ["aegean"], "note": "ドデカネス諸島" }
@@ -4241,9 +4241,9 @@
       { "year": 1867, "add": ["alaska"], "note": "ロシアからアラスカを買収" },
       { "year": 1898, "add": ["hawaii"], "vassal": ["cuba"], "colony": ["puerto-rico", "luzon", "visayas", "mindanao"], "note": "ハワイ併合・米西戦争" },
       { "year": 1902, "remove": ["cuba"], "note": "キューバ独立（プラット条項）" },
-      { "year": 1945, "contested": ["korea-s", "ryukyu"], "note": "朝鮮南部・沖縄を占領" },
+      { "year": 1945, "contested": ["korea-s", "korea-c", "korea-sw", "ryukyu"], "note": "朝鮮南部・沖縄を占領" },
       { "year": 1946, "remove": ["luzon", "visayas", "mindanao"], "note": "フィリピン独立" },
-      { "year": 1948, "remove": ["korea-s"] },
+      { "year": 1948, "remove": ["korea-s", "korea-c", "korea-sw"] },
       { "year": 1972, "remove": ["ryukyu"], "note": "沖縄返還" }
     ],
     "desc": "独立宣言で成立。19世紀に西へ領土を広げ（西部開拓）、20世紀に超大国となった。",
