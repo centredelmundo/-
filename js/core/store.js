@@ -34,8 +34,9 @@ export const DEFAULT_SETTINGS = {
   strict: false,         // 記述式を「きびしめ」で採点
   theme: 'auto',         // auto / light / dark
   sheet: false,          // 赤シート
+  collapsed: [],         // ヨコ年表で出来事を閉じている地域ID
   mapView: 'auto',
-  quiz: { from: null, to: null, count: 10, modes: ['cross', 'ruler', 'year', 'term', 'order', 'choice'], minImportance: 1, verifiedOnly: false, groups: [] }
+  quiz: { from: null, to: null, count: 10, modes: ['cross', 'ruler', 'year', 'term', 'order', 'choice'], minImportance: 1, verifiedOnly: false, cultureOnly: false, groups: [] }
 };
 
 export function loadSettings() {

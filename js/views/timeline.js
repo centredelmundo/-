@@ -48,7 +48,10 @@ export function render(app, el) {
         <div class="mapbox" id="tlMap"></div>
         <div class="legend" id="tlLegend"></div>
       </div>
-      <div class="cards wide" id="tlCards"></div>
+      <div class="cards-col">
+        <div class="fold-bar"><span class="fold-hint">地域名をタップすると出来事を開閉</span><button class="btn small" type="button" data-fold-all="open">すべて開く</button><button class="btn small" type="button" data-fold-all="close">すべて閉じる</button></div>
+        <div class="cards wide" id="tlCards"></div>
+      </div>
     </div>
     <details class="more" id="tlGanttBox" open><summary>王朝・政体の移り変わり（帯をタップするとその年へ）</summary><div class="gantt-box" id="tlGantt"></div></details>
   </div>`;
@@ -60,12 +63,19 @@ export function render(app, el) {
   wireSheet(cards);
   cards.classList.toggle('sheet-on', !!app.settings.sheet);
   cards.addEventListener('click', e => {
+    const fold = e.target.closest('[data-fold]');
+    if (fold) { toggleFold(app, fold.dataset.fold, fold.closest('.rc')); return; }
     const row = e.target.closest('[data-ev]');
     if (row) { const ev = db.events.find(x => x.id === row.dataset.ev); if (ev) openEvent(app, ev); return; }
     const dyn = e.target.closest('[data-polity]');
     if (dyn) { const p = db.polityById.get(dyn.dataset.polity); if (p) openPolity(app, p, app.year); }
   });
   cards.addEventListener('keydown', e => { if (e.key === 'Enter') e.target.closest('[data-ev]')?.click(); });
+  $$('[data-fold-all]', el).forEach(btn => btn.addEventListener('click', () => {
+    const ids = btn.dataset.foldAll === 'close' ? db.regions.map(r => r.id) : [];
+    app.settings.collapsed = ids; app.saveSettings();
+    $$('.rc', cards).forEach(c => setFold(c, ids.includes(c.dataset.region)));
+  }));
 
   // 年の操作
   $$('[data-step]', el).forEach(btn => btn.addEventListener('click', () => app.setYear(app.year + Number(btn.dataset.step))));
@@ -112,6 +122,20 @@ export function render(app, el) {
     $('#tlMapCol', el).hidden = true;
   }
   update();
+}
+
+/** 地域の出来事を開閉する（設定に覚える） */
+function toggleFold(app, id, card) {
+  const set = new Set(app.settings.collapsed || []);
+  const close = !set.has(id);
+  if (close) set.add(id); else set.delete(id);
+  app.settings.collapsed = [...set]; app.saveSettings();
+  if (card) setFold(card, close);
+}
+function setFold(card, closed) {
+  card.classList.toggle('closed', closed);
+  const b = card.querySelector('[data-fold]');
+  if (b) { b.setAttribute('aria-expanded', String(!closed)); b.title = `タップで出来事を${closed ? '開く' : '閉じる'}`; }
 }
 
 function drawLegend(m) {

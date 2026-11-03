@@ -1,5 +1,6 @@
 // 画面どうしで共通の部品：地域カード、詳細シート、印、王朝の帯
 import { $, $$, esc, fmtSpan, fmtYear, yearText } from '../core/util.js';
+import { tt, fillImage, ywLink } from './terms.js';
 
 export const LOGO = '<svg viewBox="0 0 40 40" aria-hidden="true"><line x1="2" y1="20" x2="38" y2="20" style="stroke:var(--shu)" stroke-width="3.2" stroke-linecap="round"/><rect x="7" y="10.5" width="11" height="19" rx="2.6" fill="none" stroke="currentColor" stroke-width="2.8"/><rect x="22" y="10.5" width="11" height="19" rx="2.6" fill="none" stroke="currentColor" stroke-width="2.8"/></svg>';
 export const ICON = {
@@ -52,7 +53,9 @@ export function renderCards(app, y, w) {
     if (others.length) dyn += `<div class="dyn-minor">ほか：${others.map(({ polity, child }) => `<span data-polity="${esc(polity.id)}">${esc(child?.name || db.nameAt(polity, y))}</span>`).join('・')}</div>`;
     const list = evs.length ? `<ul class="evs">${evs.map(e => evRow(e, y, w)).join('')}</ul>` : '';
     const empty = !all.length && !evs.length ? '<div class="empty">この期間のデータなし</div>' : '';
-    return `<article class="rc" data-region="${reg.id}"><h3><span>${esc(reg.name)}${reg.reference ? '（参考）' : ''}</span><em>${evs.length ? evs.length + '件' : ''}</em></h3>${dyn}${list}${empty}</article>`;
+    const closed = (s.collapsed || []).includes(reg.id);
+    const head = `<h3><button type="button" class="rc-toggle" data-fold="${reg.id}" aria-expanded="${!closed}" title="タップで出来事を${closed ? '開く' : '閉じる'}"><span>${esc(reg.name)}${reg.reference ? '（参考）' : ''}</span><em>${evs.length ? '出来事 ' + evs.length + '件' : '出来事なし'}<i class="chev" aria-hidden="true"></i></em></button></h3>`;
+    return `<article class="rc${closed ? ' closed' : ''}" data-region="${reg.id}">${head}${dyn}${list}${empty}</article>`;
   }).join('');
 }
 
@@ -71,9 +74,9 @@ export function yokoPanel(app, y, w = 5, focusRegions = []) {
     const evs = db.events.filter(e => e.regions.some(r => g.regions.includes(r)) && e.year <= y + w && (e.end ?? e.year) >= y - w && e.importance >= 2)
       .sort((a, b) => b.importance - a.importance || Math.abs(a.year - y) - Math.abs(b.year - y)).slice(0, 2);
     const pols = g.regions.flatMap(r => db.politiesIn(r, y)).slice(0, 2)
-      .map(({ polity, child, rulers }) => esc((child?.name || db.nameAt(polity, y)) + (rulers.filter(r => r.importance >= 2)[0] ? `（${rulers.filter(r => r.importance >= 2)[0].name}）` : '')));
+      .map(({ polity, child, rulers }) => { const ru = rulers.filter(r => r.importance >= 2)[0]; return tt(child || polity, child?.name || db.nameAt(polity, y)) + (ru ? `（${tt(ru)}）` : ''); });
     if (!evs.length && !pols.length) return '';
-    const items = [...evs.map(e => `${fmtYear(e.year)} ${esc(e.title)}`), ...pols].slice(0, 3);
+    const items = [...evs.map(e => `${fmtYear(e.year)} ${tt(e)}`), ...pols].slice(0, 3);
     return `<li><b>${esc(g.name)}</b><span>${items.join('、')}</span></li>`;
   }).join('');
   return `<div class="yoko"><h4>同じころの世界（${yearText(y)}・前後${w}年）</h4><ul>${rows}</ul></div>`;
@@ -108,9 +111,10 @@ export function openEvent(app, e) {
   const html = `
     <div class="muted small">${esc(regs)} ・ ${'★'.repeat(e.importance)}</div>
     <h2>${esc(e.title)}${badges(e)}</h2>
+    ${e.image ? '<figure class="qimg" data-fill-img></figure>' : ''}
     <dl class="kv">
       <dt>年</dt><dd class="yr">${esc(when)}</dd>
-      ${e.desc ? `<dt>説明</dt><dd>${esc(e.desc)}</dd>` : ''}
+      ${e.desc ? `<dt>概要</dt><dd>${esc(e.desc)}<span class="small muted">（${e.descVerified ? '確認済み' : '概要は未確認'}）</span></dd>` : ''}
       ${e.answers.length ? `<dt>別の言い方</dt><dd>${e.answers.map(esc).join('、')}</dd>` : ''}
       ${e.memo ? `<dt>メモ</dt><dd>${esc(e.memo)}</dd>` : ''}
       <dt>確認</dt><dd>${e.verified ? '用語集で確認済み' : '用語集では未確認'}${e.uncertain ? '・年代に要確認の印あり' : ''}</dd>
@@ -120,9 +124,12 @@ export function openEvent(app, e) {
       <button class="btn primary" type="button" data-act="go">${yearText(e.year)}へ移動</button>
       <button class="btn" type="button" data-act="quiz">この出来事で練習</button>
       <button class="btn" type="button" data-act="star">${ICON.star.replace('<svg', '<svg width="16" height="16"')}苦手に追加</button>
+      <a class="btn" href="${ywLink(e.title)}" target="_blank" rel="noopener">世界史の窓で調べる</a>
       <a class="btn" href="#data/${encodeURIComponent(e.key)}">データ確認で開く</a>
     </div>`;
   openSheet(html, sheet => {
+    const fig = sheet.querySelector('[data-fill-img]');
+    if (fig) fillImage(fig, e, { reveal: true });
     sheet.addEventListener('click', ev => {
       const act = ev.target.closest('[data-act]')?.dataset.act;
       if (act === 'go') { closeSheet(); app.setYear(e.year); if (!location.hash.startsWith('#timeline') && !location.hash.startsWith('#map')) location.hash = '#timeline'; }
@@ -146,11 +153,11 @@ export function openPolity(app, p, y) {
     <dl class="kv">
       <dt>期間</dt><dd class="yr">${esc(periods)}</dd>
       ${rulers.length ? `<dt>${yearText(y)}</dt><dd>${rulers.map(r => `${esc(r.name)}（${fmtSpan(r.from, r.to)}）`).join('、')}</dd>` : ''}
-      ${p.desc ? `<dt>説明</dt><dd>${esc(p.desc)}</dd>` : ''}
+      ${p.desc ? `<dt>概要</dt><dd>${esc(p.desc)}<span class="small muted">（${p.descVerified ? '確認済み' : '概要は未確認'}）</span></dd>` : ''}
       ${p.memo ? `<dt>メモ</dt><dd>${esc(p.memo)}</dd>` : ''}
     </dl>
     ${notes ? `<div class="yoko"><h4>領土の変化（${yearText(y)}の前後30年）</h4><ul class="plainlist">${notes}</ul></div>` : ''}
-    <div class="q-actions"><a class="btn" href="#data/${encodeURIComponent(p.key)}">データ確認で開く</a></div>`;
+    <div class="q-actions"><a class="btn" href="${ywLink(p.name)}" target="_blank" rel="noopener">世界史の窓で調べる</a><a class="btn" href="#data/${encodeURIComponent(p.key)}">データ確認で開く</a></div>`;
   openSheet(html);
 }
 

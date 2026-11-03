@@ -82,6 +82,8 @@ async function fetchJson(base, file) {
 }
 
 const asArray = v => (Array.isArray(v) ? v : v == null ? [] : [v]);
+/** データ確認の画面で、このブラウザに保存して上書きできる項目 */
+export const OVERRIDE_KEYS = ['verified', 'uncertain', 'memo', 'year', 'end', 'start', 'from', 'to', 'desc', 'descVerified', 'image', 'imageVerified'];
 
 /** データ全体 */
 export class DB {
@@ -126,8 +128,8 @@ export class DB {
       for (const x of list) {
         const o = ov[`${x.kind}:${x.id}`];
         if (!o) continue;
-        x._original = { verified: x.verified, uncertain: x.uncertain, memo: x.memo, year: x.year, end: x.end, start: x.start, from: x.from, to: x.to };
-        for (const k of ['verified', 'uncertain', 'memo', 'year', 'end', 'start', 'from', 'to']) if (k in o) x[k] = o[k];
+        x._original = Object.fromEntries(OVERRIDE_KEYS.map(k => [k, x[k]]));
+        for (const k of OVERRIDE_KEYS) if (k in o) x[k] = o[k];
         x._changed = true;
       }
     }
@@ -145,6 +147,8 @@ export class DB {
         x.key = `${x.kind}:${x.id}`;
         x.verified = x.verified === true;
         x.uncertain = x.uncertain === true;
+        x.descVerified = x.descVerified === true;
+        if (x.image != null) x.imageVerified = x.imageVerified === true;
         x.importance = Number(x.importance) || 2;
       }
     }
@@ -201,6 +205,7 @@ export class DB {
       }
     }
     this.changes.sort((a, b) => a.y - b.y);
+    this.byKey = new Map([...this.events, ...this.polities, ...this.rulers].map(x => [x.key, x]));
     this._owners = new Map();
     // 採点用の語句
     this.items = [

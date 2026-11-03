@@ -37,3 +37,13 @@ test('勢力図：どの時代にも塗られる地域がある', () => {
     for (const { p } of own.values()) assert.ok(db.isActive(db.polityById.get(p), y), `${y}年に終わった国 ${p} が残っている`);
   }
 });
+
+test('クイズ：文化史だけにすると文化史の出来事だけで出題する', () => {
+  const qs = makeSession(db, { count: 15, modes: Object.keys(MODES), cultureOnly: true, from: 1500, to: 2000 }, rng(11));
+  assert.ok(qs.length >= 10);
+  for (const q of qs) {
+    assert.ok(['year', 'term', 'order', 'choice'].includes(q.mode), q.mode);
+    const evs = q.event ? [q.event] : q.events || [q.anchor, ...(q.options || [])];
+    for (const e of evs) assert.ok(e.culture, `${q.mode}: ${e.title} は文化史ではない`);
+  }
+});

@@ -19,6 +19,7 @@ export function eventPool(db, opt) {
   return db.events.filter(e => e.year >= from && e.year <= to
     && e.importance >= (opt.minImportance || 1)
     && (opt.culture !== false || !e.culture)
+    && (!opt.cultureOnly || e.culture)
     && (!opt.verifiedOnly || e.verified)
     && e.regions.some(r => regs.has(r)));
 }
@@ -140,9 +141,9 @@ function makeChoice(db, opt, rand) {
     const own = groupOf(groups, a.regions[0]);
     const g = pick(groups.filter(x => x !== own), rand);
     if (!g) continue;
-    const inG = x => x.regions.some(r => g.regions.includes(r));
+    const inG = x => x.regions.some(r => g.regions.includes(r)) && (!opt.cultureOnly || x.culture);
     // 人物で出す（同じ国の別の時代の君主をまちがいの選択肢に）
-    if (rand() < 0.4) {
+    if (!opt.cultureOnly && rand() < 0.4) {
       const cands = db.rulers.filter(r => g.regions.includes(r.region) && r.from <= a.year && a.year <= r.to && r.importance >= 2);
       const ans = pick(cands, rand);
       if (ans) {
@@ -162,11 +163,14 @@ function makeChoice(db, opt, rand) {
   return null;
 }
 
+export const CULTURE_MODES = ['year', 'term', 'order', 'choice'];
 const MAKERS = { cross: makeCross, ruler: makeRuler, year: makeYear, term: makeTerm, order: makeOrder, choice: makeChoice };
 
 /** 問題のセットを作る */
 export function makeSession(db, opt, rand = Math.random) {
-  const modes = (opt.modes?.length ? opt.modes : Object.keys(MODES)).filter(m => MAKERS[m]);
+  let modes = (opt.modes?.length ? opt.modes : Object.keys(MODES)).filter(m => MAKERS[m]);
+  // 文化史だけのときは、出来事を1つずつ扱う形式で出す（ヨコ記述・君主は文化にしぼれないため）
+  if (opt.cultureOnly) { modes = modes.filter(m => CULTURE_MODES.includes(m)); if (!modes.length) modes = CULTURE_MODES; }
   const out = [], keys = new Set();
   for (let i = 0; out.length < (opt.count || 10) && i < (opt.count || 10) * 8; i++) {
     const mode = modes[i % modes.length];

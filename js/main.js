@@ -6,6 +6,7 @@ import { getProgress, onProgress, star } from './core/progress.js';
 import { dueItems } from './core/srs.js';
 import { build, questionsForEvent } from './core/quizgen.js';
 import { LOGO, ICON } from './views/common.js';
+import { openTerm } from './views/terms.js';
 import * as timeline from './views/timeline.js';
 import * as mapView from './views/map.js';
 import * as quiz from './views/quiz.js';
@@ -106,6 +107,15 @@ async function boot() {
   app.window = app.settings.window ?? db.config.defaultWindow ?? 5;
   if (db.errors.length) setTimeout(() => toast(`データの読み込みに失敗したファイルがあります（データ確認の画面に詳細）`, 5000), 600);
   window.addEventListener('hashchange', route);
+  // 点線の下線の用語をタップすると概要を出す（クイズでは解答後だけ）
+  document.addEventListener('click', e => {
+    const t = e.target.closest('.tt[data-term]');
+    if (!t) return;
+    const card = t.closest('.q-card');
+    if (card && !card.classList.contains('graded')) return;
+    e.preventDefault();
+    openTerm(app, t.dataset.term);
+  });
   route();
   updateDue();
   onProgress(updateDue);

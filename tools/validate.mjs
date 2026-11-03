@@ -10,6 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { DB, locateJsonError } from '../js/core/data.js';
+import { parseImageSpec } from '../js/core/wiki.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA = path.join(ROOT, 'data');
@@ -84,6 +85,16 @@ export function validate(dir = DATA) {
       else if (typeof x[k] !== 'boolean') E(x, `${k} は true か false にします（"" で囲まない）`);
     }
     if (x.memo != null && typeof x.memo !== 'string') E(x, 'memo は文字列（" " で囲む）にします');
+    // 概要（1〜2文）とその確認の印
+    if (x.desc != null && typeof x.desc !== 'string') E(x, 'desc（概要）は文字列にします');
+    if (!('descVerified' in x)) W(x, 'descVerified（概要の確認済み）がありません（false とみなします）');
+    else if (typeof x.descVerified !== 'boolean') E(x, 'descVerified は true か false にします');
+    if (x.source != null && !/^https?:\/\//.test(String(x.source))) W(x, 'source は http:// か https:// で始まるURLにします');
+    // 作品・建築の写真
+    if (x.image != null) {
+      if (!parseImageSpec(x.image)) E(x, 'image は "ja:記事名"・"en:記事名"・"File:ファイル名" のどれかの形にします');
+      if (typeof x.imageVerified !== 'boolean') E(x, 'image があるときは imageVerified（画像の確認済み）を true か false で書きます');
+    }
     if (x.importance != null && ![1, 2, 3].includes(x.importance)) W(x, 'importance は 1・2・3 のどれかにします');
     if (x.verified === true && x.uncertain === true) W(x, '確認済みなのに「要確認」の印が残っています');
   };
@@ -167,7 +178,9 @@ export function validate(dir = DATA) {
   const stats = {
     events: db.events.length, culture: db.events.filter(e => e.culture).length,
     polities: db.polities.length, rulers: db.rulers.length,
-    verified: all.filter(x => x.verified).length, uncertain: all.filter(x => x.uncertain).length, total: all.length
+    verified: all.filter(x => x.verified).length, uncertain: all.filter(x => x.uncertain).length, total: all.length,
+    descs: all.filter(x => x.desc).length, descVerified: all.filter(x => x.descVerified).length,
+    images: all.filter(x => x.image).length, imageVerified: all.filter(x => x.image && x.imageVerified).length
   };
   return { errors, warnings, stats };
 }
@@ -180,6 +193,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.ar
   if (stats) {
     console.log(`  出来事 ${stats.events}件（うち文化 ${stats.culture}件）・王朝/国家 ${stats.polities}件・人物 ${stats.rulers}件`);
     console.log(`  用語集で確認済み ${stats.verified}/${stats.total}件・要確認の印 ${stats.uncertain}件`);
+    console.log(`  概要 ${stats.descs}件（確認済み ${stats.descVerified}件）・作品の写真の指定 ${stats.images}件（確認済み ${stats.imageVerified}件）`);
   }
   for (const m of errors) console.log(`  ✗ ${m}`);
   for (const m of warnings) console.log(`  △ ${m}`);

@@ -45,6 +45,9 @@ export function recordWithUndo(q, ok, now = Date.now()) {
   lastSnap = { key: q.key, before: P.items[q.key] ? { ...P.items[q.key] } : null };
   record(q, ok, now);
 }
+/** 判定を変えるための控え（クイズを中断・再開しても判定を変えられるように保存する） */
+export const getUndo = () => lastSnap;
+export const setUndo = s => { lastSnap = s || null; };
 /** 直前の解答の判定を変える */
 export function changeJudgement(q, ok, now = Date.now()) {
   const i = P.log.map(x => x.k).lastIndexOf(q.key);
