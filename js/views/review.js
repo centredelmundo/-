@@ -32,8 +32,8 @@ export function render(app, el) {
     <div class="two-col">
       <div class="panel stack">
         <div class="sec-title"><span>苦手マップ（地域×世紀の正答率）</span></div>
-        <div class="heat" style="grid-template-columns: 7em repeat(${cents.length}, minmax(0, 1fr))">
-          <span></span>${cents.map(c => `<span class="h">${centuryText(c)}</span>`).join('')}
+        <div class="heat" style="--n:${cents.length}">
+          <span class="h hc">世紀</span>${cents.map((c, i) => `<span class="h${i % 2 ? ' odd' : ''}" title="${centuryText(c)}">${c > 0 ? c : `前${-c}`}</span>`).join('')}
           ${hm.map(row => `<span class="r">${esc(row.group.name)}</span>${row.cells.map(c => `<button type="button" class="l${lvl(c)}" data-g="${row.group.id}" data-c="${c.c}" title="${esc(row.group.name)}・${centuryText(c.c)}：${c.n ? `${c.ok}/${c.n}問正解` : '未学習'}">${c.n ? Math.round(c.ok / c.n * 100) : ''}</button>`).join('')}`).join('')}
         </div>
         <div class="heat-key">得意 <i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i> 苦手 ・ <i class="l0"></i> 未学習 ・ マスを押すとその地域・世紀だけで練習</div>

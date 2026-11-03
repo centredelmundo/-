@@ -29,10 +29,9 @@ export function render(app, el) {
     </div>
     <div class="yb-right">
       <div class="slider">
-        <div class="anchors">${anchors.map(([y, n], i) => `<span class="${(y - a) / (b - a) > 0.86 ? 'end' : ''}${i % 2 ? ' low' : ''}" style="left:${pct(y)}" title="${fmtYear(y)}年">${esc(n)}</span>`).join('')}</div>
-        ${densitySvg(app)}
+        <div class="anchors">${anchors.map(([y, n, p], i) => `<span class="${(y - a) / (b - a) > 0.86 ? 'end' : ''}${i % 2 ? ' low' : ''}" data-p="${Number(p) || 2}" style="left:${pct(y)}" title="${fmtYear(y)}年">${esc(n)}</span>`).join('')}</div>        ${densitySvg(app)}
         <input type="range" id="tlRange" min="${a}" max="${b}" value="${app.year}" aria-label="年を選ぶ">
-        <div class="ticks">${ticks.map((v, i) => `<span class="${i % 2 ? 'odd' : ''}">${fmtYear(v)}</span>`).join('')}</div>
+        <div class="ticks">${ticks.map((v, i) => `<span style="left:${pct(v)}">${fmtYear(v)}</span>`).join('')}</div>
       </div>
     </div>
     <div class="yb-tools">
@@ -58,7 +57,10 @@ export function render(app, el) {
   const isMobile = matchMedia('(max-width: 859px)').matches;
   if (isMobile) $('#tlGanttBox', el).open = false;
 
-  state = { app, el, map: null };
+  state = { app, el, map: null, ro: null };
+  const slider = $('.slider', el);
+  if ('ResizeObserver' in window) { state.ro = new ResizeObserver(() => layoutSlider(slider)); state.ro.observe(slider); }
+  else layoutSlider(slider);
   const cards = $('#tlCards', el);
   wireSheet(cards);
   cards.classList.toggle('sheet-on', !!app.settings.sheet);
@@ -124,6 +126,31 @@ export function render(app, el) {
   update();
 }
 
+/**
+ * スライダーの上の出来事名（ヒジュラ・十字軍…）と下の目盛りの年を、重ならないように出し分ける。
+ * 年の範囲が長い（500〜2000年）ので、幅が狭いときは間引く。幅が変わるたびに呼ぶ。
+ */
+function layoutSlider(slider) {
+  const w = slider.clientWidth;
+  if (!w) return;
+  const ticks = [...slider.querySelectorAll('.ticks span')];
+  const per = ticks.length > 1 ? w / (ticks.length - 1) : w;
+  const k = [1, 2, 3, 5, 10].find(c => per * c >= 44) ?? 10;
+  ticks.forEach((t, i) => { t.style.visibility = i % k ? 'hidden' : ''; });
+  const box = slider.querySelector('.anchors');
+  if (!box || !box.offsetParent) return; // スマホでは出来事名は出さない
+  // 優先度（config.anchors の3つ目の数）の高いものから、上の段・下の段の空いているところに置く。置けないものは省く
+  const items = [...box.querySelectorAll('span')].map(s => { s.hidden = false; return { s, r: s.getBoundingClientRect(), p: Number(s.dataset.p) }; });
+  items.sort((x, y) => y.p - x.p || x.r.left - y.r.left);
+  const rows = [[], []];
+  for (const { s, r } of items) {
+    const row = rows.findIndex(placed => placed.every(q => r.left >= q.right + 8 || r.right + 8 <= q.left));
+    s.classList.toggle('low', row === 1);
+    s.hidden = row < 0;
+    if (row >= 0) rows[row].push(r);
+  }
+}
+
 /** 地域の出来事を開閉する（設定に覚える） */
 function toggleFold(app, id, card) {
   const set = new Set(app.settings.collapsed || []);
@@ -164,7 +191,7 @@ export function update() {
   if (y < a || y > b) range.value = clamp(y, a, b);
 }
 
-export function destroy() { state = null; document.title = 'ヨコ串世界史'; }
+export function destroy() { state?.ro?.disconnect(); state = null; document.title = 'ヨコ串世界史'; }
 
 // ---- 用語で検索
 function wireSearch(app, input, box) {

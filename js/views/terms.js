@@ -4,7 +4,8 @@ import { imageInfo } from '../core/wiki.js';
 import { openSheet, badges } from './common.js';
 
 export const KIND_LABEL = { event: '出来事', ruler: '人物', polity: '王朝・国家' };
-export const itemName = x => x?.title || x?.name || '';
+// 人物の title は「皇帝」などの称号なので、名前には使わない（出来事だけ title が名前）
+export const itemName = x => (x?.kind === 'event' ? x.title : x?.name ?? x?.title) || '';
 
 /** 世界史の窓（y-history.net）でその用語を調べるリンク（サイト内検索） */
 export const ywLink = name => `https://www.google.com/search?q=${encodeURIComponent(`site:y-history.net ${name}`)}`;

@@ -1,12 +1,12 @@
 // クイズの画面
 // 解答中の状態はブラウザに保存するので、別の画面に移ったりアプリを閉じたりしても続きから再開できる。
-import { $, $$, esc, fmtYear, fmtSpan, yearText, hasYear, hideYear, shuffle, toast } from '../core/util.js';
+import { $, $$, esc, fmtYear, fmtSpan, yearText, hasYear, hideYear, hideAnswers, shuffle, toast } from '../core/util.js';
 import { MODES, CULTURE_MODES, build, makeSession, eventPool, quizGroups } from '../core/quizgen.js';
 import { gradeCross, gradeRuler, gradeTerm, gradeYear, CLS_TEXT } from '../core/grade.js';
 import { recordWithUndo, changeJudgement, star, isStarred, addCandidate, getUndo, setUndo } from '../core/progress.js';
 import { load, save, remove } from '../core/store.js';
 import { yokoPanel, badges, ICON } from './common.js';
-import { tt, fillImage } from './terms.js';
+import { tt, fillImage, itemName } from './terms.js';
 
 const MODE_HELP = {
   cross: '◯年ごろ、A・B・Cで何が起きていた？',
@@ -224,7 +224,7 @@ function body(q) {
     }
     case 'term': {
       const e = q.event, regs = e.regions.map(r => db.regionById(r)?.name || r).join('・');
-      return `${img(e)}<p class="q-text"><span class="yr">${e.end ? `${fmtYear(e.year)}〜${fmtYear(e.end)}` : fmtYear(e.year)}年</span>（${esc(regs)}）</p><p class="q-hint">${esc(e.desc)}</p>
+      return `${img(e)}<p class="q-text"><span class="yr">${e.end ? `${fmtYear(e.year)}〜${fmtYear(e.end)}` : fmtYear(e.year)}年</span>（${esc(regs)}）</p><p class="q-hint" data-full="${esc(e.desc)}">${esc(hideAnswers(e.desc, e))}</p>
         <div class="q-field"><label for="qa0">この出来事の名前は？</label><input type="text" id="qa0" autocomplete="off"><div class="res" id="qr0" aria-live="polite"></div></div>`;
     }
     case 'order':
@@ -232,7 +232,7 @@ function body(q) {
     case 'choice': {
       const a = q.anchor;
       const what = q.spec.kind === 'ruler' ? '君主（人物）' : a.culture && q.answer?.culture ? '文化' : '出来事';
-      return `${img(a)}<p class="q-text">「<b>${tt(a)}</b>」${hasYear(a.title, a.year) ? '' : `（${yearText(a.year)}）`}と同じころ、<b>${esc(q.group.name)}</b>の${what}はどれ？</p><div class="choices" id="qzChoices">${q.options.map((o, i) => `<button type="button" data-i="${i}">${esc(o.title || o.name)}</button>`).join('')}</div><div class="res" id="qr0"></div>`;
+      return `${img(a)}<p class="q-text">「<b>${tt(a)}</b>」${hasYear(a.title, a.year) ? '' : `（${yearText(a.year)}）`}と同じころ、<b>${esc(q.group.name)}</b>の${what}はどれ？</p><div class="choices" id="qzChoices">${q.options.map((o, i) => `<button type="button" data-i="${i}">${esc(itemName(o))}</button>`).join('')}</div><div class="res" id="qr0"></div>`;
     }
   }
   return '';
@@ -327,7 +327,9 @@ function grade(skip = false, replay = false) {
     $$('#qzChoices button', el).forEach((b, i) => {
       const o = q.options[i];
       b.classList.toggle('right', i === ansIdx); b.classList.toggle('wrong', i === S.choice && i !== ansIdx);
-      b.innerHTML = o.title && hasYear(o.title, o.year) ? esc(o.title) : `${esc(o.title || o.name)} <span class="small muted">（${o.title ? spanText({ spans: [[o.year, o.end ?? o.year]] }) : fmtSpan(o.from, o.to)}）</span>`;
+      // 人物にも title（称号）があるので、出来事かどうかは kind で見分ける
+      const isEv = o.kind === 'event', [a, z] = S.app.db.recordSpan(o);
+      b.innerHTML = isEv && hasYear(o.title, o.year) ? esc(o.title) : `${esc(itemName(o))} <span class="small muted">（${isEv ? spanText({ spans: [[a, z ?? a]] }) : fmtSpan(a, z)}）</span>`;
     });
     setRes(0, ok ? 'ok' : 'ng', `<div><span class="v">${ok ? '○ 正解' : '×'}</span>「${tt(q.answer)}」</div>`);
   }
@@ -368,7 +370,7 @@ function after(q, ok) {
     <button class="btn" type="button" id="qzFlip">${ok ? 'まちがいにする' : '正解にする'}</button>
     <button class="btn" type="button" id="qzStar">${ICON.star.replace('<svg', '<svg width="16" height="16"')}${isStarred(q.key) ? '苦手に登録済み' : '苦手に追加'}</button>`;
   // 解答後は、問題文・選択肢の用語をタップすると概要が出る
-  $$('.q-title', el).forEach(b => { b.textContent = b.dataset.full; });
+  $$('.q-title, .q-hint[data-full]', el).forEach(b => { b.textContent = b.dataset.full; });
   $$('#qzChoices button', el).forEach((b, i) => { const o = q.options?.[i]; if (o?.key) { b.classList.add('tt'); b.dataset.term = o.key; } });
   $$('#qzOrder button', el).forEach((b, i) => { const e = q.events?.[i]; if (e?.key) { b.classList.add('tt'); b.dataset.term = e.key; } });
   fillImages(true);
@@ -428,7 +430,7 @@ function titleOf(q) {
     case 'year': return hasYear(q.event.title, q.event.year) ? q.event.title : `${q.event.title}（${fmtYear(q.event.year)}年）`;
     case 'term': return `${fmtYear(q.event.year)}年：${q.event.title}`;
     case 'order': return `並べ替え：${q.events.map(e => e.title).join('／')}`;
-    case 'choice': return `${q.anchor.title}と同じころの${q.group.name}：${q.answer.title || q.answer.name}`;
+    case 'choice': return `${q.anchor.title}と同じころの${q.group.name}：${itemName(q.answer)}`;
   }
   return q.key;
 }

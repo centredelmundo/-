@@ -24,6 +24,26 @@ export const hasYear = (title, y) => String(title ?? '').includes(yearText(y));
 /** 名前に入っている年を伏せる（年代当ての問題文用）：「パリ条約（〇〇〇〇年）」 */
 export const hideYear = (title, y) => String(title ?? '').split(yearText(y)).join('〇'.repeat(String(Math.abs(y)).length) + '年');
 
+/**
+ * 出来事当ての手がかり（概要）から、答えになる言葉（名前・別の言い方）を伏せる。
+ * 英字だけの答え（「EC」など）は、ほかの英字の単語の一部（「ECSC」）なら伏せない。
+ */
+export function hideAnswers(text, e) {
+  let s = String(text ?? '');
+  const names = [e?.title, ...(e?.answers || [])]
+    .map(a => String(a ?? '').replace(/^[『「]+|[』」]+$/g, '').trim())
+    .filter(a => a.length >= 2)
+    .sort((a, b) => b.length - a.length);
+  for (const a of names) {
+    const blank = '＿'.repeat(Math.min(a.length, 6));
+    if (/^[A-Za-z0-9 .]+$/.test(a)) {
+      const re = new RegExp(`(^|[^A-Za-z0-9])${a.replace(/\./g, '\\.')}(?=[^A-Za-z0-9]|$)`, 'g');
+      s = s.replace(re, (m, pre) => pre + blank);
+    } else s = s.split(a).join(blank);
+  }
+  return s;
+}
+
 /** 世紀（1601〜1700年 = 17世紀。紀元前は負） */
 export const centuryOf = y => (y > 0 ? Math.floor((y - 1) / 100) + 1 : -(Math.floor((-y - 1) / 100) + 1));
 export const centuryText = c => (c > 0 ? `${c}世紀` : `前${-c}世紀`);

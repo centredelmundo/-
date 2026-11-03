@@ -137,7 +137,7 @@ export class DB {
 
   index() {
     const seen = new Map();
-    const warn = (x, msg) => this.warnings.push(`${x._file}：${x.title || x.name || x.id || '(名前なし)'} … ${msg}`);
+    const warn = (x, msg) => this.warnings.push(`${x._file}：${(x.kind === 'event' ? x.title : x.name) || x.id || '(名前なし)'} … ${msg}`);
     const regionIds = new Set(this.regions.map(r => r.id));
     for (const list of [this.events, this.polities, this.rulers]) {
       for (const x of list) {

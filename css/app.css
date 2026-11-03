@@ -128,7 +128,17 @@ main#view { min-height: calc(100vh - var(--appbar-h)); }
 
 /* ---- ヨコ年表 */
 .yearbar { position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--appbar-h)); z-index: 10; background: var(--surface); border-bottom: 1px solid var(--line); }
-.yearbar-in { max-width: 1240px; margin: 0 auto; padding: 10px var(--gutter-r) 10px var(--gutter); display: grid; grid-template-columns: auto auto minmax(0, 1fr) auto; gap: 8px 20px; align-items: center; }
+/* PC：上の段に年・操作・検索、下の段にスライダーを横幅いっぱいに（500〜2000年の長い範囲を選びやすく） */
+.yearbar-in { max-width: 1240px; margin: 0 auto; padding: 10px var(--gutter-r) 8px var(--gutter); display: grid; grid-template-columns: auto auto minmax(0, 1fr) auto; gap: 6px 20px; align-items: center; }
+@media (min-width: 860px) {
+  .yearbar-in { grid-template-areas: "year ctrl . tools" "slider slider slider slider"; }
+  .yearbar-in > .year-big { grid-area: year; }
+  .yearbar-in > .yb-ctrl { grid-area: ctrl; }
+  .yearbar-in > .yb-right { grid-area: slider; }
+  .yearbar-in > .yb-tools { grid-area: tools; }
+}
+@media (min-width: 1100px) { .yearbar-in > .yb-ctrl { display: flex; align-items: center; gap: 10px; } }
+@media (min-width: 860px) and (max-width: 999px) { .yb-tools .search input { width: 190px; } }
 .yb-mobile { display: none; }
 .mobile-search { display: block; }
 .mobile-search input { width: 100%; }
@@ -145,7 +155,11 @@ main#view { min-height: calc(100vh - var(--appbar-h)); }
 .slider .anchors span { position: absolute; font-size: 10.5px; color: var(--ink-3); white-space: nowrap; border-left: 1px solid var(--line); padding-left: 4px; line-height: 14px; }
 .slider .anchors span.end { border-left: 0; border-right: 1px solid var(--line); padding: 0 4px 0 0; transform: translateX(-100%); }
 .slider .density { display: block; width: 100%; height: 18px; }
-.slider .ticks { display: flex; justify-content: space-between; font-size: 11px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+/* 目盛りの年は位置（%）で置く（年の範囲が長くなっても、目盛りの文字でスライダーが広がらないように） */
+.slider .ticks { position: relative; height: 16px; font-size: 11px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.slider .ticks span { position: absolute; top: 0; transform: translateX(-50%); white-space: nowrap; }
+.slider .ticks span:first-child { transform: none; }
+.slider .ticks span:last-child { transform: translateX(-100%); }
 .yb-tools { display: flex; gap: 8px; align-items: center; justify-content: flex-end; }
 .search { position: relative; }
 .search input { padding: 6px 10px 6px 32px; font-size: 14px; width: 250px; }
@@ -201,17 +215,24 @@ details.more > summary { cursor: pointer; font-size: 13.5px; color: var(--ink-2)
   .year-big { font-size: 38px; grid-column: 1; grid-row: 1; }
   .yb-mobile { display: flex; gap: 6px; align-items: center; grid-column: 2; grid-row: 1; justify-self: end; }
   .yb-right { grid-column: 1 / -1; grid-row: 2; }
-  .yb-ctrl { grid-column: 1 / -1; grid-row: 3; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .yb-ctrl { grid-column: 1 / -1; grid-row: 3; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 6px 8px; }
+  .yb-ctrl .seg { margin-left: auto; }
   .yb-ctrl .btn.small { padding: 4px 9px; }
   .seg button { padding: 4px 8px; font-size: 12.5px; }
   .seg .u { display: none; }
-  .slider .ticks .odd { visibility: hidden; }
   .slider .anchors { display: none; }
   .slider { padding-top: 0; }
   .yb-tools { display: none; }
   .tl-main { grid-template-columns: minmax(0, 1fr); }
   .tl-map { display: none; }
   .cards, .cards.wide { column-count: 1; }
+}
+/* 幅の狭いスマホでは「±年」のボタンを詰める（±3〜±50 の5つが1行に収まるように） */
+@media (max-width: 420px) {
+  .yb-ctrl .btn.small { padding: 4px 7px; }
+  .yb-ctrl .seg button { padding: 4px 6px; }
+  /* 「地域名をタップ…」の説明は1行、開く・閉じるのボタンは次の行にまとめる */
+  .fold-hint { flex-basis: 100%; }
 }
 @media (min-width: 560px) and (max-width: 859px) { .cards, .cards.wide { column-count: 2; } }
 
@@ -298,11 +319,19 @@ details.more > summary { cursor: pointer; font-size: 13.5px; color: var(--ink-2)
 .due b { font-family: var(--f-display); font-size: 34px; line-height: 1; }
 .due small { font-size: 12.5px; opacity: .85; }
 .due .btn { background: var(--surface); color: var(--ink); border-color: var(--surface); font-weight: 700; }
-.heat { display: grid; gap: 3px; font-size: 11.5px; align-items: center; }
-.heat .h { color: var(--ink-3); text-align: center; }
+/* 列は世紀の数（--n）だけ。見出しは数字だけにし、左上に「世紀」と書く */
+.heat { display: grid; grid-template-columns: 7em repeat(var(--n, 6), minmax(0, 1fr)); gap: 3px; font-size: 11.5px; align-items: center; }
+.heat .h { color: var(--ink-3); text-align: center; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.heat .h.hc { text-align: left; }
 .heat .r { color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .heat button { height: 26px; border-radius: 5px; border: 0; cursor: pointer; font-size: 10.5px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
 .l0 { background: var(--heat-0); } .l1 { background: var(--heat-1); } .l2 { background: var(--heat-2); } .l3 { background: var(--heat-3); color: #fff !important; } .l4 { background: var(--heat-4); color: #fff !important; }
+@media (max-width: 600px) {
+  /* スマホでは世紀の見出しを1つおきにし、マスの中の数字は出さない（色で見る。押すと練習できる） */
+  .heat { grid-template-columns: 5.6em repeat(var(--n, 6), minmax(0, 1fr)); gap: 2px; }
+  .heat .h.odd { visibility: hidden; }
+  .heat button { font-size: 0; height: 22px; }
+}
 .heat-key { display: flex; align-items: center; gap: 4px; font-size: 11.5px; color: var(--ink-3); justify-content: flex-end; flex-wrap: wrap; }
 .heat-key i { width: 16px; height: 11px; border-radius: 2px; display: inline-block; }
 .list { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
