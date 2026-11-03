@@ -1,15 +1,20 @@
 {
   "title": "ヨコ串世界史",
-  "range": [1500, 2000],
+  "range": [500, 2000],
   "defaultYear": 1648,
-  "windows": [3, 5, 10, 25],
+  "windows": [3, 5, 10, 25, 50],
   "defaultWindow": 5,
   "anchors": [
+    [622, "ヒジュラ"],
+    [800, "カールの戴冠"],
+    [1096, "十字軍"],
+    [1206, "モンゴル帝国"],
+    [1453, "ビザンツ帝国滅亡"],
     [1517, "宗教改革"],
     [1618, "三十年戦争"],
-    [1688, "名誉革命"],
+    [1688, "名誉革命", 1],
     [1789, "フランス革命"],
-    [1840, "アヘン戦争"],
+    [1840, "アヘン戦争", 1],
     [1914, "第一次世界大戦"],
     [1989, "冷戦の終結"]
   ],
@@ -23,15 +28,40 @@
     ["americas", "南北アメリカ"]
   ],
   "ganttRows": [
-    { "label": "中国", "polities": ["ming", "qing", ["roc", 1912, 1949], "prc"] },
-    { "label": "日本（参考）", "polities": ["muromachi", "azuchi-momoyama", "edo", "imperial-japan", "postwar-japan"] },
-    { "label": "南アジア", "polities": ["lodi", "mughal", "sur", "british-raj", "india"] },
-    { "label": "イラン", "polities": ["safavid", "afsharid", "qajar", "pahlavi", "iran-ir"] },
+    {
+      "label": "中国",
+      "polities": [
+        "northern-wei",
+        "sui",
+        "tang",
+        "five-dyn",
+        "song",
+        "yuan",
+        "ming",
+        "qing",
+        ["roc", 1912, 1949],
+        "prc"
+      ]
+    },
+    { "label": "日本（参考）", "polities": ["yamato", "asuka", "nara", "heian", "kamakura", "kenmu", "muromachi", "azuchi-momoyama", "edo", "imperial-japan", "postwar-japan"] },
+    {
+      "label": "朝鮮",
+      "polities": [
+        "goguryeo",
+        ["silla", 668, 935],
+        "goryeo",
+        "korea"
+      ]
+    },
+    { "label": "ビザンツ", "polities": ["byzantine"] },
+    { "label": "スペイン", "polities": ["visigoth", "cordoba", "castile", "spain"] },
+    { "label": "南アジア", "polities": ["gupta", "vardhana", "pratihara", "slave-dyn", "khalji", "tughlaq", "sayyid", "lodi", "mughal", "sur", "british-raj", "india"] },
+    { "label": "イラン", "polities": ["sasanian", "rashidun", "umayyad", "abbasid", "ilkhanate", "timurid", "safavid", "afsharid", "qajar", "pahlavi", "iran-ir"] },
     { "label": "オスマン・トルコ", "polities": ["ottoman", "turkey"] },
-    { "label": "ロシア", "polities": ["rurik", "time-of-troubles", "romanov", "ussr", "russia-fed"] },
-    { "label": "ドイツ", "polities": ["hre", "rhine-confed", "german-confed", "germany", "frg"] },
-    { "label": "フランス", "polities": ["valois", "bourbon", "first-republic", "first-empire", "july-monarchy", "second-republic", "second-empire", "third-republic", "vichy", "fourth-republic", "fifth-republic"] },
-    { "label": "イギリス", "polities": ["tudor", "stuart", "commonwealth", "hanover", "saxe-coburg", "windsor"] },
+    { "label": "ロシア", "polities": ["kievan-rus", "rurik", "time-of-troubles", "romanov", "ussr", "russia-fed"] },
+    { "label": "ドイツ", "polities": ["franks", "east-francia", "hre", "rhine-confed", "german-confed", "germany", "frg"] },
+    { "label": "フランス", "polities": ["franks", "west-francia", "capetian", "valois", "bourbon", "first-republic", "first-empire", "july-monarchy", "second-republic", "second-empire", "third-republic", "vichy", "fourth-republic", "fifth-republic"] },
+    { "label": "イギリス", "polities": ["anglo-saxon", "wessex-h", "danish-h", "norman-h", "plantagenet", "lancaster", "york", "tudor", "stuart", "commonwealth", "hanover", "saxe-coburg", "windsor"] },
     { "label": "アメリカ", "polities": ["thirteen-colonies", "usa"] }
   ]
 }

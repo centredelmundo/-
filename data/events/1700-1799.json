@@ -10,7 +10,8 @@
     "desc": "ロシアのピョートル1世がスウェーデンのカール12世と戦い、バルト海に進出した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1701a",
@@ -22,7 +23,8 @@
     "desc": "ルイ14世の孫フェリペ5世のスペイン王即位をめぐる戦争",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1701b",
@@ -34,7 +36,8 @@
     "desc": "ブランデンブルク選帝侯フリードリヒが王の称号を認められた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1703a",
@@ -47,7 +50,8 @@
     "desc": "「西欧への窓」としてバルト海沿岸に建設した",
     "verified": false,
     "uncertain": true,
-    "memo": "遷都は1712年ごろ"
+    "memo": "遷都は1712年ごろ",
+    "descVerified": false
   },
   {
     "id": "e1707a",
@@ -60,7 +64,8 @@
     "desc": "イングランドとスコットランドが合同した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1707b",
@@ -73,7 +78,8 @@
     "desc": "ムガル帝国が衰え、各地の勢力が自立していった",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1709a",
@@ -85,7 +91,8 @@
     "desc": "ロシアがスウェーデンを破った",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1713a",
@@ -96,7 +103,8 @@
     "desc": "スペイン継承戦争の講和。フェリペ5世の王位を認め、イギリスがジブラルタル・ニューファンドランドなどを得た",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1714a",
@@ -107,7 +115,8 @@
     "desc": "オーストリアが南ネーデルラント・ミラノ・ナポリなどを得た",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1714b",
@@ -120,7 +129,8 @@
     "desc": "ドイツのハノーヴァー選帝侯がイギリス王となった",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1716a",
@@ -133,7 +143,10 @@
     "desc": "康熙帝の命で編まれた字書",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:康熙字典",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1716b",
@@ -145,7 +158,8 @@
     "desc": "徳川吉宗が始めた改革",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1718a",
@@ -159,7 +173,10 @@
     "desc": "オスマン帝国でヨーロッパの文化を取り入れた平和な時代",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "en:Tulip period",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1719a",
@@ -172,7 +189,11 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:ロビンソン・クルーソー",
+    "imageVerified": false,
+    "descVerified": false,
+    "desc": "無人島で生きぬく男を描いた小説。イギリスの海外進出の時代を反映している。"
   },
   {
     "id": "e1720a",
@@ -185,7 +206,8 @@
     "desc": "サヴォイア公がシチリアとサルデーニャを交換し、王国となった",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1720b",
@@ -197,7 +219,8 @@
     "desc": "イギリスで株価の暴騰と暴落が起きた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1720c",
@@ -209,7 +232,8 @@
     "desc": "ジュンガルを追い出し、チベットを保護下に置いた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1721a",
@@ -220,7 +244,8 @@
     "desc": "北方戦争の講和。ロシアがバルト海沿岸を得た",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1721b",
@@ -233,7 +258,8 @@
     "desc": "「王は君臨すれども統治せず」の原則が形づくられた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1722a",
@@ -246,7 +272,8 @@
     "desc": "サファヴィー朝が事実上滅んだ",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1723a",
@@ -258,7 +285,8 @@
     "desc": "人頭税（丁税）を土地税に繰り込んで一本化した",
     "verified": false,
     "uncertain": true,
-    "memo": "康熙帝の末期に始まり、雍正帝の時代（1720年代）に全国へ広がった"
+    "memo": "康熙帝の末期に始まり、雍正帝の時代（1720年代）に全国へ広がった",
+    "descVerified": false
   },
   {
     "id": "e1724a",
@@ -271,7 +299,8 @@
     "desc": "典礼問題をきっかけに、雍正帝がキリスト教の布教を全面的に禁じた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1726a",
@@ -285,7 +314,10 @@
     "desc": "イギリス社会を風刺した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:ガリヴァー旅行記",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1727a",
@@ -296,7 +328,8 @@
     "desc": "清とロシアがモンゴル方面の国境を定め、通商を規定した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1729a",
@@ -309,7 +342,8 @@
     "acceptYears": [1730, 1732],
     "verified": false,
     "uncertain": true,
-    "memo": "設置を1729年・1730年、名称の確定を1732年とする資料がある"
+    "memo": "設置を1729年・1730年、名称の確定を1732年とする資料がある",
+    "descVerified": false
   },
   {
     "id": "e1732a",
@@ -321,7 +355,8 @@
     "desc": "北アメリカのイギリス植民地が13となった",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1733a",
@@ -335,7 +370,10 @@
     "desc": "織布の速さが上がり、綿糸が不足するようになった",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:飛び杼",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1734a",
@@ -349,7 +387,10 @@
     "desc": "イギリスの制度を紹介し、フランスの旧体制を批判した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:ヴォルテール",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1736a",
@@ -362,7 +403,8 @@
     "desc": "ナーディル=シャーが即位した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1739a",
@@ -375,7 +417,8 @@
     "desc": "インドに侵入し、ムガル帝国から財宝を奪った",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1740a",
@@ -387,7 +430,8 @@
     "desc": "マリア=テレジアの継承に反対したプロイセンなどが戦い、プロイセンがシュレジエンを奪った",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1744a",
@@ -401,7 +445,8 @@
     "acceptYears": [1745],
     "verified": false,
     "uncertain": true,
-    "memo": "1744年ごろ"
+    "memo": "1744年ごろ",
+    "descVerified": false
   },
   {
     "id": "e1744b",
@@ -413,7 +458,8 @@
     "desc": "南インドでイギリスとフランスが争った（3次にわたる）",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1747a",
@@ -426,7 +472,8 @@
     "desc": "アフガン人の王国が成立した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1748a",
@@ -438,7 +485,8 @@
     "desc": "オーストリア継承戦争の講和",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1748b",
@@ -452,7 +500,10 @@
     "desc": "三権分立を説いた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:法の精神",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1751a",
@@ -467,7 +518,10 @@
     "desc": "啓蒙思想を集大成した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:百科全書",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1752a",
@@ -480,7 +534,8 @@
     "desc": "ビルマを再統一した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1754a",
@@ -492,7 +547,8 @@
     "desc": "北アメリカでのイギリスとフランスの戦争",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1755a",
@@ -505,7 +561,8 @@
     "desc": "オランダの介入で2つの王国に分かれた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1756a",
@@ -517,7 +574,8 @@
     "desc": "長く対立したオーストリアとフランスが同盟を結んだ",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1756b",
@@ -529,7 +587,8 @@
     "desc": "プロイセンとオーストリアの戦争。イギリスとフランスは植民地でも戦った",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1757a",
@@ -542,7 +601,8 @@
     "desc": "イギリス東インド会社のクライヴがフランスと結んだベンガル太守を破った",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1757b",
@@ -555,7 +615,8 @@
     "desc": "乾隆帝がヨーロッパ船の来航を広州だけに限り、公行に貿易を独占させた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1758a",
@@ -569,7 +630,10 @@
     "desc": "重農主義を説いた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:経済表",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1759a",
@@ -583,7 +647,8 @@
     "acceptYears": [1758],
     "verified": false,
     "uncertain": true,
-    "memo": "ジュンガルの平定は1758年"
+    "memo": "ジュンガルの平定は1758年",
+    "descVerified": false
   },
   {
     "id": "e1762a",
@@ -597,7 +662,10 @@
     "desc": "人民主権を説いた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:社会契約論",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1763a",
@@ -610,7 +678,8 @@
     "desc": "七年戦争・フレンチ=インディアン戦争の講和。イギリスがカナダ・ミシシッピ川以東などを得た",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1763b",
@@ -621,7 +690,8 @@
     "desc": "プロイセンがシュレジエンの領有を確保した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1764a",
@@ -636,7 +706,10 @@
     "acceptYears": [1765],
     "verified": false,
     "uncertain": true,
-    "memo": "1764年ごろ"
+    "memo": "1764年ごろ",
+    "image": "ja:ジェニー紡績機",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1765a",
@@ -647,7 +720,8 @@
     "desc": "本国の課税に植民地が「代表なくして課税なし」と反対した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1765b",
@@ -660,7 +734,8 @@
     "desc": "イギリス東インド会社がベンガルなどの徴税権を得た",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1767a",
@@ -672,7 +747,8 @@
     "desc": "イギリスと南インドのマイソール王国の4次にわたる戦争",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1767b",
@@ -685,7 +761,8 @@
     "desc": "ビルマのコンバウン朝に滅ぼされた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1769a",
@@ -699,7 +776,10 @@
     "desc": "実用的な蒸気機関に改良した",
     "verified": false,
     "uncertain": true,
-    "memo": "特許は1769年。改良型の実用化は1770年代"
+    "memo": "特許は1769年。改良型の実用化は1770年代",
+    "image": "en:Watt steam engine",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1769b",
@@ -713,7 +793,10 @@
     "desc": "水力で動かす紡績機。工場制が広がった",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:水力紡績機",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1770a",
@@ -726,7 +809,8 @@
     "desc": "イギリスの探検家クックが領有を宣言した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1771a",
@@ -739,7 +823,8 @@
     "desc": "ベトナムで起きた反乱。のちに黎朝と阮氏を倒した",
     "verified": false,
     "uncertain": true,
-    "memo": "挙兵の年は1771年"
+    "memo": "挙兵の年は1771年",
+    "descVerified": false
   },
   {
     "id": "e1772a",
@@ -751,7 +836,8 @@
     "desc": "ロシア・プロイセン・オーストリアがポーランドの領土を分けた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1773a",
@@ -763,7 +849,8 @@
     "desc": "茶法に反対した人々が東インド会社の茶を海に投げ捨てた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1773b",
@@ -776,7 +863,8 @@
     "desc": "エカチェリーナ2世の時代のコサック・農民の大反乱",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1774a",
@@ -787,7 +875,8 @@
     "desc": "ロシアが黒海北岸を得て、クリミア=ハン国が独立した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1774b",
@@ -799,7 +888,8 @@
     "desc": "植民地の代表がフィラデルフィアに集まった",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1774c",
@@ -813,7 +903,10 @@
     "desc": "疾風怒濤（シュトゥルム=ウント=ドランク）の代表作",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:若きウェルテルの悩み",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1775a",
@@ -825,7 +918,8 @@
     "desc": "レキシントン・コンコードの戦いで始まった",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1776a",
@@ -838,7 +932,8 @@
     "desc": "ジェファソンらが起草し、7月4日に発表された",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1776b",
@@ -852,7 +947,10 @@
     "desc": "自由放任の経済を説いた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:国富論",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1776c",
@@ -866,7 +964,10 @@
     "desc": "独立の必要を訴えた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "en:Common Sense (pamphlet)",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1779a",
@@ -879,7 +980,11 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:ミュール紡績機",
+    "imageVerified": false,
+    "descVerified": false,
+    "desc": "ジェニー紡績機と水力紡績機の長所を合わせた機械で、細くて丈夫な糸が作れるようになった。"
   },
   {
     "id": "e1780a",
@@ -891,7 +996,8 @@
     "desc": "エカチェリーナ2世が提唱し、アメリカ独立戦争でイギリスを孤立させた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1781a",
@@ -903,7 +1009,8 @@
     "desc": "植民地軍とフランス軍がイギリス軍を降伏させた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1781b",
@@ -917,7 +1024,10 @@
     "desc": "ドイツ観念論の出発点",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:純粋理性批判",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1782a",
@@ -930,7 +1040,8 @@
     "desc": "ラーマ1世がバンコクを都として開いた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1782b",
@@ -943,7 +1054,10 @@
     "desc": "乾隆帝の命で古今の書物を集めて編集した",
     "verified": false,
     "uncertain": true,
-    "memo": "第1部の完成が1782年"
+    "memo": "第1部の完成が1782年",
+    "image": "ja:四庫全書",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1783a",
@@ -956,7 +1070,8 @@
     "desc": "イギリスがアメリカ合衆国の独立を承認し、ミシシッピ川以東を譲った",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1783b",
@@ -968,7 +1083,8 @@
     "desc": "エカチェリーナ2世がクリミア=ハン国を併合した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1785a",
@@ -981,7 +1097,11 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:力織機",
+    "imageVerified": false,
+    "descVerified": false,
+    "desc": "動力で動く織機が発明され、綿織物の大量生産が進んだ。"
   },
   {
     "id": "e1787a",
@@ -993,7 +1113,8 @@
     "desc": "連邦主義・三権分立を定めた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1787b",
@@ -1005,7 +1126,8 @@
     "desc": "老中松平定信の改革",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1789a",
@@ -1018,7 +1140,8 @@
     "desc": "三部会の第三身分の議員が国民議会を名のり、憲法制定まで解散しないと誓った",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1789b",
@@ -1031,7 +1154,8 @@
     "desc": "7月14日、パリの民衆がバスティーユ牢獄を襲撃した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1789c",
@@ -1044,7 +1168,8 @@
     "desc": "国民議会が自由・平等・国民主権・私有財産の不可侵などを宣言した。封建的特権の廃止も決めた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1791a",
@@ -1055,7 +1180,8 @@
     "desc": "オーストリア・プロイセンが革命に干渉する意思を示した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1791b",
@@ -1068,7 +1194,8 @@
     "desc": "ハイチ独立のきっかけとなった",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1791c",
@@ -1082,7 +1209,10 @@
     "desc": "名家の没落を描いた長編小説",
     "verified": false,
     "uncertain": true,
-    "memo": "18世紀半ばに書かれ、1791年に刊行"
+    "memo": "18世紀半ばに書かれ、1791年に刊行",
+    "image": "ja:紅楼夢",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1791d",
@@ -1095,7 +1225,8 @@
     "desc": "国王一家が国外への逃亡に失敗し、王の信用が失われた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1792a",
@@ -1107,7 +1238,8 @@
     "desc": "ロシアの使節が日本に通商を求めた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1792b",
@@ -1121,7 +1253,8 @@
     "desc": "国民公会が王政の廃止を宣言した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1793a",
@@ -1133,7 +1266,8 @@
     "desc": "イギリスのピットが提唱した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1793b",
@@ -1144,7 +1278,8 @@
     "desc": "ロシア・プロイセンが分割した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1793c",
@@ -1157,7 +1292,8 @@
     "desc": "イギリスが自由貿易を求めたが乾隆帝に拒否された",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1793d",
@@ -1171,7 +1307,8 @@
     "desc": "反対派を次々と処刑した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1793e",
@@ -1184,7 +1321,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "国民公会の裁判で国王が死刑となり、ギロチンで処刑された。これを受けて第1回対仏大同盟が結成された。"
   },
   {
     "id": "e1794a",
@@ -1198,7 +1337,8 @@
     "desc": "ロベスピエールが倒された",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1795a",
@@ -1210,7 +1350,8 @@
     "desc": "ポーランドが地図から消えた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1795b",
@@ -1222,7 +1363,8 @@
     "desc": "5人の総裁による政府",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1796a",
@@ -1235,7 +1377,8 @@
     "desc": "テヘランを都とした",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1796b",
@@ -1248,7 +1391,8 @@
     "desc": "四川・湖北などで起きた反乱。清の衰えを示した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1796c",
@@ -1263,7 +1407,10 @@
     "acceptYears": [1798],
     "verified": false,
     "uncertain": true,
-    "memo": "実験は1796年、発表は1798年"
+    "memo": "実験は1796年、発表は1798年",
+    "image": "ja:エドワード・ジェンナー",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1796d",
@@ -1276,7 +1423,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "総裁政府の将軍としてオーストリア軍を破り、名声を高めた。"
   },
   {
     "id": "e1797a",
@@ -1287,7 +1436,8 @@
     "desc": "オーストリアがヴェネツィアを得て、南ネーデルラントを失った",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1798a",
@@ -1300,7 +1450,8 @@
     "desc": "イギリスとインドの連絡を断つねらい。ロゼッタ=ストーンが発見された",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1798b",
@@ -1313,7 +1464,11 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:人口論",
+    "imageVerified": false,
+    "descVerified": false,
+    "desc": "人口は食料の生産より速く増えると論じた経済学の書物。"
   },
   {
     "id": "e1799a",
@@ -1323,7 +1478,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "経営が悪化したオランダの東インド会社が解散し、その領地は国の直轄となった。"
   },
   {
     "id": "e1799b",
@@ -1337,6 +1494,7 @@
     "desc": "ナポレオンが総裁政府を倒し、統領政府を開いた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   }
 ]

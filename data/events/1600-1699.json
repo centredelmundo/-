@@ -10,7 +10,8 @@
     "desc": "エリザベス1世が特許状を与え、アジア貿易の独占権を認めた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1600b",
@@ -22,7 +23,8 @@
     "desc": "徳川家康が石田三成らを破った",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1600c",
@@ -37,7 +39,10 @@
     "acceptYears": [1601],
     "verified": false,
     "uncertain": true,
-    "memo": "1600〜01年ごろの作"
+    "memo": "1600〜01年ごろの作",
+    "image": "ja:ハムレット",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1601a",
@@ -51,7 +56,10 @@
     "desc": "イエズス会士が万暦帝に認められ、北京に住んで布教した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:マテオ・リッチ",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1602a",
@@ -64,7 +72,8 @@
     "desc": "世界初の株式会社ともいわれる",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1602b",
@@ -78,7 +87,10 @@
     "desc": "マテオ=リッチが作った漢文の世界地図",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:坤輿万国全図",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1603a",
@@ -91,7 +103,8 @@
     "desc": "スコットランド王ジェームズ6世がイングランド王を兼ねた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1603b",
@@ -104,7 +117,8 @@
     "desc": "徳川家康が征夷大将軍となった",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1604a",
@@ -116,7 +130,8 @@
     "desc": "アンリ4世のとき設立された",
     "verified": false,
     "uncertain": true,
-    "memo": "1664年にコルベールが再建。どちらを問われるか確認"
+    "memo": "1664年にコルベールが再建。どちらを問われるか確認",
+    "descVerified": false
   },
   {
     "id": "e1605a",
@@ -130,7 +145,10 @@
     "desc": "騎士道物語を風刺した小説（前編）",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "en:Don Quixote",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1607a",
@@ -142,7 +160,8 @@
     "desc": "イギリス最初の恒久的な植民地",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1607b",
@@ -156,7 +175,10 @@
     "desc": "マテオ=リッチと徐光啓がエウクレイデスの幾何学を漢訳した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:幾何原本",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1608a",
@@ -169,7 +191,8 @@
     "desc": "フランスのシャンプランがカナダに建設した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1609a",
@@ -182,7 +205,8 @@
     "desc": "オランダが事実上の独立を達成した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1609b",
@@ -195,7 +219,10 @@
     "desc": "惑星が楕円軌道を描くことなどを示した（第1・第2法則）",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:ケプラーの法則",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1609c",
@@ -210,7 +237,10 @@
     "acceptYears": [1610],
     "verified": false,
     "uncertain": true,
-    "memo": "観測は1609〜10年"
+    "memo": "観測は1609〜10年",
+    "image": "en:Sidereus Nuncius",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1609d",
@@ -223,7 +253,8 @@
     "desc": "島津氏が琉球王国を支配下に置いた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1613a",
@@ -236,7 +267,8 @@
     "desc": "動乱時代を経て、全国会議でミハイル=ロマノフが選ばれた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1616a",
@@ -249,7 +281,8 @@
     "desc": "ヌルハチが女真の諸部を統一して建てた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1618a",
@@ -263,7 +296,8 @@
     "desc": "ベーメン（ボヘミア）の新教徒の反乱から始まり、ヨーロッパ各国が介入した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1618b",
@@ -275,7 +309,8 @@
     "desc": "ブランデンブルク選帝侯がプロイセン公国を相続した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1619a",
@@ -287,7 +322,8 @@
     "desc": "オランダ東インド会社がジャワ島に築いたアジア貿易の拠点",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1619b",
@@ -299,7 +335,8 @@
     "desc": "後金が明の大軍を破った",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1619c",
@@ -312,7 +349,8 @@
     "desc": "北アメリカで最初の植民地議会",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1620a",
@@ -325,7 +363,8 @@
     "desc": "メイフラワー号で渡った清教徒（ピルグリム=ファーザーズ）が建設した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1620b",
@@ -337,7 +376,8 @@
     "desc": "ベーメンの新教徒が皇帝軍に敗れた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1620c",
@@ -351,7 +391,10 @@
     "desc": "観察と実験による帰納法を説いた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "en:Novum Organum",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1622a",
@@ -363,7 +406,8 @@
     "desc": "アッバース1世がイギリスの協力でポルトガルから奪った",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1623a",
@@ -375,7 +419,8 @@
     "desc": "オランダがモルッカ諸島でイギリス商館員らを殺害した。イギリスはインド経営に力を注ぐようになった",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1624a",
@@ -388,7 +433,8 @@
     "desc": "台湾南部にゼーランディア城を築いた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1625a",
@@ -402,7 +448,10 @@
     "desc": "国際法の基礎を築き、「国際法の父」と呼ばれる",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:フーゴー・グローティウス",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1626a",
@@ -415,7 +464,8 @@
     "acceptYears": [1625],
     "verified": false,
     "uncertain": true,
-    "memo": "1625年とする資料もある"
+    "memo": "1625年とする資料もある",
+    "descVerified": false
   },
   {
     "id": "e1627a",
@@ -427,7 +477,8 @@
     "desc": "後金が朝鮮に侵攻した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1628a",
@@ -438,7 +489,8 @@
     "desc": "議会がチャールズ1世に提出し、議会の同意のない課税や不当な逮捕に反対した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1628b",
@@ -452,7 +504,10 @@
     "desc": "血液が体内を循環することを示した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:ウィリアム・ハーヴェイ",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1630a",
@@ -465,7 +520,8 @@
     "desc": "グスタフ=アドルフが新教側で参戦した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1631a",
@@ -479,7 +535,8 @@
     "acceptYears": [1630],
     "verified": false,
     "uncertain": true,
-    "memo": "開始年を1630年や1631年とする資料がある"
+    "memo": "開始年を1630年や1631年とする資料がある",
+    "descVerified": false
   },
   {
     "id": "e1632a",
@@ -492,7 +549,8 @@
     "desc": "スウェーデン王グスタフ=アドルフが戦死した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1632b",
@@ -506,7 +564,10 @@
     "desc": "シャー=ジャハーンが亡き妃のためにアグラに建てた廟",
     "verified": false,
     "uncertain": true,
-    "memo": "着工・完成の年は資料により差がある"
+    "memo": "着工・完成の年は資料により差がある",
+    "image": "ja:タージ・マハル",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1633a",
@@ -520,7 +581,10 @@
     "desc": "地動説の主張を撤回させられた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:ガリレオ裁判",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1635a",
@@ -533,7 +597,8 @@
     "desc": "カトリック国ながら新教側で参戦した（宰相リシュリュー）",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1635b",
@@ -547,7 +612,10 @@
     "desc": "フランス語の統一と純化をめざした",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:アカデミー・フランセーズ",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1635c",
@@ -559,7 +627,8 @@
     "desc": "ホンタイジが内モンゴルを支配下に置いた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1636a",
@@ -572,7 +641,8 @@
     "desc": "ホンタイジが国号を改め、皇帝を称した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1636b",
@@ -585,7 +655,8 @@
     "desc": "清の侵攻を受け、朝鮮が清に服属した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1637a",
@@ -599,7 +670,10 @@
     "desc": "「われ思う、ゆえにわれあり」。演繹法を説いた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:方法序説",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1637b",
@@ -613,7 +687,10 @@
     "desc": "農業や手工業の技術を図入りで解説した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:天工開物",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1637c",
@@ -626,7 +703,8 @@
     "desc": "キリシタンを中心とする農民の反乱",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1639a",
@@ -638,7 +716,8 @@
     "desc": "いわゆる「鎖国」体制が完成した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1639b",
@@ -650,7 +729,8 @@
     "desc": "オスマン帝国とサファヴィー朝の国境を定めた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1639c",
@@ -664,7 +744,10 @@
     "desc": "農業の技術と政策を集大成した",
     "verified": false,
     "uncertain": true,
-    "memo": "徐光啓の死後に完成・刊行（1639年）"
+    "memo": "徐光啓の死後に完成・刊行（1639年）",
+    "image": "ja:農政全書",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1640a",
@@ -677,7 +760,8 @@
     "desc": "スペインとの同君連合を解消した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1640b",
@@ -688,7 +772,8 @@
     "desc": "チャールズ1世が招集した議会が国王と激しく対立した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1641a",
@@ -700,7 +785,8 @@
     "desc": "ポルトガルから奪った",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1641b",
@@ -712,7 +798,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "平戸にあったヨーロッパの国の貿易拠点を長崎の扇形の人工島に移し、いわゆる鎖国の体制が完成した。"
   },
   {
     "id": "e1642a",
@@ -727,7 +815,8 @@
     "acceptYears": [1640],
     "verified": false,
     "uncertain": true,
-    "memo": "1640〜60年とする教科書もある（内戦の開始は1642年）"
+    "memo": "1640〜60年とする教科書もある（内戦の開始は1642年）",
+    "descVerified": false
   },
   {
     "id": "e1642b",
@@ -740,7 +829,8 @@
     "desc": "オランダの航海者がタスマニア島・ニュージーランドに到達した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1642c",
@@ -754,7 +844,10 @@
     "desc": "アムステルダムの市民隊を描いた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:夜警 (絵画)",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1644a",
@@ -767,7 +860,8 @@
     "desc": "李自成の軍が北京を占領し、崇禎帝が自殺した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1644b",
@@ -780,7 +874,8 @@
     "desc": "呉三桂の先導で山海関を越え、中国支配を始めた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1645a",
@@ -793,7 +888,8 @@
     "acceptYears": [1644],
     "verified": false,
     "uncertain": true,
-    "memo": "1644年に出して撤回し、1645年に再び発令"
+    "memo": "1644年に出して撤回し、1645年に再び発令",
+    "descVerified": false
   },
   {
     "id": "e1645b",
@@ -806,7 +902,8 @@
     "desc": "オスマン帝国がヴェネツィアからクレタ島を奪った",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1648a",
@@ -818,7 +915,8 @@
     "desc": "三十年戦争の講和。スイス・オランダの独立が承認され、神聖ローマ帝国の領邦がほぼ完全な主権を得た",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1648b",
@@ -831,7 +929,8 @@
     "desc": "宰相マザランの政治に反発した貴族・高等法院の反乱",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1648c",
@@ -843,7 +942,8 @@
     "desc": "ウクライナ=コサックがポーランドに対して蜂起した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1649a",
@@ -856,7 +956,8 @@
     "desc": "イギリスが共和政に移った",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1649b",
@@ -868,7 +969,8 @@
     "desc": "ロシアで農民の移動を禁じ、農奴制を確立した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1651a",
@@ -880,7 +982,8 @@
     "desc": "イギリスの港に入る船を制限し、オランダの中継貿易に打撃を与えた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1651b",
@@ -894,7 +997,10 @@
     "desc": "自然状態を「万人の万人に対する闘争」とし、絶対王政を擁護した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:リヴァイアサン (ホッブズ)",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1652a",
@@ -907,7 +1013,8 @@
     "desc": "オランダ東インド会社が補給基地として建設した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1652b",
@@ -920,7 +1027,8 @@
     "desc": "航海法をきっかけに始まった",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1653a",
@@ -933,7 +1041,8 @@
     "desc": "議会を解散し、軍事独裁を始めた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1654a",
@@ -945,7 +1054,8 @@
     "desc": "ウクライナ=コサックがロシアの保護下に入った",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1656a",
@@ -959,7 +1069,10 @@
     "desc": "スペイン宮廷の王女と侍女たちを描いた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:ラス・メニーナス",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1659a",
@@ -971,7 +1084,8 @@
     "desc": "フランスとスペインの講和。フランスがルシヨンなどを得た",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1660a",
@@ -983,7 +1097,8 @@
     "desc": "議会がチャールズ2世を迎え、王政が復活した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1661a",
@@ -997,7 +1112,8 @@
     "acceptYears": [1662],
     "verified": false,
     "uncertain": true,
-    "memo": "1661年に上陸、1662年にオランダが降伏"
+    "memo": "1661年に上陸、1662年にオランダが降伏",
+    "descVerified": false
   },
   {
     "id": "e1661b",
@@ -1009,7 +1125,8 @@
     "desc": "鄭氏の勢力を断つため、沿岸の住民を内陸へ移した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1661c",
@@ -1022,7 +1139,8 @@
     "desc": "宰相マザランの死後、自ら統治を始めた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1662a",
@@ -1035,7 +1153,10 @@
     "desc": "気体の体積と圧力が反比例することを示した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:ロバート・ボイル",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1664a",
@@ -1048,7 +1169,8 @@
     "desc": "イギリスがニューアムステルダムを奪った",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1664b",
@@ -1060,7 +1182,8 @@
     "desc": "財務総監コルベールが重商主義政策の一つとして再建した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1667a",
@@ -1073,7 +1196,8 @@
     "desc": "ルイ14世の侵略戦争の一つ",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1667b",
@@ -1085,7 +1209,8 @@
     "desc": "ロシアとポーランドがウクライナをドニエプル川で分けた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1667c",
@@ -1099,7 +1224,10 @@
     "desc": "旧約聖書に題材をとった叙事詩",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "en:Paradise Lost",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1670a",
@@ -1113,7 +1241,8 @@
     "acceptYears": [1667],
     "verified": false,
     "uncertain": true,
-    "memo": "1667年から数える資料もある"
+    "memo": "1667年から数える資料もある",
+    "descVerified": false
   },
   {
     "id": "e1670b",
@@ -1127,7 +1256,10 @@
     "desc": "「人間は考える葦である」。死後に刊行された",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:パンセ",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1672a",
@@ -1141,7 +1273,8 @@
     "desc": "ルイ14世がオランダに侵攻した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1673a",
@@ -1154,7 +1287,8 @@
     "desc": "雲南などの漢人藩王が起こした反乱。康熙帝が鎮圧した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1673b",
@@ -1165,7 +1299,8 @@
     "desc": "公職を国教徒に限った",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1674a",
@@ -1178,7 +1313,8 @@
     "desc": "シヴァージーがデカン地方で即位した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1679a",
@@ -1191,7 +1327,8 @@
     "desc": "アウラングゼーブが非ムスリムへの人頭税を復活させた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1679b",
@@ -1202,7 +1339,8 @@
     "desc": "不当な逮捕・投獄を禁じた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1681a",
@@ -1215,7 +1353,8 @@
     "desc": "クエーカー教徒のペンが建設した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1682a",
@@ -1228,7 +1367,8 @@
     "desc": "ラ=サールがミシシッピ川流域をフランス領と宣言した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1682b",
@@ -1242,7 +1382,10 @@
     "desc": "バロック様式の壮大な宮殿",
     "verified": false,
     "uncertain": true,
-    "memo": "建設は1661年から。宮廷を移したのは1682年"
+    "memo": "建設は1661年から。宮廷を移したのは1682年",
+    "image": "ja:ヴェルサイユ宮殿",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1683a",
@@ -1254,7 +1397,8 @@
     "desc": "オスマン帝国軍がウィーンを包囲して失敗した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1683b",
@@ -1267,7 +1411,8 @@
     "desc": "鄭氏政権が降伏し、台湾が清の領土となった",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1685a",
@@ -1280,7 +1425,8 @@
     "desc": "ユグノーの多くが国外へ亡命し、産業が打撃を受けた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1687a",
@@ -1294,7 +1440,10 @@
     "desc": "万有引力の法則を示した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "image": "ja:自然哲学の数学的諸原理",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1687b",
@@ -1307,7 +1456,8 @@
     "desc": "ビジャープル王国（1686年）・ゴールコンダ王国を併合し、最大領土となった",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1688a",
@@ -1319,7 +1469,8 @@
     "desc": "ジェームズ2世が亡命し、ウィリアム3世とメアリ2世が即位した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1688b",
@@ -1332,7 +1483,8 @@
     "desc": "ルイ14世の侵略戦争の一つ",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1689a",
@@ -1344,7 +1496,8 @@
     "desc": "清とロシアが国境（アルグン川・外興安嶺）を定めた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1689b",
@@ -1356,7 +1509,8 @@
     "desc": "議会の権利を確認した法",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1690a",
@@ -1368,7 +1522,8 @@
     "desc": "イギリス東インド会社がベンガルに拠点を置いた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1690b",
@@ -1383,7 +1538,10 @@
     "acceptYears": [1689],
     "verified": false,
     "uncertain": true,
-    "memo": "刊行は1689年末（表記は1690年）"
+    "memo": "刊行は1689年末（表記は1690年）",
+    "image": "ja:統治二論",
+    "imageVerified": false,
+    "descVerified": false
   },
   {
     "id": "e1694a",
@@ -1395,7 +1553,8 @@
     "desc": "国債を引き受け、財政革命を支えた",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1696a",
@@ -1408,7 +1567,8 @@
     "desc": "康熙帝が親征してジュンガルのガルダンを破った",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1697a",
@@ -1421,7 +1581,8 @@
     "desc": "皇帝自ら身分を隠して西ヨーロッパを視察した",
     "verified": false,
     "uncertain": true,
-    "memo": "1697〜98年"
+    "memo": "1697〜98年",
+    "descVerified": false
   },
   {
     "id": "e1697b",
@@ -1432,7 +1593,8 @@
     "desc": "ファルツ継承戦争の講和",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   },
   {
     "id": "e1699a",
@@ -1444,6 +1606,7 @@
     "desc": "オスマン帝国がハンガリーなどをオーストリアに割譲した",
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false
   }
 ]

@@ -1,14 +1,8 @@
 {
   "config": "config.json",
   "regions": "regions.json",
-  "polities": ["polities.json"],
-  "rulers": ["rulers.json"],
-  "events": [
-    "events/1500-1599.json",
-    "events/1600-1699.json",
-    "events/1700-1799.json",
-    "events/1800-1899.json",
-    "events/1900-2000.json"
-  ],
+  "polities": ["polities-0500-1499.json", "polities.json"],
+  "rulers": ["rulers-0500-1499.json", "rulers.json"],
+  "events": ["events/0500-0599.json", "events/0600-0699.json", "events/0700-0799.json", "events/0800-0899.json", "events/0900-0999.json", "events/1000-1099.json", "events/1100-1199.json", "events/1200-1299.json", "events/1300-1399.json", "events/1400-1499.json", "events/1500-1599.json", "events/1600-1699.json", "events/1700-1799.json", "events/1800-1899.json", "events/1900-2000.json"],
   "zones": "map/zones.json"
 }

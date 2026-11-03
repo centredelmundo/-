@@ -8,7 +8,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "明の皇帝。政治が比較的安定した時代とされる。"
   },
   {
     "id": "r-ming-1505",
@@ -19,7 +21,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "明の皇帝。宦官の劉瑾らが権力をふるった。"
   },
   {
     "id": "r-ming-1521",
@@ -30,7 +34,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "明の皇帝。北のモンゴルと南の倭寇（北虜南倭）に悩まされた。"
   },
   {
     "id": "r-ming-1567",
@@ -41,7 +47,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "海禁をゆるめ、モンゴルと和議を結んだ。"
   },
   {
     "id": "r-ming-1572",
@@ -53,7 +61,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "張居正の改革で一条鞭法が広まったが、のちに政治が乱れた。豊臣秀吉の朝鮮侵略に援軍を送った。"
   },
   {
     "id": "r-ming-1620",
@@ -64,7 +74,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "宦官の魏忠賢が権力をにぎり、東林派を弾圧した。"
   },
   {
     "id": "r-ming-1627",
@@ -75,7 +87,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "明最後の皇帝。李自成の反乱軍が北京を落としたときに自殺した。"
   },
   {
     "id": "r-later-jin-1616",
@@ -88,7 +102,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "女真を統一して後金を建て、八旗を組織した。満洲文字を作らせた。"
   },
   {
     "id": "r-later-jin-1626",
@@ -101,7 +117,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "内モンゴルのチャハルを従え、1636年に国号を清と改めた。"
   },
   {
     "id": "r-qing-1636",
@@ -114,7 +132,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "国号を清とし、朝鮮を服属させた（丙子胡乱）。"
   },
   {
     "id": "r-qing-1643",
@@ -125,7 +145,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "北京に入り、清の中国支配を始めた皇帝。"
   },
   {
     "id": "r-qing-1661",
@@ -137,7 +159,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "三藩の乱を鎮め、台湾の鄭氏を降し、ネルチンスク条約を結んだ。清の最盛期を開いた。"
   },
   {
     "id": "r-qing-1722",
@@ -149,7 +173,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "軍機処を設置し、地丁銀制を広げた。キリスト教の布教を禁止した。"
   },
   {
     "id": "r-qing-1735",
@@ -161,7 +187,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "清の最大領域を築いた皇帝。ジュンガルを滅ぼして新疆とし、ヨーロッパ船の来航を広州に限った。"
   },
   {
     "id": "r-qing-1796",
@@ -172,7 +200,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "白蓮教徒の乱が起き、清が衰え始めた時代の皇帝。"
   },
   {
     "id": "r-qing-1820",
@@ -183,7 +213,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "アヘン戦争の時の皇帝。林則徐を広州に派遣した。"
   },
   {
     "id": "r-qing-1850",
@@ -194,7 +226,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "アロー戦争の時の皇帝。英仏軍が北京に迫ると熱河に逃れた。"
   },
   {
     "id": "r-qing-1861",
@@ -205,7 +239,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "西太后の子。この時代に洋務運動が進められた（同治中興）。"
   },
   {
     "id": "r-qing-1861-2",
@@ -218,7 +254,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": "同治帝・光緒帝の時代に実権をにぎった"
+    "memo": "同治帝・光緒帝の時代に実権をにぎった",
+    "descVerified": false,
+    "desc": "咸豊帝の妃。同治帝・光緒帝の時代に実権をにぎり、戊戌の変法をおさえた。"
   },
   {
     "id": "r-qing-1875",
@@ -229,7 +267,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "戊戌の変法で改革を試みたが、西太后らの政変で幽閉された。"
   },
   {
     "id": "r-qing-1908",
@@ -241,7 +281,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "清最後の皇帝（溥儀）。辛亥革命の翌年に退位し、のちに満洲国の皇帝となった。"
   },
   {
     "id": "r-taiping-1851",
@@ -253,7 +295,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "キリスト教の影響を受けて上帝会を組織し、太平天国を建てた。「滅満興漢」をかかげた。"
   },
   {
     "id": "r-roc-1912",
@@ -266,7 +310,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": "臨時大総統"
+    "memo": "臨時大総統",
+    "descVerified": false,
+    "desc": "三民主義を唱えて中国同盟会を組織した革命家。辛亥革命ののち臨時大総統となった。"
   },
   {
     "id": "r-beiyang-1912",
@@ -278,7 +324,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "北洋軍の指導者。宣統帝を退位させて大総統となり、独裁を行った。帝政を宣言したが、反対を受けて取り消した。"
   },
   {
     "id": "r-nanjing-gov-1928",
@@ -291,7 +339,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": true,
-    "memo": "国民政府・国民党の最高指導者としての期間（主席・総統の在任とは一致しない）"
+    "memo": "国民政府・国民党の最高指導者としての期間（主席・総統の在任とは一致しない）",
+    "descVerified": false,
+    "desc": "国民党の指導者。北伐を完成させて南京国民政府を率いたが、国共内戦に敗れて台湾に移った。"
   },
   {
     "id": "r-manchukuo-1932",
@@ -304,7 +354,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "1932年に執政、1934年に皇帝"
+    "memo": "1932年に執政、1934年に皇帝",
+    "descVerified": false,
+    "desc": "清最後の皇帝。日本がつくった満洲国の執政、のち皇帝となった。"
   },
   {
     "id": "r-prc-1949",
@@ -316,7 +368,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": "国家主席は1949〜59年、党主席は死去まで"
+    "memo": "国家主席は1949〜59年、党主席は死去まで",
+    "descVerified": false,
+    "desc": "中国共産党の指導者。中華人民共和国を建て、大躍進やプロレタリア文化大革命を指導した。"
   },
   {
     "id": "r-prc-1949-2",
@@ -328,7 +382,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "中華人民共和国の首相。平和五原則を発表し、ニクソン訪中や日中国交正常化を進めた。"
   },
   {
     "id": "r-prc-1959",
@@ -340,7 +396,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "中華人民共和国の国家主席。大躍進の失敗後に経済を立て直そうとしたが、文化大革命で失脚した。"
   },
   {
     "id": "r-prc-1978",
@@ -353,7 +411,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": true,
-    "memo": "最高実力者としての期間"
+    "memo": "最高実力者としての期間",
+    "descVerified": false,
+    "desc": "改革開放政策を進めた中国の指導者。天安門事件では民主化運動を弾圧した。"
   },
   {
     "id": "r-prc-1989",
@@ -365,7 +425,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "天安門事件ののち中国共産党の総書記となり、市場経済化を進めた。"
   },
   {
     "id": "r-korea-1567",
@@ -376,7 +438,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "朝鮮の王。豊臣秀吉の朝鮮侵略（壬辰・丁酉倭乱）を受けた。"
   },
   {
     "id": "r-korea-1608",
@@ -387,7 +451,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "朝鮮の王。後金と明の間で中立の外交を行ったが、廃位された。"
   },
   {
     "id": "r-korea-1623",
@@ -398,7 +464,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "清に攻められて（丙子胡乱）、臣下の礼をとった。"
   },
   {
     "id": "r-korea-1724",
@@ -409,7 +477,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "朝鮮の王。党派の争いをおさえる蕩平策をとった。"
   },
   {
     "id": "r-korea-1776",
@@ -420,7 +490,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "朝鮮の王。学問を奨励し、改革を進めた。"
   },
   {
     "id": "r-korea-1863",
@@ -433,7 +505,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "高宗の父として実権をにぎった"
+    "memo": "高宗の父として実権をにぎった",
+    "descVerified": false,
+    "desc": "高宗の父。鎖国・攘夷の政策を進めた。"
   },
   {
     "id": "r-korea-1863-2",
@@ -444,7 +518,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": "1897年から大韓帝国皇帝"
+    "memo": "1897年から大韓帝国皇帝",
+    "descVerified": false,
+    "desc": "朝鮮の国王で、1897年に大韓帝国の皇帝となった。ハーグ密使事件で退位させられた。"
   },
   {
     "id": "r-korea-1907",
@@ -455,7 +531,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "大韓帝国最後の皇帝。韓国併合で退位した。"
   },
   {
     "id": "r-rok-1948",
@@ -467,7 +545,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "大韓民国の初代大統領。四月革命で失脚した。"
   },
   {
     "id": "r-rok-1963",
@@ -480,7 +560,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "1961年のクーデタで実権をにぎる"
+    "memo": "1961年のクーデタで実権をにぎる",
+    "descVerified": false,
+    "desc": "軍事クーデタで実権をにぎり、日韓基本条約を結んで経済成長を進めた（開発独裁）。"
   },
   {
     "id": "r-rok-1980",
@@ -492,7 +574,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "光州事件を鎮圧して大統領となった。"
   },
   {
     "id": "r-rok-1988",
@@ -504,7 +588,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "民主化宣言を出し、大統領となった。中国・ソ連と国交を結んだ。"
   },
   {
     "id": "r-rok-1998",
@@ -516,7 +602,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "民主化運動の指導者。北朝鮮との和解をめざす「太陽政策」を進め、2000年に南北首脳会談を行った。"
   },
   {
     "id": "r-dprk-1948",
@@ -528,7 +616,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "朝鮮民主主義人民共和国を建て、長く独裁を行った。"
   },
   {
     "id": "r-dprk-1994",
@@ -540,7 +630,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "金日成の子。朝鮮民主主義人民共和国の指導者の地位を受けつぎ、2000年に南北首脳会談を行った。"
   },
   {
     "id": "r-azuchi-momoyama-1568",
@@ -551,7 +643,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": true,
-    "memo": "上洛した1568年から"
+    "memo": "上洛した1568年から",
+    "descVerified": false,
+    "desc": "室町幕府を滅ぼし、全国統一を進めた。楽市・楽座を行った。"
   },
   {
     "id": "r-azuchi-momoyama-1585",
@@ -563,7 +657,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "1585年に関白"
+    "memo": "1585年に関白",
+    "descVerified": false,
+    "desc": "全国を統一し、太閤検地や刀狩を行った。朝鮮に出兵した。"
   },
   {
     "id": "r-edo-1603",
@@ -575,7 +671,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "関ヶ原の戦いに勝ち、江戸幕府を開いた。"
   },
   {
     "id": "r-edo-1605",
@@ -587,7 +685,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "江戸幕府の第2代将軍。武家諸法度を定めた。"
   },
   {
     "id": "r-edo-1623",
@@ -599,7 +699,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "参勤交代を制度化し、鎖国の体制を固めた。"
   },
   {
     "id": "r-edo-1651",
@@ -611,7 +713,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "江戸幕府の第4代将軍。武力による政治から文治政治への転換が進んだ。"
   },
   {
     "id": "r-edo-1680",
@@ -623,7 +727,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "江戸幕府の第5代将軍。生類憐みの令を出した。"
   },
   {
     "id": "r-edo-1716",
@@ -635,7 +741,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "享保の改革を行った江戸幕府の第8代将軍。"
   },
   {
     "id": "r-edo-1787",
@@ -647,7 +755,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "江戸幕府の第11代将軍。松平定信が寛政の改革を行った。"
   },
   {
     "id": "r-edo-1866",
@@ -659,7 +769,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "江戸幕府最後の将軍。大政奉還を行った。"
   },
   {
     "id": "r-japan-1867",
@@ -671,7 +783,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "明治維新の時代の天皇。大日本帝国憲法が定められた。"
   },
   {
     "id": "r-japan-1912",
@@ -683,7 +797,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "大正時代の天皇。"
   },
   {
     "id": "r-japan-1926",
@@ -695,7 +811,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "昭和時代の天皇。"
   },
   {
     "id": "r-mongols-1480",
@@ -706,7 +824,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": true,
-    "memo": "在位の年は資料により差がある"
+    "memo": "在位の年は資料により差がある",
+    "descVerified": false,
+    "desc": "モンゴル（タタール）を再び統一したハン。"
   },
   {
     "id": "r-mongols-1542",
@@ -718,7 +838,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": true,
-    "memo": "首長となった年は目安"
+    "memo": "首長となった年は目安",
+    "descVerified": false,
+    "desc": "モンゴルのハン。明の北方をたびたび攻め、1550年に北京を包囲した。チベット仏教を保護した。"
   },
   {
     "id": "r-oirat-1671",
@@ -730,7 +852,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ジュンガルの指導者。外モンゴルに攻め込んだが、康熙帝の親征に敗れた。"
   },
   {
     "id": "r-ganden-phodrang-1642",
@@ -741,7 +865,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "モンゴルの支援でチベットの政治と宗教の実権をにぎり、ラサにポタラ宮を建てた。"
   },
   {
     "id": "r-timurid-1469",
@@ -752,7 +878,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ティムール朝の末期の君主。都ヘラートでトルコ語・ペルシア語の文化が栄えた。"
   },
   {
     "id": "r-bukhara-1500",
@@ -764,7 +892,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ウズベクを率いてティムール朝を倒し、シャイバーニー朝を開いた。サファヴィー朝との戦いで戦死した。"
   },
   {
     "id": "r-yakub-beg-1865",
@@ -775,7 +905,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "新疆で清に反乱を起こして独自の政権を建てたが、左宗棠に鎮圧された。"
   },
   {
     "id": "r-ayutthaya-1590",
@@ -786,7 +918,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "タウングー朝からアユタヤ朝の独立を取り戻した。"
   },
   {
     "id": "r-thonburi-1767",
@@ -797,7 +931,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ビルマ軍を追い出してトンブリー朝を開いた。"
   },
   {
     "id": "r-chakri-1782",
@@ -808,7 +944,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "バンコクを都にラタナコーシン朝（チャクリ朝）を開いた。"
   },
   {
     "id": "r-chakri-1851",
@@ -820,7 +958,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "イギリスとボーリング条約を結んで開国し、近代化を始めた。"
   },
   {
     "id": "r-chakri-1868",
@@ -832,7 +972,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "チャクリ改革で近代化を進め、イギリスとフランスの間で独立を保った。"
   },
   {
     "id": "r-toungoo-1531",
@@ -843,7 +985,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "タウングー朝の王。ビルマを統一してペグーを都とした。"
   },
   {
     "id": "r-toungoo-1550",
@@ -854,7 +998,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "タウングー朝の最盛期の王。アユタヤ朝を服属させた。"
   },
   {
     "id": "r-konbaung-1752",
@@ -865,7 +1011,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "コンバウン朝を開き、ビルマを再統一した。"
   },
   {
     "id": "r-nguyen-1802",
@@ -877,7 +1025,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "西山朝を倒して阮朝を開き、国号を越南とした。"
   },
   {
     "id": "r-nguyen-1820",
@@ -888,7 +1038,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "阮朝の皇帝。中央集権を進め、キリスト教を弾圧した。"
   },
   {
     "id": "r-nguyen-1847",
@@ -899,7 +1051,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "阮朝の皇帝。フランスの侵略を受け、サイゴン条約を結んだ。"
   },
   {
     "id": "r-drv-1945",
@@ -911,7 +1065,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ベトナム独立運動の指導者。ベトナム民主共和国の独立を宣言し、インドシナ戦争・ベトナム戦争を指導した。"
   },
   {
     "id": "r-south-vietnam-1955",
@@ -923,7 +1079,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ベトナム共和国の初代大統領。独裁を行い、クーデタで殺された。"
   },
   {
     "id": "r-cambodia-k-1953",
@@ -935,7 +1093,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": true,
-    "memo": "国王・元首など立場は時期により変わる"
+    "memo": "国王・元首など立場は時期により変わる",
+    "descVerified": false,
+    "desc": "カンボジアの独立を実現した国王。中立政策をとった。"
   },
   {
     "id": "r-cambodia-k-1975",
@@ -947,7 +1107,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "民主カンプチアの指導者"
+    "memo": "民主カンプチアの指導者",
+    "descVerified": false,
+    "desc": "民主カンプチアの指導者。極端な共産主義政策で多くの国民を死に追いやった。"
   },
   {
     "id": "r-indonesia-1945",
@@ -959,7 +1121,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "インドネシアの独立を宣言して初代大統領となり、アジア=アフリカ会議を開いた。九・三〇事件ののち失脚した。"
   },
   {
     "id": "r-indonesia-1968",
@@ -971,7 +1135,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "九・三〇事件で実権をにぎり、開発独裁を行った。1998年に退陣した。"
   },
   {
     "id": "r-ph-republic-1899",
@@ -983,7 +1149,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "フィリピン革命の指導者。フィリピン共和国の大統領となったが、アメリカ軍に捕らえられた。"
   },
   {
     "id": "r-philippines-1965",
@@ -995,7 +1163,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "フィリピンで長く独裁を行い、1986年の政変で亡命した。"
   },
   {
     "id": "r-philippines-1986",
@@ -1008,7 +1178,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "マルコスの独裁を倒したフィリピンの大統領。"
   },
   {
     "id": "r-malaysia-1957",
@@ -1020,7 +1192,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "マラヤ連邦の初代首相。マレーシアを成立させた。"
   },
   {
     "id": "r-singapore-r-1965",
@@ -1032,7 +1206,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "シンガポールの初代首相。開発独裁のもとで経済成長を実現した。"
   },
   {
     "id": "r-lodi-1517",
@@ -1043,7 +1219,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ロディー朝最後のスルタン。第1次パーニーパットの戦いでバーブルに敗れて戦死した。"
   },
   {
     "id": "r-mughal-1526",
@@ -1054,7 +1232,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ティムールの子孫。第1次パーニーパットの戦いでロディー朝を破り、ムガル帝国を建てた。"
   },
   {
     "id": "r-mughal-1530",
@@ -1065,7 +1245,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ムガル帝国の第2代皇帝。スール朝のシェール=シャーに敗れて国外に逃れた。"
   },
   {
     "id": "r-mughal-1555",
@@ -1076,7 +1258,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "デリーを回復した翌年に死去"
+    "memo": "デリーを回復した翌年に死去",
+    "descVerified": false,
+    "desc": "亡命先から戻り、デリーを取り戻した。"
   },
   {
     "id": "r-sur-1540",
@@ -1087,7 +1271,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "フマーユーンを破って北インドを支配し、税制や道路を整えた。"
   },
   {
     "id": "r-mughal-1556",
@@ -1098,7 +1284,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ムガル帝国の実質的な建設者。アグラを都とし、ジズヤを廃止してヒンドゥー教徒と融和した。マンサブダール制を整えた。"
   },
   {
     "id": "r-mughal-1605",
@@ -1109,7 +1297,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ムガル帝国の皇帝。イギリスの使節トマス=ローを迎えた。"
   },
   {
     "id": "r-mughal-1628",
@@ -1120,7 +1310,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "亡き妃のためにタージ=マハルを建てさせた。"
   },
   {
     "id": "r-mughal-1658",
@@ -1131,7 +1323,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ムガル帝国の最大領域を築いたが、ジズヤを復活させるなど厳しいイスラーム政策をとり、反乱を招いた。"
   },
   {
     "id": "r-mughal-1837",
@@ -1142,7 +1336,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ムガル帝国最後の皇帝。インド大反乱で反乱軍に立てられ、鎮圧後にビルマに流された。"
   },
   {
     "id": "r-vijayanagar-1509",
@@ -1153,7 +1349,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ヴィジャヤナガル王国の最盛期の王。"
   },
   {
     "id": "r-maratha-1674",
@@ -1164,7 +1362,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "マラーター王国を建て、ムガル帝国に抵抗した。"
   },
   {
     "id": "r-mysore-1761",
@@ -1175,7 +1375,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "マイソール王国の実権をにぎり、イギリスと戦った（マイソール戦争）。"
   },
   {
     "id": "r-mysore-1782",
@@ -1186,7 +1388,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "父ハイダル=アリーとともにイギリスに抵抗したが、敗れて戦死した。"
   },
   {
     "id": "r-sikh-1801",
@@ -1197,7 +1401,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "パンジャーブにシク王国を建てた。"
   },
   {
     "id": "r-afghanistan-1747",
@@ -1209,7 +1415,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ドゥッラーニー朝を開き、アフガニスタンを統一した。"
   },
   {
     "id": "r-eic-india-1848",
@@ -1221,7 +1429,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "インド総督。藩王国の併合を進め、インド大反乱の原因を作った。"
   },
   {
     "id": "r-british-raj-1899",
@@ -1233,7 +1443,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "インド総督。ベンガル分割令を出した。"
   },
   {
     "id": "r-india-1947",
@@ -1245,7 +1457,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "インド独立運動の指導者で、独立後の初代首相。非同盟の外交をとり、平和五原則を発表した。"
   },
   {
     "id": "r-india-1966",
@@ -1257,7 +1471,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ネルーの娘。インドの首相となり、バングラデシュの独立を支援した。"
   },
   {
     "id": "r-india-1980",
@@ -1269,7 +1485,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "首相に返り咲いたが、シク教徒の護衛に暗殺された。"
   },
   {
     "id": "r-india-1984",
@@ -1281,7 +1499,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "インディラ=ガンディーの子。首相となったが、のちに暗殺された。"
   },
   {
     "id": "r-pakistan-1947",
@@ -1293,7 +1513,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "全インド=ムスリム連盟の指導者。パキスタンの初代総督となった。"
   },
   {
     "id": "r-pakistan-1971",
@@ -1305,7 +1527,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "バングラデシュの独立後にパキスタンの大統領・首相となった。"
   },
   {
     "id": "r-ottoman-1481",
@@ -1316,7 +1540,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "メフメト2世の子。父の征服で広がった帝国を固めた。"
   },
   {
     "id": "r-ottoman-1512",
@@ -1327,7 +1553,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "チャルディラーンの戦いでサファヴィー朝を破り、マムルーク朝を滅ぼしてメッカ・メディナの保護者となった。"
   },
   {
     "id": "r-ottoman-1520",
@@ -1339,7 +1567,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "オスマン帝国の最盛期のスルタン。モハーチの戦いでハンガリーを破ってウィーンを包囲し、プレヴェザの海戦に勝った。"
   },
   {
     "id": "r-ottoman-1566",
@@ -1350,7 +1580,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "レパントの海戦でスペインなどの連合艦隊に敗れた。"
   },
   {
     "id": "r-ottoman-1574",
@@ -1361,7 +1593,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "イギリスなどに通商特権を与えた時代のスルタン。"
   },
   {
     "id": "r-ottoman-1603",
@@ -1372,7 +1606,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "スルタン=アフメト=モスク（ブルー=モスク）を建てさせた。"
   },
   {
     "id": "r-ottoman-1623",
@@ -1383,7 +1619,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "帝国を立て直し、サファヴィー朝からバグダードを奪回した。"
   },
   {
     "id": "r-ottoman-1648",
@@ -1394,7 +1632,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "この時代に第2次ウィーン包囲に失敗した。"
   },
   {
     "id": "r-ottoman-1703",
@@ -1405,7 +1645,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "「チューリップ時代」とよばれる平和と文化の時代のスルタン。"
   },
   {
     "id": "r-ottoman-1789",
@@ -1416,7 +1658,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "西洋式の新軍（ニザーム=ジェディード）を作ろうとしたが、反発を受けて廃位された。"
   },
   {
     "id": "r-ottoman-1808",
@@ -1427,7 +1671,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "イェニチェリ軍団を廃止し、近代化を進めた。"
   },
   {
     "id": "r-ottoman-1839",
@@ -1438,7 +1684,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ギュルハネ勅令を出してタンジマート（恩恵改革）を始めた。"
   },
   {
     "id": "r-ottoman-1876",
@@ -1449,7 +1697,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ミドハト憲法を停止して専制政治を行い、パン=イスラーム主義を利用した。"
   },
   {
     "id": "r-ottoman-1876-2",
@@ -1461,7 +1711,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "オスマン帝国の大宰相。アジア最初の憲法（ミドハト憲法）を起草した。"
   },
   {
     "id": "r-ottoman-1918",
@@ -1472,7 +1724,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "オスマン帝国最後のスルタン。スルタン制の廃止で亡命した。"
   },
   {
     "id": "r-mamluk-1501",
@@ -1483,7 +1737,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "マムルーク朝末期のスルタン。オスマン帝国との戦いで戦死した。"
   },
   {
     "id": "r-safavid-1501",
@@ -1494,7 +1750,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "サファヴィー朝を開き、シーア派（十二イマーム派）を国教とした。シャーの称号を用いた。"
   },
   {
     "id": "r-safavid-1524",
@@ -1505,7 +1763,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "サファヴィー朝の王。オスマン帝国と争った。"
   },
   {
     "id": "r-safavid-1588",
@@ -1516,7 +1776,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": true,
-    "memo": "即位を1587年とする資料もある"
+    "memo": "即位を1587年とする資料もある",
+    "descVerified": false,
+    "desc": "サファヴィー朝の最盛期の王。イスファハーンに都を移し、「イスファハーンは世界の半分」とよばれるほど栄えた。"
   },
   {
     "id": "r-safavid-1642",
@@ -1527,7 +1789,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "サファヴィー朝の王。カンダハールをムガル帝国から奪回した。"
   },
   {
     "id": "r-afsharid-1736",
@@ -1538,7 +1802,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "サファヴィー朝を倒してアフシャール朝を開き、インドに侵入してデリーを略奪した。"
   },
   {
     "id": "r-zand-1751",
@@ -1549,7 +1815,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ザンド朝を開き、シーラーズを都とした。"
   },
   {
     "id": "r-qajar-1796",
@@ -1560,7 +1828,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": true,
-    "memo": "1789年ごろから実権。王位は1796年"
+    "memo": "1789年ごろから実権。王位は1796年",
+    "descVerified": false,
+    "desc": "カージャール朝を開き、テヘランを都とした。"
   },
   {
     "id": "r-qajar-1797",
@@ -1571,7 +1841,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ロシアとの戦争に敗れ、トルコマンチャーイ条約を結んだ。"
   },
   {
     "id": "r-qajar-1848",
@@ -1582,7 +1854,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "カージャール朝の王。イギリスなどに利権を与え、タバコ=ボイコット運動が起きた。"
   },
   {
     "id": "r-pahlavi-1925",
@@ -1594,7 +1868,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "クーデタで実権をにぎってパフレヴィー朝を開き、国名をイランとした（1935年）。"
   },
   {
     "id": "r-pahlavi-1941",
@@ -1606,7 +1882,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "「白色革命」とよばれる近代化を進めたが、イラン=イスラーム革命で亡命した。"
   },
   {
     "id": "r-iran-ir-1979",
@@ -1618,7 +1896,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "イラン=イスラーム革命を指導し、イスラーム法学者による統治を始めた。"
   },
   {
     "id": "r-muhammad-ali-1805",
@@ -1630,7 +1910,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "オスマン帝国のエジプト総督として近代化を進め、エジプト=トルコ戦争でシリアを得た。"
   },
   {
     "id": "r-egypt-1954",
@@ -1642,7 +1924,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": "1956年から大統領"
+    "memo": "1956年から大統領",
+    "descVerified": false,
+    "desc": "エジプト革命の指導者。スエズ運河を国有化し、アラブ民族主義を指導した。"
   },
   {
     "id": "r-egypt-1970",
@@ -1654,7 +1938,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "第4次中東戦争を戦い、のちイスラエルと平和条約を結んだ。暗殺された。"
   },
   {
     "id": "r-egypt-1981",
@@ -1666,7 +1952,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "サダトの暗殺後に大統領となり、長く政権を続けた。"
   },
   {
     "id": "r-mahdist-1881",
@@ -1678,7 +1966,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "マフディー（救世主）を名のってスーダンで反乱を起こした。"
   },
   {
     "id": "r-saudi-1902",
@@ -1690,7 +1980,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "リヤドを奪回してサウード家を再興し、1932年にサウジアラビア王国を建てた。"
   },
   {
     "id": "r-hejaz-k-1916",
@@ -1703,7 +1995,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "メッカの太守。フセイン・マクマホン協定をもとにアラブの反乱を起こし、ヒジャーズ王国を建てた。"
   },
   {
     "id": "r-turkey-1923",
@@ -1716,7 +2010,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "トルコ共和国の初代大統領。カリフ制の廃止、政教分離、文字改革などの近代化を進めた（ケマル=アタテュルク）。"
   },
   {
     "id": "r-iraq-1921",
@@ -1729,7 +2025,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "フサインの子。イギリスの委任統治のもとでイラク王となった。"
   },
   {
     "id": "r-iraq-1979",
@@ -1741,7 +2039,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "イラン=イラク戦争を始め、クウェートに侵攻して湾岸戦争を招いた。"
   },
   {
     "id": "r-israel-1948",
@@ -1753,7 +2053,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": true,
-    "memo": "首相の在任は1948〜54年と1955〜63年"
+    "memo": "首相の在任は1948〜54年と1955〜63年",
+    "descVerified": false,
+    "desc": "イスラエルの初代首相。"
   },
   {
     "id": "r-saadi-1578",
@@ -1764,7 +2066,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ポルトガル軍を破り、1591年にソンガイ王国を攻めた。サアド朝の最盛期の王。"
   },
   {
     "id": "r-songhai-1493",
@@ -1775,7 +2079,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ソンガイ王国の最盛期の王。メッカ巡礼を行い、トンブクトゥが学問の都として栄えた。"
   },
   {
     "id": "r-ethiopia-1889",
@@ -1787,7 +2093,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "アドワの戦いでイタリア軍を破り、エチオピアの独立を守った。"
   },
   {
     "id": "r-ethiopia-1930",
@@ -1800,7 +2108,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "エチオピア皇帝。イタリアの侵攻を受けて亡命したが、のちに復帰した。"
   },
   {
     "id": "r-zulu-1816",
@@ -1811,7 +2121,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "南アフリカのズールー王国を強大にした王。"
   },
   {
     "id": "r-south-africa-1994",
@@ -1823,7 +2135,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "反アパルトヘイト運動の指導者。長い投獄を経て、南アフリカ初の黒人大統領となった。"
   },
   {
     "id": "r-tudor-1485",
@@ -1834,7 +2148,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "バラ戦争を終わらせてテューダー朝を開き、星室庁裁判所を整えて王権を強めた。"
   },
   {
     "id": "r-tudor-1509",
@@ -1845,7 +2161,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "離婚問題で教皇と対立し、首長法（1534年）でイギリス国教会を成立させた。修道院を解散した。"
   },
   {
     "id": "r-tudor-1547",
@@ -1856,7 +2174,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "イギリス国教会の改革を進め、一般祈禱書を定めた。"
   },
   {
     "id": "r-tudor-1553",
@@ -1867,7 +2187,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "カトリックを復活させて新教徒を弾圧した。スペイン王子フェリペと結婚した。"
   },
   {
     "id": "r-tudor-1558",
@@ -1878,7 +2200,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "統一法でイギリス国教会を確立し、スペインの無敵艦隊を破った。東インド会社を設立させた。"
   },
   {
     "id": "r-stuart-1603",
@@ -1889,7 +2213,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "スコットランド王からイングランド王となり、ステュアート朝を開いた。王権神授説を唱えた。"
   },
   {
     "id": "r-stuart-1625",
@@ -1900,7 +2226,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "権利の請願を受け入れたが議会を解散し、ピューリタン革命で処刑された。"
   },
   {
     "id": "r-commonwealth-1653",
@@ -1913,7 +2241,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ピューリタン革命を指導して王を処刑し、護国卿として独裁を行った。航海法を定めた。"
   },
   {
     "id": "r-stuart-1660",
@@ -1924,7 +2254,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "王政復古で即位した。カトリックに好意的で議会と対立した。"
   },
   {
     "id": "r-stuart-1685",
@@ -1935,7 +2267,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "カトリックを復活させようとして、名誉革命で追放された。"
   },
   {
     "id": "r-stuart-1689",
@@ -1946,7 +2280,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "名誉革命で妻メアリ2世とともに即位し、権利の章典を認めた。"
   },
   {
     "id": "r-stuart-1689-2",
@@ -1957,7 +2293,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "名誉革命で夫ウィリアム3世とともに即位した。"
   },
   {
     "id": "r-stuart-1702",
@@ -1969,7 +2307,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "1707年にイングランドとスコットランドを合同させ、大ブリテン王国とした。"
   },
   {
     "id": "r-hanover-1714",
@@ -1980,7 +2320,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ドイツのハノーヴァー選帝侯からイギリス王となった。英語が話せず、責任内閣制が発達した。"
   },
   {
     "id": "r-hanover-1727",
@@ -1991,7 +2333,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "オーストリア継承戦争に参戦した。"
   },
   {
     "id": "r-hanover-1760",
@@ -2002,7 +2346,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "アメリカ独立戦争・フランス革命戦争の時代のイギリス王。"
   },
   {
     "id": "r-hanover-1820",
@@ -2013,7 +2359,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ナポレオン戦争の後のイギリス王。"
   },
   {
     "id": "r-hanover-1830",
@@ -2024,7 +2372,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "第1回選挙法改正の時代のイギリス王。"
   },
   {
     "id": "r-hanover-1837",
@@ -2036,7 +2386,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "イギリスの繁栄期（ヴィクトリア時代）の女王。1877年にインド皇帝を兼ねた。"
   },
   {
     "id": "r-saxe-coburg-1901",
@@ -2047,7 +2399,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "英仏協商が結ばれた時代のイギリス王。"
   },
   {
     "id": "r-britain-1910",
@@ -2058,7 +2412,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "1917年に王家の名をウィンザーに改めた"
+    "memo": "1917年に王家の名をウィンザーに改めた",
+    "descVerified": false,
+    "desc": "第一次世界大戦の時のイギリス王。王家の名をウィンザーと改めた。"
   },
   {
     "id": "r-windsor-1936",
@@ -2069,7 +2425,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "第二次世界大戦の時のイギリス王。"
   },
   {
     "id": "r-windsor-1952",
@@ -2080,7 +2438,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "1952年に即位したイギリスの女王。"
   },
   {
     "id": "r-britain-1721",
@@ -2092,7 +2452,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": "責任内閣制のはじまり"
+    "memo": "責任内閣制のはじまり",
+    "descVerified": false,
+    "desc": "イギリス最初の首相とされ、責任内閣制のもとを作った。"
   },
   {
     "id": "r-britain-1783",
@@ -2105,7 +2467,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "小ピット。若くして首相となり、対仏大同盟を組織した。"
   },
   {
     "id": "r-britain-1868",
@@ -2117,7 +2481,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "自由党の首相（第1次内閣）。教育法などの改革を進めた。"
   },
   {
     "id": "r-britain-1880",
@@ -2129,7 +2495,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "自由党の首相（第2次内閣）。第3回選挙法改正を行った。"
   },
   {
     "id": "r-britain-1892",
@@ -2141,7 +2509,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "自由党の首相（第4次内閣）。アイルランド自治法案を出した。"
   },
   {
     "id": "r-britain-1874",
@@ -2153,7 +2523,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": "1868年にも短期間首相"
+    "memo": "1868年にも短期間首相",
+    "descVerified": false,
+    "desc": "保守党の首相。スエズ運河会社の株を買収し、ヴィクトリア女王をインド皇帝とした。"
   },
   {
     "id": "r-britain-1895",
@@ -2165,7 +2537,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "植民相として南アフリカ戦争を進め、帝国主義政策を推進した。"
   },
   {
     "id": "r-britain-1916",
@@ -2177,7 +2551,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "第一次世界大戦を戦い、パリ講和会議に出席した首相。"
   },
   {
     "id": "r-britain-1929",
@@ -2189,7 +2565,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "1924年にも首相"
+    "memo": "1924年にも首相",
+    "descVerified": false,
+    "desc": "労働党の首相。世界恐慌の中で挙国一致内閣を組織した。"
   },
   {
     "id": "r-britain-1937",
@@ -2201,7 +2579,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ミュンヘン会談でドイツに宥和政策をとった首相。"
   },
   {
     "id": "r-britain-1940",
@@ -2213,7 +2593,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "第二次世界大戦を指導した首相。大西洋憲章を発表し、戦後には「鉄のカーテン」演説を行った。"
   },
   {
     "id": "r-britain-1945",
@@ -2225,7 +2607,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "労働党の首相。重要産業の国有化と社会保障制度を進めた（「ゆりかごから墓場まで」）。"
   },
   {
     "id": "r-britain-1951",
@@ -2237,7 +2621,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "第二次世界大戦後に2度目の首相となった。"
   },
   {
     "id": "r-britain-1979",
@@ -2249,7 +2635,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "保守党の首相。国有企業の民営化など新自由主義の改革を進め、フォークランド戦争を戦った。"
   },
   {
     "id": "r-britain-1997",
@@ -2261,7 +2649,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "「第三の道」を唱えた労働党の首相。"
   },
   {
     "id": "r-valois-1498",
@@ -2272,7 +2662,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "フランス王。イタリア戦争を続けた。"
   },
   {
     "id": "r-valois-1515",
@@ -2283,7 +2675,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "イタリア戦争でカール5世と争い、ルネサンスの文化を保護した。"
   },
   {
     "id": "r-valois-1547",
@@ -2294,7 +2688,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "イタリア戦争を終わらせるカトー=カンブレジ条約を結んだ。"
   },
   {
     "id": "r-valois-1560",
@@ -2305,7 +2701,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "母后カトリーヌのもとでユグノー戦争が起き、サン=バルテルミの虐殺が起きた。"
   },
   {
     "id": "r-valois-1574",
@@ -2316,7 +2714,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ヴァロワ朝最後の王。ユグノー戦争の中で暗殺された。"
   },
   {
     "id": "r-bourbon-1589",
@@ -2327,7 +2727,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ブルボン朝を開き、ナントの王令でユグノーに信仰の自由を認めた。"
   },
   {
     "id": "r-bourbon-1610",
@@ -2338,7 +2740,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "宰相リシュリューを登用した。三部会の招集を停止した。"
   },
   {
     "id": "r-bourbon-1624",
@@ -2350,7 +2754,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ルイ13世の宰相。ユグノーをおさえ、三十年戦争では新教側を支援した。アカデミー=フランセーズを作った。"
   },
   {
     "id": "r-bourbon-1642",
@@ -2362,7 +2768,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ルイ14世の幼少期の宰相。フロンドの乱を鎮めた。"
   },
   {
     "id": "r-bourbon-1643",
@@ -2373,7 +2781,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "太陽王。王権神授説に立つ絶対王政の典型で、ヴェルサイユ宮殿を建て、ナントの王令を廃止した。"
   },
   {
     "id": "r-bourbon-1665",
@@ -2385,7 +2795,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ルイ14世の財務総監。重商主義政策をとり、東インド会社を立て直した。"
   },
   {
     "id": "r-bourbon-1715",
@@ -2396,7 +2808,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "七年戦争で北アメリカやインドの植民地の多くを失った。"
   },
   {
     "id": "r-bourbon-1774",
@@ -2407,7 +2821,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "財政改革に失敗して三部会を招集し、フランス革命の中で処刑された（1793年）。"
   },
   {
     "id": "r-first-republic-1793",
@@ -2419,7 +2835,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "ジャコバン派の恐怖政治"
+    "memo": "ジャコバン派の恐怖政治",
+    "descVerified": false,
+    "desc": "ジャコバン派の指導者。恐怖政治を行ったが、テルミドールの反動で処刑された。"
   },
   {
     "id": "r-first-republic-1799",
@@ -2432,7 +2850,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ブリュメール18日のクーデタで統領政府を開き、第一統領として実権をにぎった。"
   },
   {
     "id": "r-first-empire-1804",
@@ -2445,7 +2865,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": "1815年に百日天下"
+    "memo": "1815年に百日天下",
+    "descVerified": false,
+    "desc": "皇帝ナポレオン1世。大陸封鎖令を出してヨーロッパの大部分を支配したが、ロシア遠征の失敗後に退位した。"
   },
   {
     "id": "r-bourbon-1814",
@@ -2456,7 +2878,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ナポレオンの退位後に即位し、ブルボン朝を復活させた。"
   },
   {
     "id": "r-bourbon-1824",
@@ -2467,7 +2891,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "反動政治を行い、七月革命で退位した。"
   },
   {
     "id": "r-july-monarchy-1830",
@@ -2478,7 +2904,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "七月革命で即位した「市民王」。二月革命で退位した。"
   },
   {
     "id": "r-second-republic-1848",
@@ -2491,7 +2919,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ナポレオンの甥。大統領に選ばれたのちクーデタで独裁権をにぎり、皇帝ナポレオン3世となった。"
   },
   {
     "id": "r-second-empire-1852",
@@ -2504,7 +2934,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "第二帝政の皇帝。パリ改造やクリミア戦争・メキシコ出兵を行ったが、プロイセン=フランス戦争で捕虜となった。"
   },
   {
     "id": "r-third-republic-1871",
@@ -2516,7 +2948,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "パリ=コミューンを鎮圧した、第三共和政の初代大統領。"
   },
   {
     "id": "r-third-republic-1917",
@@ -2528,7 +2962,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "1906〜09年にも首相"
+    "memo": "1906〜09年にも首相",
+    "descVerified": false,
+    "desc": "第一次世界大戦の勝利に導き、パリ講和会議でドイツに厳しい態度をとった首相。"
   },
   {
     "id": "r-vichy-1940",
@@ -2540,7 +2976,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "第一次世界大戦の英雄。ドイツに降伏したのち、ヴィシー政府の首班となった。"
   },
   {
     "id": "r-france-1944",
@@ -2552,7 +2990,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": "臨時政府の主席"
+    "memo": "臨時政府の主席",
+    "descVerified": false,
+    "desc": "ロンドンで自由フランスを組織してレジスタンスを指導し、戦後に臨時政府の主席となった。"
   },
   {
     "id": "r-fifth-republic-1959",
@@ -2564,7 +3004,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "第五共和政の初代大統領。アルジェリアの独立を認め、NATOの軍事機構から脱退した。"
   },
   {
     "id": "r-fifth-republic-1981",
@@ -2576,7 +3018,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "フランスの社会党の大統領。ヨーロッパ統合を進めた。"
   },
   {
     "id": "r-catholic-monarchs-1474",
@@ -2588,7 +3032,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": "カスティリャ女王"
+    "memo": "カスティリャ女王",
+    "descVerified": false,
+    "desc": "カスティリャ女王。夫フェルナンドとともにグラナダを征服し、コロンブスの航海を援助した。"
   },
   {
     "id": "r-catholic-monarchs-1479",
@@ -2600,7 +3046,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "アラゴン王"
+    "memo": "アラゴン王",
+    "descVerified": false,
+    "desc": "アラゴン王。妻イサベルとともにスペインを治め（カトリック両王）、レコンキスタを完了させた。"
   },
   {
     "id": "r-habsburg-spain-1516",
@@ -2612,7 +3060,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": "神聖ローマ皇帝カール5世としても在位（1519〜56年）"
+    "memo": "神聖ローマ皇帝カール5世としても在位（1519〜56年）",
+    "descVerified": false,
+    "desc": "スペイン王。1519年に神聖ローマ皇帝カール5世となり、広大な領土を治めた。"
   },
   {
     "id": "r-habsburg-spain-1556",
@@ -2623,7 +3073,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "スペインの全盛期の王。レパントの海戦に勝ち、ポルトガルを併合した（「太陽の沈まぬ国」）。無敵艦隊はイギリスに敗れた。"
   },
   {
     "id": "r-habsburg-spain-1598",
@@ -2634,7 +3086,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "スペイン王。オランダと休戦した。"
   },
   {
     "id": "r-habsburg-spain-1621",
@@ -2645,7 +3099,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "スペイン王。三十年戦争に加わり、オランダの独立を認めることになった。"
   },
   {
     "id": "r-habsburg-spain-1665",
@@ -2656,7 +3112,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "スペイン=ハプスブルク家最後の王。死後にスペイン継承戦争が起きた。"
   },
   {
     "id": "r-bourbon-spain-1700",
@@ -2667,7 +3125,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ルイ14世の孫。スペイン継承戦争ののち、スペイン=ブルボン朝を開いた。"
   },
   {
     "id": "r-franco-1939",
@@ -2679,7 +3139,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "スペイン内戦で人民戦線政府を倒し、独裁を行った。"
   },
   {
     "id": "r-bourbon-spain-1975",
@@ -2690,7 +3152,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "フランコの死後に即位し、スペインの民主化を進めた国王。"
   },
   {
     "id": "r-aviz-1495",
@@ -2701,7 +3165,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ポルトガル王。ヴァスコ=ダ=ガマのインド航路開拓やカブラルのブラジル到達の時代の王。"
   },
   {
     "id": "r-portuguese-republic-1932",
@@ -2713,7 +3179,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ポルトガルで長く独裁を行った首相。"
   },
   {
     "id": "r-netherlands-1572",
@@ -2726,7 +3194,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": true,
-    "memo": "ホラント州総督としての期間"
+    "memo": "ホラント州総督としての期間",
+    "descVerified": false,
+    "desc": "オラニエ公。スペインからのオランダ独立戦争を指導した。"
   },
   {
     "id": "r-netherlands-1672",
@@ -2738,7 +3208,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "イギリス王ウィリアム3世でもある"
+    "memo": "イギリス王ウィリアム3世でもある",
+    "descVerified": false,
+    "desc": "オランダ総督。名誉革命でイギリス王ウィリアム3世となった。"
   },
   {
     "id": "r-hre-1493",
@@ -2749,7 +3221,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ハプスブルク家の皇帝。婚姻政策でネーデルラントやスペインとの結びつきを強めた。"
   },
   {
     "id": "r-hre-1519",
@@ -2761,7 +3235,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": "スペイン王カルロス1世でもある"
+    "memo": "スペイン王カルロス1世でもある",
+    "descVerified": false,
+    "desc": "神聖ローマ皇帝（スペイン王カルロス1世）。ヴォルムス帝国議会にルターを呼び出し、フランスやオスマン帝国と争った。"
   },
   {
     "id": "r-hre-1556",
@@ -2772,7 +3248,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "カール5世の弟。オーストリア=ハプスブルク家を受けついだ。"
   },
   {
     "id": "r-hre-1576",
@@ -2783,7 +3261,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "プラハに宮廷を置き、天文学者ケプラーらを保護した。"
   },
   {
     "id": "r-hre-1619",
@@ -2794,7 +3274,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "新教徒を弾圧し、三十年戦争を招いた。"
   },
   {
     "id": "r-hre-1637",
@@ -2805,7 +3287,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ウェストファリア条約を結んだ皇帝。"
   },
   {
     "id": "r-hre-1658",
@@ -2816,7 +3300,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "第2次ウィーン包囲を退け、カルロヴィッツ条約でハンガリーを得た。"
   },
   {
     "id": "r-hre-1711",
@@ -2827,7 +3313,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "娘マリア=テレジアの相続を認めさせる国事詔書を出した。"
   },
   {
     "id": "r-austria-1740",
@@ -2838,7 +3326,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": "皇帝ではなく、ハプスブルク家の領地を継承"
+    "memo": "皇帝ではなく、ハプスブルク家の領地を継承",
+    "descVerified": false,
+    "desc": "オーストリア継承戦争でシュレジエンを失い、七年戦争ではフランスと結んだ（外交革命）。"
   },
   {
     "id": "r-hre-1745",
@@ -2849,7 +3339,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": "マリア=テレジアの夫"
+    "memo": "マリア=テレジアの夫",
+    "descVerified": false,
+    "desc": "マリア=テレジアの夫。"
   },
   {
     "id": "r-hre-1765",
@@ -2860,7 +3352,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": "1780年まで母マリア=テレジアと共同統治"
+    "memo": "1780年まで母マリア=テレジアと共同統治",
+    "descVerified": false,
+    "desc": "啓蒙専制君主。農奴解放令や宗教寛容令を出したが、改革は失敗した。"
   },
   {
     "id": "r-hre-1792",
@@ -2872,7 +3366,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "1804年からオーストリア皇帝フランツ1世"
+    "memo": "1804年からオーストリア皇帝フランツ1世",
+    "descVerified": false,
+    "desc": "神聖ローマ帝国最後の皇帝。1804年にオーストリア皇帝フランツ1世となった。"
   },
   {
     "id": "r-austria-1809",
@@ -2884,7 +3380,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "オーストリアの外相・宰相。ウィーン会議を主宰し、自由主義とナショナリズムをおさえた（ウィーン体制）。"
   },
   {
     "id": "r-austria-1848",
@@ -2895,7 +3393,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "オーストリア皇帝。オーストリア=ハンガリー帝国を成立させ、第一次世界大戦中に亡くなった。"
   },
   {
     "id": "r-prussia-1640",
@@ -2908,7 +3408,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "大選帝侯。プロイセン公国の主権を得て、常備軍を整えた。"
   },
   {
     "id": "r-prussia-1701",
@@ -2920,7 +3422,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "1688年から選帝侯"
+    "memo": "1688年から選帝侯",
+    "descVerified": false,
+    "desc": "スペイン継承戦争で皇帝を助け、プロイセン王の称号を得た。"
   },
   {
     "id": "r-prussia-1713",
@@ -2931,7 +3435,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "兵隊王。軍隊と官僚制を整え、プロイセンの絶対王政の基礎を固めた。"
   },
   {
     "id": "r-prussia-1740",
@@ -2943,7 +3449,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "啓蒙専制君主。オーストリア継承戦争・七年戦争でシュレジエンを確保した。「君主は国家第一の僕」と述べた。"
   },
   {
     "id": "r-prussia-1797",
@@ -2954,7 +3462,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ナポレオンに敗れ、プロイセン改革を行わせた。"
   },
   {
     "id": "r-prussia-1840",
@@ -2965,7 +3475,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "三月革命の際に憲法を出したが、フランクフルト国民議会が差し出したドイツ皇帝の位を断った。"
   },
   {
     "id": "r-prussia-1861",
@@ -2976,7 +3488,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "プロイセン王。ビスマルクを首相に登用し、ドイツ統一を実現した。"
   },
   {
     "id": "r-prussia-1862",
@@ -2988,7 +3502,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "プロイセン首相。鉄血政策をとり、プロイセン=オーストリア戦争・プロイセン=フランス戦争に勝ってドイツを統一した。"
   },
   {
     "id": "r-germany-1871",
@@ -3000,7 +3516,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ドイツ帝国の初代皇帝。ヴェルサイユ宮殿で即位した。"
   },
   {
     "id": "r-germany-1871-2",
@@ -3012,7 +3530,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ドイツ帝国の宰相。ビスマルク体制とよばれる同盟網でフランスを孤立させた。社会主義者鎮圧法と社会保険制度を定めた。"
   },
   {
     "id": "r-germany-1888",
@@ -3024,7 +3544,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ビスマルクを辞めさせて「世界政策」を進めた。第一次世界大戦に敗れて亡命した。"
   },
   {
     "id": "r-germany-1919",
@@ -3036,7 +3558,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ドイツ社会民主党の指導者で、ヴァイマル共和国の初代大統領。"
   },
   {
     "id": "r-germany-1923",
@@ -3048,7 +3572,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "1923年に首相、その後は外相"
+    "memo": "1923年に首相、その後は外相",
+    "descVerified": false,
+    "desc": "首相・外相としてインフレを収め、ロカルノ条約を結んでドイツの国際連盟加盟を実現した。"
   },
   {
     "id": "r-germany-1925",
@@ -3060,7 +3586,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "第一次世界大戦の将軍。大統領としてヒトラーを首相に任命した。"
   },
   {
     "id": "r-germany-1933",
@@ -3072,7 +3600,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ナチ党の指導者。首相・総統として独裁を行い、ポーランドに侵攻して第二次世界大戦を始めた。"
   },
   {
     "id": "r-frg-1949",
@@ -3084,7 +3614,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "西ドイツの初代首相。経済の復興を進め、NATOへの加盟を実現した。"
   },
   {
     "id": "r-frg-1969",
@@ -3096,7 +3628,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "西ドイツの首相。東方外交を進め、ノーベル平和賞を受けた。"
   },
   {
     "id": "r-frg-1982",
@@ -3108,7 +3642,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "西ドイツの首相として東西ドイツの統一を実現した。"
   },
   {
     "id": "r-gdr-1950",
@@ -3120,7 +3656,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "東ドイツの指導者。ベルリンの壁を建設した。"
   },
   {
     "id": "r-gdr-1971",
@@ -3132,7 +3670,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "東ドイツの指導者。ベルリンの壁の崩壊の直前に退陣した。"
   },
   {
     "id": "r-savoy-1849",
@@ -3144,7 +3684,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "サルデーニャ王。首相カヴールとともにイタリア統一を進め、1861年にイタリア王国の初代国王となった。"
   },
   {
     "id": "r-savoy-1852",
@@ -3156,7 +3698,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "サルデーニャ王国の首相。クリミア戦争に参戦し、フランスと結んでイタリア統一を進めた。"
   },
   {
     "id": "r-italy-1861",
@@ -3168,7 +3712,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "イタリア王国の初代国王。"
   },
   {
     "id": "r-italy-1922",
@@ -3180,7 +3726,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ファシスト党の指導者。ローマ進軍で首相となって一党独裁を行い、エチオピアを併合した。"
   },
   {
     "id": "r-papal-1503",
@@ -3192,7 +3740,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ルネサンス期の教皇。サン=ピエトロ大聖堂の再建を始め、ミケランジェロらに仕事をさせた。"
   },
   {
     "id": "r-papal-1513",
@@ -3204,7 +3754,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "メディチ家出身の教皇。サン=ピエトロ大聖堂の建築費のために贖宥状を販売し、ルターの宗教改革を招いた。"
   },
   {
     "id": "r-papal-1534",
@@ -3216,7 +3768,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "イエズス会を認め、トリエント公会議を開いて対抗宗教改革を進めた。"
   },
   {
     "id": "r-papal-1572",
@@ -3228,7 +3782,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "現在の暦（グレゴリウス暦）を定めた（1582年）。"
   },
   {
     "id": "r-papal-1846",
@@ -3240,7 +3796,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "イタリア統一の中で教皇領を失い、「ヴァチカンの囚人」となった教皇。"
   },
   {
     "id": "r-jagiellon-1548",
@@ -3251,7 +3809,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ヤゲウォ朝最後の王。ルブリン合同（1569年）でポーランド=リトアニア共和国を作った。"
   },
   {
     "id": "r-poland-1674",
@@ -3263,7 +3823,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "第2次ウィーン包囲でオスマン軍を破った。"
   },
   {
     "id": "r-poland-1764",
@@ -3274,7 +3836,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ポーランド最後の王。3回のポーランド分割で国が消えた。"
   },
   {
     "id": "r-poland-1918",
@@ -3286,7 +3850,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": true,
-    "memo": "国家元首（1918〜22年）、のちクーデタで実権（1926〜35年）"
+    "memo": "国家元首（1918〜22年）、のちクーデタで実権（1926〜35年）",
+    "descVerified": false,
+    "desc": "ポーランド独立の指導者。1926年のクーデタで実権をにぎった。"
   },
   {
     "id": "r-poland-1990",
@@ -3298,7 +3864,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "自主管理労働組合「連帯」を指導し、ポーランドの大統領となった。"
   },
   {
     "id": "r-rurik-1462",
@@ -3310,7 +3878,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "モスクワ大公。ノヴゴロドを併合し、1480年にキプチャク=ハン国の支配から脱した。ビザンツ皇帝の姪と結婚し、ツァーリの称号を使い始めた。"
   },
   {
     "id": "r-rurik-1505",
@@ -3322,7 +3892,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "モスクワ大公。プスコフ・スモレンスクを併合し、ロシアの統一を進めた。"
   },
   {
     "id": "r-rurik-1533",
@@ -3335,7 +3907,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": "1547年からツァーリ"
+    "memo": "1547年からツァーリ",
+    "descVerified": false,
+    "desc": "正式にツァーリを名のった最初の君主。カザン=ハン国・アストラハン=ハン国を征服し、恐怖政治を行った（雷帝）。"
   },
   {
     "id": "r-time-of-troubles-1598",
@@ -3347,7 +3921,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "リューリク朝の断絶後にツァーリとなった。死後に動乱時代が深まった。"
   },
   {
     "id": "r-romanov-1613",
@@ -3360,7 +3936,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "全国会議で選ばれ、ロマノフ朝を開いた。"
   },
   {
     "id": "r-romanov-1645",
@@ -3372,7 +3950,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ステンカ=ラージンの反乱を鎮めた。農奴制を強める法典を定めた。"
   },
   {
     "id": "r-romanov-1682",
@@ -3385,7 +3965,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "西欧化を進め、北方戦争でスウェーデンを破った。ペテルブルクを建設した。"
   },
   {
     "id": "r-romanov-1741",
@@ -3397,7 +3979,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ピョートル1世の娘。七年戦争に参戦した。"
   },
   {
     "id": "r-romanov-1762",
@@ -3409,7 +3993,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "啓蒙専制君主。プガチョフの反乱を鎮め、ポーランド分割やオスマン帝国との戦争で領土を広げた。"
   },
   {
     "id": "r-romanov-1796",
@@ -3421,7 +4007,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "エカチェリーナ2世の子。"
   },
   {
     "id": "r-romanov-1801",
@@ -3433,7 +4021,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ナポレオンのロシア遠征を退け、ウィーン会議ののち神聖同盟を提唱した。"
   },
   {
     "id": "r-romanov-1825",
@@ -3445,7 +4035,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "デカブリストの乱を鎮め、クリミア戦争を始めた。"
   },
   {
     "id": "r-romanov-1855",
@@ -3457,7 +4049,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "クリミア戦争の敗北後、農奴解放令（1861年）を出した。のちに暗殺された。"
   },
   {
     "id": "r-romanov-1881",
@@ -3469,7 +4063,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "反動政治を行い、フランスと同盟を結んだ。"
   },
   {
     "id": "r-romanov-1894",
@@ -3481,7 +4077,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ロシア最後の皇帝。日露戦争・第一次世界大戦を戦い、三月革命で退位した。"
   },
   {
     "id": "r-romanov-1906",
@@ -3493,7 +4091,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ロシアの首相。農村共同体（ミール）を解体する改革を進めた。"
   },
   {
     "id": "r-russia-1917",
@@ -3505,7 +4105,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "臨時政府"
+    "memo": "臨時政府",
+    "descVerified": false,
+    "desc": "三月革命後の臨時政府の首相。十一月革命で倒された。"
   },
   {
     "id": "r-ussr-1917",
@@ -3517,7 +4119,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ボリシェヴィキの指導者。十一月革命でソヴィエト政権を建て、新経済政策（ネップ）を始めた。"
   },
   {
     "id": "r-ussr-1924",
@@ -3529,7 +4133,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "一国社会主義を唱え、五か年計画と農業の集団化を進めた。大粛清で独裁を固めた。"
   },
   {
     "id": "r-ussr-1953",
@@ -3541,7 +4147,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "スターリン批判を行い、平和共存を唱えた。キューバ危機を経験した。"
   },
   {
     "id": "r-ussr-1964",
@@ -3553,7 +4161,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "「プラハの春」への軍事介入やアフガニスタン侵攻を行ったソ連の指導者。"
   },
   {
     "id": "r-ussr-1982",
@@ -3565,7 +4175,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ブレジネフの後のソ連の指導者。"
   },
   {
     "id": "r-ussr-1985",
@@ -3577,7 +4189,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ペレストロイカとグラスノスチを進め、マルタ会談で冷戦の終結を宣言した。ソ連の解体で辞任した。"
   },
   {
     "id": "r-russia-fed-1991",
@@ -3589,7 +4203,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ロシア連邦の初代大統領。ソ連の解体を進め、市場経済への移行を進めた。"
   },
   {
     "id": "r-sweden-1523",
@@ -3601,7 +4217,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "カルマル同盟から独立してスウェーデン王となり、ルター派を取り入れた。"
   },
   {
     "id": "r-sweden-1611",
@@ -3613,7 +4231,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "三十年戦争に新教側で参戦し、リュッツェンの戦いで戦死した。"
   },
   {
     "id": "r-sweden-1632",
@@ -3624,7 +4244,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "デカルトを招いた女王。ウェストファリア条約でスウェーデンは北ドイツに領土を得た。"
   },
   {
     "id": "r-sweden-1697",
@@ -3635,7 +4257,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "北方戦争でロシアのピョートル1世と戦い、ポルタヴァの戦いで敗れた。"
   },
   {
     "id": "r-denmark-1513",
@@ -3646,7 +4270,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "デンマーク・ノルウェー・スウェーデンの王。ストックホルムの血浴を起こし、スウェーデンの独立を招いた。"
   },
   {
     "id": "r-denmark-1588",
@@ -3657,7 +4283,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "三十年戦争に参戦したが敗れた。"
   },
   {
     "id": "r-jagiellon-bh-1516",
@@ -3668,7 +4296,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ハンガリー・ベーメン王。モハーチの戦いでオスマン帝国に敗れて戦死した。"
   },
   {
     "id": "r-hungary-1953",
@@ -3680,7 +4310,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": true,
-    "memo": "首相の在任は1953〜55年と1956年"
+    "memo": "首相の在任は1953〜55年と1956年",
+    "descVerified": false,
+    "desc": "ハンガリー事件の時の首相。ソ連軍の介入で捕らえられ、処刑された。"
   },
   {
     "id": "r-czechoslovakia-1968",
@@ -3692,7 +4324,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "「プラハの春」を指導したが、ワルシャワ条約機構軍の介入で失脚した。"
   },
   {
     "id": "r-czechoslovakia-1989",
@@ -3704,7 +4338,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "劇作家出身の民主化運動の指導者。ビロード革命ののち大統領となった。"
   },
   {
     "id": "r-yugoslavia-1945",
@@ -3716,7 +4352,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "パルチザンを率いてユーゴスラヴィアを解放し、ソ連と対立して独自の社会主義を進めた。非同盟諸国首脳会議を主導した。"
   },
   {
     "id": "r-yugoslavia-1989",
@@ -3728,7 +4366,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "セルビアの指導者。ユーゴスラヴィア内戦・コソヴォ紛争の中で民族主義を進めた。"
   },
   {
     "id": "r-romania-1965",
@@ -3740,7 +4380,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ルーマニアの独裁者。東欧革命で処刑された。"
   },
   {
     "id": "r-greece-1910",
@@ -3752,7 +4394,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ギリシアの首相。バルカン戦争で領土を広げた。"
   },
   {
     "id": "r-aztec-1502",
@@ -3764,7 +4408,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "アステカ王国の王。コルテスの率いるスペイン人に捕らえられ、王国の滅亡の中で亡くなった。"
   },
   {
     "id": "r-inca-1532",
@@ -3775,7 +4421,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "インカ帝国最後の皇帝。ピサロに捕らえられ、処刑された。"
   },
   {
     "id": "r-usa-1789",
@@ -3787,7 +4435,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "アメリカ独立戦争の総司令官で、初代大統領となった。"
   },
   {
     "id": "r-usa-1797",
@@ -3799,7 +4449,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "アメリカ合衆国の第2代大統領。"
   },
   {
     "id": "r-usa-1801",
@@ -3812,7 +4464,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "独立宣言を起草した。大統領としてルイジアナをフランスから買収した。"
   },
   {
     "id": "r-usa-1809",
@@ -3824,7 +4478,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "アメリカ=イギリス戦争の時の大統領。"
   },
   {
     "id": "r-usa-1817",
@@ -3836,7 +4492,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "モンロー宣言を出し、ヨーロッパとアメリカ大陸の相互不干渉を唱えた。"
   },
   {
     "id": "r-usa-1829",
@@ -3849,7 +4507,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "西部出身の大統領。民主党の基盤を作り、インディアン強制移住法を定めた（ジャクソニアン=デモクラシー）。"
   },
   {
     "id": "r-usa-1845",
@@ -3861,7 +4521,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "テキサスを併合し、アメリカ=メキシコ戦争でカリフォルニアなどを得た大統領。"
   },
   {
     "id": "r-usa-1861",
@@ -3874,7 +4536,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "南北戦争を指導し、奴隷解放宣言を出した。ゲティスバーグで演説した。戦争が終わった直後に暗殺された。"
   },
   {
     "id": "r-usa-1869",
@@ -3886,7 +4550,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "南北戦争の北軍の将軍だった大統領。"
   },
   {
     "id": "r-usa-1897",
@@ -3898,7 +4564,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "アメリカ=スペイン戦争を行い、ハワイを併合した大統領。"
   },
   {
     "id": "r-usa-1901",
@@ -3911,7 +4579,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "カリブ海で「棍棒外交」を行い、パナマ運河の建設を進めた。ポーツマス条約を仲介した。"
   },
   {
     "id": "r-usa-1909",
@@ -3923,7 +4593,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "「ドル外交」を進めた大統領。"
   },
   {
     "id": "r-usa-1913",
@@ -3935,7 +4607,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "第一次世界大戦に参戦し、十四か条の平和原則で国際連盟の設立を提唱した。"
   },
   {
     "id": "r-usa-1921",
@@ -3947,7 +4621,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "「平常への復帰」を唱えた共和党の大統領。ワシントン会議を開いた。"
   },
   {
     "id": "r-usa-1923",
@@ -3959,7 +4635,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "繁栄の1920年代の大統領。"
   },
   {
     "id": "r-usa-1929",
@@ -3972,7 +4650,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "世界恐慌が起きた時の大統領。フーヴァー=モラトリアムを出した。"
   },
   {
     "id": "r-usa-1933",
@@ -3985,7 +4665,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ニューディール政策で世界恐慌に対処し、第二次世界大戦を指導した。大西洋憲章を発表した。"
   },
   {
     "id": "r-usa-1945",
@@ -3997,7 +4679,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "トルーマン=ドクトリンで「封じ込め政策」を始め、マーシャル=プランを進めた。"
   },
   {
     "id": "r-usa-1953",
@@ -4009,7 +4693,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "第二次世界大戦の連合軍の司令官。大統領として朝鮮戦争の休戦を実現した。"
   },
   {
     "id": "r-usa-1961",
@@ -4021,7 +4707,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "キューバ危機を乗り切り、部分的核実験禁止条約を結んだ大統領。ダラスで暗殺された。"
   },
   {
     "id": "r-usa-1963",
@@ -4034,7 +4722,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "公民権法を成立させたが、ベトナム戦争を拡大させた大統領。"
   },
   {
     "id": "r-usa-1969",
@@ -4046,7 +4736,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ニクソン訪中やドル=ショック、ベトナムからの撤兵を行った。ウォーターゲート事件で辞任した。"
   },
   {
     "id": "r-usa-1974",
@@ -4058,7 +4750,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ニクソンの辞任で昇格した大統領。第1回先進国首脳会議に参加した。"
   },
   {
     "id": "r-usa-1977",
@@ -4070,7 +4764,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "人権外交を唱え、キャンプ=デーヴィッド合意を仲介した大統領。"
   },
   {
     "id": "r-usa-1981",
@@ -4082,7 +4778,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "「強いアメリカ」を唱え、新自由主義の経済政策をとった。中距離核戦力（INF）全廃条約を結んだ。"
   },
   {
     "id": "r-usa-1989",
@@ -4095,7 +4793,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "マルタ会談で冷戦の終結を宣言し、湾岸戦争を指導した大統領。"
   },
   {
     "id": "r-usa-1993",
@@ -4107,7 +4807,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "オスロ合意の調印を仲介した大統領。"
   },
   {
     "id": "r-csa-1861",
@@ -4119,7 +4821,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "南部の州が作ったアメリカ連合国の大統領。"
   },
   {
     "id": "r-mexico-r-1822",
@@ -4131,7 +4835,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "メキシコの独立を指導して皇帝となったが、退位させられた。"
   },
   {
     "id": "r-mexico-r-1858",
@@ -4143,7 +4849,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "先住民出身の大統領。自由主義の改革を進め、フランスのメキシコ出兵に抵抗した。"
   },
   {
     "id": "r-mexico-r-1864",
@@ -4155,7 +4863,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "フランスが立てた皇帝"
+    "memo": "フランスが立てた皇帝",
+    "descVerified": false,
+    "desc": "ナポレオン3世の支援でメキシコ皇帝となったオーストリア皇帝の弟。フランス軍の撤退後に処刑された。"
   },
   {
     "id": "r-mexico-r-1876",
@@ -4167,7 +4877,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": true,
-    "memo": "1880〜84年を除く"
+    "memo": "1880〜84年を除く",
+    "descVerified": false,
+    "desc": "長く独裁を行い、メキシコ革命で倒された。"
   },
   {
     "id": "r-mexico-r-1934",
@@ -4179,7 +4891,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "土地改革を進め、石油を国有化した。"
   },
   {
     "id": "r-gran-colombia-1819",
@@ -4192,7 +4906,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ラテンアメリカ独立運動の指導者。大コロンビアを建てた。"
   },
   {
     "id": "r-argentina-1946",
@@ -4204,7 +4920,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "1973〜74年にも大統領"
+    "memo": "1973〜74年にも大統領",
+    "descVerified": false,
+    "desc": "労働者の支持を得て大統領となり、民族主義的な政策を行った。"
   },
   {
     "id": "r-chile-r-1970",
@@ -4216,7 +4934,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "選挙で選ばれた社会主義の大統領。軍部のクーデタの中で亡くなった。"
   },
   {
     "id": "r-chile-r-1973",
@@ -4228,7 +4948,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "軍部のクーデタでアジェンデ政権を倒し、独裁を行った。"
   },
   {
     "id": "r-cuba-r-1952",
@@ -4240,7 +4962,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "キューバの独裁者。キューバ革命で倒された。"
   },
   {
     "id": "r-cuba-r-1959",
@@ -4253,7 +4977,9 @@
     "importance": 3,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "キューバ革命の指導者。社会主義宣言を行い、ソ連と結んだ。"
   },
   {
     "id": "r-brazil-1822",
@@ -4265,7 +4991,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ポルトガルの王子。ブラジル帝国の初代皇帝となった。"
   },
   {
     "id": "r-brazil-1831",
@@ -4277,7 +5005,9 @@
     "importance": 1,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "ブラジル帝国の第2代皇帝。1888年に奴隷制を廃止し、翌年の共和革命で退位した。"
   },
   {
     "id": "r-brazil-1930",
@@ -4289,7 +5019,9 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": "1951〜54年にも大統領"
+    "memo": "1951〜54年にも大統領",
+    "descVerified": false,
+    "desc": "ブラジルで長く政権をにぎり、工業化を進めた。"
   },
   {
     "id": "r-haiti-r-1797",
@@ -4302,6 +5034,8 @@
     "importance": 2,
     "verified": false,
     "uncertain": false,
-    "memo": ""
+    "memo": "",
+    "descVerified": false,
+    "desc": "奴隷の反乱を指導した、ハイチ独立運動の指導者。フランス軍に捕らえられた。"
   }
 ]
