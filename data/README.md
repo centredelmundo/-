@@ -86,7 +86,7 @@ JSON を直接直してもかまいません。たとえば概要を確かめた
 
 | 書き方 | 意味 |
 | --- | --- |
-| `"ja:落穂拾い (ミレー)"` | 日本語版ウィキペディアのこの記事の代表画像 |
+| `"ja:アルハンブラ宮殿"` | 日本語版ウィキペディアのこの記事の代表画像 |
 | `"en:The Gleaners"` | 英語版ウィキペディアのこの記事の代表画像 |
 | `"File:Jean-François Millet - Gleaners - Google Art Project 2.jpg"` | Wikimedia Commons のこのファイル |
 

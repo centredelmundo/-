@@ -1220,7 +1220,7 @@
     "desc": "ピッツバーグで始まった",
     "uncertain": false,
     "memo": "",
-    "image": "en:KDKA (AM)",
+    "image": "en:Frank Conrad",
     "imageVerified": false,
     "descVerified": false
   },
@@ -1283,7 +1283,7 @@
     "importance": 1,
     "uncertain": true,
     "memo": "1921〜22年に連載",
-    "image": "ja:阿Q正伝",
+    "image": "en:The True Story of Ah Q",
     "imageVerified": false,
     "descVerified": false,
     "desc": "中国の民衆の姿を通して社会を批判した小説。"
@@ -1371,7 +1371,7 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "image": "ja:ユリシーズ (小説)",
+    "image": "en:Ulysses (novel)",
     "imageVerified": false,
     "descVerified": false,
     "desc": "ダブリンのある一日を描いた、20世紀を代表する小説の一つ。"
@@ -3586,7 +3586,7 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "image": "ja:ボストーク1号",
+    "image": "en:Vostok 1",
     "imageVerified": false,
     "descVerified": false,
     "desc": "ソ連の宇宙船で、人類で初めて地球を回る飛行に成功した。「地球は青かった」の言葉で知られる。"

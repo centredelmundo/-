@@ -658,7 +658,7 @@
     "desc": "ウィーンで初演された",
     "uncertain": false,
     "memo": "",
-    "image": "ja:交響曲第9番 (ベートーヴェン)",
+    "image": "en:Symphony No. 9 (Beethoven)",
     "imageVerified": false,
     "descVerified": false
   },
@@ -1104,7 +1104,7 @@
     "acceptYears": [1843],
     "uncertain": true,
     "memo": "50巻本の成立は1842年、刊行は1843年とする資料もある",
-    "image": "ja:海国図志",
+    "image": "en:Illustrated Treatise on the Maritime Kingdoms",
     "imageVerified": false,
     "descVerified": false
   },
@@ -1488,7 +1488,7 @@
     "desc": "農民の生活を描いた",
     "uncertain": false,
     "memo": "",
-    "image": "ja:落穂拾い (ミレー)",
+    "image": "en:The Gleaners",
     "imageVerified": false,
     "descVerified": false
   },
@@ -1590,7 +1590,7 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "image": "ja:自由論",
+    "image": "en:On Liberty",
     "imageVerified": false,
     "descVerified": false,
     "desc": "個人の自由は他人に害を与えない限り尊重されるべきだと論じた書物。"

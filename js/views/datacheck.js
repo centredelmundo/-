@@ -78,7 +78,7 @@ function draw() {
     ? '年代は世界史の窓と照らし合わせてあります。<span class="badge b-warn">要確認</span>は、説が分かれる・数え方がちがう年があるもの（理由と世界史の窓の年はメモ）。年を直すときは「修正」を押してください。修正はこのブラウザに保存され、下の「書き出す」でJSONファイルに反映できます。'
     : S.target === 'desc'
       ? '概要（クイズの解答後に用語をタップすると出る1〜2文の説明）を確かめます。AIが自分の言葉で書いたもので、まだ確認されていません。「世界史の窓で調べる」で照らし合わせ、正しければ「概要を確認した」を、直すときは「修正」を押してください。'
-      : '文化史の作品・建築の写真を確かめます。写真と作者・ライセンスは、表示するときに Wikimedia から取得しています。正しい作品・建築の写真なら「画像を確認した」を、ちがう場合は「修正」で記事名（例：ja:落穂拾い (ミレー)）かファイル名（例：File:○○.jpg）を変えてください。';
+      : '文化史の作品・建築の写真を確かめます。写真と作者・ライセンスは、表示するときに Wikimedia から取得しています。正しい作品・建築の写真なら「画像を確認した」を、ちがう場合は「修正」で記事名（例：ja:アルハンブラ宮殿）かファイル名（例：File:○○.jpg）を変えてください。';
   $$('#dcTarget button', el).forEach(c => c.classList.toggle('on', c.dataset.t === S.target));
   $$('#dcFilter .chip', el).forEach(c => { c.classList.toggle('on', c.dataset.f === S.filter); c.hidden = S.target === 'year' ? (c.dataset.f === 'todo' || c.dataset.f === 'done') : c.dataset.f === 'unc'; });
   $$('#dcKind button', el).forEach(c => c.classList.toggle('on', c.dataset.k === S.kind));
