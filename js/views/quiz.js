@@ -1,7 +1,7 @@
 // クイズの画面
 // 解答中の状態はブラウザに保存するので、別の画面に移ったりアプリを閉じたりしても続きから再開できる。
 import { $, $$, esc, fmtYear, fmtSpan, yearText, hasYear, hideYear, hideAnswers, shuffle, toast, centuryOf, centuryText } from '../core/util.js';
-import { MODES, CULTURE_MODES, build, makeSession, eventPool, quizGroups, ichimonPool } from '../core/quizgen.js';
+import { MODES, CULTURE_MODES, ORDER_GAPS, build, makeSession, eventPool, quizGroups, ichimonPool } from '../core/quizgen.js';
 import { parts as ichParts, gradeBlank, NUM, clock } from '../core/ichimon.js';
 import { gradeCross, gradeRuler, gradeTerm, gradeYear, CLS_TEXT } from '../core/grade.js';
 import { recordWithUndo, changeJudgement, star, isStarred, addCandidate, getUndo, setUndo } from '../core/progress.js';
@@ -98,8 +98,11 @@ function setup() {
       ${ich ? `<div class="field" id="qzIchBox"><span class="label">一問一答の章（選ばなければすべて）</span>
         <div class="chips" id="qzIch">${ich.chapters.map(c => `<button type="button" class="chip${ichCh.has(c.n) ? ' on' : ''}" data-ch="${c.n}" title="${esc(c.title)}">第${c.n}章</button>`).join('')}</div>
         <p class="small muted">一問一答は「年代の範囲」と、地域をえらんだときは地域でもしぼります（全範囲なら、範囲より前の古代オリエントなども出ます）。</p></div>` : ''}
+      <div class="field" id="qzOrderBox"><span class="label">並べ替えの年の間隔</span>
+        <div class="seg" id="qzOrder">${Object.entries(ORDER_GAPS).map(([k, v]) => `<button type="button" data-v="${k}" class="${(q.orderGap || 'near') === k ? 'on' : ''}">${v.label}</button>`).join('')}</div>
+        <p class="small muted">4つの出来事の年が、どのくらいはなれて出るか。間隔が広いほどやさしくなります（「近い年も」はこれまでどおり）。</p></div>
       <div class="field"><span class="label">年代の範囲</span>
-        <div class="chips" id="qzCents"><button type="button" class="chip" data-from="${a}" data-to="${b}">全範囲</button>${cents.map(([x, y]) => `<button type="button" class="chip" data-from="${x}" data-to="${y}">${Math.floor((x + 1) / 100) + 1}世紀</button>`).join('')}</div>
+        <div class="chips" id="qzCents"><button type="button" class="chip" data-from="${a}" data-to="${b}">全範囲</button>${cents.map(([x, y]) => `<button type="button" class="chip" data-from="${x}" data-to="${y}">${centuryText(centuryOf(x + 1))}</button>`).join('')}</div>
         <div class="row"><input type="number" id="qzFrom" min="${a}" max="${b}" value="${q.from ?? a}" style="width:7em" aria-label="開始年"> 〜 <input type="number" id="qzTo" min="${a}" max="${b}" value="${q.to ?? b}" style="width:7em" aria-label="終了年"> 年</div>
       </div>
       <div class="field"><span class="label">地域（選ばなければすべて）</span>
@@ -124,6 +127,7 @@ function setup() {
       minImportance: Number($('#qzImp .on', el)?.dataset.v || 1),
       count: Number($('#qzCount .on', el)?.dataset.v || 10),
       ichChapters: $$('#qzIch .chip.on', el).map(x => Number(x.dataset.ch)),
+      orderGap: $('#qzOrder .on', el)?.dataset.v || 'near',
       culture: cultureOnly || $('#qzCulture', el).checked,
       cultureOnly
     };
@@ -135,6 +139,7 @@ function setup() {
     const useIch = !o.cultureOnly && o.modes.includes('ichimon') && !!db.ichimon;
     const ni = useIch ? ichimonPool(db, o).length : 0;
     const box = $('#qzIchBox', el); if (box) box.hidden = !useIch;
+    $('#qzOrderBox', el).hidden = !usable.includes('order');
     const others = usable.filter(m => m !== 'ichimon');
     $('#qzPool', el).textContent = `${others.length || !useIch ? `出題の元になる出来事：${n}件` : ''}${useIch ? `${others.length ? '・' : ''}一問一答：${ni}問` : ''}${o.cultureOnly ? `（文化史・形式：${usable.map(m => MODES[m]).join('・')}）` : ''}`;
     $('#qzStart', el).disabled = !o.modes.length || (!(others.length && n) && !(useIch && ni));
@@ -146,7 +151,7 @@ function setup() {
     if (c) { $('#qzFrom', el).value = c.dataset.from; $('#qzTo', el).value = c.dataset.to; refresh(); }
     const g = e.target.closest('#qzGroups .chip, #qzIch .chip');
     if (g) { g.classList.toggle('on'); refresh(); }
-    const sg = e.target.closest('#qzImp button, #qzCount button');
+    const sg = e.target.closest('#qzImp button, #qzCount button, #qzOrder button');
     if (sg) { $$('button', sg.parentElement).forEach(x => x.classList.toggle('on', x === sg)); refresh(); }
   });
   $('#qzStart', el).addEventListener('click', () => {

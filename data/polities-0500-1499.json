@@ -208,7 +208,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "wuyue",
@@ -224,7 +225,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C85A5A"
   },
   {
     "id": "min-k",
@@ -240,7 +242,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "southern-han",
@@ -256,7 +259,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C85A5A"
   },
   {
     "id": "chu-k",
@@ -272,7 +276,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "shu-k",
@@ -296,7 +301,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "northern-han",
@@ -312,7 +318,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C8607A"
   },
   {
     "id": "liao",
@@ -413,6 +420,7 @@
     "end": 1368,
     "color": "#A992C9",
     "territory": [
+      { "year": 1271, "add": ["qinghai"] },
       { "year": 1271, "add": ["mongolia", "mongolia-in", "manchuria", "manchuria-s", "cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs", "cn-yn"], "vassal": ["tibet", "korea-n", "korea-c", "korea-s", "korea-sw"], "note": "フビライが国号を元とする" },
       { "year": 1276, "add": ["cn-jn", "cn-zj", "cn-jx", "cn-hg", "cn-sc"], "note": "南宋の都・臨安を占領" },
       { "year": 1279, "add": ["cn-fj", "cn-gd", "cn-gx", "cn-hi", "cn-gz"], "note": "南宋を滅ぼす（厓山の戦い）" },
@@ -497,7 +505,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "taebong",
@@ -514,7 +523,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C85A5A"
   },
   {
     "id": "balhae",
@@ -565,7 +575,8 @@
     "descVerified": false,
     "territory": [
       { "year": 250, "add": ["japan"], "note": "近畿地方を中心にヤマト政権が広がる（古墳時代）" }
-    ]
+    ],
+    "color": "#8A5AA8"
   },
   {
     "id": "asuka",
@@ -578,7 +589,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "nara",
@@ -591,7 +603,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "heian",
@@ -604,7 +617,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "kamakura",
@@ -616,7 +630,8 @@
     "importance": 2,
     "uncertain": true,
     "memo": "成立の年は1180年代のどれをとるかで諸説ある",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "kenmu",
@@ -628,7 +643,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "rouran",
@@ -721,7 +737,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9A4F8A"
   },
   {
     "id": "uyghur",
@@ -754,7 +771,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "モンゴル高原を支配した期間ははっきりしない",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9A4F8A"
   },
   {
     "id": "west-uyghur",
@@ -771,7 +789,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "866年に成立（世界史の窓）。13世紀にはモンゴルに服属した",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "tufan",
@@ -881,6 +900,7 @@
       { "year": 1215, "add": ["cn-n", "manchuria-s", "mongolia-in"], "note": "金の中都を落とす" },
       { "year": 1218, "add": ["dzungaria", "kazakh-s"], "note": "西遼を滅ぼす" },
       { "year": 1220, "add": ["transoxiana", "khwarazm", "fergana", "khorasan", "turkmen", "afg-balkh", "afg-herat"], "note": "ホラズム=シャー朝を破る" },
+      { "year": 1227, "contested": ["qinghai"], "note": "西夏を滅ぼす" },
       { "year": 1227, "add": ["cn-gs"], "note": "西夏を滅ぼす" },
       { "year": 1231, "contested": ["iran-nw", "iran-n", "iran-c", "iran-w", "azerbaijan"], "note": "イランに遠征" },
       { "year": 1234, "add": ["cn-hn", "cn-sd", "cn-sx", "cn-sn", "manchuria"], "note": "金を滅ぼす" },
@@ -921,13 +941,15 @@
     "end": 1514,
     "minor": true,
     "territory": [
+      { "year": 1347, "contested": ["kyrgyz"] },
       { "year": 1347, "add": ["kazakh-s"], "contested": ["dzungaria", "tarim"] }
     ],
     "desc": "チャガタイ=ハン国の東部が分かれてできた遊牧国家。",
     "importance": 1,
     "uncertain": true,
     "memo": "終わりの年は諸説ある",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C85A5A"
   },
   {
     "id": "ilkhanate",
@@ -956,6 +978,7 @@
     "end": 1502,
     "color": "#C9A26B",
     "territory": [
+      { "year": 1243, "contested": ["urals", "sloboda"] },
       { "year": 1243, "add": ["kazan", "kazakh-w", "kazakh-n", "astrakhan", "don", "kuban", "crimea", "pontic", "zaporozhia", "ukraine-lb", "caucasus-n"], "vassal": ["muscovy", "chernozem", "smolensk", "ukraine-rb", "volhynia", "galicia-e"], "contested": ["khwarazm"], "note": "バトゥがサライを都とする" },
       { "year": 1362, "remove": ["ukraine-rb"], "note": "青水の戦いでリトアニアに敗れる" },
       { "year": 1438, "remove": ["kazan"], "note": "カザン=ハン国が分かれる" },
@@ -977,13 +1000,15 @@
     "end": 1552,
     "minor": true,
     "territory": [
+      { "year": 1438, "contested": ["urals"] },
       { "year": 1438, "add": ["kazan"] }
     ],
     "desc": "キプチャク=ハン国から分かれた国。1552年にイヴァン4世に征服された。",
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "astrakhan-kh",
@@ -999,7 +1024,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C85A5A"
   },
   {
     "id": "funan",
@@ -1065,7 +1091,8 @@
     "importance": 3,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "tran",
@@ -1077,7 +1104,8 @@
     "importance": 3,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "ho",
@@ -1089,7 +1117,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "srivijaya",
@@ -1122,7 +1151,8 @@
     "importance": 2,
     "uncertain": true,
     "memo": "8世紀半ば〜9世紀前半",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "mataram-old",
@@ -1140,7 +1170,8 @@
     "importance": 2,
     "uncertain": true,
     "memo": "成立・滅亡の年は諸説ある",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "kediri",
@@ -1156,7 +1187,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "成立の年は諸説ある",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "singhasari",
@@ -1172,7 +1204,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "majapahit",
@@ -1219,13 +1252,15 @@
     "end": 1539,
     "minor": true,
     "territory": [
-      { "year": 1287, "add": ["burma-l"] }
+      { "year": 1287, "add": ["burma-l"] },
+      { "year": 1288, "add": ["tenasserim"] }
     ],
     "desc": "モン人がビルマ南部に建てた王国。",
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#5A8FD8"
   },
   {
     "id": "ava-k",
@@ -1241,7 +1276,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C85A5A"
   },
   {
     "id": "sukhothai",
@@ -1273,7 +1309,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C85A5A"
   },
   {
     "id": "gupta",
@@ -1326,7 +1363,8 @@
     "importance": 2,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "pallava",
@@ -1343,7 +1381,8 @@
     "importance": 2,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "pala",
@@ -1376,7 +1415,8 @@
     "importance": 2,
     "uncertain": true,
     "memo": "成立・滅亡の年は諸説ある",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#E9B44C"
   },
   {
     "id": "rashtrakuta",
@@ -1392,7 +1432,8 @@
     "importance": 2,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "chola",
@@ -1427,7 +1468,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "ghaznavid",
@@ -1569,13 +1611,15 @@
     "end": 1576,
     "minor": true,
     "territory": [
-      { "year": 1352, "add": ["bengal-w", "bengal-e"] }
+      { "year": 1352, "add": ["bengal-w", "bengal-e"] },
+      { "year": 1568, "add": ["orissa"], "note": "カッラーニー朝がオリッサを征服" }
     ],
     "desc": "ベンガル地方のイスラーム王朝。この時代にベンガル東部でイスラーム教徒が増えた。",
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#3F9FC0"
   },
   {
     "id": "gujarat-s",
@@ -1591,7 +1635,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#3FB0A8"
   },
   {
     "id": "sinhala",
@@ -1614,7 +1659,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "都と王家は何度も変わった",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "sasanian",
@@ -1657,7 +1703,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "umma",
@@ -1674,7 +1721,8 @@
     "importance": 2,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "rashidun",
@@ -1761,7 +1809,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "tulunid",
@@ -1777,7 +1826,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "aghlabid",
@@ -1795,7 +1845,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "idrisid",
@@ -1811,7 +1862,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "fatimid",
@@ -1849,7 +1901,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C85A5A"
   },
   {
     "id": "ikhshidid",
@@ -1865,7 +1918,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "buyid",
@@ -1925,7 +1979,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "シリアの分家の滅亡は1180年代",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C8607A"
   },
   {
     "id": "rum-seljuk",
@@ -1998,7 +2053,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C0703A"
   },
   {
     "id": "almoravid",
@@ -2059,7 +2115,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "zayyanid",
@@ -2076,7 +2133,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C8607A"
   },
   {
     "id": "marinid",
@@ -2088,7 +2146,8 @@
     "importance": 2,
     "uncertain": true,
     "memo": "建国の年には諸説あり、一般にフェスを都とした1248年とされる（世界史の窓）",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "jalayirid",
@@ -2106,7 +2165,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9A4F8A"
   },
   {
     "id": "qaraqoyunlu",
@@ -2125,7 +2185,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#3F9FC0"
   },
   {
     "id": "karaman",
@@ -2141,7 +2202,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "オスマン帝国への併合は1468年・1487年など諸説ある",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#D4943A"
   },
   {
     "id": "qarmatian",
@@ -2157,7 +2219,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "rasulid",
@@ -2173,7 +2236,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "georgia-k",
@@ -2191,7 +2255,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "vandal",
@@ -2246,7 +2311,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "成立の年は900年代〜1137年と諸説ある",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "makuria",
@@ -2263,7 +2329,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "成立・滅亡の時期ははっきりしない",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C85A5A"
   },
   {
     "id": "ghana-k",
@@ -2332,7 +2399,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "建国の年は伝承による",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C85A5A"
   },
   {
     "id": "great-zimbabwe",
@@ -2427,7 +2495,8 @@
     "importance": 2,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C85A5A"
   },
   {
     "id": "trebizond",
@@ -2443,7 +2512,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "epirus-d",
@@ -2461,7 +2531,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "終わりの年は諸説ある",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#D4943A"
   },
   {
     "id": "cyprus-k",
@@ -2477,7 +2548,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "bulgaria-m",
@@ -2550,7 +2622,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "王国となったのは1377年",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#F2A04F"
   },
   {
     "id": "wallachia-p",
@@ -2566,7 +2639,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#F2A04F"
   },
   {
     "id": "moldavia-p",
@@ -2576,13 +2650,15 @@
     "end": 1859,
     "minor": true,
     "territory": [
-      { "year": 1346, "add": ["moldavia"] }
+      { "year": 1346, "add": ["moldavia"] },
+      { "year": 1359, "add": ["bukovina"] }
     ],
     "desc": "ルーマニア人の公国。16世紀からオスマン帝国に服属した。",
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "kievan-rus",
@@ -2593,8 +2669,8 @@
     "end": 1240,
     "color": "#C9B27A",
     "territory": [
-      { "year": 882, "add": ["ukraine-rb", "novgorod", "smolensk"], "contested": ["belarus", "chernozem"], "note": "オレグがキエフを都とする" },
-      { "year": 980, "add": ["belarus", "chernozem", "volhynia", "galicia-e", "ukraine-lb", "muscovy"], "note": "ウラディミル1世の時代" },
+      { "year": 882, "add": ["ukraine-rb", "novgorod", "smolensk"], "contested": ["belarus", "belarus-w", "chernozem"], "note": "オレグがキエフを都とする" },
+      { "year": 980, "add": ["belarus", "belarus-w", "chernozem", "volhynia", "galicia-e", "ukraine-lb", "muscovy"], "note": "ウラディミル1世の時代" },
       { "year": 1136, "remove": ["novgorod"], "note": "ノヴゴロドが自立" },
       { "year": 1157, "remove": ["muscovy"], "note": "ウラジーミル大公国が力を持つ" }
     ],
@@ -2619,7 +2695,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C8607A"
   },
   {
     "id": "vladimir-suzdal",
@@ -2636,7 +2713,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "終わりの年は、モスクワ公が大公位を得た1328〜31年ごろ",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#3FA07A"
   },
   {
     "id": "galicia-volhynia",
@@ -2652,7 +2730,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "khazar",
@@ -2684,7 +2763,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "成立の時期は諸説ある",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#5A8FD8"
   },
   {
     "id": "piast",
@@ -2696,7 +2776,8 @@
     "importance": 2,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "teutonic",
@@ -2733,7 +2814,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "norway-m",
@@ -2782,7 +2864,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "滅亡の年は諸説ある",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C85A5A"
   },
   {
     "id": "hungary-k",
@@ -2824,7 +2907,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C0703A"
   },
   {
     "id": "bohemia-k",
@@ -2899,7 +2983,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "ロタール1世の死後、イタリアの王位は諸家が争った",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "normans-it",
@@ -2917,7 +3002,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "norman-sicily",
@@ -2961,7 +3047,8 @@
     "importance": 2,
     "uncertain": true,
     "memo": "1501〜04年にフランスとスペインが争い、スペイン領となった",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "franks",
@@ -3002,7 +3089,8 @@
     "importance": 3,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "carolingian",
@@ -3014,7 +3102,8 @@
     "importance": 3,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "burgundians",
@@ -3033,7 +3122,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9A4F8A"
   },
   {
     "id": "visigoth",
@@ -3071,7 +3161,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "west-francia",
@@ -3144,7 +3235,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C85A5A"
   },
   {
     "id": "asturias-leon",
@@ -3225,7 +3317,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "cordoba",
@@ -3261,7 +3354,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9A4F8A"
   },
   {
     "id": "nasrid",
@@ -3290,7 +3384,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "anglo-saxon",
@@ -3328,7 +3423,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "danish-h",
@@ -3340,7 +3436,8 @@
     "importance": 2,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "norman-h",
@@ -3352,7 +3449,8 @@
     "importance": 3,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "plantagenet",
@@ -3364,7 +3462,8 @@
     "importance": 3,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "lancaster",
@@ -3376,7 +3475,8 @@
     "importance": 2,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "york",
@@ -3388,7 +3488,8 @@
     "importance": 2,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "wales-p",
@@ -3405,7 +3506,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "ireland-k",
@@ -3422,7 +3524,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "normandy-d",
@@ -3438,7 +3541,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "capetian",
@@ -3450,7 +3554,8 @@
     "importance": 3,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "burgundy-st",
@@ -3486,7 +3591,8 @@
     "importance": 2,
     "uncertain": true,
     "memo": "衰退の時期は6〜7世紀",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "maya",
@@ -3520,7 +3626,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "成立・衰退の時期は諸説ある",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "chimu",
@@ -3536,6 +3643,555 @@
     "importance": 1,
     "uncertain": true,
     "memo": "成立の時期は諸説ある",
+    "descVerified": false,
+    "color": "#8A5AA8"
+  },
+  {
+    "id": "georgian-k",
+    "name": "ジョージアの諸王国",
+    "region": "wa",
+    "start": 1490,
+    "end": 1810,
+    "color": "#6FB07F",
+    "minor": true,
+    "territory": [
+      { "year": 1490, "add": ["georgia-w", "georgia-e"], "note": "ジョージア王国がカルトリ・カヘティ・イメレティに分かれる" }
+    ],
+    "desc": "1490年ごろにジョージア王国が分かれてできたカルトリ・カヘティ・イメレティなどの王国。サファヴィー朝やオスマン帝国に従い、19世紀初めにロシアに併合された。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "tahirid",
+    "name": "ターヒル朝",
+    "region": "wa",
+    "start": 1454,
+    "end": 1538,
+    "color": "#D99A4E",
+    "minor": true,
+    "territory": [
+      { "year": 1454, "add": ["yemen-n", "yemen-s"], "note": "ラスール朝に代わってイエメンを治める" }
+    ],
+    "desc": "イエメンの王朝（1454〜1538年ごろ）。アデンを中心に紅海・インド洋の貿易で栄えたが、マムルーク朝とオスマン帝国に滅ぼされた。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "jabrid",
+    "name": "ジャブル朝",
+    "region": "wa",
+    "start": 1417,
+    "end": 1524,
+    "color": "#5FA8A0",
+    "minor": true,
+    "territory": [
+      { "year": 1417, "add": ["hasa", "bahrain", "qatar", "kuwait"], "note": "アラビア東部を治める" }
+    ],
+    "desc": "アラビア半島東部（ハサー地方・バーレーン）を治めた王朝（15〜16世紀初め）。ポルトガルの進出で衰えた。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "hormuz-k",
+    "name": "ホルムズ王国",
+    "region": "wa",
+    "start": 1300,
+    "end": 1622,
+    "color": "#4F9DB8",
+    "minor": true,
+    "territory": [
+      { "year": 1300, "contested": ["uae", "bahrain"], "note": "ペルシア湾の入口の港を支配" }
+    ],
+    "desc": "ペルシア湾の入口のホルムズ島を中心に、湾岸の港を支配して貿易で栄えた国。16世紀にポルトガルの保護下に入り、1622年にサファヴィー朝に滅ぼされた。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "sibir",
+    "name": "シビル=ハン国",
+    "region": "ia",
+    "start": 1468,
+    "end": 1598,
+    "color": "#7FA7C9",
+    "minor": true,
+    "territory": [
+      { "year": 1468, "add": ["siberia-w"], "note": "ジョチ=ウルスから分かれる" }
+    ],
+    "desc": "西シベリアのイルティシュ川流域にあったハン国。1582年にイェルマークの率いるコサックに都を奪われ、ロシアのシベリア進出が始まった。",
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "jurchen",
+    "name": "女真（ジュシェン）の諸部",
+    "region": "cn",
+    "start": 1369,
+    "end": 1616,
+    "color": "#8FBF7F",
+    "minor": true,
+    "territory": [
+      { "year": 1369, "contested": ["manchuria", "primorye"], "note": "明の衛所のもとで部族ごとに暮らす" }
+    ],
+    "desc": "明の時代、中国東北地方に住んでいた女真（ジュシェン）の部族。明は衛所を置いて従わせた。1616年にヌルハチが統一して後金を建てた。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "kashmir-k",
+    "name": "カシミールの王国",
+    "region": "sa",
+    "start": 1000,
+    "end": 1586,
+    "color": "#6E9FD6",
+    "minor": true,
+    "territory": [
+      { "year": 1000, "add": ["kashmir"], "note": "ローハラ朝、のちシャー=ミール朝（カシミール=スルタン国）" }
+    ],
+    "desc": "カシミール地方の王国。11世紀のローハラ朝、14世紀からのイスラーム教徒のシャー=ミール朝などが続き、1586年にムガル帝国に併合された。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "sindh-s",
+    "name": "シンドの諸王朝",
+    "region": "sa",
+    "start": 1187,
+    "end": 1591,
+    "color": "#D9925A",
+    "minor": true,
+    "territory": [
+      { "year": 1187, "add": ["sindh"], "note": "スームラ朝・サンマ朝など" }
+    ],
+    "desc": "インダス川下流のシンド地方の王朝（スームラ朝・サンマ朝・アルグン朝など）。1591年にムガル帝国に併合された。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "rajput",
+    "name": "ラージプート諸国",
+    "region": "sa",
+    "start": 1037,
+    "end": 1818,
+    "color": "#E5B84C",
+    "minor": true,
+    "territory": [
+      { "year": 1037, "add": ["rajputana"], "note": "ラージプートの諸王国（メーワールなど）" }
+    ],
+    "desc": "インド北西部のラージャスターン地方にあったラージプートの諸王国（メーワールなど）。ムガル帝国に従い、1818年にイギリスの保護下に入った。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "orissa-k",
+    "name": "オリッサの王国",
+    "region": "sa",
+    "start": 1078,
+    "end": 1568,
+    "color": "#D97A8A",
+    "minor": true,
+    "territory": [
+      { "year": 1078, "add": ["orissa"], "note": "東ガンガ朝、のちガジャパティ朝" }
+    ],
+    "desc": "インド東部のオリッサ地方の王国（東ガンガ朝・ガジャパティ朝）。コナーラクの太陽寺院を建てた。16世紀にベンガルのムスリム政権に滅ぼされた。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "gond",
+    "name": "ゴンドワナの諸王国",
+    "region": "sa",
+    "start": 1000,
+    "end": 1781,
+    "color": "#7FB36A",
+    "minor": true,
+    "territory": [
+      { "year": 1000, "add": ["gondwana"], "note": "ゴンド人などの王国" }
+    ],
+    "desc": "インド中部の森林地帯（ゴンドワナ）にあったゴンド人などの王国。18世紀にマラーターに従った。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "nepal-malla",
+    "name": "ネパールの王国",
+    "region": "sa",
+    "start": 1000,
+    "end": 1769,
+    "color": "#C8607A",
+    "minor": true,
+    "territory": [
+      { "year": 1000, "add": ["nepal"], "note": "マッラ朝などの王国" }
+    ],
+    "desc": "カトマンズ盆地を中心とするネパールの王国（マッラ朝など）。1769年にゴルカ朝に統一された。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "ahom",
+    "name": "アホム王国",
+    "region": "sa",
+    "start": 1228,
+    "end": 1826,
+    "color": "#A77BC8",
+    "minor": true,
+    "territory": [
+      { "year": 1228, "add": ["assam"], "note": "タイ系のアホム人がアッサムに建国" }
+    ],
+    "desc": "インド北東部のアッサム地方に、タイ系のアホム人が建てた王国（1228〜1826年）。ムガル帝国の侵入を退けたが、ビルマに攻められ、1826年にイギリス領になった。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "maldives-k",
+    "name": "モルディヴ",
+    "region": "sa",
+    "start": 1153,
+    "end": 2000,
+    "color": "#3FB0A8",
+    "minor": true,
+    "territory": [
+      { "year": 1153, "add": ["maldives"], "note": "イスラーム教のスルタン国" }
+    ],
+    "desc": "インド洋の島国。12世紀にイスラーム教のスルタン国になり、1887〜1965年はイギリスの保護領だった。",
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "malwa-s",
+    "name": "マールワー=スルタン国",
+    "region": "sa",
+    "start": 1392,
+    "end": 1562,
+    "color": "#9C7BC4",
+    "minor": true,
+    "territory": [
+      { "year": 1500, "add": ["malwa"], "note": "インド中部のイスラーム王国" }
+    ],
+    "desc": "インド中部のマールワー地方のイスラーム王国（都マーンドゥ）。1562年にムガル帝国のアクバルに併合された。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "shan-states",
+    "name": "シャン人の諸国",
+    "region": "sea",
+    "start": 1215,
+    "end": 1557,
+    "color": "#8CC46A",
+    "minor": true,
+    "territory": [
+      { "year": 1215, "add": ["shan"], "note": "タイ系のシャン人の国々" }
+    ],
+    "desc": "ビルマ北東部のシャン高原にあった、タイ系のシャン人の国々。16世紀にタウングー朝に従った。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "kedah",
+    "name": "クダ王国",
+    "region": "sea",
+    "start": 1136,
+    "end": 1511,
+    "color": "#4FA58A",
+    "minor": true,
+    "territory": [
+      { "year": 1136, "add": ["penang"] }
+    ],
+    "desc": "マレー半島北西部のクダ（ケダ）の王国。マレー半島で最も古い王国の一つで、のちにイスラーム化した。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "demak",
+    "name": "デマク王国・パジャン王国",
+    "region": "sea",
+    "start": 1475,
+    "end": 1586,
+    "color": "#6C8FD8",
+    "minor": true,
+    "territory": [
+      { "year": 1528, "add": ["java-c", "java-e"], "note": "マジャパヒト王国に代わってジャワを治める" }
+    ],
+    "desc": "ジャワ島北岸のデマクを中心とした、ジャワで最初のイスラーム王国。マジャパヒト王国を滅ぼした。のちパジャン王国、マタラム王国に代わった。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "gowa",
+    "name": "ゴワ王国（マカッサル）",
+    "region": "sea",
+    "start": 1300,
+    "end": 1911,
+    "color": "#D68A4C",
+    "minor": true,
+    "territory": [
+      { "year": 1400, "add": ["sulawesi"], "note": "スラウェシ南部の王国" }
+    ],
+    "desc": "スラウェシ島南部のマカッサルを中心とした王国。17世紀にイスラーム化して香辛料貿易で栄えたが、1669年にオランダに敗れた。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "ternate",
+    "name": "テルナテ王国",
+    "region": "sea",
+    "start": 1257,
+    "end": 1683,
+    "color": "#B57AD0",
+    "minor": true,
+    "territory": [
+      { "year": 1257, "add": ["moluccas"], "note": "香料諸島の王国" }
+    ],
+    "desc": "モルッカ（香料）諸島のテルナテ島の王国。丁子の貿易で栄え、ポルトガル・オランダと争った。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "alodia",
+    "name": "アロディア王国",
+    "region": "af",
+    "start": 1401,
+    "end": 1504,
+    "color": "#C9884E",
+    "minor": true,
+    "territory": [
+      { "year": 1401, "add": ["sudan"], "note": "ナイル川上流のキリスト教の王国" }
+    ],
+    "desc": "スーダンのナイル川上流（ソバ）にあったキリスト教の王国（アルワ）。1504年ごろフンジ=スルタン国に滅ぼされた。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "ajuran",
+    "name": "アジュラーン=スルタン国",
+    "region": "af",
+    "start": 1200,
+    "end": 1700,
+    "color": "#3FA07A",
+    "minor": true,
+    "territory": [
+      { "year": 1200, "add": ["somalia"], "note": "ソマリア南部の王国" }
+    ],
+    "desc": "ソマリア南部のスルタン国（13〜17世紀）。インド洋の貿易で栄え、ポルトガルの進出にも抵抗した。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "buganda",
+    "name": "ウガンダの諸王国",
+    "region": "af",
+    "start": 1300,
+    "end": 1967,
+    "color": "#B06FC8",
+    "minor": true,
+    "territory": [
+      { "year": 1300, "add": ["uganda"], "note": "ブニョロ（キタラ）・ブガンダなどの王国" }
+    ],
+    "desc": "ヴィクトリア湖の北西にあったブニョロ（キタラ）・ブガンダなどの王国。19世紀末にイギリスの保護領になった。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "rwanda-k",
+    "name": "ルワンダ王国",
+    "region": "af",
+    "start": 1300,
+    "end": 1962,
+    "color": "#5A8FD8",
+    "minor": true,
+    "territory": [
+      { "year": 1300, "add": ["rwanda-burundi"] }
+    ],
+    "desc": "アフリカ大湖地方の王国。19世紀末にドイツ、第一次世界大戦後はベルギーの支配を受け、1962年に共和国として独立した。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "maravi",
+    "name": "マラヴィ王国",
+    "region": "af",
+    "start": 1480,
+    "end": 1891,
+    "color": "#D8A030",
+    "minor": true,
+    "territory": [
+      { "year": 1480, "contested": ["malawi"], "note": "マラウイ湖の南の王国" }
+    ],
+    "desc": "マラウイ湖の南西にあった王国。象牙や鉄の交易で栄えた。国名マラウイの由来。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "mossi",
+    "name": "モシ王国",
+    "region": "af",
+    "start": 1495,
+    "end": 1896,
+    "color": "#D4943A",
+    "minor": true,
+    "territory": [
+      { "year": 1495, "add": ["burkina"], "note": "ワガドゥグーなどの王国" }
+    ],
+    "desc": "ニジェール川の湾曲部の南（現在のブルキナファソ）の王国。マリやソンガイにも屈せず、1896年にフランスに征服された。",
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "hausa",
+    "name": "ハウサ諸王国",
+    "region": "af",
+    "start": 1000,
+    "end": 1808,
+    "color": "#C8A23A",
+    "minor": true,
+    "territory": [
+      { "year": 1000, "add": ["nigeria-n"], "note": "カノ・カツィナなどの都市国家" }
+    ],
+    "desc": "ナイジェリア北部のカノ・カツィナなどハウサ人の都市国家。サハラ交易で栄え、19世紀初めにソコト=カリフ国に征服された。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "agadez",
+    "name": "アガデス=スルタン国",
+    "region": "af",
+    "start": 1449,
+    "end": 1900,
+    "color": "#C9A85A",
+    "minor": true,
+    "territory": [
+      { "year": 1592, "contested": ["niger"], "note": "アイル山地のトゥアレグ人の国" }
+    ],
+    "desc": "サハラ南部のアイル山地にあったトゥアレグ人のスルタン国。都アガデスはサハラ交易の中継地として栄えた。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "allada",
+    "name": "アラダ王国",
+    "region": "af",
+    "start": 1440,
+    "end": 1724,
+    "color": "#A86A4A",
+    "minor": true,
+    "territory": [
+      { "year": 1500, "add": ["dahomey"], "note": "奴隷海岸の王国" }
+    ],
+    "desc": "奴隷海岸（現在のベナン南部）の王国。ヨーロッパ人との奴隷貿易で栄えたが、1724年にダホメ王国に征服された。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
     "descVerified": false
   }
 ]

@@ -67,7 +67,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#3FA07A"
   },
   {
     "id": "greek-west",
@@ -85,7 +86,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "massalia",
@@ -101,7 +103,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "bosporus",
@@ -117,7 +120,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "macedonia-k",
@@ -309,7 +313,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9A4F8A"
   },
   {
     "id": "aramaeans",
@@ -325,7 +330,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "urartu",
@@ -341,7 +347,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "phrygia",
@@ -357,7 +364,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "saba",
@@ -374,7 +382,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "achaemenid",
@@ -465,7 +474,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "pontus-k",
@@ -482,7 +492,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#F2A04F"
   },
   {
     "id": "armenia-k",
@@ -500,7 +511,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "nabataea",
@@ -516,7 +528,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C85A5A"
   },
   {
     "id": "hasmonean",
@@ -532,7 +545,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "parthia",
@@ -590,7 +604,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "mauretania-k",
@@ -606,7 +621,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "rome",
@@ -676,7 +692,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "soissons",
@@ -692,7 +709,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "etruscans",
@@ -709,7 +727,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "celts",
@@ -727,7 +746,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "iberians",
@@ -743,7 +763,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "britons",
@@ -759,7 +780,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "germans",
@@ -777,7 +799,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "goths",
@@ -794,7 +817,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "scythians",
@@ -810,7 +834,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "sarmatians",
@@ -826,7 +851,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "thracians",
@@ -842,7 +868,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#3FA07A"
   },
   {
     "id": "illyrians",
@@ -858,7 +885,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "dacia",
@@ -874,7 +902,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "huns",
@@ -931,7 +960,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "maurya",
@@ -967,7 +997,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "satavahana",
@@ -1000,7 +1031,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "indo-greek",
@@ -1016,7 +1048,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9A4F8A"
   },
   {
     "id": "kushan",
@@ -1051,7 +1084,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "vakataka",
@@ -1067,7 +1101,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "bactria",
@@ -1145,7 +1180,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9A4F8A"
   },
   {
     "id": "wusun",
@@ -1161,7 +1197,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C8607A"
   },
   {
     "id": "dayuan",
@@ -1178,7 +1215,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#5A8FD8"
   },
   {
     "id": "xiyu",
@@ -1194,7 +1232,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "zhou",
@@ -1329,7 +1368,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "yue-cq",
@@ -1346,7 +1386,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "zhao",
@@ -1393,7 +1434,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "lu",
@@ -1406,7 +1448,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "song-cq",
@@ -1419,7 +1462,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "han-dyn",
@@ -1479,7 +1523,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#5A8FD8"
   },
   {
     "id": "minyue",
@@ -1495,7 +1540,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C8607A"
   },
   {
     "id": "dian",
@@ -1511,7 +1557,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "wei-3k",
@@ -1605,7 +1652,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#3FA07A"
   },
   {
     "id": "former-qin",
@@ -1639,7 +1687,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "伝説の部分が多く、範囲や時期ははっきりしない",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "wiman",
@@ -1655,7 +1704,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "wa",
@@ -1673,7 +1723,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "olmec",
@@ -1689,7 +1740,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "chavin",
@@ -1705,6 +1757,7 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   }
 ]

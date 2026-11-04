@@ -2,7 +2,7 @@
 import { $, $$, esc, fmtYear, debounce, clamp, toast } from '../core/util.js';
 import { base } from '../core/normalize.js';
 import { renderCards, densitySvg, ganttSvg, openEvent, openPolity, openIchimon, wireSheet, holdRepeat, ICON } from './common.js';
-import { ZoneMap } from './mapcore.js';
+import { ZoneMap, polityColor } from './mapcore.js';
 
 let state = null;
 
@@ -173,7 +173,7 @@ function setFold(card, closed) {
 function drawLegend(m) {
   const box = $('#tlLegend', state.el);
   if (!box) return;
-  box.innerHTML = m.visiblePolities().filter(p => !p.minor).slice(0, 14).map(p => `<span><i style="background:${esc(p.color || '#ccc')}"></i>${esc(m.db.nameAt(p, m.year))}</span>`).join('') +
+  box.innerHTML = m.visiblePolities().slice(0, 14).map(p => `<span><i style="background:${esc(polityColor(p))}"></i>${esc(m.db.nameAt(p, m.year))}</span>`).join('') +
     '<span class="sym"><i class="v"></i>淡い色＝属国・従属地域</span><span class="sym"><i class="h"></i>斜線＝範囲が不確か・係争中</span>';
 }
 

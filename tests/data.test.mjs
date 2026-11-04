@@ -33,6 +33,24 @@ test('クイズ：全形式で作れて、復習用の spec から同じ問題�
   }
 });
 
+test('クイズ：並べ替えの「年の間隔」を広くすると、出来事どうしがその年数以上はなれる', () => {
+  const minGap = q => { const ys = q.events.map(e => e.year).sort((a, b) => a - b); return Math.min(...ys.slice(1).map((y, i) => y - ys[i])); };
+  for (const [level, gap] of [['mid', 20], ['wide', 50]]) {
+    const qs = makeSession(db, { count: 20, modes: ['order'], orderGap: level }, rng(3));
+    assert.ok(qs.length >= 15, `${level}: ${qs.length}問しかできない`);
+    for (const q of qs) assert.ok(minGap(q) >= gap, `${level}: ${q.events.map(e => e.year).join('・')}`);
+  }
+  // 範囲がせまくて広い間隔で作れないときも、間隔を小さくして問題を作る
+  const narrow = makeSession(db, { count: 5, modes: ['order'], orderGap: 'wide', from: 1600, to: 1650 }, rng(5));
+  assert.ok(narrow.length >= 3, `せまい範囲：${narrow.length}問`);
+  // 「近い年も」はこれまでどおり（同じ年は出さない）
+  for (const q of makeSession(db, { count: 20, modes: ['order'] }, rng(9))) assert.ok(minGap(q) >= 1);
+});
+
+test('勢力図：色のない国がない', () => {
+  for (const p of db.polities) assert.ok(/^#[0-9A-Fa-f]{6}$/.test(p.color || ''), `${p.id} に色がない`);
+});
+
 test('勢力図：どの時代にも塗られる地域がある', () => {
   for (const y of [1500, 1648, 1789, 1815, 1914, 1945, 2000]) {
     const own = db.ownersAt(y);

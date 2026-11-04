@@ -125,20 +125,34 @@ function makeTerm(db, opt, rand) {
   return { mode: 'term', id: pickWeighted(pool, e => e.importance * e.importance, rand).id };
 }
 
+/**
+ * 並べ替えの難しさ（年の間隔）。gap … 4つの出来事どうしが何年以上はなれるか、span … もとにする出来事から何年以内で選ぶか
+ * near はこれまでどおり（近い年の出来事も出る）。間隔が広いほど、古い順がわかりやすい
+ */
+export const ORDER_GAPS = {
+  near: { label: '近い年も', gap: 1, span: [15, 60] },
+  mid: { label: '20年以上', gap: 20, span: [120, 220] },
+  wide: { label: '50年以上', gap: 50, span: [250, 420] }
+};
+
 function makeOrder(db, opt, rand) {
   const pool = eventPool(db, opt).filter(e => e.importance >= 2);
-  for (let tries = 0; tries < 30; tries++) {
-    const a = pick(pool, rand);
-    if (!a) return null;
-    const span = 15 + Math.floor(rand() * 45);
-    const near = shuffle(pool.filter(e => Math.abs(e.year - a.year) <= span), rand);
-    const out = [a], years = new Set([a.year]), regs = new Set([a.regions[0]]);
-    for (const e of near) {
-      if (out.length >= 4) break;
-      if (years.has(e.year) || regs.has(e.regions[0])) continue;
-      out.push(e); years.add(e.year); regs.add(e.regions[0]);
+  const lv = ORDER_GAPS[opt.orderGap] || ORDER_GAPS.near;
+  // 年代の範囲がせまくて作れないときは、間隔を半分ずつ小さくして作る
+  for (let gap = lv.gap; gap >= 1; gap = gap > 1 ? Math.floor(gap / 2) : 0) {
+    for (let tries = 0; tries < 30; tries++) {
+      const a = pick(pool, rand);
+      if (!a) return null;
+      const span = lv.span[0] + Math.floor(rand() * (lv.span[1] - lv.span[0]));
+      const near = shuffle(pool.filter(e => Math.abs(e.year - a.year) <= span), rand);
+      const out = [a], regs = new Set([a.regions[0]]);
+      for (const e of near) {
+        if (out.length >= 4) break;
+        if (regs.has(e.regions[0]) || out.some(x => Math.abs(x.year - e.year) < gap)) continue;
+        out.push(e); regs.add(e.regions[0]);
+      }
+      if (out.length === 4) return { mode: 'order', ids: shuffle(out, rand).map(e => e.id) };
     }
-    if (out.length === 4) return { mode: 'order', ids: shuffle(out, rand).map(e => e.id) };
   }
   return null;
 }

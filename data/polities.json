@@ -8,6 +8,7 @@
     "end": 1644,
     "color": "#E8C46B",
     "territory": [
+      { "year": 1368, "contested": ["qinghai"] },
       { "year": 1368, "add": ["cn-jn", "cn-zj", "cn-jx", "cn-hg", "cn-hn", "cn-sd", "cn-n", "cn-sx", "cn-sn", "cn-fj", "cn-gd", "cn-gx", "cn-hi"], "note": "朱元璋（洪武帝）が南京で即位し、大都を落とす" },
       { "year": 1371, "add": ["cn-sc", "cn-gs"] },
       { "year": 1382, "add": ["cn-yn", "cn-gz"], "note": "雲南を平定" },
@@ -30,8 +31,10 @@
     "end": 1636,
     "color": "#D9A548",
     "territory": [
+      { "year": 1616, "contested": ["primorye"] },
       { "year": 1616, "add": ["manchuria"], "note": "ヌルハチが建国" },
-      { "year": 1621, "add": ["manchuria-s"], "note": "遼東を奪う（1625年に瀋陽へ遷都）" }
+      { "year": 1621, "add": ["manchuria-s"], "note": "遼東を奪う（1625年に瀋陽へ遷都）" },
+      { "year": 1635, "add": ["mongolia-in"], "note": "内モンゴルのチャハル部を従える" }
     ],
     "desc": "ヌルハチが女真の諸部を統合して建てた国。八旗を組織した。1636年にホンタイジが国号を清と改めた。",
     "importance": 3,
@@ -48,6 +51,7 @@
     "end": 1912,
     "color": "#E9B44C",
     "territory": [
+      { "year": 1636, "contested": ["primorye"] },
       { "year": 1636, "add": ["manchuria", "manchuria-s"], "vassal": ["mongolia-in"], "note": "国号を清と改める（内モンゴルのチャハル部は1635年に服属）" },
       { "year": 1644, "add": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs"], "note": "李自成を破り北京に入る" },
       { "year": 1645, "add": ["cn-jn", "cn-zj", "cn-jx"], "contested": ["cn-hg", "cn-sc"], "note": "南京を占領" },
@@ -57,10 +61,12 @@
       { "year": 1673, "contested": ["cn-yn", "cn-gz", "cn-gd", "cn-fj", "cn-gx", "cn-hg"], "note": "三藩の乱" },
       { "year": 1681, "add": ["cn-yn", "cn-gz", "cn-gd", "cn-fj", "cn-gx", "cn-hg"], "note": "三藩の乱を平定" },
       { "year": 1683, "add": ["taiwan"], "note": "鄭氏が降伏し、台湾を領有" },
+      { "year": 1689, "add": ["primorye"], "note": "ネルチンスク条約で外興安嶺までを国境とする" },
       { "year": 1689, "contested": ["amur"], "note": "ネルチンスク条約：アルグン川と外興安嶺を国境とする" },
       { "year": 1691, "vassal": ["mongolia"], "note": "外モンゴル（ハルハ）が服属" },
       { "year": 1720, "vassal": ["tibet"], "note": "チベットに出兵し、保護下に置く" },
       { "year": 1724, "vassal": ["qinghai"], "note": "青海を平定" },
+      { "year": 1757, "add": ["tuva"], "note": "ジュンガルを滅ぼし、トゥヴァを支配" },
       { "year": 1758, "vassal": ["dzungaria"], "note": "ジュンガルを滅ぼす" },
       { "year": 1759, "vassal": ["tarim"], "note": "回部を平定（ジュンガルとあわせて「新疆」）" },
       { "year": 1858, "remove": ["amur"], "note": "アイグン条約：アムール川以北をロシアへ" },
@@ -138,7 +144,8 @@
     "territory": [
       { "year": 1912, "add": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs", "cn-jn", "cn-zj", "cn-jx", "cn-hg", "cn-fj", "cn-gd", "cn-gx", "cn-hi", "cn-sc", "cn-gz", "cn-yn", "manchuria", "manchuria-s", "mongolia-in", "qinghai", "dzungaria", "tarim"], "note": "清の滅亡" },
       { "year": 1945, "add": ["taiwan"], "note": "日本の降伏で台湾を回復" },
-      { "year": 1949, "remove": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs", "cn-jn", "cn-zj", "cn-jx", "cn-hg", "cn-fj", "cn-gd", "cn-gx", "cn-hi", "cn-sc", "cn-gz", "cn-yn", "manchuria", "manchuria-s", "mongolia-in", "qinghai", "dzungaria", "tarim"], "note": "国共内戦に敗れ、台湾へ移る" }
+      { "year": 1949, "remove": ["cn-n", "cn-sd", "cn-sx", "cn-hn", "cn-sn", "cn-gs", "cn-jn", "cn-zj", "cn-jx", "cn-hg", "cn-fj", "cn-gd", "cn-gx", "cn-sc", "cn-gz", "cn-yn", "manchuria", "manchuria-s", "mongolia-in", "qinghai", "dzungaria", "tarim"], "note": "国共内戦に敗れ、台湾へ移る" },
+      { "year": 1950, "remove": ["cn-hi"], "note": "海南島を失う" }
     ],
     "desc": "辛亥革命で成立。孫文が臨時大総統、のち袁世凱が大総統となった。1928年に国民党の南京国民政府が全国をほぼ統一。1949年に台湾へ移った。",
     "importance": 3,
@@ -156,7 +163,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "nanjing-gov",
@@ -169,7 +177,8 @@
     "importance": 2,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "manchukuo",
@@ -180,7 +189,8 @@
     "color": "#C9A15B",
     "territory": [
       { "year": 1932, "add": ["manchuria", "manchuria-s"], "note": "建国宣言" },
-      { "year": 1933, "contested": ["mongolia-in"], "note": "熱河を占領" }
+      { "year": 1933, "contested": ["mongolia-in"], "note": "熱河を占領" },
+      { "year": 1945, "remove": ["mongolia-in"], "note": "ソ連軍の侵攻で消滅" }
     ],
     "desc": "満洲事変の翌年、日本が清の最後の皇帝溥儀を執政（のち皇帝）として建てた傀儡国家。",
     "importance": 3,
@@ -238,7 +248,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "李成桂が建てた朝鮮の王朝。漢城を都とし、両班が支配層となって朱子学を重んじた。"
+    "desc": "李成桂が建てた朝鮮の王朝。漢城を都とし、両班が支配層となって朱子学を重んじた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "korean-empire",
@@ -250,7 +261,8 @@
     "importance": 2,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "rok",
@@ -307,11 +319,14 @@
       { "year": 1895, "colony": ["taiwan"], "note": "下関条約" },
       { "year": 1905, "vassal": ["korea-n", "korea-s", "korea-c", "korea-sw"], "contested": ["sakhalin"], "note": "ポーツマス条約で樺太南部を得る。第2次日韓協約で韓国を保護国化" },
       { "year": 1910, "colony": ["korea-n", "korea-s", "korea-c", "korea-sw"], "note": "韓国併合" },
+      { "year": 1914, "colony": ["x-mnp", "x-plw", "x-fsm", "x-mhl"], "note": "ドイツ領の南洋諸島を占領（のち委任統治）" },
       { "year": 1937, "contested": ["cn-n", "cn-sd", "cn-sx", "cn-jn", "cn-zj"], "note": "日中戦争。北京・上海・南京を占領" },
       { "year": 1938, "contested": ["cn-hn", "cn-hg", "cn-gd"], "note": "武漢・広州を占領" },
       { "year": 1940, "contested": ["tonkin"], "note": "北部仏印進駐" },
+      { "year": 1941, "contested": ["x-gum"] },
       { "year": 1941, "contested": ["annam-n", "annam", "cochinchina", "cambodia", "laos"], "note": "南部仏印進駐" },
       { "year": 1942, "contested": ["malaya", "singapore", "malacca", "penang", "sabah", "sarawak", "brunei", "luzon", "visayas", "mindanao", "burma-l", "burma-u", "arakan", "tenasserim", "shan", "java-w", "java-c", "java-e", "sumatra", "aceh", "kalimantan", "sulawesi", "moluccas", "lesser-sunda", "papua-w", "timor-e"], "note": "東南アジアを占領" },
+      { "year": 1944, "remove": ["x-mnp", "x-plw", "x-fsm", "x-mhl", "x-gum"] },
       { "year": 1945, "remove": ["taiwan", "korea-n", "korea-s", "korea-c", "korea-sw", "sakhalin", "ryukyu", "cn-n", "cn-sd", "cn-sx", "cn-jn", "cn-zj", "cn-hn", "cn-hg", "cn-gd", "tonkin", "annam-n", "annam", "cochinchina", "cambodia", "laos", "malaya", "singapore", "malacca", "penang", "sabah", "sarawak", "brunei", "luzon", "visayas", "mindanao", "burma-l", "burma-u", "arakan", "tenasserim", "shan", "java-w", "java-c", "java-e", "sumatra", "aceh", "kalimantan", "sulawesi", "moluccas", "lesser-sunda", "papua-w", "timor-e"], "note": "敗戦" },
       { "year": 1972, "add": ["ryukyu"], "note": "沖縄返還" }
     ],
@@ -335,7 +350,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "足利尊氏が開いた武家政権。足利義満のとき南北朝を合一し、明と勘合貿易を行った。"
+    "desc": "足利尊氏が開いた武家政権。足利義満のとき南北朝を合一し、明と勘合貿易を行った。",
+    "color": "#8A5AA8"
   },
   {
     "id": "azuchi-momoyama",
@@ -347,7 +363,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "織田信長と豊臣秀吉が全国統一を進めた時代の政権。"
+    "desc": "織田信長と豊臣秀吉が全国統一を進めた時代の政権。",
+    "color": "#8A5AA8"
   },
   {
     "id": "edo",
@@ -360,7 +377,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "徳川家康が開いた武家政権。鎖国のもとで約260年続き、大政奉還で終わった。"
+    "desc": "徳川家康が開いた武家政権。鎖国のもとで約260年続き、大政奉還で終わった。",
+    "color": "#8A5AA8"
   },
   {
     "id": "imperial-japan",
@@ -372,7 +390,8 @@
     "uncertain": false,
     "memo": "明治維新から日本国憲法の施行まで。大日本帝国憲法の発布は1889年",
     "descVerified": false,
-    "desc": "明治維新ののち、大日本帝国憲法のもとでの日本。第二次世界大戦に敗れた。"
+    "desc": "明治維新ののち、大日本帝国憲法のもとでの日本。第二次世界大戦に敗れた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "postwar-japan",
@@ -384,7 +403,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "日本国憲法のもとでの第二次世界大戦後の日本。"
+    "desc": "日本国憲法のもとでの第二次世界大戦後の日本。",
+    "color": "#8A5AA8"
   },
   {
     "id": "ryukyu-k",
@@ -401,7 +421,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "mongols",
@@ -418,6 +439,7 @@
     "territory": [
       { "year": 1368, "add": ["mongolia"], "contested": ["mongolia-in"], "note": "元がモンゴル高原に退く（北元）" },
       { "year": 1500, "add": ["mongolia", "mongolia-in"] },
+      { "year": 1509, "contested": ["qinghai"], "note": "モンゴルの部族が青海に移る" },
       { "year": 1635, "remove": ["mongolia-in"], "note": "内モンゴルのチャハル部が後金に服属" }
     ],
     "desc": "明からは北元・タタール（韃靼）と呼ばれた。16世紀にアルタン=ハーンが明を圧迫した。17世紀に内モンゴルが後金に、外モンゴル（ハルハ）が清に服属した。",
@@ -440,11 +462,13 @@
       [1634, "ジュンガル"]
     ],
     "territory": [
+      { "year": 1409, "contested": ["tuva"] },
       { "year": 1409, "add": ["dzungaria"] },
       { "year": 1439, "contested": ["mongolia", "mongolia-in"], "note": "エセンがモンゴル高原を支配（1449年土木の変）" },
       { "year": 1455, "remove": ["mongolia", "mongolia-in"], "note": "エセンの死後に衰える" },
       { "year": 1500, "contested": ["dzungaria"] },
       { "year": 1634, "add": ["dzungaria"], "note": "ジュンガル部が台頭" },
+      { "year": 1680, "contested": ["kyrgyz"], "note": "ジュンガルがキルギスを従える" },
       { "year": 1680, "add": ["tarim"], "note": "タリム盆地のオアシス都市を支配" },
       { "year": 1688, "contested": ["mongolia"], "note": "ガルダンがハルハに侵攻" },
       { "year": 1697, "remove": ["mongolia"], "note": "ガルダンが死去" }
@@ -487,7 +511,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ダライ=ラマを政治と宗教の長とするチベットの政権。18世紀から清の保護下に置かれた。"
+    "desc": "ダライ=ラマを政治と宗教の長とするチベットの政権。18世紀から清の保護下に置かれた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "kazakh-k",
@@ -541,6 +566,7 @@
       { "year": 1500, "add": ["transoxiana", "tajik"] },
       { "year": 1505, "add": ["khwarazm"], "note": "ホラズムを奪う（1512年ヒヴァ=ハン国が自立）" },
       { "year": 1507, "add": ["khorasan", "afg-herat", "afg-balkh"], "note": "ティムール朝を滅ぼす" },
+      { "year": 1508, "add": ["fergana"] },
       { "year": 1510, "remove": ["khorasan", "afg-herat"], "note": "メルヴの戦いでサファヴィー朝に敗れる" }
     ],
     "desc": "ウズベクのシャイバーニー朝に始まる国。1868年にロシアの保護国となった。",
@@ -557,13 +583,15 @@
     "end": 1920,
     "minor": true,
     "territory": [
+      { "year": 1512, "contested": ["turkmen"], "note": "トルクメンの遊牧民を従える" },
       { "year": 1512, "add": ["khwarazm"] }
     ],
     "desc": "ホラズム地方のウズベクの国。1873年にロシアの保護国となった。",
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#3FA07A"
   },
   {
     "id": "kokand",
@@ -574,13 +602,15 @@
     "minor": true,
     "territory": [
       { "year": 1709, "add": ["fergana"] },
+      { "year": 1758, "contested": ["kyrgyz"] },
       { "year": 1800, "add": ["kyrgyz", "kazakh-s"], "uncertain": true }
     ],
     "desc": "フェルガナ地方のウズベクの国。1876年にロシアに併合された。",
     "importance": 1,
     "uncertain": true,
     "memo": "成立を1710年ごろとする資料もある",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9A4F8A"
   },
   {
     "id": "yakub-beg",
@@ -596,7 +626,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#3FA07A"
   },
   {
     "id": "mongolia-st",
@@ -611,7 +642,8 @@
       [1992, "モンゴル国"]
     ],
     "territory": [
-      { "year": 1911, "add": ["mongolia"], "note": "独立を宣言" }
+      { "year": 1911, "add": ["mongolia"], "note": "独立を宣言" },
+      { "year": 1912, "contested": ["tuva"] }
     ],
     "desc": "辛亥革命の際に外モンゴルが独立を宣言。1924年、ソ連に次ぐ2番目の社会主義国となった。",
     "importance": 2,
@@ -632,7 +664,9 @@
     ],
     "territory": [
       { "year": 1351, "add": ["siam"], "note": "ラーマティボディ1世がアユタヤを都に即位" },
+      { "year": 1460, "add": ["tenasserim"], "note": "テナセリムを支配" },
       { "year": 1500, "add": ["siam"], "vassal": ["pattani"] },
+      { "year": 1765, "remove": ["tenasserim"] },
       { "year": 1775, "vassal": ["lanna"], "note": "ラーンナーをビルマから奪う" },
       { "year": 1779, "vassal": ["laos"], "note": "ラオスの諸王国を従える" },
       { "year": 1785, "add": ["pattani"], "note": "パタニを征服", "uncertain": true },
@@ -655,7 +689,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "アユタヤを都としたタイの王朝。港市として栄え、日本町もあった。ビルマのコンバウン朝に滅ぼされた。"
+    "desc": "アユタヤを都としたタイの王朝。港市として栄え、日本町もあった。ビルマのコンバウン朝に滅ぼされた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "thonburi",
@@ -667,7 +702,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "アユタヤ朝の滅亡後にタークシンが建てたタイの王朝。"
+    "desc": "アユタヤ朝の滅亡後にタークシンが建てたタイの王朝。",
+    "color": "#8A5AA8"
   },
   {
     "id": "chakri",
@@ -680,7 +716,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ラーマ1世が開いたタイの王朝（チャクリ朝）。バンコクを都とし、チュラロンコンの改革で独立を保った。"
+    "desc": "ラーマ1世が開いたタイの王朝（チャクリ朝）。バンコクを都とし、チュラロンコンの改革で独立を保った。",
+    "color": "#8A5AA8"
   },
   {
     "id": "burma",
@@ -705,6 +742,7 @@
       { "year": 1584, "remove": ["siam"], "note": "アユタヤがナレースエン王のもとで独立を回復" },
       { "year": 1752, "contested": ["burma-u", "burma-l"], "note": "タウングー朝が滅び、コンバウン朝が再統一へ" },
       { "year": 1757, "add": ["burma-u", "burma-l"], "note": "コンバウン朝が下ビルマを平定" },
+      { "year": 1765, "add": ["tenasserim"], "note": "コンバウン朝がテナセリムを奪う" },
       { "year": 1767, "contested": ["siam"], "note": "アユタヤ朝を滅ぼす" },
       { "year": 1770, "remove": ["siam"], "note": "シャムのタークシンが回復" },
       { "year": 1775, "remove": ["lanna"] },
@@ -728,7 +766,8 @@
     "uncertain": true,
     "memo": "成立を1510年とする資料もある",
     "descVerified": false,
-    "desc": "ビルマを統一してペグーを都とした王朝。アユタヤ朝を一時服属させた。"
+    "desc": "ビルマを統一してペグーを都とした王朝。アユタヤ朝を一時服属させた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "konbaung",
@@ -741,7 +780,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ビルマ最後の王朝。アユタヤ朝を滅ぼしたが、3度のビルマ戦争でイギリスに併合された。"
+    "desc": "ビルマ最後の王朝。アユタヤ朝を滅ぼしたが、3度のビルマ戦争でイギリスに併合された。",
+    "color": "#8A5AA8"
   },
   {
     "id": "arakan-k",
@@ -757,7 +797,8 @@
     "uncertain": true,
     "memo": "ムラウー朝。成立年は目安",
     "descVerified": false,
-    "desc": "ビルマ西部の王国。コンバウン朝に征服された。"
+    "desc": "ビルマ西部の王国。コンバウン朝に征服された。",
+    "color": "#9A4F8A"
   },
   {
     "id": "dai-viet",
@@ -807,7 +848,8 @@
     "uncertain": true,
     "memo": "1527〜92年は莫朝に帝位を奪われていた",
     "descVerified": false,
-    "desc": "黎利が明軍を追い出して建てたベトナムの王朝。のちに南北の勢力に分かれた。"
+    "desc": "黎利が明軍を追い出して建てたベトナムの王朝。のちに南北の勢力に分かれた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "tayson",
@@ -820,7 +862,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "西山の阮氏3兄弟が反乱を起こして建てたベトナムの王朝。阮朝に倒された。"
+    "desc": "西山の阮氏3兄弟が反乱を起こして建てたベトナムの王朝。阮朝に倒された。",
+    "color": "#8A5AA8"
   },
   {
     "id": "nguyen",
@@ -833,7 +876,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "阮福暎が建てたベトナム最後の王朝。フランスの保護国となった。"
+    "desc": "阮福暎が建てたベトナム最後の王朝。フランスの保護国となった。",
+    "color": "#8A5AA8"
   },
   {
     "id": "champa-k",
@@ -853,7 +897,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "cambodia-k",
@@ -929,13 +974,15 @@
     "end": 1957,
     "minor": true,
     "territory": [
+      { "year": 1511, "add": ["penang"], "note": "クダ王国" },
       { "year": 1511, "add": ["malaya", "singapore"], "note": "マラッカ王家はジョホールに逃れる" }
     ],
     "importance": 1,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "マレー半島のイスラーム教徒の王国（スルタン国）。のちにイギリスの支配を受けた。"
+    "desc": "マレー半島のイスラーム教徒の王国（スルタン国）。のちにイギリスの支配を受けた。",
+    "color": "#5A8FD8"
   },
   {
     "id": "aceh-s",
@@ -951,7 +998,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "成立年は目安",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "mataram",
@@ -984,7 +1032,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "年は目安",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "brunei-s",
@@ -1001,7 +1050,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ボルネオ島北部のイスラーム教徒の王国。1984年に完全に独立した。"
+    "desc": "ボルネオ島北部のイスラーム教徒の王国。1984年に完全に独立した。",
+    "color": "#8A5AA8"
   },
   {
     "id": "sulu",
@@ -1017,7 +1067,8 @@
     "uncertain": true,
     "memo": "ミンダナオのイスラーム諸国をまとめて表示",
     "descVerified": false,
-    "desc": "フィリピン南部のスールー諸島のイスラーム教徒の王国。"
+    "desc": "フィリピン南部のスールー諸島のイスラーム教徒の王国。",
+    "color": "#9DB83A"
   },
   {
     "id": "ph-republic",
@@ -1029,7 +1080,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "philippines",
@@ -1057,7 +1109,9 @@
     "territory": [
       { "year": 1945, "contested": ["java-w", "java-c", "java-e", "sumatra"], "note": "スカルノが独立を宣言" },
       { "year": 1949, "add": ["java-w", "java-c", "java-e", "sumatra", "aceh", "kalimantan", "sulawesi", "moluccas", "lesser-sunda"], "note": "ハーグ協定で独立を承認される" },
+      { "year": 1962, "contested": ["papua-w"], "note": "国連の暫定統治を経て翌年に編入" },
       { "year": 1963, "add": ["papua-w"], "note": "西イリアンを編入" },
+      { "year": 1975, "contested": ["timor-e"], "note": "東ティモールに侵攻" },
       { "year": 1976, "contested": ["timor-e"], "note": "東ティモールを併合（国際的には認められず）" }
     ],
     "desc": "スカルノが独立を宣言し、オランダとの独立戦争をへて1949年に独立が認められた。",
@@ -1102,7 +1156,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "1965年にマレーシアから分離独立した都市国家。"
+    "desc": "1965年にマレーシアから分離独立した都市国家。",
+    "color": "#8A5AA8"
   },
   {
     "id": "drv",
@@ -1113,8 +1168,10 @@
     "end": 1976,
     "color": "#D97B6C",
     "territory": [
+      { "year": 1945, "contested": ["champa"] },
       { "year": 1945, "contested": ["tonkin", "annam-n"], "note": "独立を宣言" },
       { "year": 1954, "add": ["tonkin", "annam-n"], "note": "ジュネーヴ休戦協定" },
+      { "year": 1975, "add": ["champa"] },
       { "year": 1975, "add": ["annam", "cochinchina"], "note": "サイゴンを占領（翌年に南北統一）" }
     ],
     "desc": "ホー=チ=ミンが独立を宣言。インドシナ戦争をへて、ジュネーヴ休戦協定で北緯17度線以北を支配した。",
@@ -1136,7 +1193,9 @@
       [1955, "ベトナム共和国"]
     ],
     "territory": [
+      { "year": 1954, "add": ["champa"] },
       { "year": 1954, "add": ["annam", "cochinchina"], "note": "ジュネーヴ休戦協定で北緯17度線以南" },
+      { "year": 1975, "remove": ["champa"] },
       { "year": 1975, "remove": ["annam", "cochinchina"], "note": "サイゴン陥落" }
     ],
     "desc": "フランスが元皇帝バオダイを立てたベトナム国から、1955年にゴ=ディン=ジエムがベトナム共和国とした。",
@@ -1153,6 +1212,7 @@
     "end": 2000,
     "color": "#CF6F60",
     "territory": [
+      { "year": 1976, "add": ["champa"] },
       { "year": 1976, "add": ["tonkin", "annam-n", "annam", "cochinchina"] },
       { "year": 1979, "contested": ["cambodia"], "note": "カンボジアに侵攻（〜1989年）" },
       { "year": 1989, "remove": ["cambodia"] }
@@ -1197,6 +1257,7 @@
       { "year": 1555, "add": ["hindustan", "punjab", "punjab-e", "afg-kabul"], "note": "フマーユーンがデリーを回復" },
       { "year": 1562, "add": ["malwa"], "vassal": ["rajputana"], "note": "アクバルがマールワーを併合し、ラージプート諸侯を従える" },
       { "year": 1573, "add": ["gujarat"], "note": "グジャラートを征服" },
+      { "year": 1576, "contested": ["orissa"] },
       { "year": 1576, "add": ["bengal-w", "bengal-e", "bihar"], "note": "ベンガルを征服" },
       { "year": 1586, "add": ["kashmir"], "note": "カシミールを併合" },
       { "year": 1586, "add": ["nwfp"] },
@@ -1264,14 +1325,17 @@
     "end": 1687,
     "minor": true,
     "territory": [
+      { "year": 1500, "add": ["goa"] },
       { "year": 1500, "add": ["maharashtra", "telangana"] },
-      { "year": 1565, "contested": ["karnataka"], "note": "ターリコータの戦いに勝つ" }
+      { "year": 1565, "contested": ["karnataka"], "note": "ターリコータの戦いに勝つ" },
+      { "year": 1647, "add": ["andhra"], "note": "ゴールコンダ王国がアーンドラを支配" }
     ],
     "desc": "バフマン朝から分かれたビジャープル・ゴールコンダ・アフマドナガルなど。",
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "maratha",
@@ -1322,7 +1386,8 @@
     "end": 1947,
     "color": "#D1C08A",
     "territory": [
-      { "year": 1610, "add": ["karnataka"], "uncertain": true }
+      { "year": 1610, "add": ["karnataka"], "uncertain": true },
+      { "year": 1766, "contested": ["kerala"], "note": "ハイダル=アリーがマラバールを征服" }
     ],
     "desc": "ハイダル=アリーとティプー=スルタンがイギリスと4度のマイソール戦争を戦った。1799年に敗れ、イギリスの保護下に置かれた。",
     "importance": 2,
@@ -1391,7 +1456,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ゴルカ朝がヒマラヤ山脈の南に建てた王国。"
+    "desc": "ゴルカ朝がヒマラヤ山脈の南に建てた王国。",
+    "color": "#3FA07A"
   },
   {
     "id": "kandy",
@@ -1407,7 +1473,8 @@
     "uncertain": true,
     "memo": "年は目安",
     "descVerified": false,
-    "desc": "スリランカ中部の王国。イギリスに併合された。"
+    "desc": "スリランカ中部の王国。イギリスに併合された。",
+    "color": "#8A5AA8"
   },
   {
     "id": "eic-india",
@@ -1420,7 +1487,8 @@
     "importance": 2,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "british-raj",
@@ -1436,7 +1504,8 @@
     "importance": 3,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "india",
@@ -1488,7 +1557,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "東パキスタンが1971年に独立してできた国。"
+    "desc": "東パキスタンが1971年に独立してできた国。",
+    "color": "#8A5AA8"
   },
   {
     "id": "sri-lanka",
@@ -1508,7 +1578,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "1948年にセイロンとして独立し、1972年にスリランカとなった。"
+    "desc": "1948年にセイロンとして独立し、1972年にスリランカとなった。",
+    "color": "#8A5AA8"
   },
   {
     "id": "ottoman",
@@ -1536,22 +1607,31 @@
       { "year": 1475, "vassal": ["crimea"], "note": "クリム=ハン国を服属させる" },
       { "year": 1479, "add": ["albania"] },
       { "year": 1500, "add": ["anatolia-w", "anatolia-c", "anatolia-e", "pontus", "thrace-e", "bulgaria", "rumelia-e", "macedonia", "macedonia-gr", "thessaly", "epirus", "greece-s", "greece-w", "greece-c", "peloponnese", "thrace-w", "serbia", "kosovo", "bosnia", "albania", "aegean"], "vassal": ["wallachia", "moldavia", "bessarabia", "crimea", "montenegro", "pontic"], "contested": ["don"] },
+      { "year": 1516, "add": ["hatay"] },
       { "year": 1516, "add": ["syria", "lebanon", "palestine", "jordan"], "note": "マムルーク朝を破る" },
       { "year": 1517, "add": ["egypt"], "vassal": ["hejaz"], "note": "マムルーク朝を滅ぼし、メッカ・メディナの保護者となる" },
       { "year": 1520, "vassal": ["algeria"], "note": "アルジェの海賊（バルバロッサ）が服属", "uncertain": true },
       { "year": 1526, "contested": ["hungary-c", "slavonia", "vojvodina"], "note": "モハーチの戦いでハンガリーを破る" },
+      { "year": 1527, "vassal": ["transylvania", "banat", "hungary-ne"], "contested": ["transcarpathia"], "note": "サポヤイ=ヤーノシュの東ハンガリー王国を保護下に" },
+      { "year": 1534, "add": ["kars"], "note": "エルズルム・カルスを得る" },
       { "year": 1534, "add": ["iraq-c", "iraq-n"], "note": "バグダードを占領" },
+      { "year": 1538, "add": ["yemen-s"], "note": "アデンを占領" },
       { "year": 1538, "contested": ["yemen-n"], "note": "イエメンに進出", "uncertain": true },
       { "year": 1541, "add": ["hungary-c", "slavonia", "vojvodina"], "vassal": ["transylvania"], "note": "ブダを占領してハンガリー中部を直轄化" },
       { "year": 1546, "add": ["iraq-s"], "note": "バスラを支配" },
+      { "year": 1550, "add": ["hasa"], "note": "ラフサー州を置く" },
+      { "year": 1551, "vassal": ["fezzan"] },
       { "year": 1551, "add": ["tripolitania", "cyrenaica"], "note": "トリポリを奪う" },
       { "year": 1552, "add": ["banat"], "note": "テメシュヴァールを占領" },
       { "year": 1571, "add": ["cyprus"], "note": "キプロス島を奪う" },
       { "year": 1574, "vassal": ["tunisia"], "note": "チュニスを確保" },
+      { "year": 1578, "contested": ["somaliland", "djibouti"] },
       { "year": 1590, "contested": ["georgia-e", "armenia", "azerbaijan", "iran-nw"], "note": "サファヴィー朝から西北部を奪う" },
       { "year": 1603, "remove": ["georgia-e", "armenia", "azerbaijan", "iran-nw"], "note": "サファヴィー朝のアッバース1世が奪回" },
+      { "year": 1635, "remove": ["yemen-s"] },
       { "year": 1635, "remove": ["yemen-n"], "note": "イエメンから撤退" },
       { "year": 1669, "add": ["crete"], "note": "クレタ島を奪う" },
+      { "year": 1670, "remove": ["hasa"], "note": "バニー=ハーリド家に追われる" },
       { "year": 1672, "add": ["podolia"], "note": "ポーランドからポドリアを奪う" },
       { "year": 1699, "remove": ["hungary-c", "slavonia", "transylvania", "podolia", "vojvodina"], "note": "カルロヴィッツ条約" },
       { "year": 1718, "remove": ["banat"], "note": "パッサロヴィッツ条約" },
@@ -1559,13 +1639,20 @@
       { "year": 1792, "remove": ["pontic"], "note": "ヤッシー条約" },
       { "year": 1812, "remove": ["bessarabia"], "note": "ブカレスト条約" },
       { "year": 1830, "remove": ["algeria"], "note": "フランスがアルジェを占領" },
+      { "year": 1842, "add": ["fezzan"] },
+      { "year": 1871, "add": ["hasa", "asir"], "vassal": ["kuwait", "qatar"], "note": "アラビア東部・アスィールを支配" },
+      { "year": 1872, "add": ["yemen-n"], "note": "イエメンを再び支配" },
+      { "year": 1875, "remove": ["somaliland", "djibouti"] },
       { "year": 1878, "vassal": ["bulgaria", "bosnia"], "remove": ["serbia", "montenegro", "wallachia", "moldavia", "dobruja", "kars", "cyprus"], "note": "ベルリン条約" },
       { "year": 1881, "remove": ["thessaly", "tunisia"] },
       { "year": 1882, "remove": ["egypt"], "note": "イギリスがエジプトを占領" },
       { "year": 1885, "remove": ["rumelia-e"], "note": "ブルガリアが東ルメリアを併合" },
       { "year": 1908, "remove": ["bulgaria", "bosnia"], "note": "ブルガリア独立、オーストリアがボスニアを併合" },
       { "year": 1911, "remove": ["tripolitania", "cyrenaica"], "note": "イタリア=トルコ戦争（翌年割譲）" },
+      { "year": 1912, "remove": ["fezzan"] },
       { "year": 1912, "remove": ["kosovo", "macedonia", "macedonia-gr", "epirus", "albania", "thrace-w", "crete", "aegean"], "note": "第1次バルカン戦争" },
+      { "year": 1913, "remove": ["hasa"] },
+      { "year": 1918, "contested": ["kars"], "remove": ["yemen-n", "asir", "hatay"], "note": "第一次世界大戦に敗れる／ブレスト=リトフスク条約でカルスを取り戻す" },
       { "year": 1918, "remove": ["syria", "lebanon", "palestine", "jordan", "iraq-n", "iraq-c", "iraq-s", "hejaz"], "note": "第一次世界大戦に敗れる" }
     ],
     "desc": "アナトリアに興ったトルコ系のイスラーム国家。1453年にコンスタンティノープルを占領。16世紀のスレイマン1世の時代に最盛期を迎えた。",
@@ -1612,7 +1699,8 @@
     "uncertain": true,
     "memo": "1500年ごろには分裂が進んでいた",
     "descVerified": false,
-    "desc": "トルコ系遊牧民の王朝。イラン北西部からイラクを支配したが、サファヴィー朝に滅ぼされた。"
+    "desc": "トルコ系遊牧民の王朝。イラン北西部からイラクを支配したが、サファヴィー朝に滅ぼされた。",
+    "color": "#C85A5A"
   },
   {
     "id": "safavid",
@@ -1623,8 +1711,10 @@
     "end": 1736,
     "color": "#B08ACF",
     "territory": [
+      { "year": 1501, "add": ["kars"] },
       { "year": 1501, "add": ["iran-nw", "azerbaijan", "armenia"], "note": "イスマーイール1世がタブリーズで即位" },
       { "year": 1503, "add": ["iran-n", "iran-w", "iran-c", "iran-s"], "note": "白羊朝を破りイラン高原を支配" },
+      { "year": 1508, "contested": ["iraq-n", "afg-kandahar"], "note": "モースルを占領／カンダハールをムガル帝国と争う" },
       { "year": 1508, "add": ["iraq-c", "iraq-s"], "note": "バグダードを占領" },
       { "year": 1510, "add": ["khorasan", "afg-herat", "sistan"], "note": "シャイバーニーを破る" },
       { "year": 1514, "contested": ["iran-nw"], "note": "チャルディランの戦いでオスマン帝国に敗れる" },
@@ -1655,6 +1745,7 @@
     "color": "#A88BC2",
     "territory": [
       { "year": 1736, "add": ["iran-nw", "iran-n", "iran-w", "iran-c", "iran-s", "khorasan", "sistan", "azerbaijan", "armenia", "afg-herat"], "vassal": ["georgia-e"], "note": "ナーディル=シャーが即位" },
+      { "year": 1737, "add": ["afg-kandahar"], "contested": ["bahrain"], "note": "カンダハールを攻略、バーレーンを占領" },
       { "year": 1738, "add": ["afg-kandahar", "afg-kabul"] },
       { "year": 1739, "add": ["nwfp"], "vassal": ["sindh"], "note": "デリーを略奪" },
       { "year": 1747, "remove": ["afg-kandahar", "afg-kabul", "nwfp", "sindh", "afg-herat"], "note": "ナーディル=シャーが暗殺され、分裂" },
@@ -1674,13 +1765,16 @@
     "end": 1794,
     "minor": true,
     "territory": [
-      { "year": 1751, "add": ["iran-nw", "iran-n", "iran-w", "iran-c", "iran-s"] }
+      { "year": 1751, "contested": ["armenia", "azerbaijan"], "note": "カフカスのハン国を従える" },
+      { "year": 1751, "add": ["iran-nw", "iran-n", "iran-w", "iran-c", "iran-s"] },
+      { "year": 1753, "contested": ["bahrain"] }
     ],
     "importance": 1,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "カリーム=ハーンが建て、シーラーズを都としたイランの王朝。"
+    "desc": "カリーム=ハーンが建て、シーラーズを都としたイランの王朝。",
+    "color": "#C85A5A"
   },
   {
     "id": "qajar",
@@ -1779,7 +1873,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#C0703A"
   },
   {
     "id": "yemen",
@@ -1796,7 +1891,9 @@
       [1990, "イエメン共和国"]
     ],
     "territory": [
+      { "year": 1635, "add": ["yemen-s"], "note": "南部も支配" },
       { "year": 1635, "add": ["yemen-n"], "note": "ザイド派のイマームがオスマン軍を追い出す" },
+      { "year": 1728, "remove": ["yemen-s"] },
       { "year": 1918, "add": ["yemen-n"] },
       { "year": 1990, "add": ["yemen-s"], "note": "南北イエメンが統一" }
     ],
@@ -1804,7 +1901,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "アラビア半島南西部の国。北部ではザイド派のイマームが長く治め、1962年に共和国となり、1990年に南イエメンと統一された。"
+    "desc": "アラビア半島南西部の国。北部ではザイド派のイマームが長く治め、1962年に共和国となり、1990年に南イエメンと統一された。",
+    "color": "#5A8FD8"
   },
   {
     "id": "south-yemen",
@@ -1820,7 +1918,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "イギリス領アデンなどが独立してできた社会主義国。1990年に北イエメンと統一された。"
+    "desc": "イギリス領アデンなどが独立してできた社会主義国。1990年に北イエメンと統一された。",
+    "color": "#C0703A"
   },
   {
     "id": "oman",
@@ -1830,14 +1929,17 @@
     "end": 2000,
     "minor": true,
     "territory": [
+      { "year": 1650, "contested": ["uae"], "note": "ヤアーリバ朝が湾岸の港を支配" },
       { "year": 1650, "add": ["oman"], "note": "ポルトガル人をマスカットから追い出す" },
+      { "year": 1698, "contested": ["tanganyika"], "note": "東アフリカ沿岸を支配" },
       { "year": 1698, "contested": ["kenya", "zanzibar"], "note": "東アフリカ沿岸に進出" }
     ],
     "importance": 1,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "アラビア半島東部の国。17世紀にポルトガル人を追い出し、東アフリカの海岸まで勢力を広げた。"
+    "desc": "アラビア半島東部の国。17世紀にポルトガル人を追い出し、東アフリカの海岸まで勢力を広げた。",
+    "color": "#E07FA8"
   },
   {
     "id": "egypt",
@@ -1856,10 +1958,16 @@
     "territory": [
       { "year": 1805, "add": ["egypt"], "note": "ムハンマド=アリーが総督に（オスマン帝国の宗主権下）" },
       { "year": 1812, "add": ["hejaz"], "note": "ワッハーブ王国からメッカ・メディナを奪回" },
+      { "year": 1818, "contested": ["najd", "hasa", "asir"], "note": "ムハンマド=アリーの軍がワッハーブ王国を倒す" },
       { "year": 1820, "add": ["sudan"], "note": "スーダンを征服" },
+      { "year": 1824, "remove": ["najd", "hasa"] },
       { "year": 1831, "add": ["syria", "lebanon", "palestine", "jordan"], "note": "シリアを占領（エジプト=トルコ戦争）" },
+      { "year": 1840, "remove": ["asir"] },
       { "year": 1840, "remove": ["syria", "lebanon", "palestine", "jordan", "hejaz"], "note": "ロンドン会議でシリアを返還" },
+      { "year": 1871, "contested": ["sudan-s"], "note": "南スーダン（エクアトリア）に進出" },
       { "year": 1874, "add": ["kordofan"], "note": "ダルフールを併合" },
+      { "year": 1875, "contested": ["somaliland", "djibouti"], "note": "ゼイラ・ベルベラを占領" },
+      { "year": 1885, "remove": ["sudan-s", "somaliland", "djibouti"], "note": "マフディー派の反乱" },
       { "year": 1885, "remove": ["sudan", "kordofan"], "note": "マフディー派がハルツームを占領" },
       { "year": 1922, "add": ["egypt"], "note": "イギリスから独立" },
       { "year": 1958, "add": ["syria"], "note": "シリアと合邦（アラブ連合共和国）" },
@@ -1881,7 +1989,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ムハンマド=アリーが開いたエジプトの王朝。1922年からエジプト王国の王家となり、エジプト革命で倒された。"
+    "desc": "ムハンマド=アリーが開いたエジプトの王朝。1922年からエジプト王国の王家となり、エジプト革命で倒された。",
+    "color": "#8A5AA8"
   },
   {
     "id": "mahdist",
@@ -1897,13 +2006,15 @@
     ],
     "territory": [
       { "year": 1881, "contested": ["sudan"], "note": "ムハンマド=アフマドが反乱" },
+      { "year": 1885, "contested": ["sudan-s"] },
       { "year": 1885, "add": ["sudan", "kordofan"], "note": "ハルツームを占領（ゴードン戦死）" }
     ],
     "desc": "マフディー（救世主）を名のるムハンマド=アフマドの運動。",
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#5FB0C4"
   },
   {
     "id": "ankara",
@@ -1982,7 +2093,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "フランスの委任統治から独立した国。"
+    "desc": "フランスの委任統治から独立した国。",
+    "color": "#9DB83A"
   },
   {
     "id": "lebanon-r",
@@ -1998,7 +2110,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "フランスの委任統治から独立した国。"
+    "desc": "フランスの委任統治から独立した国。",
+    "color": "#9A4F8A"
   },
   {
     "id": "jordan-r",
@@ -2018,7 +2131,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "イギリスの委任統治から独立したハーシム家の王国。"
+    "desc": "イギリスの委任統治から独立したハーシム家の王国。",
+    "color": "#8A5AA8"
   },
   {
     "id": "israel",
@@ -2050,23 +2164,29 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "イギリスの保護国から1961年に独立した国。1990年にイラクに侵攻された。"
+    "desc": "イギリスの保護国から1961年に独立した国。1990年にイラクに侵攻された。",
+    "color": "#9A4F8A"
   },
   {
     "id": "gulf-states",
     "name": "湾岸の首長国",
     "region": "wa",
-    "start": 1971,
+    "start": 1720,
     "end": 2000,
     "minor": true,
     "territory": [
+      { "year": 1720, "add": ["uae"], "note": "休戦海岸のカワーシム家などの首長国" },
+      { "year": 1752, "add": ["kuwait"], "note": "サバーフ家がクウェートの首長になる" },
+      { "year": 1783, "add": ["bahrain", "qatar"], "note": "ハリーファ家がバーレーンを治める" },
+      { "year": 1868, "add": ["qatar"], "note": "サーニー家がカタールを治める" },
       { "year": 1971, "add": ["bahrain", "qatar", "uae"], "note": "イギリスから独立（バーレーン・カタール・アラブ首長国連邦）" }
     ],
     "importance": 1,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ペルシア湾岸のイギリス保護下の首長国が1971年に独立してできた国々（アラブ首長国連邦など）。"
+    "desc": "ペルシア湾岸の首長国（クウェート・バーレーン・カタール・休戦海岸）。19世紀からイギリスの保護下に入り、1961〜71年に独立した（地図ではまとめて表示。クウェートは1961年から別に表示）。",
+    "color": "#5A8FD8"
   },
   {
     "id": "cyprus-r",
@@ -2082,7 +2202,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "イギリスから独立したキプロス島の国。ギリシア系とトルコ系の住民が対立した。"
+    "desc": "イギリスから独立したキプロス島の国。ギリシア系とトルコ系の住民が対立した。",
+    "color": "#8A5AA8"
   },
   {
     "id": "morocco",
@@ -2116,7 +2237,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "マリーン朝のあとモロッコを治めた王朝。"
+    "desc": "マリーン朝のあとモロッコを治めた王朝。",
+    "color": "#8A5AA8"
   },
   {
     "id": "saadi",
@@ -2128,7 +2250,8 @@
     "uncertain": true,
     "memo": "成立を1549年や1554年とする資料がある",
     "descVerified": false,
-    "desc": "ポルトガル軍を破り、ソンガイ王国を攻めたモロッコの王朝。"
+    "desc": "ポルトガル軍を破り、ソンガイ王国を攻めたモロッコの王朝。",
+    "color": "#8A5AA8"
   },
   {
     "id": "alaouite",
@@ -2140,7 +2263,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "現在まで続くモロッコの王朝。"
+    "desc": "現在まで続くモロッコの王朝。",
+    "color": "#8A5AA8"
   },
   {
     "id": "algeria-r",
@@ -2156,7 +2280,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "フランスとの独立戦争を経て、1962年に独立した国。"
+    "desc": "フランスとの独立戦争を経て、1962年に独立した国。",
+    "color": "#5A8FD8"
   },
   {
     "id": "tunisia-r",
@@ -2172,7 +2297,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "1956年にフランスの保護国から独立した国。"
+    "desc": "1956年にフランスの保護国から独立した国。",
+    "color": "#C85A5A"
   },
   {
     "id": "libya-r",
@@ -2192,7 +2318,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "イタリア領から1951年に独立した国。1969年のクーデタでカダフィが実権をにぎった。"
+    "desc": "イタリア領から1951年に独立した国。1969年のクーデタでカダフィが実権をにぎった。",
+    "color": "#9DB83A"
   },
   {
     "id": "sudan-r",
@@ -2208,7 +2335,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "イギリスとエジプトの共同統治から1956年に独立した国。"
+    "desc": "イギリスとエジプトの共同統治から1956年に独立した国。",
+    "color": "#9A4F8A"
   },
   {
     "id": "songhai",
@@ -2267,7 +2395,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "アフリカの角のイスラーム教徒の国。16世紀にエチオピアと争った。"
+    "desc": "アフリカの角のイスラーム教徒の国。16世紀にエチオピアと争った。",
+    "color": "#8A5AA8"
   },
   {
     "id": "kongo-k",
@@ -2284,7 +2413,8 @@
     "uncertain": true,
     "memo": "年は目安",
     "descVerified": false,
-    "desc": "コンゴ川下流の王国。15世紀末にポルトガルと交流してキリスト教を受け入れたが、奴隷貿易で衰えた。"
+    "desc": "コンゴ川下流の王国。15世紀末にポルトガルと交流してキリスト教を受け入れたが、奴隷貿易で衰えた。",
+    "color": "#9A4F8A"
   },
   {
     "id": "benin-k",
@@ -2301,7 +2431,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "年は目安",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#7FB36A"
   },
   {
     "id": "dahomey-k",
@@ -2317,7 +2448,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "年は目安",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9A4F8A"
   },
   {
     "id": "ashanti",
@@ -2333,7 +2465,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "年は目安",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "bornu-k",
@@ -2350,7 +2483,8 @@
     "uncertain": true,
     "memo": "年は目安",
     "descVerified": false,
-    "desc": "チャド湖周辺の王国（カネム=ボルヌー王国）。サハラ交易で栄えた。"
+    "desc": "チャド湖周辺の王国（カネム=ボルヌー王国）。サハラ交易で栄えた。",
+    "color": "#9A4F8A"
   },
   {
     "id": "sokoto",
@@ -2360,13 +2494,15 @@
     "end": 1903,
     "minor": true,
     "territory": [
-      { "year": 1804, "add": ["nigeria-n"], "note": "ウスマン=ダン=フォディオのジハード" }
+      { "year": 1804, "add": ["nigeria-n"], "note": "ウスマン=ダン=フォディオのジハード" },
+      { "year": 1809, "contested": ["cameroon"], "note": "アダマワ首長国" }
     ],
     "importance": 1,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ナイジェリア北部でフルベ人のジハード（聖戦）によって建てられたイスラーム国家。イギリスに征服された。"
+    "desc": "ナイジェリア北部でフルベ人のジハード（聖戦）によって建てられたイスラーム国家。イギリスに征服された。",
+    "color": "#3FB0A8"
   },
   {
     "id": "mutapa",
@@ -2383,7 +2519,8 @@
     "uncertain": true,
     "memo": "年は目安",
     "descVerified": false,
-    "desc": "ジンバブエ高原の王国。金の交易で栄え、ポルトガルと関わりを持った。"
+    "desc": "ジンバブエ高原の王国。金の交易で栄え、ポルトガルと関わりを持った。",
+    "color": "#8A5AA8"
   },
   {
     "id": "zulu",
@@ -2399,7 +2536,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "シャカが強大にした南アフリカの王国。ズールー戦争でイギリスに敗れた。"
+    "desc": "シャカが強大にした南アフリカの王国。ズールー戦争でイギリスに敗れた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "merina",
@@ -2409,13 +2547,15 @@
     "end": 1897,
     "minor": true,
     "territory": [
+      { "year": 1540, "contested": ["madagascar"], "note": "マダガスカル中央高地の王国" },
       { "year": 1817, "add": ["madagascar"], "uncertain": true }
     ],
     "importance": 1,
     "uncertain": true,
     "memo": "島の大半を統一した年は目安",
     "descVerified": false,
-    "desc": "マダガスカル島中央部の王国。フランスに征服された。"
+    "desc": "マダガスカル島中央部の王国。フランスに征服された。",
+    "color": "#8A5AA8"
   },
   {
     "id": "zanzibar-s",
@@ -2425,13 +2565,15 @@
     "end": 1964,
     "minor": true,
     "territory": [
+      { "year": 1856, "contested": ["tanganyika"] },
       { "year": 1856, "add": ["zanzibar"], "note": "オマーンから分かれる" }
     ],
     "importance": 1,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "オマーンの王族が東アフリカのザンジバル島を中心に治めた国。イギリスの保護国となった。"
+    "desc": "オマーンの王族が東アフリカのザンジバル島を中心に治めた国。イギリスの保護国となった。",
+    "color": "#3FB0A8"
   },
   {
     "id": "transvaal-r",
@@ -2442,13 +2584,15 @@
     "end": 1902,
     "minor": true,
     "territory": [
-      { "year": 1852, "add": ["transvaal"], "note": "トランスヴァール共和国（1854年オレンジ自由国）" }
+      { "year": 1852, "add": ["transvaal"], "note": "トランスヴァール共和国（1854年オレンジ自由国）" },
+      { "year": 1894, "vassal": ["eswatini"], "note": "スワジランドを保護下に" }
     ],
     "importance": 1,
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ブール人（オランダ系移民の子孫）が建てたトランスヴァール共和国とオレンジ自由国。南アフリカ戦争でイギリスに併合された。"
+    "desc": "ブール人（オランダ系移民の子孫）が建てたトランスヴァール共和国とオレンジ自由国。南アフリカ戦争でイギリスに併合された。",
+    "color": "#C9A13A"
   },
   {
     "id": "liberia-r",
@@ -2464,7 +2608,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "アメリカの解放奴隷が建て、1847年に独立した国。"
+    "desc": "アメリカの解放奴隷が建て、1847年に独立した国。",
+    "color": "#9A4F8A"
   },
   {
     "id": "south-africa",
@@ -2479,6 +2624,7 @@
     ],
     "territory": [
       { "year": 1910, "add": ["cape", "natal", "transvaal"], "note": "南アフリカ連邦（イギリスの自治領）" },
+      { "year": 1919, "vassal": ["namibia"], "note": "南西アフリカを委任統治" },
       { "year": 1920, "vassal": ["namibia"], "note": "南西アフリカを委任統治" },
       { "year": 1990, "remove": ["namibia"], "note": "ナミビアが独立" }
     ],
@@ -2519,13 +2665,19 @@
       { "year": 1453, "remove": ["guyenne"], "note": "百年戦争の終わり" },
       { "year": 1500, "add": ["england", "wales"] },
       { "year": 1541, "contested": ["ireland"], "note": "ヘンリ8世がアイルランド王を称する" },
+      { "year": 1542, "contested": ["ulster"], "note": "アイルランド王国を称する（アルスターはゲール系の領主が支配）" },
       { "year": 1603, "add": ["ireland", "ulster"], "vassal": ["scotland"], "note": "ジェームズ1世のもとで同君連合" },
       { "year": 1607, "contested": ["virginia"], "note": "ジェームズタウン" },
+      { "year": 1612, "colony": ["x-bmu"] },
       { "year": 1620, "contested": ["new-england"], "note": "プリマス植民地" },
+      { "year": 1627, "colony": ["antilles"], "note": "バルバドスなど小アンティル諸島を植民地にする" },
       { "year": 1655, "colony": ["jamaica"], "note": "ジャマイカを奪う" },
+      { "year": 1659, "colony": ["x-shn"] },
       { "year": 1664, "colony": ["new-york"], "note": "ニューアムステルダムを奪う" },
+      { "year": 1670, "colony": ["x-cym"] },
       { "year": 1670, "contested": ["rupertsland"], "note": "ハドソン湾会社" },
       { "year": 1681, "colony": ["penn"], "note": "ペンシルヴェニア", "uncertain": true },
+      { "year": 1698, "contested": ["belize"], "note": "ベリーズに入植" },
       { "year": 1704, "add": ["gibraltar"], "note": "ジブラルタルを占領（1713年に獲得）" },
       { "year": 1707, "add": ["scotland"], "note": "大ブリテン王国" },
       { "year": 1713, "colony": ["acadia", "newfoundland"], "note": "ユトレヒト条約" },
@@ -2538,76 +2690,120 @@
       { "year": 1775, "contested": ["new-england", "new-york", "penn", "virginia", "carolina"], "note": "アメリカ独立戦争" },
       { "year": 1783, "remove": ["new-england", "new-york", "penn", "virginia", "carolina", "old-nw", "old-sw", "florida"], "note": "パリ条約でアメリカの独立を承認" },
       { "year": 1786, "colony": ["penang"], "note": "ペナン島を得る" },
+      { "year": 1788, "colony": ["x-nfk"] },
       { "year": 1788, "contested": ["australia"], "note": "流刑植民地（シドニー）を建設" },
+      { "year": 1792, "vassal": ["kerala"], "contested": ["sierra-leone"], "note": "マイソール戦争でマラバールを得て、トラヴァンコールなどを保護下に／フリータウンに解放奴隷の入植地" },
       { "year": 1795, "contested": ["cape"], "note": "ケープを占領（1814年に獲得）" },
       { "year": 1796, "contested": ["ceylon"], "note": "オランダからセイロンを奪う" },
+      { "year": 1797, "contested": ["trinidad"] },
+      { "year": 1799, "colony": ["x-tca"] },
       { "year": 1799, "vassal": ["karnataka"], "note": "マイソール戦争に勝つ" },
+      { "year": 1800, "contested": ["malta"], "note": "マルタを占領" },
       { "year": 1800, "vassal": ["telangana"], "note": "ハイデラバードを保護下に" },
       { "year": 1801, "colony": ["tamil"], "note": "カルナティックを併合" },
       { "year": 1802, "colony": ["trinidad"], "note": "アミアンの和約" },
+      { "year": 1803, "contested": ["guyana"], "note": "オランダ領ギアナを占領" },
       { "year": 1803, "vassal": ["hindustan"], "colony": ["orissa"], "note": "デリーを占領" },
       { "year": 1806, "colony": ["cape"] },
       { "year": 1808, "colony": ["sierra-leone"] },
+      { "year": 1809, "vassal": ["punjab-e"], "note": "サトレジ川の東のシク諸侯を保護下に" },
+      { "year": 1810, "colony": ["x-mus", "x-syc"], "note": "モーリシャス・セーシェルを占領" },
+      { "year": 1814, "contested": ["ionian"], "colony": ["x-iot"], "note": "コルフ島などを占領" },
       { "year": 1814, "colony": ["malta"], "note": "パリ条約でマルタを獲得" },
       { "year": 1815, "vassal": ["ionian"], "note": "イオニア諸島を保護国に" },
       { "year": 1815, "colony": ["ceylon", "guyana"] },
       { "year": 1816, "colony": ["gambia"], "note": "ガンビア川河口にバサースト（バンジュール）を建設" },
+      { "year": 1818, "vassal": ["gujarat"], "contested": ["oregon"], "note": "グジャラートの諸侯を保護下に／オレゴン地方をアメリカと共同で占有" },
       { "year": 1818, "vassal": ["rajputana"], "colony": ["maharashtra", "malwa", "gondwana"], "note": "マラーター戦争に勝つ" },
       { "year": 1819, "colony": ["singapore"], "note": "シンガポール" },
       { "year": 1820, "vassal": ["uae"], "note": "休戦協定（トルーシャル=オマーン）" },
+      { "year": 1821, "contested": ["bc"], "note": "ハドソン湾会社が太平洋岸に進出" },
       { "year": 1824, "colony": ["malacca"], "note": "マラッカを得る" },
       { "year": 1826, "colony": ["assam", "arakan", "tenasserim"], "note": "第1次ビルマ戦争" },
       { "year": 1829, "colony": ["australia"] },
       { "year": 1833, "colony": ["falklands"], "note": "フォークランドを占領" },
+      { "year": 1838, "colony": ["x-pcn"] },
       { "year": 1839, "contested": ["yemen-s"], "note": "アデンを占領" },
       { "year": 1840, "colony": ["new-zealand"], "note": "ワイタンギ条約" },
       { "year": 1843, "colony": ["sindh", "natal"], "note": "シンド・ナタールを併合" },
+      { "year": 1846, "remove": ["oregon"], "note": "オレゴン協定で北緯49度線を境に" },
+      { "year": 1849, "colony": ["punjab-e"] },
       { "year": 1849, "vassal": ["kashmir"], "colony": ["punjab", "nwfp"], "note": "シク戦争" },
       { "year": 1852, "colony": ["burma-l"], "note": "第2次ビルマ戦争" },
       { "year": 1856, "colony": ["hindustan"], "note": "アワドを併合" },
+      { "year": 1857, "colony": ["x-ioa"] },
+      { "year": 1858, "colony": ["andaman", "bc"], "note": "アンダマン諸島に流刑地／ブリティッシュ・コロンビア植民地" },
       { "year": 1858, "colony": ["bihar", "bengal-w", "bengal-e"], "note": "インドを直接統治" },
       { "year": 1861, "vassal": ["bahrain"] },
       { "year": 1862, "colony": ["belize"], "note": "英領ホンジュラス" },
       { "year": 1864, "remove": ["ionian"], "note": "イオニア諸島をギリシアへ" },
       { "year": 1868, "colony": ["lesotho"], "note": "バストランド" },
+      { "year": 1871, "remove": ["bc"] },
+      { "year": 1874, "colony": ["x-fji"] },
       { "year": 1874, "vassal": ["malaya"], "colony": ["gold-coast"], "note": "黄金海岸・マレー半島" },
       { "year": 1878, "vassal": ["cyprus"], "note": "キプロスを統治" },
       { "year": 1882, "vassal": ["egypt"], "note": "エジプトを占領" },
       { "year": 1884, "colony": ["somaliland"], "note": "ソマリランド" },
       { "year": 1885, "colony": ["nigeria-s"], "note": "ニジェール川下流" },
       { "year": 1886, "vassal": ["shan"], "colony": ["burma-u"], "note": "第3次ビルマ戦争でビルマを併合" },
+      { "year": 1887, "vassal": ["maldives"] },
+      { "year": 1887, "contested": ["x-vut"], "note": "フランスと共同で管理（1906年から共同統治）" },
+      { "year": 1888, "colony": ["x-cok"] },
       { "year": 1888, "vassal": ["brunei", "sarawak", "sabah"], "note": "北ボルネオ" },
       { "year": 1889, "colony": ["zimbabwe", "zambia", "malawi", "botswana"], "note": "ローデシアなど" },
       { "year": 1890, "vassal": ["zanzibar"] },
+      { "year": 1892, "colony": ["x-kir", "x-tuv"] },
+      { "year": 1893, "colony": ["x-slb"] },
       { "year": 1895, "colony": ["kenya", "uganda"], "note": "東アフリカ" },
       { "year": 1898, "vassal": ["sudan", "kordofan"], "note": "ファショダ事件（翌年スーダンを共同統治）" },
+      { "year": 1899, "vassal": ["sudan-s"], "note": "イギリス・エジプト共同統治" },
       { "year": 1899, "vassal": ["kuwait"], "note": "クウェートを保護下に" },
+      { "year": 1900, "vassal": ["x-ton"], "colony": ["x-niu"] },
       { "year": 1900, "colony": ["nigeria-n", "bornu"] },
       { "year": 1902, "colony": ["transvaal"], "note": "南アフリカ戦争" },
       { "year": 1903, "colony": ["eswatini"] },
+      { "year": 1909, "colony": ["x-atc"] },
+      { "year": 1914, "colony": ["x-nru", "x-wsm"], "note": "ドイツ領を占領（オーストラリア・ニュージーランドが統治）" },
       { "year": 1914, "vassal": ["egypt"], "colony": ["cyprus"], "note": "エジプトを保護国化" },
       { "year": 1916, "vassal": ["qatar"] },
       { "year": 1917, "contested": ["palestine", "iraq-c", "iraq-s"], "note": "第一次世界大戦" },
+      { "year": 1918, "contested": ["syria", "lebanon", "jordan", "hatay"], "note": "オスマン帝国からシリアなどを占領" },
       { "year": 1918, "contested": ["iraq-n"] },
+      { "year": 1919, "colony": ["new-guinea-e"], "note": "ドイツ領ニューギニアをオーストラリアが委任統治" },
       { "year": 1919, "colony": ["tanganyika"], "note": "ドイツの旧植民地" },
+      { "year": 1920, "remove": ["syria", "lebanon", "hatay"], "note": "フランスの委任統治に" },
       { "year": 1920, "vassal": ["palestine", "jordan"], "note": "委任統治" },
       { "year": 1922, "remove": ["ireland", "egypt"], "note": "アイルランド自由国・エジプトの独立" },
       { "year": 1937, "colony": ["yemen-s"], "note": "アデンを直轄植民地に" },
+      { "year": 1941, "contested": ["somalia"], "note": "イタリア領ソマリランドを占領" },
+      { "year": 1943, "contested": ["tripolitania", "cyrenaica"], "note": "リビアを占領（軍政）" },
       { "year": 1946, "colony": ["sarawak", "sabah"] },
       { "year": 1947, "remove": ["punjab-e", "hindustan", "rajputana", "gujarat", "malwa", "bengal-w", "bihar", "orissa", "gondwana", "maharashtra", "andhra", "karnataka", "kerala", "tamil", "assam", "andaman", "punjab", "sindh", "nwfp", "baluchistan", "bengal-e", "kashmir", "telangana", "karnataka", "rajputana"], "note": "インド・パキスタンの独立" },
       { "year": 1948, "remove": ["burma-u", "burma-l", "arakan", "tenasserim", "shan", "ceylon", "palestine"], "note": "ビルマ・セイロンの独立、パレスチナから撤退" },
+      { "year": 1950, "remove": ["somalia"] },
+      { "year": 1951, "remove": ["tripolitania", "cyrenaica"] },
+      { "year": 1956, "remove": ["sudan-s"] },
       { "year": 1956, "remove": ["sudan", "kordofan"] },
       { "year": 1957, "remove": ["gold-coast", "malaya", "malacca", "penang"] },
       { "year": 1960, "remove": ["nigeria-n", "nigeria-s", "bornu", "cyprus", "somaliland"] },
       { "year": 1961, "remove": ["kuwait", "sierra-leone", "tanganyika"] },
+      { "year": 1962, "remove": ["x-wsm"] },
       { "year": 1962, "remove": ["uganda", "jamaica", "trinidad"] },
       { "year": 1963, "remove": ["kenya", "zanzibar", "singapore", "sarawak", "sabah"] },
       { "year": 1964, "remove": ["zambia", "malawi", "malta"] },
+      { "year": 1965, "remove": ["maldives"] },
       { "year": 1966, "remove": ["botswana", "lesotho", "guyana"] },
       { "year": 1967, "remove": ["yemen-s"] },
+      { "year": 1968, "remove": ["x-mus", "x-nru"] },
       { "year": 1968, "remove": ["eswatini"] },
+      { "year": 1970, "remove": ["x-fji", "x-ton"] },
       { "year": 1971, "remove": ["bahrain", "qatar", "uae"] },
       { "year": 1973, "remove": ["bahamas"] },
+      { "year": 1975, "remove": ["new-guinea-e"] },
+      { "year": 1976, "remove": ["x-syc"] },
+      { "year": 1978, "remove": ["x-tuv", "x-slb"] },
+      { "year": 1979, "remove": ["x-kir"] },
+      { "year": 1980, "remove": ["x-vut"] },
       { "year": 1980, "remove": ["zimbabwe"] },
       { "year": 1981, "remove": ["belize"] }
     ],
@@ -2627,7 +2823,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ヘンリ7世が開いたイングランドの王朝。宗教改革を行い、エリザベス1世のもとで繁栄した。"
+    "desc": "ヘンリ7世が開いたイングランドの王朝。宗教改革を行い、エリザベス1世のもとで繁栄した。",
+    "color": "#8A5AA8"
   },
   {
     "id": "stuart",
@@ -2642,7 +2839,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ジェームズ1世が開いた王朝。ピューリタン革命・名誉革命が起きた。"
+    "desc": "ジェームズ1世が開いた王朝。ピューリタン革命・名誉革命が起きた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "commonwealth",
@@ -2655,7 +2853,8 @@
     "importance": 3,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "hanover",
@@ -2667,7 +2866,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ジョージ1世が開いた王朝。責任内閣制が発達し、ヴィクトリア女王のもとで繁栄した。"
+    "desc": "ジョージ1世が開いた王朝。責任内閣制が発達し、ヴィクトリア女王のもとで繁栄した。",
+    "color": "#8A5AA8"
   },
   {
     "id": "saxe-coburg",
@@ -2679,7 +2879,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "エドワード7世から始まったイギリスの王家。第一次世界大戦中にウィンザーと改称した。"
+    "desc": "エドワード7世から始まったイギリスの王家。第一次世界大戦中にウィンザーと改称した。",
+    "color": "#8A5AA8"
   },
   {
     "id": "windsor",
@@ -2691,7 +2892,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "1917年からのイギリスの王家の名前。"
+    "desc": "1917年からのイギリスの王家の名前。",
+    "color": "#8A5AA8"
   },
   {
     "id": "scotland-k",
@@ -2708,7 +2910,8 @@
     "importance": 1,
     "uncertain": true,
     "memo": "アルバ王国の成立を843年とする",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "ireland-r",
@@ -2729,7 +2932,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "イギリスから分かれた国。1922年にアイルランド自由国、1937年にエール、1949年に共和国となった。"
+    "desc": "イギリスから分かれた国。1922年にアイルランド自由国、1937年にエール、1949年に共和国となった。",
+    "color": "#8A5AA8"
   },
   {
     "id": "france",
@@ -2765,45 +2969,70 @@
       { "year": 1682, "contested": ["louisiana", "arkansas-la"], "note": "ラ=サールがルイジアナと命名" },
       { "year": 1697, "colony": ["haiti"], "note": "ライスワイク条約でサン=ドマング（イスパニョーラ島西部）を得る" },
       { "year": 1713, "remove": ["acadia"], "note": "ユトレヒト条約" },
+      { "year": 1715, "colony": ["x-mus"], "note": "フランス島（モーリシャス）" },
+      { "year": 1756, "colony": ["x-syc"] },
       { "year": 1763, "remove": ["laurentia", "louisiana", "arkansas-la"], "note": "パリ条約でカナダ・ルイジアナを失う" },
       { "year": 1766, "add": ["lorraine"], "note": "ロレーヌを併合" },
       { "year": 1768, "add": ["corsica"], "note": "ジェノヴァからコルシカを買う" },
       { "year": 1791, "add": ["avignon"] },
       { "year": 1792, "add": ["savoy", "nice"] },
       { "year": 1795, "add": ["belgium", "liege", "luxembourg"], "vassal": ["netherlands"], "note": "南ネーデルラントを併合、オランダはバタヴィア共和国に" },
+      { "year": 1797, "vassal": ["liguria"], "note": "リグリア共和国" },
       { "year": 1797, "add": ["palatinate", "ionian"], "vassal": ["lombardy", "emilia"], "note": "ライン左岸を占領、イタリアにチザルピナ共和国" },
+      { "year": 1798, "contested": ["malta"], "note": "ナポレオンがマルタを占領" },
       { "year": 1798, "vassal": ["swiss"], "note": "ヘルヴェティア共和国" },
+      { "year": 1800, "remove": ["malta"] },
       { "year": 1800, "colony": ["louisiana", "arkansas-la"], "note": "スペインからルイジアナを取り戻す" },
       { "year": 1802, "add": ["piedmont"] },
       { "year": 1803, "remove": ["louisiana", "arkansas-la"], "note": "アメリカにルイジアナを売る" },
       { "year": 1804, "remove": ["haiti"], "note": "ハイチが独立" },
+      { "year": 1805, "vassal": ["dalmatia"], "note": "プレスブルクの和約でダルマチアを得る（イタリア王国）" },
       { "year": 1805, "add": ["liguria"], "vassal": ["venetia"], "note": "イタリア王国（ナポレオンが王）" },
       { "year": 1806, "vassal": ["naples"], "note": "ナポリ王国（兄ジョゼフが王）" },
       { "year": 1809, "add": ["tuscany", "papal", "slovenia", "dalmatia", "croatia"], "note": "教皇領・イリリア州を併合" },
+      { "year": 1810, "remove": ["x-mus", "x-syc"], "note": "イギリスに奪われる" },
       { "year": 1810, "add": ["netherlands"], "note": "オランダを併合" },
-      { "year": 1813, "remove": ["netherlands", "lombardy", "emilia", "venetia", "naples"], "note": "ライプツィヒの戦いに敗れる" },
+      { "year": 1813, "remove": ["netherlands", "lombardy", "emilia", "venetia"], "note": "ライプツィヒの戦いに敗れる" },
       { "year": 1814, "remove": ["belgium", "liege", "luxembourg", "palatinate", "savoy", "nice", "piedmont", "liguria", "tuscany", "papal", "slovenia", "dalmatia", "croatia", "swiss", "ionian"], "note": "ナポレオン退位" },
+      { "year": 1815, "remove": ["naples"], "note": "ナポリ王ミュラが退位" },
       { "year": 1830, "contested": ["algeria"], "note": "アルジェリア出兵" },
+      { "year": 1842, "colony": ["x-pyf"] },
+      { "year": 1843, "contested": ["gabon"], "note": "リーブルヴィルに拠点を置く" },
       { "year": 1847, "colony": ["algeria"], "note": "アブド=アルカーディルが降伏" },
+      { "year": 1853, "colony": ["x-ncl"] },
       { "year": 1854, "colony": ["senegambia"], "note": "セネガル植民地を拡大", "uncertain": true },
+      { "year": 1858, "colony": ["x-clp"] },
       { "year": 1860, "add": ["savoy", "nice"], "note": "イタリア統一戦争の代償" },
       { "year": 1862, "colony": ["cochinchina"], "note": "サイゴン条約（1867年にコーチシナ西部も）" },
       { "year": 1863, "vassal": ["cambodia"], "note": "カンボジアを保護国化" },
       { "year": 1871, "remove": ["alsace", "moselle"], "note": "ドイツに割譲" },
+      { "year": 1880, "contested": ["congo-r"], "note": "ブラザがコンゴ川流域に進出" },
       { "year": 1881, "vassal": ["tunisia"], "note": "チュニジアを保護国化" },
+      { "year": 1884, "vassal": ["champa"], "contested": ["djibouti"], "note": "オボックを保護下に／ユエ条約でアンナンを保護国に" },
       { "year": 1884, "vassal": ["tonkin", "annam-n", "annam"], "note": "ベトナムを保護国化（清仏戦争）" },
+      { "year": 1886, "vassal": ["comoros"] },
+      { "year": 1887, "colony": ["x-wlf"] },
       { "year": 1893, "vassal": ["laos"], "note": "ラオスを保護国化" },
+      { "year": 1894, "contested": ["car", "mali"], "note": "ウバンギ=シャリ／トンブクトゥを占領" },
       { "year": 1895, "colony": ["mali", "guinea", "ivory-coast", "dahomey", "burkina", "niger", "mauritania"], "note": "フランス領西アフリカ" },
       { "year": 1896, "colony": ["madagascar", "djibouti"] },
       { "year": 1900, "colony": ["sahara-dz", "chad"] },
       { "year": 1910, "colony": ["gabon", "congo-r", "car"], "note": "フランス領赤道アフリカ" },
+      { "year": 1912, "colony": ["comoros"] },
       { "year": 1912, "vassal": ["morocco"], "note": "モロッコを保護国化" },
       { "year": 1918, "add": ["alsace", "moselle"], "note": "アルザス・ロレーヌを回復" },
+      { "year": 1919, "vassal": ["togo", "cameroon"], "note": "旧ドイツ領を委任統治（イギリスと分割）" },
+      { "year": 1920, "vassal": ["hatay"], "note": "シリアとともに委任統治" },
       { "year": 1920, "vassal": ["syria", "lebanon", "cameroon", "togo"], "note": "委任統治" },
+      { "year": 1939, "remove": ["hatay"], "note": "トルコに譲る" },
+      { "year": 1943, "contested": ["fezzan"], "note": "フェザーンを占領（軍政）" },
+      { "year": 1951, "remove": ["fezzan"] },
+      { "year": 1954, "remove": ["champa"] },
       { "year": 1954, "remove": ["tonkin", "annam-n", "annam", "cochinchina", "cambodia", "laos"], "note": "インドシナ戦争に敗れる" },
       { "year": 1956, "remove": ["morocco", "tunisia"] },
       { "year": 1960, "remove": ["senegambia", "mali", "guinea", "ivory-coast", "dahomey", "burkina", "niger", "mauritania", "madagascar", "chad", "gabon", "congo-r", "car", "cameroon", "togo"] },
       { "year": 1962, "remove": ["algeria", "sahara-dz"] },
+      { "year": 1975, "remove": ["comoros"] },
       { "year": 1977, "remove": ["djibouti"] }
     ],
     "desc": "16世紀にはイタリア戦争を戦い、17世紀のルイ14世のもとで絶対王政の最盛期を迎えた。",
@@ -2822,7 +3051,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "フィリップ6世が開いたフランスの王朝。百年戦争・イタリア戦争・ユグノー戦争の時代。"
+    "desc": "フィリップ6世が開いたフランスの王朝。百年戦争・イタリア戦争・ユグノー戦争の時代。",
+    "color": "#8A5AA8"
   },
   {
     "id": "bourbon",
@@ -2836,7 +3066,8 @@
     "uncertain": false,
     "memo": "1814〜30年は復古王政",
     "descVerified": false,
-    "desc": "アンリ4世が開いたフランスの王朝。ルイ14世のもとで絶対王政の全盛期をむかえた。"
+    "desc": "アンリ4世が開いたフランスの王朝。ルイ14世のもとで絶対王政の全盛期をむかえた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "first-republic",
@@ -2848,7 +3079,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "フランス革命で王政が廃止されて成立した共和政（1792〜1804年）。"
+    "desc": "フランス革命で王政が廃止されて成立した共和政（1792〜1804年）。",
+    "color": "#8A5AA8"
   },
   {
     "id": "first-empire",
@@ -2860,7 +3092,8 @@
     "uncertain": false,
     "memo": "1815年に百日天下",
     "descVerified": false,
-    "desc": "ナポレオン1世の帝政。"
+    "desc": "ナポレオン1世の帝政。",
+    "color": "#8A5AA8"
   },
   {
     "id": "july-monarchy",
@@ -2873,7 +3106,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "七月革命で即位したルイ=フィリップの王政。大資本家が政治を動かした。"
+    "desc": "七月革命で即位したルイ=フィリップの王政。大資本家が政治を動かした。",
+    "color": "#8A5AA8"
   },
   {
     "id": "second-republic",
@@ -2885,7 +3119,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "二月革命で成立した共和政。ルイ=ナポレオンが大統領となった。"
+    "desc": "二月革命で成立した共和政。ルイ=ナポレオンが大統領となった。",
+    "color": "#8A5AA8"
   },
   {
     "id": "second-empire",
@@ -2897,7 +3132,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ナポレオン3世の帝政。プロイセン=フランス戦争に敗れて倒れた。"
+    "desc": "ナポレオン3世の帝政。プロイセン=フランス戦争に敗れて倒れた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "third-republic",
@@ -2909,7 +3145,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "プロイセン=フランス戦争の敗北で成立した共和政。第二次世界大戦でドイツに降伏して終わった。"
+    "desc": "プロイセン=フランス戦争の敗北で成立した共和政。第二次世界大戦でドイツに降伏して終わった。",
+    "color": "#8A5AA8"
   },
   {
     "id": "vichy",
@@ -2921,7 +3158,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ドイツに降伏したのち、南フランスのヴィシーに置かれた政府。ペタンが首班となった。"
+    "desc": "ドイツに降伏したのち、南フランスのヴィシーに置かれた政府。ペタンが首班となった。",
+    "color": "#8A5AA8"
   },
   {
     "id": "fourth-republic",
@@ -2933,7 +3171,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "第二次世界大戦後のフランスの共和政。インドシナ戦争・アルジェリア戦争に苦しんだ。"
+    "desc": "第二次世界大戦後のフランスの共和政。インドシナ戦争・アルジェリア戦争に苦しんだ。",
+    "color": "#8A5AA8"
   },
   {
     "id": "fifth-republic",
@@ -2945,7 +3184,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ド=ゴールのもとで大統領の権限を強めて始まった共和政。"
+    "desc": "ド=ゴールのもとで大統領の権限を強めて始まった共和政。",
+    "color": "#8A5AA8"
   },
   {
     "id": "spain",
@@ -2955,20 +3195,25 @@
     "end": 2000,
     "color": "#D88FD0",
     "territory": [
+      { "year": 1479, "add": ["malta"], "note": "アラゴン王国の領地（シチリア王国の一部）" },
       { "year": 1479, "add": ["spain", "asturias", "castile-old", "aragon", "catalonia", "valencia", "baleares", "murcia", "andalusia", "sicily", "sardinia"], "note": "カスティリャとアラゴンが合わさる" },
       { "year": 1492, "add": ["granada"], "note": "グラナダを征服（レコンキスタの完了）" },
       { "year": 1500, "add": ["spain", "asturias", "castile-old", "navarre", "aragon", "catalonia", "valencia", "baleares", "murcia", "andalusia", "granada", "canaries", "sicily", "sardinia", "roussillon", "gibraltar"], "contested": ["santo-domingo", "haiti"], "note": "カトリック両王のもとで統一" },
+      { "year": 1502, "contested": ["naples"], "note": "ナポリをめぐってフランスと争う" },
       { "year": 1504, "add": ["naples"], "note": "ナポリ王国を得る" },
       { "year": 1509, "colony": ["jamaica"] },
       { "year": 1511, "colony": ["cuba", "puerto-rico"], "note": "キューバ・プエルトリコ" },
       { "year": 1516, "add": ["belgium", "netherlands", "luxembourg", "franche-comte", "artois"], "note": "カルロス1世（ブルゴーニュ公領を継承）" },
+      { "year": 1519, "colony": ["panama"], "note": "パナマ市を建設" },
       { "year": 1521, "colony": ["mexico"], "note": "アステカ王国を征服" },
       { "year": 1524, "colony": ["guatemala", "central-am", "costa-rica", "nicaragua", "salvador"], "uncertain": true },
+      { "year": 1530, "remove": ["malta"] },
       { "year": 1533, "colony": ["peru"], "note": "インカ帝国を征服" },
       { "year": 1535, "add": ["lombardy"], "note": "ミラノ公国を得る" },
       { "year": 1537, "colony": ["paraguay"], "note": "アスンシオンを建設" },
       { "year": 1538, "contested": ["venezuela"], "colony": ["colombia", "ecuador", "bolivia"], "note": "南アメリカ各地を征服", "uncertain": true },
       { "year": 1541, "colony": ["chile"], "note": "サンティアゴを建設" },
+      { "year": 1542, "remove": ["panama"] },
       { "year": 1546, "colony": ["yucatan"] },
       { "year": 1565, "contested": ["florida"], "note": "セントオーガスティン" },
       { "year": 1567, "colony": ["venezuela"], "note": "カラカスを建設" },
@@ -2976,28 +3221,39 @@
       { "year": 1580, "vassal": ["portugal"], "note": "ポルトガルを併合（同君連合）" },
       { "year": 1580, "colony": ["la-plata"], "note": "ブエノスアイレスを再建" },
       { "year": 1581, "contested": ["netherlands"], "note": "オランダが独立を宣言" },
+      { "year": 1592, "colony": ["trinidad"] },
       { "year": 1598, "contested": ["southwest"], "note": "ニューメキシコ" },
       { "year": 1600, "colony": ["mexico-n"], "note": "メキシコ北部の鉱山地帯", "uncertain": true },
       { "year": 1609, "remove": ["netherlands"], "note": "休戦条約（オランダの事実上の独立）" },
       { "year": 1640, "remove": ["portugal"], "note": "ポルトガルが独立を回復" },
       { "year": 1655, "remove": ["jamaica"] },
       { "year": 1659, "remove": ["artois", "roussillon"], "note": "ピレネー条約" },
+      { "year": 1668, "colony": ["x-gum", "x-mnp"] },
       { "year": 1678, "remove": ["franche-comte"], "note": "ナイメーヘン条約" },
       { "year": 1697, "remove": ["haiti"], "note": "サン=ドマングをフランスへ" },
       { "year": 1713, "remove": ["belgium", "luxembourg", "lombardy", "naples", "sardinia", "sicily", "gibraltar"], "note": "ユトレヒト条約・ラシュタット条約" },
       { "year": 1716, "contested": ["texas"], "note": "テキサスに伝道所", "uncertain": true },
+      { "year": 1726, "colony": ["uruguay"], "note": "モンテビデオを建設" },
       { "year": 1763, "colony": ["louisiana", "arkansas-la"], "remove": ["florida"], "note": "パリ条約" },
+      { "year": 1767, "contested": ["falklands"] },
       { "year": 1769, "contested": ["california"], "note": "サンディエゴを建設" },
+      { "year": 1778, "contested": ["eq-guinea"], "note": "ポルトガルからフェルナンド=ポー島などを得る" },
       { "year": 1783, "colony": ["florida"] },
+      { "year": 1797, "remove": ["trinidad"], "note": "イギリスに奪われる" },
       { "year": 1800, "remove": ["louisiana", "arkansas-la"] },
       { "year": 1808, "contested": ["spain", "asturias", "castile-old", "navarre", "aragon", "catalonia", "valencia", "baleares", "murcia", "andalusia", "granada"], "note": "ナポレオンの侵攻" },
       { "year": 1810, "contested": ["mexico", "colombia", "venezuela", "la-plata", "chile"], "note": "ラテンアメリカの独立運動" },
+      { "year": 1811, "remove": ["falklands"] },
       { "year": 1813, "add": ["spain", "asturias", "castile-old", "navarre", "aragon", "catalonia", "valencia", "baleares", "murcia", "andalusia", "granada"] },
+      { "year": 1814, "remove": ["uruguay"] },
       { "year": 1819, "remove": ["florida"], "note": "アダムズ=オニス条約" },
       { "year": 1821, "remove": ["mexico", "mexico-n", "yucatan", "guatemala", "central-am", "costa-rica", "nicaragua", "salvador", "texas", "california", "southwest", "peru", "colombia", "venezuela", "ecuador"], "note": "ラテンアメリカの独立" },
       { "year": 1825, "remove": ["bolivia", "chile", "la-plata", "paraguay"] },
       { "year": 1884, "contested": ["w-sahara"], "note": "西サハラ" },
+      { "year": 1885, "colony": ["x-plw", "x-fsm"] },
+      { "year": 1898, "remove": ["x-gum"], "note": "アメリカ=スペイン戦争" },
       { "year": 1898, "remove": ["cuba", "puerto-rico", "luzon", "visayas", "mindanao"], "note": "米西戦争" },
+      { "year": 1899, "remove": ["x-mnp", "x-plw", "x-fsm"], "note": "残りの南洋の島々をドイツに売る" },
       { "year": 1900, "colony": ["eq-guinea"], "note": "スペイン領ギニア（リオムニ・フェルナンドポー）" },
       { "year": 1936, "contested": ["spain", "asturias", "castile-old", "navarre", "aragon", "catalonia", "valencia", "baleares", "murcia", "andalusia", "granada"], "note": "スペイン内戦（〜1939年）" },
       { "year": 1939, "add": ["spain", "asturias", "castile-old", "navarre", "aragon", "catalonia", "valencia", "baleares", "murcia", "andalusia", "granada"] },
@@ -3020,7 +3276,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "カスティリャ女王イサベルとアラゴン王フェルナンドの夫婦による共同統治。"
+    "desc": "カスティリャ女王イサベルとアラゴン王フェルナンドの夫婦による共同統治。",
+    "color": "#8A5AA8"
   },
   {
     "id": "habsburg-spain",
@@ -3033,7 +3290,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "カルロス1世から始まったスペインの王朝。フェリペ2世のときに全盛期をむかえた。"
+    "desc": "カルロス1世から始まったスペインの王朝。フェリペ2世のときに全盛期をむかえた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "bourbon-spain",
@@ -3049,7 +3307,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "スペイン継承戦争ののちフェリペ5世が開いた王朝。1975年に王政が復活した。"
+    "desc": "スペイン継承戦争ののちフェリペ5世が開いた王朝。1975年に王政が復活した。",
+    "color": "#8A5AA8"
   },
   {
     "id": "spanish-republic",
@@ -3064,7 +3323,8 @@
     "uncertain": false,
     "memo": "1873〜74年が第一共和政、1931〜39年が第二共和政",
     "descVerified": false,
-    "desc": "スペインの共和政（1873〜74年の第一共和政と、1931〜39年の第二共和政）。"
+    "desc": "スペインの共和政（1873〜74年の第一共和政と、1931〜39年の第二共和政）。",
+    "color": "#8A5AA8"
   },
   {
     "id": "franco",
@@ -3076,7 +3336,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "スペイン内戦に勝ったフランコの独裁政権。"
+    "desc": "スペイン内戦に勝ったフランコの独裁政権。",
+    "color": "#8A5AA8"
   },
   {
     "id": "portugal",
@@ -3089,16 +3350,22 @@
       { "year": 1143, "contested": ["portugal"], "note": "王国として認められる" },
       { "year": 1147, "add": ["portugal"], "note": "リスボンを奪回" },
       { "year": 1420, "add": ["azores"], "note": "マデイラ・アゾレス諸島に進出" },
+      { "year": 1462, "colony": ["x-cpv"], "note": "カーボヴェルデ諸島に入植" },
       { "year": 1485, "colony": ["sao-tome"], "note": "サントメ島の植民" },
       { "year": 1500, "add": ["portugal", "azores"], "contested": ["brazil-ne", "bahia"], "note": "カブラルがブラジルに漂着" },
+      { "year": 1505, "contested": ["kenya", "zanzibar", "tanganyika"], "note": "東アフリカ沿岸の港を支配" },
       { "year": 1505, "contested": ["mozambique"], "note": "東アフリカに拠点", "uncertain": true },
       { "year": 1507, "contested": ["oman"], "note": "ホルムズ・マスカットに拠点" },
       { "year": 1510, "colony": ["goa"], "note": "ゴアを占領" },
       { "year": 1511, "colony": ["malacca"], "note": "マラッカを占領" },
+      { "year": 1521, "contested": ["bahrain"] },
       { "year": 1522, "contested": ["moluccas"], "note": "モルッカ諸島に要塞", "uncertain": true },
       { "year": 1532, "colony": ["rio", "brazil-ne", "bahia"], "note": "ブラジルに植民（1549年サルヴァドール）" },
+      { "year": 1558, "contested": ["maldives"] },
+      { "year": 1573, "remove": ["maldives"] },
       { "year": 1575, "contested": ["angola"], "note": "ルアンダを建設" },
       { "year": 1597, "contested": ["ceylon"], "note": "セイロン沿岸", "uncertain": true },
+      { "year": 1602, "remove": ["bahrain"] },
       { "year": 1616, "colony": ["maranhao", "para"], "note": "ベレンを建設" },
       { "year": 1640, "add": ["portugal"], "note": "スペインから独立を回復" },
       { "year": 1641, "remove": ["malacca"], "note": "オランダがマラッカを奪う" },
@@ -3106,13 +3373,17 @@
       { "year": 1654, "colony": ["brazil-ne"], "note": "オランダ人をブラジルから追い出す" },
       { "year": 1658, "remove": ["ceylon"] },
       { "year": 1693, "colony": ["minas"], "note": "ミナスジェライスで金を発見", "uncertain": true },
+      { "year": 1698, "remove": ["kenya", "zanzibar", "tanganyika"], "note": "オマーンにモンバサを奪われる" },
       { "year": 1702, "contested": ["timor-e"], "note": "ティモール", "uncertain": true },
       { "year": 1750, "colony": ["brazil-cw", "amazonas", "brazil-s"], "note": "マドリード条約" },
+      { "year": 1817, "contested": ["uruguay"], "note": "シスプラティーナとして併合" },
+      { "year": 1822, "remove": ["uruguay"] },
       { "year": 1822, "remove": ["brazil-ne", "bahia", "rio", "maranhao", "para", "minas", "brazil-cw", "amazonas", "brazil-s"], "note": "ブラジルが独立" },
       { "year": 1879, "colony": ["guinea-bissau"], "note": "ポルトガル領ギニア" },
       { "year": 1885, "colony": ["angola", "mozambique"], "note": "ベルリン会議後に内陸へ広げる", "uncertain": true },
       { "year": 1885, "colony": ["kongo-ao"], "note": "ベルリン会議でカビンダ・アンゴラ北部を確保" },
       { "year": 1961, "remove": ["goa"] },
+      { "year": 1975, "remove": ["x-cpv"] },
       { "year": 1975, "remove": ["angola", "mozambique", "timor-e"] }
     ],
     "desc": "アジア航路を開き、ブラジルを植民地とした。1580〜1640年はスペインと同君連合。",
@@ -3131,7 +3402,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ポルトガルの王朝。航海王子エンリケの時代から海外進出を進めた。"
+    "desc": "ポルトガルの王朝。航海王子エンリケの時代から海外進出を進めた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "braganza",
@@ -3143,7 +3415,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ポルトガルがスペインから独立したのちの王朝。1910年の革命で倒れた。"
+    "desc": "ポルトガルがスペインから独立したのちの王朝。1910年の革命で倒れた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "portuguese-republic",
@@ -3155,7 +3428,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "1910年の革命で成立したポルトガルの共和政。サラザールの独裁が長く続いた。"
+    "desc": "1910年の革命で成立したポルトガルの共和政。サラザールの独裁が長く続いた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "netherlands",
@@ -3175,6 +3449,7 @@
       { "year": 1581, "contested": ["netherlands"], "note": "独立を宣言" },
       { "year": 1605, "contested": ["moluccas"], "note": "アンボイナを占領" },
       { "year": 1609, "add": ["netherlands"], "note": "スペインと休戦（事実上の独立）" },
+      { "year": 1616, "colony": ["guyana"], "note": "エセキボなどに植民地" },
       { "year": 1619, "contested": ["java-w"], "note": "バタヴィアを建設" },
       { "year": 1624, "contested": ["taiwan", "new-york"], "note": "台湾南部・ニューネーデルラント" },
       { "year": 1630, "contested": ["brazil-ne"], "note": "ブラジル北東部を占領" },
@@ -3185,17 +3460,21 @@
       { "year": 1662, "remove": ["taiwan"] },
       { "year": 1664, "remove": ["new-york"], "note": "イギリスに奪われる" },
       { "year": 1667, "colony": ["suriname"], "note": "スリナムを得る" },
+      { "year": 1669, "contested": ["sulawesi"], "note": "マカッサルを攻略（ボンガヤ条約）" },
       { "year": 1755, "vassal": ["java-c", "java-e"], "note": "マタラム王国を分割して従える" },
       { "year": 1796, "remove": ["ceylon"] },
       { "year": 1800, "colony": ["java-w", "java-c", "java-e", "moluccas"], "note": "オランダ領東インド" },
       { "year": 1806, "remove": ["cape"] },
+      { "year": 1814, "contested": ["belgium", "liege", "luxembourg"], "note": "南ネーデルラントを治める（翌年ネーデルラント連合王国）" },
+      { "year": 1814, "remove": ["guyana"], "note": "イギリスに譲る" },
       { "year": 1815, "add": ["belgium", "liege", "luxembourg"], "note": "ネーデルラント王国" },
-      { "year": 1830, "remove": ["belgium", "liege"], "note": "ベルギーの独立" },
       { "year": 1824, "remove": ["malacca"], "note": "イギリス=オランダ協定" },
+      { "year": 1828, "contested": ["papua-w"], "note": "ニューギニア西部の領有を宣言" },
+      { "year": 1830, "remove": ["belgium", "liege"], "note": "ベルギーの独立" },
       { "year": 1850, "contested": ["sumatra", "sulawesi", "kalimantan", "lesser-sunda"], "note": "ジャワ以外の島々へ支配を広げる", "uncertain": true },
-      { "year": 1910, "colony": ["sumatra", "sulawesi", "kalimantan", "lesser-sunda"], "uncertain": true },
       { "year": 1873, "contested": ["aceh"], "note": "アチェ戦争" },
       { "year": 1903, "colony": ["aceh", "papua-w"], "note": "アチェを征服" },
+      { "year": 1910, "colony": ["sumatra", "sulawesi", "kalimantan", "lesser-sunda"], "uncertain": true },
       { "year": 1949, "remove": ["java-w", "java-c", "java-e", "moluccas", "sumatra", "sulawesi", "kalimantan", "lesser-sunda", "aceh"], "note": "インドネシアの独立" },
       { "year": 1962, "remove": ["papua-w"] },
       { "year": 1975, "remove": ["suriname"] }
@@ -3244,7 +3523,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ネーデルラントとの同君連合が解けて単独の君主をいただいたルクセンブルク大公国。"
+    "desc": "ネーデルラントとの同君連合が解けて単独の君主をいただいたルクセンブルク大公国。",
+    "color": "#C85A5A"
   },
   {
     "id": "swiss",
@@ -3304,7 +3584,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9DB83A"
   },
   {
     "id": "german-confed",
@@ -3337,7 +3618,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ドイツ南部のバイエルンなどの国々。1871年にドイツ帝国に加わった。"
+    "desc": "ドイツ南部のバイエルンなどの国々。1871年にドイツ帝国に加わった。",
+    "color": "#9A4F8A"
   },
   {
     "id": "austria",
@@ -3364,6 +3646,7 @@
       { "year": 1526, "add": ["bohemia", "silesia", "slovakia", "hungary-w"], "contested": ["croatia"], "note": "モハーチの戦いの後、ベーメンとハンガリーの王位を継ぐ" },
       { "year": 1527, "add": ["croatia"] },
       { "year": 1699, "add": ["hungary-c", "hungary-ne", "slavonia", "transylvania", "vojvodina", "transcarpathia"], "note": "カルロヴィッツ条約" },
+      { "year": 1713, "contested": ["lombardy", "naples", "sardinia"], "note": "ユトレヒト条約（翌年ラシュタット条約）でスペインから得る" },
       { "year": 1714, "add": ["belgium", "luxembourg", "lombardy", "naples", "sardinia"], "note": "ラシュタット条約" },
       { "year": 1718, "add": ["banat"], "contested": ["serbia"], "note": "パッサロヴィッツ条約" },
       { "year": 1720, "add": ["sicily"], "remove": ["sardinia"], "note": "サルデーニャとシチリアを交換" },
@@ -3376,6 +3659,7 @@
       { "year": 1797, "add": ["venetia", "dalmatia"], "remove": ["belgium", "luxembourg", "lombardy"], "note": "カンポ=フォルミオ条約" },
       { "year": 1805, "remove": ["venetia", "dalmatia"], "note": "プレスブルク条約" },
       { "year": 1809, "remove": ["slovenia", "croatia", "galicia-w", "poland-lu"], "note": "シェーンブルン条約" },
+      { "year": 1813, "contested": ["lombardy", "venetia"], "note": "北イタリアを取り戻す" },
       { "year": 1814, "add": ["slovenia", "croatia", "dalmatia", "venetia", "lombardy", "galicia-w"], "note": "ウィーン会議（ロンバルディア・ヴェネツィアなど）" },
       { "year": 1859, "remove": ["lombardy"], "note": "イタリア統一戦争" },
       { "year": 1866, "remove": ["venetia"], "note": "プロイセン=オーストリア戦争" },
@@ -3461,15 +3745,25 @@
     "territory": [
       { "year": 1871, "add": ["brandenburg", "pomerania", "kaliningrad", "warmia", "silesia", "pomerelia", "poland-gp", "neumark", "brandenburg", "mecklenburg", "schleswig", "lower-saxony", "westphalia", "palatinate", "hesse", "saxony", "thuringia", "bavaria", "swabia", "alsace", "moselle"], "note": "ドイツ帝国の成立" },
       { "year": 1884, "colony": ["namibia", "togo", "cameroon"], "note": "アフリカに植民地" },
+      { "year": 1885, "colony": ["x-mhl"] },
       { "year": 1885, "colony": ["tanganyika", "rwanda-burundi", "burundi", "new-guinea-e"], "note": "ドイツ領東アフリカなど" },
+      { "year": 1888, "colony": ["x-nru"] },
+      { "year": 1899, "colony": ["x-mnp", "x-plw", "x-fsm"], "note": "スペインから南洋の島々を買う" },
+      { "year": 1900, "colony": ["x-wsm"] },
+      { "year": 1914, "remove": ["x-mhl", "x-nru", "x-mnp", "x-plw", "x-fsm", "x-wsm"], "note": "第一次世界大戦で失う" },
       { "year": 1919, "remove": ["alsace", "moselle", "poland-gp", "pomerelia", "namibia", "togo", "cameroon", "tanganyika", "rwanda-burundi", "burundi", "new-guinea-e"], "note": "ヴェルサイユ条約" },
       { "year": 1938, "add": ["austria", "bohemia"], "note": "オーストリアを併合、ズデーテン地方を併合（翌年ベーメン・メーレンを保護領に）" },
       { "year": 1939, "add": ["poland-gp", "pomerelia"], "vassal": ["slovakia"], "contested": ["poland-mz", "poland-lu", "galicia-w"], "note": "ポーランドに侵攻" },
       { "year": 1940, "contested": ["netherlands", "belgium", "liege", "luxembourg", "denmark", "norway", "france", "normandy", "brittany", "anjou", "poitou", "guyenne", "languedoc", "provence", "dauphine", "burgundy", "champagne", "auvergne", "alsace", "moselle"], "note": "西部戦線" },
-      { "year": 1941, "contested": ["serbia", "greece-s", "greece-w", "greece-c", "peloponnese", "macedonia-gr", "belarus", "ukraine-rb", "ukraine-lb", "lithuania", "latgale", "livonia", "courland", "estonia"], "note": "バルカン・独ソ戦" },
-      { "year": 1942, "contested": ["smolensk", "chernozem", "sloboda", "zaporozhia", "pontic", "crimea", "kuban"] },
+      { "year": 1941, "contested": ["galicia-e", "volhynia", "podolia", "smolensk", "novgorod", "sloboda", "zaporozhia", "crimea", "chernozem"], "note": "独ソ戦でソ連の西部を占領（モスクワ・レニングラードの手前まで）" },
+      { "year": 1941, "contested": ["serbia", "greece-s", "greece-w", "greece-c", "peloponnese", "macedonia-gr", "belarus", "belarus-w", "ukraine-rb", "ukraine-lb", "lithuania", "vilnius", "latgale", "livonia", "courland", "estonia"], "note": "バルカン・独ソ戦" },
+      { "year": 1942, "contested": ["don"], "note": "南ロシアに進む（スターリングラードの戦い）" },
+      { "year": 1942, "contested": ["kuban"] },
+      { "year": 1943, "remove": ["don", "ukraine-lb", "zaporozhia"], "note": "スターリングラード・クルスクで敗れ、ソ連軍が反攻" },
       { "year": 1943, "remove": ["smolensk", "chernozem", "sloboda", "kuban"] },
-      { "year": 1944, "remove": ["belarus", "ukraine-rb", "ukraine-lb", "zaporozhia", "pontic", "crimea", "france", "normandy", "brittany", "anjou", "poitou", "guyenne", "languedoc", "provence", "dauphine", "burgundy", "champagne", "auvergne", "alsace", "moselle", "belgium", "liege", "greece-s", "greece-w", "greece-c", "peloponnese", "macedonia-gr", "serbia", "lithuania", "latgale", "livonia", "courland", "estonia", "poland-lu", "galicia-w"] }
+      { "year": 1944, "remove": ["galicia-e", "volhynia", "podolia", "novgorod", "luxembourg"], "note": "ソ連軍がポーランドの手前まで進む" },
+      { "year": 1944, "remove": ["belarus", "belarus-w", "ukraine-rb", "ukraine-lb", "zaporozhia", "pontic", "crimea", "france", "normandy", "brittany", "anjou", "poitou", "guyenne", "languedoc", "provence", "dauphine", "burgundy", "champagne", "auvergne", "alsace", "moselle", "belgium", "liege", "greece-s", "greece-w", "greece-c", "peloponnese", "macedonia-gr", "serbia", "lithuania", "vilnius", "latgale", "livonia", "estonia", "poland-lu"] },
+      { "year": 1945, "remove": ["netherlands", "denmark", "norway", "courland"], "note": "降伏して、占領していた地域を失う" }
     ],
     "desc": "プロイセン王ヴィルヘルム1世が皇帝となって成立。第一次世界大戦後に共和国となり、1933年にヒトラーのナチ党が政権をにぎった。",
     "importance": 3,
@@ -3526,6 +3820,7 @@
     "territory": [
       { "year": 1918, "add": ["hungary-w", "hungary-c", "hungary-ne", "slovakia", "transylvania", "vojvodina", "banat"], "contested": ["transcarpathia"], "note": "オーストリアから独立" },
       { "year": 1920, "remove": ["slovakia", "transylvania", "vojvodina", "banat", "transcarpathia"], "note": "トリアノン条約で領土を大きく失う" },
+      { "year": 1939, "add": ["transcarpathia"], "note": "チェコスロヴァキア解体のとき、カルパト=ウクライナを併合" },
       { "year": 1940, "contested": ["transylvania"], "note": "北トランシルヴァニアを得る（1944年まで）" },
       { "year": 1944, "remove": ["transylvania"] }
     ],
@@ -3582,7 +3877,7 @@
       { "year": 1466, "add": ["pomerelia", "warmia"], "vassal": ["kaliningrad"], "note": "第2次トルンの和約で西プロイセンを得る" },
       { "year": 1500, "add": ["poland-gp", "poland-mz", "poland-lu", "galicia-w", "galicia-e", "pomerelia", "podolia"], "vassal": ["warmia", "kaliningrad"] },
       { "year": 1561, "add": ["livonia"], "vassal": ["courland"], "note": "リヴォニアを得る" },
-      { "year": 1569, "add": ["lithuania", "belarus", "ukraine-rb", "ukraine-lb", "volhynia", "podolia", "latgale"], "note": "ルブリン合同" },
+      { "year": 1569, "add": ["lithuania", "vilnius", "belarus", "belarus-w", "ukraine-rb", "ukraine-lb", "volhynia", "podolia", "latgale"], "note": "ルブリン合同" },
       { "year": 1618, "add": ["smolensk"], "note": "デウリノ休戦条約" },
       { "year": 1629, "remove": ["livonia"], "note": "スウェーデンにリヴォニアを奪われる" },
       { "year": 1657, "remove": ["kaliningrad", "warmia"] },
@@ -3591,10 +3886,16 @@
       { "year": 1699, "add": ["podolia"], "note": "カルロヴィッツ条約" },
       { "year": 1772, "remove": ["pomerelia", "galicia-w", "galicia-e", "latgale"], "note": "第1回ポーランド分割" },
       { "year": 1793, "remove": ["poland-gp", "ukraine-rb", "podolia", "belarus"], "note": "第2回ポーランド分割" },
-      { "year": 1795, "remove": ["poland-mz", "poland-lu", "lithuania", "volhynia", "courland"], "note": "第3回ポーランド分割" },
-      { "year": 1918, "add": ["poland-gp", "poland-mz", "poland-lu", "galicia-w", "galicia-e", "volhynia"], "note": "独立回復" },
+      { "year": 1795, "remove": ["belarus-w"] },
+      { "year": 1795, "remove": ["poland-mz", "poland-lu", "lithuania", "vilnius", "volhynia", "courland"], "note": "第3回ポーランド分割" },
+      { "year": 1918, "contested": ["galicia-e"], "note": "東ガリツィアをめぐって西ウクライナ人民共和国と戦う" },
+      { "year": 1918, "add": ["poland-gp", "poland-mz", "poland-lu", "galicia-w"], "note": "独立回復" },
+      { "year": 1919, "add": ["galicia-e"], "contested": ["volhynia", "belarus-w", "vilnius"], "note": "ソヴィエト=ロシアと戦う（ポーランド=ソヴィエト戦争、1919〜21年）" },
       { "year": 1919, "add": ["pomerelia"] },
-      { "year": 1939, "remove": ["poland-gp", "poland-mz", "poland-lu", "galicia-w", "galicia-e", "volhynia", "pomerelia", "belarus"], "note": "ドイツとソ連が分割" },
+      { "year": 1921, "add": ["volhynia", "belarus-w"], "note": "リガ条約で東の国境が決まり、西ベラルーシ・西ウクライナを得る" },
+      { "year": 1922, "add": ["vilnius"], "note": "ヴィリニュス（ヴィルノ）地方を併合" },
+      { "year": 1939, "remove": ["vilnius"] },
+      { "year": 1939, "remove": ["poland-gp", "poland-mz", "poland-lu", "galicia-w", "galicia-e", "volhynia", "pomerelia", "belarus", "belarus-w"], "note": "ドイツとソ連が分割" },
       { "year": 1945, "add": ["poland-gp", "poland-mz", "poland-lu", "galicia-w", "pomerelia", "pomerania", "warmia", "silesia", "neumark"], "note": "西に国境が移る" }
     ],
     "desc": "ヤゲウォ朝のもとでリトアニアと結んだ大国。1572年から選挙王政。18世紀末に3回の分割で消滅し、第一次世界大戦後に復活した。",
@@ -3614,7 +3915,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "リトアニア大公ヤゲウォが開いたポーランドの王朝。"
+    "desc": "リトアニア大公ヤゲウォが開いたポーランドの王朝。",
+    "color": "#8A5AA8"
   },
   {
     "id": "elective-monarchy",
@@ -3626,7 +3928,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ヤゲウォ朝の断絶後、貴族の選挙で国王を選んだポーランドの時代。"
+    "desc": "ヤゲウォ朝の断絶後、貴族の選挙で国王を選んだポーランドの時代。",
+    "color": "#8A5AA8"
   },
   {
     "id": "lithuania-gd",
@@ -3636,14 +3939,14 @@
     "end": 1569,
     "color": "#E6B88A",
     "territory": [
-      { "year": 1236, "add": ["lithuania"], "note": "ミンダウガスが統一" },
-      { "year": 1250, "contested": ["belarus"] },
-      { "year": 1320, "add": ["belarus"], "note": "ゲディミナスの時代" },
+      { "year": 1236, "add": ["lithuania", "vilnius"], "note": "ミンダウガスが統一" },
+      { "year": 1250, "contested": ["belarus", "belarus-w"] },
+      { "year": 1320, "add": ["belarus", "belarus-w"], "note": "ゲディミナスの時代" },
       { "year": 1340, "add": ["volhynia"] },
       { "year": 1362, "add": ["ukraine-rb", "podolia"], "note": "青水の戦いでキプチャク=ハン国を破りキエフを得る" },
       { "year": 1404, "add": ["smolensk"] },
       { "year": 1430, "contested": ["ukraine-lb"] },
-      { "year": 1500, "add": ["lithuania", "belarus", "ukraine-rb", "ukraine-lb", "volhynia", "smolensk", "latgale"] },
+      { "year": 1500, "add": ["lithuania", "vilnius", "belarus", "belarus-w", "ukraine-rb", "ukraine-lb", "volhynia", "smolensk", "latgale"] },
       { "year": 1514, "remove": ["smolensk"], "note": "モスクワ大公国にスモレンスクを奪われる" }
     ],
     "desc": "ポーランドと同じ君主をいただいた大国。1569年のルブリン合同でポーランドと一つの国となった。",
@@ -3698,6 +4001,7 @@
       { "year": 1620, "add": ["siberia-c"], "note": "エニセイ川流域へ", "uncertain": true },
       { "year": 1632, "add": ["yakutia"], "note": "ヤクーツクを建設" },
       { "year": 1639, "contested": ["okhotsk"], "note": "オホーツク海に到達" },
+      { "year": 1650, "add": ["sloboda"], "note": "スロボダ・ウクライナに入植が進む（ハルキウの建設）" },
       { "year": 1650, "contested": ["transbaikal", "amur"], "note": "バイカル湖の東、アムール川流域に進出", "uncertain": true },
       { "year": 1654, "vassal": ["ukraine-lb"], "note": "ペレヤスラフ協定（ウクライナ=コサックを保護下に）" },
       { "year": 1667, "add": ["smolensk", "ukraine-lb"], "note": "アンドルソヴォ条約" },
@@ -3711,8 +4015,10 @@
       { "year": 1784, "contested": ["alaska"], "note": "アラスカに進出", "uncertain": true },
       { "year": 1792, "add": ["pontic"], "note": "ヤッシー条約" },
       { "year": 1793, "add": ["ukraine-rb", "podolia", "belarus"], "note": "第2回ポーランド分割" },
-      { "year": 1795, "add": ["lithuania", "courland", "volhynia"], "note": "第3回ポーランド分割" },
+      { "year": 1795, "add": ["belarus-w"] },
+      { "year": 1795, "add": ["lithuania", "vilnius", "courland", "volhynia"], "note": "第3回ポーランド分割" },
       { "year": 1801, "add": ["georgia-e"], "note": "東ジョージアを併合" },
+      { "year": 1803, "contested": ["caucasus-n"], "note": "ダゲスタンに進出（カフカス戦争）" },
       { "year": 1809, "vassal": ["finland"], "note": "スウェーデンからフィンランドを奪う（フィンランド大公国）" },
       { "year": 1810, "add": ["georgia-w"] },
       { "year": 1812, "add": ["bessarabia"], "note": "ブカレスト条約" },
@@ -3738,7 +4044,8 @@
       { "year": 1884, "add": ["turkmen"], "note": "メルヴを占領" },
       { "year": 1898, "contested": ["manchuria-s"], "note": "旅順・大連を租借" },
       { "year": 1900, "contested": ["manchuria"], "note": "義和団事件に乗じて満洲を占領" },
-      { "year": 1905, "remove": ["manchuria-s", "manchuria"], "note": "ポーツマス条約" }
+      { "year": 1905, "remove": ["manchuria-s", "manchuria"], "note": "ポーツマス条約" },
+      { "year": 1914, "vassal": ["tuva"], "note": "トゥヴァを保護領に" }
     ],
     "desc": "モスクワ大公国から発展。イヴァン4世がツァーリを称し、ピョートル1世のもとでバルト海に進出した。ロシア革命で帝政が倒れた。",
     "importance": 3,
@@ -3756,7 +4063,8 @@
     "uncertain": false,
     "memo": "モスクワ大公国のリューリク家",
     "descVerified": false,
-    "desc": "モスクワ大公の家系（リューリク家）。イヴァン3世・イヴァン4世のもとでロシアを統一した。"
+    "desc": "モスクワ大公の家系（リューリク家）。イヴァン3世・イヴァン4世のもとでロシアを統一した。",
+    "color": "#8A5AA8"
   },
   {
     "id": "time-of-troubles",
@@ -3768,7 +4076,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "リューリク朝の断絶後、ロシアが混乱した時代。ポーランドの介入を受けた。"
+    "desc": "リューリク朝の断絶後、ロシアが混乱した時代。ポーランドの介入を受けた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "romanov",
@@ -3780,7 +4089,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ミハイル=ロマノフが開いたロシアの王朝。1917年の三月革命で倒れた。"
+    "desc": "ミハイル=ロマノフが開いたロシアの王朝。1917年の三月革命で倒れた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "ussr",
@@ -3795,12 +4105,16 @@
       [1922, "ソヴィエト連邦"]
     ],
     "territory": [
-      { "year": 1917, "contested": ["muscovy", "novgorod", "arkhangelsk", "chernozem", "smolensk", "kazan", "astrakhan", "urals", "ingria", "karelia", "don", "kuban", "caucasus-n", "siberia-w", "siberia-c", "yakutia", "transbaikal", "okhotsk", "kamchatka", "amur", "primorye", "kazakh-n", "kazakh-w", "kazakh-s", "transoxiana", "fergana", "khwarazm", "turkmen", "tajik", "kyrgyz", "belarus", "ukraine-lb", "ukraine-rb", "podolia", "sloboda", "zaporozhia", "pontic", "crimea", "georgia-e", "georgia-w", "armenia", "azerbaijan"], "note": "十月革命と内戦" },
+      { "year": 1917, "contested": ["muscovy", "novgorod", "arkhangelsk", "chernozem", "smolensk", "kazan", "astrakhan", "urals", "ingria", "karelia", "don", "kuban", "caucasus-n", "siberia-w", "siberia-c", "yakutia", "transbaikal", "okhotsk", "kamchatka", "amur", "primorye", "kazakh-n", "kazakh-w", "kazakh-s", "transoxiana", "fergana", "khwarazm", "turkmen", "tajik", "kyrgyz", "belarus", "belarus-w", "ukraine-lb", "ukraine-rb", "podolia", "sloboda", "zaporozhia", "pontic", "crimea", "georgia-e", "georgia-w", "armenia", "azerbaijan"], "note": "十月革命と内戦" },
+      { "year": 1918, "contested": ["volhynia"] },
+      { "year": 1921, "vassal": ["tuva"], "note": "トゥヴァ人民共和国（ソ連の衛星国）" },
       { "year": 1921, "add": ["muscovy", "novgorod", "arkhangelsk", "chernozem", "smolensk", "kazan", "astrakhan", "urals", "ingria", "karelia", "don", "kuban", "caucasus-n", "siberia-w", "siberia-c", "yakutia", "transbaikal", "okhotsk", "kamchatka", "amur", "primorye", "kazakh-n", "kazakh-w", "kazakh-s", "transoxiana", "fergana", "khwarazm", "turkmen", "tajik", "kyrgyz", "belarus", "ukraine-lb", "ukraine-rb", "podolia", "sloboda", "zaporozhia", "pontic", "crimea", "georgia-e", "georgia-w", "armenia", "azerbaijan"], "note": "内戦に勝利（1922年にソ連を結成）" },
       { "year": 1925, "contested": ["sakhalin"], "note": "北樺太から日本軍が撤退" },
+      { "year": 1939, "add": ["belarus-w"], "note": "西ベラルーシを併合" },
       { "year": 1939, "add": ["volhynia", "galicia-e"], "note": "ポーランド東部を占領" },
-      { "year": 1940, "add": ["lithuania", "latgale", "livonia", "courland", "estonia", "bessarabia", "bukovina"], "note": "バルト3国・ベッサラビアを併合" },
-      { "year": 1944, "add": ["tuva", "belarus", "ukraine-rb", "ukraine-lb", "lithuania", "latgale", "livonia", "courland", "estonia"] },
+      { "year": 1940, "add": ["lithuania", "vilnius", "latgale", "livonia", "courland", "estonia", "bessarabia", "bukovina"], "note": "バルト3国・ベッサラビアを併合" },
+      { "year": 1944, "contested": ["poland-lu"], "note": "ソ連軍がポーランド東部に進む（ルブリンにポーランド国民解放委員会）" },
+      { "year": 1944, "add": ["tuva", "belarus", "belarus-w", "ukraine-rb", "ukraine-lb", "lithuania", "vilnius", "latgale", "livonia", "estonia"] },
       { "year": 1945, "add": ["kaliningrad", "sakhalin", "transcarpathia"], "note": "第二次世界大戦の結果" },
       { "year": 1945, "contested": ["korea-n"], "note": "朝鮮北部を占領" },
       { "year": 1948, "remove": ["korea-n"] },
@@ -3837,7 +4151,7 @@
     "end": 2000,
     "minor": true,
     "territory": [
-      { "year": 1991, "add": ["ukraine-lb", "ukraine-rb", "podolia", "volhynia", "galicia-e", "sloboda", "zaporozhia", "pontic", "crimea", "bukovina", "transcarpathia", "belarus", "bessarabia", "georgia-e", "georgia-w", "armenia", "azerbaijan", "kazakh-n", "kazakh-w", "kazakh-s", "transoxiana", "fergana", "khwarazm", "turkmen", "tajik", "kyrgyz"], "note": "15の共和国が独立" }
+      { "year": 1991, "add": ["ukraine-lb", "ukraine-rb", "podolia", "volhynia", "galicia-e", "sloboda", "zaporozhia", "pontic", "crimea", "bukovina", "transcarpathia", "belarus", "belarus-w", "bessarabia", "georgia-e", "georgia-w", "armenia", "azerbaijan", "kazakh-n", "kazakh-w", "kazakh-s", "transoxiana", "fergana", "khwarazm", "turkmen", "tajik", "kyrgyz"], "note": "15の共和国が独立" }
     ],
     "desc": "ソ連の解体で1991年に独立したウクライナ・ベラルーシ・カフカス・中央アジアなどの国々。地図ではまとめて同じ色で表示している（バルト3国は国ごとに表示）。",
     "hideInCards": true,
@@ -3845,7 +4159,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#9A4F8A"
   },
   {
     "id": "finland-r",
@@ -3862,7 +4177,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ロシア革命の中で独立した国。"
+    "desc": "ロシア革命の中で独立した国。",
+    "color": "#9DB83A"
   },
   {
     "id": "crimea-kh",
@@ -3873,6 +4189,7 @@
     "minor": true,
     "territory": [
       { "year": 1441, "add": ["crimea"], "note": "ハージー=ギレイが自立" },
+      { "year": 1503, "contested": ["kuban", "zaporozhia", "sloboda"], "note": "黒海北岸の草原を支配" },
       { "year": 1774, "add": ["crimea"], "note": "オスマン帝国から独立" },
       { "year": 1783, "remove": ["crimea"] }
     ],
@@ -3880,7 +4197,8 @@
     "importance": 1,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "hetmanate",
@@ -3897,7 +4215,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ドニェプル川流域のコサックの自治国家。ロシアの保護下に入り、のちに併合された。"
+    "desc": "ドニェプル川流域のコサックの自治国家。ロシアの保護下に入り、のちに併合された。",
+    "color": "#D4943A"
   },
   {
     "id": "sweden",
@@ -3974,7 +4293,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "スウェーデンとの連合を解消して1905年に独立した王国。"
+    "desc": "スウェーデンとの連合を解消して1905年に独立した王国。",
+    "color": "#D4943A"
   },
   {
     "id": "iceland-r",
@@ -3990,7 +4310,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "デンマークから1944年に独立した共和国。"
+    "desc": "デンマークから1944年に独立した共和国。",
+    "color": "#8A5AA8"
   },
   {
     "id": "venice",
@@ -4037,7 +4358,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "地中海交易で栄えたイタリアの都市共和国。"
+    "desc": "地中海交易で栄えたイタリアの都市共和国。",
+    "color": "#C85A5A"
   },
   {
     "id": "papal",
@@ -4075,7 +4397,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "メディチ家が大公として治めた、フィレンツェを中心とする国。"
+    "desc": "メディチ家が大公として治めた、フィレンツェを中心とする国。",
+    "color": "#9DB83A"
   },
   {
     "id": "florence",
@@ -4094,7 +4417,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "毛織物業と金融業で栄えたイタリアの都市国家。メディチ家のもとでルネサンス文化の中心となった。"
+    "desc": "毛織物業と金融業で栄えたイタリアの都市国家。メディチ家のもとでルネサンス文化の中心となった。",
+    "color": "#8A5AA8"
   },
   {
     "id": "milan-d",
@@ -4115,7 +4439,8 @@
       [1277, "ミラノ（ヴィスコンティ家）"],
       [1395, "ミラノ公国"]
     ],
-    "desc": "ヴィスコンティ家・スフォルツァ家が治めた北イタリアの国。イタリア戦争で争いの的になった。"
+    "desc": "ヴィスコンティ家・スフォルツァ家が治めた北イタリアの国。イタリア戦争で争いの的になった。",
+    "color": "#8A5AA8"
   },
   {
     "id": "savoy",
@@ -4137,6 +4462,7 @@
       { "year": 1500, "add": ["piedmont", "savoy", "nice"] },
       { "year": 1713, "add": ["sicily"], "note": "ユトレヒト条約でシチリアを得る" },
       { "year": 1720, "add": ["sardinia"], "remove": ["sicily"], "note": "シチリアとサルデーニャを交換" },
+      { "year": 1814, "contested": ["liguria"], "note": "ジェノヴァを得る（ウィーン会議）" },
       { "year": 1815, "add": ["liguria"], "note": "ジェノヴァを併合" },
       { "year": 1859, "add": ["lombardy"], "note": "イタリア統一戦争" },
       { "year": 1860, "add": ["emilia", "tuscany", "naples", "sicily"], "remove": ["savoy", "nice"], "note": "サヴォイア・ニースをフランスへ。中部イタリアと両シチリア王国を併合" }
@@ -4184,16 +4510,22 @@
       { "year": 1861, "add": ["piedmont", "lombardy", "liguria", "emilia", "tuscany", "naples", "sicily", "sardinia"], "note": "イタリア王国の成立" },
       { "year": 1866, "add": ["venetia"], "note": "ヴェネツィアを得る" },
       { "year": 1870, "add": ["papal"], "note": "教皇領を占領（ローマを首都に）" },
+      { "year": 1889, "vassal": ["somalia"], "note": "ソマリア南部を保護領に" },
       { "year": 1890, "colony": ["eritrea"], "note": "エリトリアを植民地に" },
       { "year": 1905, "colony": ["somalia"], "note": "ソマリランド" },
+      { "year": 1911, "contested": ["tripolitania", "cyrenaica"], "note": "イタリア=トルコ戦争" },
+      { "year": 1912, "contested": ["fezzan"] },
       { "year": 1912, "contested": ["aegean"], "colony": ["tripolitania", "cyrenaica"], "note": "イタリア=トルコ戦争（ドデカネス諸島）" },
+      { "year": 1918, "contested": ["trentino"], "note": "南チロルを占領" },
       { "year": 1919, "add": ["trentino"], "note": "「未回収のイタリア」（南チロル・トリエステなど）を得る" },
       { "year": 1934, "colony": ["fezzan"], "uncertain": true },
       { "year": 1936, "colony": ["ethiopia"], "note": "エチオピアを併合" },
       { "year": 1939, "contested": ["albania"], "note": "アルバニアを併合" },
       { "year": 1941, "remove": ["ethiopia"] },
       { "year": 1943, "remove": ["tripolitania", "cyrenaica", "fezzan", "albania", "eritrea", "somalia"] },
-      { "year": 1947, "remove": ["aegean"], "note": "パリ講和条約" }
+      { "year": 1947, "remove": ["aegean"], "note": "パリ講和条約" },
+      { "year": 1950, "vassal": ["somalia"], "note": "信託統治（〜1960年）" },
+      { "year": 1960, "remove": ["somalia"] }
     ],
     "desc": "サルデーニャ王国を中心に統一された。1922年にムッソリーニのファシスト党が政権をにぎった。",
     "importance": 3,
@@ -4261,7 +4593,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "1993年にチェコスロヴァキアが分かれてできたチェコとスロヴァキア。"
+    "desc": "1993年にチェコスロヴァキアが分かれてできたチェコとスロヴァキア。",
+    "color": "#3FA07A"
   },
   {
     "id": "ex-yugoslav",
@@ -4280,7 +4613,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ユーゴスラヴィアの解体で独立したスロヴェニア・クロアティア・ボスニア=ヘルツェゴヴィナなど。"
+    "desc": "ユーゴスラヴィアの解体で独立したスロヴェニア・クロアティア・ボスニア=ヘルツェゴヴィナなど。",
+    "color": "#C8607A"
   },
   {
     "id": "montenegro-k",
@@ -4296,7 +4630,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "バルカン半島西部の山国。1878年に独立した。"
+    "desc": "バルカン半島西部の山国。1878年に独立した。",
+    "color": "#3F9FC0"
   },
   {
     "id": "greece",
@@ -4315,7 +4650,9 @@
       { "year": 1830, "add": ["greece-s", "greece-w", "greece-c", "peloponnese"], "note": "ロンドン会議で独立を承認" },
       { "year": 1864, "add": ["ionian"], "note": "イオニア諸島をイギリスから得る" },
       { "year": 1881, "add": ["thessaly"] },
+      { "year": 1912, "contested": ["epirus", "macedonia-gr", "crete"], "note": "第1次バルカン戦争" },
       { "year": 1913, "add": ["epirus", "macedonia-gr", "crete", "aegean"], "note": "バルカン戦争" },
+      { "year": 1919, "contested": ["thrace-w"] },
       { "year": 1919, "contested": ["anatolia-w", "anatolia-c"], "note": "小アジアに出兵（ギリシア=トルコ戦争）" },
       { "year": 1920, "add": ["thrace-w"], "note": "ヌイイ条約" },
       { "year": 1922, "remove": ["anatolia-w", "anatolia-c"], "note": "トルコに敗れる" },
@@ -4344,7 +4681,9 @@
       { "year": 1859, "add": ["wallachia", "moldavia"], "note": "両公国が同じ君主を選ぶ（オスマン帝国の宗主権下）" },
       { "year": 1878, "add": ["dobruja"], "note": "ベルリン条約で独立" },
       { "year": 1918, "add": ["transylvania", "bukovina", "bessarabia", "banat"], "note": "大ルーマニア" },
-      { "year": 1940, "remove": ["bessarabia", "bukovina"], "note": "ソ連に割譲" }
+      { "year": 1940, "remove": ["bessarabia", "bukovina"], "note": "ソ連に割譲" },
+      { "year": 1941, "add": ["bessarabia", "bukovina"], "contested": ["pontic"], "note": "独ソ戦に加わってベッサラビア・北ブコヴィナを取り戻し、オデッサを含む地域を占領" },
+      { "year": 1944, "remove": ["bessarabia", "bukovina", "pontic"], "note": "ソ連軍に押し戻され、連合国側に移る" }
     ],
     "importance": 2,
     "uncertain": true,
@@ -4362,7 +4701,10 @@
     "territory": [
       { "year": 1878, "vassal": ["bulgaria"], "note": "ブルガリア公国（オスマン帝国の宗主権下）" },
       { "year": 1885, "add": ["bulgaria", "rumelia-e"], "note": "東ルメリアを併合" },
-      { "year": 1908, "add": ["bulgaria", "rumelia-e"], "note": "独立を宣言" }
+      { "year": 1908, "add": ["bulgaria", "rumelia-e"], "note": "独立を宣言" },
+      { "year": 1912, "contested": ["thrace-w"], "note": "第1次バルカン戦争" },
+      { "year": 1913, "add": ["thrace-w"], "note": "ブカレスト条約で西トラキアを得る" },
+      { "year": 1919, "remove": ["thrace-w"], "note": "ヌイイ条約で失う" }
     ],
     "importance": 2,
     "uncertain": false,
@@ -4386,7 +4728,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "1912年にオスマン帝国から独立した国。"
+    "desc": "1912年にオスマン帝国から独立した国。",
+    "color": "#9DB83A"
   },
   {
     "id": "aztec",
@@ -4435,7 +4778,8 @@
     "importance": 2,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "color": "#8A5AA8"
   },
   {
     "id": "peru-v",
@@ -4447,7 +4791,11 @@
     "importance": 2,
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "territory": [
+      { "year": 1542, "add": ["chile-n", "panama"], "note": "ペルー副王領" }
+    ],
+    "color": "#3FA07A"
   },
   {
     "id": "brazil-col",
@@ -4460,7 +4808,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ポルトガルの植民地時代のブラジル。砂糖や金の生産が行われた。"
+    "desc": "ポルトガルの植民地時代のブラジル。砂糖や金の生産が行われた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "thirteen-colonies",
@@ -4473,7 +4822,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "イギリスが北アメリカの東岸に作った13の植民地。独立してアメリカ合衆国となった。"
+    "desc": "イギリスが北アメリカの東岸に作った13の植民地。独立してアメリカ合衆国となった。",
+    "color": "#8A5AA8"
   },
   {
     "id": "new-france",
@@ -4486,7 +4836,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "フランスが北アメリカに作った植民地（カナダ・ルイジアナ）。七年戦争に敗れてイギリスなどに奪われた。"
+    "desc": "フランスが北アメリカに作った植民地（カナダ・ルイジアナ）。七年戦争に敗れてイギリスなどに奪われた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "usa",
@@ -4504,15 +4855,21 @@
       { "year": 1845, "add": ["texas"], "note": "テキサスを併合" },
       { "year": 1846, "add": ["oregon"], "note": "オレゴンを併合" },
       { "year": 1848, "add": ["california", "southwest"], "note": "アメリカ=メキシコ戦争" },
+      { "year": 1857, "colony": ["x-umi"] },
       { "year": 1861, "contested": ["virginia", "carolina", "florida", "old-sw", "texas", "arkansas-la"], "note": "南北戦争（〜1865年）" },
       { "year": 1865, "add": ["virginia", "carolina", "florida", "old-sw", "texas", "arkansas-la"] },
       { "year": 1867, "add": ["alaska"], "note": "ロシアからアラスカを買収" },
+      { "year": 1898, "colony": ["x-gum"] },
       { "year": 1898, "add": ["hawaii"], "vassal": ["cuba"], "colony": ["puerto-rico", "luzon", "visayas", "mindanao"], "note": "ハワイ併合・米西戦争" },
+      { "year": 1900, "colony": ["x-asm"] },
       { "year": 1902, "remove": ["cuba"], "note": "キューバ独立（プラット条項）" },
+      { "year": 1944, "colony": ["x-mnp", "x-plw", "x-fsm", "x-mhl"], "note": "日本の委任統治領を占領（のち信託統治）" },
       { "year": 1945, "contested": ["korea-s", "korea-c", "korea-sw", "ryukyu"], "note": "朝鮮南部・沖縄を占領" },
       { "year": 1946, "remove": ["luzon", "visayas", "mindanao"], "note": "フィリピン独立" },
       { "year": 1948, "remove": ["korea-s", "korea-c", "korea-sw"] },
-      { "year": 1972, "remove": ["ryukyu"], "note": "沖縄返還" }
+      { "year": 1972, "remove": ["ryukyu"], "note": "沖縄返還" },
+      { "year": 1986, "remove": ["x-fsm", "x-mhl"] },
+      { "year": 1994, "remove": ["x-plw"] }
     ],
     "desc": "独立宣言で成立。19世紀に西へ領土を広げ（西部開拓）、20世紀に超大国となった。",
     "importance": 3,
@@ -4576,7 +4933,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "カメハメハが統一したハワイの王国。アメリカに併合された。"
+    "desc": "カメハメハが統一したハワイの王国。アメリカに併合された。",
+    "color": "#8A5AA8"
   },
   {
     "id": "texas-r",
@@ -4592,7 +4950,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "メキシコから独立したテキサスの共和国。アメリカに併合された。"
+    "desc": "メキシコから独立したテキサスの共和国。アメリカに併合された。",
+    "color": "#C85A5A"
   },
   {
     "id": "central-am-f",
@@ -4608,7 +4967,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "スペインから独立した中央アメリカの国々の連邦。"
+    "desc": "スペインから独立した中央アメリカの国々の連邦。",
+    "color": "#5A8FD8"
   },
   {
     "id": "canada",
@@ -4641,6 +5001,7 @@
     "color": "#E6CF7A",
     "territory": [
       { "year": 1819, "add": ["colombia", "venezuela"], "note": "ボリバルが建国" },
+      { "year": 1821, "contested": ["panama", "ecuador"], "note": "パナマが加わる／エクアドルに進む" },
       { "year": 1822, "add": ["ecuador", "panama"] }
     ],
     "desc": "シモン=ボリバルが建てた共和国。",
@@ -4681,7 +5042,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "シモン=ボリバルにちなんで名づけられた、スペインから独立した国。"
+    "desc": "シモン=ボリバルにちなんで名づけられた、スペインから独立した国。",
+    "color": "#8A5AA8"
   },
   {
     "id": "chile-r",
@@ -4714,8 +5076,10 @@
     ],
     "territory": [
       { "year": 1816, "add": ["la-plata"], "note": "独立を宣言" },
-      { "year": 1884, "add": ["chaco"], "uncertain": true },
+      { "year": 1820, "contested": ["falklands"], "note": "マルビナス諸島の領有を宣言" },
+      { "year": 1833, "remove": ["falklands"] },
       { "year": 1880, "add": ["patagonia"], "note": "「砂漠の征服」" },
+      { "year": 1884, "add": ["chaco"], "uncertain": true },
       { "year": 1982, "contested": ["falklands"], "note": "フォークランド戦争" }
     ],
     "importance": 2,
@@ -4738,7 +5102,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "スペインから独立した内陸の国。"
+    "desc": "スペインから独立した内陸の国。",
+    "color": "#C85A5A"
   },
   {
     "id": "uruguay-r",
@@ -4754,7 +5119,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ブラジルとアルゼンチンの間で独立した国。"
+    "desc": "ブラジルとアルゼンチンの間で独立した国。",
+    "color": "#8A5AA8"
   },
   {
     "id": "brazil",
@@ -4768,7 +5134,9 @@
       [1889, "ブラジル共和国"]
     ],
     "territory": [
-      { "year": 1822, "add": ["brazil-ne", "bahia", "rio", "maranhao", "para", "minas", "brazil-cw", "amazonas", "brazil-s"], "note": "独立" }
+      { "year": 1822, "contested": ["uruguay"], "note": "シスプラティーナ州" },
+      { "year": 1822, "add": ["brazil-ne", "bahia", "rio", "maranhao", "para", "minas", "brazil-cw", "amazonas", "brazil-s"], "note": "独立" },
+      { "year": 1828, "remove": ["uruguay"] }
     ],
     "desc": "ポルトガル王子ペドロが皇帝となって独立した。1888年に奴隷制を廃止し、翌年共和政となった。",
     "importance": 2,
@@ -4813,7 +5181,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ハイチから独立した国。"
+    "desc": "ハイチから独立した国。",
+    "color": "#8A5AA8"
   },
   {
     "id": "cuba-r",
@@ -4832,7 +5201,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "アメリカ=スペイン戦争ののち独立した国。1959年にキューバ革命が起きた。"
+    "desc": "アメリカ=スペイン戦争ののち独立した国。1959年にキューバ革命が起きた。",
+    "color": "#8A5AA8"
   },
   {
     "id": "oceania-new",
@@ -4844,7 +5214,15 @@
     "territory": [
       { "year": 1901, "add": ["australia"], "note": "オーストラリア連邦（イギリスの自治領）" },
       { "year": 1907, "add": ["new-zealand"], "note": "ニュージーランド（自治領）" },
-      { "year": 1975, "add": ["new-guinea-e"], "note": "パプアニューギニア" }
+      { "year": 1962, "add": ["x-wsm"], "note": "西サモアが独立" },
+      { "year": 1968, "add": ["x-nru"], "note": "ナウルが独立" },
+      { "year": 1970, "add": ["x-fji", "x-ton"], "note": "フィジー・トンガが独立" },
+      { "year": 1975, "add": ["new-guinea-e"], "note": "パプアニューギニア" },
+      { "year": 1978, "add": ["x-tuv", "x-slb"] },
+      { "year": 1979, "add": ["x-kir"] },
+      { "year": 1980, "add": ["x-vut"] },
+      { "year": 1986, "add": ["x-fsm", "x-mhl"] },
+      { "year": 1994, "add": ["x-plw"] }
     ],
     "hideInCards": true,
     "noQuiz": true,
@@ -4852,7 +5230,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "1901年に成立したオーストラリア連邦や、ニュージーランドなどのオセアニアの国々。"
+    "desc": "1901年に成立したオーストラリア連邦や、ニュージーランドなどのオセアニアの国々。",
+    "color": "#8A5AA8"
   },
   {
     "id": "estonia-r",
@@ -4902,8 +5281,8 @@
     ],
     "color": "#B8D0A0",
     "territory": [
-      { "year": 1918, "add": ["lithuania"], "note": "ロシアから独立（ヴィリニュス地方は1920〜39年ポーランドが占領）" },
-      { "year": 1991, "add": ["lithuania"], "note": "ソ連から独立を回復" }
+      { "year": 1918, "add": ["lithuania", "vilnius"], "note": "ロシアから独立（ヴィリニュス地方は1920〜39年ポーランドが占領）" },
+      { "year": 1991, "add": ["lithuania", "vilnius"], "note": "ソ連から独立を回復" }
     ],
     "desc": "1918年に独立し、1940年にソ連に併合された国。1990年にソ連の共和国の中で最初に独立を宣言し、1991年に認められた。",
     "importance": 2,
@@ -5898,6 +6277,786 @@
       { "year": 1966, "contested": ["antilles"], "note": "バルバドスが独立（のちグレナダ・セントルシアなども独立）" }
     ],
     "desc": "バルバドス（1966年）、グレナダ（1974年）、セントルシア（1979年）など、イギリスから独立したカリブ海の小さな島国。地図ではまとめて表示している。",
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "knights-malta",
+    "name": "マルタ騎士団",
+    "region": "ce",
+    "start": 1530,
+    "end": 1798,
+    "color": "#D45D5D",
+    "minor": true,
+    "territory": [
+      { "year": 1530, "add": ["malta"], "note": "神聖ローマ皇帝カール5世からマルタ島を与えられる" }
+    ],
+    "desc": "ロードス島を追われた聖ヨハネ騎士団が、1530年からマルタ島を治めた国。1798年にナポレオンに降伏した。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "malta-r",
+    "name": "マルタ",
+    "region": "ce",
+    "start": 1964,
+    "end": 2000,
+    "color": "#E07A7A",
+    "minor": true,
+    "territory": [
+      { "year": 1964, "add": ["malta"], "note": "イギリスから独立" }
+    ],
+    "desc": "地中海の島国。1964年にイギリスから独立し、1974年に共和国になった。",
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "german-states",
+    "name": "ドイツの諸邦",
+    "region": "ce",
+    "start": 1814,
+    "end": 1814,
+    "color": "#9AA7B8",
+    "minor": true,
+    "territory": [
+      { "year": 1814, "contested": ["lower-saxony", "westphalia", "palatinate", "hesse", "saxony", "thuringia", "bavaria", "swabia"], "note": "ライン同盟が解体し、ウィーン会議でドイツ連邦ができるまで" }
+    ],
+    "desc": "ライン同盟が解体した1813年から、ウィーン会議でドイツ連邦ができる1815年までの、ドイツの諸邦（バイエルン・ザクセンなど）。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "allied-germany",
+    "name": "ドイツ（米英仏ソの分割占領）",
+    "region": "ce",
+    "start": 1945,
+    "end": 1949,
+    "color": "#7F8C9E",
+    "territory": [
+      { "year": 1945, "contested": ["schleswig", "lower-saxony", "mecklenburg", "brandenburg", "westphalia", "hesse", "thuringia", "saxony", "bavaria", "swabia", "palatinate"], "note": "降伏したドイツを、アメリカ・イギリス・フランス・ソ連が分けて占領" }
+    ],
+    "desc": "第二次世界大戦に敗れたドイツを、アメリカ・イギリス・フランス・ソ連の4か国が分けて占領した時期。1949年に西のドイツ連邦共和国と東のドイツ民主共和国に分かれた。",
+    "noQuiz": true,
+    "importance": 2,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "bani-khalid",
+    "name": "バニー=ハーリド首長国",
+    "region": "wa",
+    "start": 1670,
+    "end": 1796,
+    "color": "#C9A13A",
+    "minor": true,
+    "territory": [
+      { "year": 1670, "add": ["hasa", "kuwait", "qatar"], "note": "オスマン帝国を追ってアラビア東部を支配" }
+    ],
+    "desc": "アラビア半島東部のハサー地方を治めたアラブの部族の首長国（1670〜1790年代）。ワッハーブ王国に敗れた。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "rashidi",
+    "name": "ラシード家の国",
+    "region": "wa",
+    "start": 1836,
+    "end": 1921,
+    "color": "#B5795A",
+    "minor": true,
+    "territory": [
+      { "year": 1891, "add": ["najd"], "note": "サウード家を追ってリヤドを支配" }
+    ],
+    "desc": "アラビア半島中部のハーイルを都としたラシード家の首長国（ジャバル=シャンマル）。1891年にサウード家を追ったが、1902年にリヤドを奪い返され、1921年に滅んだ。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "lahej",
+    "name": "ラヘジ=スルタン国",
+    "region": "wa",
+    "start": 1728,
+    "end": 1967,
+    "color": "#8FAF5A",
+    "minor": true,
+    "territory": [
+      { "year": 1728, "add": ["yemen-s"], "note": "ザイド派のイマームから自立" }
+    ],
+    "desc": "イエメン南部（アデンの北）のスルタン国。1839年にアデンがイギリスに奪われ、のちにイギリスの保護領になった。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "asir-e",
+    "name": "アスィールの首長国",
+    "region": "wa",
+    "periods": [
+      [1823, 1872],
+      [1906, 1930]
+    ],
+    "color": "#C47FB0",
+    "minor": true,
+    "territory": [
+      { "year": 1840, "add": ["asir"], "note": "エジプト軍が引き上げたあと自立" },
+      { "year": 1918, "add": ["asir"], "note": "イドリース家がオスマン帝国から自立" }
+    ],
+    "desc": "アラビア半島南西部のアスィール地方の首長国。19世紀のアーイド家、20世紀初めのイドリース家が治め、1920〜30年にサウード家に併合された。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "dagestan-k",
+    "name": "ダゲスタンの諸ハン国",
+    "region": "wa",
+    "start": 1503,
+    "end": 1859,
+    "color": "#7E9F6A",
+    "minor": true,
+    "territory": [
+      { "year": 1503, "add": ["caucasus-n"], "note": "シャムハル国・アヴァル=ハン国など" }
+    ],
+    "desc": "カフカス山脈の北東（ダゲスタン）にあったシャムハル国・アヴァル=ハン国などの国々。サファヴィー朝やオスマン帝国と結び、19世紀にロシアに征服された。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "yarkent",
+    "name": "ヤルカンド=ハン国",
+    "region": "ia",
+    "start": 1514,
+    "end": 1705,
+    "color": "#D7B04C",
+    "minor": true,
+    "territory": [
+      { "year": 1514, "add": ["tarim"], "contested": ["kyrgyz"], "note": "タリム盆地を治める" }
+    ],
+    "desc": "タリム盆地のヤルカンドを都としたモグーリスタンの一族のハン国（1514〜1705年）。ジュンガルに従い、のちに滅んだ。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "khoshut",
+    "name": "ホシュート=ハン国",
+    "region": "ia",
+    "start": 1642,
+    "end": 1724,
+    "color": "#B58ACF",
+    "minor": true,
+    "territory": [
+      { "year": 1642, "add": ["qinghai"], "note": "オイラトのホシュート部が青海・チベットを支配" }
+    ],
+    "desc": "オイラトのホシュート部が青海を中心に建てたハン国。ダライ=ラマを保護してチベットを支配したが、1724年に清に滅ぼされた。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "bhutan-k",
+    "name": "ブータン",
+    "region": "sa",
+    "start": 1616,
+    "end": 2000,
+    "color": "#E8A040",
+    "minor": true,
+    "territory": [
+      { "year": 1616, "add": ["bhutan"], "note": "シャブドゥン=ンガワン=ナムゲルが統一" }
+    ],
+    "desc": "ヒマラヤ山脈の東部にある仏教の国。17世紀に統一され、1907年からワンチュク家の王国。",
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "kerala-k",
+    "name": "ケーララの諸王国",
+    "region": "sa",
+    "start": 1647,
+    "end": 1949,
+    "color": "#5DAF6E",
+    "minor": true,
+    "territory": [
+      { "year": 1647, "add": ["kerala"], "note": "トラヴァンコール・コーチン・カリカットなど" }
+    ],
+    "desc": "インド南西部のマラバール海岸（ケーララ）の王国（トラヴァンコール・コーチン・カリカットなど）。香辛料の貿易で栄え、イギリスの保護下に入った。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "nayak",
+    "name": "タミルの諸王国",
+    "region": "sa",
+    "start": 1529,
+    "end": 1801,
+    "color": "#D2884A",
+    "minor": true,
+    "territory": [
+      { "year": 1647, "add": ["tamil"], "note": "ナーヤカ朝（マドゥライなど）" }
+    ],
+    "desc": "インド南東部のタミル地方の王国（マドゥライのナーヤカ朝など）。ヴィジャヤナガル王国から自立し、18世紀にカルナティックの太守やイギリスに従った。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "banjar",
+    "name": "バンジャル王国",
+    "region": "sea",
+    "start": 1526,
+    "end": 1860,
+    "color": "#3FA88C",
+    "minor": true,
+    "territory": [
+      { "year": 1526, "add": ["kalimantan"], "note": "カリマンタン南部のイスラーム王国" }
+    ],
+    "desc": "ボルネオ島（カリマンタン）南部のバンジャルマシンを中心としたイスラーム王国。1860年にオランダに併合された。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "bali-k",
+    "name": "バリの諸王国",
+    "region": "sea",
+    "start": 1528,
+    "end": 1908,
+    "color": "#E07FA8",
+    "minor": true,
+    "territory": [
+      { "year": 1528, "add": ["lesser-sunda"], "note": "バリ・ロンボクなどの王国" }
+    ],
+    "desc": "マジャパヒト王国の滅亡後、ヒンドゥー教の文化を受け継いだバリ島などの王国。20世紀初めにオランダに征服された。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "funj",
+    "name": "フンジ=スルタン国",
+    "region": "af",
+    "start": 1504,
+    "end": 1821,
+    "color": "#E0A030",
+    "minor": true,
+    "territory": [
+      { "year": 1504, "add": ["sudan"], "note": "センナールを都とする" }
+    ],
+    "desc": "スーダンの青ナイル川流域のセンナールを都としたイスラーム教の王国（1504〜1821年）。エジプトのムハンマド=アリーに征服された。",
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "darfur",
+    "name": "ダルフール=スルタン国",
+    "region": "af",
+    "start": 1603,
+    "end": 1874,
+    "color": "#B5653A",
+    "minor": true,
+    "territory": [
+      { "year": 1603, "add": ["kordofan"], "note": "ダルフールを中心にコルドファンも支配" }
+    ],
+    "desc": "スーダン西部のダルフール地方のイスラーム王国。サハラ交易で栄えたが、1874年にエジプトに征服された。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "geledi",
+    "name": "ゲレディ=スルタン国",
+    "region": "af",
+    "start": 1700,
+    "end": 1910,
+    "color": "#5FB88F",
+    "minor": true,
+    "territory": [
+      { "year": 1700, "add": ["somalia"], "note": "ソマリア南部の王国" }
+    ],
+    "desc": "アジュラーン=スルタン国の衰退後、ソマリア南部を治めた王国。1910年にイタリアに併合された。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "burundi-k",
+    "name": "ブルンジ王国",
+    "region": "af",
+    "start": 1680,
+    "end": 1966,
+    "color": "#8A6FD8",
+    "minor": true,
+    "territory": [
+      { "year": 1680, "add": ["burundi"] }
+    ],
+    "desc": "アフリカ大湖地方の王国。ドイツ、のちベルギーの支配を受け、1962年に独立した（1966年に王政廃止）。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "lozi",
+    "name": "ロジ王国",
+    "region": "af",
+    "start": 1600,
+    "end": 1964,
+    "color": "#9DB83A",
+    "minor": true,
+    "territory": [
+      { "year": 1600, "contested": ["zambia"], "note": "ザンベジ川上流の王国（バロツェ）" }
+    ],
+    "desc": "ザンベジ川上流（現在のザンビア西部）のロジ人の王国。19世紀末にイギリスの保護下に入った。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "luba-lunda",
+    "name": "ルバ王国・ルンダ王国",
+    "region": "af",
+    "start": 1585,
+    "end": 1889,
+    "color": "#C0703A",
+    "minor": true,
+    "territory": [
+      { "year": 1585, "contested": ["congo"], "note": "コンゴ盆地南部の王国" }
+    ],
+    "desc": "コンゴ盆地の南部（現在のコンゴ民主共和国南部）にあった王国。象牙や奴隷・銅の交易で栄えた。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "loango",
+    "name": "ロアンゴ王国",
+    "region": "af",
+    "start": 1550,
+    "end": 1883,
+    "color": "#6FAF4A",
+    "minor": true,
+    "territory": [
+      { "year": 1550, "contested": ["congo-r"], "note": "コンゴ川の北の海岸の王国" }
+    ],
+    "desc": "コンゴ川の北の大西洋岸の王国。ヨーロッパ人との奴隷貿易で栄え、19世紀末にフランス領になった。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "ndongo",
+    "name": "ンドンゴ王国",
+    "region": "af",
+    "start": 1500,
+    "end": 1671,
+    "color": "#C85A5A",
+    "minor": true,
+    "territory": [
+      { "year": 1500, "add": ["angola"], "note": "現在のアンゴラ北部の王国" }
+    ],
+    "desc": "現在のアンゴラ北部の王国。王の称号ンゴラがアンゴラの国名の由来。女王ンジンガがポルトガルに抵抗した。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "rozvi",
+    "name": "ロズウィ王国",
+    "region": "af",
+    "start": 1660,
+    "end": 1866,
+    "color": "#D08A3A",
+    "minor": true,
+    "territory": [
+      { "year": 1761, "add": ["zimbabwe"], "note": "モノモタパ王国に代わってジンバブエを支配" }
+    ],
+    "desc": "現在のジンバブエにあったショナ人の王国。モノモタパ王国やポルトガルと争い、19世紀にンデベレに滅ぼされた。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "ndebele",
+    "name": "ンデベレ王国",
+    "region": "af",
+    "start": 1838,
+    "end": 1894,
+    "color": "#8A5AA8",
+    "minor": true,
+    "territory": [
+      { "year": 1838, "add": ["zimbabwe"], "note": "ズールーから分かれたンデベレ人の王国" }
+    ],
+    "desc": "ズールーから分かれたンデベレ人が、現在のジンバブエ南西部に建てた王国。1893年にセシル=ローズのイギリス南アフリカ会社に滅ぼされた。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "swazi",
+    "name": "スワジ王国",
+    "region": "af",
+    "start": 1745,
+    "end": 1968,
+    "color": "#3F9FC0",
+    "minor": true,
+    "territory": [
+      { "year": 1745, "add": ["eswatini"] }
+    ],
+    "desc": "南アフリカの東部のスワジ人の王国。トランスヴァール、のちイギリスの保護下に入り、1968年に独立した（現在のエスワティニ）。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "basotho",
+    "name": "バソト王国",
+    "region": "af",
+    "start": 1822,
+    "end": 1868,
+    "color": "#5FB87A",
+    "minor": true,
+    "territory": [
+      { "year": 1822, "add": ["lesotho"], "note": "モシェシェが山地にソト人をまとめる" }
+    ],
+    "desc": "モシェシェが山地にソト人をまとめた王国。ブール人に対抗してイギリスの保護を求め、1868年にイギリス領バストランドになった（現在のレソト）。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "kong",
+    "name": "コング帝国",
+    "region": "af",
+    "start": 1710,
+    "end": 1898,
+    "color": "#9FAF3A",
+    "minor": true,
+    "territory": [
+      { "year": 1710, "contested": ["ivory-coast"], "note": "交易都市コングを中心とする国" }
+    ],
+    "desc": "現在のコートジボワール北部の交易都市コングを中心とした国。1898年にサモリ=トゥーレに破壊された。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "senegambia-k",
+    "name": "セネガンビアの諸王国",
+    "region": "af",
+    "start": 1549,
+    "end": 1886,
+    "color": "#D47A4A",
+    "minor": true,
+    "territory": [
+      { "year": 1646, "add": ["senegambia", "gambia"], "note": "ジョロフ・カヨールなどの王国" }
+    ],
+    "desc": "セネガル川とガンビア川の流域の、ウォロフ人などの王国（ジョロフ・カヨールなど）。19世紀にフランスとイギリスに征服された。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "kaabu",
+    "name": "カアブ王国",
+    "region": "af",
+    "start": 1537,
+    "end": 1867,
+    "color": "#7FB04A",
+    "minor": true,
+    "territory": [
+      { "year": 1646, "add": ["guinea-bissau"], "note": "マリンケ人の王国" }
+    ],
+    "desc": "現在のギニアビサウを中心としたマリンケ人の王国。マリ王国から自立し、奴隷貿易で栄えた。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "futa-jallon",
+    "name": "フータ=ジャロン",
+    "region": "af",
+    "start": 1725,
+    "end": 1896,
+    "color": "#4FA86A",
+    "minor": true,
+    "territory": [
+      { "year": 1725, "add": ["guinea"], "note": "フルベ人のイスラーム国家" },
+      { "year": 1868, "contested": ["guinea-bissau"], "note": "カアブ王国を滅ぼす" }
+    ],
+    "desc": "ギニアの山地にフルベ人が建てたイスラーム国家。1896年にフランスの保護領になった。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "moorish-emirates",
+    "name": "ムーア人の首長国",
+    "region": "af",
+    "start": 1640,
+    "end": 1902,
+    "color": "#D8B86A",
+    "minor": true,
+    "territory": [
+      { "year": 1646, "contested": ["mauritania"], "note": "トラルザ・ブラクナなどの首長国" }
+    ],
+    "desc": "サハラ西部（現在のモーリタニア）のアラブ・ベルベル系の首長国（トラルザ・ブラクナなど）。20世紀初めにフランスに征服された。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "bambara",
+    "name": "バンバラ王国",
+    "region": "af",
+    "start": 1712,
+    "end": 1861,
+    "color": "#B8603A",
+    "minor": true,
+    "territory": [
+      { "year": 1712, "contested": ["mali"], "note": "セグーを都とする" }
+    ],
+    "desc": "ニジェール川中流のセグーを都としたバンバラ人の王国。1861年にトゥクロール帝国に滅ぼされた。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "toucouleur",
+    "name": "トゥクロール帝国",
+    "region": "af",
+    "start": 1848,
+    "end": 1893,
+    "color": "#9A4F8A",
+    "minor": true,
+    "territory": [
+      { "year": 1861, "contested": ["mali"], "note": "ハーッジ=ウマルがセグーを征服" }
+    ],
+    "desc": "ハーッジ=ウマルがジハード（聖戦）で建てたイスラーム国家。ニジェール川中流を支配したが、1893年にフランスに征服された。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "arma",
+    "name": "トンブクトゥのアルマ政権",
+    "region": "af",
+    "start": 1612,
+    "end": 1833,
+    "color": "#C08A4A",
+    "minor": true,
+    "territory": [
+      { "year": 1612, "contested": ["mali"], "note": "モロッコ軍の子孫がトンブクトゥを治める" }
+    ],
+    "desc": "ソンガイ王国を滅ぼしたモロッコ軍の子孫（アルマ）が、トンブクトゥなどニジェール川中流を治めた政権。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "denkyira",
+    "name": "アカン人の国（デンキラなど）",
+    "region": "af",
+    "start": 1620,
+    "end": 1701,
+    "color": "#D8B030",
+    "minor": true,
+    "territory": [
+      { "year": 1620, "add": ["gold-coast"], "note": "金の産地を支配" }
+    ],
+    "desc": "黄金海岸（現在のガーナ）のアカン人の国（デンキラなど）。金の交易で栄えたが、1701年にアシャンティ王国に敗れた。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "rabih",
+    "name": "ラービフの国",
+    "region": "af",
+    "start": 1893,
+    "end": 1900,
+    "color": "#8F6A4A",
+    "minor": true,
+    "territory": [
+      { "year": 1894, "add": ["chad", "bornu"], "note": "ボルヌーを征服" }
+    ],
+    "desc": "スーダン出身の軍人ラービフが、チャド湖の周辺を征服して建てた国。1900年にフランス軍に敗れた。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "comoros-s",
+    "name": "コモロの諸スルタン国",
+    "region": "af",
+    "start": 1500,
+    "end": 1912,
+    "color": "#3FAFA0",
+    "minor": true,
+    "territory": [
+      { "year": 1500, "add": ["comoros"] }
+    ],
+    "desc": "インド洋のコモロ諸島のスルタン国。19世紀にフランスの保護下に入った。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "island-states",
+    "name": "インド洋・大西洋の島国",
+    "region": "af",
+    "start": 1968,
+    "end": 2000,
+    "color": "#3F8FC0",
+    "minor": true,
+    "territory": [
+      { "year": 1968, "add": ["x-mus"], "note": "モーリシャスが独立" },
+      { "year": 1975, "add": ["x-cpv", "comoros"], "note": "カーボヴェルデ・コモロが独立" },
+      { "year": 1976, "add": ["x-syc"], "note": "セーシェルが独立" }
+    ],
+    "desc": "インド洋や大西洋の島国（モーリシャス・コモロ・セーシェル・カーボヴェルデ）。地図ではまとめて表示している。",
+    "hideInCards": true,
+    "noQuiz": true,
+    "importance": 1,
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false
+  },
+  {
+    "id": "hawaii-rep",
+    "name": "ハワイ共和国",
+    "region": "am",
+    "start": 1894,
+    "end": 1898,
+    "color": "#D46A6A",
+    "minor": true,
+    "territory": [
+      { "year": 1894, "add": ["hawaii"], "note": "王政を倒したアメリカ系住民の共和国" }
+    ],
+    "desc": "1893年に王政を倒したアメリカ系の住民が1894年に建てた共和国。1898年にアメリカに併合された。",
+    "hideInCards": true,
+    "noQuiz": true,
     "importance": 1,
     "uncertain": false,
     "memo": "",

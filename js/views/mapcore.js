@@ -120,7 +120,7 @@ export class ZoneMap {
     if (!this.svg) return;
     const db = this.db, y = this.year;
     this.owners = db.ownersAt(y);
-    const land = cssVar('--land') || '#E7E2D6', minor = cssVar('--minor') || '#D3CBBA';
+    const land = cssVar('--land') || '#E7E2D6';
     const keyOf = [];
     let hatch = '', dots = '';
     const s = this.scale();
@@ -130,7 +130,8 @@ export class ZoneMap {
       keyOf[i] = p ? p.id : '';
       let fill = land;
       if (p) {
-        const c = p.minor ? minor : polityColor(p);
+        // 小さな国もそれぞれの色で塗る（以前はすべて薄い灰色で、色がないように見えた）
+        const c = polityColor(p);
         fill = o.st === 'v' ? mix(c, land, 0.5) : c;
       }
       const el = this.paths[i];

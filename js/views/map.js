@@ -1,6 +1,6 @@
 // 勢力図の画面
 import { $, $$, esc, fmtYear, fmtSpan, yearText } from '../core/util.js';
-import { ZoneMap } from './mapcore.js';
+import { ZoneMap, polityColor } from './mapcore.js';
 import { badges, holdRepeat, openEvent } from './common.js';
 import { toast } from '../core/util.js';
 
@@ -56,7 +56,7 @@ export function render(app, el) {
 function drawLegend() {
   if (!state?.map?.clusters) return;
   const m = state.map, box = $('#mpLegend', state.el);
-  box.innerHTML = m.visiblePolities().filter(p => !p.minor).slice(0, 24).map(p => `<button type="button" data-p="${esc(p.id)}"><i style="background:${esc(p.color || '#ccc')}"></i>${esc(m.db.nameAt(p, m.year))}</button>`).join('') +
+  box.innerHTML = m.visiblePolities().slice(0, 24).map(p => `<button type="button" data-p="${esc(p.id)}"><i style="background:${esc(polityColor(p))}"></i>${esc(m.db.nameAt(p, m.year))}</button>`).join('') +
     '<span class="sym"><i class="v"></i>淡い色＝属国・従属地域</span><span class="sym"><i class="h"></i>斜線＝範囲が不確か・係争中</span>';
 }
 
