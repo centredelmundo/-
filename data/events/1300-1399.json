@@ -181,7 +181,8 @@
     "desc": "イギリスの長弓兵がフランスの騎士を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [1.88, 50.25]
   },
   {
     "id": "e1347a",
@@ -339,7 +340,8 @@
     "desc": "モスクワ大公の軍がキプチャク=ハン国の軍を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [38.65, 53.67]
   },
   {
     "id": "e1381a",
@@ -420,7 +422,8 @@
     "desc": "オスマン帝国がセルビアなどの連合軍を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [21.1, 42.7]
   },
   {
     "id": "e1392a",
@@ -457,7 +460,8 @@
     "desc": "オスマン帝国がヨーロッパの連合軍を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [24.89, 43.7]
   },
   {
     "id": "e1397a",

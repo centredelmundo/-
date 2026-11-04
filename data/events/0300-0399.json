@@ -212,7 +212,8 @@
     "desc": "西ゴート人がローマ軍を破り、皇帝ウァレンスが戦死した。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [26.56, 41.68]
   },
   {
     "id": "e380a",
@@ -239,7 +240,8 @@
     "desc": "華北を統一した前秦が東晋に大敗し、華北は再び分裂した。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [116.78, 32.57]
   },
   {
     "id": "e386a",

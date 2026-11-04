@@ -21,7 +21,8 @@
     "desc": "ゲルマン人がローマ軍を全滅させ、ローマはエルベ川までの征服をあきらめた。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [8.13, 52.41]
   },
   {
     "id": "e18a",

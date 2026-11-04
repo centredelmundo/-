@@ -1,6 +1,7 @@
 // 勢力図の描画。ゾーン（州・県のまとまり）を、その年の持ち主の色で塗る。
 // 国境は「隣り合うゾーンの持ち主がちがう境目」だけを線で引く。
 import { esc } from '../core/util.js';
+import { riverLayer, drawGeo } from './mapgeo.js';
 
 const NS = 'http://www.w3.org/2000/svg';
 const cache = new WeakMap();
@@ -87,9 +88,10 @@ export class ZoneMap {
       <rect x="-9000" y="-9000" width="21000" height="21000" style="fill:var(--sea)"/>
       <g class="zones">${zones}</g>
       <g class="hatch"></g><g class="dots"></g>
+      <g class="rivers">${this.opt.geo === false ? '' : riverLayer(this.db)}</g>
       <path class="coast" d="${this.P.coast}"/><path class="border"/><path class="sel"/>
-      <g class="labels"></g></svg>
-      ${this.opt.zoom === false ? '' : '<div class="map-zoom"><button type="button" data-z="in" aria-label="拡大">＋</button><button type="button" data-z="out" aria-label="縮小">−</button></div>'}
+      <g class="labels"></g><g class="geo"></g><g class="battles"></g></svg>
+      ${this.opt.zoom === false ? '' : `<div class="map-zoom"><button type="button" data-z="in" aria-label="拡大">＋</button><button type="button" data-z="out" aria-label="縮小">−</button>${this.opt.geo === false ? '' : `<button type="button" data-z="geo" class="geo-btn" aria-pressed="${this.geoOn()}" title="拡大したときに地名と戦いの場所を出す">地名</button>`}</div>`}
       ${this.opt.showYear ? '<div class="map-year"></div>' : ''}`;
     this.svg = this.box.querySelector('svg');
     this.paths = [...this.svg.querySelectorAll('.zone')].reduce((m, el) => (m[el.dataset.i] = el, m), {});
@@ -98,12 +100,16 @@ export class ZoneMap {
     this.pBorder = this.svg.querySelector('.border');
     this.pSel = this.svg.querySelector('.sel');
     this.gLabels = this.svg.querySelector('.labels');
+    this.gGeo = this.svg.querySelector('.geo');
+    this.gBattles = this.svg.querySelector('.battles');
     this.svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
     this.applyView();
     this.wire();
   }
 
   setYear(y) { this.year = y; this.render(); }
+  /** 地名・戦いの場所を出すか（地図の「地名」ボタンで切りかえ、設定に覚える） */
+  geoOn() { return this.opt.geo !== false && this.app.settings.mapPlaces !== false; }
   setView(name) { const v = this.Z?.views[name]; if (v) { this.vb = v.slice(); this.applyView(); this.drawLabels(); } }
   select(polityId) { this.selected = polityId; this.drawSelection(); }
 
@@ -189,6 +195,13 @@ export class ZoneMap {
       out += `<text class="lbl" x="${c.x}" y="${c.y}" font-size="${fs.toFixed(2)}" text-anchor="middle" dominant-baseline="central" style="stroke-width:${(2.8 / s).toFixed(2)}">${esc(name)}</text>`;
     }
     this.gLabels.innerHTML = out;
+    // 拡大したときの地名（都市・地方・海・川）と、前後5年の戦いの場所
+    if (this.opt.geo !== false) {
+      const g = drawGeo(this.db, { year: this.year, vb: v, scale: s, placed, on: this.geoOn() });
+      this.gGeo.innerHTML = g.labels;
+      this.gBattles.innerHTML = g.battles;
+      this.svg.dataset.geo = String(g.level);
+    }
   }
 
   drawSelection() {
@@ -227,7 +240,14 @@ export class ZoneMap {
     const svg = this.svg, pointers = new Map();
     let start = null, moved = false, pinch = null;
     this.box.querySelector('.map-zoom')?.addEventListener('click', e => {
-      const z = e.target.closest('[data-z]')?.dataset.z;
+      const b = e.target.closest('[data-z]'), z = b?.dataset.z;
+      if (z === 'geo') {
+        this.app.settings.mapPlaces = !this.geoOn(); this.app.saveSettings();
+        b.setAttribute('aria-pressed', String(this.geoOn()));
+        this.drawLabels();
+        if (this.geoOn() && this.svg.dataset.geo === '0') this.opt.onHint?.('地名と戦いの場所は、地図をもう少し拡大すると出ます');
+        return;
+      }
       if (z) this.zoomAt(z === 'in' ? 1.5 : 1 / 1.5);
     });
     svg.addEventListener('wheel', e => {
@@ -279,6 +299,11 @@ export class ZoneMap {
 
   pick(e) {
     const el = document.elementFromPoint(e.clientX, e.clientY);
+    const bt = el?.closest?.('[data-battle]');
+    if (bt) {
+      const ev = this.db.events.find(x => x.id === bt.dataset.battle);
+      if (ev) { this.opt.onBattle?.(ev); return; }
+    }
     const i = el?.closest?.('[data-i]')?.dataset.i;
     const z = i != null ? this.Z.zones[+i] : null;
     const o = z && this.owners.get(z.id);

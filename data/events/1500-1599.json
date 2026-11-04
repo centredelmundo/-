@@ -101,7 +101,8 @@
     "desc": "ポルトガルがマムルーク朝・グジャラートの連合艦隊を破り、インド洋の海上交易をにぎった",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [70.98, 20.71]
   },
   {
     "id": "e1509b",
@@ -203,7 +204,8 @@
     "desc": "オスマン帝国のセリム1世が鉄砲を使ってサファヴィー朝を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [44, 39.08]
   },
   {
     "id": "e1516a",
@@ -244,7 +246,8 @@
     "desc": "オスマン帝国がマムルーク朝を破り、シリアを得た",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [37.3, 36.53]
   },
   {
     "id": "e1517a",
@@ -404,7 +407,8 @@
     "desc": "バーブルがロディー朝を破り、ムガル帝国を建てた",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [76.97, 29.39]
   },
   {
     "id": "e1526b",
@@ -416,7 +420,8 @@
     "desc": "オスマン帝国のスレイマン1世がハンガリー王を戦死させた",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [18.68, 45.99]
   },
   {
     "id": "e1527a",
@@ -441,7 +446,8 @@
     "desc": "スレイマン1世がウィーンを包囲したが、攻略できなかった",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [16.37, 48.21]
   },
   {
     "id": "e1529b",
@@ -603,7 +609,8 @@
     "desc": "オスマン帝国の海軍がスペイン・ヴェネツィアなどの連合艦隊を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [20.6, 39.05]
   },
   {
     "id": "e1540a",
@@ -960,7 +967,8 @@
     "desc": "ヴィジャヤナガル王国がデカンのムスリム諸国の連合軍に大敗した",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [76.31, 16.47]
   },
   {
     "id": "e1567a",
@@ -1036,7 +1044,8 @@
     "desc": "スペイン・ヴェネツィアなどの連合艦隊がオスマン帝国の海軍を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [21.1, 38.28]
   },
   {
     "id": "e1571b",
@@ -1253,7 +1262,8 @@
     "desc": "イギリスがスペインの無敵艦隊を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [2.13, 50.99]
   },
   {
     "id": "e1589a",

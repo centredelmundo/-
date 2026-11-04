@@ -9,7 +9,8 @@
     "desc": "ティムールがオスマン帝国を破り、バヤジット1世を捕らえた",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [32.95, 40.1]
   },
   {
     "id": "e1402b",
@@ -89,7 +90,8 @@
     "desc": "ポーランド・リトアニア連合軍がドイツ騎士団を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [20.12, 53.48]
   },
   {
     "id": "e1414a",
@@ -165,7 +167,8 @@
     "desc": "神の声を聞いたという農民の娘がイギリス軍の包囲を破り、シャルル7世を戴冠させた",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [1.91, 47.9]
   },
   {
     "id": "e1429b",
@@ -246,7 +249,8 @@
     "desc": "オイラトのエセンが明の正統帝を捕らえた",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [115.47, 40.37]
   },
   {
     "id": "e1450a",
@@ -276,7 +280,8 @@
     "desc": "オスマン帝国がコンスタンティノープルを征服し、イスタンブルを都とした",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [28.95, 41.02]
   },
   {
     "id": "e1453b",
@@ -360,7 +365,8 @@
     "desc": "ブルゴーニュ公シャルルが戦死し、公国がフランスとハプスブルク家に分けられた",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [6.18, 48.69]
   },
   {
     "id": "e1478a",

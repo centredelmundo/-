@@ -56,7 +56,15 @@ async function lookup(spec, fetchImpl, width) {
   let file = p.file;
   if (p.article) {
     const d = await api(p.wiki, { action: 'query', prop: 'pageimages', piprop: 'name', pilicense: 'free', redirects: '1', titles: p.article }, fetchImpl);
-    file = d?.query?.pages?.[0]?.pageimage;
+    const page = d?.query?.pages?.[0];
+    file = page?.pageimage;
+    // 記事の名前が変わって見つからないとき（Wikipedia の記事は改名されることがある）は、
+    // 記事名で検索していちばん近い記事の代表画像を使う
+    if (!file && page?.missing) {
+      const q = p.article.replace(/[()（）]/g, ' ').replace(/\s+/g, ' ').trim();
+      const s = await api(p.wiki, { action: 'query', generator: 'search', gsrsearch: q, gsrlimit: '1', gsrnamespace: '0', prop: 'pageimages', piprop: 'name', pilicense: 'free' }, fetchImpl);
+      file = s?.query?.pages?.[0]?.pageimage;
+    }
     if (!file) return null;
   }
   const d = await api(p.wiki, {

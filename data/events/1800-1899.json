@@ -125,7 +125,8 @@
     "desc": "イギリス艦隊がフランス・スペイン連合艦隊を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [-6.2, 36.17]
   },
   {
     "id": "e1805c",
@@ -138,7 +139,8 @@
     "desc": "ナポレオンがロシア・オーストリア軍を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [16.76, 49.13]
   },
   {
     "id": "e1806a",
@@ -332,7 +334,8 @@
     "desc": "諸国の連合軍がナポレオンを破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [12.37, 51.34]
   },
   {
     "id": "e1813b",
@@ -384,7 +387,8 @@
     "desc": "ナポレオンが最終的に敗れ、セントヘレナ島に流された",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [4.4, 50.68]
   },
   {
     "id": "e1815b",
@@ -2024,6 +2028,8 @@
     "desc": "フランス人レセップスが建設した",
     "uncertain": false,
     "memo": "",
+    "image": "ja:スエズ運河",
+    "imageVerified": false,
     "descVerified": false
   },
   {
@@ -3023,7 +3029,8 @@
     "desc": "エチオピアがイタリア軍を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [38.9, 14.17]
   },
   {
     "id": "e1896b",
@@ -3207,6 +3214,20 @@
     "descVerified": false
   },
   {
+    "id": "e1827a",
+    "year": 1827,
+    "title": "ナヴァリノの海戦",
+    "answers": ["ナヴァリノ"],
+    "keywords": ["ギリシア独立戦争+海戦"],
+    "regions": ["ee", "wa"],
+    "importance": 1,
+    "desc": "イギリス・フランス・ロシアの連合艦隊がオスマン帝国・エジプトの艦隊を破り、ギリシアの独立を後押しした。",
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false,
+    "place": [21.67, 36.93]
+  },
+  {
     "id": "e1830i",
     "year": 1830,
     "title": "大コロンビアの解体",
@@ -3218,5 +3239,33 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false
+  },
+  {
+    "id": "e1863f",
+    "year": 1863,
+    "title": "ゲティスバーグの戦い",
+    "answers": ["ゲティスバーグ"],
+    "keywords": ["南北戦争+激戦"],
+    "regions": ["am"],
+    "importance": 2,
+    "desc": "南北戦争で最大の激戦。北軍が勝ち、戦いの流れが北軍に傾いた。",
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false,
+    "place": [-77.23, 39.81]
+  },
+  {
+    "id": "e1870c",
+    "year": 1870,
+    "title": "スダンの戦い",
+    "answers": ["セダンの戦い, スダン"],
+    "keywords": ["ナポレオン3世+捕虜"],
+    "regions": ["we", "ce"],
+    "importance": 1,
+    "desc": "ドイツ=フランス戦争で、ナポレオン3世がプロイセン軍に包囲されて降伏し、捕虜となった。第二帝政はこの敗北で崩れた。",
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false,
+    "place": [4.94, 49.7]
   }
 ]

@@ -21,6 +21,8 @@
     "desc": "唐の長安にならった都に移った",
     "uncertain": false,
     "memo": "",
+    "image": "ja:平城京",
+    "imageVerified": false,
     "descVerified": false
   },
   {
@@ -86,7 +88,8 @@
     "desc": "宮宰カール=マルテルがイスラーム軍を撃退した",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [0.5, 46.75]
   },
   {
     "id": "e744a",
@@ -123,7 +126,8 @@
     "desc": "唐軍がアッバース朝軍に敗れた。製紙法が西方に伝わるきっかけとなったとされる",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [71.8, 42.6]
   },
   {
     "id": "e751b",

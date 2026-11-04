@@ -62,7 +62,8 @@
     "desc": "キリスト教国の連合軍がムワッヒド朝を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [-3.6, 38.3]
   },
   {
     "id": "e1215a",
@@ -297,7 +298,8 @@
     "desc": "マムルーク朝がモンゴル軍を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [35.37, 32.55]
   },
   {
     "id": "e1260b",
@@ -550,5 +552,19 @@
     "uncertain": true,
     "memo": "1299年ごろ",
     "descVerified": false
+  },
+  {
+    "id": "e1241b",
+    "year": 1241,
+    "title": "ワールシュタットの戦い",
+    "answers": ["リーグニッツの戦い, レグニツァの戦い"],
+    "keywords": ["バトゥ+ポーランド"],
+    "regions": ["ce", "ee"],
+    "importance": 2,
+    "desc": "バトゥの率いるモンゴル軍が、ポーランド・ドイツの諸侯の連合軍を破った。",
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false,
+    "place": [16.16, 51.21]
   }
 ]

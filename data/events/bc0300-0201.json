@@ -116,7 +116,8 @@
     "desc": "秦が趙の大軍を破り、統一への道を開いた。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [112.9, 35.8]
   },
   {
     "id": "eb256a",
@@ -236,7 +237,8 @@
     "desc": "ハンニバルがローマの大軍を包囲して破った。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [16.13, 41.31]
   },
   {
     "id": "eb214a",
@@ -343,6 +345,21 @@
     "desc": "ローマの将軍スキピオが北アフリカでハンニバルを破り、第2回ポエニ戦争に勝った。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [9.33, 36.15]
+  },
+  {
+    "id": "eb202c",
+    "year": -202,
+    "title": "垓下の戦い",
+    "answers": ["垓下"],
+    "keywords": ["劉邦+項羽"],
+    "regions": ["cn"],
+    "importance": 2,
+    "desc": "劉邦が項羽を垓下で破り、漢による中国の再統一が決まった。「四面楚歌」の故事で知られる。",
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false,
+    "place": [117.5, 33.5]
   }
 ]

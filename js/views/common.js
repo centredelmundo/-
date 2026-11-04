@@ -68,7 +68,7 @@ export function renderCards(app, y, w) {
     const list = evs.length ? `<ul class="evs">${evs.map(e => evRow(e, y, w, links)).join('')}</ul>` : '';
     const empty = !all.length && !evs.length ? '<div class="empty">この期間のデータなし</div>' : '';
     const closed = (s.collapsed || []).includes(reg.id);
-    const head = `<h3><button type="button" class="rc-toggle" data-fold="${reg.id}" aria-expanded="${!closed}" title="タップで出来事を${closed ? '開く' : '閉じる'}"><span>${esc(reg.name)}${reg.reference ? '（参考）' : ''}</span><em>${evs.length ? '出来事 ' + evs.length + '件' : '出来事なし'}<i class="chev" aria-hidden="true"></i></em></button></h3>`;
+    const head = `<h3><a class="rc-name" href="#history/${reg.id}" title="${esc(reg.name)}の歴史を、出来事ごとに縦に見る">${esc(reg.name)}${reg.reference ? '（参考）' : ''}<i class="rc-go" aria-hidden="true"></i></a><button type="button" class="rc-toggle" data-fold="${reg.id}" aria-expanded="${!closed}" title="タップで出来事を${closed ? '開く' : '閉じる'}"><em>${evs.length ? '出来事 ' + evs.length + '件' : '出来事なし'}<i class="chev" aria-hidden="true"></i></em></button></h3>`;
     return `<article class="rc${closed ? ' closed' : ''}" data-region="${reg.id}">${head}${dyn}${list}${empty}</article>`;
   }).join('');
 }

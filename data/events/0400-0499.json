@@ -235,7 +235,8 @@
     "desc": "西ローマ帝国と西ゴートなどの連合軍が、フン人のアッティラを破った。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [4.36, 48.96]
   },
   {
     "id": "e451b",

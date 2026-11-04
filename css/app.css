@@ -5,6 +5,7 @@
   --ai: #2B4B8C; --ai-soft: #E2E8F4; --shu: #CC4128; --shu-soft: #FAE4DD;
   --ok: #2C7549; --ok-soft: #DDEFE3; --warn: #985A0E; --warn-soft: #FAEBD0; --bad: #B0372A; --bad-soft: #F7DED9;
   --sea: #D9E3E9; --land: #E7E2D6; --map-line: #FFFFFF; --minor: #D3CBBA;
+  --river: #6E9CC4; --river-ink: #3E6E98; --geo-ink: #3B3F47; --geo-region: #6B6458; --geo-sea: #5B7A93; --geo-halo: rgb(255 255 255 / .8); --battle: #B4472E; --battle-ink: #8E2F1C;
   --heat-0: #E6E8E2; --heat-1: #F5D9D0; --heat-2: #EDB09F; --heat-3: #DE7D63; --heat-4: #C9472C;
   --shadow: 0 1px 2px rgb(28 34 48 / .06), 0 10px 28px rgb(28 34 48 / .1);
   --f-display: "Shippori Mincho B1", "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
@@ -23,6 +24,7 @@
     --ai: #9DB7F2; --ai-soft: #23314E; --shu: #FF7C5F; --shu-soft: #3B2520;
     --ok: #72C795; --ok-soft: #1B3325; --warn: #E6AC5C; --warn-soft: #3A2D17; --bad: #F2887A; --bad-soft: #3B201D;
     --sea: #1C2830; --land: #3A3832; --map-line: #15181D; --minor: #575246;
+    --river: #4F7FA6; --river-ink: #93B9DA; --geo-ink: #D8D4CB; --geo-region: #B8AE9C; --geo-sea: #8FAAC0; --geo-halo: rgb(18 21 26 / .8); --battle: #D2593C; --battle-ink: #F0A08B;
     --heat-0: #262B34; --heat-1: #3E2823; --heat-2: #6B3528; --heat-3: #A4462F; --heat-4: #E86448;
     --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 10px 28px rgb(0 0 0 / .35);
     color-scheme: dark;
@@ -34,6 +36,7 @@
   --ai: #9DB7F2; --ai-soft: #23314E; --shu: #FF7C5F; --shu-soft: #3B2520;
   --ok: #72C795; --ok-soft: #1B3325; --warn: #E6AC5C; --warn-soft: #3A2D17; --bad: #F2887A; --bad-soft: #3B201D;
   --sea: #1C2830; --land: #3A3832; --map-line: #15181D; --minor: #575246;
+  --river: #4F7FA6; --river-ink: #93B9DA; --geo-ink: #D8D4CB; --geo-region: #B8AE9C; --geo-sea: #8FAAC0; --geo-halo: rgb(18 21 26 / .8); --battle: #D2593C; --battle-ink: #F0A08B;
   --heat-0: #262B34; --heat-1: #3E2823; --heat-2: #6B3528; --heat-3: #A4462F; --heat-4: #E86448;
   --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 10px 28px rgb(0 0 0 / .35);
   color-scheme: dark;
@@ -186,7 +189,32 @@ main#view { min-height: calc(100vh - var(--appbar-h)); }
 .rc .dyn-minor { font-size: 12px; color: var(--ink-3); line-height: 1.5; margin-top: 2px; }
 .rc .dyn-minor span { cursor: pointer; }
 .rc h3 { margin-left: -4px; margin-right: -4px; }
-.rc-toggle { all: unset; box-sizing: border-box; width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 6px; cursor: pointer; padding: 2px 4px; border-radius: 6px; }
+.rc-toggle { all: unset; box-sizing: border-box; flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 6px; cursor: pointer; padding: 2px 4px; border-radius: 6px; }
+.rc h3 { align-items: center; }
+.rc-name { display: inline-flex; align-items: center; gap: 4px; padding: 2px 4px; border-radius: 6px; color: var(--ai); text-decoration: none; white-space: nowrap; }
+.rc-name:hover { background: var(--surface-2); }
+.rc-name:focus-visible { outline: 2px solid var(--ai); outline-offset: 1px; }
+.rc-go { display: inline-block; width: 5px; height: 5px; border-right: 1.5px solid currentColor; border-top: 1.5px solid currentColor; transform: rotate(45deg); margin-left: 1px; }
+/* 地域の歴史（縦に見る） */
+.hv-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.hv-top .page-title { margin: 0; }
+.hv-filters { gap: 10px; flex-wrap: wrap; margin: 10px 0 4px; }
+.hv-cent { margin-top: 14px; }
+.hv-h { position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--appbar-h)); z-index: 2; background: var(--bg); display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; font-family: var(--f-display); font-size: 18px; padding: 6px 0 4px; border-bottom: 1px solid var(--line); }
+.hv-h small { font-family: var(--f-body); font-size: 12px; font-weight: 400; color: var(--ink-3); }
+.hv-list { list-style: none; margin: 0; padding: 4px 0 0 14px; border-left: 2px solid var(--line); margin-left: 6px; }
+.hv-ev { position: relative; display: grid; grid-template-columns: 4.4em minmax(0, 1fr); gap: 8px; padding: 6px 6px 6px 2px; border-radius: 8px; cursor: pointer; font-size: 14px; line-height: 1.5; }
+.hv-ev::before { content: ""; position: absolute; left: -20px; top: 13px; width: 8px; height: 8px; border-radius: 50%; background: var(--surface); border: 2px solid var(--ink-3); }
+.hv-ev.big::before { background: var(--ai); border-color: var(--ai); }
+.hv-ev:hover { background: var(--surface-2); }
+.hv-ev:focus-visible { outline: 2px solid var(--ai); }
+.hv-ev .y { font-family: var(--f-display); font-weight: 800; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.hv-ev .y small { display: block; font-size: .72em; font-weight: 600; color: var(--ink-3); }
+.hv-ev .t .term { font-weight: 700; }
+.hv-ev.big .t .term { color: var(--ink); }
+.hv-ev .t .d { display: block; font-size: 12.5px; color: var(--ink-3); margin-top: 1px; }
+.hv-now { position: relative; margin: 6px 0; padding: 4px 8px; font-size: 12.5px; font-weight: 700; color: var(--shu); border-top: 2px dashed var(--shu); list-style: none; }
+.hv-now::before { content: ""; position: absolute; left: -22px; top: -6px; width: 10px; height: 10px; border-radius: 50%; background: var(--shu); }
 .rc-toggle:hover { background: var(--surface-2); }
 .rc-toggle:focus-visible { outline: 2px solid var(--ai); outline-offset: 1px; }
 .rc-toggle em { display: inline-flex; align-items: center; gap: 6px; }
@@ -250,6 +278,23 @@ details.more > summary { cursor: pointer; font-size: 13.5px; color: var(--ink-2)
 .mapbox .sel { fill: none; stroke: var(--shu); stroke-width: 2.4; vector-effect: non-scaling-stroke; pointer-events: none; }
 .map-zoom { position: absolute; right: 8px; top: 8px; display: grid; gap: 4px; }
 .map-zoom button { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font-size: 18px; line-height: 1; cursor: pointer; box-shadow: 0 1px 3px rgb(0 0 0 / .12); }
+.map-zoom .geo-btn { font-size: 10px; font-weight: 700; letter-spacing: -.04em; color: var(--ink-3); padding: 0; white-space: nowrap; }
+.map-zoom .geo-btn[aria-pressed="true"] { color: var(--ai); border-color: var(--ai); }
+/* 拡大したときの地名・川・戦い（国名より控えめに） */
+.mapbox .river { fill: none; stroke: var(--river); stroke-width: 1.1; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; opacity: .75; pointer-events: none; display: none; }
+.mapbox svg[data-geo="1"] .river.r1, .mapbox svg[data-geo="2"] .river.r1, .mapbox svg[data-geo="2"] .river.r2, .mapbox svg[data-geo="3"] .river { display: inline; }
+.mapbox .geo { fill: var(--geo-ink); stroke: var(--geo-halo); paint-order: stroke; font-family: var(--f-body); pointer-events: none; }
+.mapbox .geo.city { font-weight: 600; }
+.mapbox .geo.city.r1 { font-weight: 700; }
+.mapbox .geo.region { fill: var(--geo-region); font-weight: 600; }
+.mapbox .geo.sea { fill: var(--geo-sea); font-style: italic; font-weight: 600; }
+.mapbox .geo.river { fill: var(--river-ink); font-style: italic; font-weight: 600; display: inline; }
+.mapbox .city-dot { fill: var(--geo-ink); stroke: var(--geo-halo); stroke-width: .6; vector-effect: non-scaling-stroke; pointer-events: none; }
+.mapbox .battle { cursor: pointer; }
+.mapbox .battle .hit { fill: transparent; }
+.mapbox .battle .bg { fill: var(--battle); stroke: #fff; stroke-width: 1.4; }
+.mapbox .battle .x { stroke: #fff; stroke-width: 1.8; stroke-linecap: round; fill: none; }
+.mapbox .battle text { fill: var(--battle-ink); stroke: var(--geo-halo); stroke-width: 2.6px; paint-order: stroke; font-family: var(--f-body); font-weight: 700; }
 .map-year { position: absolute; left: 10px; bottom: 8px; font-family: var(--f-display); font-weight: 800; font-size: 22px; color: #1b1f27; text-shadow: 0 0 4px rgb(255 255 255 / .9); pointer-events: none; }
 .legend { display: flex; flex-wrap: wrap; gap: 3px 12px; font-size: 12px; color: var(--ink-2); line-height: 1.5; }
 .legend button { display: inline-flex; align-items: center; gap: 5px; border: 0; background: none; padding: 0; cursor: pointer; color: inherit; font-size: inherit; }

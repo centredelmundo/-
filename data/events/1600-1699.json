@@ -22,7 +22,8 @@
     "desc": "徳川家康が石田三成らを破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [136.46, 35.36]
   },
   {
     "id": "e1600c",
@@ -313,7 +314,8 @@
     "desc": "後金が明の大軍を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [124.1, 41.85]
   },
   {
     "id": "e1619c",
@@ -351,7 +353,8 @@
     "desc": "ベーメンの新教徒が皇帝軍に敗れた",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [14.32, 50.08]
   },
   {
     "id": "e1620c",
@@ -512,7 +515,8 @@
     "desc": "スウェーデン王グスタフ=アドルフが戦死した",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [12.14, 51.26]
   },
   {
     "id": "e1632b",
@@ -1301,7 +1305,8 @@
     "desc": "オスマン帝国軍がウィーンを包囲して失敗した",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [16.37, 48.21]
   },
   {
     "id": "e1683b",

@@ -102,7 +102,8 @@
     "desc": "晋が楚を破り、晋の君主が覇者となった。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [115.5, 35.6]
   },
   {
     "id": "eb621a",

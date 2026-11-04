@@ -1,5 +1,19 @@
 [
   {
+    "id": "e200a",
+    "year": 200,
+    "title": "官渡の戦い",
+    "answers": ["官渡"],
+    "keywords": ["曹操+袁紹"],
+    "regions": ["cn"],
+    "importance": 1,
+    "desc": "曹操が袁紹を破り、華北の支配を固めた。",
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false,
+    "place": [114, 34.7]
+  },
+  {
     "id": "e208a",
     "year": 208,
     "title": "赤壁の戦い",
@@ -9,7 +23,8 @@
     "desc": "華北を統一した曹操が、孫権・劉備の連合軍に長江で敗れ、天下が三つに分かれる形が定まった。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [113.62, 29.86]
   },
   {
     "id": "e212a",
@@ -143,7 +158,8 @@
     "desc": "ササン朝がローマ軍を破り、皇帝ウァレリアヌスを捕虜にした。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [38.79, 37.16]
   },
   {
     "id": "e263a",

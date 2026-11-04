@@ -79,7 +79,8 @@
     "desc": "金が都の開封を落とし、上皇の徽宗と皇帝の欽宗を連れ去った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [114.31, 34.8]
   },
   {
     "id": "e1127a",
@@ -221,7 +222,8 @@
     "desc": "北イタリアの都市同盟が皇帝の軍を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [8.92, 45.6]
   },
   {
     "id": "e1185a",
@@ -300,7 +302,8 @@
     "desc": "ゴール朝のムハンマドがラージプートの諸侯を破り、北インドへの進出を決定づけた",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [76.93, 29.79]
   },
   {
     "id": "e1194a",
@@ -341,5 +344,19 @@
     "image": "ja:クトゥブ・ミナール",
     "imageVerified": false,
     "descVerified": false
+  },
+  {
+    "id": "e1187b",
+    "year": 1187,
+    "title": "ハッティーンの戦い",
+    "answers": ["ヒッティーンの戦い"],
+    "keywords": ["サラーフ=アッディーン+十字軍"],
+    "regions": ["wa"],
+    "importance": 2,
+    "desc": "サラーフ=アッディーンが十字軍の軍を破り、同じ年にイェルサレムを奪回した。",
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false,
+    "place": [35.45, 32.8]
   }
 ]

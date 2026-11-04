@@ -37,6 +37,7 @@ export const DEFAULT_SETTINGS = {
   collapsed: [],         // ヨコ年表で出来事を閉じている地域ID
   mapView: 'auto',
   ichTimeline: true,     // 一問一答（読み込んだデータ）の年号のある問題を年表に出す
+  mapPlaces: true,       // 勢力図を拡大したときに地名・戦いの場所を出す
   quiz: { from: null, to: null, count: 10, modes: ['cross', 'ruler', 'year', 'term', 'order', 'choice'], minImportance: 1, cultureOnly: false, groups: [], ichChapters: [] }
 };
 

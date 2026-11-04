@@ -81,7 +81,8 @@
     "desc": "テーベがスパルタを破り、一時ギリシアの覇権をにぎった。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [23.17, 38.26]
   },
   {
     "id": "eb367a",
@@ -133,7 +134,8 @@
     "desc": "マケドニアがアテネ・テーベの連合軍を破り、翌年コリントス同盟を結んでギリシアを支配下に置いた。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [22.84, 38.5]
   },
   {
     "id": "eb335a",
@@ -175,7 +177,8 @@
     "desc": "マケドニア軍が小アジア南東部で、ペルシア王の率いる軍を破った。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [36.2, 36.84]
   },
   {
     "id": "eb331a",
@@ -187,7 +190,8 @@
     "desc": "マケドニア軍がメソポタミア北部でペルシア軍を破り、アケメネス朝の支配は崩れた。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [43.3, 36.4]
   },
   {
     "id": "eb330a",
@@ -286,6 +290,7 @@
     "desc": "後継者たちの争いの決戦で、帝国の分裂が決まった。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [30.9, 38.6]
   }
 ]

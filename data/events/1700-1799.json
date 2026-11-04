@@ -85,7 +85,8 @@
     "desc": "ロシアがスウェーデンを破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [34.55, 49.59]
   },
   {
     "id": "e1713a",
@@ -559,7 +560,8 @@
     "desc": "イギリス東インド会社のクライヴがフランスと結んだベンガル太守を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [88.25, 23.8]
   },
   {
     "id": "e1757b",
@@ -854,7 +856,10 @@
     "desc": "レキシントン・コンコードの戦いで始まった",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [
+      [-71.23, 42.45, "レキシントン・コンコードの戦い"]
+    ]
   },
   {
     "id": "e1776a",
@@ -939,7 +944,8 @@
     "desc": "植民地軍とフランス軍がイギリス軍を降伏させた",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [-76.51, 37.24]
   },
   {
     "id": "e1781b",
@@ -1391,5 +1397,19 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false
+  },
+  {
+    "id": "e1777a",
+    "year": 1777,
+    "title": "サラトガの戦い",
+    "answers": ["サラトガ"],
+    "keywords": ["独立戦争+フランス"],
+    "regions": ["am"],
+    "importance": 1,
+    "desc": "アメリカ独立戦争で植民地軍がイギリス軍を降伏させた。これをきっかけに、翌年フランスが植民地側で参戦した。",
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false,
+    "place": [-73.65, 43]
   }
 ]

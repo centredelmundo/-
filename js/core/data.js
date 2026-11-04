@@ -98,16 +98,20 @@ export class DB {
     const manifest = await fetchJson(base, 'manifest.json');
     this.manifest = manifest;
     const files = {
-      config: manifest.config, regions: manifest.regions, zones: manifest.zones,
+      config: manifest.config, regions: manifest.regions, zones: manifest.zones, places: manifest.places, rivers: manifest.rivers,
       polities: asArray(manifest.polities), rulers: asArray(manifest.rulers), events: asArray(manifest.events)
     };
     const get = async f => { try { return await fetchJson(base, f); } catch (e) { this.errors.push(e.message); return null; } };
-    const [config, regions, zones, polities, rulers, events] = await Promise.all([
+    const [config, regions, zones, polities, rulers, events, places, rivers] = await Promise.all([
       get(files.config), get(files.regions), files.zones ? get(files.zones) : null,
       Promise.all(files.polities.map(f => get(f).then(d => ({ f, d })))),
       Promise.all(files.rulers.map(f => get(f).then(d => ({ f, d })))),
-      Promise.all(files.events.map(f => get(f).then(d => ({ f, d }))))
+      Promise.all(files.events.map(f => get(f).then(d => ({ f, d })))),
+      // 拡大したときの地名と川（なくても動く）
+      files.places ? get(files.places) : null, files.rivers ? get(files.rivers) : null
     ]);
+    this.places = places;
+    this.rivers = rivers;
     this.config = config || { range: [1500, 2000], defaultYear: 1648, windows: [3, 5, 10, 25], defaultWindow: 5 };
     this.regions = (regions?.regions || []).map(r => ({ ...r }));
     this.groups = regions?.groups || [];

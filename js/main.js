@@ -13,8 +13,9 @@ import * as quiz from './views/quiz.js';
 import * as review from './views/review.js';
 import * as datacheck from './views/datacheck.js';
 import * as settingsView from './views/settings.js';
+import * as historyView from './views/history.js';
 
-const VIEWS = { timeline, map: mapView, quiz, review, data: datacheck, settings: settingsView };
+const VIEWS = { timeline, map: mapView, quiz, review, data: datacheck, settings: settingsView, history: historyView };
 const TABS = [['timeline', 'ヨコ年表', ICON.timeline], ['map', '勢力図', ICON.map], ['quiz', 'クイズ', ICON.quiz], ['review', '復習', ICON.review]];
 
 const saveSoon = debounce(() => saveSettings(app.settings), 400);
@@ -80,12 +81,13 @@ function route() {
   }
   if (app.current && VIEWS[app.current]?.destroy) VIEWS[app.current].destroy();
   app.current = key;
-  $$('[data-tab]').forEach(a => a.classList.toggle('on', a.dataset.tab === key));
+  // 地域の歴史はヨコ年表から開く画面なので、ヨコ年表のタブを選んだままにする
+  $$('[data-tab]').forEach(a => a.classList.toggle('on', a.dataset.tab === (key === 'history' ? 'timeline' : key)));
   const el = $('#view');
   el.innerHTML = '';
   window.scrollTo(0, 0);
   try {
-    VIEWS[key].render(app, el, key === 'data' ? param : undefined);
+    VIEWS[key].render(app, el, key === 'data' || key === 'history' ? param : undefined);
   } catch (err) {
     console.error(err);
     el.innerHTML = `<div class="page narrow"><div class="notice err">画面を表示できませんでした：${esc(err.message)}</div></div>`;

@@ -4,5 +4,7 @@
   "polities": ["polities-ancient.json", "polities-0500-1499.json", "polities.json"],
   "rulers": ["rulers-ancient.json", "rulers-0500-1499.json", "rulers.json"],
   "events": ["events/bc0800-0701.json", "events/bc0700-0601.json", "events/bc0600-0501.json", "events/bc0500-0401.json", "events/bc0400-0301.json", "events/bc0300-0201.json", "events/bc0200-0101.json", "events/bc0100-0001.json", "events/0001-0099.json", "events/0100-0199.json", "events/0200-0299.json", "events/0300-0399.json", "events/0400-0499.json", "events/0500-0599.json", "events/0600-0699.json", "events/0700-0799.json", "events/0800-0899.json", "events/0900-0999.json", "events/1000-1099.json", "events/1100-1199.json", "events/1200-1299.json", "events/1300-1399.json", "events/1400-1499.json", "events/1500-1599.json", "events/1600-1699.json", "events/1700-1799.json", "events/1800-1899.json", "events/1900-2000.json"],
-  "zones": "map/zones.json"
+  "zones": "map/zones.json",
+  "places": "map/places.json",
+  "rivers": "map/rivers.json"
 }

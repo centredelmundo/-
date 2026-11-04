@@ -144,7 +144,8 @@
     "desc": "セルジューク朝がガズナ朝を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [61.5, 37.3]
   },
   {
     "id": "e1044a",
@@ -264,7 +265,8 @@
     "desc": "セルジューク朝がビザンツ帝国を破り、アナトリアにトルコ人が進出した",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [42.53, 39.14]
   },
   {
     "id": "e1076a",

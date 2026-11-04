@@ -712,7 +712,8 @@
     "desc": "ドイツ軍がロシア軍を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [20.18, 53.6]
   },
   {
     "id": "e1914c",
@@ -723,7 +724,8 @@
     "desc": "フランス軍がドイツ軍の進撃を止め、西部戦線は塹壕戦になった",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [3.4, 48.9]
   },
   {
     "id": "e1914d",
@@ -733,6 +735,8 @@
     "importance": 2,
     "uncertain": false,
     "memo": "",
+    "image": "ja:パナマ運河",
+    "imageVerified": false,
     "descVerified": false,
     "desc": "大西洋と太平洋を結ぶ運河が開通した。アメリカが管理した。"
   },
@@ -823,7 +827,11 @@
     "desc": "西部戦線の激戦。ソンムで戦車が初めて使われた",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [
+      [5.39, 49.16, "ヴェルダンの戦い"],
+      [2.7, 49.97, "ソンムの戦い"]
+    ]
   },
   {
     "id": "e1916c",
@@ -2324,7 +2332,10 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "日本がハワイの真珠湾を攻撃し、アメリカ・イギリスとの戦争が始まった。"
+    "desc": "日本がハワイの真珠湾を攻撃し、アメリカ・イギリスとの戦争が始まった。",
+    "place": [
+      [-157.95, 21.36, "真珠湾攻撃"]
+    ]
   },
   {
     "id": "e1942a",
@@ -2336,7 +2347,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ソ連軍がドイツ軍を包囲して降伏させた戦い。独ソ戦の転換点となった。"
+    "desc": "ソ連軍がドイツ軍を包囲して降伏させた戦い。独ソ戦の転換点となった。",
+    "place": [44.52, 48.71]
   },
   {
     "id": "e1942b",
@@ -2348,7 +2360,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "日本海軍が主力の空母を失った戦い。太平洋戦争の転換点となった。"
+    "desc": "日本海軍が主力の空母を失った戦い。太平洋戦争の転換点となった。",
+    "place": [-177.37, 28.21]
   },
   {
     "id": "e1943a",
@@ -2431,7 +2444,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "アイゼンハワーの指揮する連合軍が北フランスに上陸した作戦。"
+    "desc": "アイゼンハワーの指揮する連合軍が北フランスに上陸した作戦。",
+    "place": [-0.6, 49.35]
   },
   {
     "id": "e1944d",
@@ -3530,6 +3544,8 @@
     "importance": 3,
     "uncertain": false,
     "memo": "",
+    "image": "ja:ベルリンの壁",
+    "imageVerified": false,
     "descVerified": false,
     "desc": "西側への人口の流出を防ぐため、東ドイツが東西ベルリンの境界を封鎖した。"
   },
@@ -5110,6 +5126,19 @@
     "desc": "総統選挙で民主進歩党の陳水扁が当選し、国民党の長い統治が終わった。"
   },
   {
+    "id": "e1905m",
+    "year": 1905,
+    "title": "日本海海戦",
+    "keywords": ["日露戦争+バルチック艦隊"],
+    "regions": ["jp", "ee"],
+    "importance": 1,
+    "desc": "日露戦争で、日本の連合艦隊がロシアのバルチック艦隊を対馬沖で破った。",
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false,
+    "place": [129.5, 34.6]
+  },
+  {
     "id": "e1918g",
     "year": 1918,
     "title": "バルト3国の成立",
@@ -5120,6 +5149,20 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false
+  },
+  {
+    "id": "e1942c",
+    "year": 1942,
+    "title": "エル=アラメインの戦い",
+    "answers": ["エル・アラメインの戦い"],
+    "keywords": ["北アフリカ+ドイツ"],
+    "regions": ["wa", "we"],
+    "importance": 1,
+    "desc": "エジプト西部でイギリス軍がドイツ・イタリア軍を破り、北アフリカ戦線の転機となった。",
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false,
+    "place": [28.95, 30.83]
   },
   {
     "id": "e1952c",
@@ -5135,6 +5178,20 @@
     "uncertain": true,
     "memo": "1952年の非常事態宣言から1956年ごろまで",
     "descVerified": false
+  },
+  {
+    "id": "e1954e",
+    "year": 1954,
+    "title": "ディエンビエンフーの戦い",
+    "answers": ["ディエンビエンフー"],
+    "keywords": ["インドシナ戦争+フランス"],
+    "regions": ["sea", "we"],
+    "importance": 2,
+    "desc": "ベトナム民主共和国軍がフランス軍の拠点ディエンビエンフーを陥落させた。フランスはインドシナから退くことになり、ジュネーヴ休戦協定が結ばれた。",
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false,
+    "place": [103.02, 21.39]
   },
   {
     "id": "e1958f",

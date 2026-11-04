@@ -78,6 +78,8 @@
     "desc": "華北と江南を結ぶ運河が完成し、南北の物流が盛んになった",
     "uncertain": true,
     "memo": "完成の年は610年とされる",
+    "image": "ja:京杭大運河",
+    "imageVerified": false,
     "descVerified": false
   },
   {
@@ -236,7 +238,8 @@
     "desc": "アラブ軍がビザンツ軍を破り、シリアを征服した",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [35.95, 32.75]
   },
   {
     "id": "e641a",
@@ -261,7 +264,8 @@
     "desc": "アラブ軍がササン朝の軍を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [48.37, 34.19]
   },
   {
     "id": "e642b",
@@ -353,7 +357,8 @@
     "desc": "百済の復興を助けた倭（日本）の軍が、唐・新羅の軍に敗れた",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [126.7, 36]
   },
   {
     "id": "e668a",
@@ -407,7 +412,8 @@
     "desc": "アリーの子フサインがウマイヤ朝の軍に殺された。シーア派ができる大きなきっかけとなった",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [44.03, 32.61]
   },
   {
     "id": "e681a",

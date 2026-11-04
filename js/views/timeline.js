@@ -1,5 +1,5 @@
 // ヨコ年表：年を選ぶと、同じ年の各地域の王朝・出来事が並ぶ
-import { $, $$, esc, fmtYear, debounce, clamp } from '../core/util.js';
+import { $, $$, esc, fmtYear, debounce, clamp, toast } from '../core/util.js';
 import { base } from '../core/normalize.js';
 import { renderCards, densitySvg, ganttSvg, openEvent, openPolity, openIchimon, wireSheet, holdRepeat, ICON } from './common.js';
 import { ZoneMap } from './mapcore.js';
@@ -48,7 +48,7 @@ export function render(app, el) {
         <div class="legend" id="tlLegend"></div>
       </div>
       <div class="cards-col">
-        <div class="fold-bar"><span class="fold-hint">地域名をタップすると出来事を開閉</span><button class="btn small" type="button" data-fold-all="open">すべて開く</button><button class="btn small" type="button" data-fold-all="close">すべて閉じる</button></div>
+        <div class="fold-bar"><span class="fold-hint">地域名をタップするとその地域の歴史を縦に表示・「出来事 ◯件」で開閉</span><button class="btn small" type="button" data-fold-all="open">すべて開く</button><button class="btn small" type="button" data-fold-all="close">すべて閉じる</button></div>
         <div class="cards wide" id="tlCards"></div>
       </div>
     </div>
@@ -113,6 +113,8 @@ export function render(app, el) {
     state.map = new ZoneMap(app, $('#tlMap', el), {
       view, showYear: true, fontSize: 11.5,
       onSelect: p => { if (p) openPolity(app, p, app.year); },
+      onBattle: ev => openEvent(app, ev),
+      onHint: msg => toast(msg),
       onRender: m => drawLegend(m)
     });
     $$('#tlViews .chip', el).forEach(c => {
@@ -204,7 +206,8 @@ function wireSearch(app, input, box) {
     const q = base(input.value);
     if (!q) { box.hidden = true; return; }
     items = [];
-    for (const e of db.events) if ([e.title, ...e.answers].some(t => base(t).includes(q))) items.push({ y: e.year, label: e.title, kind: '出来事', ev: e });
+    for (const e of db.events) if ([e.title, ...e.answers].some(t => base(t).includes(q))) items.push({ y: e.year, label: e.title, kind: e.image ? '写真' : '出来事', ev: e });
+    items.sort((a, b) => (b.kind === '写真') - (a.kind === '写真'));
     for (const r of db.rulers) if ([r.name, ...r.aliases].some(t => base(t).includes(q))) items.push({ y: r.from, label: `${r.name}（${r.from}〜${r.to}）`, kind: '人物' });
     for (const p of db.polities) if ([p.name, ...p.aliases].some(t => base(t).includes(q))) items.push({ y: p.start, label: `${p.name}（${fmtYear(p.start)}〜${fmtYear(p.end)}）`, kind: '王朝・国家' });
     items = items.slice(0, 30); idx = -1;
@@ -216,6 +219,8 @@ function wireSearch(app, input, box) {
     box.hidden = true; input.blur();
     if (state && it.ev) state.hit = it.ev.id;
     app.setYear(it.y);
+    // 作品・建築など写真のあるものは、詳細（写真つき）をそのまま開く
+    if (it.ev?.image) openEvent(app, it.ev);
   };
   input.addEventListener('input', show);
   input.addEventListener('keydown', e => {

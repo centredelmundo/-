@@ -1,7 +1,8 @@
 // 勢力図の画面
 import { $, $$, esc, fmtYear, fmtSpan, yearText } from '../core/util.js';
 import { ZoneMap } from './mapcore.js';
-import { badges, holdRepeat } from './common.js';
+import { badges, holdRepeat, openEvent } from './common.js';
+import { toast } from '../core/util.js';
 
 let state = null;
 
@@ -22,7 +23,7 @@ export function render(app, el) {
     <div class="map-layout">
       <div class="mapbox" id="mpMap"></div>
       <div class="map-side">
-        <div class="panel info" id="mpInfo"><p class="muted small">地図の国をタップすると、その年の王朝・君主と出来事が出ます。二本指（PCはホイール）で拡大できます。</p></div>
+        <div class="panel info" id="mpInfo"><p class="muted small">地図の国をタップすると、その年の王朝・君主と出来事が出ます。二本指（PCはホイール）で拡大すると、その時代の都市・地方・川の名前と、前後5年の戦いの場所（✕印。タップで説明）が出ます。</p></div>
         <div class="panel"><div class="sec-title" style="margin-bottom:6px"><span>この範囲の勢力</span></div><div class="legend" id="mpLegend"></div></div>
         <p class="small muted">勢力図は概略です。境界は現代の州・県の境界を組み合わせた近似で、斜線は範囲が不確かな所・係争中の所です。地図データ：Natural Earth（パブリックドメイン）。</p>
       </div>
@@ -32,6 +33,8 @@ export function render(app, el) {
   state.map = new ZoneMap(app, $('#mpMap', el), {
     view, fontSize: isMobile ? 11 : 12.5,
     onSelect: p => { state.selected = p; showInfo(); },
+    onBattle: ev => openEvent(app, ev),
+    onHint: msg => toast(msg),
     onRender: () => drawLegend()
   });
   $('#mpRange', el).addEventListener('input', e => app.setYear(Number(e.target.value), { fromSlider: true }));

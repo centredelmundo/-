@@ -91,7 +91,8 @@
     "desc": "アテネの重装歩兵が、アッティカに上陸したペルシア軍を破った。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [23.97, 38.15]
   },
   {
     "id": "eb480a",
@@ -104,7 +105,8 @@
     "desc": "スパルタ王の率いる少数の部隊が、ペルシアの大軍を相手に全滅するまで戦った。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [22.54, 38.8]
   },
   {
     "id": "eb480b",
@@ -117,7 +119,8 @@
     "desc": "アテネを中心とするギリシア艦隊がペルシア艦隊を破った。三段櫂船のこぎ手として活躍した無産市民の発言力が強まった。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [23.55, 37.95]
   },
   {
     "id": "eb479a",
@@ -128,7 +131,8 @@
     "desc": "ギリシアの連合軍がペルシアの陸軍を破り、ペルシア軍はギリシアから撤退した。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [23.27, 38.22]
   },
   {
     "id": "eb478a",

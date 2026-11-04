@@ -55,6 +55,8 @@ export function readData(dir = DATA) {
   db.regions = asArray(regions.regions).map(r => ({ ...r }));
   db.groups = asArray(regions.groups);
   db.zones = read(manifest.zones);
+  db.places = read(manifest.places);
+  db.rivers = read(manifest.rivers);
   db.polities = list(manifest.polities, 'polity');
   db.rulers = list(manifest.rulers, 'ruler');
   db.events = list(manifest.events, 'event');
@@ -101,6 +103,8 @@ export function validate(dir = DATA) {
     if (x[k] != null && !asArray(x[k]).every(s => typeof s === 'string' && s.trim())) E(x, `${k} は文字列の一覧にします`);
   };
 
+  const lonLat = q => Array.isArray(q) && Number.isFinite(q[0]) && Number.isFinite(q[1]) && Math.abs(q[0]) <= 180 && Math.abs(q[1]) <= 90 && (q[2] == null || typeof q[2] === 'string');
+
   // ---- 出来事
   for (const e of db.events) {
     if (!e.id) E(e, 'id がありません');
@@ -110,6 +114,10 @@ export function validate(dir = DATA) {
     if (e.month != null && !(isInt(e.month) && e.month >= 1 && e.month <= 12)) E(e, 'month は 1〜12 にします');
     if (!asArray(e.regions).length) E(e, 'regions（地域）がありません');
     if (e.acceptYears != null && !asArray(e.acceptYears).every(isInt)) E(e, 'acceptYears は整数の一覧にします');
+    if (e.place != null) {
+      const pts = Array.isArray(e.place?.[0]) ? e.place : [e.place];
+      if (!Array.isArray(e.place) || !pts.every(lonLat)) E(e, 'place は [経度, 緯度] か [[経度, 緯度, "表示名"], …] にします（経度 -180〜180、緯度 -90〜90）');
+    }
     strings(e, 'answers'); strings(e, 'keywords'); strings(e, 'tags');
     flags(e);
   }
@@ -172,12 +180,37 @@ export function validate(dir = DATA) {
   }
   for (const g of db.groups) for (const r of asArray(g.regions)) if (!regionIds.has(r)) errors.push(`regions.json … グループ「${g.name}」の地域「${r}」がありません`);
   if (db.manifest.zones && !Array.isArray(db.zones?.zones)) errors.push('地図のデータ（map/zones.json）が読めません');
+  // ---- 地図を拡大したときの地名（map/places.json）と川（map/rivers.json）
+  if (db.manifest.places) {
+    const P = db.places || {};
+    for (const k of ['cities', 'regions', 'seas']) {
+      if (!Array.isArray(P[k])) { errors.push(`map/places.json … ${k} がありません`); continue; }
+      P[k].forEach((c, i) => {
+        const at = `map/places.json … ${k} の ${i + 1}番目（${JSON.stringify(c?.n?.[0]?.[1] ?? '')}）`;
+        if (!lonLat(c?.c)) errors.push(`${at}：c は [経度, 緯度] にします`);
+        if (![1, 2, 3].includes(c?.r)) errors.push(`${at}：r（重要度）は 1〜3 にします`);
+        const n = c?.n;
+        if (!Array.isArray(n) || !n.length || !n.every(x => Array.isArray(x) && isInt(x[0]) && (x[1] === null || typeof x[1] === 'string') && (x[2] == null || [1, 2, 3].includes(x[2])))) {
+          errors.push(`${at}：n は [[年, "名前" または null, 重要度], …] にします`);
+        } else if (n.some((x, j) => j && x[0] <= n[j - 1][0])) errors.push(`${at}：n は年の順に並べます`);
+      });
+    }
+  }
+  if (db.manifest.rivers) {
+    const rv = db.rivers?.rivers;
+    if (!Array.isArray(rv)) errors.push('map/rivers.json … rivers がありません');
+    else for (const r of rv) {
+      if (typeof r.n !== 'string' || ![1, 2, 3].includes(r.r) || !Array.isArray(r.d) || !r.d.every(l => Array.isArray(l) && l.length >= 4 && l.length % 2 === 0 && l.every(Number.isFinite))) {
+        errors.push(`map/rivers.json … 川「${r.n}」の形がちがいます（n: 名前, r: 1〜3, d: [[x, y, x, y, …], …]）`);
+      }
+    }
+  }
 
   const all = [...db.events, ...db.polities, ...db.rulers];
   const stats = {
     events: db.events.length, culture: db.events.filter(e => e.culture).length,
     polities: db.polities.length, rulers: db.rulers.length,
-    uncertain: all.filter(x => x.uncertain).length, total: all.length,
+    uncertain: all.filter(x => x.uncertain).length, total: all.length, battles: db.events.filter(e => e.place).length,
     descs: all.filter(x => x.desc).length, descVerified: all.filter(x => x.descVerified).length,
     images: all.filter(x => x.image).length, imageVerified: all.filter(x => x.image && x.imageVerified).length
   };
@@ -191,7 +224,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.ar
   console.log(`データの点検：${path.relative(process.cwd(), dir) || '.'}`);
   if (stats) {
     console.log(`  出来事 ${stats.events}件（うち文化 ${stats.culture}件）・王朝/国家 ${stats.polities}件・人物 ${stats.rulers}件`);
-    console.log(`  全${stats.total}件・要確認の印 ${stats.uncertain}件`);
+    console.log(`  全${stats.total}件・要確認の印 ${stats.uncertain}件・地図に場所を出す戦い ${stats.battles}件`);
     console.log(`  概要 ${stats.descs}件（確認済み ${stats.descVerified}件）・作品の写真の指定 ${stats.images}件（確認済み ${stats.imageVerified}件）`);
   }
   for (const m of errors) console.log(`  ✗ ${m}`);

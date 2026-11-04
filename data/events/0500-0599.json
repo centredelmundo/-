@@ -9,7 +9,8 @@
     "desc": "フランク王国が西ゴート人を破り、ガリア南西部を得た",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [0.16, 46.64]
   },
   {
     "id": "e527a",

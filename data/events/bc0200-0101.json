@@ -9,7 +9,8 @@
     "desc": "漢の高祖が匈奴に包囲され、和親を結んで毎年貢ぎ物を送ることになった。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [113.3, 40.1]
   },
   {
     "id": "eb180a",
@@ -46,7 +47,8 @@
     "desc": "ローマがマケドニア王国を破った。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [22.58, 40.35]
   },
   {
     "id": "eb167a",

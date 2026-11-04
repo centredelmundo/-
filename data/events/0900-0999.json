@@ -185,7 +185,8 @@
     "desc": "東フランク王オットー1世がマジャール人を破った",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [10.9, 48.3]
   },
   {
     "id": "e960a",

@@ -94,6 +94,20 @@
     "descVerified": false
   },
   {
+    "id": "eb48a",
+    "year": -48,
+    "title": "ファルサロスの戦い",
+    "answers": ["ファルサロス"],
+    "keywords": ["カエサル+ポンペイウス"],
+    "regions": ["ee", "ce"],
+    "importance": 1,
+    "desc": "カエサルがギリシアのファルサロスでポンペイウスを破り、ローマの実権を握った。",
+    "uncertain": false,
+    "memo": "",
+    "descVerified": false,
+    "place": [22.38, 39.3]
+  },
+  {
     "id": "eb44a",
     "year": -44,
     "title": "カエサルの暗殺",
@@ -139,7 +153,8 @@
     "desc": "オクタウィアヌスがアントニウスとクレオパトラの連合軍を破った。翌年プトレマイオス朝が滅んだ。",
     "uncertain": false,
     "memo": "",
-    "descVerified": false
+    "descVerified": false,
+    "place": [20.74, 38.95]
   },
   {
     "id": "eb30a",
