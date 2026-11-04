@@ -291,7 +291,7 @@
   {
     "id": "e1260a",
     "year": 1260,
-    "title": "アイン=ジャールートの戦い",
+    "title": "アインジャールートの戦い",
     "keywords": ["マムルーク朝+モンゴル", "バイバルス"],
     "regions": ["wa"],
     "importance": 2,
@@ -299,7 +299,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "place": [35.37, 32.55]
+    "place": [35.37, 32.55],
+    "answers": ["アイン=ジャールートの戦い"]
   },
   {
     "id": "e1260b",

@@ -1583,7 +1583,7 @@
     "color": "#D9C27A",
     "territory": [
       { "year": 1250, "add": ["egypt"], "note": "アイユーブ朝にかわる" },
-      { "year": 1260, "add": ["syria", "jordan", "lebanon"], "vassal": ["hejaz"], "contested": ["palestine"], "note": "アイン=ジャールートの戦いでモンゴル軍を破る" },
+      { "year": 1260, "add": ["syria", "jordan", "lebanon"], "vassal": ["hejaz"], "contested": ["palestine"], "note": "アインジャールートの戦いでモンゴル軍を破る" },
       { "year": 1268, "add": ["hatay"], "note": "アンティオキア公国を滅ぼす" },
       { "year": 1291, "add": ["palestine", "lebanon"], "note": "アッコンを落とし十字軍国家を一掃" },
       { "year": 1500, "add": ["egypt", "syria", "lebanon", "palestine", "jordan"], "vassal": ["hejaz"] }
@@ -1627,7 +1627,7 @@
       { "year": 1503, "add": ["iran-n", "iran-w", "iran-c", "iran-s"], "note": "白羊朝を破りイラン高原を支配" },
       { "year": 1508, "add": ["iraq-c", "iraq-s"], "note": "バグダードを占領" },
       { "year": 1510, "add": ["khorasan", "afg-herat", "sistan"], "note": "シャイバーニーを破る" },
-      { "year": 1514, "contested": ["iran-nw"], "note": "チャルディラーンの戦いでオスマン帝国に敗れる" },
+      { "year": 1514, "contested": ["iran-nw"], "note": "チャルディランの戦いでオスマン帝国に敗れる" },
       { "year": 1515, "add": ["iran-nw"], "vassal": ["georgia-e"] },
       { "year": 1534, "remove": ["iraq-c"], "note": "バグダードをオスマン帝国に奪われる" },
       { "year": 1546, "remove": ["iraq-s"] },
@@ -3369,7 +3369,7 @@
       { "year": 1720, "add": ["sicily"], "remove": ["sardinia"], "note": "サルデーニャとシチリアを交換" },
       { "year": 1735, "remove": ["naples", "sicily"], "note": "ナポリ・シチリアをスペイン=ブルボン家へ" },
       { "year": 1739, "remove": ["serbia"], "note": "ベオグラード条約" },
-      { "year": 1742, "remove": ["silesia"], "note": "プロイセンにシュレジエンを奪われる" },
+      { "year": 1742, "remove": ["silesia"], "note": "プロイセンにシュレジェンを奪われる" },
       { "year": 1772, "add": ["galicia-w", "galicia-e"], "note": "第1回ポーランド分割" },
       { "year": 1775, "add": ["bukovina"], "note": "ブコヴィナを得る" },
       { "year": 1795, "add": ["poland-lu"], "note": "第3回ポーランド分割" },
@@ -3429,7 +3429,7 @@
       { "year": 1618, "vassal": ["kaliningrad", "warmia"], "note": "プロイセン公国を相続（ポーランドの宗主権下）" },
       { "year": 1648, "add": ["pomerania"], "note": "ウェストファリア条約で東ポンメルン" },
       { "year": 1657, "add": ["kaliningrad", "warmia"], "note": "プロイセン公国の主権を得る" },
-      { "year": 1742, "add": ["silesia"], "note": "オーストリア継承戦争でシュレジエンを奪う" },
+      { "year": 1742, "add": ["silesia"], "note": "オーストリア継承戦争でシュレジェンを奪う" },
       { "year": 1772, "add": ["pomerelia"], "note": "第1回ポーランド分割（西プロイセン）" },
       { "year": 1793, "add": ["poland-gp"], "note": "第2回ポーランド分割" },
       { "year": 1795, "add": ["poland-mz"], "note": "第3回ポーランド分割" },
@@ -3897,7 +3897,7 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ドニエプル川流域のコサックの自治国家。ロシアの保護下に入り、のちに併合された。"
+    "desc": "ドニェプル川流域のコサックの自治国家。ロシアの保護下に入り、のちに併合された。"
   },
   {
     "id": "sweden",

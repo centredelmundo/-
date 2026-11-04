@@ -2800,7 +2800,7 @@
       { "year": 895, "add": ["hungary-c", "hungary-ne"], "contested": ["hungary-w", "transylvania", "vojvodina"], "note": "マジャール人がパンノニアに移る" },
       { "year": 1000, "add": ["hungary-w", "hungary-c", "hungary-ne", "slovakia", "transylvania", "vojvodina", "banat", "transcarpathia", "slavonia"], "note": "イシュトヴァーン1世が王となる" },
       { "year": 1102, "add": ["croatia"], "contested": ["dalmatia"], "note": "クロアティアの王位を兼ねる" },
-      { "year": 1469, "contested": ["bohemia"], "note": "マーチャーシュがモラヴィア・シュレジエンを得る" },
+      { "year": 1469, "contested": ["bohemia"], "note": "マーチャーシュがモラヴィア・シュレジェンを得る" },
       { "year": 1485, "add": ["austria"], "note": "ウィーンを占領" },
       { "year": 1490, "remove": ["austria", "bohemia"], "note": "マーチャーシュの死去" }
     ],
@@ -2841,7 +2841,7 @@
     "territory": [
       { "year": 900, "add": ["bohemia"], "note": "プシェミスル家の公国" },
       { "year": 1198, "add": ["bohemia"], "note": "王国となる" },
-      { "year": 1335, "add": ["silesia"], "note": "ポーランドからシュレジエンを得る" }
+      { "year": 1335, "add": ["silesia"], "note": "ポーランドからシュレジェンを得る" }
     ],
     "desc": "チェコ人の国。神聖ローマ帝国の選帝侯の一つとなり、14世紀にはカール4世のもとでプラハが栄えた。15世紀にフス戦争が起きた。",
     "importance": 2,

@@ -98,7 +98,7 @@
     "id": "eb480a",
     "year": -480,
     "month": 8,
-    "title": "テルモピレーの戦い",
+    "title": "テルモピュライの戦い",
     "keywords": ["レオニダス"],
     "regions": ["ee"],
     "importance": 2,
@@ -106,7 +106,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "place": [22.54, 38.8]
+    "place": [22.54, 38.8],
+    "answers": ["テルモピレーの戦い"]
   },
   {
     "id": "eb480b",

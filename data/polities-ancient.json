@@ -136,7 +136,7 @@
       { "year": -338, "vassal": ["greece-s", "peloponnese", "greece-c", "greece-w", "epirus", "aegean", "ionian"], "note": "カイロネイアの戦いでアテネ・テーベを破り、コリントス同盟を結成" },
       { "year": -334, "add": ["anatolia-w", "anatolia-c", "hatay"], "note": "アレクサンドロスの東方遠征（グラニコス川の戦い・イッソスの戦い）" },
       { "year": -332, "add": ["syria", "lebanon", "palestine", "jordan", "egypt"], "note": "ティルスを攻め落とし、エジプトを征服" },
-      { "year": -331, "add": ["iraq-n", "iraq-c", "iraq-s"], "note": "アルベラ（ガウガメラ）の戦いでダレイオス3世を破る" },
+      { "year": -331, "add": ["iraq-n", "iraq-c", "iraq-s"], "note": "ガウガメラ（アルベラ）の戦いでダレイオス3世を破る" },
       { "year": -330, "add": ["iran-nw", "iran-n", "iran-w", "iran-c", "iran-s", "khorasan", "sistan", "armenia", "anatolia-e", "pontus"], "note": "アケメネス朝が滅ぶ" },
       { "year": -329, "add": ["afg-herat", "afg-kandahar", "afg-balkh", "afg-kabul", "transoxiana", "tajik", "turkmen"], "note": "中央アジアに進む" },
       { "year": -326, "add": ["nwfp", "punjab", "sindh"], "note": "インダス川流域に達する" },

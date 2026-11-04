@@ -346,8 +346,8 @@
   {
     "id": "e1620b",
     "year": 1620,
-    "title": "白山の戦い",
-    "answers": ["ビーラー=ホラの戦い"],
+    "title": "ビーラー=ホラの戦い",
+    "answers": ["白山の戦い"],
     "regions": ["ce"],
     "importance": 1,
     "desc": "ベーメンの新教徒が皇帝軍に敗れた",
@@ -1127,7 +1127,7 @@
     "keywords": ["ロシア+ポーランド", "ウクライナ+分割"],
     "regions": ["ee"],
     "importance": 1,
-    "desc": "ロシアとポーランドがウクライナをドニエプル川で分けた",
+    "desc": "ロシアとポーランドがウクライナをドニェプル川で分けた",
     "uncertain": false,
     "memo": "",
     "descVerified": false

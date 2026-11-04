@@ -14,7 +14,7 @@
   {
     "id": "e9a",
     "year": 9,
-    "title": "トイトブルクの森の戦い",
+    "title": "トイトブルクの戦い",
     "keywords": ["ゲルマン人"],
     "regions": ["ce"],
     "importance": 1,
@@ -22,7 +22,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "place": [8.13, 52.41]
+    "place": [8.13, 52.41],
+    "answers": ["トイトブルクの森の戦い"]
   },
   {
     "id": "e18a",

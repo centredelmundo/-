@@ -98,7 +98,7 @@ export const ZONES = [
   ['warmia', '東プロイセン南部（マズーリ）', 'POL:PL-WN'],
   ['pomerania', 'ポンメルン（シュテッティン）', 'POL:PL-ZP'],
   ['neumark', 'ノイマルク', 'POL:PL-LB'],
-  ['silesia', 'シュレジエン', 'POL:PL-DS,PL-OP,PL-SL'],
+  ['silesia', 'シュレジェン', 'POL:PL-DS,PL-OP,PL-SL'],
   ['brandenburg', 'ブランデンブルク（ベルリン）', 'DEU:DE-BB,DE-BE'],
   ['mecklenburg', 'メクレンブルク・西ポンメルン', 'DEU:DE-MV'],
   ['schleswig', 'シュレスヴィヒ・ホルシュタイン', 'DEU:DE-SH'],

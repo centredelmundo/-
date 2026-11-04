@@ -398,7 +398,7 @@
     "title": "オーストリア継承戦争",
     "regions": ["ce"],
     "importance": 3,
-    "desc": "マリア=テレジアの継承に反対したプロイセンなどが戦い、プロイセンがシュレジエンを奪った",
+    "desc": "マリア=テレジアの継承に反対したプロイセンなどが戦い、プロイセンがシュレジェンを奪った",
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -641,7 +641,7 @@
     "title": "フベルトゥスブルク条約",
     "regions": ["ce"],
     "importance": 2,
-    "desc": "プロイセンがシュレジエンの領有を確保した",
+    "desc": "プロイセンがシュレジェンの領有を確保した",
     "uncertain": false,
     "memo": "",
     "descVerified": false
@@ -858,7 +858,7 @@
     "memo": "",
     "descVerified": false,
     "place": [
-      [-71.23, 42.45, "レキシントン・コンコードの戦い"]
+      [-71.23, 42.45, "レキシントンの戦い"]
     ]
   },
   {
