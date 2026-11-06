@@ -173,7 +173,7 @@ main#view { min-height: calc(100vh - var(--appbar-h)); }
 .suggest { position: absolute; top: calc(100% + 4px); right: 0; width: min(360px, 90vw); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); z-index: 25; max-height: 320px; overflow-y: auto; }
 .suggest button { display: grid; grid-template-columns: 3.4em 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: none; padding: 7px 12px; font-size: 13.5px; cursor: pointer; }
 .suggest button:hover, .suggest button.on { background: var(--surface-2); }
-.suggest .k { font-size: 11px; color: var(--ink-3); }
+.suggest .k { font-size: 11px; color: var(--ink-3); white-space: nowrap; }
 .suggest .k svg { width: 11px; height: 11px; vertical-align: -1px; margin-right: 2px; color: var(--shu); }
 /* 場所のわかる出来事は、行の右に「地図」 */
 .suggest .sg-row { display: flex; align-items: stretch; }
