@@ -41,7 +41,13 @@ export const app = {
     app.year = ny; app.settings.year = ny; saveSoon();
     const v = VIEWS[app.current];
     if (v?.update) v.update(opt);
-    if (!opt.fromSlider && (app.current === 'timeline' || app.current === 'map')) history.replaceState(null, '', `#${app.current}/${ny}`);
+    if (!opt.fromSlider && (app.current === 'timeline' || app.current === 'map')) history.replaceState(null, '', `#${app.current}/${ny}${v?.hashTail?.() || ''}`);
+  },
+  /** 勢力図でその場所を見る（spec は core/places.js の resolveFocus の書き方。year はその年の地図） */
+  showOnMap(spec, year) {
+    const hash = `#map/${year}/${encodeURI(spec)}`;
+    if (app.current === 'map' && mapView.focusOn(spec, year)) history.replaceState(null, '', hash);
+    else location.hash = hash;
   },
   setWindow(w) { app.window = w; app.settings.window = w; saveSoon(); VIEWS[app.current]?.update?.(); },
   startQuizForEvent(e) { quiz.startWith(app, questionsForEvent(app.db, e), { title: e.title }); },
@@ -71,9 +77,11 @@ function updateDue() {
   $$('[data-due]').forEach(el => { el.textContent = n ? String(n) : ''; });
 }
 
+const decodeHash = s => { try { return decodeURIComponent(s); } catch { return s; } };
+
 function route() {
   const hash = location.hash.replace(/^#/, '') || 'timeline';
-  const [name, param] = hash.split('/');
+  const [name, param, ...rest] = hash.split('/');
   const key = VIEWS[name] ? name : 'timeline';
   if (key === 'timeline' || key === 'map') {
     const y = Number(param);
@@ -87,7 +95,9 @@ function route() {
   el.innerHTML = '';
   window.scrollTo(0, 0);
   try {
-    VIEWS[key].render(app, el, key === 'data' || key === 'history' ? param : undefined);
+    // データ確認・地域の歴史は項目や地域、勢力図は印をつける場所（#map/年/city:28.98,41.01）
+    const arg = key === 'data' || key === 'history' ? param : key === 'map' && rest.length ? decodeHash(rest.join('/')) : undefined;
+    VIEWS[key].render(app, el, arg);
   } catch (err) {
     console.error(err);
     el.innerHTML = `<div class="page narrow"><div class="notice err">画面を表示できませんでした：${esc(err.message)}</div></div>`;

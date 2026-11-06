@@ -169,11 +169,17 @@ main#view { min-height: calc(100vh - var(--appbar-h)); }
 .yb-tools { display: flex; gap: 8px; align-items: center; justify-content: flex-end; }
 .search { position: relative; }
 .search input { padding: 6px 10px 6px 32px; font-size: 14px; width: 250px; }
-.search svg { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; color: var(--ink-3); pointer-events: none; }
+.search > span > svg { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; color: var(--ink-3); pointer-events: none; }
 .suggest { position: absolute; top: calc(100% + 4px); right: 0; width: min(360px, 90vw); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); z-index: 25; max-height: 320px; overflow-y: auto; }
 .suggest button { display: grid; grid-template-columns: 3.4em 1fr; gap: 8px; width: 100%; text-align: left; border: 0; background: none; padding: 7px 12px; font-size: 13.5px; cursor: pointer; }
 .suggest button:hover, .suggest button.on { background: var(--surface-2); }
 .suggest .k { font-size: 11px; color: var(--ink-3); }
+.suggest .k svg { width: 11px; height: 11px; vertical-align: -1px; margin-right: 2px; color: var(--shu); }
+/* 場所のわかる出来事は、行の右に「地図」 */
+.suggest .sg-row { display: flex; align-items: stretch; }
+.suggest .sg-row > [data-i] { flex: 1; min-width: 0; }
+.suggest .sg-map { display: inline-flex; align-items: center; gap: 3px; width: auto; flex: none; padding: 4px 10px; font-size: 12px; color: var(--ai); border-left: 1px solid var(--line-2); white-space: nowrap; }
+.suggest .sg-map svg { width: 13px; height: 13px; }
 .tl-main { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 16px; align-items: start; }
 .tl-map { position: sticky; top: calc(env(safe-area-inset-top, 0px) + var(--appbar-h) + 120px); display: grid; gap: 8px; }
 .tl-map .mapbox { height: 340px; }
@@ -314,6 +320,40 @@ details.more > summary { cursor: pointer; font-size: 13.5px; color: var(--ink-2)
   .map-layout { grid-template-columns: minmax(0, 1fr); }
   .map-page .mapbox { height: 52vh; border-radius: 10px; }
 }
+
+/* ---- 検索した場所（勢力図の印と、その場所の欄） */
+.mapbox .focus { pointer-events: none; }
+.mapbox .focus-pt .ring { fill: none; stroke: var(--shu); stroke-width: 2.6; }
+.mapbox .focus-pt .dot { fill: var(--shu); stroke: #fff; stroke-width: 1.2; }
+.mapbox .focus-pt .pulse { fill: var(--shu); opacity: 0; transform-box: fill-box; transform-origin: center; animation: focus-pulse 1.6s ease-out 3; }
+@keyframes focus-pulse { from { opacity: .5; transform: scale(.35); } to { opacity: 0; transform: scale(2.4); } }
+@media (prefers-reduced-motion: reduce) { .mapbox .focus-pt .pulse { animation: none; } }
+.mapbox .focus-lbl { fill: var(--shu); stroke: var(--geo-halo); paint-order: stroke; font-family: var(--f-body); font-weight: 800; }
+.mapbox .focus-lbl.off { font-style: italic; opacity: .7; }
+.mapbox .focus-river { fill: none; stroke: var(--shu); stroke-width: 3; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; opacity: .8; }
+.focus-card { border-color: var(--shu); }
+.focus-card .focus-kind { display: flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; color: var(--shu); }
+.focus-card .focus-kind svg { width: 14px; height: 14px; }
+.focus-card .names { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 4px; }
+.focus-card .names .chip { display: inline-flex; align-items: baseline; gap: 5px; }
+.focus-card .names .chip small { font-size: 11px; opacity: .75; font-weight: 400; }
+.focus-card .focus-acts { margin-top: 10px; gap: 6px; }
+/* 勢力図の「地名で探す」（PCはいつも出す。スマホは虫めがねのボタンで開く） */
+.map-wrap { position: relative; min-width: 0; }
+.map-find { position: absolute; left: 8px; top: 8px; z-index: 5; }
+.map-find .find-btn { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); box-shadow: 0 1px 3px rgb(0 0 0 / .12); display: grid; place-items: center; padding: 0; cursor: pointer; }
+.map-find .find-btn svg { width: 17px; height: 17px; }
+.map-find .search { display: none; }
+.map-find.open .search { display: block; }
+.map-find.open .find-btn { display: none; }
+.map-find .search input { width: min(290px, calc(100vw - 120px)); background: var(--surface); box-shadow: 0 1px 3px rgb(0 0 0 / .14); }
+.map-find .suggest { left: 0; right: auto; width: min(360px, calc(100vw - 48px)); }
+@media (min-width: 860px) {
+  .map-find .find-btn { display: none; }
+  .map-find .search { display: block; }
+}
+/* スマホの検索欄は16pxにする（iPhone で入力するときに画面が拡大されないように） */
+@media (max-width: 859px) { .map-find .search input, .mobile-search input { font-size: 16px; } }
 
 /* ---- クイズ */
 .quiz-setup { display: grid; gap: 16px; }

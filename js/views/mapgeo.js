@@ -3,6 +3,9 @@
 // 戦いの場所は出来事の place（[経度, 緯度] か、[経度, 緯度, "表示名"] の配列）から作る。
 import { esc, fmtYear } from '../core/util.js';
 import { project } from '../core/projection.js';
+import { nameAtYear, placesOf } from '../core/places.js';
+
+export { nameAtYear, placesOf };
 
 /** 拡大の段階：1ピクセルあたりの地図の単位（scale）がこの値以上になったら、その重要度（1〜3）の地名を出す */
 export const GEO_LEVELS = [0.9, 1.5, 2.4];
@@ -10,22 +13,6 @@ export const GEO_LEVELS = [0.9, 1.5, 2.4];
 export const BATTLE_YEARS = 5;
 
 const cache = new WeakMap();
-
-/** [[年, 名前, 重要度?], …] から、その年の名前と重要度を選ぶ（名前が null なら出さない） */
-export function nameAtYear(names, y, rank = 2) {
-  let cur = null;
-  for (const e of names || []) { if (e[0] <= y) cur = e; else break; }
-  if (!cur || !cur[1]) return null;
-  return { name: cur[1], rank: cur[2] || rank };
-}
-
-/** 出来事の place を [{ lon, lat, label }] にする */
-export function placesOf(e) {
-  const p = e?.place;
-  if (!Array.isArray(p) || !p.length) return [];
-  const list = Array.isArray(p[0]) ? p : [p];
-  return list.filter(q => Number.isFinite(q[0]) && Number.isFinite(q[1])).map(q => ({ lon: q[0], lat: q[1], label: q[2] || null }));
-}
 
 function prepare(db) {
   if (cache.has(db)) return cache.get(db);
@@ -35,15 +22,11 @@ function prepare(db) {
   for (const [kind, list] of [['city', P.cities], ['region', P.regions], ['sea', P.seas]]) {
     for (const c of list || []) {
       const [x, y] = pt(c.c[0], c.c[1]);
-      items.push({ kind, x, y, names: (c.n || []).slice().sort((a, b) => a[0] - b[0]), rank: c.r || 2 });
+      items.push({ id: `${kind}:${c.c[0]},${c.c[1]}`, kind, x, y, names: (c.n || []).slice().sort((a, b) => a[0] - b[0]), rank: c.r || 2 });
     }
   }
   const rivers = (db.rivers?.rivers || []).map(r => ({ name: r.n, rank: r.r || 2, lines: r.d }));
-  const riverPath = rivers.map(r => r.lines.map(l => {
-    let d = `M${l[0]} ${l[1]}`;
-    for (let i = 2; i < l.length; i += 2) d += `L${l[i]} ${l[i + 1]}`;
-    return d;
-  }).join(''));
+  const riverPath = rivers.map(r => linesPath(r.lines));
   const battles = [];
   for (const e of db.events) for (const p of placesOf(e)) {
     const [x, y] = pt(p.lon, p.lat);
@@ -52,6 +35,15 @@ function prepare(db) {
   const prep = { items, rivers, riverPath, battles };
   cache.set(db, prep);
   return prep;
+}
+
+/** 線の並び（[x0, y0, x1, y1, …] の配列）を SVG の path にする */
+export function linesPath(lines) {
+  return (lines || []).map(l => {
+    let d = `M${l[0]} ${l[1]}`;
+    for (let i = 2; i < l.length; i += 2) d += `L${l[i]} ${l[i + 1]}`;
+    return d;
+  }).join('');
 }
 
 /** 川の線（地図を作るときに一度だけ入れる。出す・出さないは drawGeo で切りかえる） */
@@ -65,9 +57,10 @@ const hit = (b, placed) => placed.some(q => !(b[2] < q[0] || b[0] > q[2] || b[3]
 
 /**
  * 地名と戦いを描く。placed は国名ラベルの枠（重ならないように避ける）。
+ * focus は検索から印をつけた場所（その名前は印の方で描くので、ここでは描かない）。
  * 戻り値 { labels: SVGの文字列, battles: SVGの文字列, level: 出した重要度の上限（0 なら出していない） }
  */
-export function drawGeo(db, { year, vb, scale: s, placed, on = true }) {
+export function drawGeo(db, { year, vb, scale: s, placed, on = true, focus = null }) {
   const level = !on ? 0 : s >= GEO_LEVELS[2] ? 3 : s >= GEO_LEVELS[1] ? 2 : s >= GEO_LEVELS[0] ? 1 : 0;
   if (!level) return { labels: '', battles: '', level };
   const G = prepare(db);
@@ -79,6 +72,7 @@ export function drawGeo(db, { year, vb, scale: s, placed, on = true }) {
   // 先にすべての印の場所を取ってから、名前を右・左・下・上の順に空いている所へ置く
   const marks = near.map(b => [b.x - 8 * u, b.y - 8 * u, b.x + 8 * u, b.y + 8 * u]);
   const names = near.map((b, i) => {
+    if (focus?.event === b.e) return '';
     const fpx = 10.5, txt = `${b.label}（${fmtYear(b.e.year)}）`;
     const w = txt.length * fpx * 0.98 * u, h = fpx * 1.3 * u;
     const others = marks.filter((_, j) => j !== i);
@@ -106,14 +100,14 @@ export function drawGeo(db, { year, vb, scale: s, placed, on = true }) {
   // 地名：重要度の高いものから。海・地方は少し大きく、都市は点をつける
   const cands = [];
   for (const it of G.items) {
-    if (!inView(it.x, it.y, vb)) continue;
+    if (!inView(it.x, it.y, vb) || it.id === focus?.place?.id) continue;
     const n = nameAtYear(it.names, year, it.rank);
     if (!n || n.rank > level) continue;
     cands.push({ ...it, name: n.name, rank: n.rank });
   }
   // 川の名前は、画面の中にある線の点のうち真ん中あたりに置く
   G.rivers.forEach((r, i) => {
-    if (r.rank > level) return;
+    if (r.rank > level || (focus?.kind === 'river' && focus.name === r.name)) return;
     const pts = [];
     for (const l of r.lines) for (let k = 0; k < l.length; k += 2) if (inView(l[k], l[k + 1], vb, -20 * u)) pts.push([l[k], l[k + 1]]);
     if (pts.length < 3) return;

@@ -1,8 +1,8 @@
 // ヨコ年表：年を選ぶと、同じ年の各地域の王朝・出来事が並ぶ
-import { $, $$, esc, fmtYear, debounce, clamp, toast } from '../core/util.js';
-import { base } from '../core/normalize.js';
+import { $, $$, esc, fmtYear, clamp, toast } from '../core/util.js';
 import { renderCards, densitySvg, ganttSvg, openEvent, openPolity, openIchimon, wireSheet, holdRepeat, ICON } from './common.js';
 import { ZoneMap, polityColor } from './mapcore.js';
+import { wireSearch } from './search.js';
 
 let state = null;
 
@@ -35,12 +35,12 @@ export function render(app, el) {
       </div>
     </div>
     <div class="yb-tools">
-      <div class="search"><span>${ICON.search}</span><input type="search" id="tlSearch" placeholder="用語で検索（例：ナントの王令）" autocomplete="off" aria-label="用語で検索"><div class="suggest" id="tlSuggest" hidden></div></div>
+      <div class="search"><span>${ICON.search}</span><input type="search" id="tlSearch" placeholder="用語・地名で検索（例：ナントの王令）" autocomplete="off" aria-label="用語・地名で検索"><div class="suggest" id="tlSuggest" hidden></div></div>
       <button class="btn small" id="tlSheet" type="button" aria-pressed="false">赤シート</button>
     </div>
   </div></div>
   <div class="page">
-    <div class="search mobile-search" id="tlMobileSearch" hidden><span>${ICON.search}</span><input type="search" id="tlSearchM" placeholder="用語で検索" autocomplete="off" aria-label="用語で検索"><div class="suggest" id="tlSuggestM" hidden></div></div>
+    <div class="search mobile-search" id="tlMobileSearch" hidden><span>${ICON.search}</span><input type="search" id="tlSearchM" placeholder="用語・地名で検索" autocomplete="off" aria-label="用語・地名で検索"><div class="suggest" id="tlSuggestM" hidden></div></div>
     <div class="tl-main">
       <div class="tl-map" id="tlMapCol">
         <div class="chips scroll" id="tlViews">${mapViews.map(([k, n]) => `<button class="chip" type="button" data-v="${k}">${esc(n)}</button>`).join('')}</div>
@@ -103,8 +103,18 @@ export function render(app, el) {
   };
   $$('#tlSheet, #tlSheet2', el).forEach(b => { b.classList.toggle('on', !!app.settings.sheet); b.addEventListener('click', toggleSheet); });
   $('#tlSearchBtn', el).addEventListener('click', () => { const box = $('#tlMobileSearch', el); box.hidden = !box.hidden; if (!box.hidden) $('#tlSearchM', el).focus(); });
-  wireSearch(app, $('#tlSearch', el), $('#tlSuggest', el));
-  wireSearch(app, $('#tlSearchM', el), $('#tlSuggestM', el));
+  // 用語を選ぶとその年へ（写真のあるものは詳細も開く）。地名や「地図」を選ぶと勢力図のその場所へ
+  const search = {
+    onTerm: it => {
+      if (state && it.ev) state.hit = it.ev.id;
+      app.setYear(it.y);
+      // 作品・建築など写真のあるものは、詳細（写真つき）をそのまま開く
+      if (it.ev?.image) openEvent(app, it.ev);
+    },
+    onPlace: ({ spec, year }) => app.showOnMap(spec, year)
+  };
+  wireSearch(app, $('#tlSearch', el), $('#tlSuggest', el), search);
+  wireSearch(app, $('#tlSearchM', el), $('#tlSuggestM', el), search);
   $('#tlGantt', el).addEventListener('click', e => { const bar = e.target.closest('.bar'); if (bar) app.setYear(Number(bar.dataset.y)); });
 
   // 地図（PCのみ）
@@ -197,40 +207,3 @@ export function update() {
 }
 
 export function destroy() { state?.ro?.disconnect(); state = null; document.title = 'ヨコ串世界史'; }
-
-// ---- 用語で検索
-function wireSearch(app, input, box) {
-  const db = app.db;
-  let items = [], idx = -1;
-  const show = debounce(() => {
-    const q = base(input.value);
-    if (!q) { box.hidden = true; return; }
-    items = [];
-    for (const e of db.events) if ([e.title, ...e.answers].some(t => base(t).includes(q))) items.push({ y: e.year, label: e.title, kind: e.image ? '写真' : '出来事', ev: e });
-    items.sort((a, b) => (b.kind === '写真') - (a.kind === '写真'));
-    for (const r of db.rulers) if ([r.name, ...r.aliases].some(t => base(t).includes(q))) items.push({ y: r.from, label: `${r.name}（${r.from}〜${r.to}）`, kind: '人物' });
-    for (const p of db.polities) if ([p.name, ...p.aliases].some(t => base(t).includes(q))) items.push({ y: p.start, label: `${p.name}（${fmtYear(p.start)}〜${fmtYear(p.end)}）`, kind: '王朝・国家' });
-    items = items.slice(0, 30); idx = -1;
-    box.innerHTML = items.length ? items.map((it, i) => `<button type="button" data-i="${i}"><span class="yr">${fmtYear(it.y)}</span><span>${esc(it.label)} <span class="k">${it.kind}</span></span></button>`).join('') : '<div class="small muted" style="padding:8px 12px">見つかりません</div>';
-    box.hidden = false;
-  }, 120);
-  const go = i => {
-    const it = items[i]; if (!it) return;
-    box.hidden = true; input.blur();
-    if (state && it.ev) state.hit = it.ev.id;
-    app.setYear(it.y);
-    // 作品・建築など写真のあるものは、詳細（写真つき）をそのまま開く
-    if (it.ev?.image) openEvent(app, it.ev);
-  };
-  input.addEventListener('input', show);
-  input.addEventListener('keydown', e => {
-    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-      e.preventDefault(); idx = clamp(idx + (e.key === 'ArrowDown' ? 1 : -1), 0, items.length - 1);
-      $$('button', box).forEach((b, i) => b.classList.toggle('on', i === idx));
-    }
-    if (e.key === 'Enter') { e.preventDefault(); go(idx >= 0 ? idx : 0); }
-    if (e.key === 'Escape') box.hidden = true;
-  });
-  box.addEventListener('click', e => { const b = e.target.closest('[data-i]'); if (b) go(Number(b.dataset.i)); });
-  input.addEventListener('blur', () => setTimeout(() => { box.hidden = true; }, 200));
-}

@@ -2,6 +2,7 @@
 import { $, $$, esc, fmtSpan, fmtYear, yearText } from '../core/util.js';
 import { tt, fillImage, ywLink } from './terms.js';
 import { timelineItems, linkEvents, parts as ichParts, clock } from '../core/ichimon.js';
+import { placesOf } from '../core/places.js';
 
 export const LOGO = '<svg viewBox="0 0 40 40" aria-hidden="true"><line x1="2" y1="20" x2="38" y2="20" style="stroke:var(--shu)" stroke-width="3.2" stroke-linecap="round"/><rect x="7" y="10.5" width="11" height="19" rx="2.6" fill="none" stroke="currentColor" stroke-width="2.8"/><rect x="22" y="10.5" width="11" height="19" rx="2.6" fill="none" stroke="currentColor" stroke-width="2.8"/></svg>';
 export const ICON = {
@@ -13,7 +14,8 @@ export const ICON = {
   settings: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>',
   search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>',
   close: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>',
-  star: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg>'
+  star: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3.5l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z"/></svg>',
+  pin: '<svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 21.5s-6.5-6-6.5-11.5a6.5 6.5 0 0 1 13 0c0 5.5-6.5 11.5-6.5 11.5z"/><circle cx="12" cy="10" r="2.3"/></svg>'
 };
 
 /** 確認の印 */
@@ -178,6 +180,7 @@ export function openEvent(app, e) {
       <button class="btn primary" type="button" data-act="go">${yearText(e.year)}へ移動</button>
       <button class="btn" type="button" data-act="quiz">この出来事で練習</button>
       <button class="btn" type="button" data-act="star">${ICON.star.replace('<svg', '<svg width="16" height="16"')}苦手に追加</button>
+      ${placesOf(e).length ? `<button class="btn" type="button" data-act="map">${ICON.pin.replace('<svg', '<svg width="16" height="16" aria-hidden="true"')}勢力図で場所を見る</button>` : ''}
       <a class="btn" href="${ywLink(e.title)}" target="_blank" rel="noopener">世界史の窓で調べる</a>
       <a class="btn" href="#data/${encodeURIComponent(e.key)}">データ確認で開く</a>
     </div>`;
@@ -188,6 +191,7 @@ export function openEvent(app, e) {
       const act = ev.target.closest('[data-act]')?.dataset.act;
       if (act === 'go') { closeSheet(); app.setYear(e.year); if (!location.hash.startsWith('#timeline') && !location.hash.startsWith('#map')) location.hash = '#timeline'; }
       if (act === 'quiz') { closeSheet(); app.startQuizForEvent(e); }
+      if (act === 'map') { closeSheet(); app.showOnMap(`event:${e.id}`, e.year); }
       const iq = ev.target.closest('[data-ich-q]');
       if (iq) { const it = db.ichimon?.byId.get(iq.dataset.ichQ); if (it) { closeSheet(); app.startQuizForIchimon(it); } }
       if (act === 'star') { app.starEvent(e); }

@@ -1,7 +1,8 @@
 // 勢力図の描画。ゾーン（州・県のまとまり）を、その年の持ち主の色で塗る。
 // 国境は「隣り合うゾーンの持ち主がちがう境目」だけを線で引く。
-import { esc } from '../core/util.js';
-import { riverLayer, drawGeo } from './mapgeo.js';
+import { esc, fmtYear } from '../core/util.js';
+import { nameAtYear } from '../core/places.js';
+import { riverLayer, drawGeo, linesPath, GEO_LEVELS } from './mapgeo.js';
 
 const NS = 'http://www.w3.org/2000/svg';
 const cache = new WeakMap();
@@ -90,7 +91,7 @@ export class ZoneMap {
       <g class="hatch"></g><g class="dots"></g>
       <g class="rivers">${this.opt.geo === false ? '' : riverLayer(this.db)}</g>
       <path class="coast" d="${this.P.coast}"/><path class="border"/><path class="sel"/>
-      <g class="labels"></g><g class="geo"></g><g class="battles"></g></svg>
+      <g class="labels"></g><g class="geo"></g><g class="battles"></g><g class="focus"></g></svg>
       ${this.opt.zoom === false ? '' : `<div class="map-zoom"><button type="button" data-z="in" aria-label="拡大">＋</button><button type="button" data-z="out" aria-label="縮小">−</button>${this.opt.geo === false ? '' : `<button type="button" data-z="geo" class="geo-btn" aria-pressed="${this.geoOn()}" title="拡大したときに地名と戦いの場所を出す">地名</button>`}</div>`}
       ${this.opt.showYear ? '<div class="map-year"></div>' : ''}`;
     this.svg = this.box.querySelector('svg');
@@ -102,6 +103,7 @@ export class ZoneMap {
     this.gLabels = this.svg.querySelector('.labels');
     this.gGeo = this.svg.querySelector('.geo');
     this.gBattles = this.svg.querySelector('.battles');
+    this.gFocus = this.svg.querySelector('.focus');
     this.svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
     this.applyView();
     this.wire();
@@ -112,6 +114,92 @@ export class ZoneMap {
   geoOn() { return this.opt.geo !== false && this.app.settings.mapPlaces !== false; }
   setView(name) { const v = this.Z?.views[name]; if (v) { this.vb = v.slice(); this.applyView(); this.drawLabels(); } }
   select(polityId) { this.selected = polityId; this.drawSelection(); }
+
+  /**
+   * 検索した場所に印をつける（core/places.js の resolveFocus で作ったもの。null で消す）。
+   * zoom のときは、その場所が真ん中に来るように拡大する
+   */
+  setFocus(f, { zoom = true } = {}) {
+    this.focus = f || null;
+    this._pulse = !!this.focus; // 印をつけた直後だけ、波紋で場所を知らせる
+    if (this.focus && zoom && this.svg) this.focusView(this.focus);
+    this.drawLabels();
+  }
+
+  /** 印の場所へ移る。都市・出来事の場所は地方が見えるくらい、地方・海は少し広く、川は全体が入るように */
+  focusView(f) {
+    const r = this.svg.getBoundingClientRect();
+    const W = r.width || 600, H = r.height || 400;
+    let cx = f.x, cy = f.y, s;
+    if (f.bbox) {
+      const [x0, y0, x1, y1] = f.bbox;
+      cx = (x0 + x1) / 2; cy = (y0 + y1) / 2;
+      s = Math.min(W / Math.max((x1 - x0) * 1.3, 1), H / Math.max((y1 - y0) * 1.3, 1));
+    } else {
+      const rk = Math.min(Math.max(f.rank || 2, 1), 3) - 1;
+      const span = f.kind === 'region' ? [460, 330, 230][rk] : f.kind === 'sea' ? [400, 300, 230][rk] : 210;
+      s = Math.min(W, H) / span;
+    }
+    // 地名が出る拡大（GEO_LEVELS[0]）より小さくしない。拡大の上限は zoomAt と同じ（横幅 90）
+    s = Math.min(Math.max(s, GEO_LEVELS[0] * 1.05), W / 90);
+    this.vb = [cx - W / 2 / s, cy - H / 2 / s, W / s, H / s];
+    this.applyView();
+  }
+
+  /** 印（検索した場所）の名前。都市・地方・海はその年の名前（その年に名前がなければ、検索した名前を薄く出す） */
+  focusLabel() {
+    const f = this.focus;
+    if (f.kind === 'event') return { text: `${f.label}（${fmtYear(f.event.year)}）`, off: false };
+    if (f.kind === 'river') return { text: f.name, off: false };
+    const n = nameAtYear(f.place.names, this.year);
+    return n ? { text: n.name, off: false } : { text: f.name, off: true };
+  }
+
+  /** 印の名前の枠（国名・地名がこれと重ならないように、先に場所を取る） */
+  focusBox(s) {
+    const f = this.focus, u = 1 / s, fpx = 13;
+    const { text } = this.focusLabel();
+    const w = text.length * fpx * 1.02 * u, h = fpx * 1.35 * u;
+    let x = f.x, y = f.y;
+    if (f.kind === 'river') {
+      const p = this.riverLabelPoint(u);
+      if (!p) return null;
+      [x, y] = p;
+    }
+    if (f.kind === 'region' || f.kind === 'sea' || f.kind === 'river') return { box: [x - w / 2 - 3 * u, y - h / 2, x + w / 2 + 3 * u, y + h / 2], x, y, anchor: 'middle', fpx };
+    // 都市・出来事の場所：点の右に。地図の右はしからはみ出すときは左に
+    const off = (f.kind === 'event' ? 15 : 11) * u;
+    const right = x + off + w <= this.vb[0] + this.vb[2] - 4 * u;
+    return right
+      ? { box: [x + off - 2 * u, y - h / 2, x + off + w + 2 * u, y + h / 2], x: x + off, y, anchor: 'start', fpx }
+      : { box: [x - off - w - 2 * u, y - h / 2, x - off + 2 * u, y + h / 2], x: x - off, y, anchor: 'end', fpx };
+  }
+
+  /** 川の名前を置く点（画面の中にある線の点のうち、真ん中あたり） */
+  riverLabelPoint(u) {
+    const v = this.vb, m = 20 * u, pts = [];
+    for (const l of this.focus.lines || []) for (let k = 0; k + 1 < l.length; k += 2) {
+      if (l[k] >= v[0] + m && l[k] <= v[0] + v[2] - m && l[k + 1] >= v[1] + m && l[k + 1] <= v[1] + v[3] - m) pts.push([l[k], l[k + 1]]);
+    }
+    return pts.length ? pts[Math.floor(pts.length / 2)] : null;
+  }
+
+  drawFocus(s, fb) {
+    const f = this.focus;
+    if (!f) { this.gFocus.innerHTML = ''; return; }
+    const u = 1 / s;
+    let out = '';
+    if (f.kind === 'river') out += `<path class="focus-river" d="${linesPath(f.lines)}"/>`;
+    if (f.kind === 'city' || f.kind === 'event') {
+      out += `<g class="focus-pt" transform="translate(${f.x.toFixed(1)} ${f.y.toFixed(1)}) scale(${u.toFixed(4)})">${this._pulse ? '<circle r="13" class="pulse"/>' : ''}<circle r="${f.kind === 'event' ? 12.5 : 7}" class="ring"/>${f.kind === 'city' ? '<circle r="3" class="dot"/>' : ''}</g>`;
+    }
+    this._pulse = false;
+    if (fb) {
+      const { text, off } = this.focusLabel();
+      out += `<text class="focus-lbl${off ? ' off' : ''}" x="${fb.x.toFixed(1)}" y="${fb.y.toFixed(1)}" font-size="${(fb.fpx * u).toFixed(2)}" text-anchor="${fb.anchor}" dominant-baseline="central" style="stroke-width:${(3.2 * u).toFixed(2)}">${esc(text)}</text>`;
+    }
+    this.gFocus.innerHTML = out;
+  }
 
   applyView() { this.svg?.setAttribute('viewBox', this.vb.map(v => Math.round(v * 10) / 10).join(' ')); }
   scale() { const r = this.svg.getBoundingClientRect(); return Math.min((r.width || 600) / this.vb[2], (r.height || 300) / this.vb[3]); }
@@ -178,6 +266,9 @@ export class ZoneMap {
   drawLabels() {
     if (!this.clusters) return;
     const s = this.scale(), fpx = this.opt.fontSize || 12, fs = fpx / s, placed = [], v = this.vb;
+    // 検索した場所の名前は、国名・地名より先に場所を取る
+    const fb = this.focus ? this.focusBox(s) : null;
+    if (fb) placed.push(fb.box);
     let out = '';
     const seenIn = new Map();
     for (const c of this.clusters) {
@@ -198,11 +289,12 @@ export class ZoneMap {
     this.gLabels.innerHTML = out;
     // 拡大したときの地名（都市・地方・海・川）と、前後5年の戦いの場所
     if (this.opt.geo !== false) {
-      const g = drawGeo(this.db, { year: this.year, vb: v, scale: s, placed, on: this.geoOn() });
+      const g = drawGeo(this.db, { year: this.year, vb: v, scale: s, placed, on: this.geoOn(), focus: this.focus });
       this.gGeo.innerHTML = g.labels;
       this.gBattles.innerHTML = g.battles;
       this.svg.dataset.geo = String(g.level);
     }
+    this.drawFocus(s, fb);
   }
 
   drawSelection() {
