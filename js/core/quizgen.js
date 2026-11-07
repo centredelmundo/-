@@ -48,8 +48,12 @@ export function build(db, spec) {
     }
     case 'ruler': {
       const ps = spec.p.map(id => db.polityById.get(id)).filter(Boolean);
-      if (ps.length < 2) return null;
-      return { ...base(spec), key: `ruler:${spec.y}:${spec.p.join('+')}`, y: spec.y, polities: ps, regions: ps.map(p => p.region) };
+      // 1つの国だけの問題（spec.one は出題した期間 [から, まで]）は1か国、ふつうの問題は2か国以上
+      const one = Array.isArray(spec.one) && spec.one.length === 2 ? { from: spec.one[0], to: spec.one[1] } : null;
+      if (ps.length < (one ? 1 : 2)) return null;
+      const q = { ...base(spec), key: `ruler:${spec.y}:${spec.p.join('+')}`, y: spec.y, polities: ps, regions: ps.map(p => p.region) };
+      if (one) Object.assign(q, { one, title: `君主・指導者（${db.nameAt(ps[0], spec.y)}）` });
+      return q;
     }
     case 'year': case 'term': {
       const e = ev(spec.id); if (!e) return null;
@@ -111,6 +115,54 @@ function makeRuler(db, opt, rand) {
     if (chosen.length >= 2) return { mode: 'ruler', y, p: chosen.map(p => p.id) };
   }
   return null;
+}
+
+/** その国（と、その国の王朝）の君主・指導者で、[from, to] に在位した人（在位の早い順）。minImp は重要度の下限 */
+export function rulersIn(db, p, from, to, minImp = 1) {
+  const ids = [p.id, ...p.children.map(c => c.id)];
+  return db.rulers.filter(r => ids.includes(r.polity) && r.from <= to && r.to >= from && r.importance >= minImp).sort((a, b) => a.from - b.from || a.to - b.to);
+}
+
+/**
+ * 期間 [from, to] のあいだ、ずっと続いていた国（君主・指導者のクイズで「1つの国だけ」を選ぶときの一覧）。
+ * 地域（opt.groups）を選んでいればその地域の国だけ。君主・指導者のデータがない国は入れない。
+ * 戻り値 [{ polity, label（期間のはじめと終わりの名前）, rulers, group }]（地域の順・はじまりの早い順）
+ */
+export function lastingPolities(db, from, to, opt = {}) {
+  if (!(from <= to)) return [];
+  const all = db.groups.length ? db.groups : db.regions.map(r => ({ id: r.id, name: r.name, regions: [r.id] }));
+  const groups = opt.groups?.length ? all.filter(g => opt.groups.includes(g.id)) : all;
+  const out = [];
+  groups.forEach((g, gi) => {
+    for (const p of db.polities) {
+      if (p.parent || p.hideInCards || p.noQuiz || !g.regions.includes(p.region)) continue;
+      if (!p.periods.some(([a, b]) => a <= from && b >= to)) continue;
+      const rulers = rulersIn(db, p, from, to, opt.minImportance || 1);
+      if (!rulers.length) continue;
+      const first = db.nameAt(p, from), last = db.nameAt(p, to);
+      out.push({ polity: p, label: first === last ? first : `${first}→${last}`, rulers, group: g, gi });
+    }
+  });
+  return out.sort((a, b) => a.gi - b.gi || a.polity.start - b.polity.start);
+}
+
+/**
+ * 「1つの国だけ」の君主・指導者の問題を作る（opt.rulerOne の国）。
+ * 期間に在位した人を1人ずつ（同じ人は2回出さない）、その人の在位の途中の年で出す。
+ * 採点は前後1年に在位した人も正解にするので、在位が長い人は代わり目から2年以上はなれた年にする（答えが1人に決まるように）
+ */
+function oneRulerMaker(db, opt, rand) {
+  const p = db.polityById.get(opt.rulerOne);
+  const [from, to] = [opt.from ?? db.range[0], opt.to ?? db.range[1]];
+  const queue = p ? shuffle(rulersIn(db, p, from, to, opt.minImportance || 1), rand) : [];
+  return () => {
+    const r = queue.pop();
+    if (!r) return null;
+    const lo = Math.max(r.from, from), hi = Math.min(r.to, to);
+    const m = hi - lo >= 4 ? 2 : hi - lo >= 2 ? 1 : 0;
+    const y = lo + m + Math.floor(rand() * (hi - lo - 2 * m + 1));
+    return { mode: 'ruler', y, p: [p.id], one: [from, to] };
+  };
 }
 
 function makeYear(db, opt, rand) {
@@ -201,10 +253,12 @@ export function makeSession(db, opt, rand = Math.random) {
   let modes = (opt.modes?.length ? opt.modes : Object.keys(MODES)).filter(m => MAKERS[m]);
   // 文化史だけのときは、出来事を1つずつ扱う形式で出す（ヨコ記述・君主は文化にしぼれないため）
   if (opt.cultureOnly) { modes = modes.filter(m => CULTURE_MODES.includes(m)); if (!modes.length) modes = CULTURE_MODES; }
+  // 君主・指導者で「1つの国だけ」を選んだときは、その国の君主・指導者だけを出す
+  const makers = opt.rulerScope === 'one' && opt.rulerOne ? { ...MAKERS, ruler: oneRulerMaker(db, opt, rand) } : MAKERS;
   const out = [], keys = new Set();
   for (let i = 0; out.length < (opt.count || 10) && i < (opt.count || 10) * 8; i++) {
     const mode = modes[i % modes.length];
-    const spec = MAKERS[mode](db, opt, rand);
+    const spec = makers[mode](db, opt, rand);
     if (!spec) continue;
     const q = build(db, spec);
     if (!q || keys.has(q.key)) continue;

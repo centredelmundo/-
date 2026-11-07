@@ -360,6 +360,14 @@ details.more > summary { cursor: pointer; font-size: 13.5px; color: var(--ink-2)
 .mode-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
 .mode-grid label { display: flex; gap: 8px; align-items: flex-start; border: 1px solid var(--line); border-radius: 10px; padding: 9px 11px; background: var(--surface); cursor: pointer; font-size: 14px; line-height: 1.4; }
 .mode-grid label small { display: block; color: var(--ink-3); font-size: 11.5px; }
+/* 君主・指導者の「1つの国だけ」：期間のあいだずっと続いた国の一覧（地域ごと） */
+.field > .seg { justify-self: start; }
+.ruler-pick { display: grid; gap: 6px; margin-top: 4px; }
+.ruler-pick .rp-group { display: grid; grid-template-columns: 6.2em minmax(0, 1fr); gap: 4px 8px; align-items: start; }
+.ruler-pick .rp-g { font-size: 12px; color: var(--ink-3); padding-top: 5px; }
+.ruler-pick .chip { flex: 0 1 auto; max-width: 100%; text-align: left; }
+.ruler-pick .chip small { margin-left: 5px; font-size: 11px; opacity: .75; }
+@media (max-width: 480px) { .ruler-pick .rp-group { grid-template-columns: minmax(0, 1fr); gap: 2px; } .ruler-pick .rp-g { padding-top: 0; } }
 .progressbar { height: 6px; border-radius: 3px; background: var(--line-2); overflow: hidden; }
 .progressbar i { display: block; height: 100%; background: var(--ai); transition: width .2s; }
 .q-card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px; display: grid; gap: 12px; }

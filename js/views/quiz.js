@@ -1,7 +1,7 @@
 // クイズの画面
 // 解答中の状態はブラウザに保存するので、別の画面に移ったりアプリを閉じたりしても続きから再開できる。
 import { $, $$, esc, fmtYear, fmtSpan, yearText, hasYear, hideYear, hideAnswers, shuffle, toast, centuryOf, centuryText } from '../core/util.js';
-import { MODES, CULTURE_MODES, ORDER_GAPS, build, makeSession, eventPool, quizGroups, ichimonPool } from '../core/quizgen.js';
+import { MODES, CULTURE_MODES, ORDER_GAPS, build, makeSession, eventPool, quizGroups, ichimonPool, lastingPolities, rulersIn } from '../core/quizgen.js';
 import { parts as ichParts, gradeBlank, NUM, clock } from '../core/ichimon.js';
 import { gradeCross, gradeRuler, gradeTerm, gradeYear, CLS_TEXT } from '../core/grade.js';
 import { recordWithUndo, changeJudgement, star, isStarred, addCandidate, getUndo, setUndo } from '../core/progress.js';
@@ -108,6 +108,14 @@ function setup() {
       <div class="field"><span class="label">地域（選ばなければすべて）</span>
         <div class="chips" id="qzGroups">${groups.map(g => `<button type="button" class="chip${chosen.has(g.id) ? ' on' : ''}" data-g="${g.id}">${esc(g.name)}</button>`).join('')}</div>
       </div>
+      <div class="field" id="qzRulerBox"><span class="label">君主・指導者の出し方</span>
+        <div class="seg" id="qzRulerScope"><button type="button" data-v="all" class="${q.rulerScope === 'one' ? '' : 'on'}">いろいろな国</button><button type="button" data-v="one" class="${q.rulerScope === 'one' ? 'on' : ''}">1つの国だけ</button></div>
+        <p class="small muted" id="qzRulerAll">ある年の、いろいろな国の君主・指導者を答えます（これまでどおり）。</p>
+        <div id="qzRulerOne" hidden>
+          <p class="small muted" id="qzRulerNote"></p>
+          <div class="ruler-pick" id="qzRulerList" role="radiogroup" aria-label="出題する国"></div>
+        </div>
+      </div>
       <div class="row" style="gap:18px">
         <div class="field"><span class="label">重要度</span><div class="seg" id="qzImp">${[1, 2, 3].map(n => `<button type="button" data-v="${n}" class="${(q.minImportance || 1) === n ? 'on' : ''}">${'★'.repeat(n)}${n < 3 ? '以上' : 'のみ'}</button>`).join('')}</div></div>
         <div class="field"><span class="label">問題数</span><div class="seg" id="qzCount">${[5, 10, 20, 30].map(n => `<button type="button" data-v="${n}" class="${(q.count || 10) === n ? 'on' : ''}">${n}問</button>`).join('')}</div></div>
@@ -128,9 +136,25 @@ function setup() {
       count: Number($('#qzCount .on', el)?.dataset.v || 10),
       ichChapters: $$('#qzIch .chip.on', el).map(x => Number(x.dataset.ch)),
       orderGap: $('#qzOrder .on', el)?.dataset.v || 'near',
+      rulerScope: $('#qzRulerScope .on', el)?.dataset.v || 'all',
+      rulerOne,
       culture: cultureOnly || $('#qzCulture', el).checked,
       cultureOnly
     };
+  };
+  // 君主・指導者の「1つの国だけ」で選んだ国（年代の範囲を変えて一覧から外れたら、選んでいないことにする）
+  let rulerOne = q.rulerOne || '', picked = null;
+  const drawRulerList = (list, o) => {
+    const span = `${fmtYear(o.from)}〜${fmtYear(o.to)}年`;
+    $('#qzRulerNote', el).textContent = list.length
+      ? `${span}のあいだ、ずっと続いていた国です（人数はこの期間の君主・指導者。重要度の設定でしぼれます）。国を選ぶと、その国の君主・指導者を1人1問ずつ、いろいろな年で出題します。`
+      : `${span}のあいだ、ずっと続いていた国が見つかりません。年代の範囲を短くしてください${o.groups.length ? '（地域をしぼっているときは、地域も見直してください）' : ''}。`;
+    const byGroup = new Map();
+    for (const x of list) { if (!byGroup.has(x.group)) byGroup.set(x.group, []); byGroup.get(x.group).push(x); }
+    $('#qzRulerList', el).innerHTML = [...byGroup].map(([g, xs]) => `<div class="rp-group"><span class="rp-g">${esc(g.name)}</span><div class="chips">${xs.map(x => {
+      const on = x.polity.id === rulerOne;
+      return `<button type="button" class="chip${on ? ' on' : ''}" role="radio" aria-checked="${on}" data-pol="${esc(x.polity.id)}" title="${esc(x.rulers.map(r => r.name).join('・'))}">${esc(x.label)}<small>${x.rulers.length}人</small></button>`;
+    }).join('')}</div></div>`).join('');
   };
   const refresh = () => {
     const o = read();
@@ -140,9 +164,25 @@ function setup() {
     const ni = useIch ? ichimonPool(db, o).length : 0;
     const box = $('#qzIchBox', el); if (box) box.hidden = !useIch;
     $('#qzOrderBox', el).hidden = !usable.includes('order');
+    // 君主・指導者：1つの国だけのときは、期間のあいだずっと続いた国の一覧から選ぶ
+    $('#qzRulerBox', el).hidden = !usable.includes('ruler');
+    const oneRuler = usable.includes('ruler') && o.rulerScope === 'one';
+    $('#qzRulerOne', el).hidden = !oneRuler;
+    $('#qzRulerAll', el).hidden = oneRuler;
+    picked = null;
+    if (oneRuler) {
+      const list = lastingPolities(db, o.from, o.to, o);
+      picked = list.find(x => x.polity.id === rulerOne) || null;
+      drawRulerList(list, o);
+    }
     const others = usable.filter(m => m !== 'ichimon');
-    $('#qzPool', el).textContent = `${others.length || !useIch ? `出題の元になる出来事：${n}件` : ''}${useIch ? `${others.length ? '・' : ''}一問一答：${ni}問` : ''}${o.cultureOnly ? `（文化史・形式：${usable.map(m => MODES[m]).join('・')}）` : ''}`;
-    $('#qzStart', el).disabled = !o.modes.length || (!(others.length && n) && !(useIch && ni));
+    const evModes = others.filter(m => !(oneRuler && m === 'ruler'));
+    const parts = [];
+    if (evModes.length || (!useIch && !oneRuler)) parts.push(`出題の元になる出来事：${n}件`);
+    if (oneRuler) parts.push(picked ? `${picked.label}の君主・指導者：${picked.rulers.length}人（1人1問まで）` : '君主・指導者：出題する国を選んでください');
+    if (useIch) parts.push(`一問一答：${ni}問`);
+    $('#qzPool', el).textContent = `${parts.join('・')}${o.cultureOnly ? `（文化史・形式：${usable.map(m => MODES[m]).join('・')}）` : ''}`;
+    $('#qzStart', el).disabled = !o.modes.length || (oneRuler && !picked) || (!(evModes.length && n) && !(oneRuler && picked) && !(useIch && ni));
   };
   const root = el.firstElementChild;
   root.addEventListener('change', refresh);
@@ -151,17 +191,23 @@ function setup() {
     if (c) { $('#qzFrom', el).value = c.dataset.from; $('#qzTo', el).value = c.dataset.to; refresh(); }
     const g = e.target.closest('#qzGroups .chip, #qzIch .chip');
     if (g) { g.classList.toggle('on'); refresh(); }
-    const sg = e.target.closest('#qzImp button, #qzCount button, #qzOrder button');
+    const sg = e.target.closest('#qzImp button, #qzCount button, #qzOrder button, #qzRulerScope button');
     if (sg) { $$('button', sg.parentElement).forEach(x => x.classList.toggle('on', x === sg)); refresh(); }
+    const pol = e.target.closest('#qzRulerList [data-pol]');
+    if (pol) { rulerOne = pol.dataset.pol; refresh(); }
   });
   $('#qzStart', el).addEventListener('click', () => {
     const o = read();
     app.settings.quiz = { ...app.settings.quiz, ...o, culture: undefined, verifiedOnly: undefined };
     if (!o.cultureOnly) app.settings.culture = o.culture;
     app.saveSettings();
-    const qs = makeSession(db, { ...o, window: 5 });
+    const one = picked && o.rulerScope === 'one' && !o.cultureOnly && o.modes.includes('ruler') ? picked : null;
+    const opt = { ...o, rulerOne: one ? one.polity.id : '' };
+    const qs = makeSession(db, { ...opt, window: 5 });
     if (!qs.length) { $('#qzPool', el).textContent = '条件に合う問題を作れませんでした。範囲や地域を広げてください。'; return; }
-    begin(qs, { title: o.cultureOnly ? '文化史クイズ' : o.modes.length === 1 && o.modes[0] === 'ichimon' ? '一問一答' : 'クイズ', again: o });
+    const onlyRuler = one && o.modes.length === 1;
+    if (onlyRuler && qs.length < o.count) toast(`${one.label}の君主・指導者は、この期間に${one.rulers.length}人なので、${qs.length}問にしました`);
+    begin(qs, { title: o.cultureOnly ? '文化史クイズ' : onlyRuler ? `君主・指導者：${one.label}` : o.modes.length === 1 && o.modes[0] === 'ichimon' ? '一問一答' : 'クイズ', again: opt });
   });
   refresh();
 }
@@ -232,6 +278,11 @@ function body(q) {
       return `<p class="q-text"><span class="yr">${yearText(q.y)}</span>ごろ（前後${q.w}年）、次の地域では何が起きていた？ 出来事・王朝・人物のどれでもよい。いくつ書いてもOK（「、」で区切る）。</p>` +
         q.groups.map((g, i) => `<div class="q-field"><label for="qa${i}">${esc(g.name)}</label><input type="text" id="qa${i}" autocomplete="off" enterkeyhint="next"><div class="res" id="qr${i}" aria-live="polite"></div></div>`).join('');
     case 'ruler':
+      if (q.one) {
+        const p = q.polities[0];
+        return `<p class="q-text"><span class="yr">${yearText(q.y)}</span>の<b>${tt(p, db.nameAt(p, q.y))}</b>の君主（指導者）は？</p>` +
+          '<div class="q-field"><label for="qa0">君主・指導者</label><input type="text" id="qa0" autocomplete="off"><div class="res" id="qr0" aria-live="polite"></div></div>';
+      }
       return `<p class="q-text"><span class="yr">${yearText(q.y)}</span>の、次の国の君主（指導者）は？</p>` +
         q.polities.map((p, i) => `<div class="q-field"><label for="qa${i}">${tt(p, db.nameAt(p, q.y))}</label><input type="text" id="qa${i}" autocomplete="off"><div class="res" id="qr${i}" aria-live="polite"></div></div>`).join('');
     case 'year': {
@@ -326,6 +377,7 @@ function grade(skip = false, replay = false) {
       return false;
     });
     ok = verdicts.every(Boolean);
+    if (q.one) $('#qr0', el)?.insertAdjacentHTML('beforeend', rulerLine(db, q));
   } else if (q.mode === 'year') {
     const e = q.event, r = gradeYear(val(0), e);
     ok = !!r.ok;
@@ -380,6 +432,16 @@ function grade(skip = false, replay = false) {
   saveSession();
   $('#qzCard', el)?.classList.add('graded');
   after(q, S.ok);
+}
+
+/** 1つの国だけの君主の問題：出題した期間のその国の君主・指導者を在位の順に（正解の人は太字。前後3人まで） */
+function rulerLine(db, q) {
+  const p = q.polities[0], list = rulersIn(db, p, q.one.from, q.one.to);
+  const hit = list.map((r, i) => (r.from <= q.y && q.y <= r.to ? i : -1)).filter(i => i >= 0);
+  if (list.length < 2 || !hit.length) return '';
+  const a = Math.max(0, hit[0] - 3), b = Math.min(list.length, hit[hit.length - 1] + 4);
+  const items = list.slice(a, b).map((r, k) => { const t = `${tt(r)}（${fmtSpan(r.from, r.to)}）`; return hit.includes(a + k) ? `<b>${t}</b>` : t; });
+  return `<span class="also">在位の順（${fmtYear(q.one.from)}〜${fmtYear(q.one.to)}年）：${a > 0 ? '…・' : ''}${items.join('・')}${b < list.length ? '・…' : ''}</span>`;
 }
 
 const spanText = it => it.spans.map(([a, b]) => (a === b ? `${fmtYear(a)}年` : `${fmtYear(a)}〜${fmtYear(b)}年`)).join('、');
