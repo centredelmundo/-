@@ -8,6 +8,7 @@ import { recordWithUndo, changeJudgement, star, isStarred, addCandidate, getUndo
 import { load, save, remove } from '../core/store.js';
 import { yokoPanel, badges, ICON } from './common.js';
 import { tt, fillImage, itemName } from './terms.js';
+import { countryEvents } from '../core/countryevents.js';
 
 const MODE_HELP = {
   cross: '◯年ごろ、A・B・Cで何が起きていた？',
@@ -434,6 +435,18 @@ function grade(skip = false, replay = false) {
   after(q, S.ok);
 }
 
+/** 1つの国だけの君主の問題：採点のあとに、その国の前後10年の出来事（名前が出てこない同じ地域の出来事は分けて出す） */
+function countryPanel(db, q) {
+  const p = q.polities[0], name = db.nameAt(p, q.y), r = countryEvents(db, p, q.y, 10);
+  const when = e => (e.end && e.end !== e.year ? fmtSpan(e.year, e.end) : fmtYear(e.year));
+  const list = (evs, total, cls = '') => `<ul${cls ? ` class="${cls}"` : ''}>${evs.map(e => `<li><b>${esc(when(e))}</b><span>${tt(e)}</span></li>`).join('')}${total > evs.length ? `<li><b></b><span class="small muted">ほか${total - evs.length}件</span></li>` : ''}</ul>`;
+  return `<div class="yoko cev">
+    <h4>${esc(name)}の出来事（${fmtYear(r.from)}〜${fmtYear(r.to)}年・前後10年）</h4>
+    ${r.own.length ? list(r.own, r.ownTotal) : `<p class="small muted">この期間に${esc(name)}の名前が出てくる出来事は、データにありません。</p>`}
+    ${r.region.length ? `<h4>同じ地域（${esc(db.regionById(p.region)?.name || '')}）のそのほかの出来事</h4>${list(r.region, r.regionTotal, 'sub')}` : ''}
+  </div>`;
+}
+
 /** 1つの国だけの君主の問題：出題した期間のその国の君主・指導者を在位の順に（正解の人は太字。前後3人まで） */
 function rulerLine(db, q) {
   const p = q.polities[0], list = rulersIn(db, p, q.one.from, q.one.to);
@@ -475,7 +488,7 @@ function after(q, ok) {
   const src = q.mode === 'ichimon' ? `<p class="small muted">${esc(q.item.audio)}${q.item.audio ? ` ・ ${clock(q.item.t)}ごろ` : ''}${q.item.yq ? '' : ' ・ 年代は前後の問題からの推定'}</p>` : '';
   $('#qzAfter', el).innerHTML = q.mode === 'ichimon'
     ? `${src}${inRange ? yokoPanel(app, q.y, 5, q.regions || []) : ''}`
-    : `<p class="tt-hint">点線の下線がある用語をタップすると、1〜2文の概要が見られます。</p>${yokoPanel(app, q.y, 5, q.regions || [])}`;
+    : `<p class="tt-hint">点線の下線がある用語をタップすると、1〜2文の概要が見られます。</p>${q.one ? countryPanel(app.db, q) : ''}${yokoPanel(app, q.y, 5, q.regions || [])}`;
   $('#qzNext', el).addEventListener('click', next);
   $('#qzFlip', el).addEventListener('click', () => flip(q));
   $('#qzStar', el).addEventListener('click', e => { star(q); e.currentTarget.lastChild.textContent = '苦手に登録済み'; });
