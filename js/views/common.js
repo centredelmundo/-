@@ -1,6 +1,6 @@
 // 画面どうしで共通の部品：地域カード、詳細シート、印、王朝の帯
 import { $, $$, esc, fmtSpan, fmtYear, yearText } from '../core/util.js';
-import { tt, fillImage, ywLink } from './terms.js';
+import { tt, fillImage, ywLink, ichWord } from './terms.js';
 import { timelineItems, linkEvents, parts as ichParts, clock } from '../core/ichimon.js';
 import { placesOf } from '../core/places.js';
 
@@ -97,7 +97,7 @@ export function openIchimon(app, it) {
   const regs = it.regions.map(r => db.regionById(r)?.name || r).join('・');
   const [a, b] = db.range;
   const inRange = it.y != null && it.y >= a && it.y <= b;
-  const sentence = ichParts(it.text).map(p => (p.s != null ? esc(p.s) : `<b class="ich-ans">${esc(p.a)}</b>`)).join('');
+  const sentence = ichParts(it.text).map(p => (p.s != null ? esc(p.s) : ichWord(it, p.a))).join('');
   const html = `
     <div class="muted small">${esc(regs)} ・ 一問一答</div>
     <h2>${esc(it.title)}</h2>
@@ -173,7 +173,7 @@ export function openEvent(app, e) {
       ${e.desc ? `<dt>概要</dt><dd>${esc(e.desc)}<span class="small muted">（${e.descVerified ? '確認済み' : '概要は未確認'}）</span></dd>` : ''}
       ${e.answers.length ? `<dt>別の言い方</dt><dd>${e.answers.map(esc).join('、')}</dd>` : ''}
       ${e.memo ? `<dt>メモ</dt><dd>${esc(e.memo)}</dd>` : ''}
-      ${ichs.length ? `<dt>一問一答</dt><dd>${ichs.map(it => `<p class="ich-full small">${ichParts(it.text).map(p => (p.s != null ? esc(p.s) : `<b class="ich-ans">${esc(p.a)}</b>`)).join('')} <button class="btn small" type="button" data-ich-q="${esc(it.id)}">解く</button></p>`).join('')}</dd>` : ''}
+      ${ichs.length ? `<dt>一問一答</dt><dd>${ichs.map(it => `<p class="ich-full small">${ichParts(it.text).map(p => (p.s != null ? esc(p.s) : ichWord(it, p.a))).join('')} <button class="btn small" type="button" data-ich-q="${esc(it.id)}">解く</button></p>`).join('')}</dd>` : ''}
     </dl>
     ${yokoPanel(app, e.year, 5, e.regions)}
     <div class="q-actions">

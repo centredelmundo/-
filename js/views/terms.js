@@ -1,7 +1,9 @@
 // 用語の概要シートと、作品・建築の写真（クイズ・年表・データ確認で共通）
 import { esc, fmtYear, fmtSpan, yearText } from '../core/util.js';
 import { imageInfo } from '../core/wiki.js';
-import { openSheet, badges } from './common.js';
+import { answerRecord, answerLabel, isDateAnswer } from '../core/ichimon.js';
+import { searchPlaces, periodText, PLACE_KIND } from '../core/places.js';
+import { openSheet, closeSheet, badges, ICON } from './common.js';
 
 export const KIND_LABEL = { event: '出来事', ruler: '人物', polity: '王朝・国家' };
 // 人物の title は「皇帝」などの称号なので、名前には使わない（出来事だけ title が名前）
@@ -15,6 +17,48 @@ const safeUrl = u => (/^https?:\/\//.test(String(u || '')) ? String(u) : '');
 export function tt(x, label) {
   const text = esc(label ?? itemName(x));
   return x?.key ? `<span class="tt" data-term="${esc(x.key)}">${text}</span>` : text;
+}
+
+/**
+ * 一問一答の答えの語（タップすると概要。年・日付だけの答えは押せない）。
+ * it は一問一答の問題（地域と年で、同じ名前の出来事を見分ける）
+ */
+export function ichWord(it, a, cls = 'ich-ans') {
+  if (isDateAnswer(a)) return `<b class="${cls}">${esc(a)}</b>`;
+  return `<b class="${cls} tt" data-word="${esc(a)}"${it?.id ? ` data-ich="${esc(it.id)}"` : ''}>${esc(a)}</b>`;
+}
+
+/**
+ * 一問一答の答えの語の概要を出す。
+ * アプリのデータに同じ名前の出来事・人物・王朝/国家があればその概要、勢力図の地名ならその場所（勢力図へ）、
+ * どちらもなければ「世界史の窓で調べる」だけのシート
+ */
+export function openWord(app, word, it = null) {
+  const db = app.db;
+  const rec = answerRecord(db, word, it ? { y: it.y, regions: it.regions } : {});
+  if (rec) { openTerm(app, rec.key); return; }
+  const label = answerLabel(word);
+  const hit = searchPlaces(db, label, it?.y ?? app.year, 3).find(h => h.how === 0);
+  if (hit) {
+    const period = periodText(hit.periods, db.range[0]);
+    openSheet(`
+      <div class="muted small">${PLACE_KIND[hit.place.kind]}（勢力図の地名）</div>
+      <h2>${esc(hit.name)}</h2>
+      ${period ? `<div class="yr term-when">${esc(period)}</div>` : ''}
+      <p class="term-desc"><span class="muted">地名の概要はまだありませんが、勢力図でその場所を見られます。</span></p>
+      <div class="q-actions">
+        <button class="btn primary" type="button" data-act="map">${ICON.pin.replace('<svg', '<svg width="16" height="16" aria-hidden="true"')}勢力図で場所を見る</button>
+        <a class="btn" href="${ywLink(hit.name)}" target="_blank" rel="noopener">世界史の窓で調べる</a>
+      </div>`, sheet => {
+      sheet.querySelector('[data-act="map"]').addEventListener('click', () => { closeSheet(); app.showOnMap(hit.place.id, hit.year); });
+    });
+    return;
+  }
+  openSheet(`
+    <div class="muted small">一問一答の答え</div>
+    <h2>${esc(label)}</h2>
+    <p class="term-desc"><span class="muted">この語の概要は、アプリのデータにはまだありません。</span></p>
+    <div class="q-actions"><a class="btn" href="${ywLink(label)}" target="_blank" rel="noopener">世界史の窓で調べる</a></div>`);
 }
 
 /** 用語の概要シート */

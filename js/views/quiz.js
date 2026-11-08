@@ -2,12 +2,12 @@
 // 解答中の状態はブラウザに保存するので、別の画面に移ったりアプリを閉じたりしても続きから再開できる。
 import { $, $$, esc, fmtYear, fmtSpan, yearText, hasYear, hideYear, hideAnswers, shuffle, toast, centuryOf, centuryText } from '../core/util.js';
 import { MODES, CULTURE_MODES, ORDER_GAPS, build, makeSession, eventPool, quizGroups, ichimonPool, lastingPolities, rulersIn } from '../core/quizgen.js';
-import { parts as ichParts, gradeBlank, NUM, clock } from '../core/ichimon.js';
+import { parts as ichParts, gradeBlank, NUM, clock, isDateAnswer } from '../core/ichimon.js';
 import { gradeCross, gradeRuler, gradeTerm, gradeYear, CLS_TEXT } from '../core/grade.js';
 import { recordWithUndo, changeJudgement, star, isStarred, addCandidate, getUndo, setUndo } from '../core/progress.js';
 import { load, save, remove } from '../core/store.js';
 import { yokoPanel, badges, ICON } from './common.js';
-import { tt, fillImage, itemName } from './terms.js';
+import { tt, fillImage, itemName, ichWord } from './terms.js';
 import { countryEvents } from '../core/countryevents.js';
 
 const MODE_HELP = {
@@ -402,9 +402,13 @@ function grade(skip = false, replay = false) {
     const verdicts = it.answers.map((a, i) => {
       const m = gradeBlank(val(i), a, strict);
       const b = $(`.blank[data-b="${i}"]`, el);
-      if (b) { b.textContent = a; b.classList.add(m ? 'ok' : 'ng'); }
-      if (m) setRes(i, 'ok', `<div><span class="v">${m.how === 'fuzzy' ? '○ ほぼ正解' : '○ 正解'}</span>${esc(a)}${m.how === 'fuzzy' ? `<br>表記を確認：正しくは「${esc(a)}」` : ''}</div>`);
-      else setRes(i, 'ng', `<div><span class="v">${val(i).trim() ? '×' : '未回答'}</span>正解は「<b>${esc(a)}</b>」</div>`);
+      if (b) {
+        b.textContent = a; b.classList.add(m ? 'ok' : 'ng');
+        // 採点のあとは、答えの語をタップすると概要（アプリのデータにある語なら）
+        if (!isDateAnswer(a)) { b.classList.add('tt'); b.dataset.word = a; b.dataset.ich = it.id; }
+      }
+      if (m) setRes(i, 'ok', `<div><span class="v">${m.how === 'fuzzy' ? '○ ほぼ正解' : '○ 正解'}</span>${ichWord(it, a, 'ans')}${m.how === 'fuzzy' ? `<br>表記を確認：正しくは「${esc(a)}」` : ''}</div>`);
+      else setRes(i, 'ng', `<div><span class="v">${val(i).trim() ? '×' : '未回答'}</span>正解は「${ichWord(it, a, 'ans')}」</div>`);
       return !!m;
     });
     ok = verdicts.every(Boolean);
@@ -487,7 +491,7 @@ function after(q, ok) {
   const inRange = q.y != null && q.y >= ra && q.y <= rb;
   const src = q.mode === 'ichimon' ? `<p class="small muted">${esc(q.item.audio)}${q.item.audio ? ` ・ ${clock(q.item.t)}ごろ` : ''}${q.item.yq ? '' : ' ・ 年代は前後の問題からの推定'}</p>` : '';
   $('#qzAfter', el).innerHTML = q.mode === 'ichimon'
-    ? `${src}${inRange ? yokoPanel(app, q.y, 5, q.regions || []) : ''}`
+    ? `<p class="tt-hint">答えの語をタップすると、概要が見られます（アプリのデータにない語は、世界史の窓で調べられます）。</p>${src}${inRange ? yokoPanel(app, q.y, 5, q.regions || []) : ''}`
     : `<p class="tt-hint">点線の下線がある用語をタップすると、1〜2文の概要が見られます。</p>${q.one ? countryPanel(app.db, q) : ''}${yokoPanel(app, q.y, 5, q.regions || [])}`;
   $('#qzNext', el).addEventListener('click', next);
   $('#qzFlip', el).addEventListener('click', () => flip(q));

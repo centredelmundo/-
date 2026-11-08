@@ -175,5 +175,51 @@ export function linkEvents(data, events) {
   return { byEvent, merged };
 }
 
+/** 答えが年・日付だけか（「1295年」など。概要を出す語ではない） */
+export const isDateAnswer = a => DATE.test(String(a ?? '').trim());
+
+const recCache = new WeakMap();
+/** アプリのデータの名前の索引（表記をそろえた名前 → 出来事・人物・王朝/国家） */
+function recordIndex(db) {
+  if (recCache.has(db)) return recCache.get(db);
+  const idx = new Map();
+  const add = (name, rec) => {
+    const k = base(name);
+    if (!k) return;
+    if (!idx.has(k)) idx.set(k, []);
+    if (!idx.get(k).includes(rec)) idx.get(k).push(rec);
+  };
+  for (const e of db.events) for (const t of [e.title, ...(e.answers || [])]) add(t, e);
+  for (const r of db.rulers) for (const t of [r.name, ...(r.aliases || [])]) add(t, r);
+  for (const p of db.polities) for (const t of [p.name, ...(p.aliases || []), ...(p.names || []).map(n => n[1])]) add(t, p);
+  recCache.set(db, idx);
+  return idx;
+}
+
+/**
+ * 一問一答の答えの語に当たる、アプリのデータの項目（出来事・人物・王朝/国家）。なければ null。
+ * 名前・別名が（表記ゆれをそろえて）同じものだけを使い、いくつかあれば、ctx（その問題の地域と年）に近いものを選ぶ
+ * （「パリ条約」なら、問題の年にいちばん近いパリ条約）。
+ */
+export function answerRecord(db, answer, ctx = {}) {
+  if (isDateAnswer(answer)) return null;
+  const idx = recordIndex(db);
+  const cands = [...new Set(variants(answer).flatMap(v => idx.get(base(v)) || []))];
+  if (cands.length <= 1) return cands[0] || null;
+  const y = ctx.y, regs = ctx.regions || [];
+  const span = x => (x.kind === 'event' ? [x.year, x.end ?? x.year] : x.kind === 'ruler' ? [x.from, x.to] : [x.start, x.end]);
+  const regOf = x => (x.kind === 'event' ? x.regions : [x.region || db.polityById?.get(x.parent)?.region]);
+  const score = x => {
+    const [a, b] = span(x);
+    const d = y == null ? 0 : y < a ? a - y : y > b ? y - b : 0;
+    const far = regs.length && !regOf(x).some(r => regs.includes(r)) ? 1000 : 0;
+    return far + Math.min(d, 999) + ({ event: 0, ruler: 0.1, polity: 0.2 }[x.kind] || 0.3);
+  };
+  return cands.sort((p, q) => score(p) - score(q))[0];
+}
+
+/** 答えの語の見出し（「（エルサレム）」のような別名や『』を外す） */
+export const answerLabel = a => unquote(String(a ?? '').replace(/（[^（）]+）$/, '').trim()) || String(a ?? '');
+
 /** 音声の位置（秒）を「12:34」に */
 export const clock = t => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;

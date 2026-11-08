@@ -381,6 +381,9 @@ details.more > summary { cursor: pointer; font-size: 13.5px; color: var(--ink-2)
 .ich-text .blank.ng { color: var(--bad); border-color: var(--bad); }
 .ich-full { font-size: 15px; line-height: 1.75; }
 .ich-full .ich-ans { color: var(--ai); }
+/* 採点のあとの空欄は、下線（枠）がもうあるので、点線の下線は重ねない */
+.q-card.graded .ich-text .blank.tt { text-decoration: none; cursor: pointer; }
+.res .ans { font-weight: 700; }
 .mode-grid label.off { opacity: .55; cursor: default; }
 .ev.ich .y small { font-size: .62em; font-weight: 600; margin-left: 1px; }
 .q-field { display: grid; gap: 4px; }
