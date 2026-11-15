@@ -219,6 +219,12 @@ function begin(questions, opts) {
   show();
 }
 
+/**
+ * カード右上の「○世紀」（一問一答は章）。
+ * 年代当ては世紀が答えのヒントになるので、採点するまで出さない（show で空にして、grade で入れる）
+ */
+const eraText = q => (q.mode === 'ichimon' ? `第${q.item.ch}章` : q.y != null ? centuryText(centuryOf(q.y)) : '');
+
 function show(restore = false) {
   const { el } = S, q = S.questions[S.i], n = S.questions.length;
   S.graded = false; S.ok = null; S.order = []; S.choice = null;
@@ -228,7 +234,7 @@ function show(restore = false) {
     <div class="row" style="justify-content:space-between"><span class="small muted">${esc(S.opts.title || 'クイズ')} ・ ${S.i + 1} / ${n}</span><button class="btn small ghost" type="button" id="qzQuit">やめる</button></div>
     <div class="progressbar"><i style="width:${S.i / n * 100}%"></i></div>
     <div class="q-card" id="qzCard">
-      <div class="q-meta"><span>${esc(q.title)}</span><span>${q.mode === 'ichimon' ? `第${q.item.ch}章` : q.y != null ? centuryText(centuryOf(q.y)) : ''}</span></div>
+      <div class="q-meta"><span>${esc(q.title)}</span><span id="qzEra">${q.mode === 'year' ? '' : esc(eraText(q))}</span></div>
       ${body(q)}
       <div class="q-actions" id="qzActs"><button class="btn primary" type="button" id="qzGrade">採点する</button><button class="btn" type="button" id="qzSkip">わからない</button></div>
       <div id="qzAfter"></div>
@@ -288,7 +294,9 @@ function body(q) {
         q.polities.map((p, i) => `<div class="q-field"><label for="qa${i}">${tt(p, db.nameAt(p, q.y))}</label><input type="text" id="qa${i}" autocomplete="off"><div class="res" id="qr${i}" aria-live="polite"></div></div>`).join('');
     case 'year': {
       const e = q.event;
-      return `${img(e)}<p class="q-text">「<b class="tt q-title" data-term="${esc(e.key)}" data-full="${esc(e.title)}">${esc(hideYear(e.title, e.year))}</b>」${e.end ? 'が始まったの' : ''}は何年？</p>${e.desc ? `<p class="q-hint">${esc(hideYear(e.desc, e.year))}</p>` : ''}
+      // 「20世紀を代表する」のような世紀も答えのヒントになるので、採点まで伏せる（採点後に data-full で戻す）
+      const hide = s => hideYear(s, e.year).replace(/前?\d+世紀/g, '〇〇世紀');
+      return `${img(e)}<p class="q-text">「<b class="tt q-title" data-term="${esc(e.key)}" data-full="${esc(e.title)}">${esc(hide(e.title))}</b>」${e.end ? 'が始まったの' : ''}は何年？</p>${e.desc ? `<p class="q-hint"${hide(e.desc) !== e.desc ? ` data-full="${esc(e.desc)}"` : ''}>${esc(hide(e.desc))}</p>` : ''}
         <div class="q-field"><label for="qa0">年（紀元前は「前221」のように）</label><input type="text" id="qa0" inputmode="numeric" autocomplete="off"><div class="res" id="qr0" aria-live="polite"></div></div>`;
     }
     case 'term': {
@@ -436,6 +444,7 @@ function grade(skip = false, replay = false) {
   Object.assign(S.cur, { graded: true, skip, ok: S.ok, choice: S.choice ?? null, order: [...(S.order || [])] });
   saveSession();
   $('#qzCard', el)?.classList.add('graded');
+  if (q.mode === 'year') { const era = $('#qzEra', el); if (era) era.textContent = eraText(q); }
   after(q, S.ok);
 }
 
