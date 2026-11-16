@@ -224,6 +224,7 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "東晋の画家が描いたとされる絵画。",
+    "work": { "by": ["顧愷之"], "title": ["女史箴図"] },
     "uncertain": true,
     "memo": "4世紀後半",
     "image": "ja:女史箴図",
@@ -290,6 +291,7 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "東晋の僧がインドに旅して仏典を求め、海路で帰国した。",
+    "work": { "by": ["法顕"], "title": ["仏国記"] },
     "uncertain": false,
     "memo": "399年に出発し、412年に帰国",
     "descVerified": false

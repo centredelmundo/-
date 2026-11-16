@@ -172,6 +172,12 @@ export class DB {
       e.span = [e.year, e.end ?? e.year];
       e.answers = asArray(e.answers);
       e.keywords = asArray(e.keywords);
+      // 文化史の作者・作品名
+      if (e.work != null) {
+        const w = e.work;
+        e.work = { by: asArray(w.by), title: asArray(w.title), byAlt: asArray(w.byAlt), titleAlt: asArray(w.titleAlt), ...(typeof w.mark === 'string' ? { mark: w.mark } : {}) };
+        if (!e.work.by.length || !e.work.title.length) { warn(e, 'work には by（作者）と title（作品名）が必要です'); e.work = null; }
+      }
     }
     this.events.sort((a, b) => a.year - b.year || (a.month || 0) - (b.month || 0));
     // 王朝・国家

@@ -10,6 +10,7 @@ export const MODES = {
   term: '出来事当て',
   order: '並べ替え',
   choice: '同時代えらび',
+  work: '文化史の作者・作品名',
   ichimon: '一問一答'
 };
 
@@ -71,6 +72,12 @@ export function build(db, spec) {
       const opts = spec.opts.map(find);
       if (opts.some(x => !x)) return null;
       return { ...base(spec), key: `choice:${a.id}:${spec.g}:${spec.ans}`, anchor: a, group: g, options: opts, answer: find(spec.ans), y: a.year, regions: [...a.regions, ...g.regions] };
+    }
+    case 'work': {
+      // ask … 'by'（作品を見せて作者を答える）か 'title'（作者を見せて作品名を答える）
+      const e = ev(spec.id); if (!e?.work) return null;
+      const ask = spec.ask === 'title' ? 'title' : 'by';
+      return { ...base(spec), key: `work:${ask}:${e.id}`, event: e, ask, y: e.year, regions: e.regions };
     }
     case 'ichimon': {
       const it = db.ichimon?.byId.get(spec.id);
@@ -240,13 +247,23 @@ function makeChoice(db, opt, rand) {
   return null;
 }
 
+/** 文化史の作者・作品名（「文化史も出す」を切っていても、この形式を選んだときは文化史から出す） */
+export const workPool = (db, opt) => eventPool(db, { ...opt, culture: true }).filter(e => e.work);
+function makeWork(db, opt, rand) {
+  const pool = workPool(db, opt);
+  if (!pool.length) return null;
+  const e = pickWeighted(pool, x => x.importance * x.importance, rand);
+  const ask = opt.workAsk === 'by' || opt.workAsk === 'title' ? opt.workAsk : rand() < 0.5 ? 'by' : 'title';
+  return { mode: 'work', id: e.id, ask };
+}
+
 function makeIchimon(db, opt, rand) {
   const p = ichimonPool(db, opt);
   return p.length ? { mode: 'ichimon', id: pick(p, rand).id } : null;
 }
 
-export const CULTURE_MODES = ['year', 'term', 'order', 'choice'];
-const MAKERS = { cross: makeCross, ruler: makeRuler, year: makeYear, term: makeTerm, order: makeOrder, choice: makeChoice, ichimon: makeIchimon };
+export const CULTURE_MODES = ['year', 'term', 'order', 'choice', 'work'];
+const MAKERS = { cross: makeCross, ruler: makeRuler, year: makeYear, term: makeTerm, order: makeOrder, choice: makeChoice, work: makeWork, ichimon: makeIchimon };
 
 /** 問題のセットを作る */
 export function makeSession(db, opt, rand = Math.random) {
@@ -261,8 +278,10 @@ export function makeSession(db, opt, rand = Math.random) {
     const spec = makers[mode](db, opt, rand);
     if (!spec) continue;
     const q = build(db, spec);
-    if (!q || keys.has(q.key)) continue;
-    keys.add(q.key); out.push(q);
+    // 作者・作品名は、同じ作品を「作者を答える」「作品名を答える」の両方で出さない（答えが見えてしまうため）
+    const k = q?.mode === 'work' ? `work:${q.event.id}` : q?.key;
+    if (!q || keys.has(k)) continue;
+    keys.add(k); out.push(q);
   }
   return shuffle(out, rand);
 }

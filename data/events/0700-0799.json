@@ -218,6 +218,7 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "安史の乱で荒れた長安を詠んだ詩。「国破れて山河在り」で始まる",
+    "work": { "by": ["杜甫"], "title": ["春望"] },
     "uncertain": true,
     "memo": "757年の作とされる",
     "image": "ja:杜甫",

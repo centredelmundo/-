@@ -9,6 +9,7 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "楚の政治家屈原らの、南方の文化を伝える詩が作られた。",
+    "work": { "by": ["屈原"], "title": ["楚辞"] },
     "uncertain": true,
     "memo": "前3世紀前半",
     "descVerified": false

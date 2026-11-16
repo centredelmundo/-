@@ -9,6 +9,7 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "農民の勤労の大切さを説いた詩。神々の系譜を述べた『神統記』も書いた。",
+    "work": { "by": ["ヘシオドス"], "title": ["労働と日々"] },
     "uncertain": true,
     "memo": "前700年ごろ",
     "descVerified": false

@@ -2,6 +2,7 @@
 import { load, save, loadSettings, saveSettings } from './store.js';
 import { nextReview, LEARNED, streakDays } from './srs.js';
 import { centuryOf } from './util.js';
+import { workBy, workTitle } from './works.js';
 
 const KEY = 'progress';
 const empty = () => ({ v: 1, items: {}, log: [], days: [], stars: {}, extra: [] });
@@ -22,6 +23,7 @@ export function summary(q) {
     case 'term': return `${q.event.year}年：${q.event.title}`;
     case 'order': return `並べ替え：${q.events.map(e => e.title).join('／')}`;
     case 'choice': return `「${q.anchor.title}」と同じころの${q.group.name}`;
+    case 'work': return q.ask === 'title' ? `${workBy(q.event)}の作品は？` : `${workTitle(q.event)}の作者は？`;
     case 'ichimon': return `一問一答：${q.item.answers.join('・')}`;
     default: return q.key;
   }

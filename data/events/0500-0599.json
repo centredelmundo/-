@@ -67,6 +67,7 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "梁の昭明太子が編んだ詩文集",
+    "work": { "by": ["昭明太子"], "title": ["文選"] },
     "uncertain": true,
     "memo": "成立は530年ごろ",
     "image": "en:Wen Xuan",

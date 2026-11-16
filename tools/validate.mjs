@@ -119,6 +119,14 @@ export function validate(dir = DATA) {
       if (!Array.isArray(e.place) || !pts.every(lonLat)) E(e, 'place は [経度, 緯度] か [[経度, 緯度, "表示名"], …] にします（経度 -180〜180、緯度 -90〜90）');
     }
     strings(e, 'answers'); strings(e, 'keywords'); strings(e, 'tags');
+    // 文化史の作者・作品名
+    if (e.work != null) {
+      const w = e.work, list = k => Array.isArray(w[k]) && w[k].every(s => typeof s === 'string' && s.trim());
+      if (typeof w !== 'object' || !list('by') || !w.by.length || !list('title') || !w.title.length) E(e, 'work は { "by": [作者], "title": [作品名] } の形にします');
+      else if ((w.byAlt != null && !list('byAlt')) || (w.titleAlt != null && !list('titleAlt'))) E(e, 'work の byAlt・titleAlt は文字列の一覧にします');
+      if (w.mark != null && !['', '「」', '『』'].includes(w.mark)) E(e, 'work の mark は "" か "「」" か "『』" にします');
+      if (!asArray(e.tags).includes('文化')) W(e, 'work は文化史（tags に「文化」）の出来事に書きます');
+    }
     flags(e);
   }
   // ---- 王朝・国家
@@ -212,7 +220,8 @@ export function validate(dir = DATA) {
     polities: db.polities.length, rulers: db.rulers.length,
     uncertain: all.filter(x => x.uncertain).length, total: all.length, battles: db.events.filter(e => e.place).length,
     descs: all.filter(x => x.desc).length, descVerified: all.filter(x => x.descVerified).length,
-    images: all.filter(x => x.image).length, imageVerified: all.filter(x => x.image && x.imageVerified).length
+    images: all.filter(x => x.image).length, imageVerified: all.filter(x => x.image && x.imageVerified).length,
+    works: db.events.filter(e => e.work).length
   };
   return { errors, warnings, stats };
 }
@@ -226,6 +235,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.ar
     console.log(`  出来事 ${stats.events}件（うち文化 ${stats.culture}件）・王朝/国家 ${stats.polities}件・人物 ${stats.rulers}件`);
     console.log(`  全${stats.total}件・要確認の印 ${stats.uncertain}件・地図に場所を出す戦い ${stats.battles}件`);
     console.log(`  概要 ${stats.descs}件（確認済み ${stats.descVerified}件）・作品の写真の指定 ${stats.images}件（確認済み ${stats.imageVerified}件）`);
+    console.log(`  文化史の作者・作品名 ${stats.works}件`);
   }
   for (const m of errors) console.log(`  ✗ ${m}`);
   for (const m of warnings) console.log(`  △ ${m}`);

@@ -23,6 +23,7 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "精神分析学を始めた",
+    "work": { "by": ["フロイト"], "title": ["夢判断"], "titleAlt": ["夢解釈"] },
     "acceptYears": [1899],
     "uncertain": true,
     "memo": "刊行は1899年11月、奥付は1900年",
@@ -170,7 +171,8 @@
     "image": "ja:マックス・ヴェーバー",
     "imageVerified": false,
     "descVerified": false,
-    "desc": "プロテスタントの禁欲的な生き方が資本主義の発展を支えたと論じた、社会学の書物。"
+    "desc": "プロテスタントの禁欲的な生き方が資本主義の発展を支えたと論じた、社会学の書物。",
+    "work": { "by": ["マックス=ウェーバー"], "title": ["プロテスタンティズムの倫理と資本主義の精神"], "byAlt": ["ウェーバー"] }
   },
   {
     "id": "e1905a",
@@ -387,7 +389,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "物の形を分解して組み立て直すキュビスムの出発点となった絵画。"
+    "desc": "物の形を分解して組み立て直すキュビスムの出発点となった絵画。",
+    "work": { "by": ["ピカソ"], "title": ["アヴィニョンの娘たち"] }
   },
   {
     "id": "e1907c",
@@ -786,6 +789,7 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "陳独秀が雑誌『青年雑誌』（翌年『新青年』）を創刊した",
+    "work": { "by": ["陳独秀"], "title": ["新青年"] },
     "uncertain": true,
     "memo": "1916年に『新青年』と改称",
     "image": "ja:陳独秀",
@@ -959,6 +963,7 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "白話で書かれた小説",
+    "work": { "by": ["魯迅"], "title": ["狂人日記"] },
     "uncertain": false,
     "memo": "",
     "image": "ja:魯迅",
@@ -1286,7 +1291,8 @@
     "image": "en:The True Story of Ah Q",
     "imageVerified": false,
     "descVerified": false,
-    "desc": "中国の民衆の姿を通して社会を批判した小説。"
+    "desc": "中国の民衆の姿を通して社会を批判した小説。",
+    "work": { "by": ["魯迅"], "title": ["阿Q正伝"] }
   },
   {
     "id": "e1921e",
@@ -1374,7 +1380,8 @@
     "image": "en:Ulysses (novel)",
     "imageVerified": false,
     "descVerified": false,
-    "desc": "ダブリンのある一日を描いた、20世紀を代表する小説の一つ。"
+    "desc": "ダブリンのある一日を描いた、20世紀を代表する小説の一つ。",
+    "work": { "by": ["ジョイス"], "title": ["ユリシーズ"] }
   },
   {
     "id": "e1922g",
@@ -1518,7 +1525,8 @@
     "uncertain": false,
     "memo": "",
     "descVerified": false,
-    "desc": "ブルトンが無意識や夢の世界を表現する芸術運動を宣言した。"
+    "desc": "ブルトンが無意識や夢の世界を表現する芸術運動を宣言した。",
+    "work": { "by": ["ブルトン"], "title": ["シュルレアリスム宣言"] }
   },
   {
     "id": "e1925a",
@@ -2061,7 +2069,8 @@
     "image": "ja:ジョン・メイナード・ケインズ",
     "imageVerified": false,
     "descVerified": false,
-    "desc": "有効需要の理論を説き、政府が経済に関わる政策の理論的な支えとなった経済学の書物。"
+    "desc": "有効需要の理論を説き、政府が経済に関わる政策の理論的な支えとなった経済学の書物。",
+    "work": { "by": ["ケインズ"], "title": ["雇用・利子および貨幣の一般理論"], "titleAlt": ["一般理論"] }
   },
   {
     "id": "e1936f",
@@ -2095,6 +2104,7 @@
     "tags": ["文化"],
     "importance": 2,
     "desc": "スペイン内戦でのドイツ空軍の爆撃に抗議した",
+    "work": { "by": ["ピカソ"], "title": ["ゲルニカ"] },
     "uncertain": false,
     "memo": "",
     "image": "ja:ゲルニカ爆撃",
@@ -3623,6 +3633,7 @@
     "tags": ["文化"],
     "importance": 1,
     "desc": "農薬による環境の破壊を警告した",
+    "work": { "by": ["カーソン"], "title": ["沈黙の春"], "byAlt": ["レイチェル=カーソン"] },
     "uncertain": false,
     "memo": "",
     "image": "ja:レイチェル・カーソン",
