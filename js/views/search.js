@@ -2,7 +2,8 @@
 import { $$, esc, fmtYear, debounce, clamp } from '../core/util.js';
 import { base } from '../core/normalize.js';
 import { searchPlaces, periodText, placesOf, PLACE_KIND } from '../core/places.js';
-import { ICON } from './common.js';
+import { ICON, openIchimon } from './common.js';
+import { searchIchimon, snippet } from '../core/ichimon.js';
 
 const PIN = ICON.pin.replace('<svg', '<svg aria-hidden="true"');
 
@@ -32,6 +33,8 @@ export function wireSearch(app, input, box, { terms = true, onTerm, onPlace, onP
       for (const r of db.rulers) if ([r.name, ...r.aliases].some(t => base(t).includes(q))) rest.push({ y: r.from, label: `${r.name}（${r.from}〜${r.to}）`, tag: '人物' });
       for (const p of db.polities) if ([p.name, ...p.aliases].some(t => base(t).includes(q))) rest.push({ y: p.start, label: `${p.name}（${fmtYear(p.start)}〜${fmtYear(p.end)}）`, tag: '王朝・国家' });
       items.push(...rest.slice(0, 30));
+      // 読み込んだ一問一答の文からも探す（アプリのデータにない語でも見つかる）
+      for (const it of searchIchimon(db.ichimon, input.value)) items.push({ y: it.y, label: snippet(it, input.value), tag: '一問一答', ich: it });
     } else {
       for (const e of evs) if (placesOf(e).length) items.push({ y: e.year, label: e.title, tag: `${PIN}${PLACE_KIND.event}`, spec: `event:${e.id}` });
       items = items.slice(0, 30);
@@ -41,7 +44,7 @@ export function wireSearch(app, input, box, { terms = true, onTerm, onPlace, onP
     box.hidden = false;
   }, 120);
   const row = (it, i) => {
-    const main = `<button type="button" data-i="${i}"><span class="yr">${fmtYear(it.y)}</span><span>${esc(it.label)} <span class="k">${it.tag}</span></span></button>`;
+    const main = `<button type="button" data-i="${i}"><span class="yr">${it.y != null ? fmtYear(it.y) : ''}</span><span>${esc(it.label)} <span class="k">${it.tag}</span></span></button>`;
     // 場所のわかる出来事（戦いなど）は、行の右の「地図」で勢力図のその場所へ
     return it.map ? `<div class="sg-row">${main}<button type="button" class="sg-map" data-map="${i}" title="勢力図で場所を見る" aria-label="${esc(it.label)}の場所を勢力図で見る">${PIN}地図</button></div>` : main;
   };
@@ -51,6 +54,7 @@ export function wireSearch(app, input, box, { terms = true, onTerm, onPlace, onP
     box.hidden = true; input.blur();
     if (it.spec) onPlace?.({ spec: it.spec, year: it.y });
     else if (map && it.ev) onPlace?.({ spec: `event:${it.ev.id}`, year: it.ev.year });
+    else if (it.ich) openIchimon(app, it.ich);
     else onTerm?.(it);
     onPick?.(it);
   };

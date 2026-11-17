@@ -223,3 +223,32 @@ export const answerLabel = a => unquote(String(a ?? '').replace(/（[^（）]+�
 
 /** 音声の位置（秒）を「12:34」に */
 export const clock = t => `${Math.floor(t / 60)}:${String(Math.floor(t % 60)).padStart(2, '0')}`;
+
+// ---- 用語検索：読み込んだ一問一答の文から探す
+const textKey = new WeakMap();
+const baseText = it => { if (!textKey.has(it)) textKey.set(it, base(plain(it.text))); return textKey.get(it); };
+
+/**
+ * 一問一答の文に query が入っている問題（答えの語に入っているものを先に、そのあとは問題の順）。
+ * アプリのデータ（出来事・人物・王朝）にない語も、一問一答に出てくれば見つかる
+ */
+export function searchIchimon(data, query, limit = 8) {
+  const q = base(query);
+  if (!data || !q) return [];
+  const hits = [];
+  for (const it of data.items) {
+    if (!baseText(it).includes(q)) continue;
+    hits.push({ it, inAnswer: it.answers.some(a => base(a).includes(q)) });
+  }
+  hits.sort((a, b) => b.inAnswer - a.inAnswer);
+  return hits.slice(0, limit).map(h => h.it);
+}
+
+/** 検索結果に出す、問題文の一部（探した語のまわり） */
+export function snippet(it, query, len = 40) {
+  const s = plain(it.text), q = String(query ?? '').trim();
+  if (s.length <= len) return s;
+  const i = q ? s.indexOf(q) : -1;
+  const from = i < 0 ? 0 : Math.max(0, Math.min(i - 12, s.length - len));
+  return `${from > 0 ? '…' : ''}${s.slice(from, from + len)}${from + len < s.length ? '…' : ''}`;
+}
