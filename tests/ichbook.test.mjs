@@ -49,6 +49,8 @@ test('本の版：答えの書き方のゆれ', () => {
   assert.ok(gradeBlank('1200', '1200'));
   assert.ok(gradeBlank('1200年', '1200'));
   assert.equal(gradeBlank('1201', '1200'), null, '数はほぼ正解にしない');
+  assert.ok(gradeBlank('1981', '81'), '略した年（〈81〉年）は4けたでもよい');
+  assert.equal(gradeBlank('1982', '81'), null);
   assert.ok(isDateAnswer('1200'));
 });
 

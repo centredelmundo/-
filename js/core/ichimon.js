@@ -102,7 +102,12 @@ export function gradeBlank(input, answer, strict = false) {
   const t = String(input ?? '').trim();
   if (!t) return null;
   const num = s => String(s).normalize('NFKC').replace(/[\s年]/g, '').replace(/^紀元前/, '前');
-  if (/^前?\d+年?$/.test(String(answer).trim())) return num(t) === num(answer) ? { how: 'exact', term: answer } : null;
+  if (/^前?\d+年?$/.test(String(answer).trim())) {
+    const x = num(t), y = num(answer);
+    // 「〈81〉年」（1981年の略）は「1981」と書いても正解
+    const short = /^\d{1,2}$/.test(y) && /^\d{4}$/.test(x) && x.endsWith(y.padStart(2, '0'));
+    return x === y || short ? { how: 'exact', term: answer } : null;
+  }
   return matchTerms(t, variants(answer), [], strict);
 }
 
