@@ -22,6 +22,7 @@
 > 追記（第9版）: 年代当てでは、カード右上の世紀（と説明文の「○世紀」）を採点するまで出さない（js/views/quiz.js の eraText）。
 > 追記（第10版）: クイズに「文化史の作者・作品名」を加えた。出来事に work（by 作者・title 作品名）を書き、採点は js/core/works.js。
 > 追記（第11版）: 用語検索で、読み込んだ一問一答の文も探す（js/core/ichimon.js の searchIchimon）。
+> 追記（第12版）: 一問一答の本の版（ファイルの version 2）。〈赤字〉も空欄にし（parts の red）、すべての空欄が合えば○（gradeItem。順不同の組は入れかえ可、年号は数が同じときだけ）。補足・出典・★・写真（imageOf）を出し、読み込むと前の版の id（old）の記録を引き継ぐ（progress.js の migrateIchimon）。
 > この文書は最初の設計案のまま残している。
 
 ## 画面

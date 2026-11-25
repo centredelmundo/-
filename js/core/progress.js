@@ -24,7 +24,7 @@ export function summary(q) {
     case 'order': return `並べ替え：${q.events.map(e => e.title).join('／')}`;
     case 'choice': return `「${q.anchor.title}」と同じころの${q.group.name}`;
     case 'work': return q.ask === 'title' ? `${workBy(q.event)}の作品は？` : `${workTitle(q.event)}の作者は？`;
-    case 'ichimon': return `一問一答：${q.item.answers.join('・')}`;
+    case 'ichimon': return `一問一答：${(q.item.box || q.item.answers).join('・')}`;
     default: return q.key;
   }
 }
@@ -145,3 +145,32 @@ export function importAll(text) {
 }
 
 export function resetProgress() { P = empty(); persist(); }
+
+/**
+ * 一問一答の版を読みかえたときに、前の版の問題の記録（復習・★・解答の履歴）を新しい版の同じ問題に移す。
+ * map … Map(前の版の id → 新しい版の id)。同じ問題に2つの記録が来たら、間違えた回数を足して、復習の早いほうを残す。
+ * 戻り値：引き継いだ記録の数
+ */
+export function migrateIchimon(map) {
+  if (!map?.size) return 0;
+  let n = 0;
+  const to = k => (k?.startsWith('ichimon:') ? map.get(k.slice(8)) : null);
+  const fix = (x, id, key) => ({ ...x, key, spec: { ...(x.spec || {}), mode: 'ichimon', id } });
+  for (const [k, x] of Object.entries(P.items)) {
+    const id = to(k); if (!id) continue;
+    const key = `ichimon:${id}`, cur = P.items[key];
+    let next = fix(x, id, key);
+    if (cur) {
+      const earlier = (cur.due ?? Infinity) <= (next.due ?? Infinity) ? cur : next;
+      next = { ...earlier, lapses: (cur.lapses || 0) + (x.lapses || 0), last: Math.max(cur.last || 0, x.last || 0) };
+    }
+    P.items[key] = next; delete P.items[k]; n++;
+  }
+  for (const [k, x] of Object.entries(P.stars)) {
+    const id = to(k); if (!id) continue;
+    P.stars[`ichimon:${id}`] = { ...x, spec: { ...(x.spec || {}), mode: 'ichimon', id } }; delete P.stars[k];
+  }
+  for (const l of P.log) { const id = to(l.k); if (id) l.k = `ichimon:${id}`; }
+  if (n || Object.keys(P.stars).length) persist();
+  return n;
+}

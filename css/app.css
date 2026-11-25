@@ -381,6 +381,15 @@ details.more > summary { cursor: pointer; font-size: 13.5px; color: var(--ink-2)
 .ich-text .blank.ng { color: var(--bad); border-color: var(--bad); }
 .ich-full { font-size: 15px; line-height: 1.75; }
 .ich-full .ich-ans { color: var(--ai); }
+/* 本の版：問題文の赤字の空欄・補足 */
+.ich-text .blank.red { border-bottom-color: var(--shu); color: var(--shu); border-bottom-style: double; border-bottom-width: 3px; }
+.ich-text .blank.red.ok { color: var(--ok); border-color: var(--ok); }
+.ich-text .blank.red.ng { color: var(--bad); border-color: var(--bad); }
+.q-field label .red-mark { margin-left: 6px; font-size: 11px; font-weight: 600; color: var(--shu); }
+.ich-full .ich-red, .ich-notes .ich-red { color: var(--shu); }
+.ich-st { color: var(--shu); letter-spacing: 1px; }
+.ich-notes { margin: 0; padding-left: 1.2em; font-size: 13.5px; line-height: 1.65; color: var(--ink-2); display: grid; gap: 4px; }
+.ich-notes li { list-style: none; text-indent: -1.2em; }
 /* 採点のあとの空欄は、下線（枠）がもうあるので、点線の下線は重ねない */
 .q-card.graded .ich-text .blank.tt { text-decoration: none; cursor: pointer; }
 .res .ans { font-weight: 700; }

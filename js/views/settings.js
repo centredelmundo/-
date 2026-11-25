@@ -1,8 +1,8 @@
 // 設定：表示する地域と並び順、採点の厳しさ、表示、学習記録
 import { $, $$, esc, toast } from '../core/util.js';
-import { resetProgress } from '../core/progress.js';
+import { resetProgress, migrateIchimon } from '../core/progress.js';
 import { save, remove } from '../core/store.js';
-import { parseFile } from '../core/ichimon.js';
+import { parseFile, oldIdMap } from '../core/ichimon.js';
 
 export function render(app, el) {
   const db = app.db, s = app.settings;
@@ -80,8 +80,10 @@ export function render(app, el) {
     if (!save('ichimon', r.raw)) { toast('ブラウザに保存できませんでした（保存できる容量を超えたか、保存が禁止されています）', 4800); return; }
     db.setIchimon(r.raw);
     if (!s.quiz.modes.includes('ichimon')) s.quiz.modes = [...s.quiz.modes, 'ichimon'];
+    // 前の版（音声版など）と同じ問題には、復習の記録を引き継ぐ
+    const moved = migrateIchimon(oldIdMap(db.ichimon));
     persist();
-    toast(`一問一答を${r.data.items.length}問読み込みました。クイズの形式「一問一答」で出題できます`, 4200);
+    toast(`一問一答を${r.data.items.length}問読み込みました。クイズの形式「一問一答」で出題できます${moved ? `（前の版の復習の記録を${moved}件引き継ぎました）` : ''}`, 5200);
     render(app, el);
   });
   $('#stIchTl', root)?.addEventListener('change', e => { s.ichTimeline = e.target.checked; persist(); });

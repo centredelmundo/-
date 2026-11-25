@@ -2,7 +2,7 @@
 // 解答中の状態はブラウザに保存するので、別の画面に移ったりアプリを閉じたりしても続きから再開できる。
 import { $, $$, esc, fmtYear, fmtSpan, yearText, hasYear, hideYear, hideAnswers, shuffle, toast, centuryOf, centuryText } from '../core/util.js';
 import { MODES, CULTURE_MODES, ORDER_GAPS, build, makeSession, eventPool, quizGroups, ichimonPool, lastingPolities, rulersIn, workPool } from '../core/quizgen.js';
-import { parts as ichParts, gradeBlank, NUM, clock, isDateAnswer } from '../core/ichimon.js';
+import { parts as ichParts, gradeItem, NUM, clock, isDateAnswer, imageOf } from '../core/ichimon.js';
 import { gradeCross, gradeRuler, gradeTerm, gradeYear, CLS_TEXT } from '../core/grade.js';
 import { recordWithUndo, changeJudgement, star, isStarred, addCandidate, getUndo, setUndo } from '../core/progress.js';
 import { load, save, remove } from '../core/store.js';
@@ -19,7 +19,7 @@ const MODE_HELP = {
   order: '地域のちがう4つの出来事を古い順に',
   choice: '同じころの出来事・人物を4択で',
   work: '文化史の作品の作者、作者の作品名を答える',
-  ichimon: '読み込んだ一問一答の【　】を答える'
+  ichimon: '読み込んだ一問一答の【　】（本の版は問題文の赤字も）を答える'
 };
 const SKEY = 'quizSession'; // 解答中のクイズ
 
@@ -87,7 +87,8 @@ function setup() {
   for (let c = Math.floor(a / 100) * 100; c < b; c += 100) cents.push([Math.max(a, c), Math.min(b, c + 99)]);
   const groups = db.groups.length ? db.groups : [];
   const chosen = new Set(q.groups || []);
-  const ich = db.ichimon, ichCh = new Set((q.ichChapters || []).map(Number));
+  const ich = db.ichimon, ichCh = new Set((q.ichChapters || []).map(Number)), ichSt = new Set((q.ichStars || []).map(Number));
+  const hasStars = !!ich?.items.some(it => it.stars != null);
   el.innerHTML = `
   <div class="page narrow quiz-setup">
     <h1 class="page-title">クイズ <small>データから自動で出題</small></h1>
@@ -100,6 +101,8 @@ function setup() {
       </div>
       ${ich ? `<div class="field" id="qzIchBox"><span class="label">一問一答の章（選ばなければすべて）</span>
         <div class="chips" id="qzIch">${ich.chapters.map(c => `<button type="button" class="chip${ichCh.has(c.n) ? ' on' : ''}" data-ch="${c.n}" title="${esc(c.title)}">第${c.n}章</button>`).join('')}</div>
+        ${hasStars ? `<span class="label">一問一答の★（本の重要度。選ばなければすべて）</span>
+        <div class="chips" id="qzIchSt">${[3, 2, 1, 0].map(n => `<button type="button" class="chip${ichSt.has(n) ? ' on' : ''}" data-st="${n}">${n ? '★'.repeat(n) : '★なし'}</button>`).join('')}</div>` : ''}
         <p class="small muted">一問一答は「年代の範囲」と、地域をえらんだときは地域でもしぼります（全範囲なら、範囲より前の古代オリエントなども出ます）。</p></div>` : ''}
       <div class="field" id="qzOrderBox"><span class="label">並べ替えの年の間隔</span>
         <div class="seg" id="qzOrder">${Object.entries(ORDER_GAPS).map(([k, v]) => `<button type="button" data-v="${k}" class="${(q.orderGap || 'near') === k ? 'on' : ''}">${v.label}</button>`).join('')}</div>
@@ -141,6 +144,7 @@ function setup() {
       minImportance: Number($('#qzImp .on', el)?.dataset.v || 1),
       count: Number($('#qzCount .on', el)?.dataset.v || 10),
       ichChapters: $$('#qzIch .chip.on', el).map(x => Number(x.dataset.ch)),
+      ichStars: $$('#qzIchSt .chip.on', el).map(x => Number(x.dataset.st)),
       orderGap: $('#qzOrder .on', el)?.dataset.v || 'near',
       workAsk: $('#qzWork .on', el)?.dataset.v || 'both',
       rulerScope: $('#qzRulerScope .on', el)?.dataset.v || 'all',
@@ -199,7 +203,7 @@ function setup() {
   root.addEventListener('click', e => {
     const c = e.target.closest('#qzCents .chip');
     if (c) { $('#qzFrom', el).value = c.dataset.from; $('#qzTo', el).value = c.dataset.to; refresh(); }
-    const g = e.target.closest('#qzGroups .chip, #qzIch .chip');
+    const g = e.target.closest('#qzGroups .chip, #qzIch .chip, #qzIchSt .chip');
     if (g) { g.classList.toggle('on'); refresh(); }
     const sg = e.target.closest('#qzImp button, #qzCount button, #qzOrder button, #qzRulerScope button, #qzWork button');
     if (sg) { $$('button', sg.parentElement).forEach(x => x.classList.toggle('on', x === sg)); refresh(); }
@@ -278,11 +282,16 @@ function restoreCur(q) {
   if (c.graded) { S.choice = c.choice; setUndo(c.snap); grade(c.skip, true); }
 }
 
-// 作品・建築の写真（文化史の出来事に画像の指定があるとき）
+// 作品・建築の写真（文化史の出来事に画像の指定があるとき。一問一答は問題の写真の指定）
 const img = e => (e?.image ? `<figure class="qimg" data-img-key="${esc(e.key)}"></figure>` : '');
+const ichImg = it => (imageOf(S.app.db, it) ? `<figure class="qimg" data-img-ich="${esc(it.id)}"></figure>` : '');
 function fillImages(reveal) {
   $$('[data-img-key]', S.el).forEach(f => {
     const x = S.app.db.byKey.get(f.dataset.imgKey);
+    if (x) fillImage(f, x, { reveal }); else f.remove();
+  });
+  $$('[data-img-ich]', S.el).forEach(f => {
+    const x = imageOf(S.app.db, S.app.db.ichimon?.byId.get(f.dataset.imgIch));
     if (x) fillImage(f, x, { reveal }); else f.remove();
   });
 }
@@ -327,10 +336,14 @@ function body(q) {
         <div class="q-field"><label for="qa0">${q.ask === 'title' ? '作品名' : '作者'}</label><input type="text" id="qa0" autocomplete="off"><div class="res" id="qr0" aria-live="polite"></div></div>`;
     }
     case 'ichimon': {
-      const it = q.item;
-      const sentence = ichParts(it.text).map(p => (p.s != null ? esc(p.s) : `<span class="blank" data-b="${p.i}">（${NUM[p.i] || p.i + 1}）</span>`)).join('');
-      return `<p class="q-src">${esc(it.sec)}</p><p class="q-text ich-text">${sentence}</p>` +
-        it.answers.map((a, i) => `<div class="q-field"><label for="qa${i}">${NUM[i] || i + 1}</label><input type="text" id="qa${i}" autocomplete="off" enterkeyhint="${i + 1 < it.answers.length ? 'next' : 'done'}"><div class="res" id="qr${i}" aria-live="polite"></div></div>`).join('');
+      // 本の版は、四角の空欄【】のほかに問題文の赤字〈〉も空欄にする（赤字の空欄は赤い下線）。写真は作品名を伏せて先に出す
+      const it = q.item, ps = ichParts(it.text), red = new Set(ps.filter(p => p.red).map(p => p.i));
+      const sentence = ps.map(p => (p.s != null ? esc(p.s) : `<span class="blank${p.red ? ' red' : ''}" data-b="${p.i}">（${NUM[p.i] || p.i + 1}）</span>`)).join('');
+      const free = (it.free || []).map(g => `${g.map(i => NUM[i] || i + 1).join('・')}は順不同`).join('、');
+      const stars = it.stars != null ? ` <span class="ich-st" title="本の重要度">${it.stars ? '★'.repeat(it.stars) : '★なし'}</span>` : '';
+      return `${ichImg(it)}<p class="q-src">${esc(it.sec)}${stars}</p><p class="q-text ich-text">${sentence}</p>` +
+        (red.size ? '<p class="small muted">赤い下線の空欄は、問題文の赤字の部分です。</p>' : '') + (free ? `<p class="small muted">${esc(free)}</p>` : '') +
+        it.answers.map((a, i) => `<div class="q-field"><label for="qa${i}">${NUM[i] || i + 1}${red.has(i) ? '<small class="red-mark">赤字</small>' : ''}</label><input type="text" id="qa${i}" autocomplete="off" enterkeyhint="${i + 1 < it.answers.length ? 'next' : 'done'}"><div class="res" id="qr${i}" aria-live="polite"></div></div>`).join('');
     }
     case 'choice': {
       const a = q.anchor;
@@ -443,9 +456,10 @@ function grade(skip = false, replay = false) {
     ok = !skip && S.order.length === 4 && S.order.every((v, k) => q.events[v].year === q.events[right[k]].year);
     setRes(0, ok ? 'ok' : 'ng', `<div><span class="v">${ok ? '○ 正解' : '×'}</span>古い順：</div>${right.map((i, k) => `<div>${k + 1}. <span class="yr">${fmtYear(q.events[i].year)}</span> ${tt(q.events[i])}</div>`).join('')}`);
   } else if (q.mode === 'ichimon') {
+    // すべての空欄（赤字の空欄も）が合っていたら正解。順不同の組は入れかわってもよい
     const it = q.item;
-    const verdicts = it.answers.map((a, i) => {
-      const m = gradeBlank(val(i), a, strict);
+    const res = gradeItem(it.answers, it.answers.map((_, i) => val(i)), it.free, strict);
+    const verdicts = res.map(({ m, a }, i) => {
       const b = $(`.blank[data-b="${i}"]`, el);
       if (b) {
         b.textContent = a; b.classList.add(m ? 'ok' : 'ng');
@@ -535,9 +549,9 @@ function after(q, ok) {
   fillImages(true);
   const [ra, rb] = app.db.range;
   const inRange = q.y != null && q.y >= ra && q.y <= rb;
-  const src = q.mode === 'ichimon' ? `<p class="small muted">${esc(q.item.audio)}${q.item.audio ? ` ・ ${clock(q.item.t)}ごろ` : ''}${q.item.yq ? '' : ' ・ 年代は前後の問題からの推定'}</p>` : '';
+  const src = q.mode === 'ichimon' ? `<p class="small muted">${ichSource(q.item)}${q.item.yq ? '' : ' ・ 年代は前後の問題からの推定'}</p>` : '';
   $('#qzAfter', el).innerHTML = q.mode === 'ichimon'
-    ? `<p class="tt-hint">答えの語をタップすると、概要が見られます（アプリのデータにない語は、世界史の窓で調べられます）。</p>${src}${inRange ? yokoPanel(app, q.y, 5, q.regions || []) : ''}`
+    ? `${ichNotes(q.item)}<p class="tt-hint">答えの語をタップすると、概要が見られます（アプリのデータにない語は、世界史の窓で調べられます）。</p>${src}${inRange ? yokoPanel(app, q.y, 5, q.regions || []) : ''}`
     : `${q.mode === 'work' ? img(q.event) : ''}<p class="tt-hint">点線の下線がある用語をタップすると、1〜2文の概要が見られます。</p>${q.one ? countryPanel(app.db, q) : ''}${yokoPanel(app, q.y, 5, q.regions || [])}`;
   if (q.mode === 'work') fillImages(true);
   $('#qzNext', el).addEventListener('click', next);
@@ -551,6 +565,17 @@ function after(q, ok) {
   }));
   $('#qzNext', el).focus({ preventScroll: true });
 }
+
+/** 一問一答の補足（◆・☞・▲。中の〈赤字〉は太字にする。採点のあとに出す） */
+function ichNotes(it) {
+  const notes = it.notes || [];
+  const guess = it.guess ? '<p class="small muted">この問題の文には、本の写真から読み取りにくく、前後から推定した所があります。</p>' : '';
+  if (!notes.length) return guess;
+  const fmt = n => esc(n).replace(/〈(.+?)〉/g, '<b class="ich-red">$1</b>');
+  return `<ul class="ich-notes">${notes.map(n => `<li>${fmt(n)}</li>`).join('')}</ul>${guess}`;
+}
+/** 一問一答の出どころ（音声版はファイルと時刻、本の版は大学名・ページ） */
+const ichSource = it => [it.audio ? `${esc(it.audio)} ・ ${clock(it.t)}ごろ` : '', it.src ? `出題：${esc(it.src)}` : '', it.page ? `本のp.${it.page}` : ''].filter(Boolean).join(' ・ ');
 
 function flip(q, quiet = false) {
   S.ok = !S.ok;
@@ -597,7 +622,7 @@ function titleOf(q) {
     case 'work': return `${q.ask === 'title' ? `${workBy(q.event)}の作品` : `${workTitle(q.event)}の作者`}：${q.event.title}`;
     case 'order': return `並べ替え：${q.events.map(e => e.title).join('／')}`;
     case 'choice': return `${q.anchor.title}と同じころの${q.group.name}：${itemName(q.answer)}`;
-    case 'ichimon': return `一問一答：${q.item.answers.join('・')}`;
+    case 'ichimon': return `一問一答：${(q.item.box || q.item.answers).join('・')}`;
   }
   return q.key;
 }

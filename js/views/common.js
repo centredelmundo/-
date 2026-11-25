@@ -1,7 +1,7 @@
 // 画面どうしで共通の部品：地域カード、詳細シート、印、王朝の帯
 import { $, $$, esc, fmtSpan, fmtYear, yearText } from '../core/util.js';
 import { tt, fillImage, ywLink, ichWord } from './terms.js';
-import { timelineItems, linkEvents, parts as ichParts, clock } from '../core/ichimon.js';
+import { timelineItems, linkEvents, parts as ichParts, clock, imageOf } from '../core/ichimon.js';
 import { placesOf } from '../core/places.js';
 
 export const LOGO = '<svg viewBox="0 0 40 40" aria-hidden="true"><line x1="2" y1="20" x2="38" y2="20" style="stroke:var(--shu)" stroke-width="3.2" stroke-linecap="round"/><rect x="7" y="10.5" width="11" height="19" rx="2.6" fill="none" stroke="currentColor" stroke-width="2.8"/><rect x="22" y="10.5" width="11" height="19" rx="2.6" fill="none" stroke="currentColor" stroke-width="2.8"/></svg>';
@@ -97,22 +97,29 @@ export function openIchimon(app, it) {
   const regs = it.regions.map(r => db.regionById(r)?.name || r).join('・');
   const [a, b] = db.range;
   const inRange = it.y != null && it.y >= a && it.y <= b;
-  const sentence = ichParts(it.text).map(p => (p.s != null ? esc(p.s) : ichWord(it, p.a))).join('');
+  const sentence = ichParts(it.text).map(p => (p.s != null ? esc(p.s) : ichWord(it, p.a, p.red ? 'ich-ans ich-red' : 'ich-ans'))).join('');
+  const pic = imageOf(db, it);
+  const notes = (it.notes || []).map(n => `<li>${esc(n).replace(/〈(.+?)〉/g, '<b class="ich-red">$1</b>')}</li>`).join('');
+  const book = [it.stars != null ? (it.stars ? '★'.repeat(it.stars) : '★なし') : '', it.src ? `出題：${esc(it.src)}` : '', it.page ? `本のp.${it.page}` : ''].filter(Boolean).join(' ・ ');
   const html = `
     <div class="muted small">${esc(regs)} ・ 一問一答</div>
     <h2>${esc(it.title)}</h2>
+    ${pic ? '<figure class="qimg" id="ichPic"></figure>' : ''}
     <p class="ich-full">${sentence}</p>
+    ${notes ? `<ul class="ich-notes">${notes}</ul>` : ''}
     <dl class="kv">
       <dt>年</dt><dd class="yr">${it.y != null ? `${yearText(it.y)}${it.yq === 3 ? '' : it.yq === 2 ? 'ごろ（文中の世紀から）' : 'ごろ（前後の問題からの推定）'}` : '—'}</dd>
-      <dt>出典</dt><dd>${db.ichimon?.chapters.find(c => c.n === it.ch) ? `第${it.ch}章 ${esc(db.ichimon.chapters.find(c => c.n === it.ch).title)}・` : ''}${esc(it.sec)}${it.audio ? `<br><span class="small muted">音声 ${esc(it.audio)} ・ ${clock(it.t)}ごろ</span>` : ''}</dd>
+      <dt>出典</dt><dd>${db.ichimon?.chapters.find(c => c.n === it.ch) ? `第${it.ch}章 ${esc(db.ichimon.chapters.find(c => c.n === it.ch).title)}・` : ''}${esc(it.sec)}${it.audio ? `<br><span class="small muted">音声 ${esc(it.audio)} ・ ${clock(it.t)}ごろ</span>` : ''}${book ? `<br><span class="small muted">${book}</span>` : ''}</dd>
     </dl>
     ${inRange ? yokoPanel(app, it.y, 5, it.regions) : ''}
     <div class="q-actions">
       ${inRange ? `<button class="btn primary" type="button" data-act="go">${yearText(it.y)}へ移動</button>` : ''}
       <button class="btn" type="button" data-act="quiz">この問題を解く</button>
-      <a class="btn" href="${ywLink(it.answers[0].replace(/（[^（）]+）$/, '').replace(/^[『「]|[』」]$/g, ''))}" target="_blank" rel="noopener">世界史の窓で調べる</a>
+      <a class="btn" href="${ywLink((it.box?.[0] ?? it.answers[0]).replace(/（[^（）]+）$/, '').replace(/^[『「]|[』」]$/g, ''))}" target="_blank" rel="noopener">世界史の窓で調べる</a>
     </div>`;
   openSheet(html, sheet => {
+    const fig = sheet.querySelector('#ichPic');
+    if (fig && pic) fillImage(fig, pic, { reveal: true });
     sheet.addEventListener('click', ev => {
       const act = ev.target.closest('[data-act]')?.dataset.act;
       if (act === 'go') { closeSheet(); app.setYear(it.y); if (!location.hash.startsWith('#timeline') && !location.hash.startsWith('#map')) location.hash = '#timeline'; }

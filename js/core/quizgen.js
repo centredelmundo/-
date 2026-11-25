@@ -34,7 +34,7 @@ export function quizGroups(db, opt) {
 /** 一問一答の出題の対象（地域は、えらんだときだけしぼる） */
 export function ichimonPool(db, opt) {
   const regionsOf = ids => quizGroups(db, { groups: ids }).flatMap(g => g.regions);
-  return ichimonPoolOf(db.ichimon, { from: opt.from, to: opt.to, chapters: opt.ichChapters, groups: opt.groups }, db.range, regionsOf);
+  return ichimonPoolOf(db.ichimon, { from: opt.from, to: opt.to, chapters: opt.ichChapters, stars: opt.ichStars, groups: opt.groups }, db.range, regionsOf);
 }
 const groupOf = (groups, regionId) => groups.find(g => g.regions.includes(regionId));
 const inWindow = (e, y, w) => e.year <= y + w && (e.end ?? e.year) >= y - w;

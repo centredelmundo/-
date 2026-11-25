@@ -1,7 +1,7 @@
 // 用語の概要シートと、作品・建築の写真（クイズ・年表・データ確認で共通）
 import { esc, fmtYear, fmtSpan, yearText } from '../core/util.js';
 import { imageInfo } from '../core/wiki.js';
-import { answerRecord, answerLabel, isDateAnswer } from '../core/ichimon.js';
+import { answerRecord, answerLabel, isDateAnswer, wordForms } from '../core/ichimon.js';
 import { searchPlaces, periodText, PLACE_KIND } from '../core/places.js';
 import { openSheet, closeSheet, badges, ICON } from './common.js';
 
@@ -34,11 +34,13 @@ export function ichWord(it, a, cls = 'ich-ans') {
  * どちらもなければ「世界史の窓で調べる」だけのシート
  */
 export function openWord(app, word, it = null) {
-  const db = app.db;
-  const rec = answerRecord(db, word, it ? { y: it.y, regions: it.regions } : {});
+  const db = app.db, ctx = it ? { y: it.y, regions: it.regions } : {};
+  // 「【エドワード1】世」なら、まず「エドワード1世」で探す
+  const forms = wordForms(it, word);
+  const rec = forms.map(w => answerRecord(db, w, ctx)).find(Boolean);
   if (rec) { openTerm(app, rec.key); return; }
-  const label = answerLabel(word);
-  const hit = searchPlaces(db, label, it?.y ?? app.year, 3).find(h => h.how === 0);
+  const label = answerLabel(forms[0]);
+  const hit = forms.map(w => searchPlaces(db, answerLabel(w), it?.y ?? app.year, 3).find(h => h.how === 0)).find(Boolean);
   if (hit) {
     const period = periodText(hit.periods, db.range[0]);
     openSheet(`
@@ -114,8 +116,10 @@ export async function fillImage(fig, x, { reveal = true } = {}) {
     fig.innerHTML = '<div class="img-msg">画像を表示できません（通信できないか、利用条件のはっきりした画像が見つかりません）</div>';
     return;
   }
+  // パブリックドメインの作品の「作者」は画家・彫刻家なので、答えの前には出さない（表示の義務がない画像だけ）
+  const hideBy = !reveal && /public domain|パブリックドメイン|^pd\b|\bpd-|cc0/i.test(info.license);
   const lic = info.licenseUrl ? `<a href="${esc(safeUrl(info.licenseUrl))}" target="_blank" rel="noopener">${esc(info.license)}</a>` : esc(info.license);
   fig.innerHTML = `<img src="${esc(info.src)}" alt="${reveal ? esc(info.title) : '出題に関係する作品・建築の写真'}" loading="lazy" decoding="async"${info.width ? ` width="${info.width}" height="${info.height}"` : ''}>
-    <figcaption>${reveal ? `<span class="cap-title">${esc(info.title)}</span>` : ''}<span class="credit">画像：<a href="${esc(safeUrl(info.page))}" target="_blank" rel="noopener">${esc(info.author)}</a> ／ ${lic}（Wikimedia Commons）${x.imageVerified ? '' : '<span class="badge b-gray" title="この画像が正しい作品・建築かはまだ確認されていません">画像は未確認</span>'}</span></figcaption>`;
+    <figcaption>${reveal ? `<span class="cap-title">${esc(info.title)}</span>` : ''}<span class="credit">画像：${hideBy ? '作者名は答えのあとに表示' : `<a href="${esc(safeUrl(info.page))}" target="_blank" rel="noopener">${esc(info.author)}</a>`} ／ ${lic}（Wikimedia Commons）${x.imageVerified ? '' : '<span class="badge b-gray" title="この画像が正しい作品・建築かはまだ確認されていません">画像は未確認</span>'}</span></figcaption>`;
   fig.querySelector('img').addEventListener('error', () => { fig.innerHTML = '<div class="img-msg">画像を表示できませんでした</div>'; }, { once: true });
 }
