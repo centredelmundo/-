@@ -84,17 +84,17 @@ export class ZoneMap {
     this.hid = id + 'h';
     const { zonePath } = this.P;
     const zones = this.Z.zones.map((z, i) => z.r.length ? `<path class="zone" data-i="${i}" d="${zonePath[i]}" fill-rule="evenodd"/>` : '').join('');
-    this.box.innerHTML = `<svg xmlns="${NS}" role="img" aria-label="勢力図">
+    this.box.innerHTML = `<div class="map-pane"><svg xmlns="${NS}" role="img" aria-label="勢力図">
       <defs><pattern id="${this.hid}" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="2.6" height="8" fill="rgb(20 24 32 / .34)"/></pattern></defs>
-      <rect x="-9000" y="-9000" width="21000" height="21000" style="fill:var(--sea)"/>
       <g class="zones">${zones}</g>
       <g class="hatch"></g><g class="dots"></g>
       <g class="rivers">${this.opt.geo === false ? '' : riverLayer(this.db)}</g>
       <path class="coast" d="${this.P.coast}"/><path class="border"/><path class="sel"/>
-      <g class="labels"></g><g class="geo"></g><g class="battles"></g><g class="focus"></g></svg>
+      <g class="labels"></g><g class="geo"></g><g class="battles"></g><g class="focus"></g></svg></div>
       ${this.opt.zoom === false ? '' : `<div class="map-zoom"><button type="button" data-z="in" aria-label="拡大">＋</button><button type="button" data-z="out" aria-label="縮小">−</button>${this.opt.geo === false ? '' : `<button type="button" data-z="geo" class="geo-btn" aria-pressed="${this.geoOn()}" title="拡大したときに地名と戦いの場所を出す">地名</button>`}</div>`}
       ${this.opt.showYear ? '<div class="map-year"></div>' : ''}`;
     this.svg = this.box.querySelector('svg');
+    this.pane = this.box.querySelector('.map-pane');
     this.paths = [...this.svg.querySelectorAll('.zone')].reduce((m, el) => (m[el.dataset.i] = el, m), {});
     this.gHatch = this.svg.querySelector('.hatch');
     this.gDots = this.svg.querySelector('.dots');
@@ -201,8 +201,34 @@ export class ZoneMap {
     this.gFocus.innerHTML = out;
   }
 
-  applyView() { this.svg?.setAttribute('viewBox', this.vb.map(v => Math.round(v * 10) / 10).join(' ')); }
-  scale() { const r = this.svg.getBoundingClientRect(); return Math.min((r.width || 600) / this.vb[2], (r.height || 300) / this.vb[3]); }
+  /** いまの範囲（this.vb）で描き直す（動かしている途中の見た目のずらしは消す） */
+  applyView() {
+    if (!this.svg) return;
+    clearTimeout(this._commitT); cancelAnimationFrame(this._pv);
+    this.vb = this.vb.map(v => Math.round(v * 10) / 10);
+    this.svg.setAttribute('viewBox', this.vb.join(' '));
+    this.vbDrawn = this.vb.slice();
+    this.pane.style.transform = '';
+  }
+  /** 地図の枠の大きさ（CSS の px） */
+  size() { return [this.box.clientWidth || 600, this.box.clientHeight || 300]; }
+  scale(vb = this.vb) { const [W, H] = this.size(); return Math.min(W / vb[2], H / vb[3]); }
+  /**
+   * ドラッグ・拡大の途中は、描き直さずに、描いてある地図を CSS の transform でずらして見せる（なめらかに動く）。
+   * 範囲は this.vb に入れておき、動かし終わったら commit で描き直す。
+   */
+  preview() {
+    cancelAnimationFrame(this._pv);
+    this._pv = requestAnimationFrame(() => {
+      const d = this.vbDrawn || this.vb, v = this.vb, [W, H] = this.size();
+      const s0 = this.scale(d), k = d[2] / v[2];
+      const ox = (W - d[2] * s0) / 2, oy = (H - d[3] * s0) / 2;
+      const tx = ox - k * ox + k * (d[0] - v[0]) * s0, ty = oy - k * oy + k * (d[1] - v[1]) * s0;
+      this.pane.style.transform = `translate(${tx.toFixed(2)}px, ${ty.toFixed(2)}px) scale(${k.toFixed(5)})`;
+    });
+  }
+  /** 動かし終わったら、その範囲で描き直す（ラベルも） */
+  commit() { this.applyView(); this.drawLabels(); this.opt.onView?.(this); }
 
   render() {
     if (!this.svg) return;
@@ -315,18 +341,20 @@ export class ZoneMap {
   }
 
   // ---- 拡大・移動
-  zoomAt(f, cx, cy) {
+  zoomAt(f, cx, cy, live = false) {
     const [x, y, w, h] = this.vb;
     const nw = Math.min(Math.max(w / f, 90), this.Z.W * 1.15), nh = nw * h / w;
     const px = cx ?? x + w / 2, py = cy ?? y + h / 2;
     this.vb = [px - (px - x) * nw / w, py - (py - y) * nh / h, nw, nh];
-    this.applyView(); this.queueLabels();
+    // live … ホイール・2本指の途中は見た目だけ変えて、あとでまとめて描き直す
+    if (live) this.preview(); else { this.applyView(); this.queueLabels(); }
   }
   queueLabels() { cancelAnimationFrame(this._raf); this._raf = requestAnimationFrame(() => this.drawLabels()); }
+  /** 画面の位置 → 地図の座標（いま見えている範囲 this.vb で計算。動かしている途中でも合う） */
   toMap(clientX, clientY) {
-    const pt = this.svg.createSVGPoint(); pt.x = clientX; pt.y = clientY;
-    const m = this.svg.getScreenCTM(); if (!m) return [0, 0];
-    const r = pt.matrixTransform(m.inverse()); return [r.x, r.y];
+    const r = this.box.getBoundingClientRect(), [W, H] = this.size(), v = this.vb, s = this.scale();
+    const ox = (W - v[2] * s) / 2, oy = (H - v[3] * s) / 2;
+    return [v[0] + (clientX - r.left - this.box.clientLeft - ox) / s, v[1] + (clientY - r.top - this.box.clientTop - oy) / s];
   }
 
   wire() {
@@ -347,7 +375,8 @@ export class ZoneMap {
       if (this.opt.wheel === false) return;
       e.preventDefault();
       const [mx, my] = this.toMap(e.clientX, e.clientY);
-      this.zoomAt(e.deltaY < 0 ? 1.2 : 1 / 1.2, mx, my);
+      this.zoomAt(e.deltaY < 0 ? 1.2 : 1 / 1.2, mx, my, true);
+      clearTimeout(this._commitT); this._commitT = setTimeout(() => this.commit(), 180);
     }, { passive: false });
     svg.addEventListener('pointerdown', e => {
       svg.setPointerCapture?.(e.pointerId);
@@ -365,7 +394,7 @@ export class ZoneMap {
         const [a, b] = [...pointers.values()];
         const f = Math.hypot(a[0] - b[0], a[1] - b[1]) / pinch.d;
         this.vb = pinch.vb.slice();
-        this.zoomAt(f, pinch.c[0], pinch.c[1]);
+        this.zoomAt(f, pinch.c[0], pinch.c[1], true);
         moved = true;
         return;
       }
@@ -373,15 +402,20 @@ export class ZoneMap {
       const dx = e.clientX - start.x, dy = e.clientY - start.y;
       if (Math.abs(dx) + Math.abs(dy) > 4) moved = true;
       if (!moved) return;
-      const s = this.scale();
+      const s = this.scale(start.vb);
       this.vb = [start.vb[0] - dx / s, start.vb[1] - dy / s, start.vb[2], start.vb[3]];
-      this.applyView();
+      this.preview();
     });
     const end = e => {
       pointers.delete(e.pointerId);
-      if (pointers.size < 2) pinch = null;
+      if (pointers.size < 2 && pinch) {
+        pinch = null;
+        // 2本指から1本指に戻ったら、残った指の位置から続けてドラッグする
+        const rest = [...pointers.values()][0];
+        if (rest) start = { x: rest[0], y: rest[1], vb: this.vb.slice() };
+      }
       if (pointers.size === 0) {
-        if (moved) this.drawLabels();
+        if (moved) this.commit();
         else if (e.type === 'pointerup') this.pick(e);
         start = null;
       }

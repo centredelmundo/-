@@ -19,7 +19,7 @@ const MODE_HELP = {
   order: '地域のちがう4つの出来事を古い順に',
   choice: '同じころの出来事・人物を4択で',
   work: '文化史の作品の作者、作者の作品名を答える',
-  ichimon: '読み込んだ一問一答の【　】（本の版は問題文の赤字も）を答える'
+  ichimon: '読み込んだ一問一答の【　】を答える（本の版の赤字はヒントとして出せる）'
 };
 const SKEY = 'quizSession'; // 解答中のクイズ
 
@@ -48,7 +48,7 @@ export function render(app, el) {
 export function destroy() { if (S?.el) S.el.onkeydown = null; S = null; }
 
 // ---- 中断と再開
-const freshCur = () => ({ inputs: {}, order: [], choice: null, graded: false, skip: false, ok: null, snap: null });
+const freshCur = () => ({ inputs: {}, order: [], choice: null, graded: false, skip: false, ok: null, snap: null, reveal: [] });
 
 function saveSession() {
   if (!S?.questions) return;
@@ -89,6 +89,8 @@ function setup() {
   const chosen = new Set(q.groups || []);
   const ich = db.ichimon, ichCh = new Set((q.ichChapters || []).map(Number)), ichSt = new Set((q.ichStars || []).map(Number));
   const hasStars = !!ich?.items.some(it => it.stars != null);
+  // 年代・章・地域の欄は閉じておける（画面を広く使うため）。開いているかはこの端末に覚えておく
+  const fold = load('quizFold', {}) || {};
   el.innerHTML = `
   <div class="page narrow quiz-setup">
     <h1 class="page-title">クイズ <small>データから自動で出題</small></h1>
@@ -99,24 +101,26 @@ function setup() {
           return `<label${off ? ' class="off"' : ''}><input type="checkbox" name="mode" value="${k}" ${q.modes.includes(k) && !off ? 'checked' : ''}${off ? ' disabled' : ''}><span>${n}<small>${off ? 'データを読み込むと使えます（設定画面）' : MODE_HELP[k]}</small></span></label>`;
         }).join('')}</div>
       </div>
-      ${ich ? `<div class="field" id="qzIchBox"><span class="label">一問一答の章（選ばなければすべて）</span>
+      ${ich ? `<details class="field fold" id="qzIchBox" data-fold="ich"${fold.ich ? ' open' : ''}><summary><span class="label">一問一答の章${hasStars ? '・★' : ''}</span><span class="fold-sum" id="qzSumIch"></span></summary>
+        <span class="label">一問一答の章（選ばなければすべて）</span>
         <div class="chips" id="qzIch">${ich.chapters.map(c => `<button type="button" class="chip${ichCh.has(c.n) ? ' on' : ''}" data-ch="${c.n}" title="${esc(c.title)}">第${c.n}章</button>`).join('')}</div>
         ${hasStars ? `<span class="label">一問一答の★（本の重要度。選ばなければすべて）</span>
         <div class="chips" id="qzIchSt">${[3, 2, 1, 0].map(n => `<button type="button" class="chip${ichSt.has(n) ? ' on' : ''}" data-st="${n}">${n ? '★'.repeat(n) : '★なし'}</button>`).join('')}</div>` : ''}
-        <p class="small muted">一問一答は「年代の範囲」と、地域をえらんだときは地域でもしぼります（全範囲なら、範囲より前の古代オリエントなども出ます）。</p></div>` : ''}
+        <p class="small muted">一問一答は「年代の範囲」と、地域をえらんだときは地域でもしぼります（全範囲なら、範囲より前の古代オリエントなども出ます）。</p></details>` : ''}
       <div class="field" id="qzOrderBox"><span class="label">並べ替えの年の間隔</span>
         <div class="seg" id="qzOrder">${Object.entries(ORDER_GAPS).map(([k, v]) => `<button type="button" data-v="${k}" class="${(q.orderGap || 'near') === k ? 'on' : ''}">${v.label}</button>`).join('')}</div>
         <p class="small muted">4つの出来事の年が、どのくらいはなれて出るか。間隔が広いほどやさしくなります（「近い年も」はこれまでどおり）。</p></div>
       <div class="field" id="qzWorkBox"><span class="label">文化史の作者・作品名で答えるもの</span>
         <div class="seg" id="qzWork">${[['both', '両方'], ['by', '作者'], ['title', '作品名']].map(([k, n]) => `<button type="button" data-v="${k}" class="${(q.workAsk || 'both') === k ? 'on' : ''}">${n}</button>`).join('')}</div>
         <p class="small muted">「両方」は、作品を見て作者を答える問題と、作者を見て作品名を答える問題をまぜて出します。</p></div>
-      <div class="field"><span class="label">年代の範囲</span>
+      <details class="field fold" data-fold="range"${fold.range ? ' open' : ''}><summary><span class="label">年代の範囲</span><span class="fold-sum" id="qzSumRange"></span></summary>
         <div class="chips" id="qzCents"><button type="button" class="chip" data-from="${a}" data-to="${b}">全範囲</button>${cents.map(([x, y]) => `<button type="button" class="chip" data-from="${x}" data-to="${y}">${centuryText(centuryOf(x + 1))}</button>`).join('')}</div>
         <div class="row"><input type="number" id="qzFrom" min="${a}" max="${b}" value="${q.from ?? a}" style="width:7em" aria-label="開始年"> 〜 <input type="number" id="qzTo" min="${a}" max="${b}" value="${q.to ?? b}" style="width:7em" aria-label="終了年"> 年</div>
-      </div>
-      <div class="field"><span class="label">地域（選ばなければすべて）</span>
+      </details>
+      <details class="field fold" data-fold="groups"${fold.groups ? ' open' : ''}><summary><span class="label">地域</span><span class="fold-sum" id="qzSumGroups"></span></summary>
         <div class="chips" id="qzGroups">${groups.map(g => `<button type="button" class="chip${chosen.has(g.id) ? ' on' : ''}" data-g="${g.id}">${esc(g.name)}</button>`).join('')}</div>
-      </div>
+        <p class="small muted">選ばなければすべての地域から出します。</p>
+      </details>
       <div class="field" id="qzRulerBox"><span class="label">君主・指導者の出し方</span>
         <div class="seg" id="qzRulerScope"><button type="button" data-v="all" class="${q.rulerScope === 'one' ? '' : 'on'}">いろいろな国</button><button type="button" data-v="one" class="${q.rulerScope === 'one' ? 'on' : ''}">1つの国だけ</button></div>
         <p class="small muted" id="qzRulerAll">ある年の、いろいろな国の君主・指導者を答えます（これまでどおり）。</p>
@@ -195,11 +199,17 @@ function setup() {
     if (useWork) parts.push(`作者・作品名のわかる文化史の作品：${nw}件`);
     if (oneRuler) parts.push(picked ? `${picked.label}の君主・指導者：${picked.rulers.length}人（1人1問まで）` : '君主・指導者：出題する国を選んでください');
     if (useIch) parts.push(`一問一答：${ni}問`);
+    // 閉じた欄の見出しに、いまの選び方を出す
+    const sum = (id, t) => { const x = $(id, el); if (x) x.textContent = t; };
+    sum('#qzSumRange', o.from <= a && o.to >= b ? '全範囲' : `${fmtYear(o.from)}〜${fmtYear(o.to)}年`);
+    sum('#qzSumGroups', o.groups.length ? groups.filter(g => o.groups.includes(g.id)).map(g => g.name).join('・') : 'すべて');
+    sum('#qzSumIch', `${o.ichChapters.length ? `第${[...o.ichChapters].sort((x, y) => x - y).join('・')}章` : 'すべての章'}${o.ichStars?.length ? `・${[...o.ichStars].sort((x, y) => y - x).map(n => (n ? '★'.repeat(n) : '★なし')).join('/')}` : ''}`);
     $('#qzPool', el).textContent = `${parts.join('・')}${o.cultureOnly ? `（文化史・形式：${usable.map(m => MODES[m]).join('・')}）` : ''}`;
     $('#qzStart', el).disabled = !o.modes.length || (oneRuler && !picked) || (!(evModes.length && n) && !(oneRuler && picked) && !(useIch && ni) && !(useWork && nw));
   };
   const root = el.firstElementChild;
   root.addEventListener('change', refresh);
+  $$('details.fold', root).forEach(d => d.addEventListener('toggle', () => { fold[d.dataset.fold] = d.open; save('quizFold', fold); }));
   root.addEventListener('click', e => {
     const c = e.target.closest('#qzCents .chip');
     if (c) { $('#qzFrom', el).value = c.dataset.from; $('#qzTo', el).value = c.dataset.to; refresh(); }
@@ -341,9 +351,12 @@ function body(q) {
       const sentence = ps.map(p => (p.s != null ? esc(p.s) : `<span class="blank${p.red ? ' red' : ''}" data-b="${p.i}">（${NUM[p.i] || p.i + 1}）</span>`)).join('');
       const free = (it.free || []).map(g => `${g.map(i => NUM[i] || i + 1).join('・')}は順不同`).join('、');
       const stars = it.stars != null ? ` <span class="ich-st" title="本の重要度">${it.stars ? '★'.repeat(it.stars) : '★なし'}</span>` : '';
+      // 赤字の空欄はヒント：答えても答えなくてもよく、○×（と復習）には入れない。ボタンで全部・1つずつ出せる（文の赤字の空欄を押しても出る）
+      const reds = red.size ? `<div class="red-tools"><span class="small muted">赤い下線の空欄は問題文の赤字（ヒント。○×には入りません）</span>
+        <span class="row"><button class="btn small" type="button" id="qzRedOne">赤字を1つ出す</button><button class="btn small" type="button" id="qzRedAll">赤字をすべて出す</button></span></div>` : '';
       return `${ichImg(it)}<p class="q-src">${esc(it.sec)}${stars}</p><p class="q-text ich-text">${sentence}</p>` +
-        (red.size ? '<p class="small muted">赤い下線の空欄は、問題文の赤字の部分です。</p>' : '') + (free ? `<p class="small muted">${esc(free)}</p>` : '') +
-        it.answers.map((a, i) => `<div class="q-field"><label for="qa${i}">${NUM[i] || i + 1}${red.has(i) ? '<small class="red-mark">赤字</small>' : ''}</label><input type="text" id="qa${i}" autocomplete="off" enterkeyhint="${i + 1 < it.answers.length ? 'next' : 'done'}"><div class="res" id="qr${i}" aria-live="polite"></div></div>`).join('');
+        reds + (free ? `<p class="small muted">${esc(free)}</p>` : '') +
+        it.answers.map((a, i) => `<div class="q-field${red.has(i) ? ' red-field' : ''}"><label for="qa${i}">${NUM[i] || i + 1}${red.has(i) ? '<small class="red-mark">赤字・答えなくてもよい</small>' : ''}</label><input type="text" id="qa${i}" autocomplete="off" enterkeyhint="${i + 1 < it.answers.length ? 'next' : 'done'}"><div class="res" id="qr${i}" aria-live="polite"></div></div>`).join('');
     }
     case 'choice': {
       const a = q.anchor;
@@ -354,8 +367,32 @@ function body(q) {
   return '';
 }
 
+/** 一問一答の赤字の空欄を出す（i を出す。出したものは S.cur.reveal に覚えておき、再開しても出したまま） */
+function revealRed(q, i, save = true) {
+  const el = S.el, it = q.item, b = $(`.blank.red[data-b="${i}"]`, el);
+  if (!b || b.classList.contains('shown')) return;
+  b.textContent = it.answers[i]; b.classList.add('shown');
+  const inp = $(`#qa${i}`, el); if (inp && !S.graded) { inp.value = ''; inp.disabled = true; inp.placeholder = `表示した：${it.answers[i]}`; }
+  delete S.cur.inputs[`qa${i}`];
+  if (!S.cur.reveal.includes(i)) S.cur.reveal.push(i);
+  const left = $$('.blank.red:not(.shown)', el).length;
+  for (const id of ['#qzRedOne', '#qzRedAll']) { const btn = $(id, el); if (btn) btn.disabled = !left; }
+  if (save) saveSession();
+}
+
 function wireBody(q) {
   const el = S.el;
+  if (q.mode === 'ichimon' && $('.blank.red', el)) {
+    const reds = () => $$('.blank.red', el).map(b => Number(b.dataset.b));
+    $('#qzRedOne', el)?.addEventListener('click', () => { const i = reds().find(i => !S.cur.reveal.includes(i)); if (i != null) revealRed(q, i); });
+    $('#qzRedAll', el)?.addEventListener('click', () => reds().forEach(i => revealRed(q, i)));
+    $('.ich-text', el).addEventListener('click', e => {
+      const b = e.target.closest('.blank.red:not(.shown)');
+      if (!b || S.graded) return;
+      e.stopPropagation(); revealRed(q, Number(b.dataset.b));
+    });
+    for (const i of S.cur.reveal || []) revealRed(q, i, false);
+  }
   if (q.mode === 'order') {
     S.order = [];
     S.drawOrder = () => $$('#qzOrder button', el).forEach(b => {
@@ -457,10 +494,17 @@ function grade(skip = false, replay = false) {
     setRes(0, ok ? 'ok' : 'ng', `<div><span class="v">${ok ? '○ 正解' : '×'}</span>古い順：</div>${right.map((i, k) => `<div>${k + 1}. <span class="yr">${fmtYear(q.events[i].year)}</span> ${tt(q.events[i])}</div>`).join('')}`);
   } else if (q.mode === 'ichimon') {
     // すべての空欄（赤字の空欄も）が合っていたら正解。順不同の組は入れかわってもよい
-    const it = q.item;
+    const it = q.item, redIdx = new Set(ichParts(it.text).filter(p => p.red).map(p => p.i));
     const res = gradeItem(it.answers, it.answers.map((_, i) => val(i)), it.free, strict);
     const verdicts = res.map(({ m, a }, i) => {
       const b = $(`.blank[data-b="${i}"]`, el);
+      if (redIdx.has(i)) {
+        // 赤字の空欄は○×に入れない（書いていればその結果だけ見せる）
+        const shown = (S.cur.reveal || []).includes(i), wrote = val(i).trim();
+        if (b) { b.textContent = a; b.classList.add(m ? 'ok' : shown || !wrote ? 'shown' : 'ng'); if (!isDateAnswer(a)) { b.classList.add('tt'); b.dataset.word = a; b.dataset.ich = it.id; } }
+        setRes(i, m ? 'ok' : 'info', `<div><span class="v">${m ? '○' : shown ? '表示した' : wrote ? '×' : '赤字'}</span>${ichWord(it, a, 'ans')}<span class="small muted">（赤字は○×に入れません）</span></div>`);
+        return true;
+      }
       if (b) {
         b.textContent = a; b.classList.add(m ? 'ok' : 'ng');
         // 採点のあとは、答えの語をタップすると概要（アプリのデータにある語なら）
