@@ -2,7 +2,6 @@
 import { $, $$, esc, fmtYear, clamp, toast } from '../core/util.js';
 import { renderCards, densitySvg, ganttSvg, openEvent, openPolity, openIchimon, wireSheet, holdRepeat, ICON } from './common.js';
 import { ZoneMap, polityColor } from './mapcore.js';
-import { wireSearch } from './search.js';
 
 let state = null;
 
@@ -19,7 +18,6 @@ export function render(app, el) {
     <div class="year-big"><input id="tlYear" inputmode="numeric" aria-label="年" value="${fmtYear(app.year)}"><small>年</small></div>
     <div class="yb-mobile">
       <button class="btn small" id="tlSheet2" type="button" aria-pressed="false">赤シート</button>
-      <button class="iconbtn" id="tlSearchBtn" type="button" aria-label="用語で検索">${ICON.search}</button>
     </div>
     <div class="yb-ctrl">
       <div class="yb-steps">
@@ -35,12 +33,10 @@ export function render(app, el) {
       </div>
     </div>
     <div class="yb-tools">
-      <div class="search"><span>${ICON.search}</span><input type="search" id="tlSearch" placeholder="用語・地名で検索（例：ナントの王令）" autocomplete="off" aria-label="用語・地名で検索"><div class="suggest" id="tlSuggest" hidden></div></div>
       <button class="btn small" id="tlSheet" type="button" aria-pressed="false">赤シート</button>
     </div>
   </div></div>
   <div class="page">
-    <div class="search mobile-search" id="tlMobileSearch" hidden><span>${ICON.search}</span><input type="search" id="tlSearchM" placeholder="用語・地名で検索" autocomplete="off" aria-label="用語・地名で検索"><div class="suggest" id="tlSuggestM" hidden></div></div>
     <div class="tl-main">
       <div class="tl-map" id="tlMapCol">
         <div class="chips scroll" id="tlViews">${mapViews.map(([k, n]) => `<button class="chip" type="button" data-v="${k}">${esc(n)}</button>`).join('')}</div>
@@ -102,19 +98,6 @@ export function render(app, el) {
     $$('.term.open', cards).forEach(t => t.classList.remove('open'));
   };
   $$('#tlSheet, #tlSheet2', el).forEach(b => { b.classList.toggle('on', !!app.settings.sheet); b.addEventListener('click', toggleSheet); });
-  $('#tlSearchBtn', el).addEventListener('click', () => { const box = $('#tlMobileSearch', el); box.hidden = !box.hidden; if (!box.hidden) $('#tlSearchM', el).focus(); });
-  // 用語を選ぶとその年へ（写真のあるものは詳細も開く）。地名や「地図」を選ぶと勢力図のその場所へ
-  const search = {
-    onTerm: it => {
-      if (state && it.ev) state.hit = it.ev.id;
-      app.setYear(it.y);
-      // 作品・建築など写真のあるものは、詳細（写真つき）をそのまま開く
-      if (it.ev?.image) openEvent(app, it.ev);
-    },
-    onPlace: ({ spec, year }) => app.showOnMap(spec, year)
-  };
-  wireSearch(app, $('#tlSearch', el), $('#tlSuggest', el), search);
-  wireSearch(app, $('#tlSearchM', el), $('#tlSuggestM', el), search);
   $('#tlGantt', el).addEventListener('click', e => { const bar = e.target.closest('.bar'); if (bar) app.setYear(Number(bar.dataset.y)); });
 
   // 地図（PCのみ）
@@ -204,6 +187,14 @@ export function update() {
   if (state.hit) { const r = $(`[data-ev="${CSS.escape(state.hit)}"]`, cards); if (r) { r.classList.add('hit'); setTimeout(() => r.classList.remove('hit'), 2200); } state.hit = null; }
   document.title = `${fmtYear(y)}年 — ヨコ串世界史`;
   if (y < a || y > b) range.value = clamp(y, a, b);
+}
+
+/** 画面右上の検索で選んだ用語の年へ動かし、出来事なら年表の行に印を付ける */
+export function showHit(app, it) {
+  if (!state) return false;
+  if (it.ev) state.hit = it.ev.id;
+  if (it.y != null) app.setYear(it.y, { force: true });
+  return true;
 }
 
 export function destroy() { state?.ro?.disconnect(); state = null; document.title = 'ヨコ串世界史'; }

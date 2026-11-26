@@ -1,4 +1,4 @@
-// 検索欄の候補（ヨコ年表の「用語・地名で検索」と、勢力図の「地名で探す」で使う）
+// 検索欄の候補（画面右上の「用語・地名で検索」と、勢力図の「地名で探す」で使う）
 import { $$, esc, fmtYear, debounce, clamp } from '../core/util.js';
 import { base } from '../core/normalize.js';
 import { searchPlaces, periodText, placesOf, PLACE_KIND } from '../core/places.js';
@@ -30,8 +30,8 @@ export function wireSearch(app, input, box, { terms = true, onTerm, onPlace, onP
     if (terms) {
       const rest = evs.map(e => ({ y: e.year, label: e.title, tag: e.image ? '写真' : '出来事', ev: e, map: placesOf(e).length > 0 }));
       rest.sort((a, b) => (b.tag === '写真') - (a.tag === '写真'));
-      for (const r of db.rulers) if ([r.name, ...r.aliases].some(t => base(t).includes(q))) rest.push({ y: r.from, label: `${r.name}（${r.from}〜${r.to}）`, tag: '人物' });
-      for (const p of db.polities) if ([p.name, ...p.aliases].some(t => base(t).includes(q))) rest.push({ y: p.start, label: `${p.name}（${fmtYear(p.start)}〜${fmtYear(p.end)}）`, tag: '王朝・国家' });
+      for (const r of db.rulers) if ([r.name, ...r.aliases].some(t => base(t).includes(q))) rest.push({ y: r.from, label: `${r.name}（${r.from}〜${r.to}）`, tag: '人物', ref: r });
+      for (const p of db.polities) if ([p.name, ...p.aliases].some(t => base(t).includes(q))) rest.push({ y: p.start, label: `${p.name}（${fmtYear(p.start)}〜${fmtYear(p.end)}）`, tag: '王朝・国家', ref: p });
       items.push(...rest.slice(0, 30));
       // 読み込んだ一問一答の文からも探す（アプリのデータにない語でも見つかる）
       for (const it of searchIchimon(db.ichimon, input.value)) items.push({ y: it.y, label: snippet(it, input.value), tag: '一問一答', ich: it });

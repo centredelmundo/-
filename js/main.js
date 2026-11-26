@@ -5,8 +5,9 @@ import { $, $$, esc, toast, clamp, debounce } from './core/util.js';
 import { getProgress, onProgress, star } from './core/progress.js';
 import { dueItems } from './core/srs.js';
 import { build, questionsForEvent } from './core/quizgen.js';
-import { LOGO, ICON } from './views/common.js';
+import { LOGO, ICON, openEvent } from './views/common.js';
 import { openTerm, openWord } from './views/terms.js';
+import { wireSearch } from './views/search.js';
 import * as timeline from './views/timeline.js';
 import * as mapView from './views/map.js';
 import * as quiz from './views/quiz.js';
@@ -64,6 +65,8 @@ function shell() {
     <a class="brand" href="#timeline">${LOGO}<span>ヨコ串世界史</span></a>
     <nav class="tabs" aria-label="画面">${TABS.map(([k, n]) => `<a href="#${k}" data-tab="${k}">${n}${k === 'review' ? '<i class="count" data-due></i>' : ''}</a>`).join('')}</nav>
     <div class="tools">
+      <div class="search gsearch" id="gSearchBox"><span>${ICON.search}</span><input type="search" id="gSearch" placeholder="用語・地名で検索" autocomplete="off" aria-label="用語・地名で検索（どの画面からでも）" enterkeyhint="search"><div class="suggest" id="gSuggest" hidden></div></div>
+      <button class="iconbtn gsearch-btn" id="gSearchBtn" type="button" title="用語・地名で検索" aria-label="用語・地名で検索" aria-expanded="false"><span class="i-find">${ICON.search}</span><span class="i-close">${ICON.close}</span></button>
       <a class="iconbtn" href="#data" data-tab="data" title="データ確認" aria-label="データ確認">${ICON.data}</a>
       <a class="iconbtn" href="#settings" data-tab="settings" title="設定" aria-label="設定">${ICON.settings}</a>
     </div>
@@ -104,6 +107,33 @@ function route() {
   }
 }
 
+/**
+ * 画面右上の「用語・地名で検索」。どの画面からでも使える。
+ * 出来事・人物・王朝を選ぶとその概要（出来事は詳細）を開く。ヨコ年表を見ているときは、その年へ動かして行に印も付ける。
+ * 地名・「地図」を選ぶと勢力図のその場所へ。一問一答は文全体のシート。
+ * スマホ（幅が狭いとき）は虫めがねのボタンで、ヘッダーいっぱいの検索欄を開く
+ */
+function wireGlobalSearch() {
+  const bar = $('.appbar'), input = $('#gSearch'), btn = $('#gSearchBtn');
+  const close = () => { bar.classList.remove('searching'); btn.setAttribute('aria-expanded', 'false'); };
+  btn.addEventListener('click', () => {
+    const on = !bar.classList.contains('searching');
+    bar.classList.toggle('searching', on); btn.setAttribute('aria-expanded', String(on));
+    if (on) input.focus(); else input.blur();
+  });
+  input.addEventListener('keydown', e => { if (e.key === 'Escape') { close(); input.blur(); } });
+  input.addEventListener('blur', () => setTimeout(() => { if (document.activeElement !== input && !input.value) close(); }, 220));
+  wireSearch(app, input, $('#gSuggest'), {
+    onTerm: it => {
+      if (app.current === 'timeline') timeline.showHit(app, it);
+      if (it.ev) openEvent(app, it.ev);
+      else if (it.ref) openTerm(app, it.ref.key);
+    },
+    onPlace: ({ spec, year }) => app.showOnMap(spec, year),
+    onPick: () => { input.value = ''; close(); }
+  });
+}
+
 async function boot() {
   app.applyTheme();
   shell();
@@ -130,6 +160,7 @@ async function boot() {
     if (t.dataset.term) openTerm(app, t.dataset.term);
     else openWord(app, t.dataset.word, app.db.ichimon?.byId.get(t.dataset.ich) || null);
   });
+  wireGlobalSearch();
   route();
   updateDue();
   onProgress(updateDue);

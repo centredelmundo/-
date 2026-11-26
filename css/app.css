@@ -112,7 +112,26 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .tabs a.on { background: var(--ai-soft); color: var(--ai); font-weight: 700; }
 .count { font-style: normal; font-size: 11px; background: var(--shu); color: #fff; border-radius: 999px; padding: 0 6px; margin-left: 4px; font-weight: 700; }
 .count:empty { display: none; }
-.appbar .tools { margin-left: auto; display: flex; gap: 2px; }
+.appbar .tools { margin-left: auto; display: flex; gap: 2px; align-items: center; }
+/* 画面右上の検索欄（どの画面にも出す。PCは小さめの入力欄、スマホは虫めがねのボタン） */
+.gsearch { margin-right: 6px; }
+.gsearch input { width: 200px; padding: 5px 10px 5px 30px; font-size: 13.5px; transition: width .15s; }
+.gsearch input:focus { width: 260px; }
+.gsearch .suggest { width: min(400px, 92vw); max-height: min(420px, 70vh); }
+.gsearch-btn { display: none; }
+@media (max-width: 1099px) and (min-width: 860px) { .gsearch input { width: 150px; } .gsearch input:focus { width: 220px; } }
+@media (max-width: 859px) {
+  .gsearch { display: none; }
+  .gsearch-btn { display: inline-grid; }
+  /* 虫めがねを押すと、ヘッダーいっぱいに検索欄を出す */
+  .appbar.searching .gsearch { display: block; position: absolute; left: var(--gutter); right: calc(var(--gutter-r) + 44px); top: 50%; transform: translateY(-50%); margin: 0; }
+  .appbar.searching .gsearch input { width: 100%; font-size: 16px; }
+  .appbar.searching .gsearch .suggest { left: 0; right: auto; width: calc(100vw - var(--gutter) - var(--gutter-r)); }
+  .appbar.searching .brand { visibility: hidden; }
+  .appbar.searching .tools > a { display: none; }
+  .gsearch-btn .i-close, .appbar.searching .gsearch-btn .i-find { display: none; }
+  .appbar.searching .gsearch-btn .i-close { display: inline; }
+}
 .tabbar { display: none; }
 main#view { min-height: calc(100vh - var(--appbar-h)); }
 .page { max-width: 1240px; margin: 0 auto; padding: 18px var(--gutter-r) 40px var(--gutter); display: grid; gap: 16px; }
