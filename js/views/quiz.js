@@ -136,7 +136,7 @@ function setup() {
         </div>
       </div>
       <div class="row" style="gap:18px">
-        <div class="field"><span class="label">重要度</span><div class="seg" id="qzImp">${[1, 2, 3].map(n => `<button type="button" data-v="${n}" class="${(q.minImportance || 1) === n ? 'on' : ''}">${'★'.repeat(n)}${n < 3 ? '以上' : 'のみ'}</button>`).join('')}</div></div>
+        <div class="field" id="qzImpBox"><span class="label">重要度</span><div class="seg" id="qzImp">${[1, 2, 3].map(n => `<button type="button" data-v="${n}" class="${(q.minImportance || 1) === n ? 'on' : ''}">${'★'.repeat(n)}${n < 3 ? '以上' : 'のみ'}</button>`).join('')}</div></div>
         <div class="field"><span class="label">問題数</span><div class="seg" id="qzCount">${[5, 10, 20, 30].map(n => `<button type="button" data-v="${n}" class="${(q.count || 10) === n ? 'on' : ''}">${n}問</button>`).join('')}</div></div>
       </div>
       <label class="check"><input type="checkbox" id="qzSkipDone" ${q.skipDone ? 'checked' : ''}>1度解いた問題は出さない（正解・不正解にかかわらず、これまでに答えた問題を除く）</label>
@@ -201,6 +201,8 @@ function setup() {
       drawRulerList(list, o);
     }
     const others = usable.filter(m => m !== 'ichimon');
+    // 一問一答だけのときは、アプリの重要度は使わない（一問一答は本の★でしぼる）ので出さない
+    $('#qzImpBox', el).hidden = useIch && !others.length;
     const evModes = others.filter(m => !(oneRuler && m === 'ruler') && m !== 'work');
     const parts = [];
     if (evModes.length || (!useIch && !oneRuler && !useWork)) parts.push(`出題の元になる出来事：${n}件`);
