@@ -99,3 +99,32 @@ test('本の版：前の版の復習の記録を引き継ぐ', () => {
   assert.ok(P.items['ichimon:zzz'], '本にない問題の記録はそのまま');
   assert.ok(P.log.some(l => l.k === 'ichimon:B01-01-01'));
 });
+
+test('クイズ：1度解いた問題は出さない', async () => {
+  const { makeSession, doneId, doneSet } = await import('../js/core/quizgen.js');
+  const d = prepare(BOOK);
+  const db = { ichimon: d, range: [-3000, 2000], groups: [], regions: [], events: [], polities: [], rulers: [], polityById: new Map() };
+  const opt = { modes: ['ichimon'], count: 10 };
+  assert.equal(makeSession(db, opt).length, 3);
+  const done = doneSet(db, ['ichimon:B01-01-01', 'ichimon:B01-01-03']);
+  const qs = makeSession(db, { ...opt, done });
+  assert.deepEqual(qs.map(q => q.item.id), ['B01-01-02'], '解いた2問は出さない');
+  assert.equal(makeSession(db, { ...opt, done: doneSet(db, d.items.map(it => `ichimon:${it.id}`)) }).length, 0);
+  assert.equal(doneId(db, 'work:by:e1'), doneId(db, 'work:title:e1'), '作者・作品名は向きがちがっても同じ作品');
+  assert.equal(doneId(db, 'choice:e1:g1:r3'), doneId(db, 'choice:e1:g1:e9'));
+  assert.equal(doneId(db, 'cross:1500:5:a+b+c'), doneId(db, 'cross:1500:5:c+a+b'));
+});
+
+test('クイズ：1つの国の君主は、同じ君主なら年がちがっても同じ問題・実データで解いた問題を外せる', async () => {
+  const { openDB } = await import('../tools/validate.mjs');
+  const { makeSession, doneId, doneSet } = await import('../js/core/quizgen.js');
+  const { db } = openDB();
+  const r = db.rulers.find(x => x.to - x.from >= 10 && db.polityById.get(x.polity) && !db.polityById.get(x.polity).parent);
+  assert.equal(doneId(db, `ruler:${r.from + 1}:${r.polity}`), doneId(db, `ruler:${r.to - 1}:${r.polity}`));
+  const first = makeSession(db, { modes: ['year', 'term'], count: 20 });
+  const done = doneSet(db, first.map(q => q.key));
+  for (let k = 0; k < 5; k++) {
+    const again = makeSession(db, { modes: ['year', 'term'], count: 20, done });
+    assert.ok(again.every(q => !done.has(doneId(db, q.key))), '一度出た年代当て・出来事当ては出ない');
+  }
+});

@@ -172,14 +172,17 @@ function oneRulerMaker(db, opt, rand) {
   };
 }
 
+// 1度解いた問題を出さないときは、出題の元からはじめに外しておく（作る回数を減らす）
+const notDone = (opt, id) => !opt.done?.has(id);
+
 function makeYear(db, opt, rand) {
-  const pool = eventPool(db, opt);
+  const pool = eventPool(db, opt).filter(e => notDone(opt, `year:${e.id}`));
   if (!pool.length) return null;
   return { mode: 'year', id: pickWeighted(pool, e => e.importance * e.importance, rand).id };
 }
 
 function makeTerm(db, opt, rand) {
-  const pool = eventPool(db, opt).filter(e => e.desc);
+  const pool = eventPool(db, opt).filter(e => e.desc && notDone(opt, `term:${e.id}`));
   if (!pool.length) return null;
   return { mode: 'term', id: pickWeighted(pool, e => e.importance * e.importance, rand).id };
 }
@@ -250,7 +253,7 @@ function makeChoice(db, opt, rand) {
 /** 文化史の作者・作品名（「文化史も出す」を切っていても、この形式を選んだときは文化史から出す） */
 export const workPool = (db, opt) => eventPool(db, { ...opt, culture: true }).filter(e => e.work);
 function makeWork(db, opt, rand) {
-  const pool = workPool(db, opt);
+  const pool = workPool(db, opt).filter(e => notDone(opt, `work:${e.id}`));
   if (!pool.length) return null;
   const e = pickWeighted(pool, x => x.importance * x.importance, rand);
   const ask = opt.workAsk === 'by' || opt.workAsk === 'title' ? opt.workAsk : rand() < 0.5 ? 'by' : 'title';
@@ -258,7 +261,7 @@ function makeWork(db, opt, rand) {
 }
 
 function makeIchimon(db, opt, rand) {
-  const p = ichimonPool(db, opt);
+  const p = ichimonPool(db, opt).filter(it => notDone(opt, `ichimon:${it.id}`));
   return p.length ? { mode: 'ichimon', id: pick(p, rand).id } : null;
 }
 
@@ -266,6 +269,32 @@ export const CULTURE_MODES = ['year', 'term', 'order', 'choice', 'work'];
 const MAKERS = { cross: makeCross, ruler: makeRuler, year: makeYear, term: makeTerm, order: makeOrder, choice: makeChoice, work: makeWork, ichimon: makeIchimon };
 
 /** 問題のセットを作る */
+/**
+ * 「1度解いた問題」かどうかを見分けるための名前（学習記録の問題の key から作る）。
+ * 作者・作品名は向きがちがっても同じ作品、同時代えらびは選択肢がちがっても同じ問い、
+ * 1つの国の君主はその年の君主（人）が同じなら同じ問題、ヨコ記述・並べ替えは地域・出来事の並びの順は問わない
+ */
+export function doneId(db, key) {
+  const k = String(key ?? ''), [mode, ...rest] = k.split(':');
+  switch (mode) {
+    case 'work': return `work:${rest[1]}`;
+    case 'choice': return `choice:${rest[0]}:${rest[1]}`;
+    case 'cross': return `cross:${rest[0]}:${(rest[2] || '').split('+').sort().join('+')}`;
+    case 'ruler': {
+      const y = Number(rest[0]), ps = (rest[1] || '').split('+');
+      if (ps.length > 1) return `ruler:${y}:${[...ps].sort().join('+')}`;
+      const p = db?.polityById?.get(ps[0]);
+      const ids = p ? [p.id, ...(p.children || []).map(c => c.id)] : ps;
+      const rs = (db?.rulers || []).filter(r => ids.includes(r.polity) && r.from <= y && y <= r.to).map(r => r.id).sort();
+      return rs.length ? `ruler1:${rs.join('+')}` : k;
+    }
+    default: return k;
+  }
+}
+
+/** 学習記録の key の一覧から、解いた問題の名前（doneId）の集まりを作る */
+export const doneSet = (db, keys) => new Set([...keys].map(k => doneId(db, k)));
+
 export function makeSession(db, opt, rand = Math.random) {
   let modes = (opt.modes?.length ? opt.modes : Object.keys(MODES)).filter(m => MAKERS[m]);
   // 文化史だけのときは、出来事を1つずつ扱う形式で出す（ヨコ記述・君主は文化にしぼれないため）
@@ -273,14 +302,17 @@ export function makeSession(db, opt, rand = Math.random) {
   // 君主・指導者で「1つの国だけ」を選んだときは、その国の君主・指導者だけを出す
   const makers = opt.rulerScope === 'one' && opt.rulerOne ? { ...MAKERS, ruler: oneRulerMaker(db, opt, rand) } : MAKERS;
   const out = [], keys = new Set();
-  for (let i = 0; out.length < (opt.count || 10) && i < (opt.count || 10) * 8; i++) {
+  // opt.done … 1度解いた問題（doneSet）。あれば、その問題は出さない（見つけにくいので多めに作ってみる）
+  const done = opt.done?.size ? opt.done : null;
+  const tries = (opt.count || 10) * (done ? 40 : 8);
+  for (let i = 0; out.length < (opt.count || 10) && i < tries; i++) {
     const mode = modes[i % modes.length];
     const spec = makers[mode](db, opt, rand);
     if (!spec) continue;
     const q = build(db, spec);
     // 作者・作品名は、同じ作品を「作者を答える」「作品名を答える」の両方で出さない（答えが見えてしまうため）
     const k = q?.mode === 'work' ? `work:${q.event.id}` : q?.key;
-    if (!q || keys.has(k)) continue;
+    if (!q || keys.has(k) || (done && done.has(doneId(db, q.key)))) continue;
     keys.add(k); out.push(q);
   }
   return shuffle(out, rand);

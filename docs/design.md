@@ -25,6 +25,7 @@
 > 追記（第12版）: 一問一答の本の版（ファイルの version 2）。〈赤字〉も空欄にし（parts の red）、すべての空欄が合えば○（gradeItem。順不同の組は入れかえ可、年号は数が同じときだけ）。補足・出典・★・写真（imageOf）を出し、読み込むと前の版の id（old）の記録を引き継ぐ（progress.js の migrateIchimon）。
 > 追記（第13版）: 一問一答の赤字はヒント（ボタン・空欄を押して出す。S.cur.reveal に覚える）。○×と復習は四角の空欄だけで決める。勢力図はドラッグ・ホイール・2本指の途中は .map-pane を CSS transform でずらし（mapcore.js の preview）、終わったら viewBox を変えて描き直す（commit）。svg は overflow-clip-margin で枠の外も少し描いておく。クイズ設定の年代・地域・一問一答の章は details で閉じられる。
 > 追記（第14版）: 用語・地名の検索は画面右上（main.js の wireGlobalSearch）にまとめ、どの画面からでも使う。出来事・人物・王朝は選ぶと詳細を開き、ヨコ年表ではその年へ動かして行に印（timeline.js の showHit）。
+> 追記（第15版）: クイズの「1度解いた問題は出さない」（settings.quiz.skipDone）。学習記録の log と items の key を quizgen.js の doneId で「同じ問題」の名前にそろえ（doneSet）、makeSession の opt.done で除く。
 > この文書は最初の設計案のまま残している。
 
 ## 画面

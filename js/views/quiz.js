@@ -1,10 +1,10 @@
 // クイズの画面
 // 解答中の状態はブラウザに保存するので、別の画面に移ったりアプリを閉じたりしても続きから再開できる。
 import { $, $$, esc, fmtYear, fmtSpan, yearText, hasYear, hideYear, hideAnswers, shuffle, toast, centuryOf, centuryText } from '../core/util.js';
-import { MODES, CULTURE_MODES, ORDER_GAPS, build, makeSession, eventPool, quizGroups, ichimonPool, lastingPolities, rulersIn, workPool } from '../core/quizgen.js';
+import { MODES, CULTURE_MODES, ORDER_GAPS, build, makeSession, doneSet, eventPool, quizGroups, ichimonPool, lastingPolities, rulersIn, workPool } from '../core/quizgen.js';
 import { parts as ichParts, gradeItem, NUM, clock, isDateAnswer, imageOf } from '../core/ichimon.js';
 import { gradeCross, gradeRuler, gradeTerm, gradeYear, CLS_TEXT } from '../core/grade.js';
-import { recordWithUndo, changeJudgement, star, isStarred, addCandidate, getUndo, setUndo } from '../core/progress.js';
+import { recordWithUndo, changeJudgement, star, isStarred, addCandidate, getUndo, setUndo, getProgress } from '../core/progress.js';
 import { load, save, remove } from '../core/store.js';
 import { yokoPanel, badges, ICON } from './common.js';
 import { tt, fillImage, itemName, ichWord } from './terms.js';
@@ -78,6 +78,12 @@ function resume() {
   return true;
 }
 
+/** これまでに答えた問題（学習記録の解答の履歴と復習の記録）の名前の集まり */
+function answered() {
+  const P = getProgress();
+  return doneSet(S.app.db, [...P.log.map(l => l.k), ...Object.keys(P.items)]);
+}
+
 // ---- 出題の設定
 function setup() {
   const { app, el } = S, db = app.db, q = app.settings.quiz;
@@ -133,6 +139,7 @@ function setup() {
         <div class="field"><span class="label">重要度</span><div class="seg" id="qzImp">${[1, 2, 3].map(n => `<button type="button" data-v="${n}" class="${(q.minImportance || 1) === n ? 'on' : ''}">${'★'.repeat(n)}${n < 3 ? '以上' : 'のみ'}</button>`).join('')}</div></div>
         <div class="field"><span class="label">問題数</span><div class="seg" id="qzCount">${[5, 10, 20, 30].map(n => `<button type="button" data-v="${n}" class="${(q.count || 10) === n ? 'on' : ''}">${n}問</button>`).join('')}</div></div>
       </div>
+      <label class="check"><input type="checkbox" id="qzSkipDone" ${q.skipDone ? 'checked' : ''}>1度解いた問題は出さない（正解・不正解にかかわらず、これまでに答えた問題を除く）</label>
       <label class="check"><input type="checkbox" id="qzCulture" ${app.settings.culture ? 'checked' : ''}>文化史（著作・発明・美術など）も出す</label>
       <label class="check"><input type="checkbox" id="qzCultureOnly" ${q.cultureOnly ? 'checked' : ''}>文化史だけで出題する（作品・建築の写真つき。形式は年代当て・出来事当て・並べ替え・同時代えらび・文化史の作者・作品名）</label>
       <p class="small muted" id="qzPool"></p>
@@ -154,7 +161,8 @@ function setup() {
       rulerScope: $('#qzRulerScope .on', el)?.dataset.v || 'all',
       rulerOne,
       culture: cultureOnly || $('#qzCulture', el).checked,
-      cultureOnly
+      cultureOnly,
+      skipDone: $('#qzSkipDone', el).checked
     };
   };
   // 君主・指導者の「1つの国だけ」で選んだ国（年代の範囲を変えて一覧から外れたら、選んでいないことにする）
@@ -198,7 +206,10 @@ function setup() {
     if (evModes.length || (!useIch && !oneRuler && !useWork)) parts.push(`出題の元になる出来事：${n}件`);
     if (useWork) parts.push(`作者・作品名のわかる文化史の作品：${nw}件`);
     if (oneRuler) parts.push(picked ? `${picked.label}の君主・指導者：${picked.rulers.length}人（1人1問まで）` : '君主・指導者：出題する国を選んでください');
-    if (useIch) parts.push(`一問一答：${ni}問`);
+    if (useIch) {
+      const dn = o.skipDone ? answered() : null;
+      parts.push(`一問一答：${ni}問${dn ? `（まだ解いていない問題 ${ichimonPool(db, o).filter(it => !dn.has(`ichimon:${it.id}`)).length}問）` : ''}`);
+    }
     // 閉じた欄の見出しに、いまの選び方を出す
     const sum = (id, t) => { const x = $(id, el); if (x) x.textContent = t; };
     sum('#qzSumRange', o.from <= a && o.to >= b ? '全範囲' : `${fmtYear(o.from)}〜${fmtYear(o.to)}年`);
@@ -227,8 +238,9 @@ function setup() {
     app.saveSettings();
     const one = picked && o.rulerScope === 'one' && !o.cultureOnly && o.modes.includes('ruler') ? picked : null;
     const opt = { ...o, rulerOne: one ? one.polity.id : '' };
-    const qs = makeSession(db, { ...opt, window: 5 });
-    if (!qs.length) { $('#qzPool', el).textContent = '条件に合う問題を作れませんでした。範囲や地域を広げてください。'; return; }
+    const qs = makeSession(db, { ...opt, window: 5, done: opt.skipDone ? answered() : null });
+    if (!qs.length) { $('#qzPool', el).textContent = opt.skipDone ? 'この条件では、まだ解いていない問題が見つかりませんでした。範囲や形式を広げるか、「1度解いた問題は出さない」を外してください。' : '条件に合う問題を作れませんでした。範囲や地域を広げてください。'; return; }
+    if (opt.skipDone && qs.length < o.count && !(one && o.modes.length === 1)) toast(`まだ解いていない問題が${qs.length}問しか見つからなかったので、${qs.length}問にしました`, 3600);
     const onlyRuler = one && o.modes.length === 1;
     if (onlyRuler && qs.length < o.count) toast(`${one.label}の君主・指導者は、この期間に${one.rulers.length}人なので、${qs.length}問にしました`);
     begin(qs, { title: o.cultureOnly ? '文化史クイズ' : onlyRuler ? `君主・指導者：${one.label}` : o.modes.length === 1 && o.modes[0] === 'ichimon' ? '一問一答' : o.modes.length === 1 && o.modes[0] === 'work' ? '文化史の作者・作品名' : 'クイズ', again: opt });
@@ -652,7 +664,7 @@ function finish() {
   </div>`;
   $('#qzSetup', el).addEventListener('click', () => setup());
   $('#qzAgain', el)?.addEventListener('click', () => {
-    const qs = makeSession(app.db, { ...S.opts.again, window: 5 });
+    const qs = makeSession(app.db, { ...S.opts.again, window: 5, done: S.opts.again.skipDone ? answered() : null });
     if (qs.length) begin(qs, S.opts); else setup();
   });
 }
